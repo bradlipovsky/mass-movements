@@ -1,4 +1,4 @@
-.PHONY: all area-convergence artifacts-area-convergence artifacts-denominator artifacts-event-audit artifacts-reanalysis check check-area-convergence check-denominator check-event-audit check-reanalysis clean denominator notebook-area-convergence notebook-denominator notebook-event-audit notebook-reanalysis reanalysis
+.PHONY: all area-convergence artifacts-area-convergence artifacts-denominator artifacts-event-audit artifacts-reanalysis artifacts-scale-explicit check check-area-convergence check-denominator check-event-audit check-reanalysis check-scale-explicit clean denominator notebook-area-convergence notebook-denominator notebook-event-audit notebook-reanalysis notebook-scale-explicit reanalysis scale-explicit
 
 PYTHON_REANALYSIS ?= .venv/bin/python
 JUPYTER_REANALYSIS ?= $(dir $(PYTHON_REANALYSIS))jupyter
@@ -54,6 +54,18 @@ notebook-area-convergence:
 	PATH="$(dir $(PYTHON_REANALYSIS)):$$PATH" $(JUPYTER_REANALYSIS) execute --inplace --timeout 600 --kernel_name python3 notebooks/susceptible_area_convergence.ipynb
 
 artifacts-area-convergence: area-convergence notebook-area-convergence check-area-convergence
+	latexmk -pdf -cd latex/main.tex
+
+scale-explicit:
+	$(PYTHON_REANALYSIS) scripts/scale_explicit_steep_area.py
+
+check-scale-explicit:
+	$(PYTHON_REANALYSIS) -m unittest tests.test_scale_explicit_steep_area -v
+
+notebook-scale-explicit:
+	PATH="$(dir $(PYTHON_REANALYSIS)):$$PATH" $(JUPYTER_REANALYSIS) execute --inplace --timeout 600 --kernel_name python3 notebooks/scale_explicit_steep_area.ipynb
+
+artifacts-scale-explicit: scale-explicit notebook-scale-explicit check-scale-explicit
 	latexmk -pdf -cd latex/main.tex
 
 clean:

@@ -122,10 +122,12 @@ class ScaleExplicitSteepAreaTests(unittest.TestCase):
         self.assertTrue(np.isnan(edge_diagnostics.iloc[0].phase_cv))
 
     def test_program_has_no_forbidden_input_path(self):
-        text = Path("scripts/scale_explicit_steep_area.py").read_text()
-        for forbidden in ("data/candidate", "data/catalog", "data/event", "data/audit",
-                          "data/reanalysis"):
-            self.assertNotIn(forbidden, text)
+        for path in ("scripts/scale_explicit_steep_area.py",
+                     "notebooks/scale_explicit_steep_area.ipynb"):
+            text = Path(path).read_text()
+            for forbidden in ("data/candidate", "data/catalog", "data/event", "data/audit",
+                              "data/reanalysis"):
+                self.assertNotIn(forbidden, text)
 
     @unittest.skipUnless(Path("data/scale_explicit_steep_area/diagnostics.csv").exists(),
                          "development artifact has not been executed")
