@@ -1,3 +1,5 @@
+import hashlib
+import json
 import math
 import unittest
 from pathlib import Path
@@ -14,10 +16,12 @@ from scripts.denominator_pilot import (
     component_rows,
     contact_distance,
     local_crs,
+    pzi_classes,
     select_window,
     slope_degrees,
     summarize,
     volume_fields,
+    WINDOWS,
 )
 
 
@@ -37,11 +41,9 @@ class DenominatorPilotTests(unittest.TestCase):
         self.assertEqual((south, west, count), (*candidates[key][:2], 10))
         self.assertAlmostEqual(area, candidates[key][2])
         self.assertEqual(len(digest), 64)
-
     def test_selector_rejects_no_eligible_cell(self):
         with self.assertRaises(ValueError):
             select_window([{"cenlat": 1, "cenlon": 2, "area_km2": 5}], "01")
-
     def test_planar_slope_and_nodata_support(self):
         yy, xx = np.indices((7, 8))
         z = 3 * xx - 4 * yy + 10.0
@@ -52,7 +54,6 @@ class DenominatorPilotTests(unittest.TestCase):
         slope = slope_degrees(z, 1)
         self.assertTrue(np.isnan(slope[3, 2:5]).all())
         self.assertTrue(np.isnan(slope[2:5, 3]).all())
-
     def test_strict_three_by_three_aggregation(self):
         z = np.arange(36, dtype=float).reshape(6, 6)
         expected = np.array([[7, 10], [25, 28]], dtype=float)
@@ -61,12 +62,10 @@ class DenominatorPilotTests(unittest.TestCase):
         self.assertTrue(np.isnan(aggregate_3x3(z)[0, 0]))
         with self.assertRaises(ValueError):
             aggregate_3x3(np.ones((4, 3)))
-
     def test_pixel_center_rasterization(self):
         affine = Affine(1, 0, 0, 0, -1, 2)
         mask = burn([box(0, 1, 1, 2)], (2, 2), affine)
         self.assertTrue(np.array_equal(mask, [[True, False], [False, False]]))
-
     def test_contact_distance_and_four_neighbor_objects(self):
         glacier = np.zeros((5, 5), dtype=bool)
         glacier[2, 2] = True
@@ -78,7 +77,6 @@ class DenominatorPilotTests(unittest.TestCase):
         rows = component_rows(mask, np.ones_like(mask), 30, {})
         self.assertEqual(len(rows), 2)
         self.assertTrue(all(row["edge_truncated"] == "no" for row in rows))
-
     def test_boundary_flag_and_inclusive_volume(self):
         mask = np.zeros((4, 4), dtype=bool)
         mask[0, 1] = True
@@ -86,7 +84,13 @@ class DenominatorPilotTests(unittest.TestCase):
         self.assertEqual(row["edge_truncated"], "yes")
         self.assertEqual(volume_fields(100_000)["eligible_d10"], "yes")
         self.assertEqual(volume_fields(99_999)["eligible_d10"], "no")
-
+    def test_pzi_background_fringe_thresholds_and_nodata_are_distinct(self):
+        pzi = np.array([np.nan, 0, 0.01, 0.099, 0.1, 0.5, 1])
+        primary, sensitivity, fringe, background = pzi_classes(pzi)
+        self.assertTrue(np.array_equal(primary, [0, 0, 0, 0, 1, 1, 1]))
+        self.assertTrue(np.array_equal(sensitivity, [0, 0, 0, 0, 0, 1, 1]))
+        self.assertTrue(np.array_equal(fringe, [0, 0, 1, 0, 0, 0, 0]))
+        self.assertTrue(np.array_equal(background, [0, 1, 0, 0, 0, 0, 0]))
     def test_local_equal_area_projection_round_trip(self):
         crs = local_crs(58, -155)
         forward = Transformer.from_crs(4326, crs, always_xy=True)
@@ -95,7 +99,6 @@ class DenominatorPilotTests(unittest.TestCase):
         lon, lat = reverse.transform(x, y)
         self.assertAlmostEqual(lon, -154.5, places=8)
         self.assertAlmostEqual(lat, 58.5, places=8)
-
     def test_summary_separates_all_and_contained(self):
         objects = pd.DataFrame([
             dict(region="01", region_name="Alaska", stratum="glacier", resolution_m=0,
@@ -108,11 +111,30 @@ class DenominatorPilotTests(unittest.TestCase):
         result = summarize(objects).set_index("edge_scope")
         self.assertEqual(result.loc["all", "object_count"], 2)
         self.assertEqual(result.loc["contained", "area_m2"], 10)
-
     def test_analysis_code_has_no_case_or_climate_input(self):
         text = Path("scripts/denominator_pilot.py").read_text()
         for forbidden in ("candidates.csv", "event_audit", "data/reanalysis"):
             self.assertNotIn(forbidden, text)
+    def test_artifacts_are_unique_and_match_source_manifest(self):
+        manifest = json.loads(Path("data/denominator/source_manifest.json").read_text())
+        self.assertEqual(set(manifest["access_terms"]),
+                         {"Copernicus DEM", "Gruber PZI", "ITS_LIVE", "RGI"})
+        self.assertTrue(all(item["terms"] for item in manifest["access_terms"].values()))
+        listed = {item["path"] for item in manifest["local_objects"]}
+        actual = {str(path) for path in Path("data/denominator/source").iterdir() if path.is_file()}
+        self.assertEqual(listed, actual)
+        for item in manifest["local_objects"]:
+            self.assertEqual(hashlib.sha256(Path(item["path"]).read_bytes()).hexdigest(), item["sha256"])
+        objects = pd.read_csv("data/denominator/objects.csv", dtype={"region": str}, low_memory=False)
+        keys = ["region", "stratum", "resolution_m", "slope_deg", "contact_m", "pzi_min", "object_id"]
+        self.assertFalse(objects.duplicated(keys).any())
+        windows = pd.read_csv("data/denominator/windows.csv", dtype={"region": str})
+        self.assertEqual(dict(zip(windows.region, windows.selector_sha256)),
+                         {region: values[3] for region, values in WINDOWS.items()})
+        self.assertTrue((windows.filter(regex="valid_fraction").to_numpy() == 1).all())
+        review = pd.read_csv("data/denominator/validation_review.csv", dtype={"region": str})
+        self.assertEqual(len(review), 45)
+        self.assertTrue((review.status == "agree").all())
 
 
 if __name__ == "__main__":

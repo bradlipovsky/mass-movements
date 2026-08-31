@@ -1,0 +1,762 @@
+{
+  "created_utc": "2026-08-31T04:35:56.731389Z",
+  "access_terms": {
+    "Copernicus DEM": {
+      "license_url": "https://dataspace.copernicus.eu/sites/default/files/media/files/2025-06/copernicus_contributing_mission_data_access_v2_cop_dem_licenses.pdf",
+      "terms": "Free-of-charge WorldDEM-30 licence; reproduction, distribution, communication, adaptation, modification, and combination are permitted subject to attribution and liability notice.",
+      "adapted_product_notice": "produced using Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved.",
+      "liability_notice": "The organisations in charge of the Copernicus programme by law or by delegation do not incur any liability for any use of the Copernicus WorldDEM-30."
+    },
+    "Gruber PZI": {
+      "terms_url": "https://microsite.geo.uzh.ch/cryodata/pf_global/",
+      "terms": "Publicly available with requested citation to Gruber (2012); University of Zurich supplies the data as is and disclaims warranties and liability as reproduced in the archived README."
+    },
+    "ITS_LIVE": {
+      "terms_url": "https://nsidc.org/data/documentation/measures-its_live-regional-glacier-and-ice-sheet-surface-velocities-version-2-user-guide",
+      "terms": "Public NASA MEaSUREs/NSIDC data; cite the version 2 data set and describe the subset used."
+    },
+    "RGI": {
+      "license_url": "https://www.glims.org/rgi_user_guide/01_introduction.html",
+      "terms": "RGI 7.0 may be used under CC BY 4.0 with due acknowledgement and citation of DOI 10.5067/F6JMOVY5NAVZ."
+    }
+  },
+  "local_objects": [
+    {
+      "derivation": "native COG values bilinearly warped to registered 30 m local LAEA grid",
+      "derived_from": [
+        "dem_01_N57_00_W156_00",
+        "dem_01_N57_00_W155_00",
+        "dem_01_N57_00_W154_00",
+        "dem_01_N58_00_W156_00",
+        "dem_01_N58_00_W155_00",
+        "dem_01_N58_00_W154_00",
+        "dem_01_N59_00_W156_00",
+        "dem_01_N59_00_W155_00",
+        "dem_01_N59_00_W154_00"
+      ],
+      "path": "data/denominator/source/dem_01_30m.tif",
+      "region": "01",
+      "role": "analysis_input",
+      "sha256": "038f1c32cb88e181f7a3bcd8dd57d989223f8cbecec908b66910aba61ec1564a",
+      "size_bytes": 17479894
+    },
+    {
+      "derivation": "native COG values bilinearly warped to registered 30 m local LAEA grid",
+      "derived_from": [
+        "dem_11_N44_00_E006_00",
+        "dem_11_N44_00_E007_00",
+        "dem_11_N44_00_E008_00",
+        "dem_11_N45_00_E006_00",
+        "dem_11_N45_00_E007_00",
+        "dem_11_N45_00_E008_00",
+        "dem_11_N46_00_E006_00",
+        "dem_11_N46_00_E007_00",
+        "dem_11_N46_00_E008_00"
+      ],
+      "path": "data/denominator/source/dem_11_30m.tif",
+      "region": "11",
+      "role": "analysis_input",
+      "sha256": "3c05ce63c40a8b80fff6459c35a4261de123902b8d3d1365f3c6ec8218b804e8",
+      "size_bytes": 25024948
+    },
+    {
+      "derivation": "native COG values bilinearly warped to registered 30 m local LAEA grid",
+      "derived_from": [
+        "dem_13_N42_00_E093_00",
+        "dem_13_N42_00_E094_00",
+        "dem_13_N42_00_E095_00",
+        "dem_13_N43_00_E093_00",
+        "dem_13_N43_00_E094_00",
+        "dem_13_N43_00_E095_00",
+        "dem_13_N44_00_E093_00",
+        "dem_13_N44_00_E094_00",
+        "dem_13_N44_00_E095_00"
+      ],
+      "path": "data/denominator/source/dem_13_30m.tif",
+      "region": "13",
+      "role": "analysis_input",
+      "sha256": "040f83536894a8f22d72916d2cd93b32ddb8339742312a73eb12fd5dd170079f",
+      "size_bytes": 23220094
+    },
+    {
+      "derivation": "exact source JSON bytes",
+      "derived_from": [
+        "itslive_metadata_01"
+      ],
+      "path": "data/denominator/source/itslive_01_metadata.json",
+      "region": "01",
+      "role": "source_metadata",
+      "sha256": "bf19690fcb5593996d87882f1e2aa45ad69ff7b11f254efa2f8de19a7d12b353",
+      "size_bytes": 145386
+    },
+    {
+      "derivation": "exact source JSON bytes",
+      "derived_from": [
+        "itslive_metadata_11"
+      ],
+      "path": "data/denominator/source/itslive_11_metadata.json",
+      "region": "11",
+      "role": "source_metadata",
+      "sha256": "5adf1b21dfa25f157cca0a35a6b82fafea7eac753efa8a2b36d0f54f50c3f2b4",
+      "size_bytes": 31088
+    },
+    {
+      "derivation": "exact source JSON bytes",
+      "derived_from": [
+        "itslive_metadata_13"
+      ],
+      "path": "data/denominator/source/itslive_13_metadata.json",
+      "region": "13",
+      "role": "source_metadata",
+      "sha256": "ceea4314a161d1260fc6e3b30d45ce06ea627f2e69937f07bc819b8ecea15983",
+      "size_bytes": 395555
+    },
+    {
+      "derivation": "native-grid window read of count only; no velocity or trend variable read",
+      "derived_from": [
+        "itslive_netcdf_01"
+      ],
+      "path": "data/denominator/source/itslive_count_01.tif",
+      "region": "01",
+      "role": "observability_input",
+      "sha256": "975d33dd0d0b0603fbd2a78291d3b081962e7904cbfb31cfb2a4551cab637ef5",
+      "size_bytes": 1263163
+    },
+    {
+      "derivation": "native-grid window read of count only; no velocity or trend variable read",
+      "derived_from": [
+        "itslive_netcdf_11"
+      ],
+      "path": "data/denominator/source/itslive_count_11.tif",
+      "region": "11",
+      "role": "observability_input",
+      "sha256": "c98c7f6ad38cecd06e928234dd6b91cc5fed54727a170f426cf73910e2aed9f9",
+      "size_bytes": 1135087
+    },
+    {
+      "derivation": "native-grid window read of count only; no velocity or trend variable read",
+      "derived_from": [
+        "itslive_netcdf_13"
+      ],
+      "path": "data/denominator/source/itslive_count_13.tif",
+      "region": "13",
+      "role": "observability_input",
+      "sha256": "af97c4f5b10d02539a4f53ad4d7ba06ded6bd1c36db2e9a55f5666446632b851",
+      "size_bytes": 812281
+    },
+    {
+      "derivation": "exact UZH documentation bytes",
+      "derived_from": [
+        "pzi_raw_pzi"
+      ],
+      "path": "data/denominator/source/pzi.hdr",
+      "region": "global",
+      "role": "source_metadata",
+      "sha256": "c549b0f14054a44a548d20141c0ad8c4064ae1c2b857ecfddbb16c587835f1f6",
+      "size_bytes": 158
+    },
+    {
+      "derivation": "raw Float32 row/column byte ranges, written without value resampling",
+      "derived_from": [
+        "pzi_raw_pzi"
+      ],
+      "path": "data/denominator/source/pzi_01.tif",
+      "region": "01",
+      "role": "analysis_input",
+      "sha256": "93698013ad1bfd31cccd5fe89f4eeb83c95d1abf198404963f2b8dd68670daed",
+      "size_bytes": 22823
+    },
+    {
+      "derivation": "raw Float32 row/column byte ranges, written without value resampling",
+      "derived_from": [
+        "pzi_raw_pzi"
+      ],
+      "path": "data/denominator/source/pzi_11.tif",
+      "region": "11",
+      "role": "analysis_input",
+      "sha256": "ceda0dde9a669d0961d9662416778634960716b50853ab054c840504f4ebe41d",
+      "size_bytes": 21137
+    },
+    {
+      "derivation": "raw Float32 row/column byte ranges, written without value resampling",
+      "derived_from": [
+        "pzi_raw_pzi"
+      ],
+      "path": "data/denominator/source/pzi_13.tif",
+      "region": "13",
+      "role": "analysis_input",
+      "sha256": "9d4698d580b3b2f13550893eca0034526bbd4c33d100cdf9d1b012dc9abc7ecc",
+      "size_bytes": 14025
+    },
+    {
+      "derivation": "exact UZH documentation bytes",
+      "derived_from": [
+        "pzi_raw_pzi"
+      ],
+      "path": "data/denominator/source/pzi_README.txt",
+      "region": "global",
+      "role": "source_metadata",
+      "sha256": "641f26fb219ddec315d0bfde21e42ef405eea81d22f08752f8ad7c15d307d635",
+      "size_bytes": 4417
+    },
+    {
+      "derivation": "rejected WCS response: numeric background encoded as nodata",
+      "derived_from": [],
+      "path": "data/denominator/source/pzi_wcs_01.tif",
+      "region": "01",
+      "role": "rejected_input",
+      "sha256": "85f5b21ef6af6537bce0480e2392561814054dcf0bc38eb17ffea7a299a844fd",
+      "size_bytes": 65945
+    },
+    {
+      "derivation": "rejected WCS response: numeric background encoded as nodata",
+      "derived_from": [],
+      "path": "data/denominator/source/pzi_wcs_01.tif.aux.xml",
+      "region": "01",
+      "role": "rejected_input",
+      "sha256": "4276997451ac4f52bc718f2fcfe2d9737363fecdec60581cdc1eabc530223e77",
+      "size_bytes": 392
+    },
+    {
+      "derivation": "rejected WCS response: numeric background encoded as nodata",
+      "derived_from": [],
+      "path": "data/denominator/source/pzi_wcs_11.tif",
+      "region": "11",
+      "role": "rejected_input",
+      "sha256": "e884251425009caf04e5a5d117f9b589da7916fd60e8537ebd487f468726b2e2",
+      "size_bytes": 65945
+    },
+    {
+      "derivation": "rejected WCS response: numeric background encoded as nodata",
+      "derived_from": [],
+      "path": "data/denominator/source/pzi_wcs_11.tif.aux.xml",
+      "region": "11",
+      "role": "rejected_input",
+      "sha256": "12255459706d7a06bed0a73b6c59f86016e72cc9c693d5bc5549009ae8bfaeea",
+      "size_bytes": 392
+    },
+    {
+      "derivation": "rejected WCS response: numeric background encoded as nodata",
+      "derived_from": [],
+      "path": "data/denominator/source/pzi_wcs_13.tif",
+      "region": "13",
+      "role": "rejected_input",
+      "sha256": "f3a11d2635725d40c914dba67c934c69d1918fbc4eb3e848669a50a735b49d89",
+      "size_bytes": 65945
+    },
+    {
+      "derivation": "rejected WCS response: numeric background encoded as nodata",
+      "derived_from": [],
+      "path": "data/denominator/source/pzi_wcs_13.tif.aux.xml",
+      "region": "13",
+      "role": "rejected_input",
+      "sha256": "585ac1107623a7f5652dc47328f536892ba6c9fe09646c11599d3a8698fef27b",
+      "size_bytes": 392
+    },
+    {
+      "derivation": "ogr2ogr spatial selection with registered processing halo; full feature geometry retained",
+      "derived_from": [
+        "rgi_archive_01"
+      ],
+      "path": "data/denominator/source/rgi_01.geojson",
+      "region": "01",
+      "role": "analysis_input",
+      "sha256": "549754e083b700a632aea33e99ced5f056ef01e462d4a1a4ea60bb6bd84f4f43",
+      "size_bytes": 2625246
+    },
+    {
+      "derivation": "exact archive member bytes",
+      "derived_from": [
+        "rgi_archive_01"
+      ],
+      "path": "data/denominator/source/rgi_01_attributes_metadata.json",
+      "region": "01",
+      "role": "source_metadata",
+      "sha256": "fd23a32abb4059afbcd3c6048393a3f7ce6c533608379c29303acc884d799d39",
+      "size_bytes": 7225
+    },
+    {
+      "derivation": "ogr2ogr spatial selection with registered processing halo; full feature geometry retained",
+      "derived_from": [
+        "rgi_archive_11"
+      ],
+      "path": "data/denominator/source/rgi_11.geojson",
+      "region": "11",
+      "role": "analysis_input",
+      "sha256": "32b16e4835a60570242c4ddb7a335fb6c1ba6df2a311907deb58c959cd5f6afb",
+      "size_bytes": 2889255
+    },
+    {
+      "derivation": "exact archive member bytes",
+      "derived_from": [
+        "rgi_archive_11"
+      ],
+      "path": "data/denominator/source/rgi_11_attributes_metadata.json",
+      "region": "11",
+      "role": "source_metadata",
+      "sha256": "fd23a32abb4059afbcd3c6048393a3f7ce6c533608379c29303acc884d799d39",
+      "size_bytes": 7225
+    },
+    {
+      "derivation": "ogr2ogr spatial selection with registered processing halo; full feature geometry retained",
+      "derived_from": [
+        "rgi_archive_13"
+      ],
+      "path": "data/denominator/source/rgi_13.geojson",
+      "region": "13",
+      "role": "analysis_input",
+      "sha256": "442a843186f2a923d54fa4f5625e53973298ba198503b362bd6d81c80baa1e6b",
+      "size_bytes": 722561
+    },
+    {
+      "derivation": "exact archive member bytes",
+      "derived_from": [
+        "rgi_archive_13"
+      ],
+      "path": "data/denominator/source/rgi_13_attributes_metadata.json",
+      "region": "13",
+      "role": "source_metadata",
+      "sha256": "fd23a32abb4059afbcd3c6048393a3f7ce6c533608379c29303acc884d799d39",
+      "size_bytes": 7225
+    }
+  ],
+  "manifest_version": "1.0",
+  "protocol_commit": "69c9209",
+  "remote_objects": [
+    {
+      "download_sha256": "f2a1c54edea1168a89957a4297b8fad5a80cad05797fadd8426ce45128727b9a",
+      "download_size_bytes": 82915936,
+      "id": "rgi_archive_01",
+      "last_modified": "Fri, 18 Aug 2023 09:00:02 GMT",
+      "product": "RGI",
+      "region": "01",
+      "source_etag": "4f13260-6032ec1056880",
+      "source_size_bytes": 82915936,
+      "status": "available",
+      "url": "https://cluster.klima.uni-bremen.de/~fmaussion/misc/rgi7_data/rgi70_official/RGI2000-v7.0-G-global/RGI2000-v7.0-G-01_alaska.zip",
+      "version": "7.0"
+    },
+    {
+      "download_sha256": "f52a79fe724234332027eebd16e23f9062d7178dc0edb67d21db0293589d1ff9",
+      "download_size_bytes": 6581457,
+      "id": "rgi_archive_11",
+      "last_modified": "Fri, 18 Aug 2023 09:05:24 GMT",
+      "product": "RGI",
+      "region": "11",
+      "source_etag": "646cd1-6032ed436bd00",
+      "source_size_bytes": 6581457,
+      "status": "available",
+      "url": "https://cluster.klima.uni-bremen.de/~fmaussion/misc/rgi7_data/rgi70_official/RGI2000-v7.0-G-global/RGI2000-v7.0-G-11_central_europe.zip",
+      "version": "7.0"
+    },
+    {
+      "download_sha256": "d21529f1b13b9e206806d30abef3cb31ebdd633f57484670f2a2592bffb9fdd6",
+      "download_size_bytes": 92030676,
+      "id": "rgi_archive_13",
+      "last_modified": "Fri, 18 Aug 2023 09:07:52 GMT",
+      "product": "RGI",
+      "region": "13",
+      "source_etag": "57c46d4-6032edd090a00",
+      "source_size_bytes": 92030676,
+      "status": "available",
+      "url": "https://cluster.klima.uni-bremen.de/~fmaussion/misc/rgi7_data/rgi70_official/RGI2000-v7.0-G-global/RGI2000-v7.0-G-13_central_asia.zip",
+      "version": "7.0"
+    },
+    {
+      "id": "dem_01_N57_00_W156_00",
+      "last_modified": "Mon, 09 May 2022 14:35:35 GMT",
+      "product": "Copernicus DEM",
+      "region": "01",
+      "source_etag": "c5721522bd9c8caf64a84059822c20cc",
+      "source_size_bytes": 8732301,
+      "status": "available",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N57_00_W156_00_DEM/Copernicus_DSM_COG_10_N57_00_W156_00_DEM.tif",
+      "version": "GLO-30 2021"
+    },
+    {
+      "id": "dem_01_N57_00_W155_00",
+      "last_modified": "Mon, 09 May 2022 14:35:34 GMT",
+      "product": "Copernicus DEM",
+      "region": "01",
+      "source_etag": "dde0d7fc61fb9a102058125b8ad2460e",
+      "source_size_bytes": 11242151,
+      "status": "available",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N57_00_W155_00_DEM/Copernicus_DSM_COG_10_N57_00_W155_00_DEM.tif",
+      "version": "GLO-30 2021"
+    },
+    {
+      "id": "dem_01_N57_00_W154_00",
+      "last_modified": "Mon, 09 May 2022 14:35:34 GMT",
+      "product": "Copernicus DEM",
+      "region": "01",
+      "source_etag": "d3b1930ce79fa3f0a7bb8bcb39bb7278",
+      "source_size_bytes": 23720047,
+      "status": "available",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N57_00_W154_00_DEM/Copernicus_DSM_COG_10_N57_00_W154_00_DEM.tif",
+      "version": "GLO-30 2021"
+    },
+    {
+      "id": "dem_01_N58_00_W156_00",
+      "last_modified": "Mon, 09 May 2022 14:36:21 GMT",
+      "product": "Copernicus DEM",
+      "region": "01",
+      "source_etag": "ae98642d51acc5549da91002b44c5d14",
+      "source_size_bytes": 27310937,
+      "status": "available",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N58_00_W156_00_DEM/Copernicus_DSM_COG_10_N58_00_W156_00_DEM.tif",
+      "version": "GLO-30 2021"
+    },
+    {
+      "id": "dem_01_N58_00_W155_00",
+      "last_modified": "Mon, 09 May 2022 14:36:21 GMT",
+      "product": "Copernicus DEM",
+      "region": "01",
+      "source_etag": "6ae860e4da5ab5acd1c91e0592a5ceca",
+      "source_size_bytes": 26779369,
+      "status": "available",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N58_00_W155_00_DEM/Copernicus_DSM_COG_10_N58_00_W155_00_DEM.tif",
+      "version": "GLO-30 2021"
+    },
+    {
+      "id": "dem_01_N58_00_W154_00",
+      "last_modified": "Mon, 09 May 2022 14:36:21 GMT",
+      "product": "Copernicus DEM",
+      "region": "01",
+      "source_etag": "99c908704b8da46d62d3b9dc26fc5ac3",
+      "source_size_bytes": 9366938,
+      "status": "available",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N58_00_W154_00_DEM/Copernicus_DSM_COG_10_N58_00_W154_00_DEM.tif",
+      "version": "GLO-30 2021"
+    },
+    {
+      "id": "dem_01_N59_00_W156_00",
+      "last_modified": "Mon, 09 May 2022 14:37:12 GMT",
+      "product": "Copernicus DEM",
+      "region": "01",
+      "source_etag": "80ba8baef0da084b61049c6cc4423fd4",
+      "source_size_bytes": 21484383,
+      "status": "available",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N59_00_W156_00_DEM/Copernicus_DSM_COG_10_N59_00_W156_00_DEM.tif",
+      "version": "GLO-30 2021"
+    },
+    {
+      "id": "dem_01_N59_00_W155_00",
+      "last_modified": "Mon, 09 May 2022 14:37:12 GMT",
+      "product": "Copernicus DEM",
+      "region": "01",
+      "source_etag": "09f548e0d4353646aa53be3eff4301f9",
+      "source_size_bytes": 23785358,
+      "status": "available",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N59_00_W155_00_DEM/Copernicus_DSM_COG_10_N59_00_W155_00_DEM.tif",
+      "version": "GLO-30 2021"
+    },
+    {
+      "id": "dem_01_N59_00_W154_00",
+      "last_modified": "Mon, 09 May 2022 14:37:12 GMT",
+      "product": "Copernicus DEM",
+      "region": "01",
+      "source_etag": "ffe421d809d895e4c1d702b9cf265dfb",
+      "source_size_bytes": 14299422,
+      "status": "available",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N59_00_W154_00_DEM/Copernicus_DSM_COG_10_N59_00_W154_00_DEM.tif",
+      "version": "GLO-30 2021"
+    },
+    {
+      "id": "dem_11_N44_00_E006_00",
+      "last_modified": "Mon, 09 May 2022 14:24:10 GMT",
+      "product": "Copernicus DEM",
+      "region": "11",
+      "source_etag": "88a6c357cdcbd941fab90cd44b4866e1",
+      "source_size_bytes": 42181091,
+      "status": "available",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N44_00_E006_00_DEM/Copernicus_DSM_COG_10_N44_00_E006_00_DEM.tif",
+      "version": "GLO-30 2021"
+    },
+    {
+      "id": "dem_11_N44_00_E007_00",
+      "last_modified": "Mon, 09 May 2022 14:24:10 GMT",
+      "product": "Copernicus DEM",
+      "region": "11",
+      "source_etag": "6acb43b0a727ad3523188aabd426a157",
+      "source_size_bytes": 42478536,
+      "status": "available",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N44_00_E007_00_DEM/Copernicus_DSM_COG_10_N44_00_E007_00_DEM.tif",
+      "version": "GLO-30 2021"
+    },
+    {
+      "id": "dem_11_N44_00_E008_00",
+      "last_modified": "Mon, 09 May 2022 14:24:10 GMT",
+      "product": "Copernicus DEM",
+      "region": "11",
+      "source_etag": "2cae5af9c7b60f4e8c883f5cd54c98b2",
+      "source_size_bytes": 34845275,
+      "status": "available",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N44_00_E008_00_DEM/Copernicus_DSM_COG_10_N44_00_E008_00_DEM.tif",
+      "version": "GLO-30 2021"
+    },
+    {
+      "id": "dem_11_N45_00_E006_00",
+      "last_modified": "Mon, 09 May 2022 14:24:54 GMT",
+      "product": "Copernicus DEM",
+      "region": "11",
+      "source_etag": "72c5ebd9d8a7e37b8843109b5a40978b",
+      "source_size_bytes": 42310635,
+      "status": "available",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N45_00_E006_00_DEM/Copernicus_DSM_COG_10_N45_00_E006_00_DEM.tif",
+      "version": "GLO-30 2021"
+    },
+    {
+      "id": "dem_11_N45_00_E007_00",
+      "last_modified": "Mon, 09 May 2022 14:24:54 GMT",
+      "product": "Copernicus DEM",
+      "region": "11",
+      "source_etag": "9419a0784d0c7b90c48754dc8901bf49",
+      "source_size_bytes": 42594792,
+      "status": "available",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N45_00_E007_00_DEM/Copernicus_DSM_COG_10_N45_00_E007_00_DEM.tif",
+      "version": "GLO-30 2021"
+    },
+    {
+      "id": "dem_11_N45_00_E008_00",
+      "last_modified": "Mon, 09 May 2022 14:24:55 GMT",
+      "product": "Copernicus DEM",
+      "region": "11",
+      "source_etag": "d2b0f9583fc4222fbff560edf7463fa6",
+      "source_size_bytes": 43016696,
+      "status": "available",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N45_00_E008_00_DEM/Copernicus_DSM_COG_10_N45_00_E008_00_DEM.tif",
+      "version": "GLO-30 2021"
+    },
+    {
+      "id": "dem_11_N46_00_E006_00",
+      "last_modified": "Mon, 09 May 2022 14:25:45 GMT",
+      "product": "Copernicus DEM",
+      "region": "11",
+      "source_etag": "c13f6acef95bc36497214eb5a40767f2",
+      "source_size_bytes": 38504837,
+      "status": "available",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N46_00_E006_00_DEM/Copernicus_DSM_COG_10_N46_00_E006_00_DEM.tif",
+      "version": "GLO-30 2021"
+    },
+    {
+      "id": "dem_11_N46_00_E007_00",
+      "last_modified": "Mon, 09 May 2022 14:25:45 GMT",
+      "product": "Copernicus DEM",
+      "region": "11",
+      "source_etag": "d75ca33280e101b7e83b2fbef81e853b",
+      "source_size_bytes": 41776750,
+      "status": "available",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N46_00_E007_00_DEM/Copernicus_DSM_COG_10_N46_00_E007_00_DEM.tif",
+      "version": "GLO-30 2021"
+    },
+    {
+      "id": "dem_11_N46_00_E008_00",
+      "last_modified": "Mon, 09 May 2022 14:25:46 GMT",
+      "product": "Copernicus DEM",
+      "region": "11",
+      "source_etag": "0e7068e0cc74d941c7af5cda6a640a7b",
+      "source_size_bytes": 42038015,
+      "status": "available",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N46_00_E008_00_DEM/Copernicus_DSM_COG_10_N46_00_E008_00_DEM.tif",
+      "version": "GLO-30 2021"
+    },
+    {
+      "id": "dem_13_N42_00_E093_00",
+      "last_modified": "Mon, 09 May 2022 14:22:54 GMT",
+      "product": "Copernicus DEM",
+      "region": "13",
+      "source_etag": "929e9a12208e1e9d51bcbc05c27514eb",
+      "source_size_bytes": 37260431,
+      "status": "available",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N42_00_E093_00_DEM/Copernicus_DSM_COG_10_N42_00_E093_00_DEM.tif",
+      "version": "GLO-30 2021"
+    },
+    {
+      "id": "dem_13_N42_00_E094_00",
+      "last_modified": "Mon, 09 May 2022 14:22:54 GMT",
+      "product": "Copernicus DEM",
+      "region": "13",
+      "source_etag": "25eda201b16fe37a6a206cc1d94c6cb4",
+      "source_size_bytes": 37364169,
+      "status": "available",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N42_00_E094_00_DEM/Copernicus_DSM_COG_10_N42_00_E094_00_DEM.tif",
+      "version": "GLO-30 2021"
+    },
+    {
+      "id": "dem_13_N42_00_E095_00",
+      "last_modified": "Mon, 09 May 2022 14:22:54 GMT",
+      "product": "Copernicus DEM",
+      "region": "13",
+      "source_etag": "d6d6e7a1794d75d7dda48196613aa724",
+      "source_size_bytes": 36675181,
+      "status": "available",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N42_00_E095_00_DEM/Copernicus_DSM_COG_10_N42_00_E095_00_DEM.tif",
+      "version": "GLO-30 2021"
+    },
+    {
+      "id": "dem_13_N43_00_E093_00",
+      "last_modified": "Mon, 09 May 2022 14:23:42 GMT",
+      "product": "Copernicus DEM",
+      "region": "13",
+      "source_etag": "c7af17f26b18c617fa5b600115810d5a",
+      "source_size_bytes": 38314476,
+      "status": "available",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N43_00_E093_00_DEM/Copernicus_DSM_COG_10_N43_00_E093_00_DEM.tif",
+      "version": "GLO-30 2021"
+    },
+    {
+      "id": "dem_13_N43_00_E094_00",
+      "last_modified": "Mon, 09 May 2022 14:23:43 GMT",
+      "product": "Copernicus DEM",
+      "region": "13",
+      "source_etag": "a8d9c846814cff4dde088288c9df3e6b",
+      "source_size_bytes": 38478192,
+      "status": "available",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N43_00_E094_00_DEM/Copernicus_DSM_COG_10_N43_00_E094_00_DEM.tif",
+      "version": "GLO-30 2021"
+    },
+    {
+      "id": "dem_13_N43_00_E095_00",
+      "last_modified": "Mon, 09 May 2022 14:23:43 GMT",
+      "product": "Copernicus DEM",
+      "region": "13",
+      "source_etag": "b8ed9fa7c4394e71341efc23631b89c9",
+      "source_size_bytes": 38411081,
+      "status": "available",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N43_00_E095_00_DEM/Copernicus_DSM_COG_10_N43_00_E095_00_DEM.tif",
+      "version": "GLO-30 2021"
+    },
+    {
+      "id": "dem_13_N44_00_E093_00",
+      "last_modified": "Mon, 09 May 2022 14:24:28 GMT",
+      "product": "Copernicus DEM",
+      "region": "13",
+      "source_etag": "c60e6a8431e20a609c24e2482804e1b4",
+      "source_size_bytes": 36414941,
+      "status": "available",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N44_00_E093_00_DEM/Copernicus_DSM_COG_10_N44_00_E093_00_DEM.tif",
+      "version": "GLO-30 2021"
+    },
+    {
+      "id": "dem_13_N44_00_E094_00",
+      "last_modified": "Mon, 09 May 2022 14:24:28 GMT",
+      "product": "Copernicus DEM",
+      "region": "13",
+      "source_etag": "58b603719ee26a691e832dcc216e0e7a",
+      "source_size_bytes": 37625191,
+      "status": "available",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N44_00_E094_00_DEM/Copernicus_DSM_COG_10_N44_00_E094_00_DEM.tif",
+      "version": "GLO-30 2021"
+    },
+    {
+      "id": "dem_13_N44_00_E095_00",
+      "last_modified": "Mon, 09 May 2022 14:24:28 GMT",
+      "product": "Copernicus DEM",
+      "region": "13",
+      "source_etag": "52fb1a23fec2a9277a4c635ce8c24144",
+      "source_size_bytes": 37305675,
+      "status": "available",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N44_00_E095_00_DEM/Copernicus_DSM_COG_10_N44_00_E095_00_DEM.tif",
+      "version": "GLO-30 2021"
+    },
+    {
+      "id": "pzi_raw_pzi",
+      "last_modified": "Wed, 15 Feb 2012 09:26:18 GMT",
+      "product": "Gruber PZI",
+      "region": "global",
+      "source_etag": "4f3b7a3a-b964f000",
+      "source_size_bytes": 3110400000,
+      "status": "available",
+      "url": "https://microsite.geo.uzh.ch/cryodata/pf_global/PZI.flt",
+      "version": "2012"
+    },
+    {
+      "id": "pzi_raw_pzi",
+      "last_modified": "Wed, 15 Feb 2012 09:35:02 GMT",
+      "product": "Gruber PZI",
+      "region": "global",
+      "source_etag": "4f3b7c46-9e",
+      "source_size_bytes": 158,
+      "status": "available",
+      "url": "https://microsite.geo.uzh.ch/cryodata/pf_global/PZI.hdr",
+      "version": "2012"
+    },
+    {
+      "id": "pzi_raw_readme",
+      "last_modified": "Sat, 18 Feb 2012 12:15:44 GMT",
+      "product": "Gruber PZI",
+      "region": "global",
+      "source_etag": "4f3f9670-1141",
+      "source_size_bytes": 4417,
+      "status": "available",
+      "url": "https://microsite.geo.uzh.ch/cryodata/pf_global/README.txt",
+      "version": "2012"
+    },
+    {
+      "id": "itslive_netcdf_01",
+      "last_modified": "Tue, 13 Feb 2024 02:20:07 GMT",
+      "product": "ITS_LIVE",
+      "region": "01",
+      "source_etag": "2e476d1c65b402aa9ad85f426e25d146-142",
+      "source_size_bytes": 1186762205,
+      "status": "available",
+      "url": "https://its-live-data.s3.amazonaws.com/velocity_mosaic/v2/static/ITS_LIVE_velocity_120m_RGI01A_0000_v02.nc",
+      "version": "2"
+    },
+    {
+      "id": "itslive_metadata_01",
+      "last_modified": "Wed, 24 Jan 2024 18:42:54 GMT",
+      "product": "ITS_LIVE",
+      "region": "01",
+      "source_etag": "ccc40b4cd16bc30a3445dd44bb7ce403",
+      "source_size_bytes": 145386,
+      "status": "available",
+      "url": "https://its-live-data.s3.amazonaws.com/velocity_mosaic/v2/static/ITS_LIVE_velocity_120m_RGI01A_0000_v02.json",
+      "version": "2"
+    },
+    {
+      "id": "itslive_netcdf_11",
+      "last_modified": "Sun, 08 Dec 2024 18:57:46 GMT",
+      "product": "ITS_LIVE",
+      "region": "11",
+      "source_etag": "bf0d304d4cfef0cbfb5f8a66aedafd55-2",
+      "source_size_bytes": 179048696,
+      "status": "available",
+      "url": "https://its-live-data.s3.amazonaws.com/velocity_mosaic/v2/static/ITS_LIVE_velocity_120m_RGI11A_0000_v02.nc",
+      "version": "2"
+    },
+    {
+      "id": "itslive_metadata_11",
+      "last_modified": "Sun, 08 Dec 2024 18:59:35 GMT",
+      "product": "ITS_LIVE",
+      "region": "11",
+      "source_etag": "fe5899bdd71edc6a6e9275b1a95624fe",
+      "source_size_bytes": 31088,
+      "status": "available",
+      "url": "https://its-live-data.s3.amazonaws.com/velocity_mosaic/v2/static/ITS_LIVE_velocity_120m_RGI11A_0000_v02.json",
+      "version": "2"
+    },
+    {
+      "id": "itslive_netcdf_13",
+      "last_modified": "Sun, 08 Dec 2024 18:57:50 GMT",
+      "product": "ITS_LIVE",
+      "region": "13",
+      "source_etag": "8937135cf9c0392070730e106bc38b44-32",
+      "source_size_bytes": 3306303098,
+      "status": "available",
+      "url": "https://its-live-data.s3.amazonaws.com/velocity_mosaic/v2/static/ITS_LIVE_velocity_120m_RGI14A_0000_v02.nc",
+      "version": "2"
+    },
+    {
+      "id": "itslive_metadata_13",
+      "last_modified": "Sun, 08 Dec 2024 18:59:37 GMT",
+      "product": "ITS_LIVE",
+      "region": "13",
+      "source_etag": "1d05f8278889ec58e029b65aba0f987d",
+      "source_size_bytes": 395555,
+      "status": "available",
+      "url": "https://its-live-data.s3.amazonaws.com/velocity_mosaic/v2/static/ITS_LIVE_velocity_120m_RGI14A_0000_v02.json",
+      "version": "2"
+    }
+  ]
+}

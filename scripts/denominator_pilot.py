@@ -30,7 +30,6 @@ WINDOWS = {
 }
 CROSS = np.array([[0, 1, 0], [1, 1, 1], [0, 1, 0]], dtype=np.uint8)
 
-
 def select_window(rows, region):
     """Return the registered minimum-digest eligible one-degree cell."""
     cells = {}
@@ -48,7 +47,6 @@ def select_window(rows, region):
         raise ValueError(f"region {region} has no eligible cell")
     return min(eligible)
 
-
 def slope_degrees(z, spacing):
     """Centered-difference slope with strict five-cell finite support."""
     out = np.full(z.shape, np.nan, dtype=np.float32)
@@ -61,28 +59,24 @@ def slope_degrees(z, spacing):
     out[1:-1, 1:-1] = np.where(valid, values, np.nan)
     return out
 
-
 def aggregate_3x3(z):
     """Strict arithmetic aggregation of an aligned 30 m grid."""
     if z.shape[0] % 3 or z.shape[1] % 3:
         raise ValueError("30 m grid dimensions must be divisible by three")
     blocks = z.reshape(z.shape[0] // 3, 3, z.shape[1] // 3, 3)
     valid = np.isfinite(blocks).all(axis=(1, 3))
-    mean = np.nanmean(blocks, axis=(1, 3)).astype(np.float32)
+    mean = blocks.mean(axis=(1, 3), dtype=np.float64).astype(np.float32)
     return np.where(valid, mean, np.nan)
-
 
 def window_geometry(south, west, crs):
     geographic = segmentize(box(west, south, west + 1, south + 1), 0.01)
     project = Transformer.from_crs(4326, crs, always_xy=True).transform
     return geographic, transform(project, geographic)
 
-
 def local_crs(south, west):
     return CRS.from_proj4(
         f"+proj=laea +lat_0={south + .5} +lon_0={west + .5} +datum=WGS84 +units=m +no_defs"
     )
-
 
 def burn(geometries, out_shape, affine):
     return rasterize(
@@ -93,7 +87,6 @@ def burn(geometries, out_shape, affine):
         all_touched=False,
         dtype="uint8",
     ).astype(bool)
-
 
 def warp_band(path, out_shape, affine, crs):
     out = np.full(out_shape, np.nan, dtype=np.float32)
@@ -111,7 +104,6 @@ def warp_band(path, out_shape, affine, crs):
         )
     return out
 
-
 def polygon_values(array, affine, geometry):
     """Values in pixel-center cells inside one polygon, without a full-grid mask."""
     raw = from_bounds(*geometry.bounds, transform=affine)
@@ -124,14 +116,16 @@ def polygon_values(array, affine, geometry):
     mask = burn([geometry], (row1 - row0, col1 - col0), window_transform(window, affine))
     return array[row0:row1, col0:col1][mask]
 
-
 def volume_fields(area):
     return {f"eligible_d{depth}": "yes" if area * depth >= 1e6 else "no" for depth in (10, 30, 100)}
-
 
 def contact_distance(glaciers, spacing):
     return np.maximum(0, distance_transform_edt(~glaciers) - 1) * spacing
 
+def pzi_classes(pzi):
+    valid = np.isfinite(pzi)
+    return (valid & (pzi >= 0.1), valid & (pzi >= 0.5),
+            valid & np.isclose(pzi, 0.01, atol=1e-6), valid & (pzi == 0))
 
 def component_rows(mask, report, spacing, base):
     labels, count = label(mask & report, structure=CROSS)
@@ -147,7 +141,6 @@ def component_rows(mask, report, spacing, base):
         rows.append(row)
     return rows
 
-
 def load_features(path, crs):
     with path.open() as handle:
         collection = json.load(handle)
@@ -155,12 +148,11 @@ def load_features(path, crs):
     return [(item["properties"], shape(item["geometry"]), transform(project, shape(item["geometry"])))
             for item in collection["features"]]
 
-
 def glacier_rows(features, window_wgs, window_laea, z, affine, count_path):
     count = count_affine = count_project = None
     if count_path.exists():
         dataset = rasterio.open(count_path)
-        count = dataset.read(1, masked=True).filled(np.nan).astype(float)
+        count = dataset.read(1).astype(float)
         count_affine = dataset.transform
         count_project = Transformer.from_crs(4326, dataset.crs, always_xy=True).transform
         dataset.close()
@@ -186,6 +178,7 @@ def glacier_rows(features, window_wgs, window_laea, z, affine, count_path):
             "pzi_min": "", "object_id": properties["rgi_id"], "area_m2": area,
             "edge_truncated": "no" if window_laea.contains(projected) else "yes",
             "outline_date": properties["src_date"],
+            "pzi_reference_period": "not_applicable", "itslive_period": "2014-2022",
             "dem_valid_fraction": float(np.mean(valid_dem)) if dem_values.size else 0.0,
             "itslive_status": coverage, "itslive_positive_fraction": fraction,
             "itslive_median_positive_count": median,
@@ -193,7 +186,6 @@ def glacier_rows(features, window_wgs, window_laea, z, affine, count_path):
         row.update(volume_fields(area))
         rows.append(row)
     return rows
-
 
 def region_layers(region, resolution=30):
     _, south, west, _ = WINDOWS[region]
@@ -212,10 +204,10 @@ def region_layers(region, resolution=30):
     pzi = warp_band(SOURCE / f"pzi_{region}.tif", z.shape, affine, crs)
     return z, affine, features, window_wgs, window_laea, report, glaciers, pzi
 
-
 def analyze_region(region):
     name, south, west, digest = WINDOWS[region]
-    base_region = {"region": region, "region_name": name}
+    base_region = {"region": region, "region_name": name, "rgi_target_epoch": "near_2000",
+                   "dem_acquisition_epoch": "2011-2015"}
     rows = []
     layers30 = region_layers(region)
     z, affine, features, window_wgs, window_laea, report, _, _ = layers30
@@ -231,25 +223,27 @@ def analyze_region(region):
         z, affine, _, _, _, report, glaciers, pzi = region_layers(region, spacing)
         slope = slope_degrees(z, spacing)
         distance = contact_distance(glaciers, spacing)
+        pzi_primary, pzi_sensitivity, pzi_fringe, pzi_background = pzi_classes(pzi)
         for threshold in (25, 30, 35):
             steep = np.isfinite(slope) & (slope >= threshold) & ~glaciers
             for contact in (0, 100, 300):
                 base = dict(base_region, stratum="glacier_contact", resolution_m=spacing,
                             slope_deg=threshold, contact_m=contact, pzi_min="", outline_date="",
+                            pzi_reference_period="not_applicable", itslive_period="not_applicable",
                             dem_valid_fraction=1.0, itslive_status="not_applicable",
                             itslive_positive_fraction="", itslive_median_positive_count="")
                 rows.extend(component_rows(steep & (distance <= contact), report, spacing, base))
-            for pzi_min in (0.1, 0.5):
+            for pzi_min, pzi_mask in ((0.1, pzi_primary), (0.5, pzi_sensitivity)):
                 base = dict(base_region, stratum="permafrost", resolution_m=spacing,
                             slope_deg=threshold, contact_m="", pzi_min=pzi_min, outline_date="",
+                            pzi_reference_period="1961-1990", itslive_period="not_applicable",
                             dem_valid_fraction=1.0, itslive_status="not_applicable",
                             itslive_positive_fraction="", itslive_median_positive_count="")
-                rows.extend(component_rows(steep & np.isfinite(pzi) & (pzi >= pzi_min),
-                                           report, spacing, base))
+                rows.extend(component_rows(steep & pzi_mask, report, spacing, base))
         window_record[f"pzi_valid_fraction_{spacing}m"] = float(np.mean(np.isfinite(pzi)[report]))
-        window_record[f"pzi_fringe_fraction_{spacing}m"] = float(np.mean((pzi == 0.01)[report]))
+        window_record[f"pzi_fringe_fraction_{spacing}m"] = float(np.mean(pzi_fringe[report]))
+        window_record[f"pzi_background_fraction_{spacing}m"] = float(np.mean(pzi_background[report]))
     return window_record, rows
-
 
 def summarize(objects):
     groups = ["region", "region_name", "stratum", "resolution_m", "slope_deg", "contact_m", "pzi_min"]
@@ -263,7 +257,6 @@ def summarize(objects):
                 row[f"eligible_d{depth}_count"] = int((selected[f"eligible_d{depth}"] == "yes").sum())
             rows.append(row)
     return pd.DataFrame(rows)
-
 
 def main():
     OUTPUT.mkdir(parents=True, exist_ok=True)

@@ -1,4 +1,4 @@
-.PHONY: all artifacts-event-audit artifacts-reanalysis check check-event-audit check-reanalysis clean notebook-event-audit notebook-reanalysis reanalysis
+.PHONY: all artifacts-denominator artifacts-event-audit artifacts-reanalysis check check-denominator check-event-audit check-reanalysis clean denominator notebook-denominator notebook-event-audit notebook-reanalysis reanalysis
 
 PYTHON_REANALYSIS ?= .venv/bin/python
 JUPYTER_REANALYSIS ?= $(dir $(PYTHON_REANALYSIS))jupyter
@@ -31,6 +31,18 @@ artifacts-reanalysis: reanalysis
 
 check-reanalysis:
 	$(PYTHON_REANALYSIS) -m unittest tests.test_reanalysis_pilot -v
+
+denominator:
+	$(PYTHON_REANALYSIS) scripts/denominator_pilot.py
+
+check-denominator:
+	$(PYTHON_REANALYSIS) -m unittest tests.test_denominator_pilot -v
+
+notebook-denominator:
+	PATH="$(dir $(PYTHON_REANALYSIS)):$$PATH" $(JUPYTER_REANALYSIS) execute --inplace --timeout 600 --kernel_name python3 notebooks/denominator_pilot.ipynb
+
+artifacts-denominator: denominator check-denominator notebook-denominator
+	latexmk -pdf -cd latex/main.tex
 
 clean:
 	latexmk -C -cd latex/main.tex
