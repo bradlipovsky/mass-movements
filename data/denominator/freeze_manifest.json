@@ -1,8 +1,8 @@
 {
   "manifest_version": "1.0",
-  "created_utc": "2026-08-31T05:09:45Z",
+  "created_utc": "2026-08-31T05:17:02Z",
   "protocol_commit": "69c9209",
-  "implementation_commit": "cfd6ac2cf6956ad624bbc90544360b958f46fe60",
+  "implementation_commit": "2ace5ac74e73535363e13521ac4c3c4fdbfd2c29",
   "registered_code_budget": {
     "analysis_lines": 269,
     "test_lines": 164,
@@ -26,10 +26,10 @@
     "protocol/denominator-pilot.md": {"size_bytes": 14382, "sha256": "8da1fb7316c78cd6696279e9e106977a3cbff287c5fbcd354b39e4d77d1c8bcd"},
     "requirements-denominator.txt": {"size_bytes": 156, "sha256": "9c80611e53eb0626e119998a69f61fb1ab98cdb09f3e29a8661f93f5b506d62e"},
     "scripts/denominator_pilot.py": {"size_bytes": 14163, "sha256": "5f733147434f859ea3cbfc815da77a1bd8ae83137d80e59a65243d6d3e23508a"},
-    "tests/test_denominator_pilot.py": {"size_bytes": 9291, "sha256": "bf6cdbea0d0007ca91eee183e348ca0fca73d0651fe9f029f89c108146009d8b"},
-    "data/denominator/PROVENANCE.md": {"size_bytes": 3519, "sha256": "b8154c6fcb58074a5ec118440b522dce346037578f2ddce5ad70882afa4a71f8"},
+    "tests/test_denominator_pilot.py": {"size_bytes": 9329, "sha256": "631b3d8d7966ad8e375fffc289d7c9e27545f507a6c15a153be5bd98ea2bdda9"},
+    "data/denominator/PROVENANCE.md": {"size_bytes": 3721, "sha256": "21887383304580e2b439c35d4957353abe3d94ebfd6e11e4b78da896b92ef3f7"},
     "data/denominator/eligible_windows.csv": {"size_bytes": 46683, "sha256": "58a160ffa0e9ce2c99e4a8550297851829de7d9ac8e3f73100671c97632f9e4d"},
-    "data/denominator/source_manifest.json": {"size_bytes": 30909, "sha256": "0c23cd44a136dc9fedbe23786d1f9a11c6213b65482088515a576a2cca314abe"},
+    "data/denominator/source_manifest.json": {"size_bytes": 31798, "sha256": "2ba6efdde10b735f38a18d55864db5ffa23f2dd476d6152593d57305ef4e009b"},
     "data/denominator/objects.csv": {"size_bytes": 33251295, "sha256": "6ddec97b1cd31cdd3a77501455085e1cd2114e2c0995f1a5dfc057a52b3eda6a"},
     "data/denominator/summary.csv": {"size_bytes": 13844, "sha256": "b71caf02d45e306e9e7203175d56f4b9428c3ef3377dce8f1f76353dbd8c98ff"},
     "data/denominator/windows.csv": {"size_bytes": 3855, "sha256": "609185f85bf72e06e487b2345900584f942440f861dbd0a71eff059436fd4412"},
@@ -40,8 +40,8 @@
     "figures/denominator_windows.pdf": {"size_bytes": 150069, "sha256": "ba5b74000d2b7fc050e39c372a20d15b0ba66cdc81596c67317b2be37623f087"},
     "figures/denominator_sensitivity.png": {"size_bytes": 126828, "sha256": "c4acb56cf1961df9ac3bab03aa839c8977ec4494a3ce9edb035d6d6a55a7b021"},
     "figures/denominator_sensitivity.pdf": {"size_bytes": 23636, "sha256": "18c31e66133c756fa44f3ff034de3cede3508b2c299c66b34e257258346d82e3"},
-    "latex/main.tex": {"size_bytes": 42579, "sha256": "c828507cc5c1bd7703949fc8ef29fc6a8f9a4bb923c872e21e5dc3efdc44a916"},
-    "latex/references.bib": {"size_bytes": 10036, "sha256": "1ffdf827be5ca022e3ff84b932271b4c9371a6fb86bb1bc31a5dafd1d554eacf"},
-    "latex/main.pdf": {"size_bytes": 527548, "sha256": "c527b8960c1852d1297b9d61c5540e6107e8f2b7ae6f0a91e9f54eea38deab87"}
+    "latex/main.tex": {"size_bytes": 42590, "sha256": "a84ca992cfa1860ebd07bcac53bbed8182879ef8707a9ffbeefbfdea478ca41a"},
+    "latex/references.bib": {"size_bytes": 10258, "sha256": "e143f6c007ddbd2b9ac50389f099a5f99feb3dfdad7fe9c1369112a0ac81c2fc"},
+    "latex/main.pdf": {"size_bytes": 527700, "sha256": "d06bc200fcc7e7fca219febe41ff09c2aa7918dd439cd07dd870f16bbec82caa"}
   }
 }
