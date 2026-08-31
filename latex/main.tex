@@ -1,6 +1,7 @@
 \documentclass[11pt]{article}
 
 \usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
 \usepackage{array}
 \usepackage{booktabs}
 \usepackage[colorlinks=true,allcolors=blue]{hyperref}
@@ -12,11 +13,11 @@
 \newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
 
 \hypersetup{
-  pdftitle={Climate preconditioning and the mechanics of hazardous alpine mass movements},
+  pdftitle={Climate preconditioning and the mechanics of hazardous alpine mass movements: a catalog protocol},
   pdfauthor={Bradley P. Lipovsky}
 }
 
-\title{Climate preconditioning and the mechanics of hazardous alpine mass movements}
+\title{Climate preconditioning and the mechanics of hazardous alpine mass movements:\\a catalog and attribution protocol}
 \author{Bradley P. Lipovsky}
 \date{Working manuscript, 30 August 2026}
 
@@ -24,124 +25,167 @@
 \maketitle
 
 \begin{abstract}
-Large rock, ice, and mixed-material collapses initiate process cascades that
-can travel tens of kilometers or generate locally extreme tsunamis. Although
-warming alters glacier support, permafrost temperature, meltwater supply, and
-precipitation phase, the contribution of these changes to individual failures
-is rarely quantified. Here, I define an event catalog and attribution strategy
-that separate long-term climate preconditioning from immediate meteorological
-triggers and from non-climatic controls. The seed catalog resolves several
-basic ambiguities in recent reports: the Dickson Fjord landslide occurred in
-2023 rather than 2024, and the Tracy Arm concern and the large 2025 Alaska
-landslide describe one event. The catalog also retains the still-active Barry
-Arm slope as a susceptibility case rather than an occurred collapse. Published
-mechanisms differ among the cases. The Aru glacier detachments involved basal
-hydrology and weak till, whereas Chamoli, Dickson Fjord, and Tracy Arm began as
-rock-slope failures that entrained ice or entered water. These distinctions
-define observables for an event-centered reanalysis: surface energy balance,
-liquid precipitation, snow loading, freeze--thaw history, and multidecadal
-warming. This framework is a first step toward testing systematic climatic
-association and transferring the resulting mechanical conditions to a global
-susceptibility assessment.
+Large rock, ice, and mixed-material collapses can transform into far-traveled
+debris flows or locally extreme tsunamis. Warming changes glacier geometry,
+permafrost temperature, meltwater supply, and precipitation phase, but these
+changes are seldom separated from immediate weather and non-climatic controls
+in event reports. I define a catalog and attribution protocol that makes this
+separation explicit. A convenience seed of eight records---six occurred-event
+candidates, including two in one site cluster, one dependent episode, and one
+active-slope case---tests the schema and reconciles source ambiguities. The reviewed
+seismic record classifies the August 2026 Nepal source as a glacial collapse;
+the Dickson Fjord rockslide occurred in 2023 rather than the publication year
+2024; and Barry Arm remains an active slope rather than an occurred
+catastrophic failure. The cases require different predictors. The Aru glacier
+detachments motivate basal-effective-pressure bounds, whereas Chamoli,
+Dickson Fjord, Tracy Arm, and Barry Arm require glacier-geometry and rock-slope
+observations in addition to atmospheric reanalysis. I specify climate-blind
+event discovery, clustered analysis units, detrended seasonal controls,
+matched non-failing slopes, and multiplicity control. The seed was selected to
+motivate the study and therefore cannot test a systematic climatic
+association. No such association is estimated here.
 \end{abstract}
 
 \section{Introduction}
 
-Alpine mass movements become especially hazardous when an initial slope
-failure changes material or enters a confined channel. The 2021 Chamoli rock
-and ice avalanche, for example, transformed into a debris flow and flood that
-scoured valley walls and struck two hydropower projects
-\citep{Shugar2021}. Fjord failures instead transfer momentum to water. The
-September 2023 Dickson Fjord rockslide generated a near-source runup of about
-200~m and a fjord seiche recorded globally for nine days
-\citep{Svennevig2024,Monahan2025}. The August 2025 Tracy Arm landslide produced
-a measured maximum runup of $481\pm7.6$~m \citep{Shugar2026}. The initial
-failure and the downstream cascade must therefore be described separately.
+Alpine mass movements become especially hazardous when an initial failure
+changes material or enters a confined channel. The 2021 Chamoli rock and ice
+avalanche transformed into a debris flow and flood that scoured valley walls
+and struck two hydropower projects \citep{Shugar2021}. Fjord failures instead
+transfer momentum to water. The September 2023 Dickson Fjord rockslide
+generated near-source runup of about 200~m and a very-long-period signal that
+persisted for nine days \citep{Svennevig2024,Monahan2025}. The August 2025
+Tracy Arm landslide produced a measured maximum runup of
+$481\pm7.6$~m \citep{Shugar2026}. A useful catalog must describe the initial
+failure separately from the downstream cascade.
 
 The mechanical origin of the initial failure remains the central uncertainty.
 Warming may remove glacier support from a rock slope, thaw ice in fractures,
-or increase meltwater pressure beneath a glacier. Weather may provide a more
-immediate perturbation through rain, snow loading, melt, or rapid temperature
-change. However, lithology, adverse structure, valley geometry, and internal
-glacier dynamics may be necessary controls. A climatic trend can therefore
-precondition a failure without being its immediate trigger, and a warm period
-at failure does not by itself establish causation.
+or change meltwater pressure beneath a glacier. Weather may provide a shorter
+perturbation through rain, snow loading, melt, or rapid temperature change.
+Lithology, adverse structure, progressive damage, valley geometry, glacier
+dynamics, and earthquakes remain competing or interacting explanations. A
+climatic trend can therefore precondition a failure without being its
+immediate trigger, and a warm event year does not establish causation.
 
-Here, I construct a literature catalog that preserves this distinction and use
-it to define a test of systematic association with climate. The immediate goal
-is not to assign an anthropogenic fraction to any one event. It is to identify
-the atmospheric and cryospheric quantities that each proposed mechanism
-requires, compare those quantities with reanalysis, and determine whether the
-events occupy unusual parts of their local climate histories.
+Here, I use a literature seed to define a reproducible catalog and the tests
+that would be needed to evaluate systematic association with climate. The
+seed is a protocol-development set, not an inference sample. Its purpose is to
+identify quantities required by the published mechanisms, expose unresolved
+alternatives, and define how a climate-blind catalog, reanalysis, remote
+sensing, and matched controls will be combined.
 
-\section{Catalog construction}
+\section{Catalog construction and sampling protocol}
 
-The catalog consists of three linked tables. An event table records identity,
-date, location, setting, initial failure, and downstream transformations. A
-measurement table stores one quantitative value per row with its units,
-uncertainty, qualifier, source, and source locator. A claim table records
-process and attribution statements and labels each as observation, preliminary
-observation, model output, published inference, or project interpretation.
-The source key for every row resolves to the accompanying bibliography.
+The catalog consists of three linked tables. The event table records identity,
+group, analysis role, date, location, setting, initial failure, and downstream
+transformations. Dates and coordinates have field-specific sources. The
+measurement table stores one quantity per row and distinguishes a point value,
+approximation, lower bound, upper limit, or range. It records uncertainty type,
+observation period, scenario, evidence kind, and source locator separately.
+The claim table labels each statement as observation, preliminary observation,
+reconstruction, model output, published inference, or project interpretation.
+Each event has explicit process-chain, immediate-trigger, and
+climate-preconditioning claims, including an unresolved claim when evidence is
+absent.
 
-An event is included when rock, glacier ice, or a mixed mass fails rapidly in
-an alpine or fjord setting and produces exceptional mobility, a damaging
-cascade, or a substantial prospective tsunami hazard. Snow avalanches without
-rock or glacier-ice failure and floods without an initial mass movement are
-outside the present scope. An active slope is retained only when observations
-define a potential failure volume and a peer-reviewed study connects its
-motion to a mechanical process. This rule admits Barry Arm but marks it as an
-active slope rather than an occurred event \citep{Dai2020,Schaefer2023}.
+The draft geophysical inclusion rule requires rapid failure of rock, glacier
+ice, or a mixed mass in an alpine or fjord setting, a documented time and
+source location, and at least one of three operational thresholds: initial
+volume of $10^6$~m$^3$, source-to-deposit travel of 2~km, or landslide-tsunami
+field runup of 10~m. Downstream damage and population exposure are stored as
+consequences but do not determine geophysical inclusion. Snow avalanches
+without glacier-ice or rock failure and floods without an initial mass
+movement are outside the scope. The final registration will justify or revise
+these numerical thresholds before screening. A separately labeled active
+slope may enter the protocol-development set when measured deformation and
+published failure geometries exist. Barry Arm is such a prospective case, not
+an occurred event \citep{Dai2020,Schaefer2023,Barnhart2021,Collins2024}.
 
-The seed catalog emphasizes primary papers and authoritative agency records.
-The 26 August 2026 Nepal entry is necessarily provisional: the U.S. Geological
-Survey currently reports a rapid slope failure involving a glacier but cannot
-yet distinguish collapse of glacier ice from a landslide that incorporated the
-glacier \citep{USGS2026Nepal,USGS2026NepalSeismic}. No climate attribution is
-assigned until the source geometry and failure sequence are better constrained.
+The present records were selected because they motivated the study. They
+cannot support a frequency trend, an event-conditioned climate distribution,
+or a global susceptibility model. Before climate values are extracted, the
+inference catalog will be preregistered and frozen from a climate-blind search.
+The registration will state databases, search strings that do not contain a
+climate cause, language coverage, temporal and spatial bounds, minimum source
+documentation, duplicate rules, treatment of events detected only by seismic
+or satellite data, and a stopping date. Two reviewers will screen identity and
+mechanical eligibility without viewing event climate anomalies. Detection
+era, sensor coverage, and reporting source will be stored because event
+detection is not stationary.
 
-\section{Mechanics represented by the seed events}
+The protocol has two estimands. The episode-level trigger estimand compares
+conditions at failure with time controls; the site-level preconditioning
+estimand compares source slopes with an incidence-density risk set. The two
+Aru glaciers are separate episode candidates but share a site-level cluster.
+The October 2023 Dickson Fjord episode is stored as dependent on the September
+site and excluded as an independent event-time unit. Barry Arm is excluded
+from event-time inference because catastrophic failure has not occurred; it
+instead supplies a prospective case for testing susceptibility variables.
 
-Table~\ref{tab:events} summarizes the current cases. The two Aru events are
-stored separately because the adjacent glaciers failed two months apart and
-showed different precursor behavior. Their shared mechanism was unusual:
-entire low-angle glacier tongues detached after surge-like acceleration.
-Remote sensing and thermomechanical modeling indicate that increasing melt and
-rain raised water pressure in weak, fine-grained subglacial sediment. Reduced
-basal friction transferred resistance toward frozen tongues and lateral
-margins until those resisting forces were exceeded
-\citep{Kaab2018,Gilbert2018}.
+\section{Mechanics represented by the seed records}
 
-The other occurred events began with rock-slope failure. At Chamoli,
-approximately $26.9\times10^6$~m$^3$ of rock and glacier ice detached from Ronti
-Peak and transformed into a highly mobile debris flow \citep{Shugar2021}.
-Geologic structure, steep topography, possible permafrost disturbance, glacier
-change, and meltwater infiltration are plausible contributors. Snow loading
-and a preceding temperature anomaly have also been proposed, but no study has
-isolated a single immediate trigger \citep{VanWykDeVries2022}. At Dickson
-Fjord, a foliation-parallel rockslide struck a gully glacier before entering
-the fjord. The reconstructed $25.5\pm1.7\times10^6$~m$^3$ rock volume and
-$2.3\pm0.15\times10^6$~m$^3$ entrained ice volume remain separate catalog
-measurements because combining them would conceal their different origins
-\citep{Svennevig2024}.
+The two Aru glacier tongues detached after surge-like acceleration on
+low-angle terrain; the published mean Aru-1 surface slope is approximately
+$13^\circ$. Remote sensing and thermomechanical modeling indicate
+that reduced basal friction shifted resistance toward frozen tongues and
+lateral margins until those forces were exceeded
+\citep{Kaab2018,Gilbert2018}. Gilbert and colleagues inferred a five- to
+six-year increase in melt and rain rather than exceptional seasonal forcing.
+For Aru-1, approximately 10--25~mm of precipitation during the two days before
+failure is a possible short perturbation; Aru-2 has no resolved immediate
+trigger. The two collapses traveled approximately 6 and 5~km beyond their
+respective glacier termini \citep{Kaab2018}.
+
+At Chamoli, $26.9\times10^6$~m$^3$ of rock and glacier ice failed
+from Ronti Peak and transformed into a highly mobile debris flow
+\citep{Shugar2021}. The reported 95\% reconstruction interval is
+$26.5$--$27.3\times10^6$~m$^3$. The mass was about 80\% rock and 20\% ice;
+these are model-dependent composition estimates rather than direct material
+measurements. Mapping and reconstruction do not require a glacial-lake
+outburst to explain the flood cascade. Geologic structure and progressive
+damage remain alternatives to thermal and hydrologic preconditioning. Snow
+and ice loading on the headwall and a preceding positive temperature anomaly
+have been proposed as final perturbations, but a unique immediate trigger was
+not isolated \citep{VanWykDeVries2022}.
+
+At Dickson Fjord, a foliation-parallel rockslide struck a gully glacier before
+entering the fjord. The reconstructed rock volume was
+$25.5\pm1.7\times10^6$~m$^3$, with a separate
+$2.3\pm0.15\times10^6$~m$^3$ entrained-ice estimate
+\citep{Svennevig2024}. Rockslide, glacier impact, tsunami, and the
+very-long-period signal are observations or reconstructions. The cross-fjord
+seiche was first inferred by wave and seismic modeling; sparse SWOT altimetry
+later provided direct water-level observations consistent with its phase and
+period \citep{Monahan2025}. Multidecadal glacier lowering supports a
+debuttressing hypothesis, but no proximate trigger or formal anthropogenic
+event attribution was demonstrated.
 
 Tracy Arm and Barry Arm illustrate occurred and prospective consequences of
-glacier retreat along fjords. The minimum mapped Tracy Arm failure volume was
-$63.5\pm2.7\times10^6$~m$^3$, and the event was preceded by several days of accelerating
-microseismicity \citep{Shugar2026}. The authors infer that climate-driven
-retreat of South Sawyer Glacier preconditioned the slope; permafrost is
-unlikely at the site. At Barry Arm, the observed slope displaced 120~m during
-2010--2017 while Barry Glacier retreated. The reported correlation between
-front position and slope displacement is 0.99, supporting glacier
-debuttressing as a cause of the acceleration \citep{Dai2020}. The slope has not
-failed catastrophically. Modeled tsunami heights depend on the assumed failure
-geometry; updated scenarios predict about 2.85~m immediately offshore of
-Whittier in the largest plausible case \citep{Barnhart2025}.
+glacier retreat along fjords. The mapped Tracy Arm volume gives a lower limit
+of $63.5\times10^6$~m$^3$ with a reported uncertainty of
+$2.7\times10^6$~m$^3$; unmeasured submarine failure may increase the total.
+Several days of accelerating microseismicity preceded failure
+\citep{Shugar2026}. Regional summer warming since 1875 was
+quantitatively attributed to anthropogenic forcing. Observed retreat of South
+Sawyer Glacier supports debuttressing as a mechanical inference, but the
+glacier retreat itself was not assigned an anthropogenic counterfactual
+fraction. At Barry Arm, slope displacement and glacier retreat were temporally
+coincident during 2010--2017 \citep{Dai2020}. Their reported correlation of
+0.99 compares cumulative trending series and is not by itself a causal test.
+Published geometry scenarios span $290$--$689\times10^6$~m$^3$
+\citep{Barnhart2021}, while a
+four-layer seismic inversion estimates a local mean failure-surface depth of
+$188\pm9$~m \citep{Collins2024}. These are uncertain slope geometries, not a
+failed volume.
 
 \begin{longtable}{@{}P{0.15\textwidth}P{0.16\textwidth}P{0.12\textwidth}P{0.23\textwidth}P{0.22\textwidth}@{}}
-\caption{Seed catalog of focal events and one active slope. Volumes describe
-the initial failed mass. Statements in the last column preserve the claim
-strength of the cited source.}\label{tab:events}\\
+\caption{Seven focal records in the protocol seed. The dependent October 2023
+Dickson Fjord episode remains in the machine-readable catalog but is omitted
+here. Volumes describe an initial failed mass except at Barry Arm, where the
+range describes possible unstable-slope geometries. Reported uncertainties
+are reproduced from the sources; their distinct confidence, conservative-sum,
+or unspecified semantics are stored in the machine-readable catalog.}\label{tab:events}\\
 \toprule
 Event and date & Initial failure & Volume (10$^6$ m$^3$) & Cascade & Climate evidence \\
 \midrule
@@ -150,78 +194,174 @@ Event and date & Initial failure & Volume (10$^6$ m$^3$) & Cascade & Climate evi
 Event and date & Initial failure & Volume (10$^6$ m$^3$) & Cascade & Climate evidence \\
 \midrule
 \endhead
-Nepal, 26 Aug 2026 & Glacier-involving slope failure & unresolved & Debris flow and flood traveled about 100 km & No event-specific attribution; source classification remains provisional \citep{USGS2026Nepal} \\
-Chamoli, 7 Feb 2021 & Rock and glacier ice & 27 & Avalanche to debris flow and flood & Several thermal effects are plausible; no single trigger isolated \citep{Shugar2021} \\
-Aru-1, 17 Jul 2016 & Glacier detachment & $68\pm2$ & Low-angle ice avalanche, runout up to 7 km & Multiyear melt and rain inferred to increase subglacial water pressure \citep{Gilbert2018} \\
-Aru-2, 21 Sep 2016 & Glacier detachment & $83\pm2$ & Low-angle ice avalanche, runout about 5 km & Same forcing and substrate class as Aru-1 \citep{Kaab2018,Gilbert2018} \\
-Dickson Fjord, 16 Sep 2023 & Foliation-parallel rockslide & $25.5\pm1.7$ rock & Glacier entrainment, tsunami, and nine-day seiche & Glacier thinning inferred to debuttress the toe; proximate trigger unresolved \citep{Svennevig2024} \\
-Tracy Arm, 10 Aug 2025 & Bedrock landslide & $63.5\pm2.7$ minimum mapped & Glacier/fjord impact, tsunami, and 36-hour seiche & Anthropogenic warming linked quantitatively to glacier-retreat preconditioning \citep{Shugar2026} \\
-Barry Arm, active & Slow bedrock landslide & 455 & Potential rapid failure and tsunami & Acceleration strongly correlated with glacier retreat \citep{Dai2020} \\
+Nepal, 26 Aug 2026 & Glacial collapse & unresolved & Debris flow and flood traveled about 100 km & No event-specific attribution; process reconstruction remains provisional \citep{USGS2026Nepal,USGS2026NepalSeismic} \\
+Chamoli, 7 Feb 2021 & Rock and glacier ice & 26.9 [26.5, 27.3] & Avalanche to debris flow and flood & Several thermal effects are plausible; no single trigger isolated \citep{Shugar2021,VanWykDeVries2022} \\
+Aru-1, 17 Jul 2016 & Glacier detachment & $68\pm2$ & Ice avalanche; 6 km beyond terminus & Multiyear melt and rain inferred to increase subglacial water pressure \citep{Gilbert2018} \\
+Aru-2, 21 Sep local time 2016 & Glacier detachment & $83\pm2$ & Two pulses; 5 km beyond terminus & Shared multiyear preconditioning; immediate trigger unresolved \citep{Kaab2018,Gilbert2018} \\
+Dickson Fjord, 16 Sep 2023 & Foliation-parallel rockslide & $25.5\pm1.7$ rock & Glacier entrainment, tsunami, and nine-day signal & Glacier thinning inferred to debuttress the toe; proximate trigger unresolved \citep{Svennevig2024} \\
+Tracy Arm, 10 Aug 2025 & Bedrock landslide & $\geq63.5$ mapped & Glacier/fjord impact, tsunami, and 36-hour signal & Regional warming attributed; retreat--debuttressing link is a mechanical inference \citep{Shugar2026} \\
+Barry Arm, active & Slow bedrock landslide & 290--689 possible & Potential rapid failure and tsunami & Retreat and motion are temporally coincident; alternatives require testing \citep{Dai2020,Barnhart2021} \\
 \bottomrule
 \end{longtable}
 
+\section{Mechanical predictors beyond reanalysis}
+
+Atmospheric fields do not measure glacier support, permafrost fracture state,
+or basal effective pressure. The analysis will therefore pair reanalysis with
+annual optical and radar mapping of terminus position, glacier-slope contact,
+surface elevation, and source-slope deformation. Define $\Delta h_i$ as index-
+date thickness minus baseline thickness at the slope contact. A signed
+stress-scale proxy for support loss is
+\begin{equation}
+  S_i = -\rho_i g\Delta h_i,
+\end{equation}
+where $\rho_i$ is ice density, so thinning gives positive $S_i$ and thickening
+gives negative $S_i$. This proxy has stress units but is not the lateral
+buttressing traction. Geometry-specific elastic or limit-equilibrium
+calculations are required to translate it into a support change. Results will
+therefore report signed thickness change, its magnitude, mapped contact loss,
+and $S_i$ before interpreting debuttressing.
+
+For a first glacier-detachment screening bound, treat the bed as Coulomb till:
+\begin{equation}
+\begin{aligned}
+  N &= p_i-p_w, & \tau_y &= c + N\tan\phi, \\
+  \tau_b &\leq \tau_y, & \tau_d &\simeq \rho_i g h\sin\alpha,
+\end{aligned}
+\end{equation}
+where $N$ is effective pressure, $p_i$ is ice overburden pressure, $p_w$ is
+water pressure, $c$ and $\phi$ are effective till cohesion and friction angle,
+$h$ is ice thickness, and $\alpha$ is surface slope. In a slab that neglects
+lateral and longitudinal resistance, basal yield cannot balance driving stress
+when
+\begin{equation}
+  N < N_{\mathrm{crit}} = \frac{\tau_d-c}{\tan\phi}.
+\end{equation}
+This is a conditional screening range, not an inferred Aru effective pressure;
+the analysis must span plausible $c$, $\phi$, geometry, and neglected margin
+stresses. Melt or rain can raise $p_w$ and reduce resistance when drainage is
+inefficient. The same input can enlarge efficient drainage, lower $p_w$, and
+increase resistance.
+
+Permafrost hypotheses require rock-temperature or fracture-ice observations,
+not air temperature alone. Where boreholes are absent, the protocol will use
+modeled rock-surface temperature, topographic shading, fracture orientation,
+and cumulative thermal history as proxies and will label the inference.
+Adverse structure is a baseline confounder; deformation may be a mediator or
+competing-process observation. The causal specification will determine which
+variables are adjusted rather than treating every measured field as a
+covariate.
+
 \section{Event-centered climate test}
 
-The first analysis will test conditions required by the cataloged mechanisms.
-For each event, atmospheric reanalysis will provide near-surface air
+For each frozen event candidate, reanalysis will provide near-surface air
 temperature, precipitation phase and amount, snow accumulation, radiative and
-turbulent fluxes, and surface pressure. These fields will be reduced to five
-mechanically interpretable predictors: cumulative positive degree days,
-liquid-water input, recent snow load, freeze--thaw crossings, and a
-multidecadal temperature anomaly. Windows will be defined before examining
-event values so that the analysis does not select a favorable timescale after
-the fact.
+turbulent fluxes, and surface pressure. Prespecified reductions will include
+cumulative positive degree days, liquid-water input, recent snow load,
+freeze--thaw crossings, and a multidecadal temperature trend. Windows,
+directions, and mechanism-specific primary contrasts will be registered before
+event values are examined.
 
-The primary comparison is local and seasonal. Each event value will be ranked
-against the same calendar window at that location over the full reanalysis
-period. This removes much of the mean climatic contrast between Tibet,
-Greenland, Alaska, and the Himalaya. A second comparison will use matched
-non-event years at each site. The null hypothesis is that event conditions are
-exchangeable with these local controls. Rejection for one predictor would
-establish an association, not a complete causal attribution.
+Immediate-trigger anomalies and long-term preconditioning require different
+controls. For trigger variables, I will remove the local seasonal cycle and a
+smooth long-term trend using data outside the event window. The event residual
+will be compared with time-matched, same-season blocks. Block resampling will
+preserve serial correlation, and the two Aru records will share a site-level
+cluster. This avoids a null that ranks recent event years against an earlier,
+cooler climate and then interprets the resulting rank as unusual weather.
 
-Global products smooth the elevation and aspect that govern energy balance in
-steep terrain. Downscaling will therefore begin with the smallest correction
-that addresses a named physical bias: temperature adjusted between grid-cell
-and source elevation using a documented lapse rate, precipitation separated by
-phase, and shortwave radiation corrected for slope and aspect. Results will be
-reported both with and without each correction. More complex regional modeling
-is warranted only if these corrections change the sign or rank of an event
-anomaly.
+For persistent preconditioning, the comparison will use incidence-density
+risk sets. At each event date, eligible controls are catalog-search source
+slopes that remain under observation and have not yet failed. Controls receive
+the case index date, and every exposure window ends before that date; a control
+may later become a case. Follow-up ends at failure, loss of adequate sensor
+coverage, or the registered study end. Matching uses baseline region,
+elevation, aspect, relief, lithology where available, and pre-exposure sensor
+coverage. It does not use index-date glacier contact or deformation, which may
+lie on the causal pathway. A preregistered causal diagram will distinguish
+baseline confounders from exposures and mediators.
 
-\section{Uncertainty and tests of interpretation}
+A hierarchical model will estimate associations while including region and
+site-group effects, detection era, and monitoring intensity. Glacier-
+detachment sites will have a signed liquid-water/effective-pressure contrast;
+glacier-contact rock slopes will have a signed contact-loss/support contrast;
+and permafrost rock slopes will have a cumulative thermal contrast. Predictors
+will be standardized against their own risk-set distributions and will not be
+imputed across inapplicable mechanism classes. Family-wise error will be
+controlled across these primary contrasts; secondary predictors will use a
+false-discovery-rate procedure. An association under this design would still
+not constitute a complete anthropogenic event attribution.
 
-The strongest current climate statements concern preconditioning rather than
-immediate triggers. At Dickson Fjord, geometry and multidecadal glacier
-thinning support debuttressing, but the published study is not a formal event
-attribution and does not identify unusual weather on 16 September 2023
-\citep{Svennevig2024}. At Barry Arm, slope motion and glacier retreat covary,
-but a possible precipitation response was described as tenuous
-\citep{Dai2020}. These examples require different tests: a multidecadal glacier
-or temperature history for preconditioning, and hourly-to-seasonal atmospheric
-fields for an immediate trigger.
+Global products smooth the elevation and aspect that govern steep-terrain
+energy balance. Downscaling will begin with corrections tied to a named bias:
+temperature adjusted between grid-cell and source elevation using a documented
+lapse rate, precipitation separated by phase, and shortwave radiation
+corrected for slope, aspect, and shading. Results will be reported before and
+after each correction. Regional modeling is warranted only when these
+corrections change an event anomaly enough to affect the prespecified test.
 
-Catalog incompleteness is a second source of uncertainty. The present cases
-were selected because they motivated the study, not by a systematic global
-search. They cannot support a frequency trend. The next catalog version must
-define databases, search terms, language coverage, minimum documented size,
-and treatment of events discovered only through seismic or satellite records.
-Negative controls are equally important because detection probability has
-increased with modern sensors.
+\section{Competing hypotheses and discriminating observations}
+
+The analysis will evaluate signs and timing that distinguish mechanisms.
+Debuttressing predicts a deformation change point after glacier thinning or
+contact loss, with a geometry-dependent lag. Loading has no general sign. For
+an added load $\Delta q$ on a planar slope, the simple components are
+$\Delta\tau=\Delta q\sin\alpha$ and
+$\Delta\sigma_n=\Delta q\cos\alpha$; the Coulomb tendency
+$\Delta\tau-\Delta\sigma_n\tan\phi$ changes sign with slope and friction
+angle, before crack pressure and three-dimensional geometry are considered.
+Hydrologic weakening predicts velocity or
+failure probability increasing with water input when drainage is inefficient;
+hydrologic strengthening predicts a negative relation or seasonal hysteresis
+as drainage evolves. Permafrost degradation predicts deformation associated
+with cumulative rock-temperature history and ice-bearing fractures rather
+than a single warm day. Progressive damage predicts accelerating deformation
+or microseismicity without requiring unusual weather. Structural release
+predicts failure along mapped adverse discontinuities. Seismic forcing
+predicts temporal coincidence with an earthquake capable of producing
+materially large shaking at the source.
+
+Barry Arm provides a prospective case for checking several predictions. Change points
+and lags in slope velocity, glacier-contact loss, precipitation, groundwater,
+and seasonal temperature can be tested with autocorrelated errors. If a
+glacier term loses explanatory power after detrending or after internal creep
+state is included, the cumulative 0.99 correlation should not be treated as
+evidence for a dominant causal pathway.
+
+\section{Uncertainty and next steps}
+
+Source uncertainty enters at three levels. First, reported intervals are not
+interchangeable. Chamoli gives a 95\% reconstruction interval; Aru reports a
+conservative linear sum of DEM and post-event correction errors; some Dickson
+and Tracy values still require verification and are labeled
+\texttt{reported\_unspecified}. The Barry Arm depth spread describes agreement
+among tested parameterizations and time periods, not full inversion
+nonuniqueness. Second, source classifications can change. The
+reviewed Nepal seismic record now calls the source a glacial collapse and
+debris flow, whereas the dated event page retains broader provisional wording
+\citep{USGS2026Nepal,USGS2026NepalSeismic}. Both records are preserved. Third,
+some quantities are conditional scenarios. Barry Arm volumes and tsunami
+heights describe possible geometries, not observations or forecasts of a
+failure time.
+
+The next version must complete climate-blind discovery and double screening
+before any event anomalies are calculated. It must then acquire matched
+non-failing slopes, glacier-contact histories, deformation records, and
+permafrost proxies. Only after those data and the statistical specification
+are frozen can the study estimate whether recent hazardous alpine mass
+movements occupy systematically different climatic or cryospheric conditions.
 
 \section{Conclusions}
 
 The seed catalog establishes a traceable distinction among initial failure,
-downstream cascade, climate preconditioning, and immediate trigger. Its central
-result is methodological: recent events that are often grouped together
-represent different mechanical systems, and their climate hypotheses require
-different atmospheric tests. Aru directly motivates a basal-water analysis;
-Dickson Fjord, Tracy Arm, and Barry Arm motivate glacier-retreat and
-debuttressing histories; Chamoli and the provisional Nepal event require
-greater caution about source classification. Event-centered reanalysis can
-test whether the proposed atmospheric conditions were unusual. A systematic
-catalog and matched non-events will then be needed before these relationships
-can be transferred to a global hazard assessment.
+downstream cascade, climate preconditioning, and immediate trigger. It also
+shows why reanalysis alone is insufficient: Aru requires effective-pressure
+bounds, while the rock-slope cases require glacier geometry, support change,
+structure, and deformation. A climate-blind inventory, independent analysis
+units, detrended seasonal controls, matched non-failing slopes, and explicit
+competing predictions are prerequisites for a defensible climate test. The
+present contribution is the protocol and machine-readable seed, not evidence
+that warming systematically triggered these events.
 
 \bibliographystyle{plainnat}
 \bibliography{references}

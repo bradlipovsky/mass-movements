@@ -7,3 +7,5 @@ latex/*.fls
 latex/*.log
 latex/*.out
 latex/*.run.xml
+__pycache__/
+*.pyc

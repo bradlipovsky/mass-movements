@@ -15,8 +15,10 @@ The work proceeds in three stages:
 3. Apply the inferred conditions to glaciers and permafrost terrain to assess
    global susceptibility.
 
-The current manuscript is in `latex/` and the source catalog is in `data/`.
-Run `make` to compile `latex/main.pdf`.
+The current protocol manuscript is in `latex/` and the source catalog is in
+`data/`. The convenience seed demonstrates provenance and mechanics fields; it
+is not yet a systematic sample. Run `make check` to validate the catalog and
+`make` to compile `latex/main.pdf`.
 
 Project decisions and review are tracked in
 [GitHub issues](https://github.com/bradlipovsky/mass-movements/issues).
