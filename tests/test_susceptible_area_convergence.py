@@ -136,7 +136,7 @@ class SusceptibleAreaConvergenceTests(unittest.TestCase):
         for path in (Path("scripts/susceptible_area_convergence.py"),
                      Path("notebooks/susceptible_area_convergence.ipynb")):
             text = path.read_text()
-            for forbidden in ("candidates.csv", "data/catalog", "data/event",
+            for forbidden in ("data/candidate", "data/catalog", "data/event",
                               "data/audit", "data/reanalysis"):
                 self.assertNotIn(forbidden, text)
 
