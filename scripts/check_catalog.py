@@ -28,6 +28,27 @@ CLAIM_FIELDS = [
     "claim_id", "event_id", "claim_scope", "evidence_kind",
     "evidence_strength", "claim", "source_key", "source_locator",
 ]
+DISCOVERY_SEARCH_FIELDS = [
+    "search_id", "executed_utc", "reviewer", "resource", "resource_url",
+    "query", "date_start", "date_end", "result_scope", "climate_blind_check",
+    "notes",
+]
+FRAME_FLOW_FIELDS = [
+    "frame_id", "source_url", "published_cases", "downloaded_rows",
+    "window_rows", "status_retained_window_rows", "numeric_threshold_rows",
+    "notes",
+]
+CANDIDATE_FIELDS = [
+    "candidate_id", "event_group_id", "event_name", "date_start", "date_end",
+    "date_precision", "latitude_deg", "longitude_deg", "location", "country",
+    "setting", "initial_failure", "threshold_quantity", "threshold_relation",
+    "threshold_value", "threshold_lower_bound", "threshold_upper_bound",
+    "threshold_unit", "discovery_source", "discovery_record",
+    "primary_source_url", "primary_source_locator", "screen_1_reviewer",
+    "screen_1_decision", "screen_1_reason", "screen_2_reviewer",
+    "screen_2_decision", "screen_2_reason", "consensus_decision",
+    "consensus_reason", "analysis_role", "trigger_time_eligible", "notes",
+]
 
 EVENT_STATUS = {"occurred", "inferred_occurred", "active_slope"}
 ANALYSIS_ROLES = {"event_candidate", "dependent_episode", "prospective_case"}
@@ -45,7 +66,8 @@ STATUS_ROLE = {
 }
 SETTINGS = {"high_mountain", "fjord"}
 VALUE_RELATIONS = {
-    "equal", "approximate", "greater_than", "lower_limit", "upper_limit", "range"
+    "equal", "approximate", "greater_than", "lower_limit", "upper_limit", "range",
+    "not_documented",
 }
 MEASUREMENT_EVIDENCE = {
     "observation", "preliminary_observation", "reconstruction", "model_output"
@@ -60,6 +82,44 @@ CLAIM_SCOPES = {
     "precursor", "catalog_reconciliation",
 }
 EVIDENCE_STRENGTH = {"direct", "strong", "moderate", "weak", "unresolved"}
+CANDIDATE_DATE_PRECISION = {
+    "second", "minute", "day", "satellite_interval", "month", "year",
+}
+CANDIDATE_SETTINGS = {
+    "high_mountain", "fjord", "alpine_lake", "proglacial_lagoon",
+    "volcanic_island", "coastal_bay", "reservoir", "quarry", "ocean",
+    "mine_lake",
+}
+CANDIDATE_FAILURES = {
+    "rock_avalanche", "rockslide", "rock_ice_avalanche", "glacier_detachment",
+    "glacier_collapse", "ice_rock_avalanche", "moraine_slide",
+    "volcanic_flank_collapse", "soft_sediment_slide", "unresolved_rock_or_ice",
+    "channel_bank_slide", "debris_flow",
+}
+THRESHOLDS = {"initial_volume": (1_000_000, "m3"),
+              "travel_distance": (2_000, "m"),
+              "tsunami_runup": (10, "m"),
+              "not_documented": (None, "not_applicable")}
+SCREEN_DECISIONS = {"include", "exclude", "uncertain"}
+SCREEN_REASONS = {
+    "eligible", "excluded_process", "outside_setting", "below_threshold",
+    "threshold_not_documented", "time_not_documented", "location_not_documented",
+    "duplicate", "primary_source_pending", "taxonomy_pending", "outside_window",
+    "source_inaccessible", "setting_pending",
+}
+CANDIDATE_ROLES = {
+    "event_candidate", "dependent_episode", "not_assigned", "not_applicable",
+}
+DECISION_ROLE = {
+    "include": {"event_candidate", "dependent_episode"},
+    "exclude": {"not_applicable"},
+    "uncertain": {"not_assigned"},
+}
+DECISION_TRIGGER = {
+    "include": {"yes", "no"},
+    "exclude": {"not_applicable"},
+    "uncertain": {"not_assigned"},
+}
 
 
 def read_csv(name, expected_fields):
@@ -115,9 +175,19 @@ def timestamp(value, label):
     return parsed
 
 
+def calendar_date(value, label):
+    try:
+        return datetime.strptime(value, "%Y-%m-%d")
+    except ValueError as error:
+        raise ValueError(f"{label} is not an ISO calendar date: {value!r}") from error
+
+
 events = read_csv("events.csv", EVENT_FIELDS)
 measurements = read_csv("measurements.csv", MEASUREMENT_FIELDS)
 claims = read_csv("claims.csv", CLAIM_FIELDS)
+discovery_searches = read_csv("discovery_searches.csv", DISCOVERY_SEARCH_FIELDS)
+frame_flow = read_csv("frame_screening.csv", FRAME_FLOW_FIELDS)
+candidates = read_csv("candidates.csv", CANDIDATE_FIELDS)
 
 event_ids = [row["event_id"] for row in events]
 if len(set(event_ids)) != len(event_ids):
@@ -231,6 +301,7 @@ for row in measurements:
         "lower_limit": {"lower_bound"},
         "upper_limit": {"upper_bound"},
         "range": {"lower_bound", "upper_bound"},
+        "not_documented": set(),
     }[relation]
     if present != required_shape:
         raise ValueError(
@@ -266,6 +337,157 @@ unknown_sources = used_sources - bibliography_keys
 if unknown_sources:
     raise ValueError(f"unknown bibliography keys: {sorted(unknown_sources)}")
 
+search_ids = [row["search_id"] for row in discovery_searches]
+if len(set(search_ids)) != len(search_ids):
+    raise ValueError("discovery_searches.csv has duplicate search_id values")
+for row in discovery_searches:
+    label = f"discovery search {row['search_id']}"
+    require(row, DISCOVERY_SEARCH_FIELDS, label)
+    timestamp(row["executed_utc"], f"{label} executed_utc")
+    start = calendar_date(row["date_start"], f"{label} date_start")
+    end = calendar_date(row["date_end"], f"{label} date_end")
+    if end < start:
+        raise ValueError(f"{label} date range is reversed")
+    if not row["resource_url"].startswith("https://"):
+        raise ValueError(f"{label} resource_url must use HTTPS")
+    controlled(row["climate_blind_check"], {"pass"}, f"{label} climate_blind_check")
+    banned = re.compile(r"\b(climate|warming|permafrost|deglaciation|retreat)\b", re.I)
+    if banned.search(row["query"]):
+        raise ValueError(f"{label} query contains a causal exposure term")
+
+for row in frame_flow:
+    label = f"frame {row['frame_id']}"
+    require(row, FRAME_FLOW_FIELDS, label)
+    if not row["source_url"].startswith("https://"):
+        raise ValueError(f"{label} source_url must use HTTPS")
+    counts = [int(number(row[field], f"{label} {field}")) for field in
+              FRAME_FLOW_FIELDS[2:-1]]
+    if counts[1:] != sorted(counts[1:], reverse=True):
+        raise ValueError(f"{label} downloaded-frame counts must narrow monotonically")
+
+candidate_ids = [row["candidate_id"] for row in candidates]
+if len(set(candidate_ids)) != len(candidate_ids):
+    raise ValueError("candidates.csv has duplicate candidate_id values")
+candidate_groups = {}
+for row in candidates:
+    label = f"candidate {row['candidate_id']}"
+    require(
+        row,
+        ["candidate_id", "event_group_id", "event_name", "date_start",
+         "date_precision", "location", "country", "setting", "initial_failure",
+         "threshold_quantity", "threshold_relation", "threshold_unit",
+         "discovery_source", "discovery_record", "primary_source_url",
+         "primary_source_locator", "screen_1_reviewer", "screen_1_decision",
+         "screen_1_reason", "screen_2_reviewer", "screen_2_decision",
+         "screen_2_reason", "consensus_decision", "consensus_reason",
+         "analysis_role", "trigger_time_eligible", "notes"],
+        label,
+    )
+    controlled(row["date_precision"], CANDIDATE_DATE_PRECISION,
+               f"{label} date_precision")
+    controlled(row["setting"], CANDIDATE_SETTINGS, f"{label} setting")
+    controlled(row["initial_failure"], CANDIDATE_FAILURES,
+               f"{label} initial_failure")
+    controlled(row["threshold_quantity"], set(THRESHOLDS),
+               f"{label} threshold_quantity")
+    controlled(row["threshold_relation"], VALUE_RELATIONS,
+               f"{label} threshold_relation")
+    if (row["threshold_quantity"] == "not_documented") != (
+            row["threshold_relation"] == "not_documented"):
+        raise ValueError(f"{label} must pair undocumented quantity and relation")
+    expected_threshold, expected_unit = THRESHOLDS[row["threshold_quantity"]]
+    if row["threshold_unit"] != expected_unit:
+        raise ValueError(f"{label} has unit inconsistent with its threshold")
+
+    start = calendar_date(row["date_start"], f"{label} date_start")
+    end = (calendar_date(row["date_end"], f"{label} date_end")
+           if row["date_end"] else start)
+    if end < start:
+        raise ValueError(f"{label} date range is reversed")
+    coordinates = bool(row["latitude_deg"]), bool(row["longitude_deg"])
+    if coordinates[0] != coordinates[1]:
+        raise ValueError(f"{label} must provide both latitude and longitude")
+    if coordinates[0]:
+        latitude = number(row["latitude_deg"], f"{label} latitude")
+        longitude = number(row["longitude_deg"], f"{label} longitude")
+        if not -90 <= latitude <= 90 or not -180 <= longitude <= 180:
+            raise ValueError(f"{label} has coordinates outside valid bounds")
+
+    numeric = {}
+    for field in ("threshold_value", "threshold_lower_bound", "threshold_upper_bound"):
+        if row[field]:
+            numeric[field] = number(row[field], f"{label} {field}")
+    present = {field for field in numeric}
+    required_shape = {
+        "equal": {"threshold_value"},
+        "approximate": {"threshold_value"},
+        "greater_than": {"threshold_lower_bound"},
+        "lower_limit": {"threshold_lower_bound"},
+        "upper_limit": {"threshold_upper_bound"},
+        "range": {"threshold_lower_bound", "threshold_upper_bound"},
+        "not_documented": set(),
+    }[row["threshold_relation"]]
+    if present != required_shape:
+        raise ValueError(
+            f"{label} relation {row['threshold_relation']!r} requires "
+            f"{sorted(required_shape)}, found {sorted(present)}"
+        )
+    if row["threshold_relation"] == "range" and (
+            numeric["threshold_lower_bound"] > numeric["threshold_upper_bound"]):
+        raise ValueError(f"{label} has a reversed threshold range")
+
+    for prefix in ("screen_1", "screen_2"):
+        controlled(row[f"{prefix}_decision"], SCREEN_DECISIONS,
+                   f"{label} {prefix}_decision")
+        controlled(row[f"{prefix}_reason"], SCREEN_REASONS,
+                   f"{label} {prefix}_reason")
+    if row["screen_1_reviewer"] == row["screen_2_reviewer"]:
+        raise ValueError(f"{label} requires two differently named reviewers")
+    controlled(row["consensus_decision"], SCREEN_DECISIONS,
+               f"{label} consensus_decision")
+    controlled(row["consensus_reason"], SCREEN_REASONS,
+               f"{label} consensus_reason")
+    controlled(row["analysis_role"], CANDIDATE_ROLES, f"{label} analysis_role")
+    controlled(row["trigger_time_eligible"],
+               {"yes", "no", "not_assigned", "not_applicable"},
+               f"{label} trigger_time_eligible")
+    decision = row["consensus_decision"]
+    if row["analysis_role"] not in DECISION_ROLE[decision]:
+        raise ValueError(f"{label} has a role inconsistent with its decision")
+    if row["trigger_time_eligible"] not in DECISION_TRIGGER[decision]:
+        raise ValueError(f"{label} has trigger eligibility inconsistent with its decision")
+    if decision == "include":
+        conservative_value = {
+            "equal": numeric.get("threshold_value"),
+            "approximate": numeric.get("threshold_value"),
+            "greater_than": numeric.get("threshold_lower_bound"),
+            "lower_limit": numeric.get("threshold_lower_bound"),
+            "range": numeric.get("threshold_lower_bound"),
+            "upper_limit": None,
+            "not_documented": None,
+        }[row["threshold_relation"]]
+        if conservative_value is None or conservative_value < expected_threshold:
+            raise ValueError(f"{label} does not conservatively pass its threshold")
+        if not datetime(2000, 1, 1) <= start <= datetime(2026, 8, 30):
+            raise ValueError(f"{label} is outside the registered occurrence window")
+        if row["trigger_time_eligible"] == "yes" and row["date_precision"] in {
+                "satellite_interval", "month", "year"}:
+            raise ValueError(f"{label} is too imprecise for trigger-time analysis")
+        if row["setting"] not in {"high_mountain", "fjord", "alpine_lake",
+                                  "proglacial_lagoon"}:
+            raise ValueError(f"{label} has an ineligible setting")
+        if row["initial_failure"] not in {
+                "rock_avalanche", "rockslide", "rock_ice_avalanche",
+                "glacier_detachment", "glacier_collapse", "ice_rock_avalanche"}:
+            raise ValueError(f"{label} has an ineligible material or process")
+    if not row["primary_source_url"].startswith("https://"):
+        raise ValueError(f"{label} primary_source_url must use HTTPS")
+    candidate_groups.setdefault(row["event_group_id"], set()).add(row["analysis_role"])
+
+for group, roles in candidate_groups.items():
+    if "dependent_episode" in roles and "event_candidate" not in roles:
+        raise ValueError(f"candidate group {group} has a dependent episode without a candidate")
+
 role_counts = {
     role: sum(row["analysis_role"] == role for row in events)
     for role in sorted(ANALYSIS_ROLES)
@@ -273,5 +495,7 @@ role_counts = {
 print(
     f"catalog valid: {len(events)} records {role_counts}, "
     f"{len(measurements)} measurements, {len(claims)} claims, "
-    f"{len(used_sources)} cited sources"
+    f"{len(used_sources)} cited sources, {len(discovery_searches)} discovery searches, "
+    f"{len(frame_flow)} enumerated frames, "
+    f"{len(candidates)} screened candidates"
 )

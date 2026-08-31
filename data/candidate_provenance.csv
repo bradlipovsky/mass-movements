@@ -1,0 +1,79 @@
+provenance_id,frame_id,frame_record,candidate_ids,relationship,notes
+pangaea-001,pangaea_ltt,LTT_Paatuut_2000,paat-2000,one_to_one,Numeric qualifier disposition
+pangaea-002,pangaea_ltt,LTT_AysenFjord_Isla_Mentirosa_2007,aysen-2007-mentirosa,one_to_one,Numeric qualifier disposition
+pangaea-003,pangaea_ltt,LTT_AysenFjord_QuebradaSinNombre_2007,aysen-2007-punta-cola,one_to_one,Numeric qualifier disposition
+pangaea-004,pangaea_ltt,LTT_AysenFjord_AguasCalientes_2007,aysen-2007-aguas-calientes,one_to_one,Numeric qualifier disposition
+pangaea-005,pangaea_ltt,LTT_ChehalisLake_2007,chehalis-2007,one_to_one,Numeric qualifier disposition
+pangaea-006,pangaea_ltt,LTT_PedersenLagoon_2024,pedersen-2024,one_to_one,Numeric qualifier disposition
+pangaea-007,pangaea_ltt,LTT_LakeAskja_2014,askja-2014,one_to_one,Numeric qualifier disposition
+pangaea-008,pangaea_ltt,LTT_Greenland_2014,eqip-sermia-2014,one_to_one,Numeric qualifier disposition
+pangaea-009,pangaea_ltt,LTT_TaanFjord_2015,taan-2015,one_to_one,Numeric qualifier disposition
+pangaea-010,pangaea_ltt,LTT_KarratFjord_2017,karrat-2017,one_to_one,Numeric qualifier disposition
+pangaea-011,pangaea_ltt,LTT_ElliotCreek_2020,elliot-creek-2020,one_to_one,Numeric qualifier disposition
+pangaea-012,pangaea_ltt,LTT_DicksonFjord_2023,dickson-2023,one_to_one,Numeric qualifier disposition
+pangaea-013,pangaea_ltt,LTT_LhonakLake_2023,south-lhonak-2023,one_to_one,Numeric qualifier disposition
+pangaea-014,pangaea_ltt,LTT_Stromboli_2002_1,stromboli-2002,one_to_one,Numeric qualifier disposition
+pangaea-015,pangaea_ltt,LTT_Palu_2018_L,palu-2018,one_to_one,Numeric qualifier disposition
+pangaea-016,pangaea_ltt,LTT_Baige_2018,baige-2018-oct,one_to_one,Numeric qualifier disposition
+pangaea-017,pangaea_ltt,LTT_Bureya_2018,bureya-2018,one_to_one,Numeric qualifier disposition
+pangaea-018,pangaea_ltt,LTT_Fuquan_2014,fuquan-2014,one_to_one,Numeric qualifier disposition
+pangaea-019,pangaea_ltt,LTT_Stromboli_2002_2,stromboli-2002-2,one_to_one,Numeric qualifier disposition
+pangaea-020,pangaea_ltt,LTT_Quinggan_2003,quinggan-2003,one_to_one,Numeric qualifier disposition
+pangaea-021,pangaea_ltt,LTT_SouthJava_2006,south-java-2006,one_to_one,Numeric qualifier disposition
+pangaea-022,pangaea_ltt,LTT_RitterIsland_2007,ritter-island-2007,one_to_one,Numeric qualifier disposition
+pangaea-023,pangaea_ltt,LTT_Dayantang_2007,dayantang-2007,one_to_one,Numeric qualifier disposition
+pangaea-024,pangaea_ltt,LTT_AratosawaDam_2008,aratosawa-2008,one_to_one,Numeric qualifier disposition
+pangaea-025,pangaea_ltt,LTT_Gongjiafang_2008,gongjiafang-2008,one_to_one,Numeric qualifier disposition
+pangaea-026,pangaea_ltt,LTT_RooseveltLake_2009,roosevelt-lake-2009,one_to_one,Numeric qualifier disposition
+pangaea-027,pangaea_ltt,LTT_Nachterstedt_2009,nachterstedt-2009,one_to_one,Numeric qualifier disposition
+pangaea-028,pangaea_ltt,LTT_XiaowanReservoir_2009,xiaowan-2009,one_to_one,Numeric qualifier disposition
+pangaea-029,pangaea_ltt,LTT_SurugaBay_2009,suruga-bay-2009,one_to_one,Numeric qualifier disposition
+pangaea-030,pangaea_ltt,LTT_Tangjaxi_2014,tangjaxi-2014,one_to_one,Numeric qualifier disposition
+pangaea-031,pangaea_ltt,LTT_Reisafjorden_2015,reisafjorden-2015,one_to_one,Numeric qualifier disposition
+pangaea-032,pangaea_ltt,LTT_Palu_2018_B,palu-2018-b,one_to_one,Numeric qualifier disposition
+pangaea-033,pangaea_ltt,LTT_Palu_2018_C,palu-2018-c,one_to_one,Numeric qualifier disposition
+pangaea-034,pangaea_ltt,LTT_Palu_2018_D,palu-2018-d,one_to_one,Numeric qualifier disposition
+pangaea-035,pangaea_ltt,LTT_Palu_2018_F,palu-2018-f,one_to_one,Numeric qualifier disposition
+pangaea-036,pangaea_ltt,LTT_Palu_2018_I,palu-2018-i,one_to_one,Numeric qualifier disposition
+pangaea-037,pangaea_ltt,LTT_Palu_2018_K,palu-2018-k,one_to_one,Numeric qualifier disposition
+pangaea-038,pangaea_ltt,LTT_Palu_2018_M,palu-2018-m,one_to_one,Numeric qualifier disposition
+pangaea-039,pangaea_ltt,LTT_Krakatau_2018,krakatau-2018,one_to_one,Numeric qualifier disposition
+pangaea-040,pangaea_ltt,LTT_Knappensee_2021,knappensee-2021,one_to_one,Numeric qualifier disposition
+hma-001,hma_rock_ice,HMA_xlsx_row_3_ID_1,chamoli-2021,one_to_one,Numeric qualifier disposition
+hma-002,hma_rock_ice,HMA_xlsx_row_4_ID_2,langtang-2015,one_to_one,Numeric qualifier disposition
+hma-003,hma_rock_ice,HMA_xlsx_row_5_ID_3,seti-2012,one_to_one,Numeric qualifier disposition
+hma-004,hma_rock_ice,HMA_xlsx_row_6_ID_4,sakkyong-2015,one_to_one,Numeric qualifier disposition
+hma-005,hma_rock_ice,HMA_xlsx_row_7_ID_5,mo-chu-2015,one_to_one,Numeric qualifier disposition
+hma-006,hma_rock_ice,HMA_xlsx_row_8_ID_6,kameng-2021,one_to_one,Numeric qualifier disposition
+hma-007,hma_rock_ice,HMA_xlsx_row_9_ID_7,kameng-2020,one_to_one,Numeric qualifier disposition
+hma-008,hma_rock_ice,HMA_xlsx_row_10_ID_8,kunlun-b2-2001,one_to_one,Numeric qualifier disposition
+hma-009,hma_rock_ice,HMA_xlsx_row_11_ID_9,kunlun-k2-2001,one_to_one,Numeric qualifier disposition
+hma-010,hma_rock_ice,HMA_xlsx_row_12_ID_10,kunlun-b4-2001,one_to_one,Numeric qualifier disposition
+hma-011,hma_rock_ice,HMA_xlsx_row_14_ID_12,yazong-2018,one_to_one,Numeric qualifier disposition
+hma-012,hma_rock_ice,HMA_xlsx_row_15_ID_13,tianmo-2007;tianmo-2010-jul;tianmo-2010-sep,one_to_many,Compound inventory row expanded by occurrence
+hma-013,hma_rock_ice,HMA_xlsx_row_18_ID_16,azha-2014,one_to_one,Numeric qualifier disposition
+hma-014,hma_rock_ice,HMA_xlsx_row_20_ID_18,dege-2016,one_to_one,Numeric qualifier disposition
+hma-015,hma_rock_ice,HMA_xlsx_row_21_ID_19,hailuogou-2018;hailuogou-2021-frame;hailuogou-2022,one_to_many,Frame date assertion and primary-source identity correction both retained
+hma-016,hma_rock_ice,HMA_xlsx_row_22_ID_20,yulong-2004;yulong-2005,one_to_many,Compound inventory row expanded by occurrence
+hma-017,hma_rock_ice,HMA_xlsx_row_23_ID_21,aru-1-2016,one_to_one,Numeric qualifier disposition
+hma-018,hma_rock_ice,HMA_xlsx_row_24_ID_22,aru-2-2016,one_to_one,Reconstruction treats the pulses as one source detachment
+hma-019,hma_rock_ice,HMA_xlsx_row_26_ID_24,gayari-2012,one_to_one,Numeric qualifier disposition
+hma-020,hma_rock_ice,HMA_xlsx_row_31_ID_27,hunza-nagar-2009,one_to_one,Numeric qualifier disposition
+hma-021,hma_rock_ice,HMA_xlsx_row_33_ID_28,siachen-2010-01;siachen-2010-02;siachen-2010-03;siachen-2010-04;siachen-2010-05;siachen-2010-06;siachen-2010-07,one_to_many,Seven seismically detected failures expanded without inheriting aggregate volume
+hma-022,hma_rock_ice,HMA_xlsx_row_34_ID_29,naltar-2021,one_to_one,Numeric qualifier disposition
+hma-023,hma_rock_ice,HMA_xlsx_row_36_ID_31,north-terong-2000,one_to_one,Numeric qualifier disposition
+hma-024,hma_rock_ice,HMA_xlsx_row_37_ID_32,petra-sk03;petra-sk06;petra-sk16a;petra-sk16b,one_to_many,Compound inventory row expanded by occurrence
+hma-025,hma_rock_ice,HMA_xlsx_row_38_ID_32,petra-sk04;petra-sk10;shuraki-kapali-2017;petra-sk19,one_to_many,Compound inventory row expanded by occurrence
+hma-026,hma_rock_ice,HMA_xlsx_row_40_ID_34,petra-dp19,one_to_one,Numeric qualifier disposition
+hma-027,hma_rock_ice,HMA_xlsx_row_41_ID_35,petra-shi09,one_to_one,Numeric qualifier disposition
+hma-028,hma_rock_ice,HMA_xlsx_row_42_ID_35,petra-shi01;petra-shi17a;petra-shi17b,one_to_many,Compound inventory row expanded by occurrence
+hma-029,hma_rock_ice,HMA_xlsx_row_43_ID_36,petra-sha19;petra-sha06,one_to_many,Compound inventory row expanded by occurrence
+hma-030,hma_rock_ice,HMA_xlsx_row_49_ID_42,amney-machen-2004;amney-machen-2007;amney-machen-2016;amney-machen-2019,one_to_many,Compound inventory row expanded without inheriting aggregate size
+hma-031,hma_rock_ice,HMA_xlsx_row_50_ID_43,sedongpu-2014;sedongpu-2017-oct;sedongpu-2017-dec,one_to_many,Compound inventory row expanded by occurrence
+hma-032,hma_rock_ice,HMA_xlsx_row_51_ID_43,sedongpu-2018;sedongpu-2018-oct29,one_to_many,Compound inventory row expanded by occurrence
+hma-033,hma_rock_ice,HMA_xlsx_row_52_ID_43,sedongpu-2019;sedongpu-2021-mar,one_to_many,Compound inventory row expanded by occurrence
+hma-034,hma_rock_ice,HMA_xlsx_row_53_ID_44,yigong-2000,one_to_one,Numeric qualifier disposition
+hma-035,hma_rock_ice,HMA_xlsx_row_54_ID_45,peilong-2015,one_to_one,Numeric qualifier disposition
+hma-036,hma_rock_ice,HMA_xlsx_row_57_ID_46,bomi-2017,one_to_one,Numeric qualifier disposition
+hma-037,hma_rock_ice,HMA_xlsx_row_59_ID_48,miyar-2009,one_to_one,Numeric qualifier disposition
+hma-038,hma_rock_ice,HMA_xlsx_row_60_ID_49,dzhuku-2022,one_to_one,Numeric qualifier disposition

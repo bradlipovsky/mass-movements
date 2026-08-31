@@ -27,23 +27,21 @@
 \begin{abstract}
 Large rock, ice, and mixed-material collapses can transform into far-traveled
 debris flows or locally extreme tsunamis. Warming changes glacier geometry,
-permafrost temperature, meltwater supply, and precipitation phase, but these
-changes are seldom separated from immediate weather and non-climatic controls
-in event reports. I define a catalog and attribution protocol that makes this
-separation explicit. A convenience seed of eight records---six occurred-event
-candidates, including two in one site cluster, one dependent episode, and one
-active-slope case---tests the schema and reconciles source ambiguities. The reviewed
-seismic record classifies the August 2026 Nepal source as a glacial collapse;
-the Dickson Fjord rockslide occurred in 2023 rather than the publication year
-2024; and Barry Arm remains an active slope rather than an occurred
-catastrophic failure. The cases require different predictors. The Aru glacier
-detachments motivate basal-effective-pressure bounds, whereas Chamoli,
-Dickson Fjord, Tracy Arm, and Barry Arm require glacier-geometry and rock-slope
-observations in addition to atmospheric reanalysis. I specify climate-blind
-event discovery, clustered analysis units, detrended seasonal controls,
-matched non-failing slopes, and multiplicity control. The seed was selected to
-motivate the study and therefore cannot test a systematic climatic
-association. No such association is estimated here.
+permafrost temperature, meltwater supply, and precipitation phase. However,
+event reports seldom separate these preconditioning changes from immediate
+weather, earthquakes, structure, and progressive damage. Here, I define a
+climate-blind event inventory and an attribution protocol that preserves this
+distinction. Two structured frames contain 40 and 38 rows that cross an
+operational volume, travel, or runup prefilter. An exact provenance crosswalk
+gives every row a visible disposition, and supplemental searches extend the
+screen to 148 candidate occurrences. Two independent screens include 73,
+retain 68 as uncertain, and exclude 7; 53 included failures have day-scale or
+better timing for a later trigger analysis. Trigger, cascade, and repeat-site
+dependence remain separate. I then specify detrended seasonal controls,
+matched non-failing slopes, mechanism-specific glacier and permafrost
+observations, and multiplicity control. Uneven observation and unresolved
+primary sources prevent these counts from estimating a frequency trend. No
+systematic climatic association is estimated here.
 \end{abstract}
 
 \section{Introduction}
@@ -70,10 +68,11 @@ immediate trigger, and a warm event year does not establish causation.
 
 Here, I use a literature seed to define a reproducible catalog and the tests
 that would be needed to evaluate systematic association with climate. The
-seed is a protocol-development set, not an inference sample. Its purpose is to
-identify quantities required by the published mechanisms, expose unresolved
-alternatives, and define how a climate-blind catalog, reanalysis, remote
-sensing, and matched controls will be combined.
+seed is a protocol-development set, not an inference sample. A separate,
+climate-blind discovery inventory supplies the candidate sampling frame. The
+two are kept separate so that examples chosen because they motivated a climate
+hypothesis cannot enter an association test without being rediscovered under
+the same rules as every other event.
 
 \section{Catalog construction and sampling protocol}
 
@@ -89,37 +88,87 @@ Each event has explicit process-chain, immediate-trigger, and
 climate-preconditioning claims, including an unresolved claim when evidence is
 absent.
 
-The draft geophysical inclusion rule requires rapid failure of rock, glacier
+The registered geophysical inclusion rule requires rapid failure of rock, glacier
 ice, or a mixed mass in an alpine or fjord setting, a documented time and
 source location, and at least one of three operational thresholds: initial
 volume of $10^6$~m$^3$, source-to-deposit travel of 2~km, or landslide-tsunami
 field runup of 10~m. Downstream damage and population exposure are stored as
 consequences but do not determine geophysical inclusion. Snow avalanches
 without glacier-ice or rock failure and floods without an initial mass
-movement are outside the scope. The final registration will justify or revise
-these numerical thresholds before screening. A separately labeled active
+movement are outside the scope. These thresholds were frozen before the
+climate-blind screen. A separately labeled active
 slope may enter the protocol-development set when measured deformation and
 published failure geometries exist. Barry Arm is such a prospective case, not
 an occurred event \citep{Dai2020,Schaefer2023,Barnhart2021,Collins2024}.
 
-The present records were selected because they motivated the study. They
+Discovery covers 1 January 2000 through 30 August 2026. Two enumerated frames
+are the 354-case PANGAEA landslide-tsunami catalog
+\citep{Dohmen2025Data} and the 60-event High Mountain Asia rock- and
+ice-avalanche inventory \citep{Zhong2024,Zhong2024Data}. A 51-event global
+review supplies a cross-check \citep{Mani2023}; its linked spreadsheet was not
+enumerated because automated retrieval returned HTTP 403. Independent query
+suites for fjord and lake tsunamis, glacier failures, and rock or mixed
+avalanches supplement dates and regions not covered by the structured frames.
+All exact queries, execution times, and resource classes are archived with the
+catalog. Searches and candidate fields omit asserted climate cause and event
+climate exposure. Inventory cause columns are ignored.
+
+\begin{table}[t]
+\centering
+\caption{Cause-blind flow through the two enumerated discovery frames.
+``Retained'' applies the occurrence window and a usable event record; the
+numeric prefilter uses only published volume, travel, or runup fields. It does
+not establish material or setting eligibility.}\label{tab:frames}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Frame & Published & Downloaded & Window & Retained & Numeric \\
+\midrule
+PANGAEA landslide tsunamis & 354 & 355 & 87 & 84 & 40 \\
+High Mountain Asia & 60 & 60 & 40 & 40 & 38 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Every candidate promoted to detailed screening has two differently named
+reviewers. Each reviewer sees identity, time, place, initial material and
+process, the threshold observation, and its source. Allowed decisions are
+include, exclude, or uncertain. An inventory value can discover an event, but
+final inclusion requires a primary event reconstruction or authoritative
+agency record. A secondary-only record remains uncertain. Conflicting dates,
+coordinates, volumes, and aliases remain in the notes rather than being
+silently reconciled. Detection era, sensor coverage, and reporting source
+must remain in the later observation model because discovery is not stationary.
+
+The reconciliation crosswalk links all 78 numeric-prefilter rows in
+Table~\ref{tab:frames} to candidate records. The source bytes, checksums, and
+qualifying-row manifest are archived with the catalog. Compound inventory rows
+are
+expanded into individual occurrences. A row-level size estimate is not
+assigned to each component unless the primary source supports that allocation;
+otherwise each component remains uncertain. Independent searches identified,
+for example, the November 2025 Bartuytsete ice-rock avalanche, whose published
+3.5~km runout passes the travel threshold \citep{Dokukin2026}. The resulting
+table contains 148 candidates: 73 included, 68 uncertain, and 7 excluded.
+Fifty-three included failures have day-scale or better timing and enter the
+future trigger-time risk set; the remainder can inform only site-level or
+preconditioning analyses.
+
+The seed records were selected because they motivated the study and still
 cannot support a frequency trend, an event-conditioned climate distribution,
-or a global susceptibility model. Before climate values are extracted, the
-inference catalog will be preregistered and frozen from a climate-blind search.
-The registration will state databases, search strings that do not contain a
-climate cause, language coverage, temporal and spatial bounds, minimum source
-documentation, duplicate rules, treatment of events detected only by seismic
-or satellite data, and a stopping date. Two reviewers will screen identity and
-mechanical eligibility without viewing event climate anomalies. Detection
-era, sensor coverage, and reporting source will be stored because event
-detection is not stationary.
+or a global susceptibility model. The discovery table is closer to an
+inference frame, but it also cannot support those estimates until the
+registered search cutoff, both screens, disagreement resolution, and catalog
+commit are frozen. No atmospheric anomaly or cryospheric exposure is extracted
+before that freeze.
 
 The protocol has two estimands. The episode-level trigger estimand compares
 conditions at failure with time controls; the site-level preconditioning
 estimand compares source slopes with an incidence-density risk set. The two
 Aru glaciers are separate episode candidates but share a site-level cluster.
-The October 2023 Dickson Fjord episode is stored as dependent on the September
-site and excluded as an independent event-time unit. Barry Arm is excluded
+Distinct Aysen, Denali, and Kunlun source failures remain individual events
+even though each set shares an earthquake trigger. The unresolved October 2023
+Dickson Fjord episode is linked to the September site but receives no analysis
+role until its source-specific threshold is established. Barry Arm is excluded
 from event-time inference because catastrophic failure has not occurred; it
 instead supplies a prospective case for testing susceptibility variables.
 
@@ -183,8 +232,8 @@ failed volume.
 \caption{Seven focal records in the protocol seed. The dependent October 2023
 Dickson Fjord episode remains in the machine-readable catalog but is omitted
 here. Volumes describe an initial failed mass except at Barry Arm, where the
-range describes possible unstable-slope geometries. Reported uncertainties
-are reproduced from the sources; their distinct confidence, conservative-sum,
+range describes possible unstable-slope geometries. Shown uncertainties are
+reproduced from the sources; their distinct confidence, conservative-sum,
 or unspecified semantics are stored in the machine-readable catalog.}\label{tab:events}\\
 \toprule
 Event and date & Initial failure & Volume (10$^6$ m$^3$) & Cascade & Climate evidence \\
@@ -194,12 +243,12 @@ Event and date & Initial failure & Volume (10$^6$ m$^3$) & Cascade & Climate evi
 Event and date & Initial failure & Volume (10$^6$ m$^3$) & Cascade & Climate evidence \\
 \midrule
 \endhead
-Nepal, 26 Aug 2026 & Glacial collapse & unresolved & Debris flow and flood traveled about 100 km & No event-specific attribution; process reconstruction remains provisional \citep{USGS2026Nepal,USGS2026NepalSeismic} \\
+Nepal, 26 Aug 2026 & Provisional glacial-collapse classification & unresolved & Debris flow and flood traveled about 100 km & No event-specific attribution; process reconstruction remains provisional \citep{USGS2026Nepal,USGS2026NepalSeismic} \\
 Chamoli, 7 Feb 2021 & Rock and glacier ice & 26.9 [26.5, 27.3] & Avalanche to debris flow and flood & Several thermal effects are plausible; no single trigger isolated \citep{Shugar2021,VanWykDeVries2022} \\
 Aru-1, 17 Jul 2016 & Glacier detachment & $68\pm2$ & Ice avalanche; 6 km beyond terminus & Multiyear melt and rain inferred to increase subglacial water pressure \citep{Gilbert2018} \\
 Aru-2, 21 Sep local time 2016 & Glacier detachment & $83\pm2$ & Two pulses; 5 km beyond terminus & Shared multiyear preconditioning; immediate trigger unresolved \citep{Kaab2018,Gilbert2018} \\
 Dickson Fjord, 16 Sep 2023 & Foliation-parallel rockslide & $25.5\pm1.7$ rock & Glacier entrainment, tsunami, and nine-day signal & Glacier thinning inferred to debuttress the toe; proximate trigger unresolved \citep{Svennevig2024} \\
-Tracy Arm, 10 Aug 2025 & Bedrock landslide & $\geq63.5$ mapped & Glacier/fjord impact, tsunami, and 36-hour signal & Regional warming attributed; retreat--debuttressing link is a mechanical inference \citep{Shugar2026} \\
+Tracy Arm, 10 Aug 2025 & Bedrock landslide & $\geq63.5$ mapped & Glacier/fjord impact, tsunami, and signal lasting at most 36 hours & Regional warming attributed; retreat--debuttressing link is a mechanical inference \citep{Shugar2026} \\
 Barry Arm, active & Slow bedrock landslide & 290--689 possible & Potential rapid failure and tsunami & Retreat and motion are temporally coincident; alternatives require testing \citep{Dai2020,Barnhart2021} \\
 \bottomrule
 \end{longtable}
@@ -332,9 +381,9 @@ evidence for a dominant causal pathway.
 
 Source uncertainty enters at three levels. First, reported intervals are not
 interchangeable. Chamoli gives a 95\% reconstruction interval; Aru reports a
-conservative linear sum of DEM and post-event correction errors; some Dickson
-and Tracy values still require verification and are labeled
-\texttt{reported\_unspecified}. The Barry Arm depth spread describes agreement
+conservative linear sum of DEM and post-event correction errors; the
+probability semantics of some reported Dickson and Tracy uncertainties remain
+unspecified and are labeled \texttt{reported\_unspecified}. The Barry Arm depth spread describes agreement
 among tested parameterizations and time periods, not full inversion
 nonuniqueness. Second, source classifications can change. The
 reviewed Nepal seismic record now calls the source a glacial collapse and
@@ -344,24 +393,27 @@ some quantities are conditional scenarios. Barry Arm volumes and tsunami
 heights describe possible geometries, not observations or forecasts of a
 failure time.
 
-The next version must complete climate-blind discovery and double screening
-before any event anomalies are calculated. It must then acquire matched
-non-failing slopes, glacier-contact histories, deformation records, and
-permafrost proxies. Only after those data and the statistical specification
-are frozen can the study estimate whether recent hazardous alpine mass
-movements occupy systematically different climatic or cryospheric conditions.
+This version completes the climate-blind frame reconciliation and double
+screening. The unresolved records require primary-source follow-up and the
+registered terrain-mask check, but they are not silently removed. The next
+analysis must freeze this candidate version, acquire matched non-failing
+slopes, and calculate glacier-contact histories, deformation records, and
+permafrost proxies before inspecting event climate anomalies. Only after those
+data and the statistical specification are frozen can the study estimate
+whether recent hazardous alpine mass movements occupy systematically different
+climatic or cryospheric conditions.
 
 \section{Conclusions}
 
-The seed catalog establishes a traceable distinction among initial failure,
-downstream cascade, climate preconditioning, and immediate trigger. It also
-shows why reanalysis alone is insufficient: Aru requires effective-pressure
-bounds, while the rock-slope cases require glacier geometry, support change,
-structure, and deformation. A climate-blind inventory, independent analysis
-units, detrended seasonal controls, matched non-failing slopes, and explicit
-competing predictions are prerequisites for a defensible climate test. The
-present contribution is the protocol and machine-readable seed, not evidence
-that warming systematically triggered these events.
+The catalog establishes a traceable distinction among initial failure,
+downstream cascade, climate preconditioning, and immediate trigger. The
+climate-blind screen retains 73 eligible occurrences while keeping 68
+unresolved cases visible. It also shows why reanalysis alone is insufficient:
+glacier detachments require effective-pressure bounds, while rock-slope cases
+require glacier geometry, support change, structure, and deformation.
+Detrended seasonal controls, matched non-failing slopes, and explicit competing
+predictions are the next tests. The present contribution is the sampling frame
+and protocol, not evidence that warming systematically triggered these events.
 
 \bibliographystyle{plainnat}
 \bibliography{references}
