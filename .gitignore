@@ -10,3 +10,5 @@ latex/*.run.xml
 __pycache__/
 *.pyc
 .venv/
+data/scale_explicit_transfer/selection_source/*.zip
+data/scale_explicit_transfer/source_raw/

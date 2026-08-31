@@ -56,8 +56,13 @@ three deterministically selected windows. Primary connected-component counts
 change by factors of 1.3--3.0 between 30 and 90~m grids, so the pilot supplies
 a reproducible frame but not a unique population count. A post-outcome
 scale-explicit composite reduces 90~m area departure in five of six paired
-diagnostics from the same exposed windows, but is not an external validation.
-I then specify detrended seasonal controls,
+diagnostics from the same exposed windows. A subsequently registered blind
+transfer calculation freezes that estimator and tests four hash-selected
+windows. All eight glacier- and permafrost-stratum checks meet the registered
+numerical bounds: 90~m departures are 1.8--5.3\% and four-phase coefficients
+of variation are 0.000061--0.00375. The windows are not a probability sample,
+so this result tests numerical transfer rather than physical susceptibility or
+global representativeness. I then specify detrended seasonal controls,
 matched non-failing slopes, mechanism-specific glacier and permafrost
 observations, and multiplicity control. Uneven observation and unresolved
 primary sources prevent these counts from estimating a frequency trend. No
@@ -505,9 +510,9 @@ together. Their paired difference therefore belongs to the composite and
 cannot identify which operation controls scale dependence. Moreover, the 30
 and 90~m disks contain different center quadrature; the calculation is not a
 resolution-independent physical kernel, failure-plane orientation, thickness,
-or stress. A new blind-region protocol must freeze this estimator unchanged
-before reading additional terrain values. Until that test, these diagnostics
-do not support global scaling.
+or stress. The blind-region calculation below therefore freezes this estimator
+unchanged before reading additional terrain values. These exposed-window
+diagnostics do not themselves support global scaling.
 
 \begin{figure}[p]
   \centering
@@ -522,6 +527,83 @@ do not support global scaling.
   contains no event or predicted-failure marker. Source products and
   attribution are as in Figure~\ref{fig:area-convergence}.}
   \label{fig:scale-explicit}
+\end{figure}
+\clearpage
+
+\subsection{Blind numerical transfer of equivalent steep area}
+
+The transfer calculation tests whether the frozen equivalent-area estimator
+retains its numerical behavior outside the three development windows. Before
+terrain values were opened, a registered protocol excluded previously used
+regions, enumerated inventory-only eligible windows, and selected four RGI
+regions and one 1$^\circ$ window per region by SHA-256 order. The resulting
+windows are Arctic Canada South (72--73$^\circ$N, 79--78$^\circ$W), North Asia
+(65--66$^\circ$N, 145--146$^\circ$E), South Asia East (28--29$^\circ$N,
+96--97$^\circ$E), and New Zealand (44--43$^\circ$S, 171--172$^\circ$E).
+Inventory attributes fixed the selection; glacier geometry, elevation, and
+PZI values were acquired only after the selection manifest was frozen.
+
+The protocol retained the development calculation without changing the
+300~m support radius, 25--35$^\circ$ ramp, 100~m glacier-outline distance,
+PZI threshold of 0.1, or grid phases. For region $j$ and stratum $s$, let
+$E_{js,0}=E_{js,00}$ and $E_{js,90}$ denote the unshifted 30~m and aligned
+90~m values.
+The four 30~m values $E_{js,00}$, $E_{js,10}$, $E_{js,01}$, and $E_{js,11}$
+have respective phase offsets $(0,0)$, $(15,0)$, $(0,15)$, and $(15,15)$~m.
+The protocol defined the departure and population coefficient of variation as
+\begin{equation}
+ D_{js}=\frac{|E_{js,90}-E_{js,0}|}{E_{js,0}},\qquad
+ C_{js}=\frac{\operatorname{sd}_{\mathrm{pop}}
+ (E_{js,00},E_{js,10},E_{js,01},E_{js,11})}
+ {\operatorname{mean}(E_{js,00},E_{js,10},E_{js,01},E_{js,11})}.
+\end{equation}
+Transfer required a positive finite $E_{js,0}$, $D_{js}\leq0.20$, and
+$C_{js}\leq0.10$ in both strata of all four windows. Thus, one
+failed window-stratum check would fail its stratum and the complete test.
+
+Source replay reproduced all 20 derived DEM and PZI grids with matching value
+hashes, equal affine transforms, and zero maximum absolute difference. The
+first computation stopped when two WGS84-valid
+glacier outlines became invalid after projection in South Asia East. Regions
+10 and 18 had been calculated in memory, but no result was persisted, printed,
+summarized, or observed. Before restarting, the pre-output provenance recorded
+a deterministic linework repair applied only to invalid projected geometry; the
+two repaired areas changed by less than $8.3\times10^{-16}$ in relative
+magnitude. This repair addresses polygon representation after projection and
+does not alter the frozen steepness or comparison equations.
+
+All eight reference areas are positive and span 0.52--297.42~km$^2$.
+Figure~\ref{fig:scale-explicit-transfer} shows that all eight checks pass.
+The 90~m departures range from 1.81\% to 5.28\%, compared with the registered
+20\% bound. The largest is the New Zealand PZI-intersection result. The
+four-phase coefficients of variation range from 0.000061 to 0.00375, compared
+with the registered 0.10 bound; the largest is the Arctic Canada South
+glacier-outline result. The complete result therefore passes the registered
+numerical transfer gate.
+
+This pass has a narrower interpretation than model validation. It confirms
+resolution and phase behavior for the frozen calculation in four additional
+hash-selected windows. It does not show that the two strata identify unstable
+slopes, resemble event sources, predict incidence, or sample the global terrain
+distribution. Neither the four RGI regions nor their first eligible hash
+windows have known geographic inclusion probabilities. A separate sampling
+protocol is therefore required before estimating a regional or global
+equivalent-area denominator.
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=\textwidth]{../figures/scale_explicit_transfer.pdf}
+  \caption{Blind numerical transfer of scale-explicit equivalent steep area.
+  (a, b) Equivalent area relative to the unshifted 30~m result for four 30~m
+  phases and the aligned 90~m grid in glacier-outline proximity and PZI
+  intersection strata. Colors identify four regions selected by the frozen
+  inventory-only hash procedure. (c) Each 90~m departure and phase coefficient
+  of variation divided by its registered bound; G denotes glacier-outline
+  proximity and P denotes PZI intersection. The dashed line is the acceptance
+  threshold. All values lie below it. This is a numerical transfer result, not
+  a physical-validation or global-sampling result. Source products and
+  attribution are as in Figure~\ref{fig:area-convergence}.}
+  \label{fig:scale-explicit-transfer}
 \end{figure}
 \clearpage
 
@@ -783,8 +865,9 @@ failure time.
 This version completes the climate-blind frame reconciliation, double
 screening, registered ERA5 temperature pilot, independently reviewed
 source-coordinate and UTC-onset audit, the first case-blind susceptible-
-terrain pilot and held-out susceptible-area convergence test, and a
-post-outcome scale-explicit development calculation. The audit leaves
+terrain pilot and held-out susceptible-area convergence test, a post-outcome
+scale-explicit development calculation, and its registered blind numerical
+transfer test. The audit leaves
 29 coordinates and 16
 times unresolved and preserves three time conflicts; none is silently removed.
 The pilot inspected only its registered temperature endpoints and is not
@@ -795,14 +878,18 @@ The terrain pilot supplies candidate denominator objects, but its three windows
 do not estimate regional populations and its connected counts remain scale
 sensitive. The deterministic held-out windows likewise do not estimate a
 global population, and both registered area strata fail their resolution
-criterion. The composite reduces departure in five of six paired diagnostics,
-but it was selected using those exposed results and cannot validate itself. A
-new protocol must freeze it unchanged before opening any blind-region values.
-Only after such a numerical test may a later association analysis acquire
-glacier-contact histories, deformation records, permafrost proxies, additional
-meteorological variables, and a frozen statistical specification. Only then
-can the study estimate whether hazardous alpine mass movements occupy
-systematically different climatic or cryospheric conditions.
+criterion. The composite reduces departure in five of six paired development
+diagnostics. Its unchanged blind calculation then passes all eight registered
+checks in four hash-selected windows. This closes a numerical transfer test,
+but the windows have no geographic inclusion probabilities and the strata have
+not been tested against failure observations. A new geographic protocol must
+therefore freeze a probability sampling frame before estimating a global
+denominator. Physical validation and any later association analysis also
+require matched non-failing slopes, glacier-contact histories, deformation
+records, permafrost proxies, additional meteorological variables, and a frozen
+statistical specification. Only then can the study estimate whether hazardous
+alpine mass movements occupy systematically different climatic or cryospheric
+conditions.
 
 \section{Conclusions}
 
@@ -827,11 +914,15 @@ held-out area test, phase coefficients of variation remain below 0.004, but
 90~m departures reach 26.7--36.6\% for glacier-contact area and 29.1--37.4\%
 for PZI-intersection area in Arctic Canada and Svalbard; both strata fail. A
 post-outcome composite gives 2.6--13.4\% departures in the same windows and is
-lower in five of six paired diagnostics, but needs an unchanged blind-region
-test. Detrended seasonal controls and explicit competing predictions also
-remain future tests. The present contribution is a sampling frame, protocol,
-and exposure-sensitivity result, not evidence that warming systematically
-triggered these events.
+lower in five of six paired diagnostics. Its unchanged blind calculation gives
+1.8--5.3\% departures and four-phase coefficients of variation no greater than
+0.00375 in four additional hash-selected windows; all eight registered checks
+pass. This establishes numerical transfer only. The windows are not a
+probability sample, and the calculation has not been tested against failing and
+non-failing slopes. Geographic sampling, detrended seasonal controls, and
+explicit competing predictions therefore remain future tests. The present
+contribution is a sampling frame, protocol, and exposure-sensitivity result,
+not evidence that warming systematically triggered these events.
 
 \bibliographystyle{plainnat}
 \bibliography{references}

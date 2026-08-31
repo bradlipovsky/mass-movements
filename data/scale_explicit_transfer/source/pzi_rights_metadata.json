@@ -1,0 +1,183 @@
+{
+  "id" : "f070ec05-02dc-4450-8f16-039c7b2d2062",
+  "uuid" : "f070ec05-02dc-4450-8f16-039c7b2d2062",
+  "name" : "Global Permafrost",
+  "handle" : "10283/2527",
+  "metadata" : {
+    "dc.contributor" : [ {
+      "value" : "McGarva, Guy",
+      "language" : "en",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.contributor.other" : [ {
+      "value" : "Unkown",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.coverage.spatial" : [ {
+      "value" : "northlimit=83.6274;eastlimit=180.0;southlimit=-90.0;westlimit=-180.0;",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.creator" : [ {
+      "value" : "Gruber, Stephan",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.date.accessioned" : [ {
+      "value" : "2017-02-21T17:46:39Z",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.date.available" : [ {
+      "value" : "2017-02-21T17:46:39Z",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.date.updated" : [ {
+      "value" : "2017-02-21T17:46:39Z",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.description.abstract" : [ {
+      "value" : "The Permafrost Zonation Index (PZI) or a corresponding map color indicates, to what degree permafrost exists only in the most favorable conditions (yellow) or nearly everywhere (blue). These local conditions affecting permafrost occurrence will partly exhibit regional trends (e.g. mean snow cover characteristics or continentality), partly vary over typical distances on the order of several km (e.g. shaded or sun-exposed side of a mountain), and partly over tens to hundreds of meters (e.g. snow drift, vegetation, ground material). These conditions need to be assessed during interpretation, depending on the intended purpose of using the PZI map. This product is likely to be most valuable in remote regions where only sparse reliable information exists. More info available here: http://www.geo.uzh.ch/microsite/cryodata/pf_global/. The derivation of the dataset is described in this publication <http://www.the-cryosphere.net/6/221/>. In it, issues of uncertainty and heterogeneity are discussed in detail. These are especially important when using such data for validating other models. Updated statistics for global/national permafrost areas as well as plots detailing the nature of permafrost areas in terms of latitude, elevation, heterogeneity and terrain ruggedness are available and include an estimation of uncertainty.  The data are provided \"as is\" and University of Zurich makes no representations or warranties, express or implied. By way of example, but without limitation, University of Zurich makes no representations or warranties of merchantibily or  tness for any particular purpose or that the data will meet your requirements or that the use of the data or documentation will not infringe any third party's patents, copyrights, trademarks or other rights. Furthermore, University of Zurich does not warrant or make any representations regarding use of the data in terms of correctness, accuracy, reliability, or otherwise or that defects in the data will be corrected. University of Zurich will not be liable for any consequential, incidental, or special damages, or any other relief, or for any claim by any third party, arising from the use of the data. Please attribute the WGMS as the source of this data if you use it. GIS vector data. This dataset was first accessioned in the EDINA ShareGeo Open repository on 2012-02-22 and migrated to Edinburgh DataShare on 2017-02-21.",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.description.tableofcontents" : [ {
+      "value" : "ESRI Shapefile",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.identifier.citation" : [ {
+      "value" : "Gruber, Stephan. (2017). Global Permafrost, [Dataset]. University of Zurich. https://doi.org/10.7488/ds/1877.",
+      "language" : "en",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.identifier.uri" : [ {
+      "value" : "https://hdl.handle.net/10283/2527",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    }, {
+      "value" : "https://doi.org/10.7488/ds/1877",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 1
+    } ],
+    "dc.language.iso" : [ {
+      "value" : "en",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.publisher" : [ {
+      "value" : "University of Zurich",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.rights" : [ {
+      "value" : "This data is made available under the Creative Commons Attribution 3.0 license whose full text can be found at http://creativecommons.org/licenses/by/3.0/legalcode",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.subject" : [ {
+      "value" : "permafrost",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    }, {
+      "value" : "Climatology/Meteorology/Atmosphere",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 1
+    }, {
+      "value" : "Geo Scientific Information",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 2
+    } ],
+    "dc.title" : [ {
+      "value" : "Global Permafrost",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.type" : [ {
+      "value" : "dataset",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ]
+  },
+  "inArchive" : true,
+  "discoverable" : true,
+  "withdrawn" : false,
+  "lastModified" : "2017-03-06T11:40:31.326+00:00",
+  "entityType" : null,
+  "type" : "item",
+  "_links" : {
+    "accessStatus" : {
+      "href" : "https://datashare.ed.ac.uk/server/api/core/items/f070ec05-02dc-4450-8f16-039c7b2d2062/accessStatus"
+    },
+    "bundles" : {
+      "href" : "https://datashare.ed.ac.uk/server/api/core/items/f070ec05-02dc-4450-8f16-039c7b2d2062/bundles"
+    },
+    "identifiers" : {
+      "href" : "https://datashare.ed.ac.uk/server/api/core/items/f070ec05-02dc-4450-8f16-039c7b2d2062/identifiers"
+    },
+    "mappedCollections" : {
+      "href" : "https://datashare.ed.ac.uk/server/api/core/items/f070ec05-02dc-4450-8f16-039c7b2d2062/mappedCollections"
+    },
+    "owningCollection" : {
+      "href" : "https://datashare.ed.ac.uk/server/api/core/items/f070ec05-02dc-4450-8f16-039c7b2d2062/owningCollection"
+    },
+    "relationships" : {
+      "href" : "https://datashare.ed.ac.uk/server/api/core/items/f070ec05-02dc-4450-8f16-039c7b2d2062/relationships"
+    },
+    "version" : {
+      "href" : "https://datashare.ed.ac.uk/server/api/core/items/f070ec05-02dc-4450-8f16-039c7b2d2062/version"
+    },
+    "templateItemOf" : {
+      "href" : "https://datashare.ed.ac.uk/server/api/core/items/f070ec05-02dc-4450-8f16-039c7b2d2062/templateItemOf"
+    },
+    "thumbnail" : {
+      "href" : "https://datashare.ed.ac.uk/server/api/core/items/f070ec05-02dc-4450-8f16-039c7b2d2062/thumbnail"
+    },
+    "self" : {
+      "href" : "https://datashare.ed.ac.uk/server/api/core/items/f070ec05-02dc-4450-8f16-039c7b2d2062"
+    }
+  }
+}

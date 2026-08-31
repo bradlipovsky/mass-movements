@@ -1,0 +1,13 @@
+HTTP/1.1 200 OK
+Server: nginx/1.28.3
+Date: Mon, 31 Aug 2026 14:47:12 GMT
+Content-Type: text/plain
+Content-Length: 4417
+Connection: keep-alive
+Last-Modified: Sat, 18 Feb 2012 12:15:44 GMT
+Vary: Accept-Encoding
+ETag: "4f3f9670-1141"
+Accept-Ranges: bytes
+Strict-Transport-Security: max-age=63072000; includeSubdomains
+X-Content-Type-Options: nosniff
+
