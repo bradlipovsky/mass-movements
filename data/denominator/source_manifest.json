@@ -14,9 +14,10 @@
     },
     "Gruber PZI": {
       "terms_url": "https://microsite.geo.uzh.ch/cryodata/pf_global/",
-      "terms": "Publicly downloadable with requested citation to Gruber (2012); University of Zurich supplies the data as is and disclaims warranties and liability as reproduced in the archived README.",
-      "redistribution_license": null,
-      "merge_condition": "Obtain explicit redistribution permission or remove the derived TIFF subsets and retrieve them at build time before merge."
+      "rights_record_url": "https://datashare.ed.ac.uk/items/f070ec05-02dc-4450-8f16-039c7b2d2062",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "dataset_doi": "10.7488/ds/1877",
+      "terms": "Edinburgh DataShare identifies Gruber as creator and University of Zurich as publisher of the same Global Permafrost PZI dataset and assigns it CC BY 3.0. Derived subsets require attribution; no byte identity between archive representations is claimed."
     },
     "ITS_LIVE": {
       "terms_url": "https://nsidc.org/data/documentation/measures-its_live-regional-glacier-and-ice-sheet-surface-velocities-version-2-user-guide",
@@ -205,6 +206,17 @@
       "role": "source_metadata",
       "sha256": "641f26fb219ddec315d0bfde21e42ef405eea81d22f08752f8ad7c15d307d635",
       "size_bytes": 4417
+    },
+    {
+      "derivation": "selected exact rights fields from the official Edinburgh DataShare HAL JSON; full response SHA-256 retained",
+      "derived_from": [
+        "pzi_rights_record"
+      ],
+      "path": "data/denominator/source/pzi_rights_metadata.json",
+      "region": "global",
+      "role": "source_metadata",
+      "sha256": "3165ca5c90f7896a58e1dd2a6a2a7f7988a693d645a669e03cffddd5240f6f88",
+      "size_bytes": 1182
     },
     {
       "derivation": "rejected WCS response: numeric background encoded as nodata",
@@ -674,6 +686,15 @@
       "url": "https://geoserver.geo.uzh.ch/cryogis/wcs",
       "coverage": "cryogis__Permafrost-Global-PFI",
       "version": "2012"
+    },
+    {
+      "id": "pzi_rights_record",
+      "product": "Gruber PZI",
+      "region": "global",
+      "status": "available",
+      "url": "https://datashare.ed.ac.uk/server/api/core/items/f070ec05-02dc-4450-8f16-039c7b2d2062",
+      "source_sha256": "3737a2b8a1251896e8a052e26dc6fa821b3c88108bac3a3ee600fb90a070701e",
+      "version": "2017 rights record"
     },
     {
       "id": "pzi_raw_flt",

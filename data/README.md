@@ -141,11 +141,11 @@ snapshot, regional population estimate, susceptibility model, or failure
 probability. Run `make artifacts-denominator` with the pinned analysis
 environment to regenerate tables, notebook figures, and the manuscript.
 
-The UZH PZI page makes the data publicly downloadable and requests citation,
-but its archived terms do not state a redistribution licence. The committed
-window subsets therefore require explicit permission or removal/retrieval at
-build time before this draft can merge; public access is not treated here as a
-licence grant.
+Edinburgh DataShare DOI `10.7488/ds/1877` identifies Gruber as creator and UZH
+as publisher of the same Global Permafrost PZI dataset and assigns it CC BY
+3.0. `pzi_rights_metadata.json` preserves the official API evidence. Its ESRI
+File Geodatabase is not claimed byte-identical to the UZH raw grid; the
+committed window subsets are attributed adaptations.
 
 The adapted elevation grids were produced using Copernicus WorldDEM-30 © DLR
 e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under

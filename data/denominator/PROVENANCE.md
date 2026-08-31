@@ -41,11 +41,13 @@ bounds, dimensions, and values are preserved by the TIFF headers. The earlier
 WCS responses and their sidecars are retained only as rejected inputs because
 that service mapped documented background zero to nodata.
 
-The UZH page makes the grid publicly downloadable but provides no explicit
-redistribution licence. Consequently, the committed derived subsets are a
-draft-review convenience, not an assertion of redistribution rights. They
-must be removed in favor of build-time range retrieval unless permission is
-confirmed before merge.
+Edinburgh DataShare DOI `10.7488/ds/1877` archives the same Global Permafrost
+PZI dataset, identifies Gruber as creator and UZH as publisher, links the UZH
+source page and 2012 derivation paper, and assigns the data CC BY 3.0. Its
+official API rights fields are preserved in `source/pzi_rights_metadata.json`.
+The DataShare copy uses an ESRI File Geodatabase, so no byte identity with the
+UZH raw Float32 representation is claimed. The committed window subsets are
+treated as attributed adaptations of the licensed PZI data.
 
 ## ITS_LIVE observability
 

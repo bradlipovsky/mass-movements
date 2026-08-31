@@ -127,7 +127,7 @@ class DenominatorPilotTests(unittest.TestCase):
         self.assertEqual(len({item["id"] for item in remote}), len(remote))
         self.assertEqual({(item["product"], str(item["version"])) for item in remote},
                          {("RGI", "7.0"), ("Copernicus DEM", "GLO-30 2021"),
-                          ("Gruber PZI", "2012"), ("ITS_LIVE", "2")})
+                          ("Gruber PZI", "2012"), ("Gruber PZI", "2017 rights record"), ("ITS_LIVE", "2")})
         listed = {item["path"] for item in manifest["local_objects"]}
         actual = {str(path) for path in Path("data/denominator/source").iterdir() if path.is_file()}
         self.assertEqual(listed, actual)
