@@ -1,9 +1,11 @@
 # Held-out susceptible-area convergence test
 
-Version 0.1. This version was registered in GitHub issue
+Version 0.2. Version 0.1 was registered in GitHub issue
 [#11](https://github.com/bradlipovsky/mass-movements/issues/11) on 30 August
 2026, after the denominator pilot was frozen and before any held-out RGI,
-Copernicus DEM, or permafrost-index value was read.
+Copernicus DEM, or permafrost-index value was read. Version 0.2 corrects the
+RGI point-field description after inventory selection and before any DEM or
+permafrost-index value was read; it does not change the calculation.
 
 ## Question and inferential boundary
 
@@ -41,9 +43,11 @@ region code. Freeze all 14 keys and digests before retrieving any selected
 regional inventory.
 
 Within each chosen region, reproduce the pilot's one-degree window rule using
-only RGI 7.0. Normalize longitude to `[-180, 180)`. A candidate has integer
-west and south edges, contains at least 10 RGI glacier centroids, and has at
-least 1 square kilometre of summed catalog `area_km2` among those centroids.
+only RGI 7.0. Normalize the archived `cenlon` field to `[-180, 180)`. A
+candidate has integer west and south edges, contains at least 10 archived RGI
+`cenlon`, `cenlat` points, and has at least 1 square kilometre of summed catalog
+`area_km2` among those points. The RGI metadata describes this point as an
+approximately central point within an outline, not a geometric centroid.
 Encode the candidate key as
 
 ```text
@@ -183,4 +187,8 @@ necessary correction in an amendment log before recomputing.
 
 ## Amendment log
 
-None.
+- 30 August 2026: replace "glacier centroid" with the exact RGI 7.0 fields
+  `cenlon` and `cenlat`. The product metadata defines them as an approximately
+  central point within the glacier outline. This correction was made after the
+  RGI-only window calculation and before any selected DEM or PZI value was
+  read. It changes no field, eligibility condition, digest, or selected window.
