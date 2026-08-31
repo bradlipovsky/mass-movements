@@ -1,11 +1,11 @@
 candidate_id,original_latitude_deg,original_longitude_deg,original_date_start,original_date_end,original_date_precision,coordinate_status,audited_latitude_deg,audited_longitude_deg,coordinate_uncertainty_class,coordinate_assertion_id,coordinate_unresolved_reason,time_status,onset_lower_utc,onset_upper_utc,time_assertion_id,time_unresolved_reason,consensus_note
 aru-1-2016,34.018816,82.243666,2016-07-17,,minute,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
 aru-2-2016,34.005936,82.254926,2016-09-21,,minute,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
-askja-2014,65.02,-16.7,2014-07-21,,day,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
+askja-2014,65.02,-16.7,2014-07-21,,day,unresolved,,,,,geometry_ambiguous,accepted,2014-07-21T23:24:00Z,2014-07-21T23:25:00Z,time-askja-rauter2018,,Inventory point lacks source-scar semantics; independently agreed UTC minute is retained while a new second-level assertion awaits review.
 aysen-2007-mentirosa,-45.4,-72.97,2007-04-21,,day,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
 aysen-2007-punta-cola,,,2007-04-21,,day,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
-baige-2018-nov,31.0823,98.711,2018-11-03,,minute,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
-baige-2018-oct,31.0823,98.711,2018-10-10,,minute,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
+baige-2018-nov,31.0823,98.711,2018-11-03,,minute,unresolved,,,,,geometry_ambiguous,accepted,2018-11-03T09:21:30Z,2018-11-03T09:21:31Z,time-baige-nov-zhang2024,,The study-site point is not established as the second failure source centroid; event-specific force inversion supplies the onset.
+baige-2018-oct,31.0823,98.711,2018-10-10,,minute,unresolved,,,,,geometry_ambiguous,accepted,2018-10-10T14:05:46Z,2018-10-10T14:05:47Z,time-baige-oct-zhang2024,,Published numeric points lack source-centroid semantics; event-specific force inversion defines hillslope initiation before the generic catalog time.
 blatten-2025,,,2025-05-28,,minute,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
 bukadaban-2022,35.969,90.869,2022-11-01,,minute,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
 cengalo-2011,,,2011-12-27,,minute,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
@@ -19,26 +19,26 @@ denali-mcginnis-n-2002,,,2002-11-03,,second,unresolved,,,,,not_reported,unresolv
 denali-mcginnis-s-2002,,,2002-11-03,,second,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
 denali-west-fork-n-2002,,,2002-11-03,,second,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
 denali-west-fork-s-2002,,,2002-11-03,,second,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
-dickson-2023,72.81,-26.95,2023-09-16,,minute,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
+dickson-2023,72.81,-26.95,2023-09-16,,minute,accepted,72.81,-26.95,le_1_km,coord-dickson-svennevig2024,,accepted,2023-09-16T12:35:03Z,2023-09-16T12:35:04Z,time-dickson-second-svennevig2024,,Primary mapped source and refined seismic origin accepted; the narrative minute contains the refined second.
 dykhtau-2023,,,2023-08-12,,day,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
-elliot-creek-2020,50.97,-124.61,2020-11-28,,day,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
+elliot-creek-2020,50.97,-124.61,2020-11-28,,day,unresolved,,,,,geometry_ambiguous,accepted,2020-11-28T14:52:56Z,2020-11-28T14:52:57Z,time-elliot-earthscope,,Mapped scar lacks a published numeric source point; EarthScope separates the initial avalanche from the later outburst-flood phase.
 eqip-sermia-2014,69.8,-50.2167,2014-07-02,,day,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
 flat-creek-2013,61.50,-141.54,2013-08-05,,day,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
 haast-2013,,,2013-01-21,,minute,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
 hillary-2014,-43.6165,170.1427,2014-07-14,,minute,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
 iliamna-2003,,,2003-07-25,,day,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
-karrat-2017,71.6433,-52.3367,2017-06-17,,minute,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
+karrat-2017,71.6433,-52.3367,2017-06-17,,minute,accepted,71.6433333,-52.3366667,le_1_km,coord-karrat-svennevig2020,,accepted,2017-06-17T23:39:00Z,2017-06-17T23:40:00Z,time-karrat-svennevig2020,,Event-specific mapped scar and Zulu minute outrank the geometry- and scale-ambiguous inventory entries.
 kolka-2002,42.73,44.44,2002-09-20,,day,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
 la-perouse-2014,,,2014-02-16,,minute,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
-laguna513-2010,-9.2125,-77.55,2010-04-11,,day,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
+laguna513-2010,-9.2125,-77.55,2010-04-11,,day,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,Published 07:40 local clock has no stated civil scale; the later second avalanche also leaves pulse allocation unresolved. Lake and inventory points are not source coordinates.
 lamplugh-2016,,,2016-06-28,,minute,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
 langtang-2015,,,2015-04-25,,minute,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
 lituya-2012,,,2012-06-11,,minute,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
 marmolada-2022,,,2022-07-03,,second,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
 meager-2010,,,2010-08-06,,second,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
 naltar-2021,36.220482,74.085186,2021-07-05,,day,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
-paat-2000,70.2667,-52.75,2000-11-21,,day,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
-pedersen-2024,59.9038,-149.8246,2024-08-07,,second,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
+paat-2000,70.2667,-52.75,2000-11-21,,day,unresolved,,,,,geometry_ambiguous,accepted,2000-11-21T18:04:52Z,2000-11-21T18:04:53Z,time-paat-dahljensen2004,,No checked numeric point is established as the initiating scar; seismic reconstruction resolves the initial cliff release.
+pedersen-2024,59.9038,-149.8246,2024-08-07,,second,accepted,59.9038,-149.8246,le_1_km,coord-pedersen-usgs,,conflict,,,,conflicting_primary_sources,USGS 12:54:49 UTC and EarthScope 12:54:42 UTC are disjoint authoritative onset assertions; neither is averaged or discarded.
 piz-scerscen-2024,,,2024-04-14,,minute,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
 sedongpu-2017-oct,29.818611,94.951749,2017-10-22,,day,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
 sedongpu-2018,29.80,94.92,2018-10-16,,minute,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
@@ -46,7 +46,7 @@ sedongpu-2021-mar,29.819987,94.947812,2021-03-22,,day,unresolved,,,,,geometry_am
 seti-2012,28.5304,84.0510,2012-05-05,,day,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
 steele-2007,,,2007-07-25,,minute,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
 steller-2005,60.52,-143.09,2005-09-14,,minute,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
-taan-2015,60.17,-141.18,2015-10-17,,day,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
+taan-2015,60.17,-141.18,2015-10-17,,day,accepted,60.175,-141.187,le_1_km,coord-taan-gualtieri2018,,accepted,2015-10-18T05:18:00Z,2015-10-18T05:19:00Z,time-taan-gualtieri2018,,UTC date is 18 October although the corresponding Alaska civil date and frozen catalog label are 17 October.
 thurwieser-2004,,,2004-09-18,,minute,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
 tracy-arm-2025,57.85,-133.07,2025-08-10,,minute,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
 tsar-2000,,,2000-09-14,,minute,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
