@@ -13,3 +13,4 @@ __pycache__/
 data/scale_explicit_transfer/selection_source/*.zip
 data/scale_explicit_transfer/source_raw/
 data/geographic_sample/source_raw/
+data/geographic_total/source_raw/
