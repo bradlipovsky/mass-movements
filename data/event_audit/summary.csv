@@ -12,13 +12,13 @@ cengalo-2011,,,2011-12-27,,minute,unresolved,,,,,not_reported,unresolved,,,,time
 cengalo-2017,,,2017-08-23,,minute,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
 chamoli-2021,30.375,79.732,2021-02-07,,second,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
 chehalis-2007,49.47,-122.01,2007-12-04,,day,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
-denali-black-rapids-e-2002,,,2002-11-03,,second,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
-denali-black-rapids-m-2002,,,2002-11-03,,second,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
-denali-black-rapids-w-2002,,,2002-11-03,,second,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
-denali-mcginnis-n-2002,,,2002-11-03,,second,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
-denali-mcginnis-s-2002,,,2002-11-03,,second,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
-denali-west-fork-n-2002,,,2002-11-03,,second,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
-denali-west-fork-s-2002,,,2002-11-03,,second,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
+denali-black-rapids-e-2002,,,2002-11-03,,second,unresolved,,,,,geometry_ambiguous,unresolved,,,,not_reported,Delaney verifies the event point but not its source geometry; the shared mainshock origin lacks an individually named coseismic link.
+denali-black-rapids-m-2002,,,2002-11-03,,second,unresolved,,,,,geometry_ambiguous,unresolved,,,,not_reported,Delaney verifies the event point but not its source geometry; the shared mainshock origin lacks an individually named coseismic link.
+denali-black-rapids-w-2002,,,2002-11-03,,second,unresolved,,,,,geometry_ambiguous,unresolved,,,,not_reported,Delaney verifies the event point but not its source geometry; the shared mainshock origin lacks an individually named coseismic link.
+denali-mcginnis-n-2002,,,2002-11-03,,second,unresolved,,,,,geometry_ambiguous,unresolved,,,,not_reported,Delaney verifies the event point but not its source geometry; the shared mainshock origin lacks an individually named coseismic link.
+denali-mcginnis-s-2002,,,2002-11-03,,second,unresolved,,,,,geometry_ambiguous,unresolved,,,,not_reported,Delaney verifies the event point but not its source geometry; the shared mainshock origin lacks an individually named coseismic link.
+denali-west-fork-n-2002,,,2002-11-03,,second,unresolved,,,,,geometry_ambiguous,unresolved,,,,not_reported,Delaney verifies the event point but not its source geometry; the shared mainshock origin lacks an individually named coseismic link.
+denali-west-fork-s-2002,,,2002-11-03,,second,unresolved,,,,,geometry_ambiguous,unresolved,,,,not_reported,Delaney verifies the event point but not its source geometry; the shared mainshock origin lacks an individually named coseismic link.
 dickson-2023,72.81,-26.95,2023-09-16,,minute,accepted,72.81,-26.95,le_1_km,coord-dickson-svennevig2024,,accepted,2023-09-16T12:35:03Z,2023-09-16T12:35:04Z,time-dickson-second-svennevig2024,,Primary mapped source and refined seismic origin accepted; the narrative minute contains the refined second.
 dykhtau-2023,,,2023-08-12,,day,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
 elliot-creek-2020,50.97,-124.61,2020-11-28,,day,unresolved,,,,,geometry_ambiguous,accepted,2020-11-28T14:52:56Z,2020-11-28T14:52:57Z,time-elliot-earthscope,,Mapped scar lacks a published numeric source point; EarthScope separates the initial avalanche from the later outburst-flood phase.

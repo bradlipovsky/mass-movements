@@ -3,10 +3,10 @@
   "created_utc": "2026-08-31T02:15:02Z",
   "discovery_freeze_commit": "35d392944fef43aeb4084e023bc1fa9470728fab",
   "files": {
-    "data/event_audit/coordinate_assertions.csv": "4115479a278846c8dfad2cfe4940c83e4acfd4f112971fac47443b5d2c15e7bf",
+    "data/event_audit/coordinate_assertions.csv": "aa4bb60d67d1c7428eeda995a6f584831a5455675d0aaa3393d1a7cd58d7a74d",
     "data/event_audit/sources.csv": "f429341451bdf162fc209bcba24ff4b2f812937a4a4355d1cee633e82f8a55b5",
-    "data/event_audit/summary.csv": "4f49df99a6a9783da8c006098beac3bf6d786e1b30ece3fa4b444277179b2ff0",
-    "data/event_audit/time_assertions.csv": "c2627f90d2cfbfecaad8c4c2212dffb26a18c0f89a80ae37c9d24f2c5312e6ab"
+    "data/event_audit/summary.csv": "6c6fde73808f4d5b1b3622395613f2ef5313b27bc53b2f00b32d84dfcbbcada8",
+    "data/event_audit/time_assertions.csv": "31c7f02269ee9b627c4f95a1b489abdfefdeef1d31d63fc0fade5490b1338e5b"
   },
   "inputs": {
     "data/candidates.csv": "8b6b0f972180e26c326aaa0e6a501080843bd4b6e6674b07c5aa009340c8a249",
