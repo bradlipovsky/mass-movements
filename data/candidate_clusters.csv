@@ -1,0 +1,24 @@
+cluster_id,cluster_type,candidate_ids,notes
+trigger-aysen-2007,trigger_cluster,aysen-2007-mentirosa;aysen-2007-punta-cola;aysen-2007-aguas-calientes,Distinct source failures share the 21 April earthquake and fjord wave field
+tsunami-aysen-2007,tsunami_cluster,aysen-2007-mentirosa;aysen-2007-punta-cola;aysen-2007-aguas-calientes,Distinct sources contributed to one fjord-wide tsunami field
+trigger-denali-2002,trigger_cluster,denali-mcginnis-n-2002;denali-mcginnis-s-2002;denali-black-rapids-e-2002;denali-black-rapids-m-2002;denali-black-rapids-w-2002;denali-west-fork-n-2002;denali-west-fork-s-2002,Seven source failures share one earthquake origin time
+trigger-kunlun-2001,trigger_cluster,kunlun-b2-2001;kunlun-k2-2001;kunlun-b4-2001;kunlun-b3-2001,Distinct glacier failures followed the same earthquake
+cascade-dickson-2023,cascade_cluster,dickson-2023;dickson-2023-oct,September and October signals may represent repeat episodes in one destabilized system
+cascade-baige-2018,cascade_cluster,baige-2018-oct;baige-2018-nov,Two failures from the same slope within 24 days
+cascade-morsar-2007,cascade_cluster,morsar-2007-mar;morsar-2007-apr,Two mapped stages whose shared volume has not been allocated
+tsunami-stromboli-2002,tsunami_cluster,stromboli-2002;stromboli-2002-2,Two source failures contributed to one tsunami episode
+tsunami-palu-2018,tsunami_cluster,palu-2018;palu-2018-b;palu-2018-c;palu-2018-d;palu-2018-f;palu-2018-i;palu-2018-k;palu-2018-m,Multiple named coastal source failures contributed to one tsunami
+site-iliamna-red-glacier,site_group,iliamna-2000-a;iliamna-2000-b;iliamna-2003,Repeat failures at Red Glacier
+site-piz-cengalo,site_group,cengalo-2011;cengalo-2017,Repeat failures at Piz Cengalo
+site-petra-sk,site_group,shuraki-kapali-2017;petra-sk03;petra-sk04;petra-sk06;petra-sk10;petra-sk16a;petra-sk19;petra-sk16b,Inventory subevents at the Petra Pervogo SK site
+site-sedongpu,site_group,sedongpu-2018;sedongpu-2017-oct;sedongpu-2021-mar;sedongpu-2014;sedongpu-2017-dec;sedongpu-2018-oct29;sedongpu-2019,Repeat Sedongpu failures
+site-yulong,site_group,yulong-2004;yulong-2005,Repeat Yulong failures
+site-aru,site_group,aru-1-2016;aru-2-2016,Two Aru failures
+site-petra-shi,site_group,petra-shi01;petra-shi09;petra-shi17a;petra-shi17b,Inventory subevents at the Petra Pervogo SHI site
+site-petra-sha,site_group,petra-sha19;petra-sha06,Inventory subevents at the Petra Pervogo SHA site
+site-amney-machen,site_group,amney-machen-2004;amney-machen-2007;amney-machen-2016;amney-machen-2019,Repeat Amney Machen entries
+site-kameng,site_group,kameng-2021;kameng-2020,Two Kameng entries requiring identity reconciliation
+site-tianmo,site_group,tianmo-2007;tianmo-2010-jul;tianmo-2010-sep,Repeat Tianmo entries
+site-hailuogou,site_group,hailuogou-2018;hailuogou-2022;hailuogou-2021-frame,Repeat and identity-conflicted Hailuogou entries
+site-dykhtau,site_group,dykhtau-2023;dykhtau-2025,Separate failures reported at Mount Dykhtau
+site-siachen-2010,site_group,siachen-2010-01;siachen-2010-02;siachen-2010-03;siachen-2010-04;siachen-2010-05;siachen-2010-06;siachen-2010-07,Seven unresolved source failures share one aggregate reconstruction

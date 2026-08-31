@@ -50,3 +50,61 @@ This convenience seed is not a complete or climate-blind inventory and cannot
 support a frequency trend or systematic climate association. The 2026 Nepal
 entry should also be revisited when a peer-reviewed reconstruction becomes
 available.
+
+## Climate-blind discovery tables
+
+`candidates.csv` is separate from the convenience seed. It records every
+event promoted from the structured frames or independent searches to detailed
+screening, including explicit exclusions and unresolved records. Each row has
+two differently named reviewers, their independent decisions and controlled
+reasons, a consensus decision, and the source passage supporting the
+operational threshold. `event_group_id` identifies a shared source slope or
+repeat-failure site. It does not merge distinct sources that share an
+earthquake. Trigger, cascade, site, and common-tsunami dependence are recorded
+explicitly in `candidate_clusters.csv`, allowing the later analysis to cluster
+uncertainty at the level appropriate to each estimand.
+
+The candidate table deliberately has no atmospheric anomaly, glacier-change,
+permafrost, or asserted-cause field. `trigger_time_eligible=no` retains an
+included event for site-level preconditioning analysis when its month-scale or
+satellite-bracketed date is too imprecise for a short weather window.
+`uncertain` means that the occurrence is plausible and may pass a threshold,
+but primary-source identity, material taxonomy, or episode-specific threshold
+evidence is unresolved. It is not a weaker form of inclusion.
+`threshold_quantity=not_documented` prevents a downstream reach, deposit
+volume, signal amplitude, or compound-row total from being mislabeled as an
+operational source-failure threshold.
+
+`discovery_searches.csv` logs the structured-frame enumeration and each
+independent query suite. Exact individual queries are transcribed in
+`protocol/discovery-search-transcript.md`; the eligibility, reconciliation,
+and freeze rules are in `protocol/discovery.md`. Inventory trigger or cause
+columns were ignored. The PANGAEA and High Mountain Asia datasets support
+discovery, while final included values require a primary event reconstruction
+or an authoritative agency record.
+
+`frame_screening.csv` records the mechanical flow through the two enumerated
+frames. The PANGAEA landing page reports 354 cases, while its downloaded table
+contains 355 landslide rows because a tsunami can have multiple source
+failures. `numeric_threshold_rows` is only a prefilter count. It neither
+establishes the alpine rock/ice population nor substitutes for primary-source
+screening. High Mountain Asia rows containing several occurrence dates receive
+an included episode only when the qualifying measurement can be assigned to
+that episode.
+
+`candidate_provenance.csv` is the frame-reconciliation crosswalk. It gives a
+visible candidate disposition for all 40 PANGAEA and 38 High Mountain Asia
+rows that pass the numeric prefilter. One inventory row may map to several
+candidate occurrences; this preserves compound events without assigning a
+row-level volume or travel distance to every occurrence.
+
+`source_frames/` preserves the two exact downloaded files, their SHA-256
+checksums, and a 78-row qualifier manifest with immutable worksheet or TSV row
+locators. The crosswalk must exactly match this manifest.
+
+The validators check the preregistered numerical thresholds, value/bound
+shape, units, occurrence window, date and coordinate bounds, reviewer
+independence, decision-role coherence, trigger-time precision, exact frame
+reconciliation, decision--reason consistency, and dependence-cluster links.
+Their final lines report live counts, so documentation does not need a
+separately maintained count.

@@ -1,0 +1,79 @@
+frame_id,frame_record,source_row,source_identity,date_text,prefilter_evidence
+pangaea_ltt,LTT_Paatuut_2000,672,LTT_Paatuut_2000,21.11.2000,initial_volume=30000000.00m3;tsunami_runup=50.00m
+pangaea_ltt,LTT_Stromboli_2002_1,674,LTT_Stromboli_2002_1,30.12.2002,initial_volume=12000000.00m3;tsunami_runup=10.90m
+pangaea_ltt,LTT_Stromboli_2002_2,675,LTT_Stromboli_2002_2,30.12.2002,initial_volume=8000000.00m3;tsunami_runup=10.90m
+pangaea_ltt,LTT_Quinggan_2003,676,LTT_Quinggan_2003,13.07.2003,initial_volume=2400000.00m3;tsunami_runup=39.00m
+pangaea_ltt,LTT_SouthJava_2006,680,LTT_SouthJava_2006,17.07.2006,tsunami_runup=21.00m
+pangaea_ltt,LTT_AysenFjord_AguasCalientes_2007,681,LTT_AysenFjord_AguasCalientes_2007,21.04.2007,initial_volume=2000000.00m3;tsunami_runup=50.00m
+pangaea_ltt,LTT_AysenFjord_Isla_Mentirosa_2007,682,LTT_AysenFjord_Isla_Mentirosa_2007,21.04.2007,initial_volume=8000000.00m3;tsunami_runup=50.00m
+pangaea_ltt,LTT_AysenFjord_QuebradaSinNombre_2007,683,LTT_AysenFjord_QuebradaSinNombre_2007,21.04.2007,initial_volume=14000000.00m3;tsunami_runup=50.00m
+pangaea_ltt,LTT_RitterIsland_2007,685,LTT_RitterIsland_2007,19.05.2007,tsunami_runup=10.00m
+pangaea_ltt,LTT_Dayantang_2007,686,LTT_Dayantang_2007,15.06.2007,initial_volume=3000000.00m3;tsunami_runup=50.00m
+pangaea_ltt,LTT_ChehalisLake_2007,687,LTT_ChehalisLake_2007,04.12.2007,initial_volume=3000000.00m3;tsunami_runup=37.80m
+pangaea_ltt,LTT_AratosawaDam_2008,688,LTT_AratosawaDam_2008,14.06.2008,initial_volume=1550000.00m3
+pangaea_ltt,LTT_Gongjiafang_2008,690,LTT_Gongjiafang_2008,23.11.2008,tsunami_runup=13.00m
+pangaea_ltt,LTT_RooseveltLake_2009,691,LTT_RooseveltLake_2009,16.01.2009,tsunami_runup=10.00m
+pangaea_ltt,LTT_Nachterstedt_2009,692,LTT_Nachterstedt_2009,18.07.2009,initial_volume=3000000.00m3
+pangaea_ltt,LTT_XiaowanReservoir_2009,693,LTT_XiaowanReservoir_2009,20.07.2009,initial_volume=1000000.00m3
+pangaea_ltt,LTT_SurugaBay_2009,694,LTT_SurugaBay_2009,11.08.2009,travel_distance=4000m
+pangaea_ltt,LTT_Greenland_2014,707,LTT_Greenland_2014,02.07.2014,tsunami_runup=15.00m
+pangaea_ltt,LTT_Tangjaxi_2014,708,LTT_Tangjaxi_2014,16.07.2014,tsunami_runup=22.70m
+pangaea_ltt,LTT_LakeAskja_2014,709,LTT_LakeAskja_2014,21.07.2014,initial_volume=10000000.00m3;travel_distance=2000m;tsunami_runup=80.00m
+pangaea_ltt,LTT_Fuquan_2014,710,LTT_Fuquan_2014,27.08.2014,initial_volume=1100000.00m3;tsunami_runup=27.00m
+pangaea_ltt,LTT_Reisafjorden_2015,711,LTT_Reisafjorden_2015,10.05.2015,initial_volume=1400000.00m3
+pangaea_ltt,LTT_TaanFjord_2015,714,LTT_TaanFjord_2015,17.10.2015,initial_volume=54000000.00m3;tsunami_runup=192.00m
+pangaea_ltt,LTT_KarratFjord_2017,716,LTT_KarratFjord_2017,17.06.2017,initial_volume=45000000.00m3;tsunami_runup=90.00m
+pangaea_ltt,LTT_Palu_2018_B,721,LTT_Palu_2018_B,28.09.2018,initial_volume=1440000.00m3
+pangaea_ltt,LTT_Palu_2018_C,722,LTT_Palu_2018_C,28.09.2018,initial_volume=2260000.00m3
+pangaea_ltt,LTT_Palu_2018_D,723,LTT_Palu_2018_D,28.09.2018,initial_volume=3070000.00m3
+pangaea_ltt,LTT_Palu_2018_F,725,LTT_Palu_2018_F,28.09.2018,initial_volume=2220000.00m3
+pangaea_ltt,LTT_Palu_2018_I,728,LTT_Palu_2018_I,28.09.2018,initial_volume=2540000.00m3
+pangaea_ltt,LTT_Palu_2018_K,730,LTT_Palu_2018_K,28.09.2018,initial_volume=1110000.00m3
+pangaea_ltt,LTT_Palu_2018_L,731,LTT_Palu_2018_L,28.09.2018,initial_volume=6660000.00m3
+pangaea_ltt,LTT_Palu_2018_M,732,LTT_Palu_2018_M,28.09.2018,initial_volume=3440000.00m3
+pangaea_ltt,LTT_Baige_2018,734,LTT_Baige_2018,11.10.2018,initial_volume=15000000.00m3;tsunami_runup=150.00m
+pangaea_ltt,LTT_Bureya_2018,735,LTT_Bureya_2018,11.12.2018,initial_volume=24500000.00m3;tsunami_runup=90.00m
+pangaea_ltt,LTT_Krakatau_2018,736,LTT_Krakatau_2018,22.12.2018,initial_volume=220000000.00m3;travel_distance=4000m;tsunami_runup=13.50m
+pangaea_ltt,LTT_ElliotCreek_2020,740,LTT_ElliotCreek_2020,28.11.2020,initial_volume=7000000.00m3;tsunami_runup=115.00m
+pangaea_ltt,LTT_Knappensee_2021,741,LTT_Knappensee_2021,11.03.2021,initial_volume=1000000.00m3
+pangaea_ltt,LTT_DicksonFjord_2023,751,LTT_DicksonFjord_2023,16.09.2023,initial_volume=25000000.00m3;tsunami_runup=200.00m
+pangaea_ltt,LTT_LhonakLake_2023,752,LTT_LhonakLake_2023,03.10.2023,initial_volume=16800000.00m3
+pangaea_ltt,LTT_PedersenLagoon_2024,754,LTT_PedersenLagoon_2024,07.08.2024,initial_volume=2000000.00m3;tsunami_runup=17.00m
+hma_rock_ice,HMA_xlsx_row_3_ID_1,3,HMA_ID_1,Feb 2021,source_volume=27Mm3;real_length=54.68523663659141km
+hma_rock_ice,HMA_xlsx_row_4_ID_2,4,HMA_ID_2,Apr 2015,source_volume=8Mm3;real_length=6.4931724141593525km
+hma_rock_ice,HMA_xlsx_row_5_ID_3,5,HMA_ID_3,May 2012/Prehistoric/Historic,source_volume=10~15Mm3;real_length=45.51177940929139km
+hma_rock_ice,HMA_xlsx_row_6_ID_4,6,HMA_ID_4,Nov 2015,real_length=7.832821011615163km
+hma_rock_ice,HMA_xlsx_row_7_ID_5,7,HMA_ID_5,Nov or Dec 2015,real_length=3.544200050787201km
+hma_rock_ice,HMA_xlsx_row_8_ID_6,8,HMA_ID_6,Oct 2021,real_length=28.427921204337117km
+hma_rock_ice,HMA_xlsx_row_9_ID_7,9,HMA_ID_7,Aug 2020 (?),real_length=4.862767216308015km
+hma_rock_ice,HMA_xlsx_row_10_ID_8,10,HMA_ID_8,Oct 2001 ~ Feb 2002,source_volume=1~4Mm3;real_length=6.24348884839238km
+hma_rock_ice,HMA_xlsx_row_11_ID_9,11,HMA_ID_9,Oct 2000 ~ Apr 2001,source_volume=1~2Mm3;real_length=1.6953613184215335km
+hma_rock_ice,HMA_xlsx_row_12_ID_10,12,HMA_ID_10,Oct 2001 ~ Feb 2002,source_volume=1~4Mm3
+hma_rock_ice,HMA_xlsx_row_14_ID_12,14,HMA_ID_12,Jul 2018,real_length=56.95383060866055km
+hma_rock_ice,HMA_xlsx_row_15_ID_13,15,HMA_ID_13,Sep 2007/Jul 2010/Sep 2010,source_volume=1Mm3;real_length=7.3188540769713395km
+hma_rock_ice,HMA_xlsx_row_18_ID_16,18,HMA_ID_16,Sep 2014,real_length=3.006750571630444km
+hma_rock_ice,HMA_xlsx_row_20_ID_18,20,HMA_ID_18,Nov 2016,real_length=3.094280207091788km
+hma_rock_ice,HMA_xlsx_row_21_ID_19,21,HMA_ID_19,Nov 2021/2016~2022,real_length=2.2827914928876005km
+hma_rock_ice,HMA_xlsx_row_22_ID_20,22,HMA_ID_20,Mar 2004/Apr 2005,source_volume=2~4Mm3;real_length=4.561462155932021km
+hma_rock_ice,HMA_xlsx_row_23_ID_21,23,HMA_ID_21,Jul 2016,source_volume=68Mm3;real_length=7.733745858250062km
+hma_rock_ice,HMA_xlsx_row_24_ID_22,24,HMA_ID_22,Sep 2016,source_volume=83Mm3;real_length=7.127259290919617km
+hma_rock_ice,HMA_xlsx_row_26_ID_24,26,HMA_ID_24,Apr 2012,source_volume=3.8Mm3;real_length=2.4897003835803213km
+hma_rock_ice,HMA_xlsx_row_31_ID_27,31,HMA_ID_27,Apr 2009,real_length=3.5518199560225456km
+hma_rock_ice,HMA_xlsx_row_33_ID_28,33,HMA_ID_28,Sep 2010,source_volume=109Mm3;real_length=3.1987988370636877km
+hma_rock_ice,HMA_xlsx_row_34_ID_29,34,HMA_ID_29,Jul 2021,source_volume=14Mm3;real_length=4.062888135304737km
+hma_rock_ice,HMA_xlsx_row_36_ID_31,36,HMA_ID_31,Apr or May 2000,source_volume=7.6Mm3;real_length=5.928394723700507km
+hma_rock_ice,HMA_xlsx_row_37_ID_32,37,HMA_ID_32,Aug 2016/Sep 2003/Aug 2006,real_length=6.7503968031516495km
+hma_rock_ice,HMA_xlsx_row_38_ID_32,38,HMA_ID_32,Jul 2017/Aug 1973/Jul 1994/Sep 2004/Sep 2010/Jun 2019,source_volume=8~11Mm3;real_length=19.16374099699743km
+hma_rock_ice,HMA_xlsx_row_40_ID_34,40,HMA_ID_34,Aug 2019,source_volume=8.6Mm3;real_length=6.985443794062049km
+hma_rock_ice,HMA_xlsx_row_41_ID_35,41,HMA_ID_35,Apr 2009,real_length=5.630251326539518km
+hma_rock_ice,HMA_xlsx_row_42_ID_35,42,HMA_ID_35,Mar 2001/Jun 2017,real_length=3.9816222824371477km
+hma_rock_ice,HMA_xlsx_row_43_ID_36,43,HMA_ID_36,Jul 2019/Aug 2006,real_length=4.823074641761208km
+hma_rock_ice,HMA_xlsx_row_49_ID_42,49,HMA_ID_42,Jan 2004/Sep 2007/Oct 2016/Jul 2019,source_volume=20~25Mm3;real_length=6.157256288315438km
+hma_rock_ice,HMA_xlsx_row_50_ID_43,50,HMA_ID_43,Oct and Dec 2017/Dec 1973/Jun 1977/Nov 2014,source_volume=50Mm3;real_length=11.742377484989998km
+hma_rock_ice,HMA_xlsx_row_51_ID_43,51,HMA_ID_43,Oct 2018,source_volume=139Mm3;real_length=11.387333665085958km
+hma_rock_ice,HMA_xlsx_row_52_ID_43,52,HMA_ID_43,Mar 2021/Oct 2019,source_volume=50Mm3;real_length=11.779749572889909km
+hma_rock_ice,HMA_xlsx_row_53_ID_44,53,HMA_ID_44,Apr 2000/1900,source_volume=91Mm3;real_length=510km
+hma_rock_ice,HMA_xlsx_row_54_ID_45,54,HMA_ID_45,Aug 2015/Jun 1985/Jun 1986/1989~1990,source_volume=1~5Mm3;real_length=11.790739756266357km
+hma_rock_ice,HMA_xlsx_row_57_ID_46,57,HMA_ID_46,May 2017,real_length=6.0371341711113224km
+hma_rock_ice,HMA_xlsx_row_59_ID_48,59,HMA_ID_48,Oct 2009,source_volume=1~2Mm3;real_length=3.8169831018750924km
+hma_rock_ice,HMA_xlsx_row_60_ID_49,60,HMA_ID_49,Jul 2022,source_volume=2Mm3;real_length=2.2940917592807835km

@@ -1,0 +1,3 @@
+frame_id,source_url,published_cases,downloaded_rows,window_rows,status_retained_window_rows,numeric_threshold_rows,notes
+pangaea_ltt,https://doi.org/10.1594/PANGAEA.979839,354,355,87,84,40,"Landing page reports 354 documented cases; downloaded tabulation has 355 landslide rows because some tsunami cases have multiple source failures; numeric prefilter ignores cause and uses only published volume travel and runup fields"
+hma_rock_ice,https://doi.org/10.5281/zenodo.10458200,60,60,40,40,38,"Forty rows contain at least one 2000-2026 date; 38 pass a numeric volume or travel prefilter at row level; compound dates require episode-specific reconciliation before inclusion"
