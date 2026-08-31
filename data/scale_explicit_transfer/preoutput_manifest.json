@@ -1,11 +1,14 @@
 {
   "boundary": {
     "coverage_complete": true,
-    "equivalent_area_calculated": false,
+    "equivalent_area_calculated": true,
+    "complete_equivalent_area_calculated": false,
+    "partial_equivalent_area_scope": "Regions 10 and 18 completed in memory; region 15 stopped in vector_masks before integration; region 04 was not reached.",
+    "partial_values_persisted_printed_summarized_or_observed": false,
     "replacement_tuning_or_ablation_permitted": false,
     "result_files_present": false,
     "source_replay_complete": true,
-    "statement": "The projection-validity correction may run only after this v1.2 manifest is committed and independently audited; no result survived the stopped first attempt.",
+    "statement": "The projection-validity correction may run only after this v1.2 manifest is committed and independently audited; partial in-memory values from the stopped first attempt were never persisted or observed.",
     "validation_summary_inspected": false
   },
   "code_budget": {
@@ -15,7 +18,7 @@
     "source_and_test_lines": 471
   },
   "created_utc": "2026-08-31T14:55:43Z",
-  "amended_utc": "2026-08-31T15:46:27Z",
+  "amended_utc": "2026-08-31T15:49:58Z",
   "decision_bounds": {
     "all_four_windows_required_per_stratum": true,
     "both_strata_required_overall": true,
@@ -390,8 +393,8 @@
   "manifest_version": "1.2",
   "execution_attempt_and_geometry_correction": {
     "authorized_preoutput_commit": "8791633f4b18e7d67fd892f39d585f52007a360f",
-    "attempt_result": "stopped in frozen vector_masks before any output write because two projected geometries were invalid",
-    "result_or_partial_summary_inspected": false,
+    "attempt_result": "Regions 10 and 18 were calculated in memory; execution stopped in region 15 frozen vector_masks before integration there and before any output write because two projected geometries were invalid.",
+    "result_or_partial_summary_persisted_printed_or_inspected": false,
     "affected_rgi_ids": ["RGI2000-v7.0-G-15-13428", "RGI2000-v7.0-G-15-15260"],
     "correction": "Apply Shapely 2.1.2 / GEOS 3.13.1 make_valid linework only to a projected geometry that is invalid; preserve already-valid geometries byte-for-object in memory.",
     "selection_source_grid_estimator_or_decision_changed": false,
