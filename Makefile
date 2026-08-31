@@ -1,4 +1,4 @@
-.PHONY: all artifacts-denominator artifacts-event-audit artifacts-reanalysis check check-denominator check-event-audit check-reanalysis clean denominator notebook-denominator notebook-event-audit notebook-reanalysis reanalysis
+.PHONY: all area-convergence artifacts-area-convergence artifacts-denominator artifacts-event-audit artifacts-reanalysis check check-area-convergence check-denominator check-event-audit check-reanalysis clean denominator notebook-area-convergence notebook-denominator notebook-event-audit notebook-reanalysis reanalysis
 
 PYTHON_REANALYSIS ?= .venv/bin/python
 JUPYTER_REANALYSIS ?= $(dir $(PYTHON_REANALYSIS))jupyter
@@ -42,6 +42,18 @@ notebook-denominator:
 	PATH="$(dir $(PYTHON_REANALYSIS)):$$PATH" $(JUPYTER_REANALYSIS) execute --inplace --timeout 600 --kernel_name python3 notebooks/denominator_pilot.ipynb
 
 artifacts-denominator: denominator notebook-denominator check-denominator
+	latexmk -pdf -cd latex/main.tex
+
+area-convergence:
+	$(PYTHON_REANALYSIS) scripts/susceptible_area_convergence.py
+
+check-area-convergence:
+	$(PYTHON_REANALYSIS) -m unittest tests.test_susceptible_area_convergence -v
+
+notebook-area-convergence:
+	PATH="$(dir $(PYTHON_REANALYSIS)):$$PATH" $(JUPYTER_REANALYSIS) execute --inplace --timeout 600 --kernel_name python3 notebooks/susceptible_area_convergence.ipynb
+
+artifacts-area-convergence: area-convergence notebook-area-convergence check-area-convergence
 	latexmk -pdf -cd latex/main.tex
 
 clean:

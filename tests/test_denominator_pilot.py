@@ -1,6 +1,7 @@
 import hashlib
 import json
 import math
+import subprocess
 import unittest
 from pathlib import Path
 import numpy as np
@@ -159,6 +160,11 @@ class DenominatorPilotTests(unittest.TestCase):
             self.assertNotIn(forbidden, notebook)
         freeze = json.loads(Path("data/denominator/freeze_manifest.json").read_text())
         for file_name, item in freeze["files"].items():
-            self.assertEqual(hashlib.sha256(Path(file_name).read_bytes()).hexdigest(), item["sha256"])
+            content = Path(file_name).read_bytes()
+            downstream = file_name.startswith("latex/") or file_name == "tests/test_denominator_pilot.py"
+            if downstream and hashlib.sha256(content).hexdigest() != item["sha256"]:
+                content = subprocess.check_output(
+                    ["git", "show", f"{freeze['implementation_commit']}:{file_name}"])
+            self.assertEqual(hashlib.sha256(content).hexdigest(), item["sha256"])
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,15 @@
+region,key,sha256,selection_rank,selected
+02,susceptible-area-heldout-v1|02,de0f00939b8b4f18ca216800ae3130d720bb4cd2efa3da06704560135cd0f35f,12,no
+03,susceptible-area-heldout-v1|03,4f9877403640abdfb65c26cfc624360d7b63a38dbadea165a0e31b39ab4fc516,3,yes
+04,susceptible-area-heldout-v1|04,73ee9d1d5eecc4ea0cf63fe6fae52e0b8148ed6e5e463cb1e0da65d01e20bb47,7,no
+06,susceptible-area-heldout-v1|06,cb4cf243343e18258e43bf8e70f871aacd8bc287237e4854d052d523525ab113,11,no
+07,susceptible-area-heldout-v1|07,03782f80b6f6cd9ed4a178d314bcecc632d3227678596a37d4b061ea949dbe64,1,yes
+08,susceptible-area-heldout-v1|08,31300d0e5bfb7e98a8a1ea5fbb29e8eed74e1cb71a58df4f4aa3c2a5fef03fa0,2,yes
+09,susceptible-area-heldout-v1|09,aa966d03c2d1f57875d90d8aa6fad21e9e1f72222bc186f4d082e83a80f64db5,10,no
+10,susceptible-area-heldout-v1|10,5b16eb47c0f2b54bea77eabd0dea16b33b9bdd8a9783f0c5049511d56a08cf9e,4,no
+12,susceptible-area-heldout-v1|12,86c171ea94690571e01af2467eea98e8acdf54a5f4089d03b4d479015343951f,8,no
+14,susceptible-area-heldout-v1|14,a724c4a3f9cf086c93d020feddd6105744b120487c221a1a4c82f536eb59c1b8,9,no
+15,susceptible-area-heldout-v1|15,69d3cfbe87ae15f42742f7a7fbd17c3b1d7b446bc522bee3793df72d0556719f,6,no
+16,susceptible-area-heldout-v1|16,ea8a3d9332666f32e9800ed5cc34d4d5734f2d6b129fbad4ff2d06d6f59aa24c,13,no
+17,susceptible-area-heldout-v1|17,fcfeb3b6c1d57a5daecf2c8d2772771bf6de680272002ae985f57fbf226cd9b3,14,no
+18,susceptible-area-heldout-v1|18,639be755f4b9273620eb69e3d29225955514d050c7b77f3564f5086fe65c4f60,5,no
