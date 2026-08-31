@@ -1,0 +1,254 @@
+{
+  "status": "verified probability sample; no DEM or PZI values opened",
+  "public_anchor": {
+    "comment_id": 5482406481,
+    "body": "Frame freeze: 0ff1c327468b5fb874ef2f87b1d64107838418e5",
+    "created_at": "2026-08-31T18:03:26Z",
+    "updated_at": "2026-08-31T18:03:26Z",
+    "unique_frame_anchor_count": 1,
+    "frame_commit": "0ff1c327468b5fb874ef2f87b1d64107838418e5",
+    "remote_branch_head_at_recheck": "0e3019c28aea803926e0ac35aea1842f89651613",
+    "recheck_response_date_utc": "2026-08-31T19:04:31Z"
+  },
+  "registered_request": {
+    "target_unix_ms": 1788203006000,
+    "target_utc": "2026-08-31T19:03:26Z",
+    "url": "https://beacon.nist.gov/beacon/2.0/pulse/time/next/1788203005999",
+    "request_start_utc": "2026-08-31T19:04:43Z",
+    "request_complete_utc": "2026-08-31T19:04:44Z",
+    "response_date_utc": "2026-08-31T19:04:44Z"
+  },
+  "pulse": {
+    "uri": "https://beacon.nist.gov/beacon/2.0/chain/2/pulse/1921300",
+    "version": "2.0",
+    "cipher_suite": 0,
+    "period_ms": 60000,
+    "certificate_id": "528943a555f5f8ca54423be6dfb95925a35c7b552046420e7d7cd072058a14d6536ad3a8e9754b6582f164a90b0cd86a65d659f5426a2659a947595d1c816c8c",
+    "chain_index": 2,
+    "pulse_index": 1921300,
+    "timestamp": "2026-08-31T19:04:00.000Z",
+    "status_code": 0,
+    "output_value": "EBC85C439A72062C703BC1DDFA8F7F55E7CD0E975962242FFBE4958252FCDF67B9723522464079C1F8A91C2C5596BF8A96EF0EF3652692A8E3FD493601F59488"
+  },
+  "previous_pulse": {
+    "uri": "https://beacon.nist.gov/beacon/2.0/chain/2/pulse/1921299",
+    "chain_index": 2,
+    "pulse_index": 1921299,
+    "timestamp": "2026-08-31T19:03:00.000Z",
+    "status_code": 0,
+    "output_value": "EBE3439BE1109FFB4BBA124F7384184EDABDC52ACBF18F189213029DE5AF6464C5A5118FAEF97E84FC080C23D52E0E52DF5ED6F683D2E6317439AB869CF5C362"
+  },
+  "verification": {
+    "dependent_retrieval_utc": "2026-08-31T19:04:57Z",
+    "chain_verification_utc": "2026-08-31T19:05:22Z",
+    "certificate_sha512_matches_id": true,
+    "certificate_valid_at_pulse": true,
+    "trust_chain_result": "certificate.pem: OK",
+    "current_signature_result": "Verified OK",
+    "previous_signature_result": "Verified OK",
+    "current_output_recomputed": true,
+    "previous_output_recomputed": true,
+    "previous_link_matches": true,
+    "precommitment_matches": true,
+    "index_step": 1,
+    "timestamp_step_ms": 60000,
+    "current_draft8_result": "Verification Failure",
+    "previous_draft8_result": "Verification Failure"
+  },
+  "selection": {
+    "selection_complete_utc": "2026-08-31T19:05:36Z",
+    "population_cells": 1826,
+    "sample_cells": 96,
+    "unique_cell_keys": 1826,
+    "unique_random_digests": 1826,
+    "selected_by_region": {
+      "01": 5,
+      "02": 5,
+      "03": 7,
+      "04": 4,
+      "05": 12,
+      "06": 4,
+      "07": 4,
+      "08": 4,
+      "09": 4,
+      "10": 6,
+      "11": 4,
+      "12": 4,
+      "13": 9,
+      "14": 4,
+      "15": 4,
+      "16": 4,
+      "17": 4,
+      "18": 4,
+      "19": 4
+    },
+    "frame.csv": {
+      "bytes": 188594,
+      "sha256": "482c9d585777317ab69363481db3df1011e2d4e8ce84c3826b151406cace9879"
+    },
+    "randomized_frame.csv": {
+      "bytes": 413812,
+      "sha256": "14db0fffd4d46c52b5cea7cba29c783d958aa94fefca8dd67e210df1a8134022"
+    },
+    "sample.csv": {
+      "bytes": 21944,
+      "sha256": "1e9164813893e285aeeeaa1a7833e16c87172cbe4d3357e245854ab13966613b"
+    }
+  },
+  "beacon_artifacts": {
+    "frame_freeze_comment_recheck.headers": {
+      "bytes": 1274,
+      "sha256": "93cb62c395c27541f4a90839dc6bd7a57145adacf189b4b761462f5f35c07c1e"
+    },
+    "frame_freeze_comment_recheck.json": {
+      "bytes": 2025,
+      "sha256": "4edb108ca27030882d279505f8cb6a1eefd31e9be843d1607cf8dee2ee494528"
+    },
+    "issue17_comments_recheck.headers": {
+      "bytes": 1278,
+      "sha256": "90f2299be576227dac2e58ba05dc55803efaf9229de858be0808a6bf61bdb761"
+    },
+    "issue17_comments_recheck.json": {
+      "bytes": 10213,
+      "sha256": "ad4cdbb0038c5f3d89493e7a8db9cdb2fea1b475de7c397472a97c3cc104671b"
+    },
+    "pulse.headers": {
+      "bytes": 924,
+      "sha256": "ef4925b84e660ae0425e46625f3dcfdd9e51da95679dfe6d53095b07653db13e"
+    },
+    "pulse.json": {
+      "bytes": 3633,
+      "sha256": "1e160ddf2bf6604d675563c484ca87f94c85eee308a6bc4ae3188a1a6774103f"
+    },
+    "previous_pulse.headers": {
+      "bytes": 924,
+      "sha256": "19062e2e3d219f7baee4b826f22ba2123b198a59efe4172dfc523526dd50a10d"
+    },
+    "previous_pulse.json": {
+      "bytes": 3633,
+      "sha256": "d7fdec432b4cc4b6bf48bf0c6fd685a8d0e8729093155805fcaba60e455eb226"
+    },
+    "certificate.headers": {
+      "bytes": 808,
+      "sha256": "a4174b5355ab2e696eedbaf1c87c6805038090e2ab2af72072ecf1d93a56ffe8"
+    },
+    "certificate.pem": {
+      "bytes": 2892,
+      "sha256": "acd33ba715a14c1d2c1601983c38cb7e671de151c3536fdf25097f28f9533229"
+    },
+    "issuer_certificate.headers": {
+      "bytes": 266,
+      "sha256": "f87f3445e0370dc8c4fed9714733b3dfe76b131d5119d314a678f9e06a8b98b0"
+    },
+    "issuer_certificate.crt": {
+      "bytes": 1228,
+      "sha256": "c8025f9fc65fdfc95b3ca8cc7867b9a587b5277973957917463fc813d0b625a9"
+    },
+    "verification/certificate.der": {
+      "bytes": 2064,
+      "sha256": "67e1c70f0654421f589f3c908480f6edbadc3521e2798b2b4718dfb4f3c77288"
+    },
+    "verification/issuer_certificate.pem": {
+      "bytes": 1720,
+      "sha256": "6601f41fceefbe7523a6a2e746938de57fc24e99426b7bea58d1867dbee1be5e"
+    },
+    "verification/public_key.pem": {
+      "bytes": 800,
+      "sha256": "6a659a4133ca7bd1b35d38aaaa4102d016ace506197fa77ab728d95631ee05ef"
+    },
+    "verification/current_signed_fields.bin": {
+      "bytes": 807,
+      "sha256": "a2aeae1aa21c7fbe7e68fd528c99f80684239a3ce520a3715cbcc9df182eaf16"
+    },
+    "verification/current_signature.bin": {
+      "bytes": 512,
+      "sha256": "ac21ca238390acca7c75298dfbf65d1c756c6c895c30b16cc2885980e0f399e8"
+    },
+    "verification/current_draft8_signed_fields.bin": {
+      "bytes": 863,
+      "sha256": "a9a51a0696361d740f3c32d17db284aeca2c40250f37afe19fb55644ad111a86"
+    },
+    "verification/previous_signed_fields.bin": {
+      "bytes": 807,
+      "sha256": "7411e468d9e585d22407be918e187ce3aed855bb7afe247bd625c3198c9b4aa8"
+    },
+    "verification/previous_signature.bin": {
+      "bytes": 512,
+      "sha256": "10cda2e24c2c0a3966e672c9670dfff4bd67f99b554bc17cb18fb308c83681a9"
+    },
+    "verification/previous_draft8_signed_fields.bin": {
+      "bytes": 863,
+      "sha256": "25f3a1444f83bd4aaa87f9c7a760e537daf932a17ed63bd3151cb2bb38dffa06"
+    },
+    "verification/serialization_checks.json": {
+      "bytes": 1498,
+      "sha256": "ae74189584d3e34f15bbbebb341de35dba7fa6d78df356335f60350b0ce7cd0b"
+    },
+    "VERIFICATION.md": {
+      "bytes": 3584,
+      "sha256": "55b4779b2ac938b040fcb8b23bc573560db710fea91174bbe430492df8d8a943"
+    },
+    "VERIFICATION_RESULTS.md": {
+      "bytes": 3249,
+      "sha256": "397398a665d60aca8bffe8161bd4ab1d90099968780c94144a4c9a76e0b0af19"
+    },
+    "verification/openssl_results.txt": {
+      "bytes": 1046,
+      "sha256": "2033cbf6725d6192bea2410b2a02339086751248f45113fae22e407d49bd7c0f"
+    },
+    "beacon-2.0.xsd": {
+      "bytes": 19033,
+      "sha256": "24c5b5b6508c0c33db2cda1902ea7f3b2009224895ba4e3fe275b7f4511675d6"
+    },
+    "NIST.IR.8213-draft.pdf": {
+      "bytes": 762001,
+      "sha256": "6fee39f6cd82d6c1ab219e29bdec77cbf3e07075324ac3202661d7578ee8f183"
+    }
+  },
+  "implementation": {
+    "scripts/geographic_sample.py": {
+      "bytes": 14291,
+      "sha256": "21bb6d250f67aa55c42f8efabe3302a2a0a045c950f1455805e2e0ba2cb4faaa"
+    },
+    "scripts/geographic_select.py": {
+      "bytes": 2512,
+      "sha256": "0483898f26980418bfefa6e319ce3e58d524d99ec400e38e4f305b34c46af458"
+    },
+    "tests/test_geographic_sample.py": {
+      "bytes": 7226,
+      "sha256": "bc9e65b800466ab19749d493687dd2265884a44e8f57f1e201f50c2d98601a44"
+    },
+    "tests/test_geographic_select.py": {
+      "bytes": 1726,
+      "sha256": "60ab282ebcdd3b2b2c12d4f6b1d414d88ccea5ddb746ccc1f1ae8e7de84815fb"
+    }
+  },
+  "handwritten_source_test_lines": 494,
+  "scientific_outputs": {
+    "notebooks/geographic_probability_sample.ipynb": {
+      "bytes": 50928,
+      "sha256": "265cb45e9a458b12a708107e87a4365044dbd36b43f56ddaf56a8ba8aefc9a67"
+    },
+    "figures/geographic_probability_sample.png": {
+      "bytes": 173252,
+      "sha256": "456eb6c81b8974fc29ac57621ac7ccbb3f15e47d8cb3b02b245ce097f329e414"
+    },
+    "figures/geographic_probability_sample.pdf": {
+      "bytes": 41329,
+      "sha256": "c8577fd70eed7cba65f4afbc228af2971781314e430d7acb2f5f45555029cb5d"
+    },
+    "latex/main.tex": {
+      "bytes": 60597,
+      "sha256": "7d231078eb969da14fbbc6d2b8b705ce1f00c9499b848f69b8ec7e2bb4b3f254"
+    },
+    "latex/main.pdf": {
+      "bytes": 662922,
+      "sha256": "9d6b267d4f5018f75c1ba2696910914bbf97e4da04cb39cb639da043c12ed44c"
+    },
+    "notebook_code_lines": 49
+  },
+  "environment": {
+    "python": "3.12.11",
+    "openssl": "OpenSSL 1.1.1k  FIPS 25 Mar 2021"
+  }
+}

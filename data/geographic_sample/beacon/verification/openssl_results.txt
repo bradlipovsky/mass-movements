@@ -1,0 +1,32 @@
+OpenSSL 1.1.1k  FIPS 25 Mar 2021
+Verification run: 2026-08-31T19:05:22Z
+
+current_xsd4
+command: openssl dgst -sha512 -verify public_key.pem -signature current_signature.bin current_signed_fields.bin
+exit_code: 0
+stdout: Verified OK
+stderr:
+
+previous_xsd4
+command: openssl dgst -sha512 -verify public_key.pem -signature previous_signature.bin previous_signed_fields.bin
+exit_code: 0
+stdout: Verified OK
+stderr:
+
+current_draft8_negative_control
+command: openssl dgst -sha512 -verify public_key.pem -signature current_signature.bin current_draft8_signed_fields.bin
+exit_code: 1
+stdout: Verification Failure
+stderr:
+
+previous_draft8_negative_control
+command: openssl dgst -sha512 -verify public_key.pem -signature previous_signature.bin previous_draft8_signed_fields.bin
+exit_code: 1
+stdout: Verification Failure
+stderr:
+
+certificate_chain_at_pulse
+command: openssl verify -attime 1788203040 -purpose any -CAfile /etc/pki/tls/certs/ca-bundle.crt -untrusted issuer_certificate.pem ../certificate.pem
+exit_code: 0
+stdout: ../certificate.pem: OK
+stderr:

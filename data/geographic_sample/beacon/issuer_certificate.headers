@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Content-Type: application/pkix-cert
+Content-Length: 1228
+Last-Modified: Wed, 31 Mar 2021 23:53:48 GMT
+ETag: "60650b8c-4cc"
+Accept-Ranges: bytes
+Cache-Control: public, max-age=1663
+Date: Mon, 31 Aug 2026 19:05:22 GMT
+Connection: keep-alive
+

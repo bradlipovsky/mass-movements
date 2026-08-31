@@ -1,0 +1,2310 @@
+{
+  "rgi_version": "7.0",
+  "doi": "10.5067/F6JMOVY5NAVZ",
+  "archives": [
+    {
+      "region": "01",
+      "url": "https://cluster.klima.uni-bremen.de/~fmaussion/misc/rgi7_data/rgi70_official/RGI2000-v7.0-G-global/RGI2000-v7.0-G-01_alaska.zip",
+      "filename": "RGI2000-v7.0-G-01_alaska.zip",
+      "bytes": 82915936,
+      "sha256": "f2a1c54edea1168a89957a4297b8fad5a80cad05797fadd8426ce45128727b9a",
+      "response_headers_path": "data/geographic_sample/source/rgi_01.headers",
+      "response_headers_sha256": "74a8ce18e0be84a1d7fffd4ac4bb36b213c9d905303d501a6473c4c88edc132a",
+      "members": [
+        {
+          "name": "README.md",
+          "bytes": 353,
+          "compressed_bytes": 234,
+          "compression": 8,
+          "modified": "2023-08-18T10:59:54",
+          "crc32": "2f7d1fcb",
+          "sha256": "6d965b06de1d3244c5e650aa88b2f91371a125186880fa45363caa124460ee55"
+        },
+        {
+          "name": "RGI2000-v7.0-G-01_alaska-attributes.csv",
+          "bytes": 7511165,
+          "compressed_bytes": 2523436,
+          "compression": 8,
+          "modified": "2023-08-18T10:59:54",
+          "crc32": "72d5eae0",
+          "sha256": "ba283a4d242a9050c44b5b27e15fd156581b593d500693efcd60f429aa8398d3"
+        },
+        {
+          "name": "RGI2000-v7.0-G-01_alaska-attributes_metadata.json",
+          "bytes": 7225,
+          "compressed_bytes": 1501,
+          "compression": 8,
+          "modified": "2023-08-18T10:59:54",
+          "crc32": "dba82a82",
+          "sha256": "fd23a32abb4059afbcd3c6048393a3f7ce6c533608379c29303acc884d799d39"
+        },
+        {
+          "name": "RGI2000-v7.0-G-01_alaska-hypsometry.csv",
+          "bytes": 8432968,
+          "compressed_bytes": 926381,
+          "compression": 8,
+          "modified": "2023-06-12T10:05:54",
+          "crc32": "b3b654aa",
+          "sha256": "8a3e4e515b34efbff6b7a59b054a1fc4d9601c902dcef111d11f519a50397b34"
+        },
+        {
+          "name": "RGI2000-v7.0-G-01_alaska-rgi6_links.csv",
+          "bytes": 7830,
+          "compressed_bytes": 2819,
+          "compression": 8,
+          "modified": "2023-06-09T18:02:08",
+          "crc32": "e5829543",
+          "sha256": "9159cdd06f1700446e1e86deb107dd8e55f7b823266d997bad43430dd48a5d3a"
+        },
+        {
+          "name": "RGI2000-v7.0-G-01_alaska-submission_info.csv",
+          "bytes": 2223,
+          "compressed_bytes": 955,
+          "compression": 8,
+          "modified": "2023-06-09T18:02:08",
+          "crc32": "a92e1188",
+          "sha256": "1a845718c450c62a311a8a8e1311a3c3747e3714daef85b9bc5f0ddc66316d31"
+        },
+        {
+          "name": "RGI2000-v7.0-G-01_alaska-submission_info_metadata.json",
+          "bytes": 2266,
+          "compressed_bytes": 536,
+          "compression": 8,
+          "modified": "2023-06-09T18:02:08",
+          "crc32": "525b4563",
+          "sha256": "a5c7ba4727685cdfc56d63e227776c889bb70f98395996aff3629032919c5d8c"
+        },
+        {
+          "name": "RGI2000-v7.0-G-01_alaska.cpg",
+          "bytes": 10,
+          "compressed_bytes": 12,
+          "compression": 8,
+          "modified": "2023-08-18T10:59:18",
+          "crc32": "70ee4b6c",
+          "sha256": "09fc313075748ce8ead962229ed89c919d5a9ff71974ee725a0b48bb87d975a2"
+        },
+        {
+          "name": "RGI2000-v7.0-G-01_alaska.dbf",
+          "bytes": 27647475,
+          "compressed_bytes": 3538366,
+          "compression": 8,
+          "modified": "2023-08-18T10:59:54",
+          "crc32": "6d09d272",
+          "sha256": "16eb0f937c050991a840728795029a2c059fcbb5692854e88ac009eb579bfa3e"
+        },
+        {
+          "name": "RGI2000-v7.0-G-01_alaska.prj",
+          "bytes": 145,
+          "compressed_bytes": 121,
+          "compression": 8,
+          "modified": "2023-08-18T10:59:18",
+          "crc32": "af437f55",
+          "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4"
+        },
+        {
+          "name": "RGI2000-v7.0-G-01_alaska.shp",
+          "bytes": 161853548,
+          "compressed_bytes": 73352191,
+          "compression": 8,
+          "modified": "2023-08-18T10:59:54",
+          "crc32": "575a3353",
+          "sha256": "505c1cfbaf9858ed30ff704276d0055d7e43f9c42c17cf2ac83ac0df8166d8dc"
+        },
+        {
+          "name": "RGI2000-v7.0-G-01_alaska.shx",
+          "bytes": 220172,
+          "compressed_bytes": 144050,
+          "compression": 8,
+          "modified": "2023-08-18T10:59:54",
+          "crc32": "9c2d9147",
+          "sha256": "768a68ce5af0072133b3da7d7c68a1cd7b5330e63e907ef468bb397361c704f1"
+        }
+      ]
+    },
+    {
+      "region": "02",
+      "url": "https://cluster.klima.uni-bremen.de/~fmaussion/misc/rgi7_data/rgi70_official/RGI2000-v7.0-G-global/RGI2000-v7.0-G-02_western_canada_usa.zip",
+      "filename": "RGI2000-v7.0-G-02_western_canada_usa.zip",
+      "bytes": 23632619,
+      "sha256": "d1c62974f4cef7b85e8b03f68828097f1789f4b4b4296dcec159fd28274d4d1f",
+      "response_headers_path": "data/geographic_sample/source/rgi_02.headers",
+      "response_headers_sha256": "d8ed2e792d550524155f3364f7c4398a9bbfc396d89168eaa3e0f8e31f8ba41b",
+      "members": [
+        {
+          "name": "README.md",
+          "bytes": 353,
+          "compressed_bytes": 234,
+          "compression": 8,
+          "modified": "2023-08-18T11:01:08",
+          "crc32": "2f7d1fcb",
+          "sha256": "6d965b06de1d3244c5e650aa88b2f91371a125186880fa45363caa124460ee55"
+        },
+        {
+          "name": "RGI2000-v7.0-G-02_western_canada_usa-attributes.csv",
+          "bytes": 5121622,
+          "compressed_bytes": 1707052,
+          "compression": 8,
+          "modified": "2023-08-18T11:01:08",
+          "crc32": "cb2bc733",
+          "sha256": "23bb7ae55f663b0451077f7d047f3675809970ea5e0f6b6d894972406d3f75ef"
+        },
+        {
+          "name": "RGI2000-v7.0-G-02_western_canada_usa-attributes_metadata.json",
+          "bytes": 7225,
+          "compressed_bytes": 1501,
+          "compression": 8,
+          "modified": "2023-08-18T11:01:08",
+          "crc32": "dba82a82",
+          "sha256": "fd23a32abb4059afbcd3c6048393a3f7ce6c533608379c29303acc884d799d39"
+        },
+        {
+          "name": "RGI2000-v7.0-G-02_western_canada_usa-hypsometry.csv",
+          "bytes": 4283628,
+          "compressed_bytes": 558094,
+          "compression": 8,
+          "modified": "2023-06-12T10:06:30",
+          "crc32": "d05448ae",
+          "sha256": "d7df2817b319c8724953a5473ded25410538b1a33607f2457fde8f968805e826"
+        },
+        {
+          "name": "RGI2000-v7.0-G-02_western_canada_usa-rgi6_links.csv",
+          "bytes": 227,
+          "compressed_bytes": 145,
+          "compression": 8,
+          "modified": "2023-06-09T18:07:02",
+          "crc32": "6709ec31",
+          "sha256": "797162c99e12e5f0bbc4013999301848af6c652133a516d89a20a9d6b359886b"
+        },
+        {
+          "name": "RGI2000-v7.0-G-02_western_canada_usa-submission_info.csv",
+          "bytes": 2311,
+          "compressed_bytes": 916,
+          "compression": 8,
+          "modified": "2023-06-09T18:07:02",
+          "crc32": "f6bc92ce",
+          "sha256": "a115a52964970cb1f16dd76ae6e27226d69f66eefd882022492a7f519516b1e2"
+        },
+        {
+          "name": "RGI2000-v7.0-G-02_western_canada_usa-submission_info_metadata.json",
+          "bytes": 2266,
+          "compressed_bytes": 536,
+          "compression": 8,
+          "modified": "2023-06-09T18:07:02",
+          "crc32": "525b4563",
+          "sha256": "a5c7ba4727685cdfc56d63e227776c889bb70f98395996aff3629032919c5d8c"
+        },
+        {
+          "name": "RGI2000-v7.0-G-02_western_canada_usa.cpg",
+          "bytes": 10,
+          "compressed_bytes": 12,
+          "compression": 8,
+          "modified": "2023-08-18T11:00:50",
+          "crc32": "70ee4b6c",
+          "sha256": "09fc313075748ce8ead962229ed89c919d5a9ff71974ee725a0b48bb87d975a2"
+        },
+        {
+          "name": "RGI2000-v7.0-G-02_western_canada_usa.dbf",
+          "bytes": 18824580,
+          "compressed_bytes": 2400434,
+          "compression": 8,
+          "modified": "2023-08-18T11:01:08",
+          "crc32": "9269259a",
+          "sha256": "6b3e70187483e091c41b2b3fe206b2c6aadb9f3205e9af429da2210aeca2f88d"
+        },
+        {
+          "name": "RGI2000-v7.0-G-02_western_canada_usa.prj",
+          "bytes": 145,
+          "compressed_bytes": 121,
+          "compression": 8,
+          "modified": "2023-08-18T11:00:50",
+          "crc32": "af437f55",
+          "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4"
+        },
+        {
+          "name": "RGI2000-v7.0-G-02_western_canada_usa.shp",
+          "bytes": 42699268,
+          "compressed_bytes": 18866189,
+          "compression": 8,
+          "modified": "2023-08-18T11:01:08",
+          "crc32": "6018112d",
+          "sha256": "0969ca754fb210e339cac5762322994e699fe530529fbc340896445b47b679aa"
+        },
+        {
+          "name": "RGI2000-v7.0-G-02_western_canada_usa.shx",
+          "bytes": 149940,
+          "compressed_bytes": 95361,
+          "compression": 8,
+          "modified": "2023-08-18T11:01:08",
+          "crc32": "e746b018",
+          "sha256": "4a1bf701ff502a4dc9e108718c7a84b5323cb119bfe7eb25413517f007d7e6fa"
+        }
+      ]
+    },
+    {
+      "region": "03",
+      "url": "https://cluster.klima.uni-bremen.de/~fmaussion/misc/rgi7_data/rgi70_official/RGI2000-v7.0-G-global/RGI2000-v7.0-G-03_arctic_canada_north.zip",
+      "filename": "RGI2000-v7.0-G-03_arctic_canada_north.zip",
+      "bytes": 15181890,
+      "sha256": "70cd68a3becf65ba67208c67c57ef4fd5e3643d5838f66cb8ea043528a249dcb",
+      "response_headers_path": "data/geographic_sample/source/rgi_03.headers",
+      "response_headers_sha256": "9a08b2d52455475b5eb675a754b4308a48c807dadbc7ae43e4d6cd76e6d77d9c",
+      "members": [
+        {
+          "name": "README.md",
+          "bytes": 353,
+          "compressed_bytes": 234,
+          "compression": 8,
+          "modified": "2023-08-18T11:01:44",
+          "crc32": "2f7d1fcb",
+          "sha256": "6d965b06de1d3244c5e650aa88b2f91371a125186880fa45363caa124460ee55"
+        },
+        {
+          "name": "RGI2000-v7.0-G-03_arctic_canada_north-attributes.csv",
+          "bytes": 1413945,
+          "compressed_bytes": 494533,
+          "compression": 8,
+          "modified": "2023-08-18T11:01:44",
+          "crc32": "196efcc5",
+          "sha256": "ad42b16b09f4db0d3cd2911391634e68aaaf5b70bef55b5e4226e5fb38ed74a7"
+        },
+        {
+          "name": "RGI2000-v7.0-G-03_arctic_canada_north-attributes_metadata.json",
+          "bytes": 7225,
+          "compressed_bytes": 1501,
+          "compression": 8,
+          "modified": "2023-08-18T11:01:44",
+          "crc32": "dba82a82",
+          "sha256": "fd23a32abb4059afbcd3c6048393a3f7ce6c533608379c29303acc884d799d39"
+        },
+        {
+          "name": "RGI2000-v7.0-G-03_arctic_canada_north-hypsometry.csv",
+          "bytes": 850987,
+          "compressed_bytes": 171455,
+          "compression": 8,
+          "modified": "2023-06-12T10:06:46",
+          "crc32": "8dfd0889",
+          "sha256": "f9fd1c1eaa616b22b5239a2f28fe70567ffd390cc3bbda0f249db11d82e8ed68"
+        },
+        {
+          "name": "RGI2000-v7.0-G-03_arctic_canada_north-rgi6_links.csv",
+          "bytes": 9444,
+          "compressed_bytes": 3531,
+          "compression": 8,
+          "modified": "2023-06-09T18:10:28",
+          "crc32": "88d86594",
+          "sha256": "93771521b664b6c7c7a09b6b4831dad660bb6ede0a0c4a5adedb78e13b1e046c"
+        },
+        {
+          "name": "RGI2000-v7.0-G-03_arctic_canada_north-submission_info.csv",
+          "bytes": 1751,
+          "compressed_bytes": 871,
+          "compression": 8,
+          "modified": "2023-06-09T18:10:28",
+          "crc32": "c35f1bdc",
+          "sha256": "6993b7394bcc73fa927de67459b7095cea1e925d9effd9b5334d2a947b3301ef"
+        },
+        {
+          "name": "RGI2000-v7.0-G-03_arctic_canada_north-submission_info_metadata.json",
+          "bytes": 2266,
+          "compressed_bytes": 536,
+          "compression": 8,
+          "modified": "2023-06-09T18:10:28",
+          "crc32": "525b4563",
+          "sha256": "a5c7ba4727685cdfc56d63e227776c889bb70f98395996aff3629032919c5d8c"
+        },
+        {
+          "name": "RGI2000-v7.0-G-03_arctic_canada_north.cpg",
+          "bytes": 10,
+          "compressed_bytes": 12,
+          "compression": 8,
+          "modified": "2023-08-18T11:01:36",
+          "crc32": "70ee4b6c",
+          "sha256": "09fc313075748ce8ead962229ed89c919d5a9ff71974ee725a0b48bb87d975a2"
+        },
+        {
+          "name": "RGI2000-v7.0-G-03_arctic_canada_north.dbf",
+          "bytes": 5243010,
+          "compressed_bytes": 691169,
+          "compression": 8,
+          "modified": "2023-08-18T11:01:44",
+          "crc32": "1aadfa48",
+          "sha256": "d64642f89896c3756904058fbb884cee2fad7144e4f2423c3ef0f0c76c40f190"
+        },
+        {
+          "name": "RGI2000-v7.0-G-03_arctic_canada_north.prj",
+          "bytes": 145,
+          "compressed_bytes": 121,
+          "compression": 8,
+          "modified": "2023-08-18T11:01:36",
+          "crc32": "af437f55",
+          "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4"
+        },
+        {
+          "name": "RGI2000-v7.0-G-03_arctic_canada_north.shp",
+          "bytes": 30126016,
+          "compressed_bytes": 13787972,
+          "compression": 8,
+          "modified": "2023-08-18T11:01:44",
+          "crc32": "57296576",
+          "sha256": "59285a9d2a44d36bb44c65fc3609525d0cf3bcc3130858c48e548fcddbb13694"
+        },
+        {
+          "name": "RGI2000-v7.0-G-03_arctic_canada_north.shx",
+          "bytes": 41828,
+          "compressed_bytes": 27909,
+          "compression": 8,
+          "modified": "2023-08-18T11:01:44",
+          "crc32": "20ae0a14",
+          "sha256": "25c10b5f8933bc2bf5f46be5a70beaf6d47bf01198c0ff2d77864ca4bf220f00"
+        }
+      ]
+    },
+    {
+      "region": "04",
+      "url": "https://cluster.klima.uni-bremen.de/~fmaussion/misc/rgi7_data/rgi70_official/RGI2000-v7.0-G-global/RGI2000-v7.0-G-04_arctic_canada_south.zip",
+      "filename": "RGI2000-v7.0-G-04_arctic_canada_south.zip",
+      "bytes": 23648511,
+      "sha256": "9f5e5acabaf2a0a9fdf6d339d7f432791484a7848b92cdbbe89a04b915c26845",
+      "response_headers_path": "data/geographic_sample/source/rgi_04.headers",
+      "response_headers_sha256": "40b6dca54dd01ebe86d133fdc8dba634ecf449a7c8dfbf2c346a83a3d997a7a5",
+      "members": [
+        {
+          "name": "README.md",
+          "bytes": 353,
+          "compressed_bytes": 234,
+          "compression": 8,
+          "modified": "2023-08-18T11:02:22",
+          "crc32": "2f7d1fcb",
+          "sha256": "6d965b06de1d3244c5e650aa88b2f91371a125186880fa45363caa124460ee55"
+        },
+        {
+          "name": "RGI2000-v7.0-G-04_arctic_canada_south-attributes.csv",
+          "bytes": 3007618,
+          "compressed_bytes": 1011085,
+          "compression": 8,
+          "modified": "2023-08-18T11:02:22",
+          "crc32": "f3350970",
+          "sha256": "d2737e90014461d8a6664abf28a939fd27a417ccd65da99429012cc91152e009"
+        },
+        {
+          "name": "RGI2000-v7.0-G-04_arctic_canada_south-attributes_metadata.json",
+          "bytes": 7225,
+          "compressed_bytes": 1501,
+          "compression": 8,
+          "modified": "2023-08-18T11:02:22",
+          "crc32": "dba82a82",
+          "sha256": "fd23a32abb4059afbcd3c6048393a3f7ce6c533608379c29303acc884d799d39"
+        },
+        {
+          "name": "RGI2000-v7.0-G-04_arctic_canada_south-hypsometry.csv",
+          "bytes": 1604317,
+          "compressed_bytes": 306520,
+          "compression": 8,
+          "modified": "2023-06-12T10:07:08",
+          "crc32": "f5bc620e",
+          "sha256": "ed0609a9c99652b61488852fe21d7eb58f321a778516b8d7e56fff31ce7dd744"
+        },
+        {
+          "name": "RGI2000-v7.0-G-04_arctic_canada_south-rgi6_links.csv",
+          "bytes": 3108,
+          "compressed_bytes": 1240,
+          "compression": 8,
+          "modified": "2023-06-09T18:13:52",
+          "crc32": "24cfe2f1",
+          "sha256": "b01e250e29e60a099a9df8620262bcb000aa92dca149ed3a16d285b4dd9c296f"
+        },
+        {
+          "name": "RGI2000-v7.0-G-04_arctic_canada_south-submission_info.csv",
+          "bytes": 965,
+          "compressed_bytes": 590,
+          "compression": 8,
+          "modified": "2023-06-09T18:13:52",
+          "crc32": "d99547ae",
+          "sha256": "f29684ebc95ed41cb14fa8f9dd78a2aea9fdbbbb56115b62a5c75c9f146064b4"
+        },
+        {
+          "name": "RGI2000-v7.0-G-04_arctic_canada_south-submission_info_metadata.json",
+          "bytes": 2266,
+          "compressed_bytes": 536,
+          "compression": 8,
+          "modified": "2023-06-09T18:13:52",
+          "crc32": "525b4563",
+          "sha256": "a5c7ba4727685cdfc56d63e227776c889bb70f98395996aff3629032919c5d8c"
+        },
+        {
+          "name": "RGI2000-v7.0-G-04_arctic_canada_south.cpg",
+          "bytes": 10,
+          "compressed_bytes": 12,
+          "compression": 8,
+          "modified": "2023-08-18T11:02:08",
+          "crc32": "70ee4b6c",
+          "sha256": "09fc313075748ce8ead962229ed89c919d5a9ff71974ee725a0b48bb87d975a2"
+        },
+        {
+          "name": "RGI2000-v7.0-G-04_arctic_canada_south.dbf",
+          "bytes": 11131029,
+          "compressed_bytes": 1413528,
+          "compression": 8,
+          "modified": "2023-08-18T11:02:22",
+          "crc32": "804ff692",
+          "sha256": "7f2884f519647672a4244e7738f16df945c55873caf49183e10f462b73d88341"
+        },
+        {
+          "name": "RGI2000-v7.0-G-04_arctic_canada_south.prj",
+          "bytes": 145,
+          "compressed_bytes": 121,
+          "compression": 8,
+          "modified": "2023-08-18T11:02:08",
+          "crc32": "af437f55",
+          "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4"
+        },
+        {
+          "name": "RGI2000-v7.0-G-04_arctic_canada_south.shp",
+          "bytes": 47165440,
+          "compressed_bytes": 20853768,
+          "compression": 8,
+          "modified": "2023-08-18T11:02:22",
+          "crc32": "cc562cf9",
+          "sha256": "380d9549d8e1a48c7806c4dee93b14599b82134c56394833a7b7d76e0fd056c4"
+        },
+        {
+          "name": "RGI2000-v7.0-G-04_arctic_canada_south.shx",
+          "bytes": 88172,
+          "compressed_bytes": 57330,
+          "compression": 8,
+          "modified": "2023-08-18T11:02:22",
+          "crc32": "e8a43cc3",
+          "sha256": "ef906477455a36ae919d7b5f9021d8f99555ce7bdd7dbd05755eb4bbe3160115"
+        }
+      ]
+    },
+    {
+      "region": "05",
+      "url": "https://cluster.klima.uni-bremen.de/~fmaussion/misc/rgi7_data/rgi70_official/RGI2000-v7.0-G-global/RGI2000-v7.0-G-05_greenland_periphery.zip",
+      "filename": "RGI2000-v7.0-G-05_greenland_periphery.zip",
+      "bytes": 69023862,
+      "sha256": "16f0a40b058d703f56e5ca85cc2835226c5dad63292299348feae2ad2ad86613",
+      "response_headers_path": "data/geographic_sample/source/rgi_05.headers",
+      "response_headers_sha256": "fe3f5cbcbd1b91a3a21bc2f7b6c6faf13c7b8807617c2856dd8e26863face93d",
+      "members": [
+        {
+          "name": "README.md",
+          "bytes": 353,
+          "compressed_bytes": 234,
+          "compression": 8,
+          "modified": "2023-08-18T11:03:28",
+          "crc32": "2f7d1fcb",
+          "sha256": "6d965b06de1d3244c5e650aa88b2f91371a125186880fa45363caa124460ee55"
+        },
+        {
+          "name": "RGI2000-v7.0-G-05_greenland_periphery-attributes.csv",
+          "bytes": 5428525,
+          "compressed_bytes": 1859826,
+          "compression": 8,
+          "modified": "2023-08-18T11:03:28",
+          "crc32": "e82c5ce0",
+          "sha256": "8fc366d338eb03b07968fd15447f1808805c7b6e84f6e49eda1717cb716077ac"
+        },
+        {
+          "name": "RGI2000-v7.0-G-05_greenland_periphery-attributes_metadata.json",
+          "bytes": 7225,
+          "compressed_bytes": 1501,
+          "compression": 8,
+          "modified": "2023-08-18T11:03:28",
+          "crc32": "dba82a82",
+          "sha256": "fd23a32abb4059afbcd3c6048393a3f7ce6c533608379c29303acc884d799d39"
+        },
+        {
+          "name": "RGI2000-v7.0-G-05_greenland_periphery-hypsometry.csv",
+          "bytes": 3673542,
+          "compressed_bytes": 624962,
+          "compression": 8,
+          "modified": "2023-06-12T10:07:52",
+          "crc32": "7ddfb088",
+          "sha256": "10c58b183d6bf0fcf5a3110019e83484ff023dfe144cad1ea04523e947880e16"
+        },
+        {
+          "name": "RGI2000-v7.0-G-05_greenland_periphery-rgi6_links.csv",
+          "bytes": 5495,
+          "compressed_bytes": 1988,
+          "compression": 8,
+          "modified": "2023-06-09T18:23:38",
+          "crc32": "95ccb4bf",
+          "sha256": "b45d8435c758dca8e9d8ffcc6bdd8c0fd783c96bf5ba7d2da8ae2e8efc090d72"
+        },
+        {
+          "name": "RGI2000-v7.0-G-05_greenland_periphery-submission_info.csv",
+          "bytes": 1022,
+          "compressed_bytes": 602,
+          "compression": 8,
+          "modified": "2023-06-09T18:23:38",
+          "crc32": "375e014b",
+          "sha256": "9d4271a7896b62a6ea60ec7a0fba622689ba4e0ae9eba1aba8cbae7cfd808f60"
+        },
+        {
+          "name": "RGI2000-v7.0-G-05_greenland_periphery-submission_info_metadata.json",
+          "bytes": 2266,
+          "compressed_bytes": 536,
+          "compression": 8,
+          "modified": "2023-06-09T18:23:40",
+          "crc32": "525b4563",
+          "sha256": "a5c7ba4727685cdfc56d63e227776c889bb70f98395996aff3629032919c5d8c"
+        },
+        {
+          "name": "RGI2000-v7.0-G-05_greenland_periphery.cpg",
+          "bytes": 10,
+          "compressed_bytes": 12,
+          "compression": 8,
+          "modified": "2023-08-18T11:02:58",
+          "crc32": "70ee4b6c",
+          "sha256": "09fc313075748ce8ead962229ed89c919d5a9ff71974ee725a0b48bb87d975a2"
+        },
+        {
+          "name": "RGI2000-v7.0-G-05_greenland_periphery.dbf",
+          "bytes": 20094900,
+          "compressed_bytes": 2595292,
+          "compression": 8,
+          "modified": "2023-08-18T11:03:28",
+          "crc32": "3f09b0cd",
+          "sha256": "418d95a8b86e8875dd448dc21f141a8de182337601fed8f47524834df42c77eb"
+        },
+        {
+          "name": "RGI2000-v7.0-G-05_greenland_periphery.prj",
+          "bytes": 145,
+          "compressed_bytes": 121,
+          "compression": 8,
+          "modified": "2023-08-18T11:02:58",
+          "crc32": "af437f55",
+          "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4"
+        },
+        {
+          "name": "RGI2000-v7.0-G-05_greenland_periphery.shp",
+          "bytes": 142946540,
+          "compressed_bytes": 63826399,
+          "compression": 8,
+          "modified": "2023-08-18T11:03:28",
+          "crc32": "81129d9b",
+          "sha256": "e41fa0ad1eabb2ec24bdf24dd08df166ce272bea7f1af3b7ed8d89791dc85105"
+        },
+        {
+          "name": "RGI2000-v7.0-G-05_greenland_periphery.shx",
+          "bytes": 160052,
+          "compressed_bytes": 110343,
+          "compression": 8,
+          "modified": "2023-08-18T11:03:28",
+          "crc32": "2674cdc2",
+          "sha256": "e8a93a7983159c9a265d778b1fa3cfa78b8a76909d380415c361e8b350b953b0"
+        }
+      ]
+    },
+    {
+      "region": "06",
+      "url": "https://cluster.klima.uni-bremen.de/~fmaussion/misc/rgi7_data/rgi70_official/RGI2000-v7.0-G-global/RGI2000-v7.0-G-06_iceland.zip",
+      "filename": "RGI2000-v7.0-G-06_iceland.zip",
+      "bytes": 2309352,
+      "sha256": "60d69097dd2065d3ac5b935c90e3d4098617f12ca3b2fb4cea68d0c39d7ee30b",
+      "response_headers_path": "data/geographic_sample/source/rgi_06.headers",
+      "response_headers_sha256": "febe5a162fabdfce2b35df85d90279776e5c66d3a04186f51d03253b48d9bbd6",
+      "members": [
+        {
+          "name": "README.md",
+          "bytes": 353,
+          "compressed_bytes": 234,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:08",
+          "crc32": "2f7d1fcb",
+          "sha256": "6d965b06de1d3244c5e650aa88b2f91371a125186880fa45363caa124460ee55"
+        },
+        {
+          "name": "RGI2000-v7.0-G-06_iceland-attributes.csv",
+          "bytes": 154874,
+          "compressed_bytes": 54269,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:08",
+          "crc32": "8fd7bce3",
+          "sha256": "58caa26397e450fda9a0d053f9aa1bdaf97a5390b15b8534ee5691e51461ea3d"
+        },
+        {
+          "name": "RGI2000-v7.0-G-06_iceland-attributes_metadata.json",
+          "bytes": 7225,
+          "compressed_bytes": 1501,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:08",
+          "crc32": "dba82a82",
+          "sha256": "fd23a32abb4059afbcd3c6048393a3f7ce6c533608379c29303acc884d799d39"
+        },
+        {
+          "name": "RGI2000-v7.0-G-06_iceland-hypsometry.csv",
+          "bytes": 80669,
+          "compressed_bytes": 17558,
+          "compression": 8,
+          "modified": "2023-06-12T10:08:06",
+          "crc32": "dc7f4dd8",
+          "sha256": "efa4ad6b4406115c77bcf6ea9a1dfa43710f9837e1c34a3d977364a926af121f"
+        },
+        {
+          "name": "RGI2000-v7.0-G-06_iceland-rgi6_links.csv",
+          "bytes": 1209,
+          "compressed_bytes": 468,
+          "compression": 8,
+          "modified": "2023-06-09T18:24:50",
+          "crc32": "1c940fbb",
+          "sha256": "7771a8b0dcdaded590999f181acd9d949828e7cc663781b31e8e8d7009a2d4ae"
+        },
+        {
+          "name": "RGI2000-v7.0-G-06_iceland-submission_info.csv",
+          "bytes": 1721,
+          "compressed_bytes": 630,
+          "compression": 8,
+          "modified": "2023-06-09T18:24:50",
+          "crc32": "b6562d1a",
+          "sha256": "beec99afc4a61a289ce386c6776b57e09da18cb492f2105504ee8f462bf7d046"
+        },
+        {
+          "name": "RGI2000-v7.0-G-06_iceland-submission_info_metadata.json",
+          "bytes": 2266,
+          "compressed_bytes": 536,
+          "compression": 8,
+          "modified": "2023-06-09T18:24:50",
+          "crc32": "525b4563",
+          "sha256": "a5c7ba4727685cdfc56d63e227776c889bb70f98395996aff3629032919c5d8c"
+        },
+        {
+          "name": "RGI2000-v7.0-G-06_iceland.cpg",
+          "bytes": 10,
+          "compressed_bytes": 12,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:08",
+          "crc32": "70ee4b6c",
+          "sha256": "09fc313075748ce8ead962229ed89c919d5a9ff71974ee725a0b48bb87d975a2"
+        },
+        {
+          "name": "RGI2000-v7.0-G-06_iceland.dbf",
+          "bytes": 571770,
+          "compressed_bytes": 75138,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:08",
+          "crc32": "80d1f8d8",
+          "sha256": "9f40238cf6f6e7b1a40b3eadfe988d291760918b3c299359a4c747c06aaa5d44"
+        },
+        {
+          "name": "RGI2000-v7.0-G-06_iceland.prj",
+          "bytes": 145,
+          "compressed_bytes": 121,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:08",
+          "crc32": "af437f55",
+          "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4"
+        },
+        {
+          "name": "RGI2000-v7.0-G-06_iceland.shp",
+          "bytes": 5013200,
+          "compressed_bytes": 2153814,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:08",
+          "crc32": "3c1975aa",
+          "sha256": "0f84dcc89e9e27ce6486d520ca4def7b549648be1b96dbc9cb7ed7c784f0711d"
+        },
+        {
+          "name": "RGI2000-v7.0-G-06_iceland.shx",
+          "bytes": 4644,
+          "compressed_bytes": 3289,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:08",
+          "crc32": "e201cefe",
+          "sha256": "608b44dde1d4f793246e1d21d834a58c331c33c7aff80f65ae1317a7818515e0"
+        }
+      ]
+    },
+    {
+      "region": "07",
+      "url": "https://cluster.klima.uni-bremen.de/~fmaussion/misc/rgi7_data/rgi70_official/RGI2000-v7.0-G-global/RGI2000-v7.0-G-07_svalbard_jan_mayen.zip",
+      "filename": "RGI2000-v7.0-G-07_svalbard_jan_mayen.zip",
+      "bytes": 6099044,
+      "sha256": "73fb46265b878802d6a58c1ce18d07b28675afa1d1730a1c48a441ed5bb277cf",
+      "response_headers_path": "data/geographic_sample/source/rgi_07.headers",
+      "response_headers_sha256": "a87e4c59837200f1ed51c874761de080dba2760aa368cb60602671cd2de58106",
+      "members": [
+        {
+          "name": "README.md",
+          "bytes": 353,
+          "compressed_bytes": 234,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:20",
+          "crc32": "2f7d1fcb",
+          "sha256": "6d965b06de1d3244c5e650aa88b2f91371a125186880fa45363caa124460ee55"
+        },
+        {
+          "name": "RGI2000-v7.0-G-07_svalbard_jan_mayen-attributes.csv",
+          "bytes": 463068,
+          "compressed_bytes": 167292,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:20",
+          "crc32": "ed5cefe2",
+          "sha256": "4edaecb9d3f0d32830829f90fa31557bddfb50a3c6a3d618b855894b23d8cf95"
+        },
+        {
+          "name": "RGI2000-v7.0-G-07_svalbard_jan_mayen-attributes_metadata.json",
+          "bytes": 7225,
+          "compressed_bytes": 1501,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:20",
+          "crc32": "dba82a82",
+          "sha256": "fd23a32abb4059afbcd3c6048393a3f7ce6c533608379c29303acc884d799d39"
+        },
+        {
+          "name": "RGI2000-v7.0-G-07_svalbard_jan_mayen-hypsometry.csv",
+          "bytes": 252808,
+          "compressed_bytes": 54132,
+          "compression": 8,
+          "modified": "2023-06-12T10:08:14",
+          "crc32": "ad80e9b3",
+          "sha256": "513842f50058eaf9cc75f8da7a2b22009de828d9c5f444877e186ba941c48c00"
+        },
+        {
+          "name": "RGI2000-v7.0-G-07_svalbard_jan_mayen-rgi6_links.csv",
+          "bytes": 4107,
+          "compressed_bytes": 1483,
+          "compression": 8,
+          "modified": "2023-06-09T18:25:42",
+          "crc32": "9b79b5da",
+          "sha256": "31759ecf71bd45bb1044d17afcb0026cb12b9e1580f74120e27593abc085c3a9"
+        },
+        {
+          "name": "RGI2000-v7.0-G-07_svalbard_jan_mayen-submission_info.csv",
+          "bytes": 677,
+          "compressed_bytes": 446,
+          "compression": 8,
+          "modified": "2023-06-09T18:25:42",
+          "crc32": "0cce6017",
+          "sha256": "949486317fe4bd455de4edeccfcc75c657cb796b1dc8f9408ec7e167a75915c5"
+        },
+        {
+          "name": "RGI2000-v7.0-G-07_svalbard_jan_mayen-submission_info_metadata.json",
+          "bytes": 2266,
+          "compressed_bytes": 536,
+          "compression": 8,
+          "modified": "2023-06-09T18:25:42",
+          "crc32": "525b4563",
+          "sha256": "a5c7ba4727685cdfc56d63e227776c889bb70f98395996aff3629032919c5d8c"
+        },
+        {
+          "name": "RGI2000-v7.0-G-07_svalbard_jan_mayen.cpg",
+          "bytes": 10,
+          "compressed_bytes": 12,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:16",
+          "crc32": "70ee4b6c",
+          "sha256": "09fc313075748ce8ead962229ed89c919d5a9ff71974ee725a0b48bb87d975a2"
+        },
+        {
+          "name": "RGI2000-v7.0-G-07_svalbard_jan_mayen.dbf",
+          "bytes": 1675260,
+          "compressed_bytes": 230739,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:20",
+          "crc32": "e5b359e1",
+          "sha256": "e06fd355eeff7a991e0bfc1a9a0308fbbb5bf99d62dc101c0a6883b9e9e2c0d4"
+        },
+        {
+          "name": "RGI2000-v7.0-G-07_svalbard_jan_mayen.prj",
+          "bytes": 145,
+          "compressed_bytes": 121,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:16",
+          "crc32": "af437f55",
+          "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4"
+        },
+        {
+          "name": "RGI2000-v7.0-G-07_svalbard_jan_mayen.shp",
+          "bytes": 11878436,
+          "compressed_bytes": 5631153,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:20",
+          "crc32": "7748ccbd",
+          "sha256": "11ab13c5107cacd6ce82893cdb962c26d1987ace15389ce92363992b37584fd9"
+        },
+        {
+          "name": "RGI2000-v7.0-G-07_svalbard_jan_mayen.shx",
+          "bytes": 13428,
+          "compressed_bytes": 9371,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:20",
+          "crc32": "ea9deca7",
+          "sha256": "0a67af3bae577d53be815b37236909421e24bb41127020f81a470da8d23d9777"
+        }
+      ]
+    },
+    {
+      "region": "08",
+      "url": "https://cluster.klima.uni-bremen.de/~fmaussion/misc/rgi7_data/rgi70_official/RGI2000-v7.0-G-global/RGI2000-v7.0-G-08_scandinavia.zip",
+      "filename": "RGI2000-v7.0-G-08_scandinavia.zip",
+      "bytes": 5138901,
+      "sha256": "54bdcdfb0771f58f66bbb95bb1585f16efe9ee10bdfcba022af802868d3d6b28",
+      "response_headers_path": "data/geographic_sample/source/rgi_08.headers",
+      "response_headers_sha256": "1eab09ab19b48a2779d543085252e5e1e3643b87c563aef1d631c4e40fe832ba",
+      "members": [
+        {
+          "name": "README.md",
+          "bytes": 353,
+          "compressed_bytes": 234,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:34",
+          "crc32": "2f7d1fcb",
+          "sha256": "6d965b06de1d3244c5e650aa88b2f91371a125186880fa45363caa124460ee55"
+        },
+        {
+          "name": "RGI2000-v7.0-G-08_scandinavia-attributes.csv",
+          "bytes": 918297,
+          "compressed_bytes": 316304,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:34",
+          "crc32": "dba107ee",
+          "sha256": "d331cfd2dd89d8bff4b477768a04bd11cef9c488d9b5905022a30fb7acd0014a"
+        },
+        {
+          "name": "RGI2000-v7.0-G-08_scandinavia-attributes_metadata.json",
+          "bytes": 7225,
+          "compressed_bytes": 1501,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:34",
+          "crc32": "dba82a82",
+          "sha256": "fd23a32abb4059afbcd3c6048393a3f7ce6c533608379c29303acc884d799d39"
+        },
+        {
+          "name": "RGI2000-v7.0-G-08_scandinavia-hypsometry.csv",
+          "bytes": 515453,
+          "compressed_bytes": 91935,
+          "compression": 8,
+          "modified": "2023-06-12T10:08:24",
+          "crc32": "3b55c570",
+          "sha256": "7f9cec7e55d57c976d9decac85ad36cb3401ebc451fbc5daf9af8c14bcfa4e72"
+        },
+        {
+          "name": "RGI2000-v7.0-G-08_scandinavia-rgi6_links.csv",
+          "bytes": 115,
+          "compressed_bytes": 67,
+          "compression": 8,
+          "modified": "2023-06-09T18:26:32",
+          "crc32": "c7c53bb5",
+          "sha256": "a16617b69bdff824f62e61818fcaadb76ba60914be46f3a5ad11bb6f5d76cae2"
+        },
+        {
+          "name": "RGI2000-v7.0-G-08_scandinavia-submission_info.csv",
+          "bytes": 810,
+          "compressed_bytes": 529,
+          "compression": 8,
+          "modified": "2023-06-09T18:26:32",
+          "crc32": "5d2a89fd",
+          "sha256": "ee5fc24f819cbd43f9be1d6ddbbc4e05661f80ab46e002b2ca52803b1d52cdce"
+        },
+        {
+          "name": "RGI2000-v7.0-G-08_scandinavia-submission_info_metadata.json",
+          "bytes": 2266,
+          "compressed_bytes": 536,
+          "compression": 8,
+          "modified": "2023-06-09T18:26:32",
+          "crc32": "525b4563",
+          "sha256": "a5c7ba4727685cdfc56d63e227776c889bb70f98395996aff3629032919c5d8c"
+        },
+        {
+          "name": "RGI2000-v7.0-G-08_scandinavia.cpg",
+          "bytes": 10,
+          "compressed_bytes": 12,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:30",
+          "crc32": "70ee4b6c",
+          "sha256": "09fc313075748ce8ead962229ed89c919d5a9ff71974ee725a0b48bb87d975a2"
+        },
+        {
+          "name": "RGI2000-v7.0-G-08_scandinavia.dbf",
+          "bytes": 3427980,
+          "compressed_bytes": 439775,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:34",
+          "crc32": "a459c536",
+          "sha256": "1ae80a926e111d558d7cfdb7e36dee8717492ac404cf22bae642a0436ceee42a"
+        },
+        {
+          "name": "RGI2000-v7.0-G-08_scandinavia.prj",
+          "bytes": 145,
+          "compressed_bytes": 121,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:30",
+          "crc32": "af437f55",
+          "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4"
+        },
+        {
+          "name": "RGI2000-v7.0-G-08_scandinavia.shp",
+          "bytes": 9373720,
+          "compressed_bytes": 4268637,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:34",
+          "crc32": "3811be9f",
+          "sha256": "8fc74612197b00da9479c19673c5bd7975dde7393f23406f29053a29cdd1ebde"
+        },
+        {
+          "name": "RGI2000-v7.0-G-08_scandinavia.shx",
+          "bytes": 27380,
+          "compressed_bytes": 17380,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:34",
+          "crc32": "a255bfb5",
+          "sha256": "d3a0c51f5f85f2344331f3b6d14af2168e5cb783f5ed24a3d6098073379fdf3f"
+        }
+      ]
+    },
+    {
+      "region": "09",
+      "url": "https://cluster.klima.uni-bremen.de/~fmaussion/misc/rgi7_data/rgi70_official/RGI2000-v7.0-G-global/RGI2000-v7.0-G-09_russian_arctic.zip",
+      "filename": "RGI2000-v7.0-G-09_russian_arctic.zip",
+      "bytes": 3753990,
+      "sha256": "adc548c157c8235c42c0a6d9c7767fe2e97ee2560b2fdce6201cc7194cb080d2",
+      "response_headers_path": "data/geographic_sample/source/rgi_09.headers",
+      "response_headers_sha256": "540c23801e6a10cba68d204b87d750ea72f4bba76ec14a97fcaf6ba50f4cfe2a",
+      "members": [
+        {
+          "name": "README.md",
+          "bytes": 353,
+          "compressed_bytes": 234,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:46",
+          "crc32": "2f7d1fcb",
+          "sha256": "6d965b06de1d3244c5e650aa88b2f91371a125186880fa45363caa124460ee55"
+        },
+        {
+          "name": "RGI2000-v7.0-G-09_russian_arctic-attributes.csv",
+          "bytes": 312055,
+          "compressed_bytes": 106915,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:46",
+          "crc32": "a05d54a1",
+          "sha256": "4cd303d8cbef979052519cebd77e50ce326bfd92702b1124bd0049c6a2c264ad"
+        },
+        {
+          "name": "RGI2000-v7.0-G-09_russian_arctic-attributes_metadata.json",
+          "bytes": 7225,
+          "compressed_bytes": 1501,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:46",
+          "crc32": "dba82a82",
+          "sha256": "fd23a32abb4059afbcd3c6048393a3f7ce6c533608379c29303acc884d799d39"
+        },
+        {
+          "name": "RGI2000-v7.0-G-09_russian_arctic-hypsometry.csv",
+          "bytes": 116861,
+          "compressed_bytes": 32626,
+          "compression": 8,
+          "modified": "2023-06-12T10:08:32",
+          "crc32": "b9c03d9a",
+          "sha256": "2279e0955e4994c8c57be286edf524f49345bc5a3e91eef50d4d1be65f8ecec1"
+        },
+        {
+          "name": "RGI2000-v7.0-G-09_russian_arctic-rgi6_links.csv",
+          "bytes": 8549,
+          "compressed_bytes": 2887,
+          "compression": 8,
+          "modified": "2023-06-09T18:27:10",
+          "crc32": "baf620b0",
+          "sha256": "203e106a312119ed1316213b4c2571d187b5325f227ab84b00b0c8c7b1fe724d"
+        },
+        {
+          "name": "RGI2000-v7.0-G-09_russian_arctic-submission_info.csv",
+          "bytes": 758,
+          "compressed_bytes": 461,
+          "compression": 8,
+          "modified": "2023-06-09T18:27:10",
+          "crc32": "887e9c41",
+          "sha256": "53ac224e83d93fe9b729d1594d259c416e86d2b25ccf19c5e49089ac20ef04de"
+        },
+        {
+          "name": "RGI2000-v7.0-G-09_russian_arctic-submission_info_metadata.json",
+          "bytes": 2266,
+          "compressed_bytes": 536,
+          "compression": 8,
+          "modified": "2023-06-09T18:27:10",
+          "crc32": "525b4563",
+          "sha256": "a5c7ba4727685cdfc56d63e227776c889bb70f98395996aff3629032919c5d8c"
+        },
+        {
+          "name": "RGI2000-v7.0-G-09_russian_arctic.cpg",
+          "bytes": 10,
+          "compressed_bytes": 12,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:44",
+          "crc32": "70ee4b6c",
+          "sha256": "09fc313075748ce8ead962229ed89c919d5a9ff71974ee725a0b48bb87d975a2"
+        },
+        {
+          "name": "RGI2000-v7.0-G-09_russian_arctic.dbf",
+          "bytes": 1075275,
+          "compressed_bytes": 145822,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:46",
+          "crc32": "2359e627",
+          "sha256": "4d3e6a4b91d78e5986a453b920628175ee79e0d902f9065880e949db2897d84f"
+        },
+        {
+          "name": "RGI2000-v7.0-G-09_russian_arctic.prj",
+          "bytes": 145,
+          "compressed_bytes": 121,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:44",
+          "crc32": "af437f55",
+          "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4"
+        },
+        {
+          "name": "RGI2000-v7.0-G-09_russian_arctic.shp",
+          "bytes": 8522868,
+          "compressed_bytes": 3454870,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:46",
+          "crc32": "5077c25c",
+          "sha256": "f4c8895053d4b45ba2527a7930403f6dd370d6fd51d867b0d13ae2d033a9c3ea"
+        },
+        {
+          "name": "RGI2000-v7.0-G-09_russian_arctic.shx",
+          "bytes": 8652,
+          "compressed_bytes": 6069,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:46",
+          "crc32": "0a6b1ffb",
+          "sha256": "7b950f3faafcc8e2bc11465a3e263fe0edda9b48374ce8e7e7abda9e3733092f"
+        }
+      ]
+    },
+    {
+      "region": "10",
+      "url": "https://cluster.klima.uni-bremen.de/~fmaussion/misc/rgi7_data/rgi70_official/RGI2000-v7.0-G-global/RGI2000-v7.0-G-10_north_asia.zip",
+      "filename": "RGI2000-v7.0-G-10_north_asia.zip",
+      "bytes": 8934600,
+      "sha256": "25f4f8655050dbf973f5ee2eec6050cc08bf7fdb7cf2c0dc27e8a939a2cb9d7a",
+      "response_headers_path": "data/geographic_sample/source/rgi_10.headers",
+      "response_headers_sha256": "29386bad1b147085b0bb16d4e6628e57927771dc4ad72cb80ba6b3f33571e823",
+      "members": [
+        {
+          "name": "README.md",
+          "bytes": 353,
+          "compressed_bytes": 234,
+          "compression": 8,
+          "modified": "2023-08-18T11:05:04",
+          "crc32": "2f7d1fcb",
+          "sha256": "6d965b06de1d3244c5e650aa88b2f91371a125186880fa45363caa124460ee55"
+        },
+        {
+          "name": "RGI2000-v7.0-G-10_north_asia-attributes.csv",
+          "bytes": 1931595,
+          "compressed_bytes": 653709,
+          "compression": 8,
+          "modified": "2023-08-18T11:05:04",
+          "crc32": "890b515d",
+          "sha256": "cc7d757fb21a1624baf83371dc1974c21ae08bfa8f8970722e981cd3b841a31c"
+        },
+        {
+          "name": "RGI2000-v7.0-G-10_north_asia-attributes_metadata.json",
+          "bytes": 7225,
+          "compressed_bytes": 1501,
+          "compression": 8,
+          "modified": "2023-08-18T11:05:04",
+          "crc32": "dba82a82",
+          "sha256": "fd23a32abb4059afbcd3c6048393a3f7ce6c533608379c29303acc884d799d39"
+        },
+        {
+          "name": "RGI2000-v7.0-G-10_north_asia-hypsometry.csv",
+          "bytes": 1666288,
+          "compressed_bytes": 196974,
+          "compression": 8,
+          "modified": "2023-06-12T10:08:46",
+          "crc32": "e2308e2b",
+          "sha256": "8cc5a3b4efe2eff8e3916655cc9aaf10adc4803ab10cbce5eb920b63b3cabdb1"
+        },
+        {
+          "name": "RGI2000-v7.0-G-10_north_asia-rgi6_links.csv",
+          "bytes": 115,
+          "compressed_bytes": 67,
+          "compression": 8,
+          "modified": "2023-06-09T18:28:20",
+          "crc32": "c7c53bb5",
+          "sha256": "a16617b69bdff824f62e61818fcaadb76ba60914be46f3a5ad11bb6f5d76cae2"
+        },
+        {
+          "name": "RGI2000-v7.0-G-10_north_asia-submission_info.csv",
+          "bytes": 1552,
+          "compressed_bytes": 801,
+          "compression": 8,
+          "modified": "2023-06-09T18:28:20",
+          "crc32": "1a0d6c01",
+          "sha256": "1e55aab7a089b2e5c0de05a3a5026e72c5b486cf9899fe0e6a89cd1c57b6197e"
+        },
+        {
+          "name": "RGI2000-v7.0-G-10_north_asia-submission_info_metadata.json",
+          "bytes": 2266,
+          "compressed_bytes": 536,
+          "compression": 8,
+          "modified": "2023-06-09T18:28:20",
+          "crc32": "525b4563",
+          "sha256": "a5c7ba4727685cdfc56d63e227776c889bb70f98395996aff3629032919c5d8c"
+        },
+        {
+          "name": "RGI2000-v7.0-G-10_north_asia.cpg",
+          "bytes": 10,
+          "compressed_bytes": 12,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:58",
+          "crc32": "70ee4b6c",
+          "sha256": "09fc313075748ce8ead962229ed89c919d5a9ff71974ee725a0b48bb87d975a2"
+        },
+        {
+          "name": "RGI2000-v7.0-G-10_north_asia.dbf",
+          "bytes": 7191705,
+          "compressed_bytes": 916478,
+          "compression": 8,
+          "modified": "2023-08-18T11:05:04",
+          "crc32": "eaea8dc8",
+          "sha256": "1a8ccc1fb1cbf0c9175834811686b71deb550731dc7ea55abd211a193946d502"
+        },
+        {
+          "name": "RGI2000-v7.0-G-10_north_asia.prj",
+          "bytes": 145,
+          "compressed_bytes": 121,
+          "compression": 8,
+          "modified": "2023-08-18T11:04:58",
+          "crc32": "af437f55",
+          "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4"
+        },
+        {
+          "name": "RGI2000-v7.0-G-10_north_asia.shp",
+          "bytes": 16405872,
+          "compressed_bytes": 7127214,
+          "compression": 8,
+          "modified": "2023-08-18T11:05:04",
+          "crc32": "21514605",
+          "sha256": "62d0752fde9828d1d4b6789029d72c8f29530d34e64f10eeee7546221922dc05"
+        },
+        {
+          "name": "RGI2000-v7.0-G-10_north_asia.shx",
+          "bytes": 57340,
+          "compressed_bytes": 35105,
+          "compression": 8,
+          "modified": "2023-08-18T11:05:04",
+          "crc32": "228a3464",
+          "sha256": "20f2cc414879615226d963934ced7bd008b47362bf8781372720981a7e4424dc"
+        }
+      ]
+    },
+    {
+      "region": "11",
+      "url": "https://cluster.klima.uni-bremen.de/~fmaussion/misc/rgi7_data/rgi70_official/RGI2000-v7.0-G-global/RGI2000-v7.0-G-11_central_europe.zip",
+      "filename": "RGI2000-v7.0-G-11_central_europe.zip",
+      "bytes": 6581457,
+      "sha256": "f52a79fe724234332027eebd16e23f9062d7178dc0edb67d21db0293589d1ff9",
+      "response_headers_path": "data/geographic_sample/source/rgi_11.headers",
+      "response_headers_sha256": "cf03e9c4b12e43853486f3f0bbb7869d8dbda5393fea714d3cb195a5a4e40e76",
+      "members": [
+        {
+          "name": "README.md",
+          "bytes": 353,
+          "compressed_bytes": 234,
+          "compression": 8,
+          "modified": "2023-08-18T11:05:24",
+          "crc32": "2f7d1fcb",
+          "sha256": "6d965b06de1d3244c5e650aa88b2f91371a125186880fa45363caa124460ee55"
+        },
+        {
+          "name": "RGI2000-v7.0-G-11_central_europe-attributes.csv",
+          "bytes": 1142952,
+          "compressed_bytes": 397666,
+          "compression": 8,
+          "modified": "2023-08-18T11:05:24",
+          "crc32": "aa22c333",
+          "sha256": "b2c2cd6a560bbe5c2be560d6e5c509e07f4f92f5bbd86d21b418ccd58090b234"
+        },
+        {
+          "name": "RGI2000-v7.0-G-11_central_europe-attributes_metadata.json",
+          "bytes": 7225,
+          "compressed_bytes": 1501,
+          "compression": 8,
+          "modified": "2023-08-18T11:05:24",
+          "crc32": "dba82a82",
+          "sha256": "fd23a32abb4059afbcd3c6048393a3f7ce6c533608379c29303acc884d799d39"
+        },
+        {
+          "name": "RGI2000-v7.0-G-11_central_europe-hypsometry.csv",
+          "bytes": 808296,
+          "compressed_bytes": 117905,
+          "compression": 8,
+          "modified": "2023-06-12T10:08:58",
+          "crc32": "c5257ce9",
+          "sha256": "32aaacaf293d4dcecab38a6304d6febae7aebabb270399668fff69f5e0fc8027"
+        },
+        {
+          "name": "RGI2000-v7.0-G-11_central_europe-rgi6_links.csv",
+          "bytes": 115,
+          "compressed_bytes": 67,
+          "compression": 8,
+          "modified": "2023-06-09T18:29:20",
+          "crc32": "c7c53bb5",
+          "sha256": "a16617b69bdff824f62e61818fcaadb76ba60914be46f3a5ad11bb6f5d76cae2"
+        },
+        {
+          "name": "RGI2000-v7.0-G-11_central_europe-submission_info.csv",
+          "bytes": 665,
+          "compressed_bytes": 414,
+          "compression": 8,
+          "modified": "2023-06-09T18:29:20",
+          "crc32": "bec62338",
+          "sha256": "0301c475211389d2ed32d8d0b862453504e57a1cea29c1461b26972448595643"
+        },
+        {
+          "name": "RGI2000-v7.0-G-11_central_europe-submission_info_metadata.json",
+          "bytes": 2266,
+          "compressed_bytes": 536,
+          "compression": 8,
+          "modified": "2023-06-09T18:29:20",
+          "crc32": "525b4563",
+          "sha256": "a5c7ba4727685cdfc56d63e227776c889bb70f98395996aff3629032919c5d8c"
+        },
+        {
+          "name": "RGI2000-v7.0-G-11_central_europe.cpg",
+          "bytes": 10,
+          "compressed_bytes": 12,
+          "compression": 8,
+          "modified": "2023-08-18T11:05:18",
+          "crc32": "70ee4b6c",
+          "sha256": "09fc313075748ce8ead962229ed89c919d5a9ff71974ee725a0b48bb87d975a2"
+        },
+        {
+          "name": "RGI2000-v7.0-G-11_central_europe.dbf",
+          "bytes": 4100325,
+          "compressed_bytes": 554503,
+          "compression": 8,
+          "modified": "2023-08-18T11:05:22",
+          "crc32": "6d7c04e6",
+          "sha256": "a85d11e7121e93dfa2fe771aed5dfe23cb652e77616ba09eff4c402fb717c7e6"
+        },
+        {
+          "name": "RGI2000-v7.0-G-11_central_europe.prj",
+          "bytes": 145,
+          "compressed_bytes": 121,
+          "compression": 8,
+          "modified": "2023-08-18T11:05:18",
+          "crc32": "af437f55",
+          "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4"
+        },
+        {
+          "name": "RGI2000-v7.0-G-11_central_europe.shp",
+          "bytes": 11329096,
+          "compressed_bytes": 5101700,
+          "compression": 8,
+          "modified": "2023-08-18T11:05:22",
+          "crc32": "7c9e0cfb",
+          "sha256": "c26c78082e3b4767a2deae38cc26d04baca43ea4295a18f9e44d12662feff433"
+        },
+        {
+          "name": "RGI2000-v7.0-G-11_central_europe.shx",
+          "bytes": 32732,
+          "compressed_bytes": 20775,
+          "compression": 8,
+          "modified": "2023-08-18T11:05:22",
+          "crc32": "8252a6be",
+          "sha256": "a86ff4e1a61b45f75cebb492382e73b03fb7d95caddf7050d9e101a0e1f4e2d1"
+        }
+      ]
+    },
+    {
+      "region": "12",
+      "url": "https://cluster.klima.uni-bremen.de/~fmaussion/misc/rgi7_data/rgi70_official/RGI2000-v7.0-G-global/RGI2000-v7.0-G-12_caucasus_middle_east.zip",
+      "filename": "RGI2000-v7.0-G-12_caucasus_middle_east.zip",
+      "bytes": 4295667,
+      "sha256": "fb517eb030c3d6ac52eff68a10ef50cdb0b6cb890a3a619844c61350bd098f5b",
+      "response_headers_path": "data/geographic_sample/source/rgi_12.headers",
+      "response_headers_sha256": "fb3f7c342b7462ac31ec03a72f72e8fbb5d9f0c8218d8050f7f74ea005ad36d2",
+      "members": [
+        {
+          "name": "README.md",
+          "bytes": 353,
+          "compressed_bytes": 234,
+          "compression": 8,
+          "modified": "2023-08-18T11:05:36",
+          "crc32": "2f7d1fcb",
+          "sha256": "6d965b06de1d3244c5e650aa88b2f91371a125186880fa45363caa124460ee55"
+        },
+        {
+          "name": "RGI2000-v7.0-G-12_caucasus_middle_east-attributes.csv",
+          "bytes": 625852,
+          "compressed_bytes": 214806,
+          "compression": 8,
+          "modified": "2023-08-18T11:05:36",
+          "crc32": "c9baa17c",
+          "sha256": "3f97a68a92226ddfc0b16a0d7ec87583159d221f20741bec0c2aec9a786ba8f1"
+        },
+        {
+          "name": "RGI2000-v7.0-G-12_caucasus_middle_east-attributes_metadata.json",
+          "bytes": 7225,
+          "compressed_bytes": 1501,
+          "compression": 8,
+          "modified": "2023-08-18T11:05:36",
+          "crc32": "dba82a82",
+          "sha256": "fd23a32abb4059afbcd3c6048393a3f7ce6c533608379c29303acc884d799d39"
+        },
+        {
+          "name": "RGI2000-v7.0-G-12_caucasus_middle_east-hypsometry.csv",
+          "bytes": 492024,
+          "compressed_bytes": 72282,
+          "compression": 8,
+          "modified": "2023-06-12T10:09:06",
+          "crc32": "1f1bd752",
+          "sha256": "cb46022a478991fd1c7aacdc5dc2a2092df5f604f5209bba2b3229751ffb7288"
+        },
+        {
+          "name": "RGI2000-v7.0-G-12_caucasus_middle_east-rgi6_links.csv",
+          "bytes": 115,
+          "compressed_bytes": 67,
+          "compression": 8,
+          "modified": "2023-06-09T18:29:54",
+          "crc32": "c7c53bb5",
+          "sha256": "a16617b69bdff824f62e61818fcaadb76ba60914be46f3a5ad11bb6f5d76cae2"
+        },
+        {
+          "name": "RGI2000-v7.0-G-12_caucasus_middle_east-submission_info.csv",
+          "bytes": 381,
+          "compressed_bytes": 257,
+          "compression": 8,
+          "modified": "2023-06-09T18:29:54",
+          "crc32": "ea8d3ce3",
+          "sha256": "55176b2ed29efab9a6983eeba96ed3ddfae0553c69465cc587f9162adb67af57"
+        },
+        {
+          "name": "RGI2000-v7.0-G-12_caucasus_middle_east-submission_info_metadata.json",
+          "bytes": 2266,
+          "compressed_bytes": 536,
+          "compression": 8,
+          "modified": "2023-06-09T18:29:54",
+          "crc32": "525b4563",
+          "sha256": "a5c7ba4727685cdfc56d63e227776c889bb70f98395996aff3629032919c5d8c"
+        },
+        {
+          "name": "RGI2000-v7.0-G-12_caucasus_middle_east.cpg",
+          "bytes": 10,
+          "compressed_bytes": 12,
+          "compression": 8,
+          "modified": "2023-08-18T11:05:34",
+          "crc32": "70ee4b6c",
+          "sha256": "09fc313075748ce8ead962229ed89c919d5a9ff71974ee725a0b48bb87d975a2"
+        },
+        {
+          "name": "RGI2000-v7.0-G-12_caucasus_middle_east.dbf",
+          "bytes": 2300955,
+          "compressed_bytes": 300470,
+          "compression": 8,
+          "modified": "2023-08-18T11:05:36",
+          "crc32": "8567b6f8",
+          "sha256": "610b01133bd991109dc9dfd20725639c57256b5481f4638ab71dfd0bfef5bc28"
+        },
+        {
+          "name": "RGI2000-v7.0-G-12_caucasus_middle_east.prj",
+          "bytes": 145,
+          "compressed_bytes": 121,
+          "compression": 8,
+          "modified": "2023-08-18T11:05:34",
+          "crc32": "af437f55",
+          "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4"
+        },
+        {
+          "name": "RGI2000-v7.0-G-12_caucasus_middle_east.shp",
+          "bytes": 7999724,
+          "compressed_bytes": 3691546,
+          "compression": 8,
+          "modified": "2023-08-18T11:05:36",
+          "crc32": "59a98408",
+          "sha256": "6237e1b189ac0037cf6d0334829adb7f7bdc8861d4b3c0fc1c03c7c346f183e4"
+        },
+        {
+          "name": "RGI2000-v7.0-G-12_caucasus_middle_east.shx",
+          "bytes": 18300,
+          "compressed_bytes": 11767,
+          "compression": 8,
+          "modified": "2023-08-18T11:05:36",
+          "crc32": "3306d204",
+          "sha256": "278f864e1afa2e20a99b63a937de951ccf4f9e1701f5206942e4fc1a51d984cf"
+        }
+      ]
+    },
+    {
+      "region": "13",
+      "url": "https://cluster.klima.uni-bremen.de/~fmaussion/misc/rgi7_data/rgi70_official/RGI2000-v7.0-G-global/RGI2000-v7.0-G-13_central_asia.zip",
+      "filename": "RGI2000-v7.0-G-13_central_asia.zip",
+      "bytes": 92030676,
+      "sha256": "d21529f1b13b9e206806d30abef3cb31ebdd633f57484670f2a2592bffb9fdd6",
+      "response_headers_path": "data/geographic_sample/source/rgi_13.headers",
+      "response_headers_sha256": "b7f086f1acaf16f11bce1c312a36ff38276c91728dba389a55b4a57e618bc31d",
+      "members": [
+        {
+          "name": "README.md",
+          "bytes": 353,
+          "compressed_bytes": 234,
+          "compression": 8,
+          "modified": "2023-08-18T11:07:44",
+          "crc32": "2f7d1fcb",
+          "sha256": "6d965b06de1d3244c5e650aa88b2f91371a125186880fa45363caa124460ee55"
+        },
+        {
+          "name": "RGI2000-v7.0-G-13_central_asia-attributes.csv",
+          "bytes": 20535052,
+          "compressed_bytes": 6848026,
+          "compression": 8,
+          "modified": "2023-08-18T11:07:44",
+          "crc32": "a115ccfa",
+          "sha256": "a8a5a528e5203fb422af9a36b736de744954fe4efacdd033014fe83b44dd9dd5"
+        },
+        {
+          "name": "RGI2000-v7.0-G-13_central_asia-attributes_metadata.json",
+          "bytes": 7225,
+          "compressed_bytes": 1501,
+          "compression": 8,
+          "modified": "2023-08-18T11:07:44",
+          "crc32": "dba82a82",
+          "sha256": "fd23a32abb4059afbcd3c6048393a3f7ce6c533608379c29303acc884d799d39"
+        },
+        {
+          "name": "RGI2000-v7.0-G-13_central_asia-hypsometry.csv",
+          "bytes": 19800968,
+          "compressed_bytes": 2379662,
+          "compression": 8,
+          "modified": "2023-06-12T10:10:40",
+          "crc32": "960159d9",
+          "sha256": "5f88e191e42d4a2cf27e190bd36d144198f570aacb8fe99f914ee45d46651ebd"
+        },
+        {
+          "name": "RGI2000-v7.0-G-13_central_asia-rgi6_links.csv",
+          "bytes": 561,
+          "compressed_bytes": 284,
+          "compression": 8,
+          "modified": "2023-06-09T18:47:30",
+          "crc32": "faf670b6",
+          "sha256": "74ce76c24c2ad226f11833e2b0a191476a839726f464e90aedd21f68c105c8b2"
+        },
+        {
+          "name": "RGI2000-v7.0-G-13_central_asia-submission_info.csv",
+          "bytes": 349,
+          "compressed_bytes": 237,
+          "compression": 8,
+          "modified": "2023-06-09T18:47:30",
+          "crc32": "74217c48",
+          "sha256": "c09daaa8bd31e5ed2543ced80e933b915ca8750d6701932663ed4a341d04f177"
+        },
+        {
+          "name": "RGI2000-v7.0-G-13_central_asia-submission_info_metadata.json",
+          "bytes": 2266,
+          "compressed_bytes": 536,
+          "compression": 8,
+          "modified": "2023-06-09T18:47:32",
+          "crc32": "525b4563",
+          "sha256": "a5c7ba4727685cdfc56d63e227776c889bb70f98395996aff3629032919c5d8c"
+        },
+        {
+          "name": "RGI2000-v7.0-G-13_central_asia.cpg",
+          "bytes": 10,
+          "compressed_bytes": 12,
+          "compression": 8,
+          "modified": "2023-08-18T11:06:28",
+          "crc32": "70ee4b6c",
+          "sha256": "09fc313075748ce8ead962229ed89c919d5a9ff71974ee725a0b48bb87d975a2"
+        },
+        {
+          "name": "RGI2000-v7.0-G-13_central_asia.dbf",
+          "bytes": 75991995,
+          "compressed_bytes": 9617976,
+          "compression": 8,
+          "modified": "2023-08-18T11:07:42",
+          "crc32": "0e9d7f12",
+          "sha256": "6dc6377e7db95638b90f8ae11de0c94a03e15d0a7b8c0eef8498d62f6d06250a"
+        },
+        {
+          "name": "RGI2000-v7.0-G-13_central_asia.prj",
+          "bytes": 145,
+          "compressed_bytes": 121,
+          "compression": 8,
+          "modified": "2023-08-18T11:06:28",
+          "crc32": "af437f55",
+          "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4"
+        },
+        {
+          "name": "RGI2000-v7.0-G-13_central_asia.shp",
+          "bytes": 162368768,
+          "compressed_bytes": 72807803,
+          "compression": 8,
+          "modified": "2023-08-18T11:07:42",
+          "crc32": "b47598c8",
+          "sha256": "84e42030dc25e4ccc385e28a684951e7b545aeb7cd06a6664d22526795e0b2ba"
+        },
+        {
+          "name": "RGI2000-v7.0-G-13_central_asia.shx",
+          "bytes": 605004,
+          "compressed_bytes": 372392,
+          "compression": 8,
+          "modified": "2023-08-18T11:07:42",
+          "crc32": "ad104639",
+          "sha256": "b327a7a4d71617d3197f94bb1be6b8bc6dda1c0a223ddb8295cb3e4d284c256a"
+        }
+      ]
+    },
+    {
+      "region": "14",
+      "url": "https://cluster.klima.uni-bremen.de/~fmaussion/misc/rgi7_data/rgi70_official/RGI2000-v7.0-G-global/RGI2000-v7.0-G-14_south_asia_west.zip",
+      "filename": "RGI2000-v7.0-G-14_south_asia_west.zip",
+      "bytes": 49958252,
+      "sha256": "7cd63bbe0dd8b93cb0581c6fd25c3b6a04de21539514110493af9d9bd5a58c57",
+      "response_headers_path": "data/geographic_sample/source/rgi_14.headers",
+      "response_headers_sha256": "728d39bb410560b714ab0ae5d3b170c5a666e7f792d27ac6bfaa30cd7f417b38",
+      "members": [
+        {
+          "name": "README.md",
+          "bytes": 353,
+          "compressed_bytes": 234,
+          "compression": 8,
+          "modified": "2023-08-18T11:09:56",
+          "crc32": "2f7d1fcb",
+          "sha256": "6d965b06de1d3244c5e650aa88b2f91371a125186880fa45363caa124460ee55"
+        },
+        {
+          "name": "RGI2000-v7.0-G-14_south_asia_west-attributes.csv",
+          "bytes": 10086021,
+          "compressed_bytes": 3371441,
+          "compression": 8,
+          "modified": "2023-08-18T11:09:56",
+          "crc32": "155c2cb0",
+          "sha256": "50828a0c93da49f7cdc256f27afd40addb765d1cc897e736b0a88123ed012bd2"
+        },
+        {
+          "name": "RGI2000-v7.0-G-14_south_asia_west-attributes_metadata.json",
+          "bytes": 7225,
+          "compressed_bytes": 1501,
+          "compression": 8,
+          "modified": "2023-08-18T11:09:56",
+          "crc32": "dba82a82",
+          "sha256": "fd23a32abb4059afbcd3c6048393a3f7ce6c533608379c29303acc884d799d39"
+        },
+        {
+          "name": "RGI2000-v7.0-G-14_south_asia_west-hypsometry.csv",
+          "bytes": 11570897,
+          "compressed_bytes": 1218413,
+          "compression": 8,
+          "modified": "2023-06-12T10:11:40",
+          "crc32": "526393a5",
+          "sha256": "c65f14286d479f69740fa020346b7581248187eab8fc757b66b76749997575a0"
+        },
+        {
+          "name": "RGI2000-v7.0-G-14_south_asia_west-rgi6_links.csv",
+          "bytes": 1221,
+          "compressed_bytes": 530,
+          "compression": 8,
+          "modified": "2023-06-09T18:58:52",
+          "crc32": "cf71dedd",
+          "sha256": "de3b751598e1d42fb35b1660c275098db25b03e09ef60daffa3623179035256d"
+        },
+        {
+          "name": "RGI2000-v7.0-G-14_south_asia_west-submission_info.csv",
+          "bytes": 349,
+          "compressed_bytes": 236,
+          "compression": 8,
+          "modified": "2023-06-09T18:58:52",
+          "crc32": "ed3bc597",
+          "sha256": "efe1e516443e1f20e0b1b4322f3633899d68ca755f4855b9051c974839a1e25e"
+        },
+        {
+          "name": "RGI2000-v7.0-G-14_south_asia_west-submission_info_metadata.json",
+          "bytes": 2266,
+          "compressed_bytes": 536,
+          "compression": 8,
+          "modified": "2023-06-09T18:58:52",
+          "crc32": "525b4563",
+          "sha256": "a5c7ba4727685cdfc56d63e227776c889bb70f98395996aff3629032919c5d8c"
+        },
+        {
+          "name": "RGI2000-v7.0-G-14_south_asia_west.cpg",
+          "bytes": 10,
+          "compressed_bytes": 12,
+          "compression": 8,
+          "modified": "2023-08-18T11:09:18",
+          "crc32": "70ee4b6c",
+          "sha256": "09fc313075748ce8ead962229ed89c919d5a9ff71974ee725a0b48bb87d975a2"
+        },
+        {
+          "name": "RGI2000-v7.0-G-14_south_asia_west.dbf",
+          "bytes": 37750740,
+          "compressed_bytes": 4726555,
+          "compression": 8,
+          "modified": "2023-08-18T11:09:56",
+          "crc32": "0bd6d03f",
+          "sha256": "2f0ebceee0c66a0118611ae28152df8b6226ff084b858c6c01d03a4592376f55"
+        },
+        {
+          "name": "RGI2000-v7.0-G-14_south_asia_west.prj",
+          "bytes": 145,
+          "compressed_bytes": 121,
+          "compression": 8,
+          "modified": "2023-08-18T11:09:18",
+          "crc32": "af437f55",
+          "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4"
+        },
+        {
+          "name": "RGI2000-v7.0-G-14_south_asia_west.shp",
+          "bytes": 89084348,
+          "compressed_bytes": 40452255,
+          "compression": 8,
+          "modified": "2023-08-18T11:09:56",
+          "crc32": "159f3441",
+          "sha256": "10c93f509e99d8d0914294d639806fa6d67ac0647e274b6093ac77a8846c7de6"
+        },
+        {
+          "name": "RGI2000-v7.0-G-14_south_asia_west.shx",
+          "bytes": 300596,
+          "compressed_bytes": 184460,
+          "compression": 8,
+          "modified": "2023-08-18T11:09:56",
+          "crc32": "2982f856",
+          "sha256": "e1334be33d83366ed93393d0a162485139269c4c4c59badea98f16731ee85715"
+        }
+      ]
+    },
+    {
+      "region": "15",
+      "url": "https://cluster.klima.uni-bremen.de/~fmaussion/misc/rgi7_data/rgi70_official/RGI2000-v7.0-G-global/RGI2000-v7.0-G-15_south_asia_east.zip",
+      "filename": "RGI2000-v7.0-G-15_south_asia_east.zip",
+      "bytes": 25758739,
+      "sha256": "089cbe0743669448aa3b7d1f91915853b9d014cb1ba6e3b01c0a926946bf9ebe",
+      "response_headers_path": "data/geographic_sample/source/rgi_15.headers",
+      "response_headers_sha256": "399aa63e5465546d7c6ae391e5342f67d47fdda6a77272852df8207aa38525be",
+      "members": [
+        {
+          "name": "README.md",
+          "bytes": 353,
+          "compressed_bytes": 234,
+          "compression": 8,
+          "modified": "2023-08-18T11:11:08",
+          "crc32": "2f7d1fcb",
+          "sha256": "6d965b06de1d3244c5e650aa88b2f91371a125186880fa45363caa124460ee55"
+        },
+        {
+          "name": "RGI2000-v7.0-G-15_south_asia_east-attributes.csv",
+          "bytes": 4997019,
+          "compressed_bytes": 1678540,
+          "compression": 8,
+          "modified": "2023-08-18T11:11:08",
+          "crc32": "69e1ec24",
+          "sha256": "03dd4654b757d38457021ed49d322c09e24b1c9a29f4fb0589be7b36166db369"
+        },
+        {
+          "name": "RGI2000-v7.0-G-15_south_asia_east-attributes_metadata.json",
+          "bytes": 7225,
+          "compressed_bytes": 1501,
+          "compression": 8,
+          "modified": "2023-08-18T11:11:08",
+          "crc32": "dba82a82",
+          "sha256": "fd23a32abb4059afbcd3c6048393a3f7ce6c533608379c29303acc884d799d39"
+        },
+        {
+          "name": "RGI2000-v7.0-G-15_south_asia_east-hypsometry.csv",
+          "bytes": 6343645,
+          "compressed_bytes": 656039,
+          "compression": 8,
+          "modified": "2023-06-12T10:12:12",
+          "crc32": "21f69e3e",
+          "sha256": "cca570b7a73b8fc214262468684b02b8e642b1e33bddcf924b21269ac17d26f4"
+        },
+        {
+          "name": "RGI2000-v7.0-G-15_south_asia_east-rgi6_links.csv",
+          "bytes": 115,
+          "compressed_bytes": 67,
+          "compression": 8,
+          "modified": "2023-06-09T19:03:08",
+          "crc32": "c7c53bb5",
+          "sha256": "a16617b69bdff824f62e61818fcaadb76ba60914be46f3a5ad11bb6f5d76cae2"
+        },
+        {
+          "name": "RGI2000-v7.0-G-15_south_asia_east-submission_info.csv",
+          "bytes": 572,
+          "compressed_bytes": 301,
+          "compression": 8,
+          "modified": "2023-06-09T19:03:08",
+          "crc32": "d390d6e6",
+          "sha256": "51e4202764e90b5b67a02ff6930429a68a6ff499a32ef596d0452dcd614dc8ff"
+        },
+        {
+          "name": "RGI2000-v7.0-G-15_south_asia_east-submission_info_metadata.json",
+          "bytes": 2266,
+          "compressed_bytes": 536,
+          "compression": 8,
+          "modified": "2023-06-09T19:03:08",
+          "crc32": "525b4563",
+          "sha256": "a5c7ba4727685cdfc56d63e227776c889bb70f98395996aff3629032919c5d8c"
+        },
+        {
+          "name": "RGI2000-v7.0-G-15_south_asia_east.cpg",
+          "bytes": 10,
+          "compressed_bytes": 12,
+          "compression": 8,
+          "modified": "2023-08-18T11:10:48",
+          "crc32": "70ee4b6c",
+          "sha256": "09fc313075748ce8ead962229ed89c919d5a9ff71974ee725a0b48bb87d975a2"
+        },
+        {
+          "name": "RGI2000-v7.0-G-15_south_asia_east.dbf",
+          "bytes": 18680865,
+          "compressed_bytes": 2337389,
+          "compression": 8,
+          "modified": "2023-08-18T11:11:06",
+          "crc32": "92734bce",
+          "sha256": "2cbab6ce53e5f76b839b56e8b66ba178d27ef1b3a2b3d375a774972e9b0b8cc9"
+        },
+        {
+          "name": "RGI2000-v7.0-G-15_south_asia_east.prj",
+          "bytes": 145,
+          "compressed_bytes": 121,
+          "compression": 8,
+          "modified": "2023-08-18T11:10:48",
+          "crc32": "af437f55",
+          "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4"
+        },
+        {
+          "name": "RGI2000-v7.0-G-15_south_asia_east.shp",
+          "bytes": 46431664,
+          "compressed_bytes": 20988335,
+          "compression": 8,
+          "modified": "2023-08-18T11:11:06",
+          "crc32": "3fd4269a",
+          "sha256": "a0d01c189c67e88378047bb970996df8c4fa8140a1de93eb294339565130e1df"
+        },
+        {
+          "name": "RGI2000-v7.0-G-15_south_asia_east.shx",
+          "bytes": 148796,
+          "compressed_bytes": 93706,
+          "compression": 8,
+          "modified": "2023-08-18T11:11:06",
+          "crc32": "ca4c31d4",
+          "sha256": "8bad5905e34ec7b2c7a9c37ed33c3f17ad95d8fbe873ff91da83785bae3a2335"
+        }
+      ]
+    },
+    {
+      "region": "16",
+      "url": "https://cluster.klima.uni-bremen.de/~fmaussion/misc/rgi7_data/rgi70_official/RGI2000-v7.0-G-global/RGI2000-v7.0-G-16_low_latitudes.zip",
+      "filename": "RGI2000-v7.0-G-16_low_latitudes.zip",
+      "bytes": 4118752,
+      "sha256": "15989366e42e62958add2c0ea221ca21c9337003740b8a7b49e12ddc0a325354",
+      "response_headers_path": "data/geographic_sample/source/rgi_16.headers",
+      "response_headers_sha256": "9e8287c841a7d2d7442811827d6b10347167b52c122bb3f7094bcbed7833b4fa",
+      "members": [
+        {
+          "name": "README.md",
+          "bytes": 353,
+          "compressed_bytes": 234,
+          "compression": 8,
+          "modified": "2023-08-18T11:11:36",
+          "crc32": "2f7d1fcb",
+          "sha256": "6d965b06de1d3244c5e650aa88b2f91371a125186880fa45363caa124460ee55"
+        },
+        {
+          "name": "RGI2000-v7.0-G-16_low_latitudes-attributes.csv",
+          "bytes": 1008681,
+          "compressed_bytes": 332649,
+          "compression": 8,
+          "modified": "2023-08-18T11:11:36",
+          "crc32": "0ac06fe0",
+          "sha256": "75c5417a0da741458ce8a5ed3a2b90ae556d2ac971904f17a994a0967afaeb33"
+        },
+        {
+          "name": "RGI2000-v7.0-G-16_low_latitudes-attributes_metadata.json",
+          "bytes": 7225,
+          "compressed_bytes": 1501,
+          "compression": 8,
+          "modified": "2023-08-18T11:11:36",
+          "crc32": "dba82a82",
+          "sha256": "fd23a32abb4059afbcd3c6048393a3f7ce6c533608379c29303acc884d799d39"
+        },
+        {
+          "name": "RGI2000-v7.0-G-16_low_latitudes-hypsometry.csv",
+          "bytes": 589555,
+          "compressed_bytes": 110032,
+          "compression": 8,
+          "modified": "2023-06-12T10:12:24",
+          "crc32": "02da9442",
+          "sha256": "540cf62a1e27ceda63d71ba6ec7816485d5ca026904d27cb29e4f45cf2fd8df4"
+        },
+        {
+          "name": "RGI2000-v7.0-G-16_low_latitudes-rgi6_links.csv",
+          "bytes": 115,
+          "compressed_bytes": 67,
+          "compression": 8,
+          "modified": "2023-06-09T19:04:20",
+          "crc32": "c7c53bb5",
+          "sha256": "a16617b69bdff824f62e61818fcaadb76ba60914be46f3a5ad11bb6f5d76cae2"
+        },
+        {
+          "name": "RGI2000-v7.0-G-16_low_latitudes-submission_info.csv",
+          "bytes": 2445,
+          "compressed_bytes": 1203,
+          "compression": 8,
+          "modified": "2023-06-09T19:04:20",
+          "crc32": "fd6f8999",
+          "sha256": "4d33571c16991421a2e44e9a8ca368eaeeb13c2d90f88e342b86e730353b311d"
+        },
+        {
+          "name": "RGI2000-v7.0-G-16_low_latitudes-submission_info_metadata.json",
+          "bytes": 2266,
+          "compressed_bytes": 536,
+          "compression": 8,
+          "modified": "2023-06-09T19:04:20",
+          "crc32": "525b4563",
+          "sha256": "a5c7ba4727685cdfc56d63e227776c889bb70f98395996aff3629032919c5d8c"
+        },
+        {
+          "name": "RGI2000-v7.0-G-16_low_latitudes.cpg",
+          "bytes": 10,
+          "compressed_bytes": 12,
+          "compression": 8,
+          "modified": "2023-08-18T11:11:32",
+          "crc32": "70ee4b6c",
+          "sha256": "09fc313075748ce8ead962229ed89c919d5a9ff71974ee725a0b48bb87d975a2"
+        },
+        {
+          "name": "RGI2000-v7.0-G-16_low_latitudes.dbf",
+          "bytes": 3714405,
+          "compressed_bytes": 459700,
+          "compression": 8,
+          "modified": "2023-08-18T11:11:36",
+          "crc32": "ef603915",
+          "sha256": "708dbf557c853eded34a7432fcd5fd6347b70c543877bb36c77af7e97868e321"
+        },
+        {
+          "name": "RGI2000-v7.0-G-16_low_latitudes.prj",
+          "bytes": 145,
+          "compressed_bytes": 121,
+          "compression": 8,
+          "modified": "2023-08-18T11:11:32",
+          "crc32": "af437f55",
+          "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4"
+        },
+        {
+          "name": "RGI2000-v7.0-G-16_low_latitudes.shp",
+          "bytes": 7865688,
+          "compressed_bytes": 3191856,
+          "compression": 8,
+          "modified": "2023-08-18T11:11:36",
+          "crc32": "5b9c97d9",
+          "sha256": "3cd202fe4d3622b0bef9666a0425ab9544ec8598dd48d6925a0a35a0fd7aa7d7"
+        },
+        {
+          "name": "RGI2000-v7.0-G-16_low_latitudes.shx",
+          "bytes": 29660,
+          "compressed_bytes": 18927,
+          "compression": 8,
+          "modified": "2023-08-18T11:11:36",
+          "crc32": "f99c64d0",
+          "sha256": "a2ea0c13199805b79a363fec6289431635bd7dced367051659fd0ef162800203"
+        }
+      ]
+    },
+    {
+      "region": "17",
+      "url": "https://cluster.klima.uni-bremen.de/~fmaussion/misc/rgi7_data/rgi70_official/RGI2000-v7.0-G-global/RGI2000-v7.0-G-17_southern_andes.zip",
+      "filename": "RGI2000-v7.0-G-17_southern_andes.zip",
+      "bytes": 44945013,
+      "sha256": "b00574a2c887d13cfa1d0d64e7c3040d3ea68c052f84e0610f4895cc2ea1e201",
+      "response_headers_path": "data/geographic_sample/source/rgi_17.headers",
+      "response_headers_sha256": "4003c79fee9ddbfb8028202eef51e22c941e182818b8f0deca9cc03df72a2ad3",
+      "members": [
+        {
+          "name": "README.md",
+          "bytes": 353,
+          "compressed_bytes": 234,
+          "compression": 8,
+          "modified": "2023-08-18T11:12:38",
+          "crc32": "2f7d1fcb",
+          "sha256": "6d965b06de1d3244c5e650aa88b2f91371a125186880fa45363caa124460ee55"
+        },
+        {
+          "name": "RGI2000-v7.0-G-17_southern_andes-attributes.csv",
+          "bytes": 8370643,
+          "compressed_bytes": 2735463,
+          "compression": 8,
+          "modified": "2023-08-18T11:12:38",
+          "crc32": "9a59c05c",
+          "sha256": "1267d461382c10fb370bfba938aade789f190a84bbb22e4e39c0add6e756c782"
+        },
+        {
+          "name": "RGI2000-v7.0-G-17_southern_andes-attributes_metadata.json",
+          "bytes": 7225,
+          "compressed_bytes": 1501,
+          "compression": 8,
+          "modified": "2023-08-18T11:12:38",
+          "crc32": "dba82a82",
+          "sha256": "fd23a32abb4059afbcd3c6048393a3f7ce6c533608379c29303acc884d799d39"
+        },
+        {
+          "name": "RGI2000-v7.0-G-17_southern_andes-hypsometry.csv",
+          "bytes": 10195851,
+          "compressed_bytes": 886877,
+          "compression": 8,
+          "modified": "2023-06-12T10:13:10",
+          "crc32": "665b3386",
+          "sha256": "edd04ad51d6f60fc8562af4cf136dd20b683248ef964736c9a297ed526ada825"
+        },
+        {
+          "name": "RGI2000-v7.0-G-17_southern_andes-rgi6_links.csv",
+          "bytes": 2223,
+          "compressed_bytes": 924,
+          "compression": 8,
+          "modified": "2023-06-09T19:12:30",
+          "crc32": "5754267d",
+          "sha256": "e3eacc15cebd36a310372912f8a42f19fff53e56281f7d37c54f4d5d4d144950"
+        },
+        {
+          "name": "RGI2000-v7.0-G-17_southern_andes-submission_info.csv",
+          "bytes": 570,
+          "compressed_bytes": 395,
+          "compression": 8,
+          "modified": "2023-06-09T19:12:30",
+          "crc32": "dd5a1132",
+          "sha256": "c260eb1f3618578bd46f2a5b52693b4b1495f9a0d7188a7c6c6ce56ff96e1cba"
+        },
+        {
+          "name": "RGI2000-v7.0-G-17_southern_andes-submission_info_metadata.json",
+          "bytes": 2266,
+          "compressed_bytes": 536,
+          "compression": 8,
+          "modified": "2023-06-09T19:12:30",
+          "crc32": "525b4563",
+          "sha256": "a5c7ba4727685cdfc56d63e227776c889bb70f98395996aff3629032919c5d8c"
+        },
+        {
+          "name": "RGI2000-v7.0-G-17_southern_andes.cpg",
+          "bytes": 10,
+          "compressed_bytes": 12,
+          "compression": 8,
+          "modified": "2023-08-18T11:12:06",
+          "crc32": "70ee4b6c",
+          "sha256": "09fc313075748ce8ead962229ed89c919d5a9ff71974ee725a0b48bb87d975a2"
+        },
+        {
+          "name": "RGI2000-v7.0-G-17_southern_andes.dbf",
+          "bytes": 30788100,
+          "compressed_bytes": 3851849,
+          "compression": 8,
+          "modified": "2023-08-18T11:12:36",
+          "crc32": "e5e0dceb",
+          "sha256": "db1249a9c4996114836228c05e3b0a62a575935321ea1693519f55aa6047d9e1"
+        },
+        {
+          "name": "RGI2000-v7.0-G-17_southern_andes.prj",
+          "bytes": 145,
+          "compressed_bytes": 121,
+          "compression": 8,
+          "modified": "2023-08-18T11:12:06",
+          "crc32": "af437f55",
+          "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4"
+        },
+        {
+          "name": "RGI2000-v7.0-G-17_southern_andes.shp",
+          "bytes": 85372960,
+          "compressed_bytes": 37310233,
+          "compression": 8,
+          "modified": "2023-08-18T11:12:36",
+          "crc32": "100ab1cc",
+          "sha256": "83a53f5d1774e964dfa325029e72f8212a1b171fb093f16eb1e688d1d324a6ea"
+        },
+        {
+          "name": "RGI2000-v7.0-G-17_southern_andes.shx",
+          "bytes": 245172,
+          "compressed_bytes": 154932,
+          "compression": 8,
+          "modified": "2023-08-18T11:12:36",
+          "crc32": "3c0a8ca9",
+          "sha256": "578c61cc3db3d117628e9743bb879c93030a988f8218f8b23644abf864fd68ec"
+        }
+      ]
+    },
+    {
+      "region": "18",
+      "url": "https://cluster.klima.uni-bremen.de/~fmaussion/misc/rgi7_data/rgi70_official/RGI2000-v7.0-G-global/RGI2000-v7.0-G-18_new_zealand.zip",
+      "filename": "RGI2000-v7.0-G-18_new_zealand.zip",
+      "bytes": 5097472,
+      "sha256": "7bae18fe1ff65bfa2df89ab9ccb362d6910c7861fe52017d2ed967bdcfd744e6",
+      "response_headers_path": "data/geographic_sample/source/rgi_18.headers",
+      "response_headers_sha256": "72f09e396292aeafc51bfb290566ef7c98e39fd0d18e6cfbee5fce40151153b1",
+      "members": [
+        {
+          "name": "README.md",
+          "bytes": 353,
+          "compressed_bytes": 234,
+          "compression": 8,
+          "modified": "2023-08-18T11:13:16",
+          "crc32": "2f7d1fcb",
+          "sha256": "6d965b06de1d3244c5e650aa88b2f91371a125186880fa45363caa124460ee55"
+        },
+        {
+          "name": "RGI2000-v7.0-G-18_new_zealand-attributes.csv",
+          "bytes": 822742,
+          "compressed_bytes": 269101,
+          "compression": 8,
+          "modified": "2023-08-18T11:13:16",
+          "crc32": "7a4b5c81",
+          "sha256": "b3dc8117eff93d97bb42e40acd136cce59cf05451c42ce432f92d157591fa248"
+        },
+        {
+          "name": "RGI2000-v7.0-G-18_new_zealand-attributes_metadata.json",
+          "bytes": 7225,
+          "compressed_bytes": 1501,
+          "compression": 8,
+          "modified": "2023-08-18T11:13:16",
+          "crc32": "dba82a82",
+          "sha256": "fd23a32abb4059afbcd3c6048393a3f7ce6c533608379c29303acc884d799d39"
+        },
+        {
+          "name": "RGI2000-v7.0-G-18_new_zealand-hypsometry.csv",
+          "bytes": 578256,
+          "compressed_bytes": 84126,
+          "compression": 8,
+          "modified": "2023-06-12T10:13:24",
+          "crc32": "7ff6ed83",
+          "sha256": "3fb019311804b97f4269f5cfecea58861b6f604c645b48659d91d45f1526d681"
+        },
+        {
+          "name": "RGI2000-v7.0-G-18_new_zealand-rgi6_links.csv",
+          "bytes": 115,
+          "compressed_bytes": 67,
+          "compression": 8,
+          "modified": "2023-06-09T19:13:52",
+          "crc32": "c7c53bb5",
+          "sha256": "a16617b69bdff824f62e61818fcaadb76ba60914be46f3a5ad11bb6f5d76cae2"
+        },
+        {
+          "name": "RGI2000-v7.0-G-18_new_zealand-submission_info.csv",
+          "bytes": 542,
+          "compressed_bytes": 364,
+          "compression": 8,
+          "modified": "2023-06-09T19:13:52",
+          "crc32": "8318f06e",
+          "sha256": "3d27379a209ecfcf9747f3ecdba827c9d82515aee7d55f7888612093f42e2823"
+        },
+        {
+          "name": "RGI2000-v7.0-G-18_new_zealand-submission_info_metadata.json",
+          "bytes": 2266,
+          "compressed_bytes": 536,
+          "compression": 8,
+          "modified": "2023-06-09T19:13:52",
+          "crc32": "525b4563",
+          "sha256": "a5c7ba4727685cdfc56d63e227776c889bb70f98395996aff3629032919c5d8c"
+        },
+        {
+          "name": "RGI2000-v7.0-G-18_new_zealand.cpg",
+          "bytes": 10,
+          "compressed_bytes": 12,
+          "compression": 8,
+          "modified": "2023-08-18T11:13:12",
+          "crc32": "70ee4b6c",
+          "sha256": "09fc313075748ce8ead962229ed89c919d5a9ff71974ee725a0b48bb87d975a2"
+        },
+        {
+          "name": "RGI2000-v7.0-G-18_new_zealand.dbf",
+          "bytes": 3034020,
+          "compressed_bytes": 378348,
+          "compression": 8,
+          "modified": "2023-08-18T11:13:16",
+          "crc32": "e70508f2",
+          "sha256": "62235f58187b747ed0ff431be340a982e5c1f914fee6ed108848bb7943ae50a4"
+        },
+        {
+          "name": "RGI2000-v7.0-G-18_new_zealand.prj",
+          "bytes": 145,
+          "compressed_bytes": 121,
+          "compression": 8,
+          "modified": "2023-08-18T11:13:12",
+          "crc32": "af437f55",
+          "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4"
+        },
+        {
+          "name": "RGI2000-v7.0-G-18_new_zealand.shp",
+          "bytes": 9901440,
+          "compressed_bytes": 4345562,
+          "compression": 8,
+          "modified": "2023-08-18T11:13:16",
+          "crc32": "36339d28",
+          "sha256": "8a136150acd5966c8b9dc202e02e7617c48b70f2c3dde779fbe9f2d8c0a61a35"
+        },
+        {
+          "name": "RGI2000-v7.0-G-18_new_zealand.shx",
+          "bytes": 24244,
+          "compressed_bytes": 15630,
+          "compression": 8,
+          "modified": "2023-08-18T11:13:16",
+          "crc32": "f164dad7",
+          "sha256": "1b28053fa645955bde7c00dede0cc8da613d1d7557e116fac82c8408cf9d797c"
+        }
+      ]
+    },
+    {
+      "region": "19",
+      "url": "https://cluster.klima.uni-bremen.de/~fmaussion/misc/rgi7_data/rgi70_official/RGI2000-v7.0-G-global/RGI2000-v7.0-G-19_subantarctic_antarctic_islands.zip",
+      "filename": "RGI2000-v7.0-G-19_subantarctic_antarctic_islands.zip",
+      "bytes": 14942178,
+      "sha256": "2a69a9f464f272f01fba37059094a5d34c3eef790ebf1625ae936523ab04737e",
+      "response_headers_path": "data/geographic_sample/source/rgi_19.headers",
+      "response_headers_sha256": "abc17b31024fee6f4056b633a457782825a73dbe468e29e2ffa384eac64eabbd",
+      "members": [
+        {
+          "name": "README.md",
+          "bytes": 353,
+          "compressed_bytes": 234,
+          "compression": 8,
+          "modified": "2023-08-18T11:13:32",
+          "crc32": "2f7d1fcb",
+          "sha256": "6d965b06de1d3244c5e650aa88b2f91371a125186880fa45363caa124460ee55"
+        },
+        {
+          "name": "RGI2000-v7.0-G-19_subantarctic_antarctic_islands-attributes.csv",
+          "bytes": 755969,
+          "compressed_bytes": 260433,
+          "compression": 8,
+          "modified": "2023-08-18T11:13:32",
+          "crc32": "7c4d166a",
+          "sha256": "65987e87b4cb8b3d07adb0c7e80c1e9761d0bb8042a2f2a54bb3680628d1581b"
+        },
+        {
+          "name": "RGI2000-v7.0-G-19_subantarctic_antarctic_islands-attributes_metadata.json",
+          "bytes": 7225,
+          "compressed_bytes": 1501,
+          "compression": 8,
+          "modified": "2023-08-18T11:13:32",
+          "crc32": "dba82a82",
+          "sha256": "fd23a32abb4059afbcd3c6048393a3f7ce6c533608379c29303acc884d799d39"
+        },
+        {
+          "name": "RGI2000-v7.0-G-19_subantarctic_antarctic_islands-hypsometry.csv",
+          "bytes": 920405,
+          "compressed_bytes": 90726,
+          "compression": 8,
+          "modified": "2023-06-12T10:13:36",
+          "crc32": "c8570b15",
+          "sha256": "49a62a4439fc2de67f0acb7ea46bee7e324160cf06ba1fcfee5670a88eefb4f7"
+        },
+        {
+          "name": "RGI2000-v7.0-G-19_subantarctic_antarctic_islands-rgi6_links.csv",
+          "bytes": 14244,
+          "compressed_bytes": 4975,
+          "compression": 8,
+          "modified": "2023-06-09T19:15:24",
+          "crc32": "116074b4",
+          "sha256": "dcdb38b9b0e37ad0cca7aba9a9eb1ace3eb870c31663233a849338077a88030a"
+        },
+        {
+          "name": "RGI2000-v7.0-G-19_subantarctic_antarctic_islands-submission_info.csv",
+          "bytes": 2562,
+          "compressed_bytes": 1050,
+          "compression": 8,
+          "modified": "2023-06-09T19:15:24",
+          "crc32": "0519df55",
+          "sha256": "7af3d4f47ed9270269b20643d559bf2a7ecb0d39a92c2f4c336be55850de5098"
+        },
+        {
+          "name": "RGI2000-v7.0-G-19_subantarctic_antarctic_islands-submission_info_metadata.json",
+          "bytes": 2266,
+          "compressed_bytes": 536,
+          "compression": 8,
+          "modified": "2023-06-09T19:15:24",
+          "crc32": "525b4563",
+          "sha256": "a5c7ba4727685cdfc56d63e227776c889bb70f98395996aff3629032919c5d8c"
+        },
+        {
+          "name": "RGI2000-v7.0-G-19_subantarctic_antarctic_islands.cpg",
+          "bytes": 10,
+          "compressed_bytes": 12,
+          "compression": 8,
+          "modified": "2023-08-18T11:13:28",
+          "crc32": "70ee4b6c",
+          "sha256": "09fc313075748ce8ead962229ed89c919d5a9ff71974ee725a0b48bb87d975a2"
+        },
+        {
+          "name": "RGI2000-v7.0-G-19_subantarctic_antarctic_islands.dbf",
+          "bytes": 2773092,
+          "compressed_bytes": 358404,
+          "compression": 8,
+          "modified": "2023-08-18T11:13:32",
+          "crc32": "9cc35d0b",
+          "sha256": "db769186d790e4e6a0bf8493da42cca080a4fd715c4edc70f7e01b8922316e26"
+        },
+        {
+          "name": "RGI2000-v7.0-G-19_subantarctic_antarctic_islands.prj",
+          "bytes": 145,
+          "compressed_bytes": 121,
+          "compression": 8,
+          "modified": "2023-08-18T11:13:28",
+          "crc32": "af437f55",
+          "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4"
+        },
+        {
+          "name": "RGI2000-v7.0-G-19_subantarctic_antarctic_islands.shp",
+          "bytes": 31709052,
+          "compressed_bytes": 14206476,
+          "compression": 8,
+          "modified": "2023-08-18T11:13:32",
+          "crc32": "0972f9ba",
+          "sha256": "ad748d19bff980ce874950d8baa9dafe9a5601d646062d3796c094899806af4d"
+        },
+        {
+          "name": "RGI2000-v7.0-G-19_subantarctic_antarctic_islands.shx",
+          "bytes": 22036,
+          "compressed_bytes": 15422,
+          "compression": 8,
+          "modified": "2023-08-18T11:13:32",
+          "crc32": "b2be08b8",
+          "sha256": "3559cbb931e5975c826b694c2c758c95107c1433b23074f39e46fbb3f7771d15"
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "path": "data/geographic_sample/source/rgi_distribution_index.html",
+      "bytes": 4151,
+      "sha256": "ef0bde2ff07e416e2fe4834314043ddec9fb0f99d093300ce1c708482cdc0902"
+    },
+    {
+      "path": "data/geographic_sample/source/rgi_distribution_index.headers",
+      "bytes": 250,
+      "sha256": "0980053bde6f39cb2e5f7f699fe5d3bdea24415a76d40b1ddf409f8fbd14fbda"
+    },
+    {
+      "path": "data/geographic_sample/source/rgi_region_definitions.html",
+      "bytes": 30100,
+      "sha256": "744a3978a7501557dc6913c01560f680f04c150667ff8a1cfb2f453537930c1f"
+    },
+    {
+      "path": "data/geographic_sample/source/rgi_region_definitions.headers",
+      "bytes": 327,
+      "sha256": "06ce7ce8d6065ef93e854c18a3743a33285e08789b639ba8c7db3b7b8cf73d09"
+    },
+    {
+      "path": "data/area_convergence/source/rgi_nsidc_collection_metadata.json",
+      "bytes": 16776,
+      "sha256": "7ead9c78b539de614305b271c9519d308333678c1b8f3096c65764b7261b02d2"
+    },
+    {
+      "path": "data/area_convergence/source/pzi_README.txt",
+      "bytes": 4417,
+      "sha256": "641f26fb219ddec315d0bfde21e42ef405eea81d22f08752f8ad7c15d307d635"
+    },
+    {
+      "path": "data/area_convergence/source/pzi.hdr",
+      "bytes": 158,
+      "sha256": "c549b0f14054a44a548d20141c0ad8c4064ae1c2b857ecfddbb16c587835f1f6"
+    }
+  ],
+  "region_20": {
+    "name": "Antarctic Mainland",
+    "archive": null,
+    "published_glacier_count": 0,
+    "treatment": "explicit zero; no synthetic archive"
+  }
+}

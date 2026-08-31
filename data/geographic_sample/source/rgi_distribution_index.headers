@@ -1,0 +1,9 @@
+HTTP/2 200 
+strict-transport-security: max-age=31536000; preload
+x-frame-options: SAMEORIGIN
+x-content-type-options: nosniff
+content-length: 4151
+content-type: text/html;charset=ISO-8859-1
+date: Mon, 31 Aug 2026 16:36:11 GMT
+server: Apache
+
