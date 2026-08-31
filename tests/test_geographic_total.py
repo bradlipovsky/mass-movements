@@ -1,0 +1,45 @@
+import hashlib, unittest
+from pathlib import Path
+import numpy as np, pandas as pd
+from scripts.geographic_total import HASHES, coverage_estimates, diagnostics, estimates, verify
+from scripts.geographic_total_source import OUTPUT, cell_label, cells, dem_requests, expected_dem_ids, grid, pzi_request, pzi_requests
+class GeographicTotalTests(unittest.TestCase):
+    def test_frozen_request_universe_and_edges(self):
+        self.assertEqual((len(cells()), len(dem_requests()), len(pzi_requests())), (96, 776, 54))
+        self.assertEqual((pzi_request(-60)["row0"], pzi_request(-60)["rows"], pzi_request(-60)["byte_end"]), (17868, 132, 3110399999))
+        self.assertEqual(pzi_request(-59)["rows"], 144)
+        self.assertEqual(len(expected_dem_ids(0, 179)), 9)
+        self.assertTrue(any("W180" in item for item in expected_dem_ids(0, 179)))
+        self.assertEqual(cell_label(-6, 7), "s-006_w+0007")
+    def test_grids_and_frozen_programs(self):
+        shape, affine, _ = grid(0, 0, "p00")
+        self.assertEqual((shape[0] % 3, shape[1] % 3, affine.c % 30, affine.f % 30), (0, 0, 0, 0))
+        verify()
+        for name, expected in HASHES.items(): self.assertEqual(hashlib.sha256(Path(name).read_bytes()).hexdigest(), expected)
+    def test_ht_variance_covariance_and_conservative_zero_rse(self):
+        rows=[]
+        for key, g, p in (("a", 1., 2.), ("b", 3., 6.)):
+            for outcome, value in (("glacier_proximity", g), ("permafrost", p)):
+                rows.append(dict(cell_key=key, stratum=outcome, dominant_region="01", stratum_population_cells=4,
+                    stratum_sample_cells=2, inclusion_probability=.5, reference_equivalent_area_m2=value, cell_quality_pass="yes"))
+        strata, covariance, totals = estimates(pd.DataFrame(rows))
+        np.testing.assert_allclose(totals.estimated_total_m2, [8, 16]); np.testing.assert_allclose(totals.SE_m2, np.sqrt([8, 32]))
+        self.assertEqual((len(strata), len(covariance), covariance.iloc[0].covariance_contribution_m4), (2, 1, 16))
+        self.assertTrue((totals.precision_pass == "no").all())
+        _, _, zero = estimates(pd.DataFrame(rows).assign(reference_equivalent_area_m2=1.))
+        self.assertTrue((zero.precision_pass == "no").all() and np.isinf(zero.degrees_of_freedom).all())
+    def test_structural_zero_uses_mask_specific_coverage(self):
+        cell = cells().iloc[0]; key = cell.cell_key; variants = ["p00", "p10", "p01", "p11", "r90"]
+        records = pd.DataFrame([dict(window_key=key, stratum="glacier_proximity", variant=v, equivalent_steep_area_m2=0.) for v in variants])
+        coverage = pd.DataFrame([dict(cell_key=key, glacier_proximity_center_count=2,
+            glacier_proximity_complete_dem_count=1, outside_RGI_center_count=1, outside_RGI_finite_PZI_count=1,
+            PZI_mask_center_count=0, PZI_mask_complete_dem_count=0) for _ in variants])
+        result = diagnostics(records, coverage).iloc[0]
+        self.assertEqual((result.structural_zero, result.coverage_limited_zero, result.adequate_coverage_zero, result.phase_cv), ("yes", "yes", "no", 0))
+    @unittest.skipUnless((OUTPUT / "source_replay.csv").exists(), "source staging pending")
+    def test_source_freeze_replay_and_schema(self):
+        replay=pd.read_csv(OUTPUT / "source_replay.csv"); coverage=pd.read_csv(OUTPUT / "source_coverage.csv")
+        self.assertEqual((len(replay), len(coverage), replay.value_sha256.equals(replay.replay_value_sha256)), (480, 480, True))
+        self.assertTrue(replay[["stored_crs_equal", "replay_affine_equal", "finite_mask_equal"]].all().all())
+        self.assertTrue((replay.replay_max_abs_difference == 0).all())
+if __name__ == "__main__": unittest.main()
