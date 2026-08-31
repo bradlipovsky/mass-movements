@@ -1,0 +1,160 @@
+{
+  "manifest_version": "1.0",
+  "created_utc": "2026-08-31T05:49:52Z",
+  "protocol_commit": "8c5f70c5fde0dd0e4b65fb0bff1c8045b814ac43",
+  "region_selection_commit": "cefee745cffaa00a7a6bea80cb694f1ce4a17c15",
+  "implementation_commit": "b144b8af12e389a19bac523bb16c8bed096e7e51",
+  "registered_code_budget": {
+    "analysis_lines": 219,
+    "new_test_lines": 140,
+    "downstream_test_delta_lines": 7,
+    "notebook_code_lines": 48,
+    "total_lines": 414,
+    "limit_lines": 420
+  },
+  "execution": {
+    "area_rows": 225,
+    "window_decisions": 6,
+    "byte_identical_table_rerun": true,
+    "dem_phase_files": 12,
+    "byte_identical_dem_source_replay": 12,
+    "pzi_subsets": 3,
+    "pzi_value_replays_agree": 3,
+    "remote_records": 34,
+    "range_records": 3,
+    "local_source_objects": 24
+  },
+  "registered_bounds": {
+    "maximum_90m_fractional_departure": 0.2,
+    "maximum_30m_phase_cv": 0.1,
+    "all_windows_required": true
+  },
+  "results": {
+    "03": {
+      "glacier_contact": {
+        "reference_area_m2": 34632900.0,
+        "area_90m_m2": 25393500.0,
+        "departure_90m": 0.2667810088095423,
+        "phase_cv": 0.0016538565128108,
+        "window_pass": "no"
+      },
+      "permafrost": {
+        "reference_area_m2": 269628300.0,
+        "area_90m_m2": 191111400.0,
+        "departure_90m": 0.2912042244823707,
+        "phase_cv": 0.0005574082582616,
+        "window_pass": "no"
+      }
+    },
+    "07": {
+      "glacier_contact": {
+        "reference_area_m2": 10592100.0,
+        "area_90m_m2": 6714900.0,
+        "departure_90m": 0.3660463930665307,
+        "phase_cv": 0.0022845914236104,
+        "window_pass": "no"
+      },
+      "permafrost": {
+        "reference_area_m2": 35046000.0,
+        "area_90m_m2": 21951000.0,
+        "departure_90m": 0.3736517719568567,
+        "phase_cv": 0.0013701153900234,
+        "window_pass": "no"
+      }
+    },
+    "08": {
+      "glacier_contact": {
+        "reference_area_m2": 2512800.0,
+        "area_90m_m2": 2494800.0,
+        "departure_90m": 0.0071633237822349,
+        "phase_cv": 0.0037457458863219,
+        "window_pass": "yes"
+      },
+      "permafrost": {
+        "reference_area_m2": 160476300.0,
+        "area_90m_m2": 137659500.0,
+        "departure_90m": 0.1421817427246266,
+        "phase_cv": 0.0004380158953599,
+        "window_pass": "yes"
+      }
+    }
+  },
+  "stratum_pass": {
+    "glacier_contact": "no",
+    "permafrost": "no"
+  },
+  "files": {
+    "protocol/susceptible-area-convergence.md": {
+      "size_bytes": 9109,
+      "sha256": "0398077b91333f679742f2138c9a09ffce8b2bd29d93fdcdba1fcaea50538e02"
+    },
+    "data/area_convergence/region_selection.csv": {
+      "size_bytes": 1506,
+      "sha256": "be732ca7ec19c90d665092a8afa2921bb4ec6b7782d70817f487d40e8c1213b2"
+    },
+    "data/area_convergence/eligible_windows.csv": {
+      "size_bytes": 26508,
+      "sha256": "ba4f67c0a8df14791cddac212a21a75ee5f3aaf7ec60bcf420ce230cf6eb1e83"
+    },
+    "data/area_convergence/windows.csv": {
+      "size_bytes": 505,
+      "sha256": "fdac21395c4146e3ac029b3ae6e73f114a9550d4841ae527115a3abe834397e2"
+    },
+    "data/area_convergence/PROVENANCE.md": {
+      "size_bytes": 4548,
+      "sha256": "79de95d3d2e51549dac52d58f22964fb26f0ad70aef36816d1c96eb4f7d7aef8"
+    },
+    "data/area_convergence/source_manifest.json": {
+      "size_bytes": 37906,
+      "sha256": "0d7c43500806c8646ef1c2f19fcb1edfc0d1175b81dac7456bec54aa5d2b273f"
+    },
+    "data/area_convergence/area_long.csv": {
+      "size_bytes": 59713,
+      "sha256": "84ce033857f3ed4f879f818016912abd55361f1a75c57c38b6740a20da346990"
+    },
+    "data/area_convergence/decisions.csv": {
+      "size_bytes": 853,
+      "sha256": "7caee41d66625f0198b2cc23334cb6c55d538b1acd4ca93e211d354a6e1c9890"
+    },
+    "scripts/susceptible_area_convergence.py": {
+      "size_bytes": 9274,
+      "sha256": "9ac2644257ce1ba90bd8f2edbc6e9b47ea152fa02304b0c4b994e495a512b20c"
+    },
+    "tests/test_susceptible_area_convergence.py": {
+      "size_bytes": 7559,
+      "sha256": "bfdef9d55cd6494f06d9a1272132af7c6071336787f31a605ef020e1c6951fac"
+    },
+    "tests/test_denominator_pilot.py": {
+      "size_bytes": 9706,
+      "sha256": "fa033b9fedb37f2be0adde1ae2067e540b7d3d1c87bb5f0205dc11b9a39df38e"
+    },
+    "notebooks/susceptible_area_convergence.ipynb": {
+      "size_bytes": 218393,
+      "sha256": "c03368957c06d958d24401abee5292ca915739709a9e3506ed285c32bc61df95"
+    },
+    "figures/area_convergence.png": {
+      "size_bytes": 374709,
+      "sha256": "c6a9f0f82c1cd876d1e6b7c1fa68a8665a06d0a782d172744460ed344c3840de"
+    },
+    "figures/area_convergence.pdf": {
+      "size_bytes": 25303,
+      "sha256": "dd91d902df95e1ca7dac9f605a10c05ee9b305d5eddfd4b65ae0ff43aa6ecb68"
+    },
+    "latex/main.tex": {
+      "size_bytes": 46121,
+      "sha256": "a8d3b058800dfae5de6cc4b8236b63bab8ec8687d65619120c2719d52c6ef786"
+    },
+    "latex/main.pdf": {
+      "size_bytes": 552958,
+      "sha256": "e543349584f6f01b520d3589109680f3457c66545864885727043dd0287e90cb"
+    },
+    "README.md": {
+      "size_bytes": 2830,
+      "sha256": "faa5fb6a792eff6a4c8619ee91bb6e513c9ac5f2935a7b264c18a587328f8b3e"
+    },
+    "Makefile": {
+      "size_bytes": 2345,
+      "sha256": "ade0c371618ddecd5bc9912eb17511e783db2d50ab08b464d950608881297fb3"
+    }
+  }
+}

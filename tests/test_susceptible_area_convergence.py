@@ -122,6 +122,11 @@ class SusceptibleAreaConvergenceTests(unittest.TestCase):
         self.assertEqual(set(areas.variant), {*PHASES, "r90"})
         self.assertTrue((decisions.phase_pass == "yes").all())
         self.assertTrue((decisions.stratum_pass == "no").all())
+        freeze = json.loads(Path("data/area_convergence/freeze_manifest.json").read_text())
+        self.assertLessEqual(freeze["registered_code_budget"]["total_lines"], 420)
+        for file_name, item in freeze["files"].items():
+            self.assertEqual(hashlib.sha256(Path(file_name).read_bytes()).hexdigest(),
+                             item["sha256"])
 
     def test_program_contains_no_forbidden_input(self):
         for path in (Path("scripts/susceptible_area_convergence.py"),
