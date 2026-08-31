@@ -1,9 +1,11 @@
 # Susceptible-terrain denominator pilot
 
-Version 0.2. Version 0.1 was registered on 30 August 2026 before any RGI,
+Version 0.3. Version 0.1 was registered on 30 August 2026 before any RGI,
 Copernicus DEM, permafrost-index, or ITS_LIVE product value was read. The
 access amendment below was registered after Earthdata authentication failed
-and before any product value was read. GitHub issue
+and before any product value was read. The contact-distance correction below
+was registered after blind RGI window selection but before any terrain or PZI
+value was read. GitHub issue
 [#9](https://github.com/bradlipovsky/mass-movements/issues/9) is the public
 registration record.
 
@@ -155,7 +157,7 @@ later checks can reconstruct counts.
 
 For glacier-contact terrain, compute outside-glacier edge distance from the
 raster mask as
-`max(0, (euclidean_distance_to_glacier_center - 0.5) * r)`. Thus an
+`max(0, (euclidean_distance_to_glacier_center - 1) * r)`. Thus an
 edge-sharing outside cell has zero contact distance. Calculate all combinations
 of slope threshold 25, 30, and 35 degrees and maximum contact distance 0, 100,
 and 300 m. The registered primary combination is 30 degrees and 100 m.
@@ -245,3 +247,10 @@ recomputing.
   Preserve the NSIDC-0770 version and citation, record the access-copy URLs and
   hashes, and stop on any filename or internal-metadata mismatch. This changes
   the access route only; the selection rule and all endpoints are unchanged.
+- 30 August 2026: correct the glacier-contact distance formula from a half-cell
+  to a one-cell subtraction. The earlier formula was internally inconsistent:
+  an edge-sharing outside cell is one grid spacing from the nearest glacier
+  cell center, so subtracting half a cell did not yield the stated zero edge
+  distance. This correction was made after the blind windows were selected but
+  before any DEM, slope, contact, or PZI value was read. Thresholds and windows
+  are unchanged.
