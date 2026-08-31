@@ -3,8 +3,8 @@
   "created_utc": "2026-08-31T14:35:19Z",
   "purpose": "Seal the inventory-only blind-transfer selection before any selected-window elevation or permafrost value is accessed.",
   "registration_commit": "882a39ed0c1e7257cf90e0e022cd5dd08a031257",
-  "registered_estimator_sha256": "15f7f8fd64f5d499f323ca7e12049322abe5cf5e85f0aee54eb0e13fc8f7e231",
-  "registered_estimator_preoutput_commit": "acec640",
+  "registered_estimator_sha256": "15f7bff92b7ae44e5f64eac0db70598eb0f318f9a6ac5e2e689e5de9bc89e231",
+  "registered_estimator_preoutput_commit": "acec6401bfa02b20d375e03d3eb82910148edf90",
   "preterrain_boundary": {
     "dem_accessed": false,
     "pzi_accessed": false,
