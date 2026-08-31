@@ -62,7 +62,11 @@ windows. All eight glacier- and permafrost-stratum checks meet the registered
 numerical bounds: 90~m departures are 1.8--5.3\% and four-phase coefficients
 of variation are 0.000061--0.00375. The windows are not a probability sample,
 so this result tests numerical transfer rather than physical susceptibility or
-global representativeness. I then specify detrended seasonal controls,
+global representativeness. A subsequent public, signed-beacon draw selects 96
+cells from a frozen 1,826-cell near-global RGI 7-intersecting frame with known
+geographic inclusion probabilities. Terrain outcomes remain unopened, so this
+establishes sampling support rather than a susceptibility total or
+physical-validation result. I then specify detrended seasonal controls,
 matched non-failing slopes, mechanism-specific glacier and permafrost
 observations, and multiplicity control. Uneven observation and unresolved
 primary sources prevent these counts from estimating a frequency trend. No
@@ -607,6 +611,65 @@ equivalent-area denominator.
 \end{figure}
 \clearpage
 
+\subsection{Geographic probability sample}
+
+The numerical transfer result motivates a finite-population estimate, but its
+four windows cannot supply one. Before opening any new DEM or PZI value, a
+registered design intersected unique RGI 7 glacier outlines with global
+1$^\circ$ reporting cells. It retained cells from 60$^\circ$S through
+89$^\circ$N having positive glacier-intersection area. Where outlines from
+several RGI regions entered one cell, the region having the greatest geodesic
+union area defined its sampling stratum. This produced 1,826 cells in 19
+nonempty regional strata. RGI reports zero glaciers in region 20; accordingly,
+no archive is distributed and its frame population is zero. Independent
+reconstruction from all 19 source archives reproduced 274,531 unique features,
+the complete frame, its regional ownership, and its byte hash.
+
+The fixed total sample size was 96. Each non-census stratum first received four
+cells, and remaining cells were assigned by the registered quotient rule. The
+realized allocations are 4--12 cells per nonempty region. After the exact frame
+commit was posted publicly, the protocol imposed a one-hour delay and requested
+the first NIST Randomness Beacon 2.0 pulse after the resulting target. The
+signed pulse occurred 34~s after that target. Its certificate identifier,
+certificate path and validity, current and preceding RSA signatures, output
+hashes, pulse link, 60-s index step, and precommitment all verify independently.
+The verified 512-bit output keyed the frozen HMAC ordering; it did not change
+the frame or allocations.
+
+Figure~\ref{fig:geographic-sample} shows the complete draw. All 1,826 cell
+digests are unique, and each regional selected set is the registered prefix.
+Thus every cell has first-order probability $n_h/N_h$, and two distinct cells
+in the same stratum have joint probability
+$n_h(n_h-1)/[N_h(N_h-1)]$; probabilities multiply across strata. A retained
+chance-balance diagnostic shows that none of the 56 frame cells intersected by
+more than one RGI region appears in the sample. Under the registered stratified
+design, the probability of zero is 0.0121. This is not a replacement or redraw
+criterion, but it prevents interpreting the realized sample as observed
+cross-region coverage.
+
+This draw supplies known inclusion probabilities for later Horvitz--Thompson
+totals of glacier-outline-proximity and PZI-intersection equivalent steep area.
+It does not yet estimate either total: no selected-cell elevation, steepness,
+glacier-distance, or PZI value has been opened. The two masks may overlap and
+will remain separate outcomes unless their union is calculated directly under
+a later frozen execution.
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=\textwidth]{../figures/geographic_probability_sample.pdf}
+  \caption{Frozen geographic probability frame and signed-beacon draw. (a)
+  Centers of all 1,826 eligible 1$^\circ$ cells and the 96 selected cells. The
+  probability of selecting none of the 56 multi-region cells is a
+  post-randomization balance diagnostic under the frozen design; no redraw was
+  made. (b) Selected count in each of 19 nonempty dominant-region strata;
+  population counts appear below the region codes. Empty RGI region 20 is
+  shown with $N_{20}=n_{20}=0$. The figure describes sampling support only;
+  no DEM, PZI, climate, event, or terrain-outcome value entered the frame or
+  draw.}
+  \label{fig:geographic-sample}
+\end{figure}
+\clearpage
+
 \section{Event-centered climate test}
 
 For each frozen event candidate, reanalysis will provide near-surface air
@@ -882,9 +945,12 @@ criterion. The composite reduces departure in five of six paired development
 diagnostics. Its unchanged blind calculation then passes all eight registered
 checks in four hash-selected windows. This closes a numerical transfer test,
 but the windows have no geographic inclusion probabilities and the strata have
-not been tested against failure observations. A new geographic protocol must
-therefore freeze a probability sampling frame before estimating a global
-denominator. Physical validation and any later association analysis also
+not been tested against failure observations. The subsequent geographic design
+freezes 1,826 RGI 7-intersecting reporting cells and selects 96 with known
+probabilities. None of the selected cells crosses an RGI-region boundary, a
+1.21\% chance outcome retained without redraw. Terrain values remain unopened,
+so the design does not yet estimate either susceptible-area total. Physical
+validation and any later association analysis also
 require matched non-failing slopes, glacier-contact histories, deformation
 records, permafrost proxies, additional meteorological variables, and a frozen
 statistical specification. Only then can the study estimate whether hazardous
@@ -919,10 +985,13 @@ lower in five of six paired diagnostics. Its unchanged blind calculation gives
 0.00375 in four additional hash-selected windows; all eight registered checks
 pass. This establishes numerical transfer only. The windows are not a
 probability sample, and the calculation has not been tested against failing and
-non-failing slopes. Geographic sampling, detrended seasonal controls, and
-explicit competing predictions therefore remain future tests. The present
-contribution is a sampling frame, protocol, and exposure-sensitivity result,
-not evidence that warming systematically triggered these events.
+non-failing slopes. A later signed-beacon draw supplies a separate 96-cell
+probability sample from 1,826 RGI 7-intersecting cells, but opens no terrain
+outcome. Calculating design-based glacier- and permafrost-proximity totals,
+detrended seasonal controls, and explicit competing predictions therefore
+remain future tests. The present contribution is a sampling frame, protocol,
+and exposure-sensitivity result, not evidence that warming systematically
+triggered these events.
 
 \bibliographystyle{plainnat}
 \bibliography{references}
