@@ -1,7 +1,9 @@
 # Susceptible-terrain denominator pilot
 
-Version 0.1. Registered on 30 August 2026 before any RGI, Copernicus DEM,
-permafrost-index, or ITS_LIVE product value was read. GitHub issue
+Version 0.2. Version 0.1 was registered on 30 August 2026 before any RGI,
+Copernicus DEM, permafrost-index, or ITS_LIVE product value was read. The
+access amendment below was registered after Earthdata authentication failed
+and before any product value was read. GitHub issue
 [#9](https://github.com/bradlipovsky/mass-movements/issues/9) is the public
 registration record.
 
@@ -67,6 +69,11 @@ Earth snapshot.
 - **Glacier outlines:** Randolph Glacier Inventory 7.0, NSIDC-0770,
   DOI `10.5067/F6JMOVY5NAVZ`. Use the glacier product in WGS84. The inventory
   targets a nominal epoch near 2000, with outline dates retained per object.
+  Version 0.2 permits the identically named regional archives in the
+  `rgi70_official` directory on the RGI production team's Bremen server, which
+  is linked from the GLIMS-RGI generation repository. Record this as an access
+  copy, not as proven byte identity with the inaccessible NSIDC object. Require
+  the registered 7.0 names and internal metadata and record a local SHA-256.
 - **Surface elevation:** Copernicus DEM GLO-30, 2021 release, from the public
   `copernicus-dem-30m` AWS registry. Use the native 1 arc-second COG values,
   not web-map overviews. This is a digital surface model; its gradient is not
@@ -232,4 +239,9 @@ recomputing.
 
 ## Amendment log
 
-None.
+- 30 August 2026: the local Earthdata netrc and cookie flows both returned an
+  OAuth 401 before any RGI record was read. Permit the RGI production team's
+  version-matched `rgi70_official` access copy for regions 01, 11, and 13.
+  Preserve the NSIDC-0770 version and citation, record the access-copy URLs and
+  hashes, and stop on any filename or internal-metadata mismatch. This changes
+  the access route only; the selection rule and all endpoints are unchanged.
