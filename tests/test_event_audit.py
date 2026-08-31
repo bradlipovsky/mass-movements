@@ -1,4 +1,5 @@
 import csv
+import json
 import unittest
 from datetime import datetime, timezone
 
@@ -66,6 +67,14 @@ class EventAuditArtifactTest(unittest.TestCase):
             with path.open(newline="", encoding="utf-8") as handle:
                 fields = set(csv.DictReader(handle).fieldnames or [])
             self.assertTrue(fields.isdisjoint(forbidden), (path, fields & forbidden))
+
+    def test_notebook_is_climate_blind_and_within_review_budget(self):
+        path = audit.ROOT / "notebooks" / "source_time_audit.ipynb"
+        notebook = json.loads(path.read_text(encoding="utf-8"))
+        source = "\n".join("".join(cell.get("source", [])) for cell in notebook["cells"])
+        code_lines = sum(len(cell.get("source", [])) for cell in notebook["cells"] if cell["cell_type"] == "code")
+        self.assertNotIn("data/reanalysis", source.lower())
+        self.assertLessEqual(code_lines, 135)
 
 
 if __name__ == "__main__":
