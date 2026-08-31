@@ -1,15 +1,16 @@
 {
   "manifest_version": "1.0",
-  "created_utc": "2026-08-31T05:49:52Z",
-  "protocol_commit": "8c5f70c5fde0dd0e4b65fb0bff1c8045b814ac43",
+  "created_utc": "2026-08-31T06:10:56Z",
+  "original_registration_commit": "1f43c0d7c335762980b2e97827aef89b6d6dab9a",
+  "protocol_amendment_and_window_freeze_commit": "8c5f70c5fde0dd0e4b65fb0bff1c8045b814ac43",
   "region_selection_commit": "cefee745cffaa00a7a6bea80cb694f1ce4a17c15",
-  "implementation_commit": "b144b8af12e389a19bac523bb16c8bed096e7e51",
+  "implementation_commit": "4cd5e2f73acc36a23314f7d1dcba22d4d07af929",
   "registered_code_budget": {
     "analysis_lines": 219,
-    "new_test_lines": 140,
+    "new_test_lines": 145,
     "downstream_test_delta_lines": 7,
     "notebook_code_lines": 48,
-    "total_lines": 414,
+    "total_lines": 419,
     "limit_lines": 420
   },
   "execution": {
@@ -17,12 +18,14 @@
     "window_decisions": 6,
     "byte_identical_table_rerun": true,
     "dem_phase_files": 12,
-    "byte_identical_dem_source_replay": 12,
+    "value_identical_dem_source_replay": 12,
+    "dem_replay_rows": 12,
+    "source_coverage_rows": 12,
     "pzi_subsets": 3,
     "pzi_value_replays_agree": 3,
-    "remote_records": 34,
+    "remote_records": 35,
     "range_records": 3,
-    "local_source_objects": 24
+    "local_source_objects": 25
   },
   "registered_bounds": {
     "maximum_90m_fractional_departure": 0.2,
@@ -101,12 +104,24 @@
       "sha256": "fdac21395c4146e3ac029b3ae6e73f114a9550d4841ae527115a3abe834397e2"
     },
     "data/area_convergence/PROVENANCE.md": {
-      "size_bytes": 4548,
-      "sha256": "79de95d3d2e51549dac52d58f22964fb26f0ad70aef36816d1c96eb4f7d7aef8"
+      "size_bytes": 7200,
+      "sha256": "0736921a9817ec0b43a02bdd86555044504c8b1516bf88f0175f24f5de778249"
     },
     "data/area_convergence/source_manifest.json": {
-      "size_bytes": 37906,
-      "sha256": "0d7c43500806c8646ef1c2f19fcb1edfc0d1175b81dac7456bec54aa5d2b273f"
+      "size_bytes": 41304,
+      "sha256": "db8b1464ffd8f0d055f9e8c384239763e2a8bf8f778e3fc43e85e23543daa89d"
+    },
+    "data/area_convergence/dem_replay.csv": {
+      "size_bytes": 5600,
+      "sha256": "6707ebaa89c7c9d28beb98115cf7344b897ef60447ee1e64901875827d768067"
+    },
+    "data/area_convergence/source_coverage.csv": {
+      "size_bytes": 764,
+      "sha256": "74343a9830e874ffe870270c0112df8c109c80c3fbbb05fcf2a04d2c85f36730"
+    },
+    "data/area_convergence/source/rgi_nsidc_collection_metadata.json": {
+      "size_bytes": 16776,
+      "sha256": "7ead9c78b539de614305b271c9519d308333678c1b8f3096c65764b7261b02d2"
     },
     "data/area_convergence/area_long.csv": {
       "size_bytes": 59713,
@@ -121,8 +136,8 @@
       "sha256": "9ac2644257ce1ba90bd8f2edbc6e9b47ea152fa02304b0c4b994e495a512b20c"
     },
     "tests/test_susceptible_area_convergence.py": {
-      "size_bytes": 7559,
-      "sha256": "bfdef9d55cd6494f06d9a1272132af7c6071336787f31a605ef020e1c6951fac"
+      "size_bytes": 7949,
+      "sha256": "812407b78cd7f164b91f2565f247c46c6e119025ce3b17db14079b383c352e02"
     },
     "tests/test_denominator_pilot.py": {
       "size_bytes": 9706,
@@ -141,12 +156,12 @@
       "sha256": "dd91d902df95e1ca7dac9f605a10c05ee9b305d5eddfd4b65ae0ff43aa6ecb68"
     },
     "latex/main.tex": {
-      "size_bytes": 46121,
-      "sha256": "a8d3b058800dfae5de6cc4b8236b63bab8ec8687d65619120c2719d52c6ef786"
+      "size_bytes": 46866,
+      "sha256": "5f1bb5b46b5fffc3c39d7a80adcee12a772ae6d1c493c21b33084d24978492ac"
     },
     "latex/main.pdf": {
-      "size_bytes": 552958,
-      "sha256": "e543349584f6f01b520d3589109680f3457c66545864885727043dd0287e90cb"
+      "size_bytes": 553867,
+      "sha256": "d07b200a127daf627ada59e8c0373dd5c16d7fe2ba24becee30b7502edfb91a4"
     },
     "README.md": {
       "size_bytes": 2830,
