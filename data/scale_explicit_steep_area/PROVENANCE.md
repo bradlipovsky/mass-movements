@@ -32,7 +32,15 @@ diagnostic in five of six cases and larger for Scandinavia glacier proximity
 (0.007163 to 0.036904). This comparison describes the registered composite;
 it does not identify a responsible operation or validate the method.
 
+An independent reviewer later repeated the complete analysis from the same
+committed program into an isolated temporary directory. Both CSV files were
+byte-identical to the archived outputs; the review did not overwrite them.
+
 The executed notebook reads only the two derived tables and creates the PDF
 and PNG figure. The manuscript PDF was compiled with `latexmk -pdf -cd
-latex/main.tex`. A final machine-readable manifest is added only after
-independent review of the committed result state.
+latex/main.tex`. Notebook and PDF generators embed execution or creation
+timestamps, so their final hashes identify reviewed snapshots rather than a
+claim of byte-identical regeneration. Tests instead require exact scientific
+CSV bytes and semantic agreement of the notebook inputs and plotted values. A
+final machine-readable manifest is added only after independent review of the
+committed result state.

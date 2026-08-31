@@ -65,7 +65,9 @@ check-scale-explicit:
 notebook-scale-explicit:
 	PATH="$(dir $(PYTHON_REANALYSIS)):$$PATH" $(JUPYTER_REANALYSIS) execute --inplace --timeout 600 --kernel_name python3 notebooks/scale_explicit_steep_area.ipynb
 
-artifacts-scale-explicit: scale-explicit notebook-scale-explicit check-scale-explicit
+artifacts-scale-explicit: scale-explicit
+	$(MAKE) notebook-scale-explicit PYTHON_REANALYSIS=$(PYTHON_REANALYSIS) JUPYTER_REANALYSIS=$(JUPYTER_REANALYSIS)
+	$(MAKE) check-scale-explicit PYTHON_REANALYSIS=$(PYTHON_REANALYSIS)
 	latexmk -pdf -cd latex/main.tex
 
 clean:

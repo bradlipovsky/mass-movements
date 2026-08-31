@@ -1,3 +1,4 @@
+import hashlib, json, subprocess
 import unittest
 from pathlib import Path
 
@@ -140,6 +141,34 @@ class ScaleExplicitSteepAreaTests(unittest.TestCase):
         self.assertEqual(set(long.variant), {*PHASES, "r90"})
         self.assertEqual(set(long.stratum), {"glacier_proximity", "permafrost"})
         self.assertFalse(any("pass" in column for column in (*long.columns, *diagnostics.columns)))
+        self.assertEqual(list(long.columns), "region,region_name,south,west,window_key,window_sha256,variant,spacing_m,phase_x_m,phase_y_m,support_radius_m,ramp_lower_deg,ramp_upper_deg,report_cell_count,support_disk_cell_count,complete_support_cell_count,stratum,mask_definition,stratum_center_count,integration_cell_count,weighted_cell_sum,equivalent_steep_area_m2,reference_equivalent_area_m2,area_ratio,fractional_departure,structural_zero".split(","))
+        self.assertEqual(list(diagnostics.columns), "region,stratum,reference_equivalent_area_m2,area_90m_m2,departure_90m,phase_mean_area_m2,phase_cv,structural_zero,zero_reference_positive_variant,hard_threshold_departure_90m,reference_departure_bound,reference_phase_cv_bound,interpretation".split(","))
+        self.assertFalse(long.duplicated(["region", "stratum", "variant"]).any())
+        self.assertEqual(set(zip(long.support_radius_m, long.ramp_lower_deg, long.ramp_upper_deg)), {(300, 25, 35)})
+        self.assertEqual(set(zip(long.variant, long.spacing_m, long.phase_x_m, long.phase_y_m, long.support_disk_cell_count)), {("p00", 30, 0, 0, 317), ("p10", 30, 15, 0, 317), ("p01", 30, 0, 15, 317), ("p11", 30, 15, 15, 317), ("r90", 90, 0, 0, 37)})
+        self.assertTrue(((long.integration_cell_count <= long.stratum_center_count) & (long.integration_cell_count <= long.complete_support_cell_count) & (long.complete_support_cell_count <= long.report_cell_count)).all())
+        self.assertTrue(np.isfinite(long[["weighted_cell_sum", "equivalent_steep_area_m2", "area_ratio", "fractional_departure"]]).all().all() and (long[["weighted_cell_sum", "equivalent_steep_area_m2", "area_ratio", "fractional_departure"]] >= 0).all().all())
+        np.testing.assert_allclose(long.equivalent_steep_area_m2, long.weighted_cell_sum * long.spacing_m**2)
+        for observed, expected in ((long.area_ratio, long.equivalent_steep_area_m2 / long.reference_equivalent_area_m2), (long.fractional_departure, abs(long.equivalent_steep_area_m2 / long.reference_equivalent_area_m2 - 1))): np.testing.assert_allclose(observed, expected)
+        hard = pd.read_csv("data/area_convergence/decisions.csv", dtype={"region": str})
+        for row in diagnostics.itertuples(index=False):
+            group = long[(long.region == row.region) & (long.stratum == row.stratum)].set_index("variant")
+            phases = group.loc[list(PHASES), "equivalent_steep_area_m2"].to_numpy()
+            self.assertAlmostEqual(row.departure_90m, abs(group.at["r90", "equivalent_steep_area_m2"] / group.at["p00", "equivalent_steep_area_m2"] - 1))
+            self.assertAlmostEqual(row.phase_cv, np.std(phases) / np.mean(phases))
+            hard_stratum = "glacier_contact" if row.stratum == "glacier_proximity" else row.stratum
+            self.assertAlmostEqual(row.hard_threshold_departure_90m, hard[(hard.region == row.region) & (hard.stratum == hard_stratum)].departure_90m.iloc[0])
+        for path in ("data/scale_explicit_steep_area/equivalent_area_long.csv", "data/scale_explicit_steep_area/diagnostics.csv"):
+            self.assertTrue(Path(path).read_bytes().endswith(b"\n") and b"\r" not in Path(path).read_bytes())
+
+    @unittest.skipUnless(Path("data/scale_explicit_steep_area/freeze_manifest.json").exists(), "final freeze pending")
+    def test_final_freeze_manifest(self):
+        manifest = json.loads(Path("data/scale_explicit_steep_area/freeze_manifest.json").read_text())
+        self.assertLessEqual(manifest["code_budget"]["total_lines"], 400)
+        for path, item in manifest["files"].items():
+            raw = (subprocess.check_output(["git", "show", f'{manifest["artifact_commit"]}:{path}'])
+                   if item["snapshot_at_artifact_commit"] else Path(path).read_bytes())
+            self.assertEqual((len(raw), hashlib.sha256(raw).hexdigest()), (item["bytes"], item["sha256"]))
 
 
 if __name__ == "__main__":
