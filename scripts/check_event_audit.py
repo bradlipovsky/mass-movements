@@ -11,6 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "event_audit"
 FREEZE = "35d392944fef43aeb4084e023bc1fa9470728fab"
+AUDIT_PROTOCOL = "46ef8acac00348d6e09b07763eed16de93797670"
 FILES = {
     "summary": DATA / "summary.csv",
     "coordinates": DATA / "coordinate_assertions.csv",
@@ -274,6 +275,8 @@ def validate_manifest(errors):
     manifest = json.loads(path.read_text(encoding="utf-8"))
     if manifest["discovery_freeze_commit"] != FREEZE:
         errors.append("manifest discovery freeze commit changed")
+    if manifest["audit_protocol_commit"] != AUDIT_PROTOCOL:
+        errors.append("manifest audit protocol commit changed")
     for name, file_path in FILES.items():
         expected = manifest.get("files", {}).get(str(file_path.relative_to(ROOT)))
         if expected != file_sha256(file_path):
