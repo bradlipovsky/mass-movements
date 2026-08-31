@@ -323,10 +323,13 @@ covariate.
 A denominator for an incidence calculation must be constructed without using
 the failures it will later explain. I therefore registered a terrain pilot
 before reading source-product values. It fixes RGI 7.0 regions 01, 11, and 13
-and chooses one $1^\circ$ window per region using only glacier centroids and
-catalog areas \citep{RGI7}. Eligible cells contain at least 10 glacier
-centroids and 1~km$^2$ of summed glacier area; the cell with the smallest
-SHA-256 digest of its region and integer edges is selected. This rule gives
+and chooses one $1^\circ$ window per region using only catalog fields
+\citep{RGI7}. The selector uses the archived \texttt{cenlon} and
+\texttt{cenlat} points, which the RGI metadata describes as approximately
+central points within the outlines rather than geometric centroids. Eligible
+cells contain at least 10 such points and 1~km$^2$ of summed glacier area; the
+cell with the smallest SHA-256 digest of its region and integer edges is
+selected. This rule gives
 58--59$^\circ$N, 155--154$^\circ$W in Alaska; 45--46$^\circ$N,
 7--8$^\circ$E in Central Europe; and 43--44$^\circ$N, 94--95$^\circ$E in
 Central Asia. These are validation windows, not regional samples.
@@ -395,6 +398,62 @@ source-mask predicate, area, connectivity, boundary flag, and coverage field.
   2014--2018, provided under COPERNICUS by the European Union and ESA; all
   rights reserved.}
   \label{fig:denominator}
+\end{figure}
+
+\subsection{Held-out susceptible-area convergence}
+
+The object-count sensitivity above motivates a separate test of area as a
+possible exposure measure. Before reading new inventory values, I ranked 14
+RGI region codes by SHA-256 and fixed regions 07, 08, and 03. A second blind
+hash selected 77--78$^\circ$N, 18--19$^\circ$E in Svalbard; 69--70$^\circ$N,
+21--22$^\circ$E in Scandinavia; and 81--82$^\circ$N,
+85--84$^\circ$W in Arctic Canada North. The 200 eligible window keys and their
+digests were frozen before a DEM or PZI value was read. These deterministic
+windows are held out from the pilot, but they are not a random sample of
+mountain terrain.
+
+The registered reference is total area under the pilot's 30$^\circ$ slope,
+100~m glacier-contact, and PZI $\geq0.1$ screens. I independently warp the DEM
+and masks to four 30~m grids separated by half-cell phase shifts. The 90~m
+variant averages complete $3\times3$ elevation blocks but samples masks on its
+own grid. A stratum passes only if every window has a 90~m area departure no
+greater than 20\% and a population coefficient of variation no greater than
+0.10 across the four 30~m phases.
+
+Grid phase has little effect (Figure~\ref{fig:area-convergence}). The largest
+phase coefficient of variation is 0.00375. In contrast, coarsening reduces
+glacier-contact area by 26.7\% in Arctic Canada and 36.6\% in Svalbard; the
+change is 0.7\% in Scandinavia. PZI-intersection area decreases by 29.1\%,
+37.4\%, and 14.2\%, respectively. Both strata therefore fail the registered
+all-window criterion. This comparison suggests that half-cell alignment is not
+the controlling numerical uncertainty. Aggregation across a fixed slope
+threshold is. Neither area measure is used below to infer a global incidence
+density or hazard distribution.
+
+The registered geometric choices also remain influential. Across the three
+windows, the 30~m sensitivity calculations span 0.27--114.0~km$^2$ for
+glacier-contact area and 13.6--403.4~km$^2$ for PZI-intersection area as slope,
+contact distance, and PZI threshold vary. These ranges describe the screens;
+they are not uncertainty intervals or alternative opportunities to pass the
+convergence test.
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=\textwidth]{../figures/area_convergence.pdf}
+  \caption{Held-out susceptible-area convergence. Panels (a) and (b) show
+  area relative to the unshifted 30~m result for three half-cell phase grids
+  and the aligned 90~m grid. The dashed 0.8 line is the lower registered
+  resolution bound and applies to the 90~m point; phase is assessed by its
+  four-grid coefficient of variation. Panels (c) and (d) show separate 30~m
+  sensitivity to slope, contact distance, and PZI threshold. Colors distinguish
+  held-out regions and line styles distinguish geometric thresholds. The
+  plotted objects are not predicted failures. Global PZI data are attributed
+  to WGMS as source, Gruber as creator, and UZH as publisher. Elevation
+  products were produced using Copernicus WorldDEM-30 \copyright{} DLR e.V.
+  2010--2014 and \copyright{} Airbus Defence and Space GmbH 2014--2018,
+  provided under COPERNICUS by the European Union and ESA; all rights
+  reserved.}
+  \label{fig:area-convergence}
 \end{figure}
 
 \section{Event-centered climate test}

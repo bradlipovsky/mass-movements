@@ -1,0 +1,913 @@
+{
+  "created_utc": "2026-08-31T05:42:47.709970Z",
+  "protocol_version": "0.2",
+  "access_terms": {
+    "Copernicus DEM": {
+      "license_url": "https://dataspace.copernicus.eu/sites/default/files/media/files/2025-06/copernicus_contributing_mission_data_access_v2_cop_dem_licenses.pdf",
+      "terms": "Free-of-charge WorldDEM-30 licence; reproduction, distribution, communication, adaptation, modification, and combination are permitted subject to attribution and liability notice.",
+      "adapted_product_notice": "produced using Copernicus WorldDEM-30 \u00a9 DLR e.V. 2010-2014 and \u00a9 Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved.",
+      "liability_notice": "The organisations in charge of the Copernicus programme by law or by delegation do not incur any liability for any use of the Copernicus WorldDEM-30."
+    },
+    "Gruber PZI": {
+      "terms_url": "https://microsite.geo.uzh.ch/cryodata/pf_global/",
+      "rights_record_url": "https://datashare.ed.ac.uk/items/f070ec05-02dc-4450-8f16-039c7b2d2062",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "dataset_doi": "10.7488/ds/1877",
+      "attribution_party": "World Glacier Monitoring Service (WGMS)",
+      "terms": "Edinburgh DataShare identifies Gruber as creator and University of Zurich as publisher of the same Global Permafrost PZI dataset, requests attribution to WGMS as its source, and assigns it CC BY 3.0. Derived subsets require attribution; no byte identity between archive representations is claimed."
+    },
+    "RGI": {
+      "license_url": "https://www.glims.org/rgi_user_guide/01_introduction.html",
+      "terms": "RGI 7.0 may be used under CC BY 4.0 with due acknowledgement and citation of DOI 10.5067/F6JMOVY5NAVZ."
+    }
+  },
+  "staging": {
+    "rgi_window_universe_sha256": "ba4f67c0a8df14791cddac212a21a75ee5f3aaf7ec60bcf420ce230cf6eb1e83",
+    "dem_merge_order": "increasing integer latitude, then increasing numeric longitude; later finite source pixels replace earlier overlap pixels",
+    "dem_phase_replay": "all 12 locally replayed phase GeoTIFFs were byte-identical to direct remote-source warps",
+    "pzi_replay": "all three exact local TIFF value arrays matched their archived full-row byte-range downloads",
+    "unavailable_dem_tiles": [
+      "dem_07_N76_00_E018_00",
+      "dem_07_N76_00_E019_00"
+    ]
+  },
+  "remote_objects": [
+    {
+      "id": "rgi_archive_03",
+      "product": "RGI",
+      "version": "7.0",
+      "region": "03",
+      "status": "available",
+      "url": "https://cluster.klima.uni-bremen.de/~fmaussion/misc/rgi7_data/rgi70_official/RGI2000-v7.0-G-global/RGI2000-v7.0-G-03_arctic_canada_north.zip",
+      "accessed_utc": "2026-08-31T05:27:01Z",
+      "last_modified": "Fri, 18 Aug 2023 09:01:46 GMT",
+      "source_etag": "e7a842-6032ec7385280",
+      "source_size_bytes": 15181890,
+      "download_size_bytes": 15181890,
+      "download_sha256": "70cd68a3becf65ba67208c67c57ef4fd5e3643d5838f66cb8ea043528a249dcb"
+    },
+    {
+      "id": "rgi_archive_07",
+      "product": "RGI",
+      "version": "7.0",
+      "region": "07",
+      "status": "available",
+      "url": "https://cluster.klima.uni-bremen.de/~fmaussion/misc/rgi7_data/rgi70_official/RGI2000-v7.0-G-global/RGI2000-v7.0-G-07_svalbard_jan_mayen.zip",
+      "accessed_utc": "2026-08-31T05:27:03Z",
+      "last_modified": "Fri, 18 Aug 2023 09:04:20 GMT",
+      "source_etag": "5d1064-6032ed0662d00",
+      "source_size_bytes": 6099044,
+      "download_size_bytes": 6099044,
+      "download_sha256": "73fb46265b878802d6a58c1ce18d07b28675afa1d1730a1c48a441ed5bb277cf"
+    },
+    {
+      "id": "rgi_archive_08",
+      "product": "RGI",
+      "version": "7.0",
+      "region": "08",
+      "status": "available",
+      "url": "https://cluster.klima.uni-bremen.de/~fmaussion/misc/rgi7_data/rgi70_official/RGI2000-v7.0-G-global/RGI2000-v7.0-G-08_scandinavia.zip",
+      "accessed_utc": "2026-08-31T05:27:05Z",
+      "last_modified": "Fri, 18 Aug 2023 09:04:34 GMT",
+      "source_etag": "4e69d5-6032ed13bcc80",
+      "source_size_bytes": 5138901,
+      "download_size_bytes": 5138901,
+      "download_sha256": "54bdcdfb0771f58f66bbb95bb1585f16efe9ee10bdfcba022af802868d3d6b28"
+    },
+    {
+      "id": "dem_03_N80_00_W084_00",
+      "product": "Copernicus DEM",
+      "version": "GLO-30 2021",
+      "region": "03",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N80_00_W084_00_DEM/Copernicus_DSM_COG_10_N80_00_W084_00_DEM.tif",
+      "http_status": 200,
+      "status": "available",
+      "accessed_utc": "2026-08-31T05:40:07Z",
+      "last_modified": "Mon, 09 May 2022 14:51:34 GMT",
+      "source_etag": "9f087dd2ddbcd7e676877b9f2def2856",
+      "source_size_bytes": 4981860,
+      "download_size_bytes": 4981860,
+      "download_sha256": "386590e374db76799f049ec496766cfd663f813de72317ca1d093d58b6197761"
+    },
+    {
+      "id": "dem_03_N80_00_W085_00",
+      "product": "Copernicus DEM",
+      "version": "GLO-30 2021",
+      "region": "03",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N80_00_W085_00_DEM/Copernicus_DSM_COG_10_N80_00_W085_00_DEM.tif",
+      "http_status": 200,
+      "status": "available",
+      "accessed_utc": "2026-08-31T05:40:07Z",
+      "last_modified": "Mon, 09 May 2022 14:51:34 GMT",
+      "source_etag": "feb3a28a8720d29b8fc454aff1b19e0c",
+      "source_size_bytes": 6822137,
+      "download_size_bytes": 6822137,
+      "download_sha256": "37ed632edc5c5341373cb601ad285d9357c23f4012cc86545b527962b16c6d04"
+    },
+    {
+      "id": "dem_03_N80_00_W086_00",
+      "product": "Copernicus DEM",
+      "version": "GLO-30 2021",
+      "region": "03",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N80_00_W086_00_DEM/Copernicus_DSM_COG_10_N80_00_W086_00_DEM.tif",
+      "http_status": 200,
+      "status": "available",
+      "accessed_utc": "2026-08-31T05:40:07Z",
+      "last_modified": "Mon, 09 May 2022 14:51:34 GMT",
+      "source_etag": "3f600f86d616b93ad9cb1eca1431fa2d",
+      "source_size_bytes": 6804201,
+      "download_size_bytes": 6804201,
+      "download_sha256": "d38784d9096f8669ce0450fd1d3c97a8ce15c4479eed95fca54fa999f2f1338f"
+    },
+    {
+      "id": "dem_03_N81_00_W084_00",
+      "product": "Copernicus DEM",
+      "version": "GLO-30 2021",
+      "region": "03",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N81_00_W084_00_DEM/Copernicus_DSM_COG_10_N81_00_W084_00_DEM.tif",
+      "http_status": 200,
+      "status": "available",
+      "accessed_utc": "2026-08-31T05:40:07Z",
+      "last_modified": "Mon, 09 May 2022 14:51:54 GMT",
+      "source_etag": "ecb06d905b8bf889fb2b2dba3b45e948",
+      "source_size_bytes": 8225933,
+      "download_size_bytes": 8225933,
+      "download_sha256": "0e8b45ad13d3505940bc706dc73d70d7a79d5c066c39ea547bb0c34832011406"
+    },
+    {
+      "id": "dem_03_N81_00_W085_00",
+      "product": "Copernicus DEM",
+      "version": "GLO-30 2021",
+      "region": "03",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N81_00_W085_00_DEM/Copernicus_DSM_COG_10_N81_00_W085_00_DEM.tif",
+      "http_status": 200,
+      "status": "available",
+      "accessed_utc": "2026-08-31T05:40:07Z",
+      "last_modified": "Mon, 09 May 2022 14:51:54 GMT",
+      "source_etag": "bd2d1b74f96e88dea1ef9a18b87a7612",
+      "source_size_bytes": 8376072,
+      "download_size_bytes": 8376072,
+      "download_sha256": "39c7d09aeba6b8c3acfb4bdada53b63500a75d6ee498ee7770debc99695f04fc"
+    },
+    {
+      "id": "dem_03_N81_00_W086_00",
+      "product": "Copernicus DEM",
+      "version": "GLO-30 2021",
+      "region": "03",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N81_00_W086_00_DEM/Copernicus_DSM_COG_10_N81_00_W086_00_DEM.tif",
+      "http_status": 200,
+      "status": "available",
+      "accessed_utc": "2026-08-31T05:40:07Z",
+      "last_modified": "Mon, 09 May 2022 14:51:54 GMT",
+      "source_etag": "1294fa7367a2b459ac602867d9f95765",
+      "source_size_bytes": 7832006,
+      "download_size_bytes": 7832006,
+      "download_sha256": "9dd9d12038db89e0481257383a319d7f3a8f5b3fb93e8d3993050ea285f265ab"
+    },
+    {
+      "id": "dem_03_N82_00_W084_00",
+      "product": "Copernicus DEM",
+      "version": "GLO-30 2021",
+      "region": "03",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N82_00_W084_00_DEM/Copernicus_DSM_COG_10_N82_00_W084_00_DEM.tif",
+      "http_status": 200,
+      "status": "available",
+      "accessed_utc": "2026-08-31T05:40:09Z",
+      "last_modified": "Mon, 09 May 2022 14:52:07 GMT",
+      "source_etag": "09076db137d9fb867ede2d3c25395a4b",
+      "source_size_bytes": 2682545,
+      "download_size_bytes": 2682545,
+      "download_sha256": "575afa933928274779dcf21c5e2feb124863121b46d3489dc00c2de10e69a1b8"
+    },
+    {
+      "id": "dem_03_N82_00_W085_00",
+      "product": "Copernicus DEM",
+      "version": "GLO-30 2021",
+      "region": "03",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N82_00_W085_00_DEM/Copernicus_DSM_COG_10_N82_00_W085_00_DEM.tif",
+      "http_status": 200,
+      "status": "available",
+      "accessed_utc": "2026-08-31T05:40:09Z",
+      "last_modified": "Mon, 09 May 2022 14:52:08 GMT",
+      "source_etag": "d97b7beef04a87d7a1a1eeaf8b7a5adf",
+      "source_size_bytes": 3552687,
+      "download_size_bytes": 3552687,
+      "download_sha256": "4de1bd55a86d535a341c278577af285304f1dc75e5b471bb9573da5ff1bed330"
+    },
+    {
+      "id": "dem_03_N82_00_W086_00",
+      "product": "Copernicus DEM",
+      "version": "GLO-30 2021",
+      "region": "03",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N82_00_W086_00_DEM/Copernicus_DSM_COG_10_N82_00_W086_00_DEM.tif",
+      "http_status": 200,
+      "status": "available",
+      "accessed_utc": "2026-08-31T05:40:09Z",
+      "last_modified": "Mon, 09 May 2022 14:52:08 GMT",
+      "source_etag": "db6a69ac80e3976bb4eee06ff8d56f7a",
+      "source_size_bytes": 3009195,
+      "download_size_bytes": 3009195,
+      "download_sha256": "b7d989f51e8ea13300493791e6292f6139f09d5e6b692b3dd55568a335195880"
+    },
+    {
+      "id": "dem_07_N76_00_E017_00",
+      "product": "Copernicus DEM",
+      "version": "GLO-30 2021",
+      "region": "07",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N76_00_E017_00_DEM/Copernicus_DSM_COG_10_N76_00_E017_00_DEM.tif",
+      "http_status": 200,
+      "status": "available",
+      "accessed_utc": "2026-08-31T05:40:09Z",
+      "last_modified": "Mon, 09 May 2022 14:49:40 GMT",
+      "source_etag": "c861790bc4063e18fd49f6c34e6ede6e",
+      "source_size_bytes": 720764,
+      "download_size_bytes": 720764,
+      "download_sha256": "ba6de153c887a7ded11d68b8061f0c76fbeec5ffc6885e0b461e01c3abcd52de"
+    },
+    {
+      "id": "dem_07_N76_00_E018_00",
+      "product": "Copernicus DEM",
+      "version": "GLO-30 2021",
+      "region": "07",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N76_00_E018_00_DEM/Copernicus_DSM_COG_10_N76_00_E018_00_DEM.tif",
+      "http_status": 404,
+      "status": "unavailable",
+      "accessed_utc": "2026-08-31T05:41:37Z"
+    },
+    {
+      "id": "dem_07_N76_00_E019_00",
+      "product": "Copernicus DEM",
+      "version": "GLO-30 2021",
+      "region": "07",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N76_00_E019_00_DEM/Copernicus_DSM_COG_10_N76_00_E019_00_DEM.tif",
+      "http_status": 404,
+      "status": "unavailable",
+      "accessed_utc": "2026-08-31T05:41:37Z"
+    },
+    {
+      "id": "dem_07_N77_00_E017_00",
+      "product": "Copernicus DEM",
+      "version": "GLO-30 2021",
+      "region": "07",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N77_00_E017_00_DEM/Copernicus_DSM_COG_10_N77_00_E017_00_DEM.tif",
+      "http_status": 200,
+      "status": "available",
+      "accessed_utc": "2026-08-31T05:40:10Z",
+      "last_modified": "Mon, 09 May 2022 14:50:06 GMT",
+      "source_etag": "5c930285b2c454ccee7b7ef96bfaa775",
+      "source_size_bytes": 10202367,
+      "download_size_bytes": 10202367,
+      "download_sha256": "b8fc2f2c68b0c2c494965a36a207355bf6640afa36917e8ccbf6992e852ba5ec"
+    },
+    {
+      "id": "dem_07_N77_00_E018_00",
+      "product": "Copernicus DEM",
+      "version": "GLO-30 2021",
+      "region": "07",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N77_00_E018_00_DEM/Copernicus_DSM_COG_10_N77_00_E018_00_DEM.tif",
+      "http_status": 200,
+      "status": "available",
+      "accessed_utc": "2026-08-31T05:40:10Z",
+      "last_modified": "Mon, 09 May 2022 14:50:06 GMT",
+      "source_etag": "52be466f667b7f3d3c29751a4876d60f",
+      "source_size_bytes": 2704592,
+      "download_size_bytes": 2704592,
+      "download_sha256": "6045209c56d05d05a6f0782e6ba12d0abec42499d293a2a2a044833b92107d58"
+    },
+    {
+      "id": "dem_07_N77_00_E019_00",
+      "product": "Copernicus DEM",
+      "version": "GLO-30 2021",
+      "region": "07",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N77_00_E019_00_DEM/Copernicus_DSM_COG_10_N77_00_E019_00_DEM.tif",
+      "http_status": 200,
+      "status": "available",
+      "accessed_utc": "2026-08-31T05:40:10Z",
+      "last_modified": "Mon, 09 May 2022 14:50:06 GMT",
+      "source_etag": "5d03caffe4fd277d2135461db9a9d261",
+      "source_size_bytes": 50304,
+      "download_size_bytes": 50304,
+      "download_sha256": "81a20e92647f5947f04504acf7b5c75865535ddcfb97ddfc11fbfb9d9347b980"
+    },
+    {
+      "id": "dem_07_N78_00_E017_00",
+      "product": "Copernicus DEM",
+      "version": "GLO-30 2021",
+      "region": "07",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N78_00_E017_00_DEM/Copernicus_DSM_COG_10_N78_00_E017_00_DEM.tif",
+      "http_status": 200,
+      "status": "available",
+      "accessed_utc": "2026-08-31T05:40:11Z",
+      "last_modified": "Mon, 09 May 2022 14:50:29 GMT",
+      "source_etag": "3617d1696a6b91cd7680cadb9cb067c3",
+      "source_size_bytes": 14022427,
+      "download_size_bytes": 14022427,
+      "download_sha256": "4cc39c6bc0f9ef033ec6bea43361ac5983b93bf644b7459a3bbf799e687d40b0"
+    },
+    {
+      "id": "dem_07_N78_00_E018_00",
+      "product": "Copernicus DEM",
+      "version": "GLO-30 2021",
+      "region": "07",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N78_00_E018_00_DEM/Copernicus_DSM_COG_10_N78_00_E018_00_DEM.tif",
+      "http_status": 200,
+      "status": "available",
+      "accessed_utc": "2026-08-31T05:40:11Z",
+      "last_modified": "Mon, 09 May 2022 14:50:29 GMT",
+      "source_etag": "81228395f361081032d18b5e60537329",
+      "source_size_bytes": 13436118,
+      "download_size_bytes": 13436118,
+      "download_sha256": "3865de2e746ac4636314da0b222b5e6f79ddb2102fea1422ebd6d405bee156d3"
+    },
+    {
+      "id": "dem_07_N78_00_E019_00",
+      "product": "Copernicus DEM",
+      "version": "GLO-30 2021",
+      "region": "07",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N78_00_E019_00_DEM/Copernicus_DSM_COG_10_N78_00_E019_00_DEM.tif",
+      "http_status": 200,
+      "status": "available",
+      "accessed_utc": "2026-08-31T05:40:11Z",
+      "last_modified": "Mon, 09 May 2022 14:50:30 GMT",
+      "source_etag": "cc298cdb685747e2154ed5dfd8ff1d66",
+      "source_size_bytes": 5981719,
+      "download_size_bytes": 5981719,
+      "download_sha256": "88dfb841491764df35c6d015414fd0138f438eb44caae466892b9df0b4bf0b14"
+    },
+    {
+      "id": "dem_08_N68_00_E020_00",
+      "product": "Copernicus DEM",
+      "version": "GLO-30 2021",
+      "region": "08",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N68_00_E020_00_DEM/Copernicus_DSM_COG_10_N68_00_E020_00_DEM.tif",
+      "http_status": 200,
+      "status": "available",
+      "accessed_utc": "2026-08-31T05:40:12Z",
+      "last_modified": "Mon, 09 May 2022 14:44:50 GMT",
+      "source_etag": "41b42e914b84a3885083f8d6ea408167",
+      "source_size_bytes": 20101787,
+      "download_size_bytes": 20101787,
+      "download_sha256": "6e7350d20aebc5b7cb58f25afe567595da8efec0c840ccf05d6e72d547eb816b"
+    },
+    {
+      "id": "dem_08_N68_00_E021_00",
+      "product": "Copernicus DEM",
+      "version": "GLO-30 2021",
+      "region": "08",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N68_00_E021_00_DEM/Copernicus_DSM_COG_10_N68_00_E021_00_DEM.tif",
+      "http_status": 200,
+      "status": "available",
+      "accessed_utc": "2026-08-31T05:40:12Z",
+      "last_modified": "Mon, 09 May 2022 14:44:50 GMT",
+      "source_etag": "d1a477b37aaf6eabd3900cb23172d142",
+      "source_size_bytes": 20210929,
+      "download_size_bytes": 20210929,
+      "download_sha256": "1d470a612cd66fe9ddbc22e238dfdaf5e13a588147c0912faef04fc4f9e93dca"
+    },
+    {
+      "id": "dem_08_N68_00_E022_00",
+      "product": "Copernicus DEM",
+      "version": "GLO-30 2021",
+      "region": "08",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N68_00_E022_00_DEM/Copernicus_DSM_COG_10_N68_00_E022_00_DEM.tif",
+      "http_status": 200,
+      "status": "available",
+      "accessed_utc": "2026-08-31T05:40:14Z",
+      "last_modified": "Mon, 09 May 2022 14:44:50 GMT",
+      "source_etag": "80b9961c68e4af071402c17edcf5d77a",
+      "source_size_bytes": 20582197,
+      "download_size_bytes": 20582197,
+      "download_sha256": "00edccb4d9a4173460187583b98211afd2d5ad4e7682cd350680ba899e2f3993"
+    },
+    {
+      "id": "dem_08_N69_00_E020_00",
+      "product": "Copernicus DEM",
+      "version": "GLO-30 2021",
+      "region": "08",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N69_00_E020_00_DEM/Copernicus_DSM_COG_10_N69_00_E020_00_DEM.tif",
+      "http_status": 200,
+      "status": "available",
+      "accessed_utc": "2026-08-31T05:40:13Z",
+      "last_modified": "Mon, 09 May 2022 14:45:46 GMT",
+      "source_etag": "469dc00782612b8b90d94741337ab291",
+      "source_size_bytes": 18220156,
+      "download_size_bytes": 18220156,
+      "download_sha256": "a6d250f094f3930c1f1c20a45c137cf97af80b736fd457c1585552a77572dbec"
+    },
+    {
+      "id": "dem_08_N69_00_E021_00",
+      "product": "Copernicus DEM",
+      "version": "GLO-30 2021",
+      "region": "08",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N69_00_E021_00_DEM/Copernicus_DSM_COG_10_N69_00_E021_00_DEM.tif",
+      "http_status": 200,
+      "status": "available",
+      "accessed_utc": "2026-08-31T05:40:14Z",
+      "last_modified": "Mon, 09 May 2022 14:45:46 GMT",
+      "source_etag": "7ef5b3c9279772344f5ac42ea1058d74",
+      "source_size_bytes": 19842349,
+      "download_size_bytes": 19842349,
+      "download_sha256": "0aacd87f2eef1937b15e9be0b7ac3bd4d921176fef4925389a9e9caff3d75b9a"
+    },
+    {
+      "id": "dem_08_N69_00_E022_00",
+      "product": "Copernicus DEM",
+      "version": "GLO-30 2021",
+      "region": "08",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N69_00_E022_00_DEM/Copernicus_DSM_COG_10_N69_00_E022_00_DEM.tif",
+      "http_status": 200,
+      "status": "available",
+      "accessed_utc": "2026-08-31T05:40:14Z",
+      "last_modified": "Mon, 09 May 2022 14:45:47 GMT",
+      "source_etag": "b21ac8693e26783996355b6808fc1767",
+      "source_size_bytes": 20744187,
+      "download_size_bytes": 20744187,
+      "download_sha256": "a88f6eb7a1c4d7d1b610b8ab365ddefe201d3b4158bd5f205eca608ad346d764"
+    },
+    {
+      "id": "dem_08_N70_00_E020_00",
+      "product": "Copernicus DEM",
+      "version": "GLO-30 2021",
+      "region": "08",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N70_00_E020_00_DEM/Copernicus_DSM_COG_10_N70_00_E020_00_DEM.tif",
+      "http_status": 200,
+      "status": "available",
+      "accessed_utc": "2026-08-31T05:40:16Z",
+      "last_modified": "Mon, 09 May 2022 14:46:34 GMT",
+      "source_etag": "7ead49b05c56e5d6c0959d522b27f515",
+      "source_size_bytes": 1721733,
+      "download_size_bytes": 1721733,
+      "download_sha256": "4a3c16593eb69166eccd5d5671f01172249b82d743c44e6fa0404141638e2547"
+    },
+    {
+      "id": "dem_08_N70_00_E021_00",
+      "product": "Copernicus DEM",
+      "version": "GLO-30 2021",
+      "region": "08",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N70_00_E021_00_DEM/Copernicus_DSM_COG_10_N70_00_E021_00_DEM.tif",
+      "http_status": 200,
+      "status": "available",
+      "accessed_utc": "2026-08-31T05:40:16Z",
+      "last_modified": "Mon, 09 May 2022 14:46:35 GMT",
+      "source_etag": "bcb6e3df94079760ed5ba2bc0bc49082",
+      "source_size_bytes": 2973700,
+      "download_size_bytes": 2973700,
+      "download_sha256": "55295f78390e0269eccea0cc987760c8a080182f0a97cfa3a5aba8f917e8f778"
+    },
+    {
+      "id": "dem_08_N70_00_E022_00",
+      "product": "Copernicus DEM",
+      "version": "GLO-30 2021",
+      "region": "08",
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N70_00_E022_00_DEM/Copernicus_DSM_COG_10_N70_00_E022_00_DEM.tif",
+      "http_status": 200,
+      "status": "available",
+      "accessed_utc": "2026-08-31T05:40:17Z",
+      "last_modified": "Mon, 09 May 2022 14:46:35 GMT",
+      "source_etag": "a39fd5b4dad711b21b196256e57e87a2",
+      "source_size_bytes": 7630389,
+      "download_size_bytes": 7630389,
+      "download_sha256": "efc550192c297458d88f26f302b91651daf4f92d08e9323c99a2db45ae0cdc65"
+    },
+    {
+      "id": "pzi_raw_flt",
+      "last_modified": "Wed, 15 Feb 2012 09:26:18 GMT",
+      "product": "Gruber PZI",
+      "region": "global",
+      "source_etag": "4f3b7a3a-b964f000",
+      "source_size_bytes": 3110400000,
+      "status": "available",
+      "url": "https://microsite.geo.uzh.ch/cryodata/pf_global/PZI.flt",
+      "version": "2012"
+    },
+    {
+      "id": "pzi_raw_hdr",
+      "last_modified": "Wed, 15 Feb 2012 09:35:02 GMT",
+      "product": "Gruber PZI",
+      "region": "global",
+      "source_etag": "4f3b7c46-9e",
+      "source_size_bytes": 158,
+      "status": "available",
+      "url": "https://microsite.geo.uzh.ch/cryodata/pf_global/PZI.hdr",
+      "version": "2012"
+    },
+    {
+      "id": "pzi_raw_readme",
+      "last_modified": "Sat, 18 Feb 2012 12:15:44 GMT",
+      "product": "Gruber PZI",
+      "region": "global",
+      "source_etag": "4f3f9670-1141",
+      "source_size_bytes": 4417,
+      "status": "available",
+      "url": "https://microsite.geo.uzh.ch/cryodata/pf_global/README.txt",
+      "version": "2012"
+    },
+    {
+      "id": "pzi_rights_record",
+      "product": "Gruber PZI",
+      "region": "global",
+      "status": "available",
+      "url": "https://datashare.ed.ac.uk/server/api/core/items/f070ec05-02dc-4450-8f16-039c7b2d2062",
+      "source_sha256": "3737a2b8a1251896e8a052e26dc6fa821b3c88108bac3a3ee600fb90a070701e",
+      "version": "2017 rights record"
+    }
+  ],
+  "range_objects": [
+    {
+      "id": "pzi_range_03",
+      "product": "Gruber PZI",
+      "version": "2012",
+      "region": "03",
+      "status": "available",
+      "url": "https://microsite.geo.uzh.ch/cryodata/pf_global/PZI.flt",
+      "accessed_utc": "2026-08-31T05:41:59Z",
+      "source_range": "bytes 163814400-188697599/3110400000",
+      "source_etag": "4f3b7a3a-b964f000",
+      "last_modified": "Wed, 15 Feb 2012 09:26:18 GMT",
+      "download_size_bytes": 24883200,
+      "download_sha256": "e722fa6e0a77d3b4926f8f6339e5b545d9ae66c553bd25847a7dc63747ac9e17"
+    },
+    {
+      "id": "pzi_range_07",
+      "product": "Gruber PZI",
+      "version": "2012",
+      "region": "07",
+      "status": "available",
+      "url": "https://microsite.geo.uzh.ch/cryodata/pf_global/PZI.flt",
+      "accessed_utc": "2026-08-31T05:41:59Z",
+      "source_range": "bytes 246758400-271641599/3110400000",
+      "source_etag": "4f3b7a3a-b964f000",
+      "last_modified": "Wed, 15 Feb 2012 09:26:18 GMT",
+      "download_size_bytes": 24883200,
+      "download_sha256": "38dec1a933e0fd8da5ac4df36834715145a3a161abfbd0fb4ed86e0f9dae89c3"
+    },
+    {
+      "id": "pzi_range_08",
+      "product": "Gruber PZI",
+      "version": "2012",
+      "region": "08",
+      "status": "available",
+      "url": "https://microsite.geo.uzh.ch/cryodata/pf_global/PZI.flt",
+      "accessed_utc": "2026-08-31T05:41:59Z",
+      "source_range": "bytes 412646400-437529599/3110400000",
+      "source_etag": "4f3b7a3a-b964f000",
+      "last_modified": "Wed, 15 Feb 2012 09:26:18 GMT",
+      "download_size_bytes": 24883200,
+      "download_sha256": "c7efcb44cf160ab714ddc342efc5bc9b06b5c7e26fef60aa1a3f832f812a7213"
+    }
+  ],
+  "local_objects": [
+    {
+      "path": "data/area_convergence/source/dem_03_p00_30m.tif",
+      "region": "03",
+      "role": "analysis_input",
+      "derivation": "direct bilinear warp from native COGs in increasing latitude and numeric longitude order to registered p00 30 m LAEA grid",
+      "derived_from": [
+        "dem_03_N80_00_W084_00",
+        "dem_03_N80_00_W085_00",
+        "dem_03_N80_00_W086_00",
+        "dem_03_N81_00_W084_00",
+        "dem_03_N81_00_W085_00",
+        "dem_03_N81_00_W086_00",
+        "dem_03_N82_00_W084_00",
+        "dem_03_N82_00_W085_00",
+        "dem_03_N82_00_W086_00"
+      ],
+      "size_bytes": 5846351,
+      "sha256": "c1b499445f90db979fc94898c5c9a2929a0730e2fea9e33899f023fbc9a7880b"
+    },
+    {
+      "path": "data/area_convergence/source/dem_03_p01_30m.tif",
+      "region": "03",
+      "role": "analysis_input",
+      "derivation": "direct bilinear warp from native COGs in increasing latitude and numeric longitude order to registered p01 30 m LAEA grid",
+      "derived_from": [
+        "dem_03_N80_00_W084_00",
+        "dem_03_N80_00_W085_00",
+        "dem_03_N80_00_W086_00",
+        "dem_03_N81_00_W084_00",
+        "dem_03_N81_00_W085_00",
+        "dem_03_N81_00_W086_00",
+        "dem_03_N82_00_W084_00",
+        "dem_03_N82_00_W085_00",
+        "dem_03_N82_00_W086_00"
+      ],
+      "size_bytes": 5835673,
+      "sha256": "ae3bea45057134e469373bf56cd1510ea40c9a58004d9e712ebb94c6aa2c0c35"
+    },
+    {
+      "path": "data/area_convergence/source/dem_03_p10_30m.tif",
+      "region": "03",
+      "role": "analysis_input",
+      "derivation": "direct bilinear warp from native COGs in increasing latitude and numeric longitude order to registered p10 30 m LAEA grid",
+      "derived_from": [
+        "dem_03_N80_00_W084_00",
+        "dem_03_N80_00_W085_00",
+        "dem_03_N80_00_W086_00",
+        "dem_03_N81_00_W084_00",
+        "dem_03_N81_00_W085_00",
+        "dem_03_N81_00_W086_00",
+        "dem_03_N82_00_W084_00",
+        "dem_03_N82_00_W085_00",
+        "dem_03_N82_00_W086_00"
+      ],
+      "size_bytes": 5844622,
+      "sha256": "b58b0dc55fce1c9ac2b46ac8c9f9ab217ef1868f353ed109529109fc702bb578"
+    },
+    {
+      "path": "data/area_convergence/source/dem_03_p11_30m.tif",
+      "region": "03",
+      "role": "analysis_input",
+      "derivation": "direct bilinear warp from native COGs in increasing latitude and numeric longitude order to registered p11 30 m LAEA grid",
+      "derived_from": [
+        "dem_03_N80_00_W084_00",
+        "dem_03_N80_00_W085_00",
+        "dem_03_N80_00_W086_00",
+        "dem_03_N81_00_W084_00",
+        "dem_03_N81_00_W085_00",
+        "dem_03_N81_00_W086_00",
+        "dem_03_N82_00_W084_00",
+        "dem_03_N82_00_W085_00",
+        "dem_03_N82_00_W086_00"
+      ],
+      "size_bytes": 5843902,
+      "sha256": "fe9a3b5f738b8aa4da32d38d26587ccade62ce97594d67ac4a8665075a0d5336"
+    },
+    {
+      "path": "data/area_convergence/source/dem_07_p00_30m.tif",
+      "region": "07",
+      "role": "analysis_input",
+      "derivation": "direct bilinear warp from native COGs in increasing latitude and numeric longitude order to registered p00 30 m LAEA grid",
+      "derived_from": [
+        "dem_07_N76_00_E017_00",
+        "dem_07_N77_00_E017_00",
+        "dem_07_N77_00_E018_00",
+        "dem_07_N77_00_E019_00",
+        "dem_07_N78_00_E017_00",
+        "dem_07_N78_00_E018_00",
+        "dem_07_N78_00_E019_00"
+      ],
+      "size_bytes": 1658437,
+      "sha256": "3533c3113d2bac5051ceb42e706f57880d869795ea2564e58284fc3864c74f9f"
+    },
+    {
+      "path": "data/area_convergence/source/dem_07_p01_30m.tif",
+      "region": "07",
+      "role": "analysis_input",
+      "derivation": "direct bilinear warp from native COGs in increasing latitude and numeric longitude order to registered p01 30 m LAEA grid",
+      "derived_from": [
+        "dem_07_N76_00_E017_00",
+        "dem_07_N77_00_E017_00",
+        "dem_07_N77_00_E018_00",
+        "dem_07_N77_00_E019_00",
+        "dem_07_N78_00_E017_00",
+        "dem_07_N78_00_E018_00",
+        "dem_07_N78_00_E019_00"
+      ],
+      "size_bytes": 1656957,
+      "sha256": "8ec1fc549ad9570b06d106bdf30409dddc40eae291441bf118fb9e2891dec5c5"
+    },
+    {
+      "path": "data/area_convergence/source/dem_07_p10_30m.tif",
+      "region": "07",
+      "role": "analysis_input",
+      "derivation": "direct bilinear warp from native COGs in increasing latitude and numeric longitude order to registered p10 30 m LAEA grid",
+      "derived_from": [
+        "dem_07_N76_00_E017_00",
+        "dem_07_N77_00_E017_00",
+        "dem_07_N77_00_E018_00",
+        "dem_07_N77_00_E019_00",
+        "dem_07_N78_00_E017_00",
+        "dem_07_N78_00_E018_00",
+        "dem_07_N78_00_E019_00"
+      ],
+      "size_bytes": 1653707,
+      "sha256": "ee652751f9456e19bb3021c400aac408e7c8e3ff75f5d75ec4dc99a611ba6511"
+    },
+    {
+      "path": "data/area_convergence/source/dem_07_p11_30m.tif",
+      "region": "07",
+      "role": "analysis_input",
+      "derivation": "direct bilinear warp from native COGs in increasing latitude and numeric longitude order to registered p11 30 m LAEA grid",
+      "derived_from": [
+        "dem_07_N76_00_E017_00",
+        "dem_07_N77_00_E017_00",
+        "dem_07_N77_00_E018_00",
+        "dem_07_N77_00_E019_00",
+        "dem_07_N78_00_E017_00",
+        "dem_07_N78_00_E018_00",
+        "dem_07_N78_00_E019_00"
+      ],
+      "size_bytes": 1653998,
+      "sha256": "bacae891f9a90f1c3f8e0e108124621d17f75bba833c8873ab0d42ca8cea60d4"
+    },
+    {
+      "path": "data/area_convergence/source/dem_08_p00_30m.tif",
+      "region": "08",
+      "role": "analysis_input",
+      "derivation": "direct bilinear warp from native COGs in increasing latitude and numeric longitude order to registered p00 30 m LAEA grid",
+      "derived_from": [
+        "dem_08_N68_00_E020_00",
+        "dem_08_N68_00_E021_00",
+        "dem_08_N68_00_E022_00",
+        "dem_08_N69_00_E020_00",
+        "dem_08_N69_00_E021_00",
+        "dem_08_N69_00_E022_00",
+        "dem_08_N70_00_E020_00",
+        "dem_08_N70_00_E021_00",
+        "dem_08_N70_00_E022_00"
+      ],
+      "size_bytes": 12095061,
+      "sha256": "82e07fb74cbad81b05ce5494b1f2b0565c99a0ff107cc9bc65597f428e0fd536"
+    },
+    {
+      "path": "data/area_convergence/source/dem_08_p01_30m.tif",
+      "region": "08",
+      "role": "analysis_input",
+      "derivation": "direct bilinear warp from native COGs in increasing latitude and numeric longitude order to registered p01 30 m LAEA grid",
+      "derived_from": [
+        "dem_08_N68_00_E020_00",
+        "dem_08_N68_00_E021_00",
+        "dem_08_N68_00_E022_00",
+        "dem_08_N69_00_E020_00",
+        "dem_08_N69_00_E021_00",
+        "dem_08_N69_00_E022_00",
+        "dem_08_N70_00_E020_00",
+        "dem_08_N70_00_E021_00",
+        "dem_08_N70_00_E022_00"
+      ],
+      "size_bytes": 12078135,
+      "sha256": "a7f5821a3c5e04414c5504e598fc825e7885bc270d8f5e8503789736498817e0"
+    },
+    {
+      "path": "data/area_convergence/source/dem_08_p10_30m.tif",
+      "region": "08",
+      "role": "analysis_input",
+      "derivation": "direct bilinear warp from native COGs in increasing latitude and numeric longitude order to registered p10 30 m LAEA grid",
+      "derived_from": [
+        "dem_08_N68_00_E020_00",
+        "dem_08_N68_00_E021_00",
+        "dem_08_N68_00_E022_00",
+        "dem_08_N69_00_E020_00",
+        "dem_08_N69_00_E021_00",
+        "dem_08_N69_00_E022_00",
+        "dem_08_N70_00_E020_00",
+        "dem_08_N70_00_E021_00",
+        "dem_08_N70_00_E022_00"
+      ],
+      "size_bytes": 12068002,
+      "sha256": "7c0e484a26139ba93c49926951aac86b00e80107f554d99356634c61cd9222d5"
+    },
+    {
+      "path": "data/area_convergence/source/dem_08_p11_30m.tif",
+      "region": "08",
+      "role": "analysis_input",
+      "derivation": "direct bilinear warp from native COGs in increasing latitude and numeric longitude order to registered p11 30 m LAEA grid",
+      "derived_from": [
+        "dem_08_N68_00_E020_00",
+        "dem_08_N68_00_E021_00",
+        "dem_08_N68_00_E022_00",
+        "dem_08_N69_00_E020_00",
+        "dem_08_N69_00_E021_00",
+        "dem_08_N69_00_E022_00",
+        "dem_08_N70_00_E020_00",
+        "dem_08_N70_00_E021_00",
+        "dem_08_N70_00_E022_00"
+      ],
+      "size_bytes": 12069153,
+      "sha256": "8d5dc4957b9f9f429c191b3e0b3591089daaecd924aafe7a82073201cfe0eaeb"
+    },
+    {
+      "path": "data/area_convergence/source/pzi.hdr",
+      "region": "global",
+      "role": "source_metadata",
+      "derivation": "exact UZH header bytes",
+      "derived_from": [
+        "pzi_raw_hdr"
+      ],
+      "size_bytes": 158,
+      "sha256": "c549b0f14054a44a548d20141c0ad8c4064ae1c2b857ecfddbb16c587835f1f6"
+    },
+    {
+      "path": "data/area_convergence/source/pzi_03.tif",
+      "region": "03",
+      "role": "analysis_input",
+      "derivation": "exact column subset of downloaded little-endian Float32 full-row byte range; values not resampled",
+      "derived_from": [
+        "pzi_range_03"
+      ],
+      "size_bytes": 1867,
+      "sha256": "58743b06a3fb3bef2eadac41a080d254686c528114ab7b36665c3735a429abb3"
+    },
+    {
+      "path": "data/area_convergence/source/pzi_07.tif",
+      "region": "07",
+      "role": "analysis_input",
+      "derivation": "exact column subset of downloaded little-endian Float32 full-row byte range; values not resampled",
+      "derived_from": [
+        "pzi_range_07"
+      ],
+      "size_bytes": 14128,
+      "sha256": "c4f3790190b47fd53f198f0491f501df8e670b6d2b4b7bac2d546c8037e22006"
+    },
+    {
+      "path": "data/area_convergence/source/pzi_08.tif",
+      "region": "08",
+      "role": "analysis_input",
+      "derivation": "exact column subset of downloaded little-endian Float32 full-row byte range; values not resampled",
+      "derived_from": [
+        "pzi_range_08"
+      ],
+      "size_bytes": 52605,
+      "sha256": "70d48342c1ee82e9e9e3adfdee00743efc0df85294c27edacd6a8ba7cff03264"
+    },
+    {
+      "path": "data/area_convergence/source/pzi_README.txt",
+      "region": "global",
+      "role": "source_metadata",
+      "derivation": "exact UZH documentation bytes",
+      "derived_from": [
+        "pzi_raw_readme"
+      ],
+      "size_bytes": 4417,
+      "sha256": "641f26fb219ddec315d0bfde21e42ef405eea81d22f08752f8ad7c15d307d635"
+    },
+    {
+      "path": "data/area_convergence/source/pzi_rights_metadata.json",
+      "region": "global",
+      "role": "source_metadata",
+      "derivation": "rights, attribution, identity, and bitstream fields frozen from official DataShare APIs",
+      "derived_from": [
+        "pzi_rights_record"
+      ],
+      "size_bytes": 1687,
+      "sha256": "7a0358075fd3eb4fa32ab35dfba6560558f2de77d7dc1ae04934184409216c27"
+    },
+    {
+      "path": "data/area_convergence/source/rgi_03.geojson",
+      "region": "03",
+      "role": "analysis_input",
+      "derivation": "ogr2ogr spatial filter extending 0.2 degrees beyond the window; full intersecting feature geometries retained",
+      "derived_from": [
+        "rgi_archive_03"
+      ],
+      "size_bytes": 2660930,
+      "sha256": "2815765a46cea35671be4d2c7931a3fb77d955973826c0be7f4cdbf0cb532a3d"
+    },
+    {
+      "path": "data/area_convergence/source/rgi_03_attributes_metadata.json",
+      "region": "03",
+      "role": "source_metadata",
+      "derivation": "exact archive member bytes",
+      "derived_from": [
+        "rgi_archive_03"
+      ],
+      "size_bytes": 7225,
+      "sha256": "fd23a32abb4059afbcd3c6048393a3f7ce6c533608379c29303acc884d799d39"
+    },
+    {
+      "path": "data/area_convergence/source/rgi_07.geojson",
+      "region": "07",
+      "role": "analysis_input",
+      "derivation": "ogr2ogr spatial filter extending 0.2 degrees beyond the window; full intersecting feature geometries retained",
+      "derived_from": [
+        "rgi_archive_07"
+      ],
+      "size_bytes": 1218981,
+      "sha256": "db73871fed6eb30c99d0997b9255d69997adcdba074131c615c40e043fcff230"
+    },
+    {
+      "path": "data/area_convergence/source/rgi_07_attributes_metadata.json",
+      "region": "07",
+      "role": "source_metadata",
+      "derivation": "exact archive member bytes",
+      "derived_from": [
+        "rgi_archive_07"
+      ],
+      "size_bytes": 7225,
+      "sha256": "fd23a32abb4059afbcd3c6048393a3f7ce6c533608379c29303acc884d799d39"
+    },
+    {
+      "path": "data/area_convergence/source/rgi_08.geojson",
+      "region": "08",
+      "role": "analysis_input",
+      "derivation": "ogr2ogr spatial filter extending 0.2 degrees beyond the window; full intersecting feature geometries retained",
+      "derived_from": [
+        "rgi_archive_08"
+      ],
+      "size_bytes": 303474,
+      "sha256": "e8b41c6c723f5d312e6feafb4b77763509148e0b8e51fee115e8df5ed7ee8ef0"
+    },
+    {
+      "path": "data/area_convergence/source/rgi_08_attributes_metadata.json",
+      "region": "08",
+      "role": "source_metadata",
+      "derivation": "exact archive member bytes",
+      "derived_from": [
+        "rgi_archive_08"
+      ],
+      "size_bytes": 7225,
+      "sha256": "fd23a32abb4059afbcd3c6048393a3f7ce6c533608379c29303acc884d799d39"
+    }
+  ]
+}

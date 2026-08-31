@@ -48,3 +48,11 @@ environment is not named `.venv`.
 
 Project decisions and review are tracked in
 [GitHub issues](https://github.com/bradlipovsky/mass-movements/issues).
+
+The held-out susceptible-area convergence test is registered in
+`protocol/susceptible-area-convergence.md`. Run `make
+artifacts-area-convergence` to regenerate its 225-row area table, six fixed
+window decisions, executed notebook, figure, tests, and manuscript. Both
+terrain screens presently fail the registered all-window resolution criterion;
+the repository therefore does not extrapolate them to global incidence or
+hazard.
