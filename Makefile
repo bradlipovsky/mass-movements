@@ -1,4 +1,4 @@
-.PHONY: all area-convergence artifacts-area-convergence artifacts-denominator artifacts-event-audit artifacts-reanalysis artifacts-scale-explicit check check-area-convergence check-denominator check-event-audit check-reanalysis check-scale-explicit clean denominator notebook-area-convergence notebook-denominator notebook-event-audit notebook-reanalysis notebook-scale-explicit reanalysis scale-explicit
+.PHONY: all area-convergence artifacts-area-convergence artifacts-denominator artifacts-event-audit artifacts-geographic-coverage artifacts-reanalysis artifacts-scale-explicit check check-area-convergence check-denominator check-event-audit check-reanalysis check-scale-explicit clean denominator notebook-area-convergence notebook-denominator notebook-event-audit notebook-geographic-coverage notebook-reanalysis notebook-scale-explicit reanalysis scale-explicit
 
 PYTHON_REANALYSIS ?= .venv/bin/python
 JUPYTER_REANALYSIS ?= $(dir $(PYTHON_REANALYSIS))jupyter
@@ -68,6 +68,12 @@ notebook-scale-explicit:
 artifacts-scale-explicit: scale-explicit
 	$(MAKE) notebook-scale-explicit PYTHON_REANALYSIS=$(PYTHON_REANALYSIS) JUPYTER_REANALYSIS=$(JUPYTER_REANALYSIS)
 	$(MAKE) check-scale-explicit PYTHON_REANALYSIS=$(PYTHON_REANALYSIS)
+	latexmk -pdf -cd latex/main.tex
+
+notebook-geographic-coverage:
+	PATH="$(dir $(PYTHON_REANALYSIS)):$$PATH" $(JUPYTER_REANALYSIS) execute --inplace --timeout 600 --kernel_name python3 notebooks/geographic_coverage_gate.ipynb
+
+artifacts-geographic-coverage: notebook-geographic-coverage
 	latexmk -pdf -cd latex/main.tex
 
 clean:
