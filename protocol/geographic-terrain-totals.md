@@ -28,6 +28,17 @@ or PZI value for a selected cell. Freeze these identities:
 | issue #13 estimator commit | `acec6401bfa02b20d375e03d3eb82910148edf90` |
 | estimator program SHA-256 | `15f7bff92b7ae44e5f64eac0db70598eb0f318f9a6ac5e2e689e5de9bc89e231` |
 
+Pin the inherited numerical stack before access:
+
+| imported program | SHA-256 |
+|---|---|
+| `scripts/denominator_pilot.py` | `5f733147434f859ea3cbfc815da77a1bd8ae83137d80e59a65243d6d3e23508a` |
+| `scripts/susceptible_area_convergence.py` | `9ac2644257ce1ba90bd8f2edbc6e9b47ea152fa02304b0c4b994e495a512b20c` |
+| `scripts/scale_explicit_transfer_source.py` | `c495d3b587e40ed6ad036a24857dc6fb6ee4bb0934e0c385d82e8bd7ba259830` |
+
+The numerical environment is Python 3.12.11, NumPy 2.5.2, SciPy 1.18.1,
+Rasterio 1.5.1, Shapely 2.1.2, PyProj 3.7.2, Fiona 1.10.1, and Pandas 3.0.5.
+
 No replacement, redraw, deletion, sample expansion, or outcome-dependent
 source change is allowed. No selected cell exactly repeats an issue #15 blind
 window. Previously retained raw source objects may be reused only after their
@@ -70,11 +81,15 @@ CV = population_sd(E00, E10, E01, E11)
 ```
 
 A positive finite reference has numerical labels `D <= 0.20` and `CV <=
-0.10`. If all variants are zero with adequate source and predicate coverage,
-contribute structural zero to the primary total but label numerical transfer
-unusable. If `E00=0` and any variant is positive, or a required value is
-undefined, numerical quality fails. Preserve every failure. These labels do
-not alter units, outcomes, or weights.
+0.10`. Set the inherited numerical label `structural_zero=yes` exactly when
+all five finite equivalent-area values are zero after the source and replay
+gates. Set `D=NA`, `CV=0`, and `usable_transfer=no`. Independently set
+`coverage_limited_zero=yes` when any mask-true center lacks complete DEM
+support in any variant or, for PZI, any outside-RGI center lacks finite PZI;
+otherwise set `adequate_coverage_zero=yes`. If `E00=0` and any variant is
+positive, set `D=NA`, retain the finite phase CV when defined, and fail
+numerical quality. Preserve every failure. These labels do not alter units,
+outcomes, or weights.
 
 ## RGI geometry staging
 
@@ -90,9 +105,10 @@ duplicate with unequal geometry or attributes.
 
 Apply GEOS linework `make_valid` only when a valid WGS84 geometry becomes
 invalid after projection. Record cell, RGI ID, original validity, reason,
-input/output type, geodesic and projected area before and after, relative area
-change, GEOS, Shapely, PROJ, and CRS. A nonpolygonal result, empty result, or
-relative area change above `1e-10` stops execution. Geometry repair never
+input/output type, geodesic and projected area before and after, both relative
+area changes, GEOS, Shapely, PROJ, and CRS. A nonpolygonal result, empty result,
+or either geodesic or projected relative area change above `1e-10` stops
+execution. Geometry repair never
 changes the sample, reporting cell, or frozen mask equation.
 
 No sampled cell crosses the antimeridian. Still test longitude normalization,
@@ -117,8 +133,8 @@ The frozen sample produces 776 unique objects from 864 cell-object incidences.
 
 Preserve every available COG in full with request URL, retrieval UTC, exact
 headers, status, byte count, ETag, last-modified value, and SHA-256. Preserve a
-404 in the unavailable-object ledger; do not create a zero raster. At least 15
-objects may match issue #15 raw COGs and can be reused only after the complete
+404 in the unavailable-object ledger; do not create a zero raster. Exactly 15
+objects match issue #15 raw COG identities and can be reused only after the complete
 identity check above.
 
 For each phase, build the registered equal-area grid over the densified
@@ -168,8 +184,8 @@ equivalent-area value, commit:
 - raw-source hashes and exact HTTP records;
 - RGI subsets and any projection-repair ledger;
 - four DEM phase grids and one PZI subset per selected cell;
-- one replay row per cell and stored input layer;
-- one coverage row per cell and variant;
+- exactly 480 replay rows: five stored input layers for each of 96 cells;
+- exactly 480 coverage rows: five variants for each of 96 cells;
 - loader/wrapper code, tests, software versions, fixed output schemas, module
   hashes, and a pre-output manifest.
 
@@ -178,15 +194,42 @@ bytes. Require equal shapes, affine transforms, coordinate systems, little-
 endian C-order value hashes, finite/nodata masks, and zero maximum absolute
 difference. Verify `r90` against strict aggregation of the replayed `p00`.
 
-For each cell and variant record reporting-center count, complete DEM-support
-count, finite-PZI count, outside-RGI finite-PZI count, glacier-proximity
-predicate count, source-object count, and missing-object identities. These are
-coverage diagnostics, not equivalent-area summaries. Distinguish a defined
-structural zero from absence of source support. Partial source coverage remains
-explicit; nodata never becomes physical zero.
+For each cell and variant record `report_center_count`,
+`complete_dem_support_count`, `glacier_predicate_coverage_count`,
+`glacier_proximity_center_count`, `outside_RGI_center_count`,
+`outside_RGI_finite_PZI_count`, source-object count, and missing-object
+identities. Predicate coverage is computability, whereas proximity-center count
+is predicate truth; never conflate them. Valid staged RGI geometry gives
+glacier predicate coverage at every reporting center.
+
+For each source dimension form the cell fraction $q_i=C_i/R_i$: complete DEM
+support over reporting centers, glacier-predicate coverage over reporting
+centers, and finite PZI over outside-RGI centers. When a cell has no outside-RGI
+center, its PZI coverage fraction is one by the vacuous-coverage rule. Estimate
+and report the finite-population mean cell fraction and its stratified variance:
+
+```text
+qbar_hat = (1/N) sum_h N_h mean_sample_h(q_i)
+Var(qbar_hat) = (1/N^2) sum_h
+  N_h^2 (1 - n_h/N_h) sample_variance_h(q_i) / n_h.
+```
+
+Separately HT-expand the covered and denominator grid areas, using count times
+`spacing^2`, and report their descriptive ratio by variant and source
+dimension. Label this area ratio separately from the mean cell fraction. Neither
+coverage summary reweights the equivalent-area outcome.
+
+A cell is computable only if every variant has at least one complete-DEM-
+support reporting center, RGI predicate coverage equals reporting-center count,
+and either no outside-RGI center exists or at least one has finite PZI. A
+nonfinite or negative equivalent-area value is also uncomputable. Failure stops
+the complete total. Documented COG 404s and internal nodata otherwise remain
+part of the frozen complete-support and finite-PZI numerical functional and its
+coverage summaries. Partial coverage is explicit; nodata never becomes
+physical zero.
 
 Any cache mismatch, replay mismatch, grid-anchor mismatch, geometry failure,
-out-of-domain PZI extraction, or uncomputable selected primary outcome stops
+out-of-domain PZI extraction, or uncomputable selected outcome stops
 without replacement. Obtain independent source, numerical, and mechanics
 approval of this source-freeze commit before execution.
 
@@ -230,8 +273,11 @@ CI_s = T_hat_s +/- t(0.975, nu_s) SE_s.
 ```
 
 The interval is untruncated. If every contribution is zero, set
-`nu=infinity` and use 1.96. A zero or undefined positive-denominator RSE fails
-precision. The secondary mean is `T_hat_s/1826`.
+`nu=infinity`, use 1.96, and report the degenerate interval. A nonpositive or
+nonfinite total has undefined RSE and fails precision. Because every populated
+stratum is sampled rather than censused, estimated `RSE=0` also fails the
+conservative precision objective. Precision passes exactly when RSE is finite
+and `0 < RSE <= 0.25`. The secondary mean is `T_hat_s/1826`.
 
 For within-stratum sample covariance `s_h,GP`, estimate
 
@@ -242,9 +288,21 @@ Cov_hat(T_G,T_P) =
 
 Census variance contributions are zero. Report every stratum total,
 variance contribution, covariance contribution, degrees of freedom, interval,
-RSE, and cell value. An RSE above 0.25 for either total fails the precision
-objective. Preserve the result and fixed prefix; expansion requires a future
-public protocol and new randomization before outcomes are opened.
+RSE, and cell value. The Satterthwaite interval approximates sampling variation
+only; it excludes product coverage, phase/resolution sensitivity, and source
+error.
+
+A mask total is numerically resolution/phase robust only if all 96 cell-mask
+records have a positive reference, finite diagnostics, `D <= 0.20`, and `CV <=
+0.10`. A joint label requires both masks. This intersection label does not
+alter the `p00` total. Retain the no-gate frame-only balance result that zero of
+56 multi-region frame cells were selected, whose registered design probability
+is 0.0120688274. It does not alter the HT estimator but prevents a cross-region
+subgroup estimate.
+
+Preserve every result and the fixed prefix. Precision or numerical-quality
+failure permits no added unit; expansion requires a future public protocol and
+new randomization before outcomes are opened.
 
 ## Products, limits, and review
 
@@ -254,12 +312,15 @@ contemporaneous Earth state. RGI proximity does not demonstrate present
 glacier contact or lost mechanical support. PZI does not measure local ground
 temperature.
 
-Commit the source records, 960-row long table, 192 primary diagnostics,
+Commit the source records, 480 replay rows, 480 coverage rows, HT coverage
+summaries, the 960-row long table, 192 primary diagnostics,
 38 variance rows, 19 covariance rows, two estimates, quality summaries,
 notebook, figure, manuscript, compiled PDF, and final manifest. The executed
-notebook contains at most 60 code lines. A non-map figure shows the two
-separate totals with 95% design intervals and RSE, plus numerical-diagnostic
-distributions. It must not combine overlapping outcomes or portray hazard.
+notebook contains at most 60 code lines. A non-map figure shows (a) the two
+separate totals with 95% design intervals and RSE; (b) cell contributions and
+design weights together with regional total and variance contributions; and
+(c) the 90 m departure and four-phase CV distributions. It must not combine
+overlapping outcomes or portray hazard.
 
 Handwritten source plus tests may not exceed 500 lines. Target about 140 lines
 for source/staging, 150 for execution/inference, and 180 for tests. Add no
