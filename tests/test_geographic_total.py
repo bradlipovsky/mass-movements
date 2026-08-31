@@ -2,7 +2,7 @@ import hashlib, unittest
 from pathlib import Path
 from unittest.mock import patch
 import numpy as np, pandas as pd
-from scripts.geographic_total import HASHES, coverage_estimates, diagnostics, estimates, population, verify
+from scripts.geographic_total import HASHES, REPAIR_RELATIVE_TOLERANCE, coverage_estimates, diagnostics, estimates, population, verify
 from scripts.geographic_total_source import OUTPUT, cell_label, cells, dem_requests, expected_dem_ids, grid, pzi_request, pzi_requests
 class GeographicTotalTests(unittest.TestCase):
     def test_frozen_request_universe_and_edges(self):
@@ -16,6 +16,7 @@ class GeographicTotalTests(unittest.TestCase):
         shape, affine, _ = grid(0, 0, "p00")
         self.assertEqual((shape[0] % 3, shape[1] % 3, affine.c % 30, affine.f % 30), (0, 0, 0, 0))
         verify()
+        self.assertEqual(REPAIR_RELATIVE_TOLERANCE, 1e-8)
         self.assertEqual(int(population().sum()), 1826)
         for name, expected in HASHES.items(): self.assertEqual(hashlib.sha256(Path(name).read_bytes()).hexdigest(), expected)
     def test_ht_variance_covariance_and_conservative_zero_rse(self):

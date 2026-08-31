@@ -1,6 +1,6 @@
 # Design-based totals of the frozen terrain-screen functional
 
-Version 0.2. Version 0.1 was registered in GitHub issue
+Version 0.3. Version 0.1 was registered in GitHub issue
 [#19](https://github.com/bradlipovsky/mass-movements/issues/19) on 31 August
 2026 before retrieving or opening any DEM or PZI value for an issue #17
 selected cell.
@@ -15,6 +15,28 @@ first external DEM/PZI retrieval: it pins every imported module, reconstructs
 population counts from the complete frame, requires a raw-byte manifest before
 raster staging, and strengthens RGI duplicate and repair checks. None of these
 changes uses a terrain value.
+
+After version 0.2 and the raw-source freeze were committed, deterministic
+raster staging was stopped on 31 August 2026 when an independent geometry
+audit found that 14 projected RGI incidences exceeded the registered
+`1e-10` repair-area tolerance. At the stop, 170 DEM phase rasters and 42 PZI
+rasters existed: 42 complete cell bundles and two DEM phases for the next
+cell. No replay table, coverage table, repair ledger, or equivalent-area value
+had been written, printed, summarized, or inspected. A single complete-support
+operation had previously been timed on one `p00` raster; only its 17.93 s
+runtime and 453,684 kB maximum resident set size were observed or retained.
+
+Version 0.3 is the geometry-only correction registered publicly before code
+modification or staging resumption. It changes the maximum relative area
+change allowed independently in projected and round-trip geodesic area from
+`1e-10` to `1e-8`. The largest audit-observed change was `4.87e-9`, and every
+absolute projected-area change was below one square metre. All polygonal,
+nonempty, and validity stops remain. Partial derived rasters are preserved;
+deterministic staging restarts from its beginning and may overwrite those
+files only by the same registered construction. The next staged manifest also
+seals all 96 RGI subset GeoJSON files. This correction used RGI geometry, not
+DEM or PZI values, coverage, masks, or equivalent areas, and requires
+independent approval of its exact commit before raster staging resumes.
 
 ## Question and boundary
 
@@ -119,7 +141,7 @@ Apply GEOS linework `make_valid` only when a valid WGS84 geometry becomes
 invalid after projection. Record cell, RGI ID, original validity, reason,
 input/output type, geodesic and projected area before and after, both relative
 area changes, GEOS, Shapely, PROJ, and CRS. A nonpolygonal result, empty result,
-or either geodesic or projected relative area change above `1e-10` stops
+or either geodesic or projected relative area change above `1e-8` stops
 execution. Geometry repair never
 changes the sample, reporting cell, or frozen mask equation.
 

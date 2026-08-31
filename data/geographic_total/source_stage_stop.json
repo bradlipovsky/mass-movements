@@ -1,0 +1,43 @@
+{
+  "raw_source_freeze_commit": "170f218851546f85047b5355716c0ae17d66f068",
+  "stopped_utc": "2026-08-31T20:04:31Z",
+  "reason": "Independent geometry audit found projected RGI repair relative-area changes above the registered 1e-10 tolerance.",
+  "preserved_partial_derived_state": {
+    "dem_phase_tif_count": 170,
+    "pzi_subset_tif_count": 42,
+    "complete_cell_bundle_count": 42,
+    "next_cell_key": "s+061_w+0006",
+    "next_cell_dem_phases_present": ["p00", "p10"]
+  },
+  "absent_outputs": [
+    "data/geographic_total/source_replay.csv",
+    "data/geographic_total/source_coverage.csv",
+    "data/geographic_total/projection_repairs.csv",
+    "data/geographic_total/equivalent_area_long.csv"
+  ],
+  "observations_before_stop": {
+    "dem_or_pzi_values_printed_or_summarized": false,
+    "coverage_or_mask_values_printed_or_summarized": false,
+    "equivalent_area_values_calculated_or_observed": false,
+    "timing_only_benchmark": {
+      "input": "one p00 staged raster",
+      "operation": "complete-support calculation",
+      "elapsed_seconds": 17.93,
+      "maximum_resident_set_kb": 453684,
+      "result_count_or_value_printed_or_retained": false
+    }
+  },
+  "geometry_audit": {
+    "invalid_after_projection_incidence_count": 21,
+    "selected_cells_with_projection_repairs": 10,
+    "incidences_above_previous_tolerance": 14,
+    "selected_cells_above_previous_tolerance": 9,
+    "maximum_projected_relative_area_change": 4.772520664264186e-9,
+    "maximum_geodesic_relative_area_change": 4.868424129165453e-9,
+    "maximum_absolute_projected_area_change_m2": "<1",
+    "previous_tolerance": 1e-10,
+    "corrected_tolerance": 1e-8
+  },
+  "registered_public_comment": "https://github.com/bradlipovsky/mass-movements/issues/19#issuecomment-5483841746",
+  "resumption_gate": "Independent approval of the exact correction commit is required before deterministic raster staging restarts from the beginning."
+}

@@ -24,6 +24,7 @@ HASHES = {"scripts/scale_explicit_steep_area.py": "15f7bff92b7ae44e5f64eac0db705
           "scripts/geographic_sample.py": "21bb6d250f67aa55c42f8efabe3302a2a0a045c950f1455805e2e0ba2cb4faaa",
           "data/geographic_sample/frame.csv": "482c9d585777317ab69363481db3df1011e2d4e8ce84c3826b151406cace9879",
           "data/geographic_sample/sample.csv": "1e9164813893e285aeeeaa1a7833e16c87172cbe4d3357e245854ab13966613b"}
+REPAIR_RELATIVE_TOLERANCE = 1e-8
 def digest(path): return hashlib.sha256(path.read_bytes()).hexdigest()
 def verify(manifest=None):
     for name, expected in HASHES.items():
@@ -70,7 +71,7 @@ def projected_geometries(cell):
             after_g = polygon_area_m2(transform(inverse, repaired))
             relative_p = abs(repaired.area - before_p) / before_p
             relative_g = abs(after_g - before_g) / before_g
-            if repaired.geom_type not in ("Polygon", "MultiPolygon") or repaired.is_empty or not repaired.is_valid or max(relative_p, relative_g) > 1e-10:
+            if repaired.geom_type not in ("Polygon", "MultiPolygon") or repaired.is_empty or not repaired.is_valid or max(relative_p, relative_g) > REPAIR_RELATIVE_TOLERANCE:
                 raise ValueError(f"projection repair failed: {feature['properties']['rgi_id']}")
             repairs.append({"cell_key": cell.key, "rgi_id": feature["properties"]["rgi_id"],
                             "reason": reason, "input_type": projected.geom_type,
