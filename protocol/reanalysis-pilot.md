@@ -1,7 +1,9 @@
 # ERA5 trigger-time and topographic-sensitivity pilot
 
-Version 0.1. Registered on 30 August 2026 before any ERA5 temperature was read
-at an event location. GitHub issue
+Version 0.2. Version 0.1 was registered on 30 August 2026 before any ERA5
+temperature was read at an event location. The audit amendments below were
+registered after the first extraction and before the added sensitivity values
+were read. GitHub issue
 [#5](https://github.com/bradlipovsky/mass-movements/issues/5) is the public
 registration record.
 
@@ -30,9 +32,11 @@ registered links in `data/candidate_clusters.csv`. A later correction to an
 event coordinate or date requires a named amendment and an old-versus-new
 sensitivity result.
 
-The catalog stores a UTC calendar date but not a verified UTC onset timestamp.
-Primary antecedent windows therefore stop at 00:00 UTC on the event date and do
-not include any event-day hour.
+Version 0.1 treated the catalog date as a UTC calendar date and stopped the
+primary window at 00:00 UTC on that date. The audit below showed that this
+assumption is not supported uniformly. The original endpoint remains visible
+as the preregistered *pre-date* window, but it is no longer described as wholly
+antecedent.
 
 ## Reanalysis and invariant fields
 
@@ -74,11 +78,12 @@ the source array before indexing.
 
 For each event month and day, extract matched calendar windows for every year
 from 1979 through 2025. Let `D_y` be 00:00 UTC on that month and day in year
-`y`. The primary exposure is mean hourly 2 m temperature on
-`[D_y - 7 days, D_y)`. Registered secondary exposures use 2-day and 30-day
-antecedent windows. The mean over `[D_y, D_y + 1 day)` is descriptive because
-some of those hours follow the failure. A nonexistent 29 February match is
-omitted rather than shifted.
+`y`. The version-0.1 primary exposure is mean hourly 2 m temperature on
+`[D_y - 7 days, D_y)`. Registered secondary pre-date exposures use 2-day and
+30-day windows. The mean over `[D_y, D_y + 1 day)` is descriptive. The
+version-0.2 conservative-antecedence sensitivity is the seven-day interval
+`[D_y - 8 days, D_y - 1 day)`. A nonexistent 29 February match is omitted
+rather than shifted.
 
 For a given cell and window, the *warm-state rank* is the event-year value's
 midrank among the matching 1991--2020 values, excluding the event year when it
@@ -96,9 +101,10 @@ For the registered decomposition, fit a Theil--Sen line to the 1979--2025
 matching-window means separately for every cell and calendar window. Subtract
 the fitted value in each year and compute a second midrank of the event
 residual against 1991--2020 reference residuals. Report this
-*weather-residual rank* together with the fitted change from 1991 to the event
-year. A slope or rank is a reanalysis diagnostic, not an inferred failure
-cause.
+*linear-trend-residual rank* together with the fitted change from 1991 to the
+event year. Removing one line does not isolate weather: nonlinear secular
+change, low-frequency variability, and reanalysis inhomogeneity can remain. A
+slope or rank is a reanalysis diagnostic, not an inferred failure cause.
 
 Summaries over occurrences are descriptive medians and interquartile ranges.
 For a dependence sensitivity, form undirected connected components from every
@@ -115,9 +121,11 @@ Adding a fixed lapse correction to an event value and all same-cell reference
 values cancels from anomalies, Theil--Sen slopes, and ranks. Verify that
 identity numerically.
 
-Absolute thaw exposure does not have this invariance. For the number of hours
-above 273.15 K in the event year's primary seven-day antecedent window,
-evaluate every combination of lapse rate 4.0, 6.5, and
+Absolute above-freezing air-temperature exposure does not have this
+invariance. For the number of 2-m air-temperature hours above 273.15 K in both
+the event year's registered seven-day pre-date window and conservative-
+antecedence sensitivity, evaluate every combination of lapse rate 4.0, 6.5,
+and
 9.0 K km^-1 and site-minus-model elevation offset -1, 0, +1, and +2 km. These
 12 values are a sensitivity grid, not estimates of source temperature or
 source elevation. No combination is primary.
@@ -144,10 +152,32 @@ and lapse-correction cancellation.
 
 Commit a machine-checkable retrieval manifest and compact derived tables, plus
 an executed notebook with two figures: occurrence-level warm-state and
-weather-residual ranks; and four-cell/elevation sensitivity. If the manuscript
-changes, rebuild and commit its PDF.
+linear-trend-residual ranks; and four-cell/elevation sensitivity. If the
+manuscript changes, rebuild and commit its PDF.
 
 Stop and amend this protocol before event extraction if the temporal array does
 not contain 2 m temperature through 2025, the two layouts fail the registered
 probe comparison, or the fixed sample does not contain 29 rows. Stop and
 simplify if handwritten source and tests approach 500 lines.
+
+## Post-extraction amendment log
+
+- 30 August 2026: a numerical audit found that `date_start` is a published
+  calendar label whose time basis is not uniformly recorded, rather than a
+  verified UTC date. Aru-2 is the concrete failure: the candidate table stores
+  21 September 2016, while the seed chronology places the first pulse at
+  20 September 21:00 UTC and labels 21 September as local time. The original
+  window ending 21 September 00:00 UTC therefore includes three post-onset
+  hours. Preserve its result because it was registered and viewed. Add the
+  uniform seven-day interval ending one full UTC day before every catalog date
+  as a conservative-antecedence sensitivity. Even if a published date is
+  local in UTC+14, its earliest possible start is 10:00 UTC on the preceding
+  day, so this cutoff precedes it by at least 10 hours. Report old and new
+  summaries together and do not choose between them by result strength.
+- 30 August 2026: open the Icechunk repository directly at the registered
+  snapshot identifier rather than opening the moving `main` branch and then
+  comparing identifiers. This changes access reproducibility, not an endpoint.
+- 30 August 2026: replace *weather-residual* with *linear-trend-residual* and
+  *thaw hours* with *above-freezing air-temperature hours*. These changes bound
+  interpretation without changing calculations. Report every registered
+  window because the preliminary audit found material window dependence.
