@@ -1,8 +1,8 @@
 {
   "manifest_version": "1.0",
-  "created_utc": "2026-08-31T05:24:17Z",
+  "created_utc": "2026-08-31T05:51:29Z",
   "protocol_commit": "69c9209",
-  "implementation_commit": "bf22535bade93c55b1fa817cceab0fe804e9d665",
+  "implementation_commit": "bf6fd5a3c614f685e529081653d6ee1ab7d8579c",
   "registered_code_budget": {
     "analysis_lines": 269,
     "test_lines": 164,
@@ -23,11 +23,11 @@
     "13": {"glacier": 144, "glacier_contact": 742, "permafrost": 7099}
   },
   "files": {
-    "protocol/denominator-pilot.md": {"size_bytes": 14382, "sha256": "8da1fb7316c78cd6696279e9e106977a3cbff287c5fbcd354b39e4d77d1c8bcd"},
+    "protocol/denominator-pilot.md": {"size_bytes": 14838, "sha256": "846b06bd33df0453ce960451b0335d942ccc7bf4dc957b2618fd5e134b916626"},
     "requirements-denominator.txt": {"size_bytes": 156, "sha256": "9c80611e53eb0626e119998a69f61fb1ab98cdb09f3e29a8661f93f5b506d62e"},
     "scripts/denominator_pilot.py": {"size_bytes": 14163, "sha256": "5f733147434f859ea3cbfc815da77a1bd8ae83137d80e59a65243d6d3e23508a"},
     "tests/test_denominator_pilot.py": {"size_bytes": 9329, "sha256": "631b3d8d7966ad8e375fffc289d7c9e27545f507a6c15a153be5bd98ea2bdda9"},
-    "data/denominator/PROVENANCE.md": {"size_bytes": 3955, "sha256": "eca34c95fc36473747b063956627878f0ecfa175ea4e345d9a4032694a378203"},
+    "data/denominator/PROVENANCE.md": {"size_bytes": 4085, "sha256": "12231a08677287abead8352ae770c9977736bb4ca6f6c033b160a682499a62f8"},
     "data/denominator/eligible_windows.csv": {"size_bytes": 46683, "sha256": "58a160ffa0e9ce2c99e4a8550297851829de7d9ac8e3f73100671c97632f9e4d"},
     "data/denominator/source_manifest.json": {"size_bytes": 31974, "sha256": "94cbf1997b26fc86ee9d91f965810cce71fa277f8b7bfb310b0f42ef94614453"},
     "data/denominator/objects.csv": {"size_bytes": 33251295, "sha256": "6ddec97b1cd31cdd3a77501455085e1cd2114e2c0995f1a5dfc057a52b3eda6a"},
@@ -40,8 +40,8 @@
     "figures/denominator_windows.pdf": {"size_bytes": 150069, "sha256": "ba5b74000d2b7fc050e39c372a20d15b0ba66cdc81596c67317b2be37623f087"},
     "figures/denominator_sensitivity.png": {"size_bytes": 126828, "sha256": "c4acb56cf1961df9ac3bab03aa839c8977ec4494a3ce9edb035d6d6a55a7b021"},
     "figures/denominator_sensitivity.pdf": {"size_bytes": 23636, "sha256": "18c31e66133c756fa44f3ff034de3cede3508b2c299c66b34e257258346d82e3"},
-    "latex/main.tex": {"size_bytes": 42710, "sha256": "c33d459f291819820b783ed62069539876c21a849c39e760b2f0f80640500f25"},
+    "latex/main.tex": {"size_bytes": 42876, "sha256": "5395ecc366260829081252552cd1bcee0f70604b8f0134e78a76587594219f76"},
     "latex/references.bib": {"size_bytes": 10258, "sha256": "e143f6c007ddbd2b9ac50389f099a5f99feb3dfdad7fe9c1369112a0ac81c2fc"},
-    "latex/main.pdf": {"size_bytes": 527370, "sha256": "c4c2efe194cf0e74b6909d33fcff6de5bd356fa7773ee9e80151ad6205a4e090"}
+    "latex/main.pdf": {"size_bytes": 527621, "sha256": "f910909479882b3f86b55137cf86765c037dc4a38cf055be00e28099c6eb80a1"}
   }
 }

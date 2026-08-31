@@ -1,6 +1,6 @@
 # Susceptible-terrain denominator pilot
 
-Version 0.4. Version 0.1 was registered on 30 August 2026 before any RGI,
+Version 0.5. Version 0.1 was registered on 30 August 2026 before any RGI,
 Copernicus DEM, permafrost-index, or ITS_LIVE product value was read. The
 access amendment below was registered after Earthdata authentication failed
 and before any product value was read. The contact-distance correction below
@@ -45,9 +45,11 @@ regional or global terrain distribution.
 
 Choose one 1 degree by 1 degree WGS84 analysis window per RGI region using only
 the RGI 7.0 inventory. Normalize longitude to `[-180, 180)`. A candidate cell
-has integer west and south edges, contains at least 10 RGI glacier centroids,
-and has at least 1 square kilometre of summed catalog `area_km2` among those
-centroids. Encode its key as
+has integer west and south edges, contains at least 10 archived RGI `cenlon`,
+`cenlat` points, and has at least 1 square kilometre of summed catalog
+`area_km2` among those points. The RGI metadata defines this as an approximately
+central point within the glacier outline, not a geometric centroid. Encode its
+key as
 `rgi7.0|RR|south={south:+03d}|west={west:+04d}`, where `RR` is the two-digit
 region. Choose the candidate whose UTF-8 key has the lexicographically smallest
 SHA-256 digest. Record all eligible keys and digests. If any field name differs
@@ -263,3 +265,8 @@ recomputing.
   checksum those rejected WCS responses. The raw file advertises range access
   and preserves 0, 0.01, and -9999 distinctly. This changes source encoding
   and coverage accounting, not thresholds, windows, or the positive PZI mask.
+- 30 August 2026: clarify after the held-out audit that window selection uses
+  the archived `cenlon` and `cenlat` fields. RGI metadata calls this an
+  approximately central point within an outline, not a geometric centroid.
+  The implementation always used those fields; no value, key, digest, window,
+  or result changes.

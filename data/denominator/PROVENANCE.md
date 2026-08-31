@@ -12,10 +12,13 @@ that every remote service will remain available.
 The three regional version-7.0 glacier archives were downloaded and checked
 against the hashes in the manifest. Their `*-attributes.csv` tables were read
 with Python's standard CSV parser. Longitude was normalized to `[-180,180)`;
-centroids were grouped by `floor(latitude), floor(longitude)`; counts and
-`math.fsum(area_km2)` were calculated; cells failing either registered
+the archived `cenlat`, `cenlon` points were grouped by
+`floor(latitude), floor(longitude)`; counts and `math.fsum(area_km2)` were
+calculated; cells failing either registered
 eligibility condition were removed; and every remaining key and SHA-256 is in
 `eligible_windows.csv`. Its minimum digest per region reproduces `windows.csv`.
+RGI metadata defines these as approximately central points within outlines,
+not geometric centroids.
 The matching glacier shapefile was clipped to the selected window plus the
 registered 1 km projected processing halo and written as GeoJSON without
 simplifying feature geometry.
