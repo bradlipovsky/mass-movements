@@ -37,15 +37,14 @@ METHODS = {
 UNCERTAINTY = {"le_100_m", "le_1_km", "le_5_km", "gt_5_km_or_unknown"}
 REVIEWS = {"pending", "agree", "disagree"}
 TIME_BASES = {"utc", "civil_offset", "civil_zone", "trigger_origin", "unknown"}
+ONSET_ROLES = {"source_failure", "trigger_proxy", "context_only"}
 PRECISIONS = {"second", "minute", "hour", "day", "range"}
 SOURCE_TYPES = {"primary", "authoritative", "structured_inventory", "secondary"}
 ACCESS_STATES = {"public", "metadata_only", "source_inaccessible"}
 
-
 def read_csv(path):
     with path.open(newline="", encoding="utf-8") as handle:
         return list(csv.DictReader(handle))
-
 
 def parse_utc(value):
     if value.endswith("Z"):
@@ -56,7 +55,6 @@ def parse_utc(value):
         raise ValueError("timestamp must have an explicit UTC offset")
     return parse_local(value).replace(tzinfo=timezone.utc)
 
-
 def parse_local(value):
     for pattern in ("%Y-%m-%dT%H:%M:%S", "%Y-%m-%dT%H:%M:%S.%f"):
         try:
@@ -65,14 +63,11 @@ def parse_local(value):
             pass
     raise ValueError("reported local bound must be a timezone-naive ISO timestamp")
 
-
 def converted_utc(local_value, offset_minutes):
     return (parse_local(local_value) - timedelta(minutes=int(offset_minutes))).replace(tzinfo=timezone.utc)
 
-
 def intervals_overlap(lower_a, upper_a, lower_b, upper_b):
     return max(parse_utc(lower_a), parse_utc(lower_b)) < min(parse_utc(upper_a), parse_utc(upper_b))
-
 
 def uncertainty_class(metres):
     metres = float(metres)
@@ -84,7 +79,6 @@ def uncertainty_class(metres):
         return "le_5_km"
     return "gt_5_km_or_unknown"
 
-
 def selected_candidates():
     rows = read_csv(ROOT / "data" / "candidates.csv")
     return {
@@ -93,11 +87,9 @@ def selected_candidates():
         and row["trigger_time_eligible"] == "yes"
     }
 
-
 def require_vocab(errors, row, field, allowed, label):
     if row[field] not in allowed:
         errors.append(f"{label}: invalid {field}={row[field]!r}")
-
 
 def validate_rows():
     errors = []
@@ -122,6 +114,7 @@ def validate_rows():
     summaries = unique(summary, "candidate_id", "summary candidate_id")
     coordinate_by_id = unique(coordinates, "assertion_id", "coordinate assertion_id")
     time_by_id = unique(times, "assertion_id", "time assertion_id")
+    times_for = {key: [item for item in times if item["candidate_id"] == key] for key in candidates}
     source_by_id = unique(sources, "source_id", "source_id")
     if set(summaries) != set(candidates):
         missing = sorted(set(candidates) - set(summaries))
@@ -175,11 +168,20 @@ def validate_rows():
             assertion = time_by_id.get(row["time_assertion_id"])
             if not assertion or assertion["review_state"] != "agree":
                 errors.append(f"{candidate_id}: accepted time lacks agreed assertion")
+            elif assertion["onset_role"] == "context_only":
+                errors.append(f"{candidate_id}: accepted time selects a contextual assertion")
+            elif assertion["onset_role"] == "trigger_proxy" and not assertion.get("supporting_source_id"):
+                errors.append(f"{candidate_id}: accepted trigger proxy lacks event-specific support")
             elif (
                 row["onset_lower_utc"] != assertion["onset_lower_utc"]
                 or row["onset_upper_utc"] != assertion["onset_upper_utc"]
             ):
                 errors.append(f"{candidate_id}: time summary does not match assertion")
+        elif row["time_status"] == "conflict" and sum(
+            item["review_state"] == "agree" and item["onset_role"] != "context_only"
+            for item in times_for[candidate_id]
+        ) < 2:
+            errors.append(f"{candidate_id}: conflict lacks two onset-relevant assertions")
 
     for row in coordinates:
         label = row["assertion_id"]
@@ -227,11 +229,14 @@ def validate_rows():
         if row["candidate_id"] not in candidates:
             errors.append(f"{label}: unknown candidate")
         require_vocab(errors, row, "time_basis", TIME_BASES, label)
+        require_vocab(errors, row, "onset_role", ONSET_ROLES, label)
         require_vocab(errors, row, "precision", PRECISIONS, label)
         require_vocab(errors, row, "review_state", REVIEWS, label)
         if row["source_id"] not in source_by_id:
             errors.append(f"{label}: unknown source_id")
         if row.get("supporting_source_id") and row["supporting_source_id"] not in source_by_id: errors.append(f"{label}: unknown supporting_source_id")
+        if row["time_basis"] == "trigger_origin" and row["onset_role"] != "trigger_proxy":
+            errors.append(f"{label}: trigger-origin basis and onset role disagree")
         conversion_fields = [
             "reported_lower", "reported_upper", "utc_offset_lower_minutes",
             "utc_offset_upper_minutes", "onset_lower_utc", "onset_upper_utc",
@@ -271,10 +276,8 @@ def validate_rows():
             errors.append(f"{label}: invalid sha256")
     return errors, summary, coordinates, times, sources
 
-
 def file_sha256(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
-
 
 def validate_manifest(errors):
     path = DATA / "manifest.json"
@@ -293,7 +296,6 @@ def validate_manifest(errors):
         if expected != file_sha256(ROOT / relative):
             errors.append(f"manifest input hash mismatch: {relative}")
 
-
 def main():
     errors, summary, coordinates, times, sources = validate_rows()
     validate_manifest(errors)
@@ -308,7 +310,6 @@ def main():
         f"{len(coordinates)} coordinate and {len(times)} time assertions; {len(sources)} sources"
     )
     return 0
-
 
 if __name__ == "__main__":
     raise SystemExit(main())

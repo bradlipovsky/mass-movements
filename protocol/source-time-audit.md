@@ -195,3 +195,9 @@ reason and affected fields; result-contingent changes are prohibited.
   digitizations at the registered `le_1_km` class. Affected fields are the
   Black Rapids east, middle, and west and McGinnis north and south coordinate
   assertions and summaries; West Fork remains unresolved.
+- 2026-08-30: an immutable-output review found that the EarthScope Pedersen
+  time is a station arrival, not source onset. Add `onset_role` to distinguish
+  `source_failure`, `trigger_proxy`, and `context_only` assertions; classify
+  all time assertions; retain the Pedersen arrival as context; and select the
+  independently reviewed USGS source-failure second. No exposure is read or
+  changed. Affected fields are time-assertion roles and the Pedersen summary.

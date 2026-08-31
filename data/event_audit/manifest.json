@@ -5,14 +5,14 @@
   "files": {
     "data/event_audit/coordinate_assertions.csv": "33fb1ac22ccec77d8f5ffc9e928b75042cc91fbe08645a4be4ffd879fdc57874",
     "data/event_audit/sources.csv": "8a8e3acc21c471afb2fed6111dd13537e360ba9350fe4349ecc23445e809cd47",
-    "data/event_audit/summary.csv": "24490f6492690f1164bee1a3ba3d05a62c4919bc95e8cf678ec21cb8cd35c9b4",
-    "data/event_audit/time_assertions.csv": "278a26e13aa33f60235e7aee239d8517ce8269b8290c2d60d752b0c564229fa3"
+    "data/event_audit/summary.csv": "8e9f1e43851263591c3c72f908ea4e073f6a19faa6a01738a1e6b82db9bdd532",
+    "data/event_audit/time_assertions.csv": "adde3bdb573f17c1c4e31ccf404d467bcb466f4075be2db79f812264c8a4ae54"
   },
-  "frozen_utc": "2026-08-31T03:47:18Z",
+  "frozen_utc": "2026-08-31T04:05:34Z",
   "inputs": {
     "data/candidates.csv": "8b6b0f972180e26c326aaa0e6a501080843bd4b6e6674b07c5aa009340c8a249",
-    "protocol/source-time-audit.md": "7db011ba5bf35ca0efee965a15e45b080fa1234504d4030848cdefaea1ea83f6",
-    "scripts/check_event_audit.py": "c9498d0dbfe35b6c900f98301590c45501b360b09e80733f4e8afb6c306d911f"
+    "protocol/source-time-audit.md": "55c0790ffc84a9da74d92277f7b14e8ea5e2a3241377c6049a1c04be4d75a16a",
+    "scripts/check_event_audit.py": "b37d5d5be54087cd32419f1864243300ac55d698b352318d20ee3f41e73cf667"
   },
   "state": "frozen"
 }

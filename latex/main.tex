@@ -39,11 +39,16 @@ screen to 148 candidate occurrences. Two independent screens include 73,
 retain 68 as uncertain, and exclude 7; 53 included failures have day-scale or
 better timing for a later trigger analysis. Trigger, cascade, and repeat-site
 dependence remain separate. A registered ERA5 pilot then retains the 29 of 53
-included, trigger-time-eligible occurrences that have coordinates. For the
+included, trigger-time-eligible occurrences that have finite catalog
+coordinates. For the
 registered seven-day pre-date window, the median rank among 1991--2020
 calendar controls is 0.586; after a robust linear trend is removed, the median
 residual rank is 0.483. A conservative-antecedence sensitivity gives 0.586 and
 0.533. The median four-cell rank ranges are 0.133 and 0.103, respectively.
+An independently reviewed source-coordinate and UTC-onset audit subsequently
+accepts source coordinates for 24 occurrences, UTC intervals for 34, and both
+for 22; only 9 of the pilot's 29 occurrences have accepted source coordinates.
+The registered pilot results are preserved rather than recomputed post hoc.
 These are descriptive exposure diagnostics without a susceptible-slope
 denominator. I then specify detrended seasonal controls,
 matched non-failing slopes, mechanism-specific glacier and permafrost
@@ -266,8 +271,8 @@ Barry Arm, active & Slow bedrock landslide & 290--689 possible & Potential rapid
 Atmospheric fields do not measure glacier support, permafrost fracture state,
 or basal effective pressure. The analysis will therefore pair reanalysis with
 annual optical and radar mapping of terminus position, glacier-slope contact,
-surface elevation, and source-slope deformation. Define $\Delta h_i$ as index-
-date thickness minus baseline thickness at the slope contact. A signed
+surface elevation, and source-slope deformation. Define $\Delta h_i$ as
+index-date thickness minus baseline thickness at the slope contact. A signed
 stress-scale proxy for support loss is
 \begin{equation}
   S_i = -\rho_i g\Delta h_i,
@@ -339,8 +344,8 @@ lie on the causal pathway. A preregistered causal diagram will distinguish
 baseline confounders from exposures and mediators.
 
 A hierarchical model will estimate associations while including region and
-site-group effects, detection era, and monitoring intensity. Glacier-
-detachment sites will have a signed liquid-water/effective-pressure contrast;
+site-group effects, detection era, and monitoring intensity.
+Glacier-detachment sites will have a signed liquid-water/effective-pressure contrast;
 glacier-contact rock slopes will have a signed contact-loss/support contrast;
 and permafrost rock slopes will have a cumulative thermal contrast. Predictors
 will be standardized against their own risk-set distributions and will not be
@@ -357,31 +362,100 @@ corrected for slope, aspect, and shading. Results will be reported before and
 after each correction. Regional modeling is warranted only when these
 corrections change an event anomaly enough to affect the prespecified test.
 
+\subsection{Source-coordinate and UTC-onset audit}
+
+After the registered temperature pilot exposed location and clock ambiguity, I
+registered a separate, climate-blind audit before retrieving any new event
+exposure. It fixes the same 53 trigger-time-eligible occurrences and preserves
+every original catalog value. The coordinate target is the initiating source
+or source-area centroid, not a named summit, deposit, lake, gauge, dam, or
+downstream impact. Each assertion records geometry role, evidence method
+(published, digitized, gazetteer, or unavailable), a horizontal-uncertainty
+class that may be unbounded, exact source locator, and reviewer state.
+Digitized points are accepted only when map control supports the registered
+uncertainty class.
+
+Time assertions target the earliest documented motion of the qualifying
+source failure and are stored as half-open UTC intervals. Local clocks without
+a documented civil scale are not converted from longitude. Multi-pulse events
+retain the qualifying pulse range when source volume cannot be allocated by
+pulse. An earthquake origin can be retained only after an event-specific
+source establishes that the named failure was coseismic; it remains labeled a
+trigger-origin proxy rather than a measured detachment clock. Two differently
+named reviewers check each assertion. The final tables, validator, protocol,
+and retrieved legally redistributable source objects are checksummed in a
+manifest frozen before any new reanalysis extraction. Seven otherwise reusable
+objects could not be archived because automated retrieval was blocked; their
+access failures remain explicit in the source table.
+
+The audit accepts source coordinates for 24 of 53 occurrences: 21 have
+uncertainty bounded at 1~km and 3 at 5~km. It accepts UTC intervals for 34,
+comprising 13 minute, 11 second, and 10 range assertions; 3 more retain
+conflicting source intervals and 16 remain unresolved. Nine accepted intervals
+are earthquake trigger-origin proxies, not measured detachment times. Twenty-two
+occurrences have both an accepted source coordinate and UTC interval
+(Figure~\ref{fig:source-audit}). Completeness is strongly source-dependent:
+accepted-coordinate counts include 0 of 7 High Mountain Asia frame records,
+13 of 20 independent rock-search records, and 2 of 2 web-search records. The
+small cells and evidence-availability differences do not describe occurrence
+rates.
+
+Among the 29 occurrences in the registered ERA5 pilot, only 9 have accepted
+source coordinates, 17 have accepted UTC intervals, and 9 have both; 2 retain
+time conflicts. For these 9 occurrences,
+the largest catalog-to-audited separation is 0.677~km and the median is zero.
+That small conditional distance does not validate the other 20 catalog points:
+their main limitation is target geometry or unbounded uncertainty rather than
+decimal precision. Five Denali source-scar digitizations were accepted only
+after independent map review. Conversely, EarthScope timestamps for Elliot
+Creek and Pedersen were retained as station arrivals rather than source onset.
+An independently reviewed USGS second supports Pedersen; Elliot remains
+unresolved, and two Paat primary sources remain separated by two seconds. The
+audit thus changes which observations qualify, even where accepted numeric
+coordinates move little.
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=\textwidth]{../figures/source_time_audit.pdf}
+  \caption{Climate-blind source-coordinate and UTC-onset audit. (a) The 29
+  finite original catalog points and 24 accepted source coordinates. (b)
+  Accepted, conflicting, and unresolved outcomes. (c) Accepted coordinate
+  uncertainty, accepted UTC precision, and reasons for non-accepted times. (d)
+  Acceptance fractions by discovery stream. Nine accepted UTC intervals are
+  earthquake trigger-origin proxies, not detachment clocks. The figure contains
+  no climate or reanalysis values.}\label{fig:source-audit}
+\end{figure}
+
 \subsection{Registered ERA5 temperature pilot}
 
 After freezing the discovery inventory, I registered a narrower extraction
 test before reading temperature at an event location. It selects every
-included, trigger-time-eligible occurrence with finite coordinates, giving 29
-occurrences. Hourly 2-m temperature comes from the public temporal-layout
+included, trigger-time-eligible occurrence with finite catalog coordinates,
+giving 29 occurrences. These are the original discovery coordinates, not the
+later accepted source-coordinate set. Hourly 2-m temperature comes from the
+public temporal-layout
 Icechunk copy of ERA5 snapshot \texttt{T9H8SG2PVXWNY0QNJPJG}
 \citep{Hersbach2020,EarthmoverERA52026}. Surface geopotential and land fraction
 come from the NSF NCAR 0.25-degree ERA5 invariants
 \citep{NCARERA5}. Three fixed, non-event probes matched the temporal and
 spatial layouts exactly before event extraction.
 
-The coordinate requirement retains 29 of the 53 trigger-time-eligible
-occurrences, and coordinate completeness is strongly source-dependent:
-coordinates are present for 2 of 20 records from the independent rock-search
-suite, 11 of 12 from the landslide-tsunami frame, and all 7 from the High
-Mountain Asia frame. The summaries below therefore characterize the
-coordinate-complete subset, not all 53 eligible occurrences.
+The finite-catalog-coordinate requirement retains 29 of the 53
+trigger-time-eligible occurrences, and this input availability is strongly
+source-dependent: coordinates are present for 2 of 20 records from the independent
+rock-search suite, 11 of 12 from the landslide-tsunami frame, and all 7 from
+the High Mountain Asia frame. The later audit accepts source geometry for only
+9 of these 29. The summaries below therefore characterize the registered
+catalog-point subset, not all 53 eligible occurrences or a source-verified
+subset.
 
 For each occurrence, the extraction retains the two nearest distinct grid
 coordinates on each axis. The primary cell has the largest land fraction,
 with distance and coordinates resolving ties; results also retain all four
 cells. The registered primary window contains the 168 complete UTC hours
-before 00:00 UTC on the published catalog date. An audit found that these date
-labels are not uniformly verified UTC: in particular, the Aru-2 local date
+before 00:00 UTC on the published catalog date. The source audit shows that
+only 17 of the 29 occurrences have accepted UTC intervals, while 2 conflict
+and 10 remain unresolved. In particular, the Aru-2 local date
 makes the original window include three post-onset hours. I therefore retain
 the registered pre-date result and add a conservative sensitivity covering
 the seven days ending one full UTC day earlier. Each mean receives a midrank
@@ -404,8 +478,8 @@ and residual ranks of 0.586 and 0.533, respectively.
 
 In the conservative-antecedence window, the occurrence-level median warm-state
 and linear-trend-residual ranks are 0.586 (interquartile range 0.483--0.800)
-and 0.533 (0.300--0.759); 21 and 16 values exceed 0.5. The component-
-representative medians are 0.621 and 0.552. Buffering changes event-year mean
+and 0.533 (0.300--0.759); 21 and 16 values exceed 0.5. The
+component-representative medians are 0.621 and 0.552. Buffering changes event-year mean
 temperature by a median of $-0.050$~K, but the range is $-1.101$ to 0.965~K.
 The other registered warm-state/linear-residual median pairs are 0.552/0.448
 for two days, 0.724/0.655 for 30 days, and 0.533/0.448 for the catalog-date day.
@@ -496,10 +570,15 @@ heights describe possible geometries, not observations or forecasts of a
 failure time.
 
 This version completes the climate-blind frame reconciliation, double
-screening, and registered ERA5 temperature pilot. The unresolved records
-require primary-source follow-up, but they are not silently removed. The pilot
-inspected only its registered temperature endpoints. The next association
-analysis must acquire matched non-failing slopes and freeze glacier-contact
+screening, registered ERA5 temperature pilot, and independently reviewed
+source-coordinate and UTC-onset audit. The audit leaves 29 coordinates and 16
+times unresolved and preserves three time conflicts; none is silently removed.
+The pilot inspected only its registered temperature endpoints and is not
+retroactively recomputed on the accepted audit subset. A later extraction may
+use the 22 occurrences with both accepted fields only under a new frozen
+specification, while retaining all unresolved rows in the reporting frame.
+The next association analysis must acquire matched non-failing slopes and
+freeze glacier-contact
 histories, deformation records, permafrost proxies, additional meteorological
 variables, and the statistical specification before inspecting those new
 exposures. Only then can the study estimate whether hazardous alpine mass
@@ -516,8 +595,12 @@ require glacier geometry, support change, structure, and deformation.
 In the registered 29-occurrence pilot, central ranks change with the window
 and fitted-linear-trend adjustment. Neighboring cells change ranks and
 anomalies, while elevation scenarios change above-freezing air-temperature
-counts. Coordinate availability also selects a source-dependent subset of the
-53 eligible trigger-time records whose representativeness is unknown.
+counts. The subsequent audit accepts source coordinates for 24 of 53 eligible
+records, UTC intervals for 34, and both for 22. Only 9 of the pilot's 29
+occurrences have accepted source coordinates, so its exposure summaries
+describe registered catalog locations rather than a source-verified sample.
+Coordinate and time acceptance are themselves source-dependent, and their
+representativeness is unknown.
 Detrended seasonal controls, matched non-failing slopes, and explicit
 competing predictions remain the next tests. The present contribution is a
 sampling frame, protocol, and exposure-sensitivity result, not evidence that

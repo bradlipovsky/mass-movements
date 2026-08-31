@@ -123,5 +123,8 @@ latitude and longitude, `geometry_role=not_reported`,
 `evidence_method=not_available`, and uncertainty
 `gt_5_km_or_unknown`. No other blank-coordinate combination is valid. A local
 clock without a documented scale has `time_basis=unknown` and no UTC fields.
-The validator rejects accepted summaries without an independently agreed,
+Each time assertion has `onset_role=source_failure`, `trigger_proxy`, or
+`context_only`; station arrivals, report times, and generic catalog times stay
+visible but cannot support accepted or conflicting onset summaries. The
+validator rejects accepted summaries without an independently agreed,
 target-eligible assertion and checks all half-open UTC conversions.
