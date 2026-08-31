@@ -56,7 +56,10 @@ map-chunked copies make each point-hour request read a global field.
 
 ## Spatial extraction
 
-Retain the four 0.25 degree grid cells that bracket each catalog coordinate.
+Retain the Cartesian product of the two nearest distinct 0.25 degree grid
+coordinates on each axis. This is the usual four-cell bracket except when a
+catalog coordinate lies exactly on a grid coordinate; then the second-nearest
+coordinate is used, with the smaller coordinate winning an equal-distance tie.
 Choose the primary cell by the largest land--sea-mask fraction and break an
 exact mask tie by the shortest great-circle distance to the catalog
 coordinate. Remaining exact ties are resolved by increasing latitude and then
@@ -113,7 +116,8 @@ values cancels from anomalies, Theil--Sen slopes, and ranks. Verify that
 identity numerically.
 
 Absolute thaw exposure does not have this invariance. For the number of hours
-above 273.15 K, evaluate every combination of lapse rate 4.0, 6.5, and
+above 273.15 K in the event year's primary seven-day antecedent window,
+evaluate every combination of lapse rate 4.0, 6.5, and
 9.0 K km^-1 and site-minus-model elevation offset -1, 0, +1, and +2 km. These
 12 values are a sensitivity grid, not estimates of source temperature or
 source elevation. No combination is primary.
