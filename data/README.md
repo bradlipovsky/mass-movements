@@ -108,3 +108,20 @@ independence, decision-role coherence, trigger-time precision, exact frame
 reconciliation, decision--reason consistency, and dependence-cluster links.
 Their final lines report live counts, so documentation does not need a
 separately maintained count.
+
+## Source-coordinate and UTC-onset audit
+
+`event_audit/summary.csv` is a 53-row analysis layer over the frozen
+trigger-time set; it does not amend `candidates.csv`. The two long assertion
+tables preserve competing coordinates, clocks, pulse interpretations, source
+locators, and independent review states. An inventory or catalog event point
+does not become a source coordinate unless primary geometry establishes the
+initiating scar or source-area centroid.
+
+A checked source that reports no usable numeric point is encoded with blank
+latitude and longitude, `geometry_role=not_reported`,
+`evidence_method=not_available`, and uncertainty
+`gt_5_km_or_unknown`. No other blank-coordinate combination is valid. A local
+clock without a documented scale has `time_basis=unknown` and no UTC fields.
+The validator rejects accepted summaries without an independently agreed,
+target-eligible assertion and checks all half-open UTC conversions.
