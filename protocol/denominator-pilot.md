@@ -1,11 +1,12 @@
 # Susceptible-terrain denominator pilot
 
-Version 0.3. Version 0.1 was registered on 30 August 2026 before any RGI,
+Version 0.4. Version 0.1 was registered on 30 August 2026 before any RGI,
 Copernicus DEM, permafrost-index, or ITS_LIVE product value was read. The
 access amendment below was registered after Earthdata authentication failed
 and before any product value was read. The contact-distance correction below
 was registered after blind RGI window selection but before any terrain or PZI
-value was read. GitHub issue
+value was read. The raw-PZI access correction below was registered after a
+first WCS extraction and before results were frozen. GitHub issue
 [#9](https://github.com/bradlipovsky/mass-movements/issues/9) is the public
 registration record.
 
@@ -81,10 +82,11 @@ Earth snapshot.
   not web-map overviews. This is a digital surface model; its gradient is not
   assumed to be a measured bedrock-plane slope.
 - **Permafrost index:** Gruber (2012) Global Permafrost Zonation Index, 30
-  arc-second WGS84 grid, numeric WCS coverage
-  `cryogis__Permafrost-Global-PFI`. Use GeoTIFF coverage subsets. The source
-  documentation defines modeled PZI values from 0.1 to 1.0, an uncertainty
-  fringe of 0.01, and background 0.
+  arc-second WGS84 grid. Use HTTP byte ranges from the official `PZI.flt`
+  Float32 grid with its `PZI.hdr`, rather than the WCS coverage
+  `cryogis__Permafrost-Global-PFI`. The source documentation defines modeled
+  PZI values from 0.1 to 1.0, an uncertainty fringe of 0.01, background 0,
+  nodata -9999, little-endian byte order, 43,200 columns, and 18,000 rows.
 - **Velocity observability:** ITS_LIVE regional glacier and ice-sheet surface
   velocities, NSIDC-0776 version 2, DOI `10.5067/JQ6337239C96`. Read only the
   `count` variable in the 2014--2022 climatological file. It is the number of
@@ -254,3 +256,10 @@ recomputing.
   distance. This correction was made after the blind windows were selected but
   before any DEM, slope, contact, or PZI value was read. Thresholds and windows
   are unchanged.
+- 30 August 2026: replace WCS PZI subsets with byte-range subsets of the
+  official raw `PZI.flt` grid. The WCS returned valid positive index values but
+  mapped the documented numeric background 0 to server nodata, causing a
+  misleading 22--40% coverage fraction in the first execution. Retain and
+  checksum those rejected WCS responses. The raw file advertises range access
+  and preserves 0, 0.01, and -9999 distinctly. This changes source encoding
+  and coverage accounting, not thresholds, windows, or the positive PZI mask.
