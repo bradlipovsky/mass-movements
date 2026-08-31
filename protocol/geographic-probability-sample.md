@@ -58,8 +58,10 @@ in the source-replay code. Record cells removed by the latitude rule and their
 intersecting RGI area. A polygon that only touches a cell boundary has zero
 intersection area and does not establish eligibility. There is no minimum
 glacier count or inventory-area threshold. RGI 7 defines region 20 for the
-Antarctic Mainland but currently assigns it no glaciers; retrieve and record
-its empty contribution rather than silently omitting the code.
+Antarctic Mainland but currently assigns it no glaciers and publishes no
+region-20 outline archive. Retain the official region definition, distribution
+index, and explicit zero contribution rather than inventing an empty package
+or silently omitting the code.
 
 Each geographic cell occurs once even when it intersects multiple RGI regions.
 This avoids the spatial duplication that would result from treating a
@@ -103,8 +105,10 @@ zero-area contact into a population unit.
 
 ## RGI source freeze
 
-Retrieve the RGI 7 outline, attribute, and metadata members for first-order
-regions 01--20 only after this protocol commit. NASA CMR and DOI
+Retrieve the available RGI 7 outline, attribute, and metadata packages for
+first-order regions 01--19 only after this protocol commit. Separately retain
+the official definition of empty first-order region 20 and evidence that the
+regional distribution publishes no region-20 package. NASA CMR and DOI
 `10.5067/F6JMOVY5NAVZ` define the authoritative collection identity. If an
 authentication-protected NSIDC object cannot be retrieved, a consortium-author
 mirror may supply bytes only when the filename, embedded version, region,
