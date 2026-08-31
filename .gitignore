@@ -12,3 +12,4 @@ __pycache__/
 .venv/
 data/scale_explicit_transfer/selection_source/*.zip
 data/scale_explicit_transfer/source_raw/
+data/geographic_sample/source_raw/

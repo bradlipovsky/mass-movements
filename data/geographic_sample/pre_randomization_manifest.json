@@ -1,0 +1,67 @@
+{
+  "status": "pre-randomization; no DEM or PZI values opened",
+  "population_cells": 1826,
+  "excluded_cells": 267,
+  "sample_cells": 96,
+  "rgi_features": 274531,
+  "artifacts": {
+    "source_manifest.json": {
+      "bytes": 89492,
+      "sha256": "6b411fc26af146c9dd0959490775e413aa97f57491cf6de6c91261e7e09e196b"
+    },
+    "frame.csv": {
+      "bytes": 188594,
+      "sha256": "482c9d585777317ab69363481db3df1011e2d4e8ce84c3826b151406cace9879"
+    },
+    "region_contributions.csv": {
+      "bytes": 148798,
+      "sha256": "76c60fe0028cf3e5971ee62cf0ecfb9a50f7a336ba2a6e4aa198e352ef5e04e1"
+    },
+    "latitude_exclusions.csv": {
+      "bytes": 22446,
+      "sha256": "36070a218692c7f90903c10cf5d6c80ae917f17124f8b7dc08c267874dcb7472"
+    },
+    "region_allocations.csv": {
+      "bytes": 526,
+      "sha256": "912fa93e6b25ee8219a2ae14adef03b268f2bf9a85b627332541220a30854120"
+    },
+    "geometry_repairs.csv": {
+      "bytes": 103,
+      "sha256": "73a26f5a552c3f76caf7a59b59bd279b24983c284b937cff5db459c91985025b"
+    },
+    "antimeridian_operations.csv": {
+      "bytes": 24,
+      "sha256": "b413f2c0d05d0eb550aeb177619ba19f154935ed73f4e2a655d7b3da0b7718ab"
+    },
+    "duplicate_ids.csv": {
+      "bytes": 37,
+      "sha256": "2132b7f3bf7a6369faaa2e2d14d8013b8bf1d71cf23acf444df3b51f5a40ced6"
+    }
+  },
+  "implementation": {
+    "protocol/geographic-probability-sample.md": {
+      "bytes": 16404,
+      "sha256": "e320c0ac8edfd95accb6a612d52570ad6f8f0fe7ba2ebd962cbcc5d0f3028378"
+    },
+    "requirements-geographic.txt": {
+      "bytes": 56,
+      "sha256": "80ef84692d28a2f580e7dfbb59eeea62bc3b59507fda9ba9e290e1bead1ecdad"
+    },
+    "scripts/geographic_sample.py": {
+      "bytes": 14291,
+      "sha256": "21bb6d250f67aa55c42f8efabe3302a2a0a045c950f1455805e2e0ba2cb4faaa"
+    },
+    "tests/test_geographic_sample.py": {
+      "bytes": 7226,
+      "sha256": "bc9e65b800466ab19749d493687dd2265884a44e8f57f1e201f50c2d98601a44"
+    }
+  },
+  "environment": {
+    "python": "3.12.11",
+    "fiona": "1.10.1",
+    "shapely": "2.1.2",
+    "geos": "3.13.1",
+    "pyproj": "3.7.2",
+    "proj": "9.5.1"
+  }
+}
