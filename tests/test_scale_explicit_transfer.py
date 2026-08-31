@@ -1,10 +1,18 @@
 import hashlib
 import json
+import subprocess
 import unittest
 from pathlib import Path
 
 import pandas as pd
 
+from scripts.scale_explicit_transfer import (
+    ESTIMATOR,
+    ESTIMATOR_SHA256,
+    attach_decisions,
+    transfer_layers,
+)
+from scripts.scale_explicit_transfer_source import WINDOWS, dem_sources, tile_name
 from scripts.scale_explicit_transfer_selection import (
     REGIONS,
     SOURCE,
@@ -75,10 +83,72 @@ class ScaleExplicitTransferSelectionTests(unittest.TestCase):
         self.assertEqual(manifest["selection"]["eligible_window_count"], 199)
         self.assertEqual(len(manifest["selection"]["windows"]), 4)
         for name, expected in manifest["artifacts"].items():
-            artifact = Path(name)
-            self.assertEqual(artifact.stat().st_size, expected["size_bytes"])
-            self.assertEqual(hashlib.sha256(artifact.read_bytes()).hexdigest(),
-                             expected["sha256"])
+            raw = subprocess.check_output(
+                ["git", "show", f"ad64acdc80611d443bfa46c941de1ff241d9b5c3:{name}"])
+            self.assertEqual((len(raw), hashlib.sha256(raw).hexdigest()),
+                             (expected["size_bytes"], expected["sha256"]))
+
+    def test_registered_estimator_and_source_replay(self):
+        self.assertEqual(hashlib.sha256(ESTIMATOR.read_bytes()).hexdigest(),
+                         ESTIMATOR_SHA256)
+        self.assertEqual(tile_name(-45, -79),
+                         "Copernicus_DSM_COG_10_S45_00_W079_00_DEM")
+        self.assertEqual({region: len(dem_sources(south, west))
+                          for region, (south, west) in WINDOWS.items()},
+                         {"10": 9, "18": 8, "15": 9, "04": 9})
+        replay = pd.read_csv("data/scale_explicit_transfer/source_replay.csv",
+                             dtype={"region": str})
+        self.assertEqual((len(replay), set(replay.layer)),
+                         (20, {"p00", "p10", "p01", "p11", "pzi"}))
+        self.assertTrue((replay.value_sha256 == replay.replay_value_sha256).all())
+        self.assertTrue(replay.replay_affine_equal.all())
+        self.assertTrue((replay.replay_max_abs_difference == 0).all())
+
+    def test_source_manifest_and_coverage_are_complete(self):
+        manifest = json.loads(Path(
+            "data/scale_explicit_transfer/source/source_manifest.json").read_text())
+        self.assertEqual(len(manifest["dem_objects"]), 36)
+        self.assertEqual(manifest["unavailable_dem_tiles"], ["dem_18_S45_E172"])
+        self.assertEqual(len(manifest["pzi_range_objects"]), 4)
+        for name, expected in manifest["files"].items():
+            raw = Path(name).read_bytes()
+            self.assertEqual((len(raw), hashlib.sha256(raw).hexdigest()),
+                             (expected["bytes"], expected["sha256"]))
+        coverage = pd.read_csv("data/scale_explicit_transfer/source_coverage.csv",
+                               dtype={"region": str})
+        self.assertEqual((len(coverage), set(coverage.region), set(coverage.variant)),
+                         (20, set(WINDOWS), {"p00", "p10", "p01", "p11", "r90"}))
+        for column in ("dem_finite_center_count", "pzi_finite_center_count",
+                       "glacier_predicate_coverage_count",
+                       "pzi_outside_glacier_coverage_count"):
+            self.assertTrue((coverage[column] <= coverage.report_cell_count).all())
+
+    def test_transfer_grid_anchor_and_registered_decisions(self):
+        z, affine, report, glacier, pzi, spacing, _ = transfer_layers("10", 65, 145, "r90")
+        self.assertEqual((z.shape, report.shape, glacier.shape, pzi.shape, spacing),
+                         (report.shape, report.shape, report.shape, report.shape, 90))
+        self.assertEqual((affine.a, affine.e), (90, -90))
+        variants = ["p00", "p10", "p01", "p11", "r90"]
+        records = pd.DataFrame([
+            dict(region="00", stratum=stratum, variant=variant,
+                 equivalent_steep_area_m2=value)
+            for stratum, values in (("glacier_proximity", [100, 105, 95, 100, 90]),
+                                    ("permafrost", [0, 0, 0, 0, 0]))
+            for variant, value in zip(variants, values)])
+        attached, decisions = attach_decisions(records)
+        passing = decisions[decisions.stratum == "glacier_proximity"].iloc[0]
+        zero = decisions[decisions.stratum == "permafrost"].iloc[0]
+        self.assertAlmostEqual(passing.departure_90m, 0.1)
+        self.assertAlmostEqual(passing.phase_cv, pd.Series([100, 105, 95, 100]).std(ddof=0) / 100)
+        self.assertEqual((passing.window_pass, zero.structural_zero,
+                          zero.usable_transfer, zero.window_pass), ("yes", "yes", "no", "no"))
+        self.assertTrue(attached[attached.stratum == "permafrost"].area_ratio.isna().all())
+
+    def test_transfer_code_has_no_forbidden_input(self):
+        text = Path("scripts/scale_explicit_transfer.py").read_text().lower()
+        for forbidden in ("data/candidate", "data/catalog", "data/event", "data/audit",
+                          "data/reanalysis", "deformation", "damage", "consequence"):
+            self.assertNotIn(forbidden, text)
 
 
 if __name__ == "__main__":
