@@ -49,8 +49,12 @@ An independently reviewed source-coordinate and UTC-onset audit subsequently
 accepts source coordinates for 24 occurrences, UTC intervals for 34, and both
 for 22; only 9 of the pilot's 29 occurrences have accepted source coordinates.
 The registered pilot results are preserved rather than recomputed post hoc.
-These are descriptive exposure diagnostics without a susceptible-slope
-denominator. I then specify detrended seasonal controls,
+These remain descriptive exposure diagnostics because no denominator is yet
+aligned with the cases. A separate climate- and case-blind terrain pilot
+enumerates glacier, glacier-contact, and permafrost-intersection objects in
+three deterministically selected windows. Primary connected-component counts
+change by factors of 1.3--3.0 between 30 and 90~m grids, so the pilot supplies
+a reproducible frame but not a unique population count. I then specify detrended seasonal controls,
 matched non-failing slopes, mechanism-specific glacier and permafrost
 observations, and multiplicity control. Uneven observation and unresolved
 primary sources prevent these counts from estimating a frequency trend. No
@@ -314,6 +318,88 @@ competing-process observation. The causal specification will determine which
 variables are adjusted rather than treating every measured field as a
 covariate.
 
+\subsection{Climate- and case-blind susceptible-terrain pilot}
+
+A denominator for an incidence calculation must be constructed without using
+the failures it will later explain. I therefore registered a terrain pilot
+before reading source-product values. It fixes RGI 7.0 regions 01, 11, and 13
+and chooses one $1^\circ$ window per region using only catalog fields
+\citep{RGI7}. The selector uses the archived \texttt{cenlon} and
+\texttt{cenlat} points, which the RGI metadata describes as approximately
+central points within the outlines rather than geometric centroids. Eligible
+cells contain at least 10 such points and 1~km$^2$ of summed glacier area; the
+cell with the smallest SHA-256 digest of its region and integer edges is
+selected. This rule gives
+58--59$^\circ$N, 155--154$^\circ$W in Alaska; 45--46$^\circ$N,
+7--8$^\circ$E in Central Europe; and 43--44$^\circ$N, 94--95$^\circ$E in
+Central Asia. These are validation windows, not regional samples.
+
+RGI polygons define glacier objects and the ice mask. Native Copernicus DEM
+GLO-30 values are warped to a local Lambert azimuthal equal-area grid in each
+window \citep{CopernicusDEM2021}. Centered differences define surface slope
+at 30~m; exact $3\times3$ elevation means give the aligned 90~m sensitivity.
+Outside-glacier terrain is joined by four-neighbor connectivity. The
+glacier-contact stratum requires slope of at least 30$^\circ$ and raster edge
+distance no greater than 100~m. The permafrost stratum applies the same slope
+threshold and intersects PZI $\geq0.1$ from the 30-arc-second global zonation
+map \citep{Gruber2012,Gruber2017}. PZI is a climatological index based on 1961--1990 air
+temperature, not a measured local temperature or failure probability. The
+Global PZI data source is the World Glacier Monitoring Service (WGMS), with
+Gruber as creator and UZH as publisher. The machine-readable tables retain
+slope thresholds of 25, 30, and 35$^\circ$,
+contact distances of 0, 100, and 300~m, PZI thresholds of 0.1 and 0.5, and both
+grid spacings. ITS\_LIVE version 2 contributes only its 2014--2022 image-pair
+count as an observability field; no velocity or trend enters object membership
+\citep{ITSLIVEv2}.
+
+Counts below include boundary-truncated objects; the archived summary also
+reports wholly contained objects separately. The organisations in charge of
+the Copernicus programme by law or by delegation do not incur any liability
+for any use of the Copernicus WorldDEM-30.
+
+For every object of area $A$, the calculation reports $V_d=Ad$ for prescribed
+depths $d=10$, 30, and 100~m. An object is conditionally eligible when
+$V_d\geq10^6$~m$^3$. This does not estimate glacier thickness, rock-failure
+depth, or mobilized volume. The primary 30~m calculation contains 140, 472,
+and 144 glacier polygons in Alaska, Central Europe, and Central Asia,
+respectively. The corresponding glacier-contact counts are 1,766, 2,872, and
+742; permafrost-intersection counts are 3,672, 5,321, and 7,099
+(Figure~\ref{fig:denominator}). At $d=30$~m, conditional counts are 137, 340,
+and 117 for glaciers; 331, 611, and 220 for glacier-contact terrain; and 724,
+753, and 1,086 for permafrost-intersection terrain. The three strata overlap
+and these values must not be summed.
+
+Area is less sensitive than object count. From 30 to 90~m,
+glacier-contact area changes by $-8$\%, $+6$\%, and $+3$\% in the three
+regions, whereas its component count decreases by factors of 1.7, 1.6, and
+1.3. Permafrost-intersection area decreases by 18\%, 11\%, and 35\%, while
+component count decreases by factors of 1.9, 2.0, and 3.0. Conditional counts
+need not vary monotonically: coarsening removes steep pixels but also joins
+patches. Increasing contact distance similarly increases total area while it
+can reduce the number of volume-eligible components by merging them. A
+deterministic audit of five objects per stratum and window reproduced every
+source-mask predicate, area, connectivity, boundary flag, and coverage field.
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=\textwidth]{../figures/denominator_windows.pdf}
+  \includegraphics[width=0.92\textwidth]{../figures/denominator_sensitivity.pdf}
+  \caption{Climate- and case-blind susceptible-terrain pilot. Top: the three
+  deterministically selected windows with RGI glacier polygons, primary steep
+  glacier-contact terrain, and primary steep PZI-intersection terrain. Bottom
+  left: conditional-volume counts across prescribed depths. Bottom centre:
+  primary rock-slope 90/30~m area ratios. Bottom right: conditional counts
+  across glacier-contact distances. Counts include boundary-truncated objects.
+  In the depth panel, colors distinguish regions and line styles distinguish
+  strata. Strata overlap, source
+  epochs differ, and none of the mapped objects is a predicted failure.
+  Elevation products were produced using Copernicus WorldDEM-30 \copyright{}
+  DLR e.V. 2010--2014 and \copyright{} Airbus Defence and Space GmbH
+  2014--2018, provided under COPERNICUS by the European Union and ESA; all
+  rights reserved.}
+  \label{fig:denominator}
+\end{figure}
+
 \section{Event-centered climate test}
 
 For each frozen event candidate, reanalysis will provide near-surface air
@@ -570,16 +656,18 @@ heights describe possible geometries, not observations or forecasts of a
 failure time.
 
 This version completes the climate-blind frame reconciliation, double
-screening, registered ERA5 temperature pilot, and independently reviewed
-source-coordinate and UTC-onset audit. The audit leaves 29 coordinates and 16
+screening, registered ERA5 temperature pilot, independently reviewed
+source-coordinate and UTC-onset audit, and the first case-blind susceptible-
+terrain pilot. The audit leaves 29 coordinates and 16
 times unresolved and preserves three time conflicts; none is silently removed.
 The pilot inspected only its registered temperature endpoints and is not
 retroactively recomputed on the accepted audit subset. A later extraction may
 use the 22 occurrences with both accepted fields only under a new frozen
 specification, while retaining all unresolved rows in the reporting frame.
-The next association analysis must acquire matched non-failing slopes and
-freeze glacier-contact
-histories, deformation records, permafrost proxies, additional meteorological
+The terrain pilot supplies candidate denominator objects, but its three windows
+do not estimate regional populations and its connected counts remain scale
+sensitive. The next association analysis must expand and lock that frame,
+then acquire glacier-contact histories, deformation records, permafrost proxies, additional meteorological
 variables, and the statistical specification before inspecting those new
 exposures. Only then can the study estimate whether hazardous alpine mass
 movements occupy systematically different climatic or cryospheric conditions.
@@ -601,7 +689,9 @@ occurrences have accepted source coordinates, so its exposure summaries
 describe registered catalog locations rather than a source-verified sample.
 Coordinate and time acceptance are themselves source-dependent, and their
 representativeness is unknown.
-Detrended seasonal controls, matched non-failing slopes, and explicit
+The blind terrain pilot reproducibly enumerates source-like area, but 30 versus
+90~m grids change primary connected counts by factors of 1.3--3.0. Detrended
+seasonal controls, a scale-explicit non-failing-slope frame, and explicit
 competing predictions remain the next tests. The present contribution is a
 sampling frame, protocol, and exposure-sensitivity result, not evidence that
 warming systematically triggered these events.
