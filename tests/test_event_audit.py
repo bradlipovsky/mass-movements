@@ -51,7 +51,14 @@ class EventAuditArtifactTest(unittest.TestCase):
         self.assertEqual(errors, [])
         self.assertEqual(len(summary), 53)
         self.assertEqual(len({row["candidate_id"] for row in summary}), 53)
-        self.assertEqual((len(coordinates), len(times), len(sources)), (0, 0, 0))
+        self.assertTrue(all(row["candidate_id"] in {item["candidate_id"] for item in summary} for row in coordinates + times))
+
+    def test_unknown_time_basis_carries_no_invented_utc(self):
+        errors, _, _, times, _ = audit.validate_rows()
+        for row in times:
+            if row["time_basis"] == "unknown":
+                self.assertFalse(row["onset_lower_utc"] or row["onset_upper_utc"])
+        self.assertEqual(errors, [])
 
     def test_review_tables_have_no_climate_fields(self):
         forbidden = {"temperature", "rank", "reanalysis", "permafrost", "glacier_change"}

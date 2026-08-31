@@ -215,20 +215,28 @@ def validate_rows():
         require_vocab(errors, row, "review_state", REVIEWS, label)
         if row["source_id"] not in source_by_id:
             errors.append(f"{label}: unknown source_id")
-        try:
-            lower, upper = parse_utc(row["onset_lower_utc"]), parse_utc(row["onset_upper_utc"])
-            if lower >= upper:
-                raise ValueError
-            expected_lower = converted_utc(row["reported_lower"], row["utc_offset_lower_minutes"])
-            expected_upper = converted_utc(row["reported_upper"], row["utc_offset_upper_minutes"])
-            if lower != expected_lower or upper != expected_upper:
-                errors.append(f"{label}: UTC conversion does not match recorded offset")
-            duration = (upper - lower).total_seconds()
-            fixed = {"second": 1, "minute": 60, "hour": 3600}
-            if row["precision"] in fixed and duration != fixed[row["precision"]]:
-                errors.append(f"{label}: interval does not match stated precision")
-        except (ValueError, TypeError):
-            errors.append(f"{label}: invalid time interval or conversion")
+        conversion_fields = [
+            "reported_lower", "reported_upper", "utc_offset_lower_minutes",
+            "utc_offset_upper_minutes", "onset_lower_utc", "onset_upper_utc",
+        ]
+        if row["time_basis"] == "unknown":
+            if any(row[field] for field in conversion_fields):
+                errors.append(f"{label}: unknown time basis has invented conversion")
+        else:
+            try:
+                lower, upper = parse_utc(row["onset_lower_utc"]), parse_utc(row["onset_upper_utc"])
+                if lower >= upper:
+                    raise ValueError
+                expected_lower = converted_utc(row["reported_lower"], row["utc_offset_lower_minutes"])
+                expected_upper = converted_utc(row["reported_upper"], row["utc_offset_upper_minutes"])
+                if lower != expected_lower or upper != expected_upper:
+                    errors.append(f"{label}: UTC conversion does not match recorded offset")
+                duration = (upper - lower).total_seconds()
+                fixed = {"second": 1, "minute": 60, "hour": 3600}
+                if row["precision"] in fixed and duration != fixed[row["precision"]]:
+                    errors.append(f"{label}: interval does not match stated precision")
+            except (ValueError, TypeError):
+                errors.append(f"{label}: invalid time interval or conversion")
         if row["review_state"] == "agree" and (
             not row["verifier"] or row["verifier"] == row["extractor"]
         ):
