@@ -98,10 +98,13 @@ year. A slope or rank is a reanalysis diagnostic, not an inferred failure
 cause.
 
 Summaries over occurrences are descriptive medians and interquartile ranges.
-Also tabulate one row per registered independent site cluster, retaining the
-earliest occurrence in an exact tie only for this sensitivity summary. Do not
-attach a population hypothesis test until a susceptible-slope denominator and
-an observation model are registered.
+For a dependence sensitivity, form undirected connected components from every
+registered cluster link among the 29 rows. Represent each component by its
+earliest catalog date, breaking an exact date tie by `candidate_id`; unlinked
+occurrences each form a singleton. This temperature-blind rule gives one row
+per registered dependence component without implying that a cluster's other
+failures did not occur. Do not attach a population hypothesis test until a
+susceptible-slope denominator and an observation model are registered.
 
 ## Elevation sensitivity
 
