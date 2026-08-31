@@ -1,0 +1,42 @@
+{
+  "audit_amendment_commit": "785a2e055e452d099b3375e7b9c0cb0648b0d14a",
+  "catalog_input_sha256": {
+    "data/candidate_clusters.csv": "fd1545d60fe527e9881ec9169cf9ee93dc94eab1470595641695d1bcf089f309",
+    "data/candidates.csv": "8b6b0f972180e26c326aaa0e6a501080843bd4b6e6674b07c5aa009340c8a249"
+  },
+  "cell_count": 116,
+  "event_count": 29,
+  "group": "single/temporal",
+  "icechunk_snapshot": "T9H8SG2PVXWNY0QNJPJG",
+  "output_sha256": {
+    "above_freezing_sensitivity.csv": "e5c43afe7d74db66fdaeab61e968ccc6fd68346d45dca06e4284ea134f6c467b",
+    "cross_layout_probes.csv": "4e0a540fd93a2b42829d9d9170948e4ee46831b87566b2c48d024889be7d044d",
+    "diagnostics.csv": "0169e20d47c1c24284696a8be1553d5af47e7ce8e1d26f7cdf31ba1ef60cda73",
+    "event_cells.csv": "d07cd42f4a953322d8c3c97070ba2ad436986b3ab7399e2ecb1f0ba0a5cf640e",
+    "matched_windows.csv": "8c8e2f2484f8b5cae6a51f92abb17d2ff7bb90f06e54ef941c1eda8ca4b3e664"
+  },
+  "packages": {
+    "icechunk": "2.1.2",
+    "netCDF4": "1.7.4",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "pcodec": "1.0.3",
+    "scipy": "1.18.1",
+    "xarray": "2026.7.0",
+    "zarr": "3.3.0"
+  },
+  "protocol_commit": "39279a9a193d6d8112d8f1663b71832adfc8f5fb",
+  "retrieved_utc": "2026-08-31T01:58:03.761871+00:00",
+  "source_uri": {
+    "e5.oper.invariant.128_129_z.ll025sc.1979010100_1979010100.nc": "s3://nsf-ncar-era5/e5.oper.invariant/197901/e5.oper.invariant.128_129_z.ll025sc.1979010100_1979010100.nc",
+    "e5.oper.invariant.128_172_lsm.ll025sc.1979010100_1979010100.nc": "s3://nsf-ncar-era5/e5.oper.invariant/197901/e5.oper.invariant.128_172_lsm.ll025sc.1979010100_1979010100.nc"
+  },
+  "source_sha256": {
+    "e5.oper.invariant.128_129_z.ll025sc.1979010100_1979010100.nc": "ebc93b1aeb0060fd5289b9b995f584c9b41abd40642afe34575dc619a310d66d",
+    "e5.oper.invariant.128_172_lsm.ll025sc.1979010100_1979010100.nc": "ac5d93fbc2a7afc100cd8599fb6b324cfc2f2d20706f6e8df0b92f5bf61c6e61"
+  },
+  "store": "s3://earthmover-icechunk-era5/icechunkV2",
+  "time_coverage_end": "2026-03-31T23:00:00Z",
+  "time_coverage_start": "1940-01-01T00:00:00Z",
+  "variable": "t2m"
+}

@@ -5,6 +5,7 @@
 \usepackage{array}
 \usepackage{booktabs}
 \usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\usepackage{graphicx}
 \usepackage{longtable}
 \usepackage{microtype}
 \usepackage[numbers,sort&compress]{natbib}
@@ -13,7 +14,7 @@
 \newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
 
 \hypersetup{
-  pdftitle={Climate preconditioning and the mechanics of hazardous alpine mass movements: a catalog protocol},
+  pdftitle={Climate preconditioning and the mechanics of hazardous alpine mass movements: a catalog and attribution protocol},
   pdfauthor={Bradley P. Lipovsky}
 }
 
@@ -37,11 +38,18 @@ gives every row a visible disposition, and supplemental searches extend the
 screen to 148 candidate occurrences. Two independent screens include 73,
 retain 68 as uncertain, and exclude 7; 53 included failures have day-scale or
 better timing for a later trigger analysis. Trigger, cascade, and repeat-site
-dependence remain separate. I then specify detrended seasonal controls,
+dependence remain separate. A registered ERA5 pilot then retains the 29 of 53
+included, trigger-time-eligible occurrences that have coordinates. For the
+registered seven-day pre-date window, the median rank among 1991--2020
+calendar controls is 0.586; after a robust linear trend is removed, the median
+residual rank is 0.483. A conservative-antecedence sensitivity gives 0.586 and
+0.533. The median four-cell rank ranges are 0.133 and 0.103, respectively.
+These are descriptive exposure diagnostics without a susceptible-slope
+denominator. I then specify detrended seasonal controls,
 matched non-failing slopes, mechanism-specific glacier and permafrost
 observations, and multiplicity control. Uneven observation and unresolved
 primary sources prevent these counts from estimating a frequency trend. No
-systematic climatic association is estimated here.
+systematic climatic association or causal effect is estimated here.
 \end{abstract}
 
 \section{Introduction}
@@ -349,6 +357,100 @@ corrected for slope, aspect, and shading. Results will be reported before and
 after each correction. Regional modeling is warranted only when these
 corrections change an event anomaly enough to affect the prespecified test.
 
+\subsection{Registered ERA5 temperature pilot}
+
+After freezing the discovery inventory, I registered a narrower extraction
+test before reading temperature at an event location. It selects every
+included, trigger-time-eligible occurrence with finite coordinates, giving 29
+occurrences. Hourly 2-m temperature comes from the public temporal-layout
+Icechunk copy of ERA5 snapshot \texttt{T9H8SG2PVXWNY0QNJPJG}
+\citep{Hersbach2020,EarthmoverERA52026}. Surface geopotential and land fraction
+come from the NSF NCAR 0.25-degree ERA5 invariants
+\citep{NCARERA5}. Three fixed, non-event probes matched the temporal and
+spatial layouts exactly before event extraction.
+
+The coordinate requirement retains 29 of the 53 trigger-time-eligible
+occurrences, and coordinate completeness is strongly source-dependent:
+coordinates are present for 2 of 20 records from the independent rock-search
+suite, 11 of 12 from the landslide-tsunami frame, and all 7 from the High
+Mountain Asia frame. The summaries below therefore characterize the
+coordinate-complete subset, not all 53 eligible occurrences.
+
+For each occurrence, the extraction retains the two nearest distinct grid
+coordinates on each axis. The primary cell has the largest land fraction,
+with distance and coordinates resolving ties; results also retain all four
+cells. The registered primary window contains the 168 complete UTC hours
+before 00:00 UTC on the published catalog date. An audit found that these date
+labels are not uniformly verified UTC: in particular, the Aru-2 local date
+makes the original window include three post-onset hours. I therefore retain
+the registered pre-date result and add a conservative sensitivity covering
+the seven days ending one full UTC day earlier. Each mean receives a midrank
+among matched 1991--2020 calendar windows, excluding the event year. This
+warm-state rank contains secular change and weather. A separate
+linear-trend-residual rank removes a Theil--Sen line fitted to matched windows
+from 1979 through 2025. Nonlinear secular change, low-frequency variability,
+and reanalysis inhomogeneity can remain. Neither rank estimates failure
+probability because the sample has no non-failing slopes.
+
+The median warm-state rank is 0.586 (interquartile range 0.379--0.828), with
+19 of 29 values above 0.5 (Figure~\ref{fig:era5-ranks}). The corresponding
+median temperature difference from the calendar-control median is 0.486~K
+(interquartile range $-0.508$--1.414~K). The median local Theil--Sen trend is
+0.353~K per decade (interquartile range 0.282--0.509~K per decade). After
+detrending, the median linear-trend-residual rank is 0.483 (interquartile range
+0.267--0.828), and 14 of 29 values exceed 0.5. Selecting the registered
+representative from each of 25 dependence components gives median warm-state
+and residual ranks of 0.586 and 0.533, respectively.
+
+In the conservative-antecedence window, the occurrence-level median warm-state
+and linear-trend-residual ranks are 0.586 (interquartile range 0.483--0.800)
+and 0.533 (0.300--0.759); 21 and 16 values exceed 0.5. The component-
+representative medians are 0.621 and 0.552. Buffering changes event-year mean
+temperature by a median of $-0.050$~K, but the range is $-1.101$ to 0.965~K.
+The other registered warm-state/linear-residual median pairs are 0.552/0.448
+for two days, 0.724/0.655 for 30 days, and 0.533/0.448 for the catalog-date day.
+The central rank is therefore window-dependent. None of these summaries is a
+hypothesis test or a separation of weather from every slow climate component.
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=0.95\textwidth]{../figures/era5_pilot_ranks.pdf}
+  \caption{Registered seven-day ERA5 temperature ranks for the pre-date
+  window (left) and conservative-antecedence sensitivity (right), using a
+  common occurrence order. Red points rank event-year means against matching
+  1991--2020 calendar windows; blue points apply the same rank after removing
+  a robust 1979--2025 linear trend. Lines join two diagnostics for one
+  occurrence. The dashed line at 0.5 is a reference median, not a fitted
+  failure threshold.}\label{fig:era5-ranks}
+\end{figure}
+
+Grid representation is a material measurement uncertainty
+(Figure~\ref{fig:era5-sensitivity}). The four-cell model-surface height range
+has a median of 323~m and reaches 1,489~m at Chamoli. Across these cells, the
+median warm-state-rank range is 0.133 (interquartile range 0.069--0.167) and
+the maximum is 0.333; the median range of the temperature difference itself
+is 0.716~K. The buffered four-cell rank range has a median of 0.103 and the
+same maximum of 0.333. A fixed lapse correction cancels from ranks because it
+is applied to both event and control values. It does not cancel from absolute
+2-m air-temperature hours above 273.15~K. At model elevation, the medians are
+113 of 168 hours in the pre-date window and 121 in the buffered window. At the
++1~km elevation-offset scenario, lapse rates of 4.0, 6.5, and
+9.0~K~km$^{-1}$ give pre-date medians of 42, 11, and 0 hours and buffered
+medians of 50, 11, and 0 hours. These air-temperature calculations do not
+imply thaw of rock, soil, or ice, and the offsets are scenarios rather than
+reconstructed source elevations.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\textwidth]{../figures/era5_pilot_sensitivity.pdf}
+  \caption{Registered topographic sensitivity. The left panel compares the
+  four-cell model-surface-height range with the corresponding warm-state-rank
+  range for both seven-day windows. The right panel gives the median number of
+  2-m air-temperature hours above 273.15~K for every window, lapse-rate, and
+  site-minus-model-height scenario. It does not diagnose material thaw, and
+  the scenarios are not estimates of source elevation.}\label{fig:era5-sensitivity}
+\end{figure}
+
 \section{Competing hypotheses and discriminating observations}
 
 The analysis will evaluate signs and timing that distinguish mechanisms.
@@ -393,15 +495,15 @@ some quantities are conditional scenarios. Barry Arm volumes and tsunami
 heights describe possible geometries, not observations or forecasts of a
 failure time.
 
-This version completes the climate-blind frame reconciliation and double
-screening. The unresolved records require primary-source follow-up and the
-registered terrain-mask check, but they are not silently removed. The next
-analysis must freeze this candidate version, acquire matched non-failing
-slopes, and calculate glacier-contact histories, deformation records, and
-permafrost proxies before inspecting event climate anomalies. Only after those
-data and the statistical specification are frozen can the study estimate
-whether recent hazardous alpine mass movements occupy systematically different
-climatic or cryospheric conditions.
+This version completes the climate-blind frame reconciliation, double
+screening, and registered ERA5 temperature pilot. The unresolved records
+require primary-source follow-up, but they are not silently removed. The pilot
+inspected only its registered temperature endpoints. The next association
+analysis must acquire matched non-failing slopes and freeze glacier-contact
+histories, deformation records, permafrost proxies, additional meteorological
+variables, and the statistical specification before inspecting those new
+exposures. Only then can the study estimate whether hazardous alpine mass
+movements occupy systematically different climatic or cryospheric conditions.
 
 \section{Conclusions}
 
@@ -411,9 +513,15 @@ climate-blind screen retains 73 eligible occurrences while keeping 68
 unresolved cases visible. It also shows why reanalysis alone is insufficient:
 glacier detachments require effective-pressure bounds, while rock-slope cases
 require glacier geometry, support change, structure, and deformation.
-Detrended seasonal controls, matched non-failing slopes, and explicit competing
-predictions are the next tests. The present contribution is the sampling frame
-and protocol, not evidence that warming systematically triggered these events.
+In the registered 29-occurrence pilot, central ranks change with the window
+and fitted-linear-trend adjustment. Neighboring cells change ranks and
+anomalies, while elevation scenarios change above-freezing air-temperature
+counts. Coordinate availability also selects a source-dependent subset of the
+53 eligible trigger-time records whose representativeness is unknown.
+Detrended seasonal controls, matched non-failing slopes, and explicit
+competing predictions remain the next tests. The present contribution is a
+sampling frame, protocol, and exposure-sensitivity result, not evidence that
+warming systematically triggered these events.
 
 \bibliographystyle{plainnat}
 \bibliography{references}

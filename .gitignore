@@ -9,3 +9,4 @@ latex/*.out
 latex/*.run.xml
 __pycache__/
 *.pyc
+.venv/
