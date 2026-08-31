@@ -1,4 +1,4 @@
-.PHONY: all artifacts-reanalysis check check-event-audit check-reanalysis clean notebook-reanalysis reanalysis
+.PHONY: all artifacts-event-audit artifacts-reanalysis check check-event-audit check-reanalysis clean notebook-event-audit notebook-reanalysis reanalysis
 
 PYTHON_REANALYSIS ?= .venv/bin/python
 JUPYTER_REANALYSIS ?= $(dir $(PYTHON_REANALYSIS))jupyter
@@ -19,6 +19,11 @@ reanalysis:
 
 notebook-reanalysis:
 	PATH="$(dir $(PYTHON_REANALYSIS)):$$PATH" $(JUPYTER_REANALYSIS) execute --inplace --timeout 600 --kernel_name python3 notebooks/era5_pilot.ipynb
+
+notebook-event-audit:
+	PATH="$(dir $(PYTHON_REANALYSIS)):$$PATH" $(JUPYTER_REANALYSIS) execute --inplace --timeout 600 --kernel_name python3 notebooks/source_time_audit.ipynb
+
+artifacts-event-audit: check-event-audit notebook-event-audit
 
 artifacts-reanalysis: reanalysis
 	$(MAKE) notebook-reanalysis PYTHON_REANALYSIS=$(PYTHON_REANALYSIS) JUPYTER_REANALYSIS=$(JUPYTER_REANALYSIS)
