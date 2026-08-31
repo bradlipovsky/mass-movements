@@ -61,6 +61,13 @@ class EventAuditArtifactTest(unittest.TestCase):
                 self.assertFalse(row["onset_lower_utc"] or row["onset_upper_utc"])
         self.assertEqual(errors, [])
 
+    def test_unavailable_coordinate_has_no_invented_point(self):
+        errors, _, coordinates, _, _ = audit.validate_rows()
+        for row in coordinates:
+            if row["evidence_method"] == "not_available":
+                self.assertEqual((row["geometry_role"], row["latitude_deg"], row["longitude_deg"]), ("not_reported", "", ""))
+        self.assertEqual(errors, [])
+
     def test_review_tables_have_no_climate_fields(self):
         forbidden = {"temperature", "rank", "reanalysis", "permafrost", "glacier_change"}
         for path in audit.FILES.values():

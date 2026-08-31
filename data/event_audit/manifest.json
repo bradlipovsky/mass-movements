@@ -3,15 +3,15 @@
   "created_utc": "2026-08-31T02:15:02Z",
   "discovery_freeze_commit": "35d392944fef43aeb4084e023bc1fa9470728fab",
   "files": {
-    "data/event_audit/coordinate_assertions.csv": "765eb227b6bbae33f333fdf47726c6e66505fd6f567595a70d881d70f7a0645a",
-    "data/event_audit/sources.csv": "28bbd2b68a4e3ebf6fc09ed88a544be0e960e00863aa3e1f70343530590f9b14",
+    "data/event_audit/coordinate_assertions.csv": "9a4f679dbdc74d2c21443e36eaa2de99780c32ba407ed979d8f1b0d430b2ffd8",
+    "data/event_audit/sources.csv": "c6824aa778159fe0760acd4f0027267d349fd76e9c46dfe0b34ce3537e6c528e",
     "data/event_audit/summary.csv": "6e316f6e1896628a5d08da37dddd7da08940b6ac7edfbaaace89bddcba45821b",
-    "data/event_audit/time_assertions.csv": "3c3c67074fff2419be05deb5db9f760d8a1984152a12092146db90bb197f4039"
+    "data/event_audit/time_assertions.csv": "a7398071c59985c0ad171ad5dca9616952b89ac0c82250c8e656576c1d3d10b4"
   },
   "inputs": {
     "data/candidates.csv": "8b6b0f972180e26c326aaa0e6a501080843bd4b6e6674b07c5aa009340c8a249",
     "protocol/source-time-audit.md": "f93c2bd5fb6813b719489b5a3b6defe6e8c4b3e1df4dffb8938911c7835f218e",
-    "scripts/check_event_audit.py": "65657d448b1613dd3897a7e59c879c422c20d9364699dfc54c03c3ecfa9be00e"
+    "scripts/check_event_audit.py": "31a9ebbb5998241a7636a3dee7e57a3793e72c45c9e611046a80ae22f3c43a85"
   },
   "state": "population_in_progress"
 }

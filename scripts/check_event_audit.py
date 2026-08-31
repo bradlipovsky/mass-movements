@@ -185,12 +185,22 @@ def validate_rows():
         require_vocab(errors, row, "review_state", REVIEWS, label)
         if row["source_id"] not in source_by_id:
             errors.append(f"{label}: unknown source_id")
-        try:
-            lat, lon = float(row["latitude_deg"]), float(row["longitude_deg"])
-            if not -90 <= lat <= 90 or not -180 <= lon <= 180:
-                raise ValueError
-        except ValueError:
-            errors.append(f"{label}: invalid coordinate")
+        unavailable = row["geometry_role"] == "not_reported" or row["evidence_method"] == "not_available"
+        if unavailable:
+            if (
+                row["geometry_role"] != "not_reported"
+                or row["evidence_method"] != "not_available"
+                or row["latitude_deg"] or row["longitude_deg"]
+                or row["horizontal_uncertainty_class"] != "gt_5_km_or_unknown"
+            ):
+                errors.append(f"{label}: unavailable coordinate is not encoded consistently")
+        else:
+            try:
+                lat, lon = float(row["latitude_deg"]), float(row["longitude_deg"])
+                if not -90 <= lat <= 90 or not -180 <= lon <= 180:
+                    raise ValueError
+            except ValueError:
+                errors.append(f"{label}: invalid coordinate")
         if row["horizontal_uncertainty_m"]:
             try:
                 if float(row["horizontal_uncertainty_m"]) < 0:
