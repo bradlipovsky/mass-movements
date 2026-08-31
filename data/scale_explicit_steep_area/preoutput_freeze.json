@@ -1,0 +1,61 @@
+{
+  "artifact_state": "not_executed",
+  "created_utc": "2026-08-31T06:31:46Z",
+  "issue": 13,
+  "protocol_commit": "501ae28822c3c756c13fdd0d2be369d0177089d3",
+  "protocol_version": "0.1 with two pre-output amendments",
+  "registered_choices": {
+    "development_regions": ["03", "07", "08"],
+    "glacier_outline_proximity_m": 100,
+    "pzi_threshold": 0.1,
+    "ramp_degrees": [25, 35],
+    "support_radius_m": 300
+  },
+  "files": {
+    "analysis_program": {
+      "bytes": 7996,
+      "path": "scripts/scale_explicit_steep_area.py",
+      "sha256": "a055081aa3435971a1919d6d52d6a95a6ef06512b89bd8c72290efedf6db07ee"
+    },
+    "protocol": {
+      "bytes": 9408,
+      "path": "protocol/scale-explicit-steep-area.md",
+      "sha256": "c0833e7f41bea1ff3588e2234a428d800b6917662a93f05a5377da38b65c2dbb"
+    },
+    "tests": {
+      "bytes": 6433,
+      "path": "tests/test_scale_explicit_steep_area.py",
+      "sha256": "9812dd10de33c8b5b692e347c73e76c666c542927073c779f8faadaaa53bcac7"
+    }
+  },
+  "inherited_inputs": {
+    "decisions.csv": "7caee41d66625f0198b2cc23334cb6c55d538b1acd4ca93e211d354a6e1c9890",
+    "freeze_manifest.json": "a8326a8224345a71b14da7c14cf1765859dd8d0a4dc407f3e73b8d43a411cafb",
+    "source_manifest.json": "db8b1464ffd8f0d055f9e8c384239763e2a8bf8f778e3fc43e85e23543daa89d",
+    "windows.csv": "fdac21395c4146e3ac029b3ae6e73f114a9550d4841ae527115a3abe834397e2"
+  },
+  "line_budget": {
+    "analysis_program": 178,
+    "hard_ceiling": 400,
+    "notebook_code_pre_execution": 0,
+    "remaining_for_notebook": 90,
+    "tests": 132,
+    "total_pre_execution": 310
+  },
+  "software": {
+    "gdal": "3.12.4",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "proj": "9.5.1",
+    "pyproj": "3.7.2",
+    "rasterio": "1.5.1",
+    "scipy": "1.18.1",
+    "shapely": "2.1.2"
+  },
+  "synthetic_test": {
+    "command": ".venv/bin/python -m unittest tests.test_scale_explicit_steep_area -v",
+    "passed": 8,
+    "skipped_pending_real_artifact": 1,
+    "status": "ok"
+  }
+}
