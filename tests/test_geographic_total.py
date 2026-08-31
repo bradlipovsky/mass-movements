@@ -1,8 +1,8 @@
 import hashlib, unittest
 from pathlib import Path
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 import numpy as np, pandas as pd
-from scripts.geographic_total import HASHES, REPAIR_RELATIVE_TOLERANCE, coverage_estimates, diagnostics, estimates, population, verify
+from scripts.geographic_total import HASHES, REPAIR_RELATIVE_TOLERANCE, admissible_repair, coverage_estimates, diagnostics, estimates, population, verify
 from scripts.geographic_total_source import OUTPUT, cell_label, cells, dem_requests, expected_dem_ids, grid, pzi_request, pzi_requests
 class GeographicTotalTests(unittest.TestCase):
     def test_frozen_request_universe_and_edges(self):
@@ -19,6 +19,11 @@ class GeographicTotalTests(unittest.TestCase):
         self.assertEqual(REPAIR_RELATIVE_TOLERANCE, 1e-8)
         self.assertEqual(int(population().sum()), 1826)
         for name, expected in HASHES.items(): self.assertEqual(hashlib.sha256(Path(name).read_bytes()).hexdigest(), expected)
+    def test_projection_repair_gate(self):
+        good=Mock(geom_type="Polygon", is_empty=False, is_valid=True)
+        self.assertTrue(all(admissible_repair(good, *x) for x in [(0, 0), (1e-8, 0), (0, 1e-8)]))
+        self.assertFalse(any(admissible_repair(good, *x) for x in [(1.00000001e-8, 0), (0, 1.00000001e-8)]))
+        self.assertFalse(any(admissible_repair(Mock(geom_type=t, is_empty=e, is_valid=v), 0, 0) for t,e,v in [("LineString",False,True),("Polygon",True,True),("Polygon",False,False)]))
     def test_ht_variance_covariance_and_conservative_zero_rse(self):
         rows=[]
         for key, g, p in (("a", 1., 2.), ("b", 3., 6.)):

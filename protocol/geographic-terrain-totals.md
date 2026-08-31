@@ -1,6 +1,6 @@
 # Design-based totals of the frozen terrain-screen functional
 
-Version 0.3. Version 0.1 was registered in GitHub issue
+Version 0.4. Version 0.1 was registered in GitHub issue
 [#19](https://github.com/bradlipovsky/mass-movements/issues/19) on 31 August
 2026 before retrieving or opening any DEM or PZI value for an issue #17
 selected cell.
@@ -37,6 +37,20 @@ files only by the same registered construction. The next staged manifest also
 seals all 96 RGI subset GeoJSON files. This correction used RGI geometry, not
 DEM or PZI values, coverage, masks, or equivalent areas, and requires
 independent approval of its exact commit before raster staging resumes.
+
+Independent review of the exact version 0.3 commit found two additional
+pre-resumption gates. The immutable version 1.0 raw manifest correctly seals
+the pre-amendment protocol, program, and test bytes, so it rejects the amended
+program; and the amendment test checked the constant but not its behavior.
+Version 0.4 preserves that original manifest unchanged and adds a successor
+pre-raster manifest. The successor inherits all 2,514 identities, updates only
+the amended tracked identities, includes the original manifest and stop
+record, and newly seals all 96 RGI subset GeoJSONs. No external-source identity
+may change. It also directly tests passing below and at `1e-8`, independent
+projected and geodesic failure above it, and the unchanged nonpolygonal, empty,
+and invalid-result stops. This correction was registered publicly before
+modification and still requires independent exact-commit approval before
+staging resumes.
 
 ## Question and boundary
 
