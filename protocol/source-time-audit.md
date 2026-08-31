@@ -175,4 +175,23 @@ reason and affected fields; result-contingent changes are prohibited.
 
 ## Amendment log
 
-No amendments.
+- 2026-08-30: after source review but before any new climate extraction, add a
+  machine-linked `supporting_source_id` for the two earthquake-origin intervals
+  whose event-specific coseismic statement and authoritative origin come from
+  different sources. This changes provenance representation, not bounds.
+- 2026-08-30: apply the preregistered multi-pulse rule to Aru-2 by retaining the
+  full two-pulse interval; add the previously omitted Sedongpu 17/18 October
+  alternative; and make the Mount Haast inclusive final second half-open.
+  Affected fields are the named time assertions and the Aru-2 summary only.
+- 2026-08-30: accept the Denali mainshock origin as a trigger-origin proxy for
+  seven named avalanches after candidate-specific coseismic links were recovered
+  and independently reviewed. Affected fields are those seven time assertions
+  and summaries; no proxy is described as a measured detachment time.
+- 2026-08-30: preserve the newly exposed two-second Paat primary-source conflict,
+  withdraw Elliot Creek's catalog arrival as a source onset, and select Askja's
+  more specific force-history source start. These changes follow source review
+  and affect only the named assertions and summary fields.
+- 2026-08-30: accept five independently reproduced Denali source-scar
+  digitizations at the registered `le_1_km` class. Affected fields are the
+  Black Rapids east, middle, and west and McGinnis north and south coordinate
+  assertions and summaries; West Fork remains unresolved.

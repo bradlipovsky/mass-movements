@@ -4,6 +4,7 @@
 import csv
 import hashlib
 import json
+import subprocess
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -11,7 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "event_audit"
 FREEZE = "35d392944fef43aeb4084e023bc1fa9470728fab"
-AUDIT_PROTOCOL = "46ef8acac00348d6e09b07763eed16de93797670"
+AUDIT_PROTOCOL = "46ef8acad8f8184a07e73de4b8477c57c76eff5d"
 FILES = {
     "summary": DATA / "summary.csv",
     "coordinates": DATA / "coordinate_assertions.csv",
@@ -105,6 +106,10 @@ def validate_rows():
     coordinates = read_csv(FILES["coordinates"])
     times = read_csv(FILES["times"])
     sources = read_csv(FILES["sources"])
+    if any(row["review_state"] == "pending" or row["review_state"] == "agree" and "pending" in row["review_note"].lower() for row in coordinates + times): errors.append("final audit contains pending or contradictory review state")
+    for label, rows in (("coordinate", coordinates), ("time", times)):
+        ids = [row["candidate_id"] for row in rows]
+        if set(ids) != set(candidates) or ids != sorted(ids): errors.append(f"{label} assertions lack complete candidate-sorted coverage")
     if len(candidates) != 53:
         errors.append(f"frozen selector returned {len(candidates)}, expected 53")
 
@@ -226,6 +231,7 @@ def validate_rows():
         require_vocab(errors, row, "review_state", REVIEWS, label)
         if row["source_id"] not in source_by_id:
             errors.append(f"{label}: unknown source_id")
+        if row.get("supporting_source_id") and row["supporting_source_id"] not in source_by_id: errors.append(f"{label}: unknown supporting_source_id")
         conversion_fields = [
             "reported_lower", "reported_upper", "utc_offset_lower_minutes",
             "utc_offset_upper_minutes", "onset_lower_utc", "onset_upper_utc",
@@ -261,7 +267,7 @@ def validate_rows():
         require_vocab(errors, row, "access_state", ACCESS_STATES, label)
         if row["access_state"] == "public" and not row["url"]:
             errors.append(f"{label}: public source lacks URL")
-        if row["sha256"] and (len(row["sha256"]) != 64 or any(c not in "0123456789abcdef" for c in row["sha256"])):
+        if bool(row["sha256"]) != bool(row["local_object_path"]) or row["sha256"] and (len(row["sha256"]) != 64 or any(c not in "0123456789abcdef" for c in row["sha256"]) or file_sha256(ROOT / row["local_object_path"]) != row["sha256"]):
             errors.append(f"{label}: invalid sha256")
     return errors, summary, coordinates, times, sources
 
@@ -273,6 +279,8 @@ def file_sha256(path):
 def validate_manifest(errors):
     path = DATA / "manifest.json"
     manifest = json.loads(path.read_text(encoding="utf-8"))
+    if manifest.get("state") != "frozen" or not manifest.get("frozen_utc") or any(parse_utc(row["accessed_utc"]) > parse_utc(manifest["frozen_utc"]) for row in read_csv(FILES["sources"])): errors.append("manifest is not frozen after source access")
+    if subprocess.run(["git", "cat-file", "-e", f"{AUDIT_PROTOCOL}^{{commit}}"], cwd=str(ROOT)).returncode or subprocess.check_output(["git", "show", f"{AUDIT_PROTOCOL}:protocol/source-time-audit.md"], cwd=str(ROOT)).split(b"## Amendment log")[0] != (ROOT / "protocol/source-time-audit.md").read_bytes().split(b"## Amendment log")[0]: errors.append("audit protocol commit is missing or does not contain registered bytes")
     if manifest["discovery_freeze_commit"] != FREEZE:
         errors.append("manifest discovery freeze commit changed")
     if manifest["audit_protocol_commit"] != AUDIT_PROTOCOL:

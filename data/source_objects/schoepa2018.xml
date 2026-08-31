@@ -1,0 +1,2443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD Journal Publishing with OASIS Tables v3.0 20080202//EN" "journalpub-oasis3.dtd">
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:oasis="http://docs.oasis-open.org/ns/oasis-exchange/table" xml:lang="en" dtd-version="3.0">
+  <front>
+    <journal-meta><journal-id journal-id-type="publisher">ESurf</journal-id><journal-title-group>
+    <journal-title>Earth Surface Dynamics</journal-title>
+    <abbrev-journal-title abbrev-type="publisher">ESurf</abbrev-journal-title><abbrev-journal-title abbrev-type="nlm-ta">Earth Surf. Dynam.</abbrev-journal-title>
+  </journal-title-group><issn pub-type="epub">2196-632X</issn><publisher>
+    <publisher-name>Copernicus Publications</publisher-name>
+    <publisher-loc>Göttingen, Germany</publisher-loc>
+  </publisher></journal-meta>
+    <article-meta>
+      <article-id pub-id-type="doi">10.5194/esurf-6-467-2018</article-id><title-group><article-title>Dynamics of the Askja caldera July 2014 landslide, Iceland, from seismic
+signal analysis:<?xmltex \hack{\break}?> precursor, motion and aftermath</article-title><alt-title>Dynamics of the Askja caldera July 2014 landslide</alt-title>
+      </title-group><?xmltex \runningtitle{Dynamics of the Askja caldera July 2014 landslide}?><?xmltex \runningauthor{A. Sch\"{o}pa et al.}?>
+      <contrib-group>
+        <contrib contrib-type="author" corresp="yes" rid="aff1">
+          <name><surname>Schöpa</surname><given-names>Anne</given-names></name>
+          <email>schoepa@gfz-potsdam.de</email>
+        <ext-link>https://orcid.org/0000-0001-6142-2790</ext-link></contrib>
+        <contrib contrib-type="author" corresp="no" rid="aff2">
+          <name><surname>Chao</surname><given-names>Wei-An</given-names></name>
+          
+        <ext-link>https://orcid.org/0000-0002-3228-9107</ext-link></contrib>
+        <contrib contrib-type="author" corresp="no" rid="aff3">
+          <name><surname>Lipovsky</surname><given-names>Bradley P.</given-names></name>
+          
+        </contrib>
+        <contrib contrib-type="author" corresp="no" rid="aff1 aff4">
+          <name><surname>Hovius</surname><given-names>Niels</given-names></name>
+          
+        </contrib>
+        <contrib contrib-type="author" corresp="no" rid="aff5">
+          <name><surname>White</surname><given-names>Robert S.</given-names></name>
+          
+        </contrib>
+        <contrib contrib-type="author" corresp="no" rid="aff5 aff1">
+          <name><surname>Green</surname><given-names>Robert G.</given-names></name>
+          
+        <ext-link>https://orcid.org/0000-0002-1614-7133</ext-link></contrib>
+        <contrib contrib-type="author" corresp="no" rid="aff1">
+          <name><surname>Turowski</surname><given-names>Jens M.</given-names></name>
+          
+        <ext-link>https://orcid.org/0000-0003-1558-0565</ext-link></contrib>
+        <aff id="aff1"><label>1</label><institution>GFZ German Research Centre for Geosciences, 14473 Potsdam, Germany</institution>
+        </aff>
+        <aff id="aff2"><label>2</label><institution>Department of Civil Engineering, National Chiao Tung University, Hsinchu 30010, Taiwan</institution>
+        </aff>
+        <aff id="aff3"><label>3</label><institution>Department of Earth and Planetary Sciences, Harvard University, Cambridge, MA 02138, USA</institution>
+        </aff>
+        <aff id="aff4"><label>4</label><institution>Institute of Earth and Environmental Science, University of Potsdam, 14476 Potsdam, Germany</institution>
+        </aff>
+        <aff id="aff5"><label>5</label><institution>Department of Earth Sciences, University of Cambridge, Cambridge CB3 0EZ, UK</institution>
+        </aff>
+      </contrib-group>
+      <author-notes><corresp id="corr1">Anne Schöpa (schoepa@gfz-potsdam.de)</corresp></author-notes><pub-date><day>14</day><month>June</month><year>2018</year></pub-date>
+      
+      <volume>6</volume>
+      <issue>2</issue>
+      <fpage>467</fpage><lpage>485</lpage>
+      <history>
+        <date date-type="received"><day>30</day><month>November</month><year>2017</year></date>
+           <date date-type="rev-request"><day>7</day><month>December</month><year>2017</year></date>
+           <date date-type="rev-recd"><day>3</day><month>May</month><year>2018</year></date>
+           <date date-type="accepted"><day>11</day><month>May</month><year>2018</year></date>
+      </history>
+      <permissions>
+        
+        
+      <license license-type="open-access"><license-p>This work is licensed under the Creative Commons Attribution 4.0 International License. To view a copy of this licence, visit <ext-link ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</ext-link></license-p></license></permissions><self-uri xlink:href="https://esurf.copernicus.org/articles/6/467/2018/esurf-6-467-2018.html">This article is available from https://esurf.copernicus.org/articles/6/467/2018/esurf-6-467-2018.html</self-uri><self-uri xlink:href="https://esurf.copernicus.org/articles/6/467/2018/esurf-6-467-2018.pdf">The full text article is available as a PDF file from https://esurf.copernicus.org/articles/6/467/2018/esurf-6-467-2018.pdf</self-uri>
+      <abstract>
+    <p id="d1e164">Landslide hazard motivates the need for a deeper understanding of the events
+that occur before, during, and after catastrophic slope failures. Due to the
+destructive nature of such events, in situ observation is often difficult or
+impossible. Here, we use data from a network of 58 seismic stations to
+characterise a large landslide at the Askja caldera, Iceland, on 21 July
+2014. High data quality and extensive network coverage allow us to analyse
+both long- and short-period signals associated with the landslide, and
+thereby obtain information about its triggering, initiation, timing, and
+propagation. At long periods, a landslide force history inversion shows that
+the Askja landslide was a single, large event starting at the SE corner of
+the caldera lake at 23:24:05 UTC and propagating to the NW in the following
+2 min. The bulk sliding mass was 7–16 <inline-formula><mml:math id="M1" display="inline"><mml:mo>×</mml:mo></mml:math></inline-formula> 10<inline-formula><mml:math id="M2" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">10</mml:mn></mml:msup></mml:math></inline-formula> kg, equivalent
+to a collapsed volume of 35–80 <inline-formula><mml:math id="M3" display="inline"><mml:mo>×</mml:mo></mml:math></inline-formula> 10<inline-formula><mml:math id="M4" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">6</mml:mn></mml:msup></mml:math></inline-formula> m<inline-formula><mml:math id="M5" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula>. The sliding
+mass was displaced downslope by 1260 <inline-formula><mml:math id="M6" display="inline"><mml:mo>±</mml:mo></mml:math></inline-formula> 250 m. At short periods, a
+seismic tremor was observed for 30 min before the landslide. The tremor is
+approximately harmonic with a fundamental frequency of 2.3 Hz and shows
+time-dependent changes of its frequency content. We attribute the seismic
+tremor to stick-slip motion along the landslide failure plane. Accelerating
+motion leading up to the catastrophic slope failure culminated in an aseismic
+quiescent period for 2 min before the landslide. We propose that precursory
+seismic signals may be useful in landslide early-warning systems. The 8 h
+after the main landslide failure are characterised by smaller slope failures
+originating from the destabilised caldera wall decaying in frequency and
+magnitude. We introduce the term “afterslides” for this subsequent,
+declining slope activity after a large landslide.</p>
+  </abstract>
+    </article-meta>
+  </front>
+<body>
+      
+
+<sec id="Ch1.S1" sec-type="intro">
+  <title>Introduction</title>
+      <p id="d1e223">Volcanic edifices are prone to landsliding because of their usually steep
+topography, fresh, unconsolidated deposits, and high seismic, volcanic, and
+hydrothermal activity, and the associated surface deformation. In the past,
+tsunami-creating landslides at volcanic edifices have led to the destruction
+of infrastructure and high numbers of fatalities. For example, the 1792
+Unzen Mayu-Yama, Japan, landslide and the resulting tsunami killed more than
+15 000 people in the Shimabara Bay (Sassa et al., 2016) and the eruption of
+Mt. St. Helens, USA, on 18 May 1980 initiated a 2.3 <inline-formula><mml:math id="M7" display="inline"><mml:mo>×</mml:mo></mml:math></inline-formula> 10<inline-formula><mml:math id="M8" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">9</mml:mn></mml:msup></mml:math></inline-formula> m<inline-formula><mml:math id="M9" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula> landslide that ran into Spirit Lake and caused a 260 m high wave
+deforesting adjoining slopes (Voight et al., 1981). Seismic networks are
+often installed around volcanoes for monitoring of magmatic processes and
+eruption forecasting. Their seismic records can also hold valuable
+information about landslide events occurring on the edifice.</p>
+      <?pagebreak page468?><p id="d1e251">Seismic signals of landslides are a powerful tool to reconstruct the dynamics
+of the slope failure including source mechanisms, the failure sequence
+together with precursory activity, and landslide properties (Brodsky et al.,
+2003; Favreau et al., 2010; Schneider et al., 2010; Moretti et al., 2012;
+Allstadt, 2013; Yamada et al., 2013). Long-period seismic signals of
+landslides from stations several thousand kilometres away can be used as
+references for inversions (Allstadt, 2013; Ekström and Stark, 2013;
+Yamada et al., 2013; Hibert et al., 2015; Chao et al., 2016) or models
+(Brodsky et al., 2003; Favreau et al., 2010; Schneider et al., 2010; Moretti
+et al., 2012) to constrain the location, mass, duration, displacement, and
+run-out trajectories of the landslide. Short-period waves, generated by the
+momentum exchanges within a granular landslide mass and along its boundaries,
+have been used to study the detachment, moving, and reposing phases of
+landslides (Norris, 1994; Suriñach et al., 2005; Dammeier et al., 2011;
+Hibert et al., 2011, 2014; Deparis et al., 2008; Vilajosana et al., 2008).
+Seismic records can also give valuable information about triggers and
+precursors of slope failures (Amitrano et al., 2005; Caplan-Auerbach and
+Huggel, 2007; Senfaute et al., 2009; Got et al., 2010; Helmstetter and
+Garambois, 2010; Dietze et al., 2017). For instance, repeated small
+earthquakes indicative of stick-slip movement on a small patch were observed
+before a landslide failed within shale and tuff layers in Rausu, Japan
+(Yamada et al., 2016). Additionally, individual cracking events that occur
+more frequently in time closer to the main failure were identified at a
+station 200 m away from the steep, bedrock source area of a
+10<inline-formula><mml:math id="M10" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">4</mml:mn></mml:msup></mml:math></inline-formula> m<inline-formula><mml:math id="M11" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula> landslide in the Illgraben, Switzerland (Zeckra et al.,
+2015). However, the localisation and characterisation of precursory slope
+activity before large mass wasting events is often limited by sparse seismic
+station coverage, preventing a detailed analysis of the underlying source
+mechanisms.</p>
+      <p id="d1e272">In this study, we present seismic data from the 2014 Askja landslide. As the
+landslide was located in the centre of a temporary local network of 58 seismic
+stations, the spatial coverage is exceptionally good and the
+signal-to-noise ratio (SNR) of most stations is high due to their remote
+locations far away from roads or other places of human activity. The high
+seismic data quality allows for a detailed reconstruction of the landslide
+dynamics based on the combined analysis of records from stations within a
+few kilometres of the landslide and at distances of up to 100 km. A force
+history inversion of the long-period signals of the landslide from distant
+seismic stations of the network is used to infer its timing, propagation
+direction, mass, and vertical and horizontal displacement. The short-period
+signals of nearby stations are included in a comprehensive interpretation of
+the landslide dynamics. These signals also contain information about the
+processes occurring before and after the catastrophic slope failure. We
+identified a precursory tremor signal in the seismic data of 38 stations
+located up to 30 km away from the landslide source area starting 30 min
+before the large landslide. We find the most plausible explanation of the
+precursory tremor to be repeated stick-slip motion along the landslide
+failure plane in moments preceding catastrophic failure. After the
+catastrophic failure of the landslide, the seismic stations a few kilometres
+from the landslide source area recorded smaller slope failures. These
+smaller rockfalls and slides commenced from the destabilised section of the
+caldera wall where the large landslide originated.</p>
+</sec>
+<sec id="Ch1.S2">
+  <title>The Askja landslide and its failure preconditions</title>
+      <p id="d1e281">In the following, we first report on the Askja landslide and introduce the
+reader to the Askja area before we describe the factors that made the
+landslide source area prone to slope failure. We then focus on the seismic
+dataset and use it to characterise the landslide, the precursory tremor, and
+the subsequent small slope failures.</p>
+      <p id="d1e284">In the late evening of 21 July 2014, a white cloud was seen rising over the
+Askja central volcano in the Icelandic highlands (Helgason et al., 2014). As
+field investigations on the following days showed, the cloud was a
+consequence of a voluminous landslide, which must have occurred during the
+night. The cloud probably contained a mixture of dust from the landslide and
+steam from the hydrothermal system at the south-eastern shore of the Askja
+caldera lake, Öskjuvatn, that was depressurised by the removal of the
+landslide mass (Vogfjörd et al., 2015). At this south-eastern lakeshore,
+steep scars and fresh, mobilised material could be seen (Hoskuldsson et al.,
+2015). Parts of the landslide material must have entered the lake and
+created tsunami waves as flood marks up to 60–80 m above the lake level
+were found at the shorelines (Gylfadóttir et al., 2017). The flood marks
+implied that up to 10 individual waves inundated the shore and also went
+into the 200 m wide Víti crater, a popular tourist spot on the
+north-eastern side of the lake. Analysis of the seismic record of the
+permanent stations of the Icelandic Meteorological Institute showed that the
+landslide occurred at 23:24 UTC, equivalent to local time (Saemundsson et
+al., 2015). This timing meant that no eyewitnesses were present. Geodetic
+surveys estimated the landslide volume to be 12–50 <inline-formula><mml:math id="M12" display="inline"><mml:mo>×</mml:mo></mml:math></inline-formula> 10<inline-formula><mml:math id="M13" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">6</mml:mn></mml:msup></mml:math></inline-formula> m<inline-formula><mml:math id="M14" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula> and that about 10 <inline-formula><mml:math id="M15" display="inline"><mml:mo>×</mml:mo></mml:math></inline-formula> 10<inline-formula><mml:math id="M16" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">6</mml:mn></mml:msup></mml:math></inline-formula> m<inline-formula><mml:math id="M17" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula> entered the
+caldera lake creating the tsunami waves (Gylfadóttir et al., 2017).</p>
+      <p id="d1e338">Several factors made the site at the south-eastern corner of Lake
+Öskjuvatn prone to slope failures. These factors are (i) the geological
+structures of a young collapse caldera with steeply dipping caldera ring
+faults; (ii) the geothermal system in this corner of the lake with
+hydrothermally altered volcanic rocks at the surface and earthquakes at
+2–4 km b.s.l.; and (iii) the weather conditions in summer 2014 with
+sustained high temperatures and high precipitation during the days before
+the landslide. We describe these failure preconditions below.</p><?xmltex \hack{\newpage}?>
+<?pagebreak page469?><sec id="Ch1.S2.SS1">
+  <title>Geological setting</title>
+      <p id="d1e347">The Askja volcanic system is located in the northern volcanic zone of
+Iceland and consists of a prominent central volcano and an associated
+fissure swarm. The shape of the Askja central volcano is dominated by nested
+calderas (inset of Fig. 1). The 7–9 km wide outer caldera (Askja caldera)
+developed in the early Holocene, and the 3–5 km wide inner caldera
+(Öskjuvatn caldera) with Lake Öskjuvatn gradually subsided in
+the 40 years following a rifting event in 1874–1876 (Acocella et al.,
+2015). The ring faults of the inner caldera dissect Pleistocene
+glaciovolcanic deposits of the Austurfjöll and the Thorvaldsfjall
+mountains at the eastern and southern margins of Lake Öskjuvatn (inset of
+Fig. 1). There, the steep relief of up to 350 m is dominated by nearly
+vertically dipping fault surfaces of the cliffs and talus cones
+(Sigvaldason, 2002). The caldera ring faults were the location of minor
+effusive eruptions in the 20th century, that formed, among others, the
+Suðurbotnahraun lavas, where the landslide originated, and
+Kvíslahraun in the south-eastern corner of the lake in 1922/23 (Hartley
+and Thordarson, 2012). The last eruptive activity at Askja occurred in 1961
+when the Vikrahraun lava flowed out of a fissure at the northern rim of the
+Holocene Askja caldera (Thorarinsson and Sigvaldason, 1962). During the last
+decades, continuous subsidence has dominated the Askja caldera (Einarsson,
+1991; de Zeeuw-van Dalfsen et al., 2013), associated with contraction of an
+inferred shallow magma body, and the large-scale rifting of Iceland at a
+rate of 18.2 mm yr<inline-formula><mml:math id="M18" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula> and an azimuth direction of 106<inline-formula><mml:math id="M19" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula> (DeMets
+et al., 1994). Nevertheless, fumarolic activity persists at the northern
+lakeshore in the vicinity of the Víti crater and at the eastern and
+southern corners of the lake.</p>
+
+      <?xmltex \floatpos{t}?><fig id="Ch1.F1"><caption><p id="d1e373">The Askja central volcano north of the Vatnajökull ice cap in
+the Icelandic highlands with locations of the seismic stations (black
+circles). The white star is the source location of the 21 July 2014
+landslide. The Kárahnjúkar weather station (Kára) is indicated
+with a black diamond. Inset of the Askja central volcano shows the
+hyaloclastite mountains of Austurfjöll (Au) and Thorvaldsfjall (Th), the
+caldera ring faults of the Askja caldera (As) and the Öskjuvatn caldera
+(Ös), the small explosion crater Víti, the basaltic 1922/23 eruption
+sites of Suðurbotnahraun (Su) and Kvíslahraun (Kv), and the 1961
+Vikrahraun (Vi) lava flow (grey shading). The areas of deep crustal
+earthquakes at the Kollóttadyngja (Ko) shield volcano, at the
+hyaloclastite Upptyppingar mountain (Up), north of the Vaðalda shield
+volcano (Va), and at the Askja caldera north side are indicated with green
+ellipses. Areas of shallow crustal seismicity at the Herðubreið table
+mountain (He), and at the south-eastern edge of the Öskjuvatn caldera are
+shown with yellow ellipses. The Askja (AR) and the Kverfjöll rift (KR)
+segments are shaded in light grey (Einarsson and Sæmundsson, 1987).</p></caption>
+          <?xmltex \igopts{width=241.848425pt}?><graphic xlink:href="https://esurf.copernicus.org/articles/6/467/2018/esurf-6-467-2018-f01.png"/>
+
+        </fig>
+
+</sec>
+<sec id="Ch1.S2.SS2">
+  <title>Seismicity</title>
+      <p id="d1e389">In the region of the Askja volcanic system, earthquakes occur at two levels
+in the crust: as shallow crustal seismicity between the surface and mostly 5 km
+depth, and as deep seismicity in the ductile lower crust at depths of
+10–35 km, with magnitudes of usually <inline-formula><mml:math id="M20" display="inline"><mml:mrow><mml:msub><mml:mi>M</mml:mi><mml:mi mathvariant="normal">l</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula> &lt; 3
+(Jakobsdóttir et al., 2002; Soosalu et al., 2010; Greenfield and White,
+2015).</p>
+      <p id="d1e403">The deep crustal earthquakes are located in distinct regions (Fig. 1),
+beneath the Kollóttadyngja shield volcano to the north, beneath the
+hyaloclastite Upptyppingar mountain to the east, location of a dyke
+intrusion in 2007–2008 (Jakobsdóttir et al., 2008; White et al., 2011),
+at the northern part of the shield volcano Vaðalda, and beneath the Askja
+volcano, attributed to melt migration in the lower crust (Soosalu et al.,
+2010; Key et al., 2011; Greenfield and White, 2015).</p>
+      <p id="d1e406">Shallow earthquakes cluster in the regions around the table mountain
+Herðubreið (Fig. 1), assigned to the differential motion of the
+Askja and the Kverfjöll rift segments accommodated by bookshelf faulting
+(Green et al., 2014), and at the south-eastern corner of the caldera lake,
+Öskjuvatn, a region of high geothermal activity, the source location of
+the landslide. This cluster at Öskjuvatn has been seen in seismic data
+since 1975 (Einarsson, 1991; Jakobsdóttir, 2008; Greenfield and White,
+2015) and was hypothesised to be caused by hydrothermal circulation above a
+shallow magma body (Soosalu et al., 2010) or by thermal cracking and heat
+extraction in the crust (Einarsson, 1991).</p>
+      <?pagebreak page470?><p id="d1e409"><?xmltex \hack{\newpage}?>Relocation of 86 earthquakes in this south-eastern hydrothermal area at Lake
+Öskjuvatn showed that the events are concentrated at depths between 2 and 4 km b.s.l. (Greenfield et al., 2018). Furthermore, this study showed that
+the earthquakes were located along a line of 2 km length stretching from the
+fumarolic vents, i.e. the northern edge of the landslide source area, to the
+north-west. During the observation period of this study from 2009 to 2015,
+the earthquakes were randomly distributed in space and at depth with no
+clear trend over time, and the focal mechanisms did not show a distinct
+pattern in the years before the landslide.</p>
+</sec>
+<sec id="Ch1.S2.SS3">
+  <title>Meteorology</title>
+      <p id="d1e419">The highlands of Iceland have a subarctic climate with short, cool summers
+and long, cold winters. In the Askja area, mean January temperatures are
+around <inline-formula><mml:math id="M21" display="inline"><mml:mo>-</mml:mo></mml:math></inline-formula>8 <inline-formula><mml:math id="M22" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula>C and mean July temperatures are usually around
+6 <inline-formula><mml:math id="M23" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula>C (Einarsson, 1984). The Vatnajökull icecap shields the
+central highlands from moisture coming from the south-east, and precipitation
+rates of 600 mm yr<inline-formula><mml:math id="M24" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula> are relatively low compared to the Icelandic coast
+(Einarsson, 1984). In winter, most precipitation falls as snow and extensive
+patches of snow usually last well into the summer months at the Askja
+central volcano. This was also the case in July 2014 (Helgason et al.,
+2014).</p>
+      <p id="d1e459">The area around the Askja central volcano experienced a period of warm
+weather in July 2014 with a mean monthly temperature of 8 <inline-formula><mml:math id="M25" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula>C, 2<inline-formula><mml:math id="M26" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula>
+higher than the long-term average of the mean July temperatures. In
+mid-July 2014, average daily temperatures ranged between 8 and 11 <inline-formula><mml:math id="M27" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula>C
+and maximum daily temperatures were between 12 and 15 <inline-formula><mml:math id="M28" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula>C (Fig. 2).
+The day of the landslide, 21 July, was one of the warmest of 2014 in the
+Icelandic highlands with temperatures around 22 <inline-formula><mml:math id="M29" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula>C. The
+fair-weather period in mid-July 2014 was relatively dry but the Kárahnjúkar
+weather station, 43 km east of Askja, recorded 9.3 mm of precipitation
+on 19 July and 8.7 mm on 20 July (Fig. 2). On the day of the landslide, the
+station recorded minor precipitation events with a total of 0.5 mm in the
+morning and over midday. These meteorological conditions with warm and wet
+weather in the days before the landslide increased the availability of
+water, also due to snowmelt and rain on snow, which may have resulted in
+enhanced infiltration into the landslide body. This was facilitated by
+numerous cracks that had developed on top of the landslide body a year
+before the failure (Fig. 3). Higher water content increases the pore
+pressure and, in turn, lowers the critical stress necessary to initiate
+slope failures (Iverson et al., 1997; Gaucher et al., 2015).</p>
+
+      <?xmltex \floatpos{t}?><fig id="Ch1.F2"><caption><p id="d1e509">Mean daily temperatures and
+cumulative precipitation at weather station Kárahnjúkar (see Fig. 1
+for location) in June, July, and August 2014. Note the 2 days with high
+precipitation immediately before and the increased temperature on the day of
+the landslide (Julian day 202, yellow line).</p></caption>
+          <?xmltex \igopts{width=199.169291pt}?><graphic xlink:href="https://esurf.copernicus.org/articles/6/467/2018/esurf-6-467-2018-f02.png"/>
+
+        </fig>
+
+</sec>
+</sec>
+<sec id="Ch1.S3">
+  <title>Seismic signal analysis</title>
+      <p id="d1e525">A network of 58 seismic stations was in place in the Icelandic highlands
+clustering around the Askja volcanic system from 2009 to 2015 to investigate
+the crustal structure and magma migration beneath the Askja central volcano.
+The stations were equipped with broadband to semi-broadband
+Güralp CMG-6TD (30 s–100 Hz), CMG-ESPCD (60 s–100 Hz),
+and CMG-3T (120 s–100 Hz) seismometers with Nanometrics Taurus data loggers, recording
+at 100 Hz sampling frequency. Based on data availability, the records of 52 stations were used in this study.</p>
+
+      <?xmltex \floatpos{t}?><fig id="Ch1.F3"><caption><p id="d1e530">Surface opening cracks on top of the landslide body in August 2013,
+a year before the failure. Location of the image is indicated in Fig. 5e;
+view is to the west. Image taken by Daniele Trippanera.</p></caption>
+        <?xmltex \igopts{width=241.848425pt}?><graphic xlink:href="https://esurf.copernicus.org/articles/6/467/2018/esurf-6-467-2018-f03.jpg"/>
+
+      </fig>
+
+      <p id="d1e539">Coalescence microseismic mapping (CMM) was used to automatically detect,
+locate, and classify crustal earthquakes in the Askja region (Drew et al.,
+2013). This method combines seismic imaging and travel time inversion to
+determine the locations and times of earthquakes from seismic<?pagebreak page471?> data recorded
+continuously on a sparse local seismometer array. Data inversion is done as
+a 3-D subsurface grid search over the data and network of trial locations for
+likely locations and origin times of seismic events (Drew et al., 2013).
+Between 21 June and 16 August 2014, 12 events with local magnitudes
+<inline-formula><mml:math id="M30" display="inline"><mml:mrow><mml:msub><mml:mi>M</mml:mi><mml:mi mathvariant="normal">l</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula> &lt; 2 were detected on average per day within the Askja
+region by the whole network. In the days before the landslide, the crustal
+seismicity was within this background rate, and on the day of the landslide
+the only event detected within the Askja caldera was a <inline-formula><mml:math id="M31" display="inline"><mml:mrow><mml:msub><mml:mi>M</mml:mi><mml:mi mathvariant="normal">l</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula> <inline-formula><mml:math id="M32" display="inline"><mml:mo>=</mml:mo></mml:math></inline-formula> 0.5
+earthquake at 11 km depth, 1.5 km NE of the landslide source area at
+15:15:19 UTC (Fig. S1 in the Supplement). Earthquakes occurring close to the surface and down
+to 5 km depth clustered in the south-eastern corner of the Askja caldera
+beneath the landslide source area during the weeks before and after the
+landslide, with about two events per day (Figs. S1 and S2).</p>
+<sec id="Ch1.S3.SS1">
+  <title>High-frequency seismic data analysis</title>
+      <p id="d1e576">To investigate the characteristics of the seismic signals of the landslide,
+we removed the instrument response, the mean, and the trend, and band-pass
+filtered the signals between 1 and 45 Hz. We also computed spectrograms from
+the deconvolved east components of the seismic signals with time windows of
+1.1 and 1.5 s and overlaps of 90 %.</p>
+      <p id="d1e579">The high-amplitude short-period signals generated by the catastrophic
+failure part of the Askja landslide sequence can be seen in the data of all
+stations of the network up to a distance of 110 km (station SKAF, south of
+Vatnajökull glacier; see Fig. 1 for location). The seismic signal onset
+at the closest station, MOFO, 3.5 km south-east of the landslide source area
+(see Fig. 1 for location), was recorded at 23:24:05 UTC (Fig. 4) and started
+with a smooth increase in seismic ground velocities in the first 45 s (Fig. 5). Amplitudes peaked 45 s and again 75 s after the first wave arrival with
+ground velocities of up to 51 <inline-formula><mml:math id="M33" display="inline"><mml:mi mathvariant="normal">µ</mml:mi></mml:math></inline-formula>m s<inline-formula><mml:math id="M34" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula> (Fig. 5d). Given that the
+amplitudes were generally higher for the horizontal components of the signal,
+we attribute the signal to surface waves. The short-period signal lasted for
+about 130 s and the waveform had a symmetric, spindle-like shape (Fig. 4c).
+The emergent onset of the signal without clear <inline-formula><mml:math id="M35" display="inline"><mml:mi>P</mml:mi></mml:math></inline-formula> and <inline-formula><mml:math id="M36" display="inline"><mml:mi>S</mml:mi></mml:math></inline-formula> wave arrivals and no
+distinct peak amplitudes in the frequency bands &gt; 1 Hz is
+characteristic of seismic signals generated by gravitational instabilities
+(Suriñach et al., 2005; Deparis et al., 2008; Dammeier et al., 2011;
+Burtin et al., 2013).</p>
+
+      <?xmltex \floatpos{t}?><fig id="Ch1.F4"><caption><p id="d1e617"><bold>(a)</bold> Spectrogram (unfiltered) and <bold>(b)</bold> waveform
+(filtered between 1 and 45 Hz) of the landslide, its precursory tremor and the
+afterslides at the Askja caldera, 21 July 2014. <bold>(c)</bold> Close-up of the
+landslide and <bold>(d)</bold> of one afterslide waveform. MOFO station, east
+component.</p></caption>
+          <?xmltex \igopts{width=241.848425pt}?><graphic xlink:href="https://esurf.copernicus.org/articles/6/467/2018/esurf-6-467-2018-f04.png"/>
+
+        </fig>
+
+      <?xmltex \floatpos{t}?><fig id="Ch1.F5"><caption><p id="d1e640">Results of the landslide force history inversion.
+<bold>(a)</bold> Force–time evolution, <bold>(b)</bold> velocity–time, and
+<bold>(c)</bold> displacement–time plots for the north, east, and upwards
+components of the loading force. Red circles in panels <bold>(a)</bold>,
+<bold>(d)</bold>, and <bold>(e)</bold> mark the acceleration phase, and the black
+circle is the transition to the deceleration phase (blue circles) of the
+landslide motion. <bold>(d)</bold> Time evolution of the landslide acceleration
+and deceleration with horizontal force vectors (arrows) for each time step
+(north is up). Horizontal envelope function of the MOFO station (see inset in
+panel <bold>e</bold> for location), computed with the root mean square amplitudes
+of the horizontal component waveforms, filtered between 1 and 45 Hz for
+comparison. The dashed box highlights the late-arriving seismic signals. The
+start of the <inline-formula><mml:math id="M37" display="inline"><mml:mi>x</mml:mi></mml:math></inline-formula> axis is at 23:24:05 UTC. <bold>(e)</bold> Path of the landslide
+bulk mass from the landslide force history inversion of the seismic waveforms
+between 0.02 and 0.08 Hz. Shaded white area is the range of the inversion
+results with different frequencies of the band-pass filter (0.02–0.05,
+0.02–0.08, 0.04–0.08 Hz). The white line is the outline of the landslide
+source area plotted on top of a Google Earth image taken on 7 August 2012.
+The yellow eye looking towards the west is the location of the photography presented in
+Fig. 3. The white square in the inset shows the location of the main image.</p></caption>
+          <?xmltex \igopts{width=241.848425pt}?><graphic xlink:href="https://esurf.copernicus.org/articles/6/467/2018/esurf-6-467-2018-f05.png"/>
+
+        </fig>
+
+      <p id="d1e684">The spectrogram of the MOFO station reveals that most energy was released within
+the first 2 min of the landslide until 23:26:00 UTC, with the frequencies
+between 1 and 4 Hz containing the largest part of the seismic energy. The
+spectrogram of the landslide has a triangular shape where the higher
+frequencies decrease more rapidly in energy over time (Fig. 4a). This shape
+is common for landslides (Bottelin et al., 2014; Dammeier et al., 2015) and
+has been related to greater ground attenuation of higher frequencies and
+material entrainment during the propagation of the mass movement (Aki, 1980;
+Suriñach et al., 2005; Dammeier et al., 2011). After these 2 min of
+persistent high seismic amplitudes and energies between 1 and 15 Hz, amplitudes
+and energies decayed rapidly in the subsequent 4 min, followed by 10 min
+during which seismic amplitudes decreased less rapidly. Approximately 40 min
+after the end of the high-amplitude signals, the background noise level was
+re-established.</p>
+</sec>
+<sec id="Ch1.S3.SS2">
+  <title>Landslide force history inversion of long-period signals</title>
+      <p id="d1e694">Long-period seismic waves radiated by landslides result from the cycle of
+unloading and reloading of the solid Earth (Fukao, 1995; Takei and Kumazawa,
+1994). This broad loading cycle is produced by the bulk acceleration and
+deceleration of the landslide mass (Okal, 1990). Long-period seismic signals
+(12.5–50 s, corresponding to frequencies of 0.02–0.08 Hz) were recorded
+for the catastrophic failure part of the Askja landslide sequence at all
+stations of the network (station furthest away is LAUF, at 130 km distance,
+located SW of Vatnajökull glacier; see Fig. 1 for location). As for the
+short-period signals, the long-period waves first arrived at the MOFO station at
+23:24:05 UTC and lasted for approximately<?pagebreak page472?> 130 s. The onset of these
+long-period waves coincided with the arrival of the short-period waves.</p>
+<sec id="Ch1.S3.SS2.SSS1">
+  <title>Method</title>
+      <p id="d1e702">Following the method developed by Ekström and Stark (2013) and Chao et
+al. (2016), we performed an inversion of the long-period landslide signals
+between 0.02 and 0.08 Hz (50–12.5 s), fitting synthetic waveforms to the data
+(Fig. S3) and treating the landslide mass as a single block. The selected
+frequency range is suitable for the inversion as higher frequencies would be
+affected by local-scale structures and inaccuracies in the velocity model,
+and lower frequencies have insufficient SNRs. The
+spatial scale of the landslide event is also small enough compared to the
+wavelength of the filtered seismic waves to satisfy the single-block
+approximation (i.e. seismic point source). For the inversion, we used the 1-D
+velocity model of the Askja region developed by Mitchell et al. (2013) and
+the records of 11 broadband stations of the seismic network. We selected
+those stations because their data have high SNRs and they were equipped with
+CMG-ESPCDs or CMG-3Ts capable of recording frequencies between
+0.0167–100 Hz (60–0.01 s), low enough for the long-period landslide
+signals. The synthetic waveforms are computed for the best-fit solution of
+the time-dependent forces using a signal length of 130 s, corresponding to
+the length of the recorded long-period signals. A recent study demonstrated
+that parts of the landslide material entered the lake and created a tsunami
+(Gylfadóttir et al., 2017). The interaction between the tsunami waves and
+the lakeshore can contribute to the long-period seismic waves. However, we
+assume that the waveform data used in the inversion (Fig. S3) are directly
+caused by the moving mass of the landslide.</p>
+      <p id="d1e705">Uncertainties in the waveform inversion mainly result from the quality of
+the recorded data. Chao et al. (2016, 2017) demonstrated that only a few
+stations with good SNR are sufficient to produce reliable inversion results
+(i.e. a waveform fitness value larger than 0.75, a parameter that is
+quantified by the variance reduction and the normalised cross-correlation
+coefficient). In fact, the SNR of the waveforms depends on the frequency
+range of the band-pass filter. In order to test the sensitivity of the
+waveform inversion to the chosen frequency range, we tested frequency bands
+of 0.02–0.05 Hz (50–20 s), 0.02–0.08 Hz (50–12.5 s), and 0.04–0.08 Hz
+(25–12.5 s).</p>
+</sec>
+<sec id="Ch1.S3.SS2.SSS2">
+  <title>Results of the landslide force history inversion</title>
+      <p id="d1e714">Assuming a block model with a constant landslide mass over time, the
+inverted forces can be expressed as the product of the mass and the
+time series acceleration. We obtained a maximum inverted force of
+3.219 <inline-formula><mml:math id="M38" display="inline"><mml:mo>×</mml:mo></mml:math></inline-formula> 10<inline-formula><mml:math id="M39" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">10</mml:mn></mml:msup></mml:math></inline-formula> N and the force–time evolution for the north,
+east, and upwards components of the loading and unloading forces (Fig. 5a). The
+unloading forces due to the accelerating mass of the landslide are oriented
+towards the SE (red arrows in Fig. 5d). In turn, the reloading forces due to
+the decelerating and depositing mass of the landslide strike to the NW (blue
+arrows in Fig. 5d). These directions are in agreement with the NW-directed
+propagation path of the landslide that we inferred from direct field
+observations of the landslide source and deposition area in August 2015
+(Fig. 5e).</p>
+      <?pagebreak page473?><p id="d1e733"><?xmltex \hack{\newpage}?>Assuming a block model with a constant landslide mass over time, we can
+estimate the acceleration time series by dividing the resulting forces by the
+mass. Then, the block-mass trajectories (the three-dimensional displacement
+time series) can be obtained from twice integrating the three-dimensional
+acceleration time series. Here, we put the starting point at the centre of
+mass of the initial sliding block and find the most likely mass by ensuring
+that the block-mass trajectory inferred from the acceleration time series
+matches the run-out path from satellite images and field observations. Recent
+studies suggested that the submerged landslide material travelled about 2 km
+at the bottom of the lake before coming to rest (Hoskuldsson et al., 2015;
+Gylfadóttir et al., 2017). The parts of the landslide material hitting
+the water surface and slumping into the lake may have contributed to the
+seismic waves recorded by the broadband seismic stations. However, the
+material of the submerged sliding is expected to be significantly decreased
+in mass before the bulk material rest due to material deposition at the
+bottom of the lake. Thus, we used the run-out distance on land, about
+1200 m, estimated from Fig. 7b, in our inversion scheme of the landslide
+mass. As the mass was directly inverted from the landslide forces, smaller
+values of a moving mass led to larger accelerations and longer run-out
+distances.</p>
+      <p id="d1e737">For the grid-search method of the mass computation, we used a landslide mass
+range between 1 <inline-formula><mml:math id="M40" display="inline"><mml:mo>×</mml:mo></mml:math></inline-formula> 10<inline-formula><mml:math id="M41" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">10</mml:mn></mml:msup></mml:math></inline-formula> and 2 <inline-formula><mml:math id="M42" display="inline"><mml:mo>×</mml:mo></mml:math></inline-formula> 10<inline-formula><mml:math id="M43" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">11</mml:mn></mml:msup></mml:math></inline-formula> kg. The
+final trajectory is determined by minimising the misfit between the observed
+(1200 m used in this study) and computed run-out distances. We averaged over
+the inversion results of the three used frequency bands taking the standard
+deviation into account and obtained the final run-out path of the landslide
+event with a total horizontal displacement of 1260 <inline-formula><mml:math id="M44" display="inline"><mml:mo>±</mml:mo></mml:math></inline-formula> 250 m and a
+vertical displacement of 430 <inline-formula><mml:math id="M45" display="inline"><mml:mo>±</mml:mo></mml:math></inline-formula> 300 m (Fig. 5c and e) for a resulting
+landslide mass of 7–16 <inline-formula><mml:math id="M46" display="inline"><mml:mo>×</mml:mo></mml:math></inline-formula> 10<inline-formula><mml:math id="M47" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">10</mml:mn></mml:msup></mml:math></inline-formula> kg. The best-fit solutions for
+the synthetic seismograms have a high average waveform fitness value of
+1.343 (Fig. S3).</p>
+      <p id="d1e803">Based on the calculated maximum force of 3.219 <inline-formula><mml:math id="M48" display="inline"><mml:mo>×</mml:mo></mml:math></inline-formula> 10<inline-formula><mml:math id="M49" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">10</mml:mn></mml:msup></mml:math></inline-formula> N and
+7–16 <inline-formula><mml:math id="M50" display="inline"><mml:mo>×</mml:mo></mml:math></inline-formula> 10<inline-formula><mml:math id="M51" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">10</mml:mn></mml:msup></mml:math></inline-formula> kg of mobilised mass, the potential energy
+released during this landslide is estimated to be
+8.2–51.5 <inline-formula><mml:math id="M52" display="inline"><mml:mo>×</mml:mo></mml:math></inline-formula> 10<inline-formula><mml:math id="M53" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">13</mml:mn></mml:msup></mml:math></inline-formula> J. Assuming an average density of
+2000 kg m<inline-formula><mml:math id="M54" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">3</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula>, representative of typical values for highly fractured and
+hydrothermally altered Pleistocene hyaloclastites and Holocene basaltic lava
+flows (Moore, 2001), the collapsed volume was
+35–80 <inline-formula><mml:math id="M55" display="inline"><mml:mo>×</mml:mo></mml:math></inline-formula> 10<inline-formula><mml:math id="M56" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">6</mml:mn></mml:msup></mml:math></inline-formula> m<inline-formula><mml:math id="M57" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula>. This volume range overlaps with prior
+volume estimates from field observations and bathymetric surveys of the lake,
+giving 12–50 <inline-formula><mml:math id="M58" display="inline"><mml:mo>×</mml:mo></mml:math></inline-formula> 10<inline-formula><mml:math id="M59" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">6</mml:mn></mml:msup></mml:math></inline-formula> m<inline-formula><mml:math id="M60" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula> for the landslide volume
+(Hoskuldsson et al., 2015; Saemundsson et al., 2015; Gylfadóttir et al.,
+2017). Sonar investigations detected the deposits of the landslide in the
+lake as far as 2000 m away from the entry point of the material into the
+water (Hoskuldsson et al., 2015) and a calculation of the landslide volume
+deposited in the lake based on the rise of the water level is
+10 <inline-formula><mml:math id="M61" display="inline"><mml:mo>×</mml:mo></mml:math></inline-formula> 10<inline-formula><mml:math id="M62" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">6</mml:mn></mml:msup></mml:math></inline-formula> m<inline-formula><mml:math id="M63" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula> (Gylfadóttir et al., 2017). This is less
+than half the total landslide volume.</p>
+      <p id="d1e944">In order to compare the seismically inferred run-out trajectories with the
+high-frequency seismic signals recorded at the closest station (MOFO)
+(Fig. 5d), we computed the travel times of the point-source mass on the
+run-out path (dots shown in Fig. 5e). Notably, a late-arriving seismic phase
+can be observed in the high-frequency horizontal envelope waveform, which
+might be generated by parts of the landslide material hitting the shoreline
+and sliding into the lake. At this stage of the landslide history (third blue
+dot in Fig. 5e), we obtained an averaged maximum sliding velocity of the
+block mass of 7 <inline-formula><mml:math id="M64" display="inline"><mml:mo>±</mml:mo></mml:math></inline-formula> 0.7 m s<inline-formula><mml:math id="M65" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula> from the waveform inversions of the
+different frequency bands (Fig. 5b). In their tsunami modelling,
+Gylfadóttir et al. (2017) calculated the velocity of the landslide
+hitting the shoreline to be about 30 m s<inline-formula><mml:math id="M66" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula>, which is larger than our
+estimated value. We attribute this discrepancy to (i) the limited
+applicability of a constant mass assumption in the waveform inversion,
+(ii) the fact that the inversion gives the velocity of the total landslide
+mass, whereas the tsunami modelling is calculating the velocity of the front
+of the slide, and (iii) uncertainties in the volume of the material sliding
+into the lake used for the modelling.</p>
+</sec>
+</sec>
+</sec>
+<sec id="Ch1.S4">
+  <title>Tremor</title>
+      <p id="d1e986">Seismograms recorded 30 min before the high-energy landslide
+(<inline-formula><mml:math id="M67" display="inline"><mml:mo lspace="0mm">∼</mml:mo></mml:math></inline-formula> 22:55 UTC) show gradually increasing amplitudes in the 1–45 Hz
+band (Fig. 6). This amplitude increase is visible at stations up to 30 km
+away from the landslide area. For the nearest station (MOFO), the seismic
+amplitudes were up to 3 times higher than the background 7 min before the
+onset of the high-energy landslide signal (23:17 UTC, Fig. 6b). This
+amplitude increase was followed by an amplitude drop to values slightly below
+the background 2 min before the onset of the catastrophic part of the
+landslide signal (Fig. 6). We refer to the signal with increased amplitude as
+a seismic tremor. Here, we use the term seismic tremor to refer to any
+emergent, long-duration seismic signal that lacks clear body wave arrivals
+(McNutt, 1992; Beroza and Ide, 2011), rather than to describe the source
+process responsible for generating seismic waves.</p>
+
+      <?xmltex \floatpos{t}?><fig id="Ch1.F6"><caption><p id="d1e998"><bold>(a)</bold> Spectrogram (unfiltered) and <bold>(b)</bold> waveform
+(filtered between 1 and 45 Hz) of the tremor signal preceding the 21 July 2014
+Askja landslide. <bold>(c)</bold> Close-up of the tremor signal with up- and
+down-gliding spectral lines. MOFO station, east component.</p></caption>
+        <?xmltex \igopts{width=241.848425pt}?><graphic xlink:href="https://esurf.copernicus.org/articles/6/467/2018/esurf-6-467-2018-f06.png"/>
+
+      </fig>
+
+      <p id="d1e1015">The observed seismic tremor initially has energy that is contained in
+spectral peaks centred at 2.3, 4.3, and 7.1 Hz (Fig. 6c). A tremor with a
+sharply peaked spectrum consisting of a fundamental frequency with overtones
+is called a harmonic tremor. The Askja tremor is therefore approximately –
+but not perfectly – harmonic. Furthermore, a harmonic tremor that gradually
+evolves in time is said to be gliding (McNutt, 2005). A particularly
+eye-catching aspect of the Askja tremor is the concurrence of up-gliding and
+down-gliding spectral lines (Fig. 6a). Specifically, at about 23:14 UTC, the
+spectral content of the tremor started to change, and both up- and
+down-gliding frequency bands can be observed simultaneously (Fig. 6c). Tremor
+amplitudes are higher for the horizontal components than for the<?pagebreak page474?> vertical
+component, as is the case for the landslide signal. In contrast to the
+signal of the landslide, which also contains long-period seismic waves, the
+tremor is confined to frequencies above 1 Hz. Contemporaneously with the
+amplitude drop, the gliding spectral lines stopped at about 23:22 UTC and a
+period of 2 min of quiescence can be seen in the spectrograms before the
+high-energy signal of the catastrophic landslide starts.</p>
+      <p id="d1e1018">We begin in Sect. 4.1 by discussing the location of the seismic tremor. In
+Sect. 4.2, we present numerical simulations of a particular
+tremor-generating process: the repeated stick-slip motion of a small region
+along the landslide failure plane. We emphasise that repeated stick-slip
+motion is only one possible explanation of seismic tremor. Other possible
+explanations are discussed in Sect. 6.2. In Sect. 6.2, we conclude that
+repeated stick-slip motion is the most likely tremor-generating process at
+Askja, while keeping in mind that improved observations in the future would
+be useful to offer more clear evidence of the tremor-generating process. We
+furthermore note that the Askja tremor is a rich and intricate seismic
+signal; here, we focus on its most robust and clear aspects.</p><?xmltex \hack{\newpage}?>
+<sec id="Ch1.S4.SS1">
+  <title>Tremor location</title>
+      <p id="d1e1028">For a rough estimation of the tremor location and to check whether it is not
+only temporally but also spatially correlated with the landslide, we
+computed the ratios of the mean envelope amplitudes of 1 min of the
+tremor to 3 min of background seismic noise for all stations of the
+network. First, we removed the instrument response, the mean, and the trend,
+and band-pass filtered the signals between 1 and 45 Hz. Then, we computed the
+envelopes for 1 min of the tremor starting at 23:17:00 UTC, 21 July 2014,
+and for 3 min of background seismic noise starting at 00:10:00 UTC of
+the same day for the east components. Next, we calculated the mean amplitudes
+of the envelopes for these two time windows and determined their ratio. The
+mean envelope amplitude ratio is highest, up to 3.2, at the stations closest
+to the source area of the landslide and decays to values of 1 for stations
+tens of kilometres away from Lake Öskjuvatn (Fig. S4). However, we note
+that the decrease of the mean envelope amplitude ratio has an elliptical
+outline with a long axis oriented NE–SW, parallel to the orientation of the
+general structural trends at the Askja volcanic system (Fig. 1), which are
+probably responsible for seismic wave attenuation effects.</p>
+      <p id="d1e1031">To further refine the location of the tremor, we used the procedure of
+Burtin et al. (2013) to locate the tremor signal on a digital elevation model (DEM) grid. This
+statistical approach assigns a probability of being the source of the signal
+to each grid point based on cross correlation of the signal envelopes of
+different stations. The resulting probability density function is normalised
+to its maximum value, giving this grid point a likelihood of 1 to be the
+source location of the signal (Burtin et al., 2014). We worked with the data
+of 21 stations for the location that showed the gliding spectral lines in
+the spectrograms, and with a DEM with a grid spacing of 100 <inline-formula><mml:math id="M68" display="inline"><mml:mo>×</mml:mo></mml:math></inline-formula> 100 m.
+We used a frequency range of 1.5–3 Hz, as this frequency band shows the
+highest tremor energy, and time windows of 1 min starting at 22:54:00 UTC.
+With this location method, we found that the tremor signal was most
+likely located at the south-eastern shore of the caldera lake at Askja,
+where fumaroles are the surface expression of the hydrothermal system (Fig. 7a). This is the northern corner of the
+landslide source area. Over 30 min before the landslide, the likely tremor location only changed by a
+few 100 m. We tested the influence of the seismic wave velocity on the
+results by varying this parameter in the location routine between 500 and
+3700 m s<inline-formula><mml:math id="M69" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula>. The best-fit locations for the different wave velocities
+differ up to 500 m from each other but remain at the south-eastern
+lakeshore.</p>
+</sec>
+<sec id="Ch1.S4.SS2">
+  <title>Numerical simulations of seismic tremor</title>
+<sec id="Ch1.S4.SS2.SSS1">
+  <title>Method</title>
+      <p id="d1e1064">To investigate further the seismic tremor observed before the Askja
+landslide, we conduct numerical simulations of stick-slip motion and elastic
+wave propagation. Our approach<?pagebreak page475?> calculates the force balance between elastic
+stresses, including elastic wave propagation, and an interface strength set
+by rate-and-state friction. More details about these simulations are given
+by Lipovsky and Dunham (2016).</p>
+
+      <?xmltex \floatpos{t}?><fig id="Ch1.F7"><caption><p id="d1e1069"><bold>(a)</bold> Example of the tremor localisation results using the
+tremor record of the stations shown in the inset between 23:00:00 and
+23:01:00 UTC, filtered between 1.5 and 3 Hz and a seismic wave velocity of
+2300 m s<inline-formula><mml:math id="M70" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula>. The open red square is the best-fit location and the
+ellipse around it is the likelihood quantile from 0.997 (red) to 1
+(translucent white). The white line is the outline of the landslide source
+area. The inset shows the locations of the seismic stations used in the
+localisation and the location of the landslide source area (white star).
+<bold>(b)</bold> Hypothetical cross section of the landslide showing the
+potential stick-slip tremor planes.</p></caption>
+            <?xmltex \igopts{width=241.848425pt}?><graphic xlink:href="https://esurf.copernicus.org/articles/6/467/2018/esurf-6-467-2018-f07.png"/>
+
+          </fig>
+
+<?xmltex \floatpos{t}?><table-wrap id="Ch1.T1" specific-use="star"><caption><p id="d1e1098">Parameters of the stick-slip simulations.</p></caption><oasis:table frame="topbot"><oasis:tgroup cols="3">
+     <oasis:colspec colnum="1" colname="col1" align="left"/>
+     <oasis:colspec colnum="2" colname="col2" align="left"/>
+     <oasis:colspec colnum="3" colname="col3" align="left"/>
+     <oasis:thead>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Parameter</oasis:entry>
+         <oasis:entry colname="col2">Symbol</oasis:entry>
+         <oasis:entry colname="col3">Value</oasis:entry>
+       </oasis:row>
+     </oasis:thead>
+     <oasis:tbody>
+       <oasis:row>
+         <oasis:entry colname="col1">Epicentral distance</oasis:entry>
+         <oasis:entry colname="col2"><inline-formula><mml:math id="M71" display="inline"><mml:mi>L</mml:mi></mml:math></inline-formula></oasis:entry>
+         <oasis:entry colname="col3">3.5 km</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Quality factor</oasis:entry>
+         <oasis:entry colname="col2"><inline-formula><mml:math id="M72" display="inline"><mml:mi>Q</mml:mi></mml:math></inline-formula></oasis:entry>
+         <oasis:entry colname="col3">25</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Shear wave speed in rock</oasis:entry>
+         <oasis:entry colname="col2"><inline-formula><mml:math id="M73" display="inline"><mml:mrow><mml:msub><mml:mi>c</mml:mi><mml:mi mathvariant="normal">s</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula></oasis:entry>
+         <oasis:entry colname="col3">1878 m s<inline-formula><mml:math id="M74" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula></oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Density of rock</oasis:entry>
+         <oasis:entry colname="col2"><inline-formula><mml:math id="M75" display="inline"><mml:mi mathvariant="italic">ρ</mml:mi></mml:math></inline-formula></oasis:entry>
+         <oasis:entry colname="col3">2000 kg m<inline-formula><mml:math id="M76" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">3</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula></oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Thickness of landslide</oasis:entry>
+         <oasis:entry colname="col2">H</oasis:entry>
+         <oasis:entry colname="col3">30 m</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Frictional state evolution distance</oasis:entry>
+         <oasis:entry colname="col2"><inline-formula><mml:math id="M77" display="inline"><mml:mrow><mml:msub><mml:mi>d</mml:mi><mml:mi mathvariant="normal">c</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula></oasis:entry>
+         <oasis:entry colname="col3">15 <inline-formula><mml:math id="M78" display="inline"><mml:mo>×</mml:mo></mml:math></inline-formula> 10<inline-formula><mml:math id="M79" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">6</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula> m</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Frictional direct effect parameter</oasis:entry>
+         <oasis:entry colname="col2"><inline-formula><mml:math id="M80" display="inline"><mml:mi>a</mml:mi></mml:math></inline-formula></oasis:entry>
+         <oasis:entry colname="col3">0.03</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Frictional ageing effect parameter</oasis:entry>
+         <oasis:entry colname="col2"><inline-formula><mml:math id="M81" display="inline"><mml:mi>b</mml:mi></mml:math></inline-formula></oasis:entry>
+         <oasis:entry colname="col3">0.04</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Static coefficient of friction</oasis:entry>
+         <oasis:entry colname="col2"><inline-formula><mml:math id="M82" display="inline"><mml:mrow><mml:msub><mml:mi mathvariant="italic">μ</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub></mml:mrow></mml:math></inline-formula></oasis:entry>
+         <oasis:entry colname="col3">0.7</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Initial loading velocity</oasis:entry>
+         <oasis:entry colname="col2"><inline-formula><mml:math id="M83" display="inline"><mml:mrow><mml:msub><mml:mi>v</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub></mml:mrow></mml:math></inline-formula></oasis:entry>
+         <oasis:entry colname="col3">0.6 mm s<inline-formula><mml:math id="M84" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula></oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Repeating earthquake patch radius</oasis:entry>
+         <oasis:entry colname="col2"><inline-formula><mml:math id="M85" display="inline"><mml:mi>R</mml:mi></mml:math></inline-formula></oasis:entry>
+         <oasis:entry colname="col3">30 m</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Creep acceleration on the accelerating</oasis:entry>
+         <oasis:entry colname="col2"><inline-formula><mml:math id="M86" display="inline"><mml:mover accent="true"><mml:mi>v</mml:mi><mml:mo mathvariant="normal">˙</mml:mo></mml:mover></mml:math></inline-formula></oasis:entry>
+         <oasis:entry colname="col3">0.01 (mm s<inline-formula><mml:math id="M87" display="inline"><mml:mrow><mml:msup><mml:mi/><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msup><mml:mo>)</mml:mo></mml:mrow></mml:math></inline-formula> min<inline-formula><mml:math id="M88" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula></oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">patch (only on up-gliding patch)</oasis:entry>
+         <oasis:entry colname="col2"/>
+         <oasis:entry colname="col3"/>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Rate of patch size change on the decelerating</oasis:entry>
+         <oasis:entry colname="col2"><inline-formula><mml:math id="M89" display="inline"><mml:mover accent="true"><mml:mi>R</mml:mi><mml:mo mathvariant="normal">˙</mml:mo></mml:mover></mml:math></inline-formula></oasis:entry>
+         <oasis:entry colname="col3">10 mm s<inline-formula><mml:math id="M90" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula></oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">patch (only on down-gliding patch)</oasis:entry>
+         <oasis:entry colname="col2"/>
+         <oasis:entry colname="col3"/>
+       </oasis:row>
+     </oasis:tbody>
+   </oasis:tgroup></oasis:table></table-wrap>
+
+      <p id="d1e1480">The aseismic–seismic transition is a central feature of sliding under
+rate-and-state friction (Rice et al., 2001). This transition is commonly
+expressed as a critical patch size <inline-formula><mml:math id="M91" display="inline"><mml:mrow><mml:msub><mml:mi>R</mml:mi><mml:mi mathvariant="normal">c</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula>, defined such that – with
+all other parameters held constant – a given interface will experience
+stick-slip oscillations if <inline-formula><mml:math id="M92" display="inline"><mml:mi>R</mml:mi></mml:math></inline-formula> &gt; <inline-formula><mml:math id="M93" display="inline"><mml:mrow><mml:msub><mml:mi>R</mml:mi><mml:mi mathvariant="normal">c</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula>, with
+<inline-formula><mml:math id="M94" display="inline"><mml:mrow><mml:msub><mml:mi>R</mml:mi><mml:mi mathvariant="normal">c</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula> defined as
+              <disp-formula id="Ch1.E1" content-type="numbered"><mml:math id="M95" display="block"><mml:mrow><mml:msub><mml:mi>R</mml:mi><mml:mi mathvariant="normal">c</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mstyle displaystyle="true"><mml:mfrac style="display"><mml:mrow><mml:msub><mml:mi>d</mml:mi><mml:mi mathvariant="normal">c</mml:mi></mml:msub><mml:mi>G</mml:mi></mml:mrow><mml:mrow><mml:mfenced open="(" close=")"><mml:mrow><mml:mi>b</mml:mi><mml:mo>-</mml:mo><mml:mi>a</mml:mi></mml:mrow></mml:mfenced><mml:mi mathvariant="italic">σ</mml:mi><mml:mo>-</mml:mo><mml:mi mathvariant="italic">η</mml:mi><mml:msub><mml:mi>v</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub></mml:mrow></mml:mfrac></mml:mstyle><mml:mo>.</mml:mo></mml:mrow></mml:math></disp-formula>
+            In this expression, <inline-formula><mml:math id="M96" display="inline"><mml:mi mathvariant="italic">σ</mml:mi></mml:math></inline-formula> is the effective normal stress, <inline-formula><mml:math id="M97" display="inline"><mml:mi>G</mml:mi></mml:math></inline-formula> is the shear
+modulus, <inline-formula><mml:math id="M98" display="inline"><mml:mrow><mml:msub><mml:mi>d</mml:mi><mml:mi mathvariant="normal">c</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula> is the frictional state evolution distance, <inline-formula><mml:math id="M99" display="inline"><mml:mi>a</mml:mi></mml:math></inline-formula> is the
+magnitude of transient peak strengthening during step loading, <inline-formula><mml:math id="M100" display="inline"><mml:mi>b</mml:mi></mml:math></inline-formula> is the
+magnitude of strength change between peak strength and steady state, <inline-formula><mml:math id="M101" display="inline"><mml:mrow><mml:mi mathvariant="italic">η</mml:mi><mml:mo>=</mml:mo><mml:mi mathvariant="italic">ρ</mml:mi><mml:msub><mml:mi>c</mml:mi><mml:mi mathvariant="normal">s</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula> is the shear wave impedance with density <inline-formula><mml:math id="M102" display="inline"><mml:mi mathvariant="italic">ρ</mml:mi></mml:math></inline-formula> and shear wave
+speed <inline-formula><mml:math id="M103" display="inline"><mml:mrow><mml:msub><mml:mi>c</mml:mi><mml:mi mathvariant="normal">s</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula>, and <inline-formula><mml:math id="M104" display="inline"><mml:mrow><mml:msub><mml:mi>v</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub></mml:mrow></mml:math></inline-formula> is the nominal loading velocity. The parameter
+(<inline-formula><mml:math id="M105" display="inline"><mml:mrow><mml:mi>b</mml:mi><mml:mo>-</mml:mo><mml:mi>a</mml:mi></mml:mrow></mml:math></inline-formula>) must be positive for stick-slip cycles to occur; an interface with this
+property is called rate weakening. Frictional parameters are taken from
+laboratory experiments (Marone, 1998) and we use typical values for crustal
+rocks (Table 1). The interface normal stress must be prescribed, and for
+this value we use an overburden stress calculated from a landslide thickness
+of 30 m, consistent with previous work (Gylfadóttir et al., 2017).</p>
+      <p id="d1e1667">Under rate-and-state friction, a change in the repeat time <inline-formula><mml:math id="M106" display="inline"><mml:mi>T</mml:mi></mml:math></inline-formula> of the
+stick-slip events may occur for a number of reasons. Near the transition
+between steady and stick-slip sliding, <inline-formula><mml:math id="M107" display="inline"><mml:mi>T</mml:mi></mml:math></inline-formula> scales approximately as
+              <disp-formula id="Ch1.E2" content-type="numbered"><mml:math id="M108" display="block"><mml:mrow><mml:mstyle displaystyle="true"><mml:mfrac style="display"><mml:mi>T</mml:mi><mml:mrow><mml:msub><mml:mi>T</mml:mi><mml:mi mathvariant="normal">c</mml:mi></mml:msub></mml:mrow></mml:mfrac></mml:mstyle><mml:mo>=</mml:mo><mml:mstyle displaystyle="true"><mml:mfrac style="display"><mml:mi>R</mml:mi><mml:mrow><mml:msub><mml:mi>R</mml:mi><mml:mi mathvariant="normal">c</mml:mi></mml:msub></mml:mrow></mml:mfrac></mml:mstyle><mml:mo>,</mml:mo></mml:mrow></mml:math></disp-formula>
+            where <inline-formula><mml:math id="M109" display="inline"><mml:mrow><mml:msub><mml:mi>T</mml:mi><mml:mi mathvariant="normal">c</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula> is the lowest achievable repeat time (Lipovsky and Dunham,
+2017):
+              <disp-formula id="Ch1.E3" content-type="numbered"><mml:math id="M110" display="block"><mml:mrow><mml:msub><mml:mi>T</mml:mi><mml:mi mathvariant="normal">c</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:mn mathvariant="normal">2</mml:mn><mml:mi mathvariant="italic">π</mml:mi><mml:msqrt><mml:mstyle displaystyle="true"><mml:mfrac style="display"><mml:mi>a</mml:mi><mml:mrow><mml:mi mathvariant="normal">|</mml:mi><mml:mi>a</mml:mi><mml:mo>-</mml:mo><mml:mi>b</mml:mi><mml:mi mathvariant="normal">|</mml:mi></mml:mrow></mml:mfrac></mml:mstyle></mml:msqrt><mml:mstyle displaystyle="true"><mml:mfrac style="display"><mml:mrow><mml:msub><mml:mi>d</mml:mi><mml:mi mathvariant="normal">c</mml:mi></mml:msub></mml:mrow><mml:mrow><mml:msub><mml:mi>v</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub></mml:mrow></mml:mfrac></mml:mstyle><mml:mo>.</mml:mo></mml:mrow></mml:math></disp-formula></p>
+</sec>
+<sec id="Ch1.S4.SS2.SSS2">
+  <title>Results of the tremor simulations</title>
+      <p id="d1e1779">By matching synthetic and observed seismograms, we are able to explain two
+prominent observations (Fig. 8). First, we find that the gliding of the
+spectral tremor lines can be produced by stick-slip earthquakes occurring
+with changing frequency. Second, we reproduce the aseismic period
+immediately before the main landslide failure. As both up- and down-gliding
+spectral lines occur simultaneously in the Askja dataset, we infer that more
+than one source was active at the same time, each producing tremor. Hence,
+we use two simulations. We emphasise, however, that insofar as the resulting
+tremor simulations qualitatively resemble the observed tremor, the
+parameterisation that we have chosen is highly non-unique. Other
+parameterisations are possible, and we focus here on the following
+parameterisations simply for the purpose of demonstrating that repeated
+stick-slip motion of a region of the failure plane was a likely
+tremor-generating process before the Askja landslide.</p>
+
+      <?xmltex \floatpos{t}?><fig id="Ch1.F8"><caption><p id="d1e1784">Comparison between observed and simulated seismic tremor showing,
+<bold>(a)</bold> a data spectrogram from the MOFO station, and <bold>(b)</bold> an
+annotated data spectrogram showing three up-gliding spectral bands (labelled
+1, 2, 3) and two down-gliding spectral bands (labelled 4 and 5). The time of
+large-scale landslide motion is visible in the data at about 14 min time.
+Panels <bold>(c)</bold> and <bold>(d)</bold> show numerical simulations with
+increasing loading velocity and increasing patch size, respectively.
+Simulation parameters are given in Table 1. The spectrograms in
+panels <bold>(a)</bold>, <bold>(c)</bold>, and <bold>(d)</bold> are created using the
+same colour scale and are therefore comparable. The start of the <inline-formula><mml:math id="M111" display="inline"><mml:mi>x</mml:mi></mml:math></inline-formula> axis is
+at 23:10:00 UTC.</p></caption>
+            <?xmltex \igopts{width=241.848425pt}?><graphic xlink:href="https://esurf.copernicus.org/articles/6/467/2018/esurf-6-467-2018-f08.pdf"/>
+
+          </fig>
+
+      <p id="d1e1822">In the first simulation, by increasing the initial loading velocity
+<inline-formula><mml:math id="M112" display="inline"><mml:mrow><mml:msub><mml:mi>v</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub><mml:mo>=</mml:mo><mml:mn mathvariant="normal">0.6</mml:mn></mml:mrow></mml:math></inline-formula> mm s<inline-formula><mml:math id="M113" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula> by 0.01 (mm s<inline-formula><mml:math id="M114" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula>) min<inline-formula><mml:math id="M115" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula> (see Table 1 for
+the simulation parameters), the repeat time <inline-formula><mml:math id="M116" display="inline"><mml:mi>T</mml:mi></mml:math></inline-formula> between the stick-slip events
+decreases and the synthetic spectrogram shows up-gliding spectral lines with
+a fundamental frequency of 2.5 Hz and overtones of 5 and 7.5 Hz (Fig. 8c). The spectral lines contain less energy with time and fade at 13 min.</p>
+      <p id="d1e1883">In the second simulation, the repeat time <inline-formula><mml:math id="M117" display="inline"><mml:mi>T</mml:mi></mml:math></inline-formula> between the stick-slip events
+increases with time and downward spectral gliding can be seen in the
+synthetic spectrograms. The increase in <inline-formula><mml:math id="M118" display="inline"><mml:mi>T</mml:mi></mml:math></inline-formula> can be achieved by a deceleration
+in loading<?pagebreak page476?> velocity or by an expanding stick-slip region. We elaborate on
+these possibilities in the discussion. Here, we report that simulations with
+a patch radius of <inline-formula><mml:math id="M119" display="inline"><mml:mrow><mml:mi>R</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">30</mml:mn></mml:mrow></mml:math></inline-formula> m that grows by 10 mm s<inline-formula><mml:math id="M120" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula> show spectral lines
+starting at frequencies of 4, 8, and 12 Hz and gliding down to
+frequencies of 3, 6 and 9 Hz before abruptly disappearing at 12 min (Fig. 8d).</p>
+      <p id="d1e1925">Although the stick-slip simulations can reproduce the fundamental frequency
+and some overtones of the observed tremor, we acknowledge that some overtones
+of the simulations are not clearly visible in the data. The overtone
+labelled with “2” (Fig. 8b and c) is less strongly observed than
+others, for example. We believe that the simplest explanation for this is
+that our basic model of wave propagation fails to account for certain
+propagation phenomena that may diminish wave amplitudes. Wave propagation in
+the complicated, 3-D, layered, attenuating media surrounding the Askja
+volcanic complex is far richer than we have attempted to capture.</p>
+      <p id="d1e1928">We calculated the stress drop <inline-formula><mml:math id="M121" display="inline"><mml:mrow><mml:mi mathvariant="normal">Δ</mml:mi><mml:mi mathvariant="italic">τ</mml:mi></mml:mrow></mml:math></inline-formula> in each
+small, repeating stick-slip event as
+              <disp-formula id="Ch1.E4" content-type="numbered"><mml:math id="M122" display="block"><mml:mrow><mml:mi mathvariant="normal">Δ</mml:mi><mml:mi mathvariant="italic">τ</mml:mi><mml:mo>=</mml:mo><mml:mi mathvariant="italic">α</mml:mi><mml:mi>G</mml:mi><mml:mstyle displaystyle="true"><mml:mfrac style="display"><mml:mi>u</mml:mi><mml:mi>R</mml:mi></mml:mfrac></mml:mstyle><mml:mo>,</mml:mo></mml:mrow></mml:math></disp-formula>
+            where <inline-formula><mml:math id="M123" display="inline"><mml:mi mathvariant="italic">α</mml:mi></mml:math></inline-formula> is a geometrical constant usually taken to be <inline-formula><mml:math id="M124" display="inline"><mml:mrow><mml:mn mathvariant="normal">7</mml:mn><mml:mo>/</mml:mo><mml:mn mathvariant="normal">16</mml:mn><mml:mi mathvariant="italic">π</mml:mi><mml:mo>∼</mml:mo><mml:mn mathvariant="normal">1.37</mml:mn></mml:mrow></mml:math></inline-formula>, and <inline-formula><mml:math id="M125" display="inline"><mml:mi>u</mml:mi></mml:math></inline-formula> is the slip in each event. With the parameters of our
+best-fit model, <inline-formula><mml:math id="M126" display="inline"><mml:mi>u</mml:mi></mml:math></inline-formula> <inline-formula><mml:math id="M127" display="inline"><mml:mo>=</mml:mo></mml:math></inline-formula> 0.24 mm, <inline-formula><mml:math id="M128" display="inline"><mml:mi>R</mml:mi></mml:math></inline-formula> <inline-formula><mml:math id="M129" display="inline"><mml:mo>=</mml:mo></mml:math></inline-formula> 30 m, and <inline-formula><mml:math id="M130" display="inline"><mml:mi>G</mml:mi></mml:math></inline-formula> <inline-formula><mml:math id="M131" display="inline"><mml:mo>=</mml:mo></mml:math></inline-formula> 7 GPa, we calculated a stress
+drop of 77 kPa. The scalar moment is <inline-formula><mml:math id="M132" display="inline"><mml:mrow><mml:msub><mml:mi>M</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub></mml:mrow></mml:math></inline-formula> <inline-formula><mml:math id="M133" display="inline"><mml:mo>=</mml:mo></mml:math></inline-formula> 4.75 <inline-formula><mml:math id="M134" display="inline"><mml:mo>×</mml:mo></mml:math></inline-formula> 10<inline-formula><mml:math id="M135" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">9</mml:mn></mml:msup></mml:math></inline-formula> Nm,
+which is equivalent to a moment magnitude <inline-formula><mml:math id="M136" display="inline"><mml:mrow><mml:msub><mml:mi>M</mml:mi><mml:mi mathvariant="normal">w</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula> <inline-formula><mml:math id="M137" display="inline"><mml:mo>=</mml:mo></mml:math></inline-formula> 0.42.</p>
+</sec>
+</sec>
+</sec>
+<sec id="Ch1.S5">
+  <title>Afterslides</title>
+      <p id="d1e2102">During the 8 h after the main landslide, several other high-amplitude
+short-period signals of much lower amplitude were recorded (for example, at
+23:41:05 UTC, Fig. 4d). Their waveforms are spindle-shaped with dominant
+frequencies of about 1–2 Hz. The signals are only visible at frequencies
+&gt; 1 Hz and a force history inversion is thus not possible as
+this method requires the record of long-period seismic signals resulting from
+the cycling unloading and reloading of the solid Earth by a moving mass
+(Fukao, 1995; Takei and Kumazawa, 1994). The high-amplitude short-period
+events lasted between a few seconds and a minute and have characteristics
+such as emergent onsets, slowly decaying tails, and triangularly shaped
+spectrograms that are indicative of slope failures (Norris, 1994; Dammeier et
+al., 2011; Burtin et al., 2013; Chen et al., 2013). We attribute these
+signals to smaller slope failures that occurred after the main landslide.
+This interpretation is in line with the concept that high-frequency signals
+of mass movements mainly result from block impacts and frictional processes
+within a slide or flow (cf. Dammeier
+et al., 2011; Allstadt, 2013). Following the nomenclature for earthquakes
+with the main shock and subsequent, smaller aftershocks happening in the same
+area, we here introduce the term “afterslides” for smaller mass movements
+occurring after a large landslide on the same landslide scar and in its close
+vicinity.</p>
+      <p id="d1e2105">In the first and second hours after the landslide, 11 and 7
+afterslide events were recorded, respectively (Fig. 9a). Afterwards, the
+amplitude, energy, and frequency of the afterslides decreased gradually. We
+observed two to four events per hour for the third to the eighth hours after the
+main landslide. After 8 h, no more afterslides were detected. To
+locate the seismic signals of the afterslides on a 20 <inline-formula><mml:math id="M138" display="inline"><mml:mo>×</mml:mo></mml:math></inline-formula> 20 m DEM
+grid, we used the same location method of Burtin et al. (2013) that we
+applied for the tremor localisation. In the first hours after the main
+landslide, the afterslides originated in the source area of the main slide
+and along the caldera ring fault at the south-eastern side of Lake
+Öskjuvatn (Fig. 9b). Later afterslides tended to cluster at the top part
+of the destabilised walls from which the main landslide detached.</p>
+</sec>
+<?pagebreak page477?><sec id="Ch1.S6">
+  <title>Discussion</title>
+<sec id="Ch1.S6.SS1">
+  <title>Dynamics of the landslide sequence from high- and low-frequency
+signals</title>
+      <p id="d1e2126">Combining seismic data analysis and field observations reported in the
+literature and made during a field campaign in August 2015, we are able to
+summarise the factors that led to the landslide and describe the precursory
+tremor, the landslide, and the subsequent small slope failures in detail.</p>
+
+      <?xmltex \floatpos{t}?><fig id="Ch1.F9"><caption><p id="d1e2131"><bold>(a)</bold> Number of small slope failures after the Askja
+landslide per hour. <bold>(b)</bold> Location of small slope failures after the
+Askja landslide, colour-coded by hour of occurrence as in panel <bold>(a)</bold>.
+Only the best-fit locations are shown; the ellipses of the likelihood
+quantile are omitted for clarity (cf. Fig. 7a). The white area at the caldera
+ring fault is the landslide source area.</p></caption>
+          <?xmltex \igopts{width=227.622047pt}?><graphic xlink:href="https://esurf.copernicus.org/articles/6/467/2018/esurf-6-467-2018-f09.png"/>
+
+        </fig>
+
+      <p id="d1e2148">Crack opening started years before the landslide at the head wall of the
+slide as documented in pictures taken from 2011 onward (Fig. 3; Helgason et al.,
+2014). These cracks helped in dissociating the landslide from the
+surrounding ground mass. The warm weather with a number of precipitation
+events in July 2014 further promoted crack opening by bringing moisture to
+the Askja caldera and increasing the snowmelt, both giving rise to higher
+pore pressure. On 21 July 2014, at about 22:55 UTC, that is half an hour
+before the main catastrophic landslide failure, a complex harmonic tremor
+signal with a fundamental frequency of 2.3 Hz and several overtones emerged
+from the background noise in the seismic data, which we interpret as the
+start of the detectable slow downslope movement of the landslide mass. The
+spectral lines of the tremor signal changed their frequency content during
+an 8 min period starting at 23:14 UTC. Synchronous up- and down-gliding
+of the frequency bands could indicate that several sliding planes at the
+base of the landslide experienced stick-slip motion at the same time. As the
+waveforms of the stick-slip earthquakes have to be similar for their merged
+signal to be visible as approximately harmonic tremor with overtones, we
+envisage that this happens because the moving patches gradually slide over
+asperities at their base.</p>
+      <?pagebreak page478?><p id="d1e2151"><?xmltex \hack{\newpage}?>Through acceleration and growth of the sliding planes, the stick-slip sliding
+transitioned into an aseismic, stable sliding period 2 min before the bulk
+landslide mass failed catastrophically. Based on combined inspection of the
+high- and low-frequency signals generated by the Askja landslide, we
+distinguish three phases of landslide motion, initiation, propagation, and
+termination as proposed by Hibert et al. (2014) and Chao et al. (2016). The
+initiation phase of the landslide started immediately before high-amplitude
+surface waves arrived at the nearest station at 23:24:05 UTC. The landslide
+force history inversion shows a sharp increase in the accelerating force
+during the first 30 s of the landslide signal (Fig. 5a), generated by the
+onset of motion of the landslide's bulk mass. The high-frequency signals show
+an emergent onset during these first 30 s of fast landslide motion
+(Fig. 5d). These signals reach maximum amplitudes about 45 s after the
+signal onset, which coincides with lower acceleration and the transition to
+decelerated motion in the force history inversion of the propagation phase.
+We infer from this lag time in the high-frequency signal that the main slope
+failure along the south-eastern caldera wall was a single, large event,
+starting with aseismic sliding of a relatively coherent mass that gradually
+fragmented during down-slope acceleration (cf. Allstadt, 2013; Hibert et al.,
+2015). In this interpretation, the high-frequency signals are caused by the
+momentum exchanges of block impacts, and frictional processes within the
+moving slide and along its boundaries, especially when the moving mass
+traverses small-scale topographic features on the sliding base (cf. Dammeier
+et al., 2011; Allstadt, 2013). These multiple sources, along with the
+diversity of propagating waves, were responsible for the multiple amplitude
+pulses and the lack of a clear maximum of the seismic amplitudes in the
+higher frequencies (Deparis et al., 2008; Dammeier et al., 2011). The
+deceleration phase of the landslide lasted for about 70 s (Fig. 5b), a
+period during which the high-frequency amplitudes also gradually decline (Fig
+5d). This termination phase of the landslide was associated with material
+deposition at the shore but also into Lake Öskjuvatn NW of the landslide
+source area.</p>
+      <p id="d1e2156">From the landslide force history inversion, we calculate that a total mass
+of 30–80 <inline-formula><mml:math id="M139" display="inline"><mml:mo>×</mml:mo></mml:math></inline-formula> 10<inline-formula><mml:math id="M140" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">6</mml:mn></mml:msup></mml:math></inline-formula> m<inline-formula><mml:math id="M141" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula> of hyaloclastite material was
+involved in the slide and of which 10 <inline-formula><mml:math id="M142" display="inline"><mml:mo>×</mml:mo></mml:math></inline-formula> 10<inline-formula><mml:math id="M143" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">6</mml:mn></mml:msup></mml:math></inline-formula> m<inline-formula><mml:math id="M144" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula> entered
+Lake Öskjuvatn, creating a tsunami (Gylfadóttir et al.,
+2017). As a result of the removal of overlying mass, the hydrothermal system
+below the landslide source area was depressurised and a cloud of steam and
+landslide dust rose above the caldera (Helgason et al., 2014).</p>
+      <p id="d1e2210">During the 8 h after the main landslide, subsequent small slope failures
+occurred at the destabilised caldera walls. The rolling, jumping, colliding,
+and impacting blocks created seismic signals with emergent onsets, and
+spindle-shaped envelopes (Dammeier et al., 2011; Allstadt, 2013; Hibert et
+al., 2015; Moretti et al., 2015), and with higher seismic amplitudes than the
+background level at the stations closest to the Askja caldera. Such a
+chain reaction with subsequent slope collapses is not uncommon after
+landslides (Iverson et al., 2015). Similar to earthquakes and their
+aftershocks that occur less frequently and with smaller amplitudes with time
+after the main shock (Omori, 1894; Gutenberg and Richter, 1956), we observe
+a decay in the size and frequency of the small slope failures following the
+main landslide that we call afterslides.</p>
+</sec>
+<sec id="Ch1.S6.SS2">
+  <title>Source process of the seismic tremor</title>
+      <p id="d1e2219">Seismic tremor has been observed in a variety of settings including tectonic
+subduction zones, volcanoes, subsurface reservoirs, glaciers, ice sheets, and
+landslides. Reflecting these diverse settings, an equally diverse collection
+of physical processes may explain the source process responsible for creating
+seismic tremor. Possible sources of seismic tremor include
+(i) fluid-flow-induced oscillations of conduit or fracture walls (Julian,
+1994; Hellweg, 2000; Rust et al., 2008; Matoza et al., 2010; Corona-Romero et
+al., 2012; Dunham and Ogden, 2012; Unglert and Jellinek, 2015);
+(ii) resonance of fluid-filled cracks or pipes with open or closed ends
+(Chouet, 1985, 1986, 1988; Benoit and McNutt, 1997; Jousset et al., 2003;
+Neuberg, 2000; Jellinek and Bercovici, 2011; Röösli et al., 2014;
+Sturton and Neuberg, 2006; Lipovsky and Dunham, 2015); (iii) bubble growth or
+collapse due to hydrothermal boiling of groundwater (Leet, 1988; Kedar et
+al., 1998; Cannata et al., 2010); and (iv) continuously repeating processes
+such as stick-slip motion (Neuberg, 2000; Powell and Neuberg, 2003; Dmitrieva
+et al., 2013; Hotovec et al., 2013; Lipovsky and Dunham, 2016; see also
+reviews by McNutt, 1992 and Konstantinou and Schlindwein, 2003). We note that
+the first three of these processes are hydraulic in origin.</p>
+      <p id="d1e2222">Although our focus is on the Askja landslide, it is worth considering
+whether volcanic activity could have been responsible for the precursory
+seismic tremor. Mechanical analyses of hydraulic sources for seismic tremor
+showed that fluid-flow instabilities producing wall oscillations (Julian,
+1994) require flow speeds on the order of the speed of sound (Dunham and
+Ogden, 2012), thus suggesting that the applicability of these physics is
+limited to situations such as high-velocity volcanic jets. As the Askja
+landslide was not associated with any volcanic activity that would support
+this mechanical model of tremor generation through hydraulic processes, we
+conclude that a hydraulic source is unlikely to explain the phenomena
+observed at Askja.</p>
+      <p id="d1e2225">Furthermore, Lipovsky and Dunham (2015) analysed seismic tremor due to
+hydraulic resonance and found that the resonant frequencies of a hydraulic
+fracture are expected to be unevenly spaced following <inline-formula><mml:math id="M145" display="inline"><mml:mrow><mml:msub><mml:mi>f</mml:mi><mml:mi>n</mml:mi></mml:msub><mml:mo>/</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mn mathvariant="normal">1</mml:mn></mml:msub><mml:mo>=</mml:mo><mml:msup><mml:mi>n</mml:mi><mml:mrow><mml:mn mathvariant="normal">3</mml:mn><mml:mo>/</mml:mo><mml:mn mathvariant="normal">2</mml:mn></mml:mrow></mml:msup></mml:mrow></mml:math></inline-formula>. Complementary, Lipovsky and Dunham (2016) showed that a simple
+application of the Fourier transform to a repeating sequence of slip pulses
+results in a frequency pattern of <inline-formula><mml:math id="M146" display="inline"><mml:mrow><mml:msub><mml:mi>f</mml:mi><mml:mi>n</mml:mi></mml:msub><mml:mo>/</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mn mathvariant="normal">1</mml:mn></mml:msub><mml:mo>=</mml:mo><mml:mi>n</mml:mi></mml:mrow></mml:math></inline-formula>. For a fundamental
+tone of <inline-formula><mml:math id="M147" display="inline"><mml:mrow><mml:msub><mml:mi>f</mml:mi><mml:mn mathvariant="normal">1</mml:mn></mml:msub><mml:mo>=</mml:mo><mml:mn mathvariant="normal">2.3</mml:mn></mml:mrow></mml:math></inline-formula> Hz as observed for the Askja landslide tremor, we
+would expect its first harmonic at 6.5 Hz<?pagebreak page479?> for a resonating fracture or at
+4.6 Hz for a stick-slip source. Observations of the Askja landslide tremor
+show that the spectral peaks are relatively evenly spaced with <inline-formula><mml:math id="M148" display="inline"><mml:mrow><mml:msub><mml:mi>f</mml:mi><mml:mn mathvariant="normal">1</mml:mn></mml:msub><mml:mo>=</mml:mo><mml:mn mathvariant="normal">2.3</mml:mn></mml:mrow></mml:math></inline-formula> Hz, <inline-formula><mml:math id="M149" display="inline"><mml:mrow><mml:msub><mml:mi>f</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msub><mml:mo>=</mml:mo><mml:mn mathvariant="normal">4.3</mml:mn></mml:mrow></mml:math></inline-formula> Hz, and <inline-formula><mml:math id="M150" display="inline"><mml:mrow><mml:msub><mml:mi>f</mml:mi><mml:mn mathvariant="normal">3</mml:mn></mml:msub><mml:mo>=</mml:mo><mml:mn mathvariant="normal">7.1</mml:mn></mml:mrow></mml:math></inline-formula> Hz, a pattern that is in
+closer agreement with the harmonic relationship <inline-formula><mml:math id="M151" display="inline"><mml:mrow><mml:msub><mml:mi>f</mml:mi><mml:mi>n</mml:mi></mml:msub><mml:mo>/</mml:mo><mml:msub><mml:mi>f</mml:mi><mml:mn mathvariant="normal">1</mml:mn></mml:msub><mml:mo>=</mml:mo><mml:mi>n</mml:mi></mml:mrow></mml:math></inline-formula>. This
+provides observational evidence for a stick-slip mechanism and against a
+hydraulic source of the tremor before the Askja landslide.</p>
+      <p id="d1e2363">Several additional lines of reasoning support the interpretation of the
+Askja landslide tremor as being due to repeating stick-slip motion along the
+landslide failure plane. Stick-slip motion has been observed as precursors
+to other landslides (Yamada et al., 2016; Poli, 2017), although in these
+cases individual stick-slip events could easily be distinguished. In the
+Askja event, individual events are roughly discernible in seismograms, the effects of
+attenuation and superposition of multiple sources make time domain analysis
+difficult (Fig. S7). Following previous studies, we therefore prefer the
+spectral domain over the time domain (Dmitrieva et al., 2013; Hotovec at
+al., 2013; Winberry et al., 2013; Lipovsky and Dunham, 2016). We note that
+the tremor observed by Yamada et al. (2016) was observed at a much shorter
+source-to-station distance &lt; 1 km, whereas our closest station is
+3.5 km from the landslide source area. It is also possible that individual
+stick-slip events were more clearly visible in the studies by Yamada et al. (2016) and Poli (2017) because the events were either larger or were more
+energetic. We note that stick-slip motion has previously been proposed to
+cause seismic tremor on the sliding planes of sudden surface mass movements
+including ice-rock avalanches (Caplan-Auerbach et al., 2004; Huggel et al.,
+2008) and during glacier sliding (Caplan-Auerbach and Huggel, 2007; Winberry
+et al., 2013; Allstadt and Malone, 2014; Helmstetter et al., 2015; Lipovsky
+and Dunham, 2016).</p>
+      <p id="d1e2367">When tremor occurs due to repeating stick-slip cycles, gliding of the
+frequency bands is the result of a changing recurrence time (Lockner et al.,
+1991; Neuberg 2000; Dmitrieva et al., 2013; Hotovec et al., 2013). This is
+in contrast to the occurrence of frequency bands due to resonance phenomena
+where changing frequency contents are mainly caused by variations of the
+resonator's geometry and the fluid's properties (e.g. Lipovsky and Dunham,
+2015). In Sect. 4.2, we demonstrated this phenomenon using a simplified
+numerical simulation of stick-slip motion. We are able to produce the
+up-gliding spectral lines in our model by increasing the loading velocity
+<inline-formula><mml:math id="M152" display="inline"><mml:mrow><mml:msub><mml:mi>v</mml:mi><mml:mn mathvariant="normal">0</mml:mn></mml:msub></mml:mrow></mml:math></inline-formula> (Fig. 8c). The down-gliding spectral lines can be simulated in two
+ways: (i) by decreasing the loading velocity or (ii) by a growing stick-slip
+patch. Given the ensuing landslide motion, deceleration of a patch would
+only be realistic with a subsequent accelerating patch taking over the
+momentum. However, the observations show up-gliding spectral lines, the
+expression of an accelerating tremor patch, before the down-gliding spectral
+lines (Fig. 8a, b). Therefore, we find the explanation of a decelerating
+patch to be physically unrealistic and prefer to attribute downward-gliding
+spectral lines to an expanding stick-slip region. Changes in the stick-slip
+patch size can also explain the several minutes of increasing tremor
+amplitudes (Fig. 6b) as being due to a proportional increase in the moment
+release in each stick-slip cycle. Observed seismic amplitudes increased by a
+factor of 3 over 7 min (Figs. 6 and S4), which would correspond
+to an increase in patch dimension by a factor of <inline-formula><mml:math id="M153" display="inline"><mml:msqrt><mml:mn mathvariant="normal">3</mml:mn></mml:msqrt></mml:math></inline-formula>. If the initial
+patch radius was 30 m (as fits the data from the up-gliding patch), then
+this corresponds to an average radial growth rate of 70 mm s<inline-formula><mml:math id="M154" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula>.</p>
+      <p id="d1e2401">Our stick-slip simulations additionally predict the disappearance of the
+tremor signal shortly before the landslide at different times in the
+simulations. We suggest that two different mechanisms are responsible for
+this behaviour in our case because we assume that the two stick-slip tremor
+patches move independently and hence transition into a state of seismically
+non-detectable movement due to different reasons. First, the patch that
+experiences accelerated loading eventually crosses the stability threshold
+and begins to slide stably (<inline-formula><mml:math id="M155" display="inline"><mml:mi>R</mml:mi></mml:math></inline-formula> &lt; <inline-formula><mml:math id="M156" display="inline"><mml:mrow><mml:msub><mml:mi>R</mml:mi><mml:mi mathvariant="normal">c</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula> in Eq. 1). This behaviour is
+consistent with the theoretical prediction of a transition from stick-slip
+to stable sliding at high loading rates (Rice et al., 2001; Gomberg et al.,
+2011). In the simulations, this can be traced by the up-gliding spectral
+lines whose energy contents decrease with time until they fade into the
+background at 13 min (Fig. 8c). Second, the patch with a growing area
+experiences a commensurate increase in recurrence time (recurrence time and
+patch size are proportional; see Eq. 2); eventually, the recurrence time
+becomes so large that a quiescent period ensues. This can be seen in the
+simulations of the down-gliding spectral lines that disappear at 12 min
+(Fig. 8d).</p>
+      <p id="d1e2422">To further gain insight into the nature of the tremor, we stacked the
+signals of the eight closest stations operating at the occurrence time of
+the tremor (DREK, GODA, HOTT, JONS, KLUR, MOFO, STAM, and VADA; see inset of
+Fig. 7 for locations, and Figs. S5 and S6 in the Supplement for the stacked
+and single-station spectrograms) by first computing the spectrograms with
+the same specifications for each station, like time window length and
+fraction of window overlap, etc. Then, we added the spectrograms' energy
+values per frequency and time step, before dividing these sums by the number
+of stations to obtain the mean energies for the frequencies and time period
+of interest. The result shows that the gliding spectral lines of the tremor
+are clearly visible as sharp bands of higher energy values and did not
+become blurred in the stacked spectrogram (Fig. S5). The fundamental
+frequency of the tremor is the same, 2.3 Hz, for the stacked spectrogram as
+for the single-station spectrograms. The maximum standard deviation of the
+fundamental frequency in the single spectrograms to the stacked spectrogram
+is 0.3 Hz. This confirms that the gliding tremor comprises the same
+frequencies at the tested stations. Hence, we conclude that the nature of
+the gliding tremor signal is a source property rather than a site or wave
+propagation effect.</p>
+      <?pagebreak page480?><p id="d1e2425">To conclude, we propose that the Askja seismic tremor is most likely caused
+by repeated stick-slip motion on small, frictionally unstable patches along
+the landslide failure plane. This interpretation is, however, to some degree
+uncertain. Previous studies that interpreted gliding tremor as being due to
+repeating stick-slip were based on much clearer spectral signatures, often
+accompanied by individually discernable events (Dmitrieva et al., 2013;
+Hotovec at al., 2013; Winberry et al., 2013; Lipovsky and Dunham, 2016;
+Yamada et al., 2016; Poli, 2017). We nevertheless note that the occurrence of
+accelerating stick-slip motion is consistent with the onset of a large
+landslide. This interpretation implies that the landslide mass had already
+started to move before the high-energy signals of the catastrophic part of
+the landslide emerged in the seismic data. We envision the stick-slip patches
+to be located at the base of the landslide, developing along heterogeneities
+such as the lithological contact between the hyaloclastites and the 1923
+Suðurbotnahraun lavas, and pre-existing material heterogeneities within
+the hydrothermally altered hyaloclastites (Fig. 7b). Stick-slip sliding
+taking place at the base of the landslide rather than predominately within a
+highly damaged rock mass would result in a better coupling and thus higher
+energy transmission to the ground. This explains why the tremor can be
+observed over 30 km away from the landslide source region. In addition, we
+note the observation that cracks in the head wall of the landslide started to
+open after 2011 (Helgason et al., 2014) and that numerous cracks had
+developed at the surface of the landslide body a year before the failure
+(Fig. 3). This implies that the failure planes bounding the landslide
+developed years before the bulk movement of the landslide mass and just
+needed to be activated. The warm and wet weather, promoting pore pressure
+increase in July 2014, may have played an important role in this. Slight
+increases in pore water pressure can induce stick-slip motion, as has been
+observed on blocks of a seasonally active landslide in the French Alps (Van
+Genuchten and De Rijke, 1989).</p>
+</sec>
+<sec id="Ch1.S6.SS3">
+  <title>Tremor and rapid stick-slip as early-warning signs of landslide
+failure</title>
+      <p id="d1e2434">The risk to human life posed by landslides compels us to explore the
+possibility of designing a landslide early-warning system based on the
+existence of precursory seismic tremor. Because seismometers may be placed
+at a distance from the landslide site, such a system would provide safety
+benefits compared to other types of monitoring such as high-rate GPS located
+directly on the landslide. In addition, seismically based observations can
+help to identify the landslide's source mechanisms and properties, and the
+failure sequence including precursory activity and aftermath, which yields a
+comprehensive concept of the event by using only one system. While seismic
+landslide early-warning systems may not be possible at the present time, our
+goal here is simply to outline several scientific and engineering
+considerations that must be addressed to better understand the feasibility
+of such a system.</p>
+      <p id="d1e2437">First, future observations should be made to determine whether accelerating
+stick-slip, manifested as either isolated events (e.g. Yamada et al., 2016;
+Poli, 2017) or as seismic tremor (e.g. as before the Askja landslide), is in
+fact a sufficiently common precursor to large-scale slope failures. There is
+evidence that this may be the case. Many voluminous slope failures do start
+as slow-moving landslides (Palmer, 2017). The theory presented in Sect. 4
+predicts that at low sliding rates, repeating stick-slip events will have
+longer inter-event times. Future work could attempt to establish bounds for
+the observability of small, infrequently repeating events that might be near
+the noise level. Furthermore, some already-monitored slow-moving landslides
+show displacement rates that scale with the seismicity rates of cracks and
+stick-slip tremor signals (Tonnellier et al., 2013; Vouillamoz et al., 2017)
+and could serve as test sites.</p>
+      <p id="d1e2440">Second, any seismicity-based landslide early-warning system will require
+seismic data to be analysed in near-real time by a fast and reliable
+algorithm. Early-warning systems for tectonic earthquakes with simpler
+seismic signals than slope failures have been designed that meet this
+standard (Allen et al., 2009; Cua et al., 2009). Machine-learning methods
+could form the basis for such an algorithm as they are a powerful and
+promising tool to detect and classify signal classes, also of precursory
+slope activity, in seismic data (Hammer et al., 2012; Esposito et al., 2013;
+Zeckra et al., 2015). Other anticipative signals of natural gravity-driven
+instabilities such as those of cracking could also be detected and
+identified in this way. Cracking and fracturing signals have been identified
+in seismic data before cliff collapses (Amitrano et al., 2005; Zeckra et
+al., 2015), slope instabilities (Sima, 1986; Kilburn and Petley, 2003;
+Kolesnikov et al., 2003; Dixon et al., 2015; Faillettaz et al., 2016; Yamada
+et al., 2016), and break-off of hanging glaciers (see review by Faillettaz
+et al., 2015).</p>
+      <p id="d1e2443">Third, seismic networks must be able to observe landslide-related seismicity.
+In the case of Askja, a well-positioned network of seismic stations located a
+few kilometres away from the slope instability was able to detect precursory
+tremors. Further study will be required to test the detection thresholds of
+seismic networks as a function of network design parameters including station
+spacing and sampling rate. Regional-scale landslide monitoring with a seismic
+network has only been attempted on a few occasions (Burtin et al., 2013;
+Hibert et al., 2014) and the challenge persists to detect landslide signals
+in a continuous seismic data stream in near-real time (Dammeier et al., 2016;
+Manconi et al., 2016; Chao et al., 2017).</p>
+</sec>
+</sec>
+<sec id="Ch1.S7" sec-type="conclusions">
+  <title>Conclusions</title>
+      <p id="d1e2453">We analysed seismic data from a voluminous landslide, its precursory tremor,
+and successively following small slides<?pagebreak page481?> that all occurred at the
+south-eastern shore of the caldera lake, Öskjuvatn, of the Askja central
+volcano in the Icelandic highlands on 21 July 2014. The seismic data are of
+exceptionally high quality because (i) the 58 stations were centred around
+the Askja caldera, and (ii) anthropogenic noise sources are far away. We
+performed a detailed analysis of the seismic data that showed that the
+short-period signals of the landslide mainly consist of surface waves, which
+arrived at the closest station at 23:24:05 UTC and lasted for about 130 s.
+The seismic signal of the Askja landslide is characteristic of voluminous
+slope failures with an emergent onset without clear <inline-formula><mml:math id="M157" display="inline"><mml:mi>P</mml:mi></mml:math></inline-formula> and <inline-formula><mml:math id="M158" display="inline"><mml:mi>S</mml:mi></mml:math></inline-formula> wave arrivals and
+a spindle-shaped envelope. Inversion of the long-period signals of the
+landslide reveals that the bulk mass of 30–80 <inline-formula><mml:math id="M159" display="inline"><mml:mo>×</mml:mo></mml:math></inline-formula> 10<inline-formula><mml:math id="M160" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">6</mml:mn></mml:msup></mml:math></inline-formula> m<inline-formula><mml:math id="M161" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula>
+propagated to the north-west starting at the caldera ring fault at the
+south-eastern shore of Lake Öskjuvatn, which is consistent with field
+observations. Subsequent small slope failures, that we call afterslides,
+occur in the hours after the main landslide at the destabilised caldera
+walls.</p>
+      <p id="d1e2495">We detected approximately harmonic tremor with a fundamental frequency of
+2.3 Hz commencing about 30 min before the landslide and diminishing into
+2 min of seismic quiescence before the catastrophic failure. By
+numerically simulating stick-slip motion and elastic wave propagation, we
+were able to reproduce the aseismic period and the simultaneous up- and
+down-gliding of the spectral tremor lines with models where stick-slip
+earthquakes occur with changing frequency. We propose that upward spectral
+gliding occurs because of an increase in the recurrence frequency of
+stick-slip events on an accelerating sliding patch. In contrast, we explain
+downward spectral gliding by an expanding stick-slip region where the
+recurrence frequency of stick-slip earthquakes decreases. The transition
+from stick-slip to stable sliding is marked by a seismically quiet period of
+2 min before the bulk landslide mass failed catastrophically. Although
+there is both uncertainty and non-uniqueness associated with our
+interpretation of the precursory seismic tremor, we argue that such a model
+is the only tremor-generating process for which we have a physics-based
+model that is able to match observations to the degree that we have done
+here. We emphasise the utility of seismic networks to detect and
+characterise not only landslides but also the precursory signals that might
+otherwise go unnoticed. This is of utmost importance for sites with a high
+hazard potential and encourages the development of early-warning systems
+based on seismic data for monitoring slope failures.</p>
+</sec>
+
+      
+      </body>
+    <back><notes notes-type="dataavailability">
+
+      <p id="d1e2502">The seismic dataset is available upon request from
+Robert S. White, Bullard Laboratories, University of Cambridge, Cambridge CB3
+0EZ, UK.</p>
+  </notes><app-group>
+        <supplementary-material position="anchor"><p id="d1e2505">The supplement related to this article is available online at: <inline-supplementary-material xlink:href="https://doi.org/10.5194/esurf-6-467-2018-supplement" xlink:title="pdf">https://doi.org/10.5194/esurf-6-467-2018-supplement</inline-supplementary-material>.</p></supplementary-material>
+        </app-group><notes notes-type="competinginterests">
+
+      <p id="d1e2514">The authors declare that they have no conflict of
+interest.</p>
+  </notes><notes notes-type="sistatement">
+
+      <p id="d1e2520">This article is part of the special issue “From process to
+signal – advancing environmental seismology”. It is a result of the EGU
+Galileo conference, Ohlstadt, Germany, 6–9 June 2017.</p>
+  </notes><ack><title>Acknowledgements</title><p id="d1e2526">Seismometers were provided by the Natural Environmental Research Council
+(NERC) SEIS-UK under loans 968 and 1022. We would like to thank the
+Icelandic Meteorological Office for making the weather data available. The
+field campaign in summer 2015 was financially supported by an expedition
+fund from the GFZ Helmholtz Centre Potsdam, and Tanja Witt, Thomas Walter, Daniel Müller, Bastian Steinke, Ármann Höskuldsson are thanked for their
+support in the field. Bradley P. Lipovsky was supported by a postdoctoral
+fellowship from the Department of Earth and Planetary Sciences at Harvard
+University. Some figures were created with the help of GMT, Generic Mapping
+Tools, developed by Wessel et al. (2013). Eva P. S. Eibl is thanked for
+fruitful discussions. We gratefully acknowledge Jacqueline Caplan-Auerbach and an
+anonymous referee for their constructive reviews, which helped to improve
+the manuscript. We also thank the associate editor, Kate Allstadt, for the
+helpful comments and for carefully handling this submission.<?xmltex \hack{\newline}?><?xmltex \hack{\newline}?>
+The article processing charges for this open-access <?xmltex \hack{\newline}?> publication
+were covered by a Research <?xmltex \hack{\newline}?> Centre of the Helmholtz Association.<?xmltex \hack{\newline}?><?xmltex \hack{\newline}?>
+Edited by: Kate Allstadt<?xmltex \hack{\newline}?>
+Reviewed by: Jacqueline Caplan-Auerbach and one anonymous referee</p></ack><ref-list>
+    <title>References</title>
+
+      <ref id="bib1.bib1"><label>1</label><mixed-citation>
+Acocella, V., Di Lorenzo, R., Newhall, C., and Scandone, R.: An overview of
+recent (1988 to 2014) caldera unrest: Knowledge and perspectives, Rev.
+Geophys., 53, 896–955, 2015.</mixed-citation></ref>
+      <ref id="bib1.bib2"><label>2</label><mixed-citation>
+Aki, K.: Attenuation of shear-waves in the lithosphere for frequencies from
+0.05 to 25 Hz, Phys. Earth Planet. In., 21, 50–60, 1980.</mixed-citation></ref>
+      <ref id="bib1.bib3"><label>3</label><mixed-citation>Allen, R. M., Brown, H., Hellweg, M., Khainovski, O., Lombard, P., and
+Neuhauser, D.: Real-time earthquake detection and hazard assessment by ElarmS
+across California, Geophys. Res. Lett., 36, L00B08,
+<ext-link xlink:href="https://doi.org/10.1029/2008GL036766" ext-link-type="DOI">10.1029/2008GL036766</ext-link>, 2009.</mixed-citation></ref>
+      <ref id="bib1.bib4"><label>4</label><mixed-citation>
+Allstadt, K.: Extracting source characteristics and dynamics of the August
+2010 Mount Meager landslide from broadband seismograms, J. Geophys.
+Res.-Earth, 118, 1472–1490, 2013.</mixed-citation></ref>
+      <ref id="bib1.bib5"><label>5</label><mixed-citation>
+Allstadt, K. and Malone, S. D.: Swarms of repeating stick-slip icequakes
+triggered by snow loading at Mount Rainier volcano, J. Geophys. Res.-Earth,
+119, 1180–1203, 2014.</mixed-citation></ref>
+      <ref id="bib1.bib6"><label>6</label><mixed-citation>Amitrano, D., Grasso, J. R., and Senfaute, G.: Seismic precursory patterns
+before a cliff collapse and critical point phenomena, Geophys. Res. Lett.,
+32, L08314, <ext-link xlink:href="https://doi.org/10.1029/2004GL022270" ext-link-type="DOI">10.1029/2004GL022270</ext-link>, 2005.</mixed-citation></ref>
+      <?pagebreak page482?><ref id="bib1.bib7"><label>7</label><mixed-citation>
+Benoit, J. P. and McNutt, S. R.: New constraints on source processes of
+volcanic tremor at Arenal Volcano, Costa Rica, using broadband seismic data,
+Geophys. Res. Lett., 24, 449–452, 1997.</mixed-citation></ref>
+      <ref id="bib1.bib8"><label>8</label><mixed-citation>
+Beroza, G. C. and Ide, S.: Slow earthquakes and nonvolcanic tremor, Annu.
+Rev. Earth Pl. Sc., 39, 271–296, 2011.</mixed-citation></ref>
+      <ref id="bib1.bib9"><label>9</label><mixed-citation>Bottelin, P., Jongmans, D., Daudon, D., Mathy, A., Helmstetter, A.,
+Bonilla-Sierra, V., Cadet, H., Amitrano, D., Richefeu, V., Lorier, L.,
+Baillet, L., Villard, P., and Donzé, F.: Seismic and mechanical studies
+of the artificially triggered rockfall at Mount Néron (French Alps,
+December 2011), Nat. Hazards Earth Syst. Sci., 14, 3175–3193,
+<ext-link xlink:href="https://doi.org/10.5194/nhess-14-3175-2014" ext-link-type="DOI">10.5194/nhess-14-3175-2014</ext-link>, 2014.</mixed-citation></ref>
+      <ref id="bib1.bib10"><label>10</label><mixed-citation>Brodsky, E. E., Gordeev, E., and Kanamori, H.: Landslide basal friction as
+measured by seismic waves, Geophys. Res. Lett., 30, 2236,
+<ext-link xlink:href="https://doi.org/10.1029/2003GL018485" ext-link-type="DOI">10.1029/2003GL018485</ext-link>, 2003.</mixed-citation></ref>
+      <ref id="bib1.bib11"><label>11</label><mixed-citation>
+Burtin, A., Hovius, N., Milodowski, D. T., Chen, Y.-G., Wu, Y.-M., Lin,
+C.-W., Chen, H., Emberson, R., and Leu, P.-L.: Continuous catchment-scale
+monitoring of geomorphic processes with a 2-D seismological array, J.
+Geophys. Res.-Earth, 118, 1956–1974, 2013.</mixed-citation></ref>
+      <ref id="bib1.bib12"><label>12</label><mixed-citation>Burtin, A., Hovius, N., McArdell, B. W., Turowski, J. M., and Vergne, J.:
+Seismic constraints on dynamic links between geomorphic processes and routing
+of sediment in a steep mountain catchment, Earth Surf. Dynam., 2, 21–33,
+<ext-link xlink:href="https://doi.org/10.5194/esurf-2-21-2014" ext-link-type="DOI">10.5194/esurf-2-21-2014</ext-link>, 2014.</mixed-citation></ref>
+      <ref id="bib1.bib13"><label>13</label><mixed-citation>Cannata, A., Di Grazia, G., Montalto, P., Ferrari, F., Nunnari, G.,
+Patanè, D., and Privitera, E.: New insights into banded tremor from the
+2008–2009 Mount Etna eruption, J. Geophys. Res.-Sol. Ea., 115, B12318,
+<ext-link xlink:href="https://doi.org/10.1029/2009JB007120" ext-link-type="DOI">10.1029/2009JB007120</ext-link>, 2010.</mixed-citation></ref>
+      <ref id="bib1.bib14"><label>14</label><mixed-citation>
+Caplan-Auerbach, J. and Huggel, C.: Precursory seismicity associated with
+frequent, large ice avalanches on Iliamna volcano, Alaska, USA, J. Glaciol.,
+53, 128–140, 2007.</mixed-citation></ref>
+      <ref id="bib1.bib15"><label>15</label><mixed-citation>
+Caplan-Auerbach, J., Prejean, S. G., and Power, J. A.: Seismic recordings of
+ice and debris avalanches of Iliamna Volcano (Alaska), Acta Vulcanologica,
+16, 9–20, 2004.</mixed-citation></ref>
+      <ref id="bib1.bib16"><label>16</label><mixed-citation>Chao, W.-A., Zhao, L., Chen, S.-C., Wu, Y.-M., Chen, C.-H., and Huang, H.-H.:
+Seismology-based early identification of dam-formation landquake events, Sci.
+Rep., 6, 19259, <ext-link xlink:href="https://doi.org/10.1038/srep19259" ext-link-type="DOI">10.1038/srep19259</ext-link>, 2016.</mixed-citation></ref>
+      <ref id="bib1.bib17"><label>17</label><mixed-citation>Chao, W.-A., Wu, Y.-M., Zhao, L., Chen, H., Chen, Y.-G., Chang, J.-M., and
+Lin, C.-M.: A first near real-time seismology-based landquake monitoring
+system, Sci. Rep., 7, 43510, <ext-link xlink:href="https://doi.org/10.1038/srep43510" ext-link-type="DOI">10.1038/srep43510</ext-link>, 2017.</mixed-citation></ref>
+      <ref id="bib1.bib18"><label>18</label><mixed-citation>
+Chen, C.-H., Chao, W.-A., Wu, Y.-M., Zhao, L., Chen, Y.-G., Ho, W.-Y., Lin,
+T.-L., Kuo, K.-H., and Chang, J.-M.: A seismological study of landquakes
+using a real-time broad-band seismic network, Geophys. J. Int., 194,
+885–898, 2013.</mixed-citation></ref>
+      <ref id="bib1.bib19"><label>19</label><mixed-citation>
+Chouet, B.: Excitation of a buried magmatic pipe: a seismic source model for
+volcanic tremor, J. Geophys. Res.-Sol. Ea., 90, 1881–1893, 1985.</mixed-citation></ref>
+      <ref id="bib1.bib20"><label>20</label><mixed-citation>
+Chouet, B.: Dynamics of a fluid-driven crack in three dimensions by the
+finite difference method, J. Geophys. Res.-Sol. Ea., 91, 13967–13992,
+1986.</mixed-citation></ref>
+      <ref id="bib1.bib21"><label>21</label><mixed-citation>
+Chouet, B.: Resonance of a fluid-driven crack: Radiation properties and
+implications for the source of long-period events and harmonic tremor, J.
+Geophys. Res.-Sol. Ea., 93, 4375–4400, 1988.</mixed-citation></ref>
+      <ref id="bib1.bib22"><label>22</label><mixed-citation>
+Corona-Romero, P., Arciniega-Ceballos, A., and Sánchez-Sesma, F.:
+Simulation of LP seismic signals modeling the fluid–rock dynamic
+interaction, J. Volcanol. Geoth. Res., 211, 92–111, 2012.</mixed-citation></ref>
+      <ref id="bib1.bib23"><label>23</label><mixed-citation>
+Cua, G., Fischer, M., Heaton, T., and Wiemer, S.: Real-time performance of
+the Virtual Seismologist earthquake early warning algorithm in southern
+California, Seismol. Res. Lett., 80, 740–747, 2009.</mixed-citation></ref>
+      <ref id="bib1.bib24"><label>24</label><mixed-citation>Dammeier, F., Moore, J. R., Haslinger, F., and Loew, S.: Characterization of
+alpine rockslides using statistical analysis of seismic signals, J. Geophys.
+Res.-Earth, 116, F04024, <ext-link xlink:href="https://doi.org/10.1029/2011JF002037" ext-link-type="DOI">10.1029/2011JF002037</ext-link>, 2011.</mixed-citation></ref>
+      <ref id="bib1.bib25"><label>25</label><mixed-citation>
+Dammeier, F., Guilhem, A., Moore, J. R., Haslinger, F., and Loew, S.: Moment
+tensor analysis of rockslide seismic signals, B. Seismol. Soc. Am., 105,
+3001–3014, 2015.</mixed-citation></ref>
+      <ref id="bib1.bib26"><label>26</label><mixed-citation>
+Dammeier, F., Moore, J. R., Hammer, C., Haslinger, F., and Loew, S.:
+Automatic detection of alpine rockslides in continuous seismic data using
+hidden Markov models, J. Geophys. Res.-Earth, 121, 351–371, 2016.</mixed-citation></ref>
+      <ref id="bib1.bib27"><label>27</label><mixed-citation>
+DeMets, C., Gordon, R. G., Argus, D. F., and Stein, S.: Effect of recent
+revisions to the geomagnetic reversal time scale on estimates of current
+plate motions, Geophys. Res. Lett., 21, 2191–2194, 1994.</mixed-citation></ref>
+      <ref id="bib1.bib28"><label>28</label><mixed-citation>
+Deparis, J., Jongmans, D., Cotton, F., Baillet, L., Thouvenot, F., and Hantz,
+D.: Analysis of rock-fall and rock-fall avalanche seismograms in the French
+Alps, B. Seismol. Soc. Am., 98, 1781–1796, 2008.</mixed-citation></ref>
+      <ref id="bib1.bib29"><label>29</label><mixed-citation>
+de Zeeuw-van Dalfsen, E., Rymer, H., Sturkell, E., Pedersen, R., Hooper, A.,
+Sigmundsson, F., and Ófeigsson, B.: Geodetic data shed light on ongoing
+caldera subsidence at Askja, Iceland, B. Volcanol., 75, 1–13, 2013.</mixed-citation></ref>
+      <ref id="bib1.bib30"><label>30</label><mixed-citation>Dietze, M., Turowski, J. M., Cook, K. L., and Hovius, N.: Spatiotemporal
+patterns, triggers and anatomies of seismically detected rockfalls, Earth
+Surf. Dynam., 5, 757–779, <ext-link xlink:href="https://doi.org/10.5194/esurf-5-757-2017" ext-link-type="DOI">10.5194/esurf-5-757-2017</ext-link>, 2017.</mixed-citation></ref>
+      <ref id="bib1.bib31"><label>31</label><mixed-citation>
+Dixon, N., Spriggs, M., Smith, A., Meldrum, P., and Haslam, E.:
+Quantification of reactivated landslide behaviour using acoustic emission
+monitoring, Landslides, 12, 549–560, 2015.</mixed-citation></ref>
+      <ref id="bib1.bib32"><label>32</label><mixed-citation>
+Dmitrieva, K., Hotovec-Ellis, A. J., Prejean, S., and Dunham, E. M.:
+Frictional-faulting model for harmonic tremor before Redoubt Volcano
+eruptions, Nat. Geosci., 6, 652–656, 2013.</mixed-citation></ref>
+      <ref id="bib1.bib33"><label>33</label><mixed-citation>
+Drew, J., White, R. S., Tilmann, F., and Tarasewicz, J.: Coalescence
+microseismic mapping, Geophys. J. Int., 195, 1773–1785, 2013.</mixed-citation></ref>
+      <ref id="bib1.bib34"><label>34</label><mixed-citation>Dunham, E. M. and Ogden, D. E.: Guided waves along fluid-filled cracks in
+elastic solids and instability at high flow rates, J. Appl. Mech., 79,
+031020, <ext-link xlink:href="https://doi.org/10.1115/1.4005961" ext-link-type="DOI">10.1115/1.4005961</ext-link>, 2012.</mixed-citation></ref>
+      <ref id="bib1.bib35"><label>35</label><mixed-citation>
+Einarsson, M.: Climate of Iceland, in: World Survey of Climatology: 15:
+Climates of the Oceans, edited by: van Loon, H., Elsevier, Amsterdam, the
+Netherlands, 673–697, 1984.</mixed-citation></ref>
+      <ref id="bib1.bib36"><label>36</label><mixed-citation>
+Einarsson, P.: Earthquakes and present-day tectonism in Iceland,
+Tectonophysics, 189, 261–279, 1991.</mixed-citation></ref>
+      <ref id="bib1.bib37"><label>37</label><mixed-citation>
+Einarsson, P. and Sæmundsson, K.: Earthquake epicenters 1982–1985 and
+volcanic systems in Iceland (map), in: Í hlutarsins eðli:
+Festschrift for Þorbjörn Sigurgeirsson, edited by: Sigfússon,
+Þ., Menningarsjöður, Reykjavík, Iceland, 1987.</mixed-citation></ref>
+      <ref id="bib1.bib38"><label>38</label><mixed-citation>
+Ekström, G. and Stark, C. P.: Simple scaling of catastrophic landslide
+dynamics, Science, 339, 1416–1419, 2013.</mixed-citation></ref>
+      <ref id="bib1.bib39"><label>39</label><mixed-citation>
+Esposito, A. M., D'Auria, L., Giudicepietro, F., Peluso, R., and Martini, M.:
+Automatic recognition of landslides based on neural network analysis of
+seismic signals: an application to the monitoring of Stromboli volcano
+(Southern Italy), Pure Appl. Geophys., 170, 1821–1832, 2013.</mixed-citation></ref>
+      <?pagebreak page483?><ref id="bib1.bib40"><label>40</label><mixed-citation>
+Faillettaz, J., Funk, M., and Vincent, C.: Avalanching glacier instabilities:
+Review on processes and early warning perspectives, Rev. Geophys., 53,
+203–224, 2015.</mixed-citation></ref>
+      <ref id="bib1.bib41"><label>41</label><mixed-citation>
+Faillettaz, J., Or, D., and Reiweger, I.: Codetection of acoustic emissions
+during failure of heterogeneous media: New perspectives for natural hazard
+early warning, Geophys. Res. Lett., 43, 1075–1083, 2016.</mixed-citation></ref>
+      <ref id="bib1.bib42"><label>42</label><mixed-citation>Favreau, P., Mangeney, A., Lucas, A., Crosta, G., and Bouchut, F.: Numerical
+modeling of landquakes, Geophys. Res. Lett., 37, L15305,
+<ext-link xlink:href="https://doi.org/10.1029/2010GL043512" ext-link-type="DOI">10.1029/2010GL043512</ext-link>, 2010.</mixed-citation></ref>
+      <ref id="bib1.bib43"><label>43</label><mixed-citation>
+Fukao, Y.: Single-force representation of earthquakes due to landslides or
+the collapse of caverns, Geophys. J. Int., 122, 243–248, 1995.</mixed-citation></ref>
+      <ref id="bib1.bib44"><label>44</label><mixed-citation>
+Gaucher, E., Schoenball, M., Heidbach, O., Zang, A., Fokker, P. A., van Wees,
+J.-D., and Kohl, T.: Induced seismicity in geothermal reservoirs: A review of
+forecasting approaches, Renewable and Sustainable Energy Reviews, 52,
+1473–1490, 2015.</mixed-citation></ref>
+      <ref id="bib1.bib45"><label>45</label><mixed-citation>Gomberg, J., Schulz, W., Bodin, P., and Kean, J.: Seismic and geodetic
+signatures of fault slip at the Slumgullion Landslide Natural Laboratory, J.
+Geophys. Res.-Sol. Ea., 116, B09404, <ext-link xlink:href="https://doi.org/10.1029/2011JB008304" ext-link-type="DOI">10.1029/2011JB008304</ext-link>, 2011.</mixed-citation></ref>
+      <ref id="bib1.bib46"><label>46</label><mixed-citation>Got, J.-L., Mourot, P., and Grangeon, J.: Pre-failure behaviour of an
+unstable limestone cliff from displacement and seismic data, Nat. Hazards
+Earth Syst. Sci., 10, 819–829, <ext-link xlink:href="https://doi.org/10.5194/nhess-10-819-2010" ext-link-type="DOI">10.5194/nhess-10-819-2010</ext-link>,
+2010.</mixed-citation></ref>
+      <ref id="bib1.bib47"><label>47</label><mixed-citation>
+Green, R. G., White, R. S., and Greenfield, T.: Motion in the north Iceland
+volcanic rift zone accommodated by bookshelf faulting, Nat. Geosci., 7,
+29–33, 2014.</mixed-citation></ref>
+      <ref id="bib1.bib48"><label>48</label><mixed-citation>
+Greenfield, T. and White, R. S.: Building Icelandic igneous crust by repeated
+melt injections, J. Geophys. Res.-Sol. Ea., 120, 7771–7788, 2015.</mixed-citation></ref>
+      <ref id="bib1.bib49"><label>49</label><mixed-citation>
+Greenfield, T., White, R. S., Ágústsdóttir, T., and Winder, T.:
+Seismicity of the Askja and Bardarbunga volcanic systems of Iceland,
+2009–2015, J. Volcanol. Geoth. Res., in press, 2018.</mixed-citation></ref>
+      <ref id="bib1.bib50"><label>50</label><mixed-citation>
+Gutenberg, B. and Richter, C. F.: Magnitude and Energy of Earthquakes, Ann.
+Geofis., 9, 1–15, 1956.</mixed-citation></ref>
+      <ref id="bib1.bib51"><label>51</label><mixed-citation>
+Gylfadóttir, S. S., Kim, J., Helgason, J. K., Brynjólfsson, S.,
+Höskuldsson, Á., Jóhannesson, T., Harbitz, C. B., and Løvholt,
+F.: The 2014 Lake Askja rockslide-induced tsunami: Optimization of numerical
+tsunami model using observed data, J. Geophys. Res.-Oceans, 122, 4110–4122,
+2017.</mixed-citation></ref>
+      <ref id="bib1.bib52"><label>52</label><mixed-citation>
+Hammer, C., Beyreuther, M., and Ohrnberger, M.: A seismic-event spotting
+system for volcano fast-response systems, B. Seismol. Soc. Am., 102,
+948–960, 2012.</mixed-citation></ref>
+      <ref id="bib1.bib53"><label>53</label><mixed-citation>
+Hartley, M. and Thordarson, T.: Formation of Öskjuvatn caldera at Askja,
+North Iceland: Mechanism of caldera collapse and implications for the lateral
+flow hypothesis, J. Volcanol. Geoth. Res., 227, 85–101, 2012.</mixed-citation></ref>
+      <ref id="bib1.bib54"><label>54</label><mixed-citation>Helgason, J. K., Brynjólfsson, S., Jóhannesson, T., S., V. K.,
+Grímsdóttir, H., Hjartardóttir, Á. R., Sæmundsson,
+Þ., Hóskuldsson, Á., Sigmundsson, F., and Reynolds, H.: Rockslide
+in Askja, July 21 2014 – Preliminary results of observations, Memo of the
+Icelandic Meteorological Office, 1–12, available at:
+<uri>http://en.vedur.is/avalanches/articles/nr/2929</uri> (last access: 11 June
+2018), 2014.</mixed-citation></ref>
+      <ref id="bib1.bib55"><label>55</label><mixed-citation>
+Hellweg, M.: Physical models for the source of Lascar's harmonic tremor, J.
+Volcanol. Geoth. Res., 101, 183–198, 2000.</mixed-citation></ref>
+      <ref id="bib1.bib56"><label>56</label><mixed-citation>Helmstetter, A. and Garambois, S.: Seismic monitoring of Séchilienne
+rockslide (French Alps): Analysis of seismic signals and their correlation
+with rainfalls, J. Geophys. Res.-Earth, 115, F03016,
+<ext-link xlink:href="https://doi.org/10.1029/2009JF001532" ext-link-type="DOI">10.1029/2009JF001532</ext-link>, 2010.</mixed-citation></ref>
+      <ref id="bib1.bib57"><label>57</label><mixed-citation>
+Helmstetter, A., Nicolas, B., Comon, P., and Gay, M.: Basal icequakes
+recorded beneath an Alpine glacier (Glacier d'Argentière, Mont Blanc,
+France): Evidence for stick-slip motion?, J. Geophys. Res.-Earth, 120,
+379–401, 2015.</mixed-citation></ref>
+      <ref id="bib1.bib58"><label>58</label><mixed-citation>Hibert, C., Mangeney, A., Grandjean, G., and Shapiro, N.: Slope instabilities
+in Dolomieu crater, Réunion Island: From seismic signals to rockfall
+characteristics, J. Geophys. Res.-Earth, 116, F04032,
+<ext-link xlink:href="https://doi.org/10.1029/2011JF002038" ext-link-type="DOI">10.1029/2011JF002038</ext-link>, 2011.</mixed-citation></ref>
+      <ref id="bib1.bib59"><label>59</label><mixed-citation>
+Hibert, C., Ekström, G., and Stark, C. P.: Dynamics of the Bingham Canyon
+Mine landslides from seismic signal analysis, Geophys. Res. Lett., 41,
+4535–4541, 2014.</mixed-citation></ref>
+      <ref id="bib1.bib60"><label>60</label><mixed-citation>Hibert, C., Stark, C. P., and Ekström, G.: Dynamics of the Oso-Steelhead
+landslide from broadband seismic analysis, Nat. Hazards Earth Syst. Sci., 15,
+1265–1273, <ext-link xlink:href="https://doi.org/10.5194/nhess-15-1265-2015" ext-link-type="DOI">10.5194/nhess-15-1265-2015</ext-link>, 2015.</mixed-citation></ref>
+      <ref id="bib1.bib61"><label>61</label><mixed-citation>
+Hoskuldsson, A., Gans, P., Burbank, D., and Wiss, A.: Avalanche induced
+Tsunamie in Askja caldera lake Iceland, 21 June 2014, EGU General Assembly
+Conference Abstracts, 12–17 April 2015, Vienna, Austria, vol. 17, p. 9762,
+2015.</mixed-citation></ref>
+      <ref id="bib1.bib62"><label>62</label><mixed-citation>
+Hotovec, A. J., Prejean, S. G., Vidale, J. E., and Gomberg, J.: Strongly
+gliding harmonic tremor during the 2009 eruption of Redoubt Volcano, J.
+Volcanol. Geoth. Res., 259, 89–99, 2013.</mixed-citation></ref>
+      <ref id="bib1.bib63"><label>63</label><mixed-citation>
+Huggel, C., Caplan-Auerbach, J., Gruber, S., Molnia, B., and Wessels, R.: The
+2005 Mt. Steller, Alaska, rock-ice avalanche: A large slope failure in cold
+permafrost, Proceedings of the Ninth International Conference on
+Permafrost, 29 June–3 July 2008, University of Fairbanks, Alaska, USA,
+vol. 29, 747–752, 2008.</mixed-citation></ref>
+      <ref id="bib1.bib64"><label>64</label><mixed-citation>
+Iverson, R. M., Reid, M. E., and LaHusen, R. G.: Debris-flow mobilization
+from landslides, Annu. Rev. Earth Pl. Sc. 25, 85–138, 1997.</mixed-citation></ref>
+      <ref id="bib1.bib65"><label>65</label><mixed-citation>
+Iverson, R. M., George, D. L., Allstadt, K., Reid, M. E., Collins, B.,
+Vallance, J. W., Schilling, S. P., Godt, J. W., Cannon, C., Magirl, C. S.,
+Baum, R. L., Coe, J. A., Schulz, W., and Bower, J. B.: Landslide mobility and
+hazards: implications of the 2014 Oso disaster, Earth Planet. Sc. Lett.,
+412, 197–208, 2015.</mixed-citation></ref>
+      <ref id="bib1.bib66"><label>66</label><mixed-citation>
+Jakobsdóttir, S. S.: Seismicity in Iceland: 1994–2007, Jökull, 58,
+75–100, 2008.</mixed-citation></ref>
+      <ref id="bib1.bib67"><label>67</label><mixed-citation>
+Jakobsdóttir, S. S., Guðmundsson, G. B., and Stefánsson, R.:
+Seismicity in Iceland 1991–2000 monitored by the SIL seismic system,
+Jökull, 51, 87–94, 2002.</mixed-citation></ref>
+      <ref id="bib1.bib68"><label>68</label><mixed-citation>
+Jakobsdóttir, S. S., Roberts, M., Guđmundsson, G., Geirsson, H., and
+Slunga, R.: Earthquake swarms at Upptyppingar, north-east Iceland: A sign of
+magma intrusion?, Stud. Geophys. Geod., 52, 513–528, 2008.</mixed-citation></ref>
+      <ref id="bib1.bib69"><label>69</label><mixed-citation>
+Jellinek, A. M. and Bercovici, D.: Seismic tremors and magma wagging during
+explosive volcanism, Nature, 470, 522–525, 2011.</mixed-citation></ref>
+      <ref id="bib1.bib70"><label>70</label><mixed-citation>
+Jousset, P., Neuberg, J., and Sturton, S.: Modelling the time-dependent
+frequency content of low-frequency volcanic earthquakes, J. Volcanol. Geoth.
+Res., 128, 201–223, 2003.</mixed-citation></ref>
+      <ref id="bib1.bib71"><label>71</label><mixed-citation>
+Julian, B. R.: Volcanic tremor: nonlinear excitation by fluid flow, J.
+Geophys. Res.-Sol. Ea., 99, 11859–11877, 1994.</mixed-citation></ref>
+      <ref id="bib1.bib72"><label>72</label><mixed-citation>
+Kedar, S., Kanamori, H., and Sturtevant, B.: Bubble collapse as the source of
+tremor at Old Faithful Geyser, J. Geophys. Res.-Sol. Ea., 103,
+24283–24299, 1998.</mixed-citation></ref>
+      <?pagebreak page484?><ref id="bib1.bib73"><label>73</label><mixed-citation>Key, J., White, R., Soosalu, H., and Jakobsdóttir, S.: Multiple melt
+injection along a spreading segment at Askja, Iceland, Geophys. Res. Lett.,
+38, L05301, <ext-link xlink:href="https://doi.org/10.1029/2010GL046264" ext-link-type="DOI">10.1029/2010GL046264</ext-link>, 2011.</mixed-citation></ref>
+      <ref id="bib1.bib74"><label>74</label><mixed-citation>
+Kilburn, C. R. J. and Petley, D. N.: Forecasting giant, catastrophic slope
+collapse: lessons from Vajont, Northern Italy, Geomorphology, 54, 21–32,
+2003.</mixed-citation></ref>
+      <ref id="bib1.bib75"><label>75</label><mixed-citation>Kolesnikov, Yu. I., Nemirovich-Danchenko, M. M., Goldin, S. V., and Seleznev,
+V. S.: Slope stability monitoring from microseismic field using polarization
+methodology, Nat. Hazards Earth Syst. Sci., 3, 515–521,
+<ext-link xlink:href="https://doi.org/10.5194/nhess-3-515-2003" ext-link-type="DOI">10.5194/nhess-3-515-2003</ext-link>, 2003.</mixed-citation></ref>
+      <ref id="bib1.bib76"><label>76</label><mixed-citation>
+Konstantinou, K. I. and Schlindwein, V.: Nature, wavefield properties and
+source mechanism of volcanic tremor: a review, J. Volcanol. Geoth. Res.,
+119, 161–187, 2003.</mixed-citation></ref>
+      <ref id="bib1.bib77"><label>77</label><mixed-citation>
+Leet, R. C.: Saturated and subcooled hydrothermal boiling in groundwater flow
+channels as a source of harmonic tremor, J. Geophys. Res.-Sol. Ea., 93,
+4835–4849, 1988.</mixed-citation></ref>
+      <ref id="bib1.bib78"><label>78</label><mixed-citation>
+Lipovsky, B. P. and Dunham, E. M.: Vibrational modes of hydraulic fractures:
+Inference of fracture geometry from resonant frequencies and attenuation, J.
+Geophys. Res.-Sol. Ea., 120, 1080–1107, 2015.</mixed-citation></ref>
+      <ref id="bib1.bib79"><label>79</label><mixed-citation>Lipovsky, B. P. and Dunham, E. M.: Tremor during ice-stream stick slip, The
+Cryosphere, 10, 385–399, <ext-link xlink:href="https://doi.org/10.5194/tc-10-385-2016" ext-link-type="DOI">10.5194/tc-10-385-2016</ext-link>, 2016.</mixed-citation></ref>
+      <ref id="bib1.bib80"><label>80</label><mixed-citation>
+Lipovsky, B. P. and Dunham, E. M.: Slow-slip events on the Whillans Ice
+Plain, Antarctica, described using rate-and-state friction as an ice stream
+sliding law, J. Geophys. Res.-Earth, 122, 973–1003, 2017.</mixed-citation></ref>
+      <ref id="bib1.bib81"><label>81</label><mixed-citation>
+Lockner, D., Byerlee, J., Kuksenko, V., Ponomarev, A., and Sidorin, A.:
+Quasi-static fault growth and shear fracture energy in granite, Nature,
+350, 39–42, 1991.</mixed-citation></ref>
+      <ref id="bib1.bib82"><label>82</label><mixed-citation>
+Manconi, A., Picozzi, M., Coviello, V., De Santis, F., and Elia, L.:
+Real-time detection, location, and characterization of rockslides using
+broadband regional seismic networks, Geophys. Res. Lett., 43, 6960–6967,
+2016.</mixed-citation></ref>
+      <ref id="bib1.bib83"><label>83</label><mixed-citation>
+Marone, C.: Laboratory-derived friction laws and their application to seismic
+faulting, Annu. Rev. Earth Pl. Sc., 26, 643–696, 1998.</mixed-citation></ref>
+      <ref id="bib1.bib84"><label>84</label><mixed-citation>Matoza, R. S., Fee, D., and Garcés, M. A.: Infrasonic tremor wavefield of
+the PuuŌō crater complex and lava tube system, Hawaii, in April 2007,
+J. Geophys. Res.-Sol. Ea., 115, B12312, <ext-link xlink:href="https://doi.org/10.1029/2009JB007192" ext-link-type="DOI">10.1029/2009JB007192</ext-link>, 2010.</mixed-citation></ref>
+      <ref id="bib1.bib85"><label>85</label><mixed-citation>
+McNutt, S. R.: Volcanic tremor, Encyclopedia of earth system science, 4,
+417–425, 1992.</mixed-citation></ref>
+      <ref id="bib1.bib86"><label>86</label><mixed-citation>
+McNutt, S. R.: Volcanic seismology, Annu. Rev. Earth Pl. Sc., 32, 461–491,
+2005.</mixed-citation></ref>
+      <ref id="bib1.bib87"><label>87</label><mixed-citation>
+Mitchell, M. A., White, R. S., Roecker, S., and Greenfield, T.: Tomographic
+image of melt storage beneath Askja Volcano, Iceland using local
+microseismicity, Geophys. Res. Lett., 40, 5040–5046, 2013.</mixed-citation></ref>
+      <ref id="bib1.bib88"><label>88</label><mixed-citation>
+Moore, J. G.: Density of basalt core from Hilo drill hole, Hawaii, J.
+Volcanol. Geoth. Res., 112, 221–230, 2001.</mixed-citation></ref>
+      <ref id="bib1.bib89"><label>89</label><mixed-citation>Moretti, L., Mangeney, A., Capdeville, Y., Stutzmann, E., Huggel, C.,
+Schneider, D., and Bouchut, F.: Numerical modeling of the Mount Steller
+landslide flow history and of the generated long period seismic waves,
+Geophys. Res. Lett., 39, L16402, <ext-link xlink:href="https://doi.org/10.1029/2012GL052511" ext-link-type="DOI">10.1029/2012GL052511</ext-link>, 2012.</mixed-citation></ref>
+      <ref id="bib1.bib90"><label>90</label><mixed-citation>
+Moretti, L., Allstadt, K., Mangeney, A., Capdeville, Y., Stutzmann, E., and
+Bouchut, F.: Numerical modeling of the Mount Meager landslide constrained by
+its force history derived from seismic data, J. Geophys. Res.-Sol. Ea.,
+120, 2579–2599, 2015.</mixed-citation></ref>
+      <ref id="bib1.bib91"><label>91</label><mixed-citation>
+Neuberg, J.: Characteristics and causes of shallow seismicity in andesite
+volcanoes, Philos. T. Roy. Soc. A, 358, 1533–1546, 2000.</mixed-citation></ref>
+      <ref id="bib1.bib92"><label>92</label><mixed-citation>
+Norris, R. D.: Seismicity of rockfalls and avalanches at three Cascade Range
+volcanoes: Implications for seismic detection of hazardous mass movements, B.
+Seismol. Soc. Am., 84, 1925–1939, 1994.</mixed-citation></ref>
+      <ref id="bib1.bib93"><label>93</label><mixed-citation>
+Okal, E. A.: Single forces and double-couples: a theoretical review of their
+relative efficiency for the excitation of seismic and tsunami waves, J. Phys.
+Earth, 38, 445–474, 1990.</mixed-citation></ref>
+      <ref id="bib1.bib94"><label>94</label><mixed-citation>
+Omori, F.: On the Aftershocks of Earthquakes, Journal of the College of
+Science, Imperial University of Tokyo, 7, 111–120, 1894.</mixed-citation></ref>
+      <ref id="bib1.bib95"><label>95</label><mixed-citation>
+Palmer, J.: Creeping earth could hold secret to deadly landslides, Nature,
+548, 384–386, 2017.</mixed-citation></ref>
+      <ref id="bib1.bib96"><label>96</label><mixed-citation>
+Poli, P.: Creep and slip: Seismic precursors to the Nuugaatsiaq landslide
+(Greenland), Geophys. Res. Lett., 44, 8832–8836, 2017.</mixed-citation></ref>
+      <ref id="bib1.bib97"><label>97</label><mixed-citation>
+Powell, T. and Neuberg, J.: Time dependent features in tremor spectra, J.
+Volcanol. Geoth. Res., 128, 177–185, 2003.</mixed-citation></ref>
+      <ref id="bib1.bib98"><label>98</label><mixed-citation>
+Rice, J. R., Lapusta, N., and Ranjith, K.: Rate and state dependent friction
+and the stability of sliding between elastically deformable solids, J. Mech.
+Phys. Solids, 49, 1865–1898, 2001.</mixed-citation></ref>
+      <ref id="bib1.bib99"><label>99</label><mixed-citation>
+Röösli, C., Walter, F., Husen, S., Andrews, L. C., Lüthi, M. P.,
+Catania, G. A., and Kissling, E.: Sustained seismic tremors and icequakes
+detected in the ablation zone of the Greenland ice sheet, J. Glaciol., 60,
+563–575, 2014.</mixed-citation></ref>
+      <ref id="bib1.bib100"><label>100</label><mixed-citation>
+Rust, A., Balmforth, N., and Mandre, S.: The feasibility of generating
+low-frequency volcano seismicity by flow through a deformable channel, Geol.
+Soc., Spec. Publ., 307, 45–56, 2008.</mixed-citation></ref>
+      <ref id="bib1.bib101"><label>101</label><mixed-citation>
+Saemundsson, T., Kristinn Helgason, J., Brynjolfsson, S., Hoskuldsson, A.,
+Rut Hjartardottir, A., and Sigmundsson, F.: The rockslide in the Askja
+caldera on the 21st of July 2014, EGU General Assembly Conference
+Abstracts, 12–17 April 2015, Vienna, Austria, vol. 17, p. 11734, 2015.</mixed-citation></ref>
+      <ref id="bib1.bib102"><label>102</label><mixed-citation>
+Sassa, K., Dang, K., Yanagisawa, H., and He, B.: A new landslide-induced
+tsunami simulation model and its application to the 1792 Unzen-Mayuyama
+landslide-and-tsunami disaster, Landslides, 13, 1405–1419, 2016.</mixed-citation></ref>
+      <ref id="bib1.bib103"><label>103</label><mixed-citation>Schneider, D., Bartelt, P., Caplan-Auerbach, J., Christen, M., Huggel, C.,
+and McArdell, B. W.: Insights into rock-ice avalanche dynamics by combined
+analysis of seismic recordings and a numerical avalanche model, J. Geophys.
+Res.-Earth, 115, F04026, <ext-link xlink:href="https://doi.org/10.1029/2010JF001734" ext-link-type="DOI">10.1029/2010JF001734</ext-link>, 2010.</mixed-citation></ref>
+      <ref id="bib1.bib104"><label>104</label><mixed-citation>Senfaute, G., Duperret, A., and Lawrence, J. A.: Micro-seismic precursory
+cracks prior to rock-fall on coastal chalk cliffs: a case study at
+Mesnil-Val, Normandie, NW France, Nat. Hazards Earth Syst. Sci., 9,
+1625–1641, <ext-link xlink:href="https://doi.org/10.5194/nhess-9-1625-2009" ext-link-type="DOI">10.5194/nhess-9-1625-2009</ext-link>, 2009.</mixed-citation></ref>
+      <ref id="bib1.bib105"><label>105</label><mixed-citation>
+Sigvaldason, G. E.: Volcanic and tectonic processes coinciding with
+glaciation and crustal rebound: an early Holocene rhyolitic eruption in the
+Dyngjufjöll volcanic centre and the formation of the Askja caldera, north
+Iceland, B. Volcanol., 64, 192–205, 2002.</mixed-citation></ref>
+      <ref id="bib1.bib106"><label>106</label><mixed-citation>
+Sima, H.: On Observation of Microearthquakes as Events Preceding the
+Jizukiyama Landslide, Nagano Prefecture, Journal of Japan Landslide Society,
+23, 1–7, 1986.</mixed-citation></ref>
+      <ref id="bib1.bib107"><label>107</label><mixed-citation>
+Soosalu, H., Key, J., White, R. S., Knox, C., Einarsson, P., and
+Jakobsdóttir, S. S.: Lower-crustal earthquakes caused by magma movement
+beneath Askja volcano on the north Iceland rift, B. Volcanol., 72, 55–62,
+2010.</mixed-citation></ref>
+      <?pagebreak page485?><ref id="bib1.bib108"><label>108</label><mixed-citation>
+Sturton, S. and Neuberg, J.: The effects of conduit length and acoustic
+velocity on conduit resonance: Implications for low-frequency events, J.
+Volcanol. Geoth. Res., 151, 319–339, 2006.</mixed-citation></ref>
+      <ref id="bib1.bib109"><label>109</label><mixed-citation>Suriñach, E., Vilajosana, I., Khazaradze, G., Biescas, B., Furdada, G.,
+and Vilaplana, J. M.: Seismic detection and characterization of landslides
+and other mass movements, Nat. Hazards Earth Syst. Sci., 5, 791–798,
+<ext-link xlink:href="https://doi.org/10.5194/nhess-5-791-2005" ext-link-type="DOI">10.5194/nhess-5-791-2005</ext-link>, 2005.</mixed-citation></ref>
+      <ref id="bib1.bib110"><label>110</label><mixed-citation>
+Takei, Y. and Kumazawa, M.: Why have the single force and torque been
+excluded from seismic source models?, Geophys. J. Int., 118, 20–30, 1994.</mixed-citation></ref>
+      <ref id="bib1.bib111"><label>111</label><mixed-citation>
+Thorarinsson, S. and Sigvaldason, G. E.: The eruption in Askja, 1961; a
+preliminary report, Am. J. Sci., 260, 641–651, 1962.</mixed-citation></ref>
+      <ref id="bib1.bib112"><label>112</label><mixed-citation>
+Tonnellier, A., Helmstetter, A., Malet, J.-P., Schmittbuhl, J., Corsini, A.,
+and Joswig, M.: Seismic monitoring of soft-rock landslides: the Super-Sauze
+and Valoria case studies, Geophys. J. Int., 193, 1515–1536, 2013,.</mixed-citation></ref>
+      <ref id="bib1.bib113"><label>113</label><mixed-citation>
+Unglert, K. and Jellinek, A.: Volcanic tremor and frequency gliding during
+dike intrusions at Kīlauea – A tale of three eruptions, J. Geophys.
+Res.-Sol. Ea., 120, 1142–1158, 2015.</mixed-citation></ref>
+      <ref id="bib1.bib114"><label>114</label><mixed-citation>
+Van Genuchten, P. and De Rijke, H.: On pore water pressure variations causing
+slide velocities and accelerations observed in a seasonally active landslide,
+Earth Surf Proc. Land., 14, 577–586, 1989.</mixed-citation></ref>
+      <ref id="bib1.bib115"><label>115</label><mixed-citation>Vilajosana, I., Suriñach, E., Abellán, A., Khazaradze, G., Garcia,
+D., and Llosa, J.: Rockfall induced seismic signals: case study in
+Montserrat, Catalonia, Nat. Hazards Earth Syst. Sci., 8, 805–812,
+<ext-link xlink:href="https://doi.org/10.5194/nhess-8-805-2008" ext-link-type="DOI">10.5194/nhess-8-805-2008</ext-link>, 2008.</mixed-citation></ref>
+      <ref id="bib1.bib116"><label>116</label><mixed-citation>Vogfjörd, K., Kristinn Helgason, J., Jonsdottir, K., Brynjolfsson, S.,
+Grimsdottir, H., Johannesson, T., Hensch, M., and Ripepe, M.: The Askja
+rockslide and the associated tsunami in the caldera lake, EGU General
+Assembly Conference Abstracts, 12–17 April 2015, Vienna, Austria, vol. 17,
+p. 12128, 2015.
+ </mixed-citation></ref><?xmltex \hack{\newpage}?>
+      <ref id="bib1.bib117"><label>117</label><mixed-citation>
+Voight, B., Glicken, H., Janda, R., and Douglass, P.: Catastrophic rockslide
+avalanche of May 18, in: The 1980 Eruptions of Mount St. Helens,
+Washington, vol. 1250, edited by: Lipman, P. and Mullineaux, D., US
+Geological Survey Professional Papers, U.S. Government Printing Office,
+Washington, D.C., USA, 347–377, 1981.</mixed-citation></ref>
+      <ref id="bib1.bib118"><label>118</label><mixed-citation>Vouillamoz, N., Rothmund, S., and Joswig, M.: Characterizing the complexity
+of seismic signals at slow-moving clay-rich debris slides: The Super-Sauze
+(Southeastern France) and Pechgraben (Upper Austria) case studies, Earth
+Surf. Dynam. Discuss., <ext-link xlink:href="https://doi.org/10.5194/esurf-2017-65" ext-link-type="DOI">10.5194/esurf-2017-65</ext-link>, in review,
+2017.</mixed-citation></ref>
+      <ref id="bib1.bib119"><label>119</label><mixed-citation>
+Wessel, P., Smith, W. H., Scharroo, R., Luis, J., and Wobbe, F.: Generic
+mapping tools: improved version released, Eos, Transactions, American
+Geophysical Union, 94, 409–410, 2013.</mixed-citation></ref>
+      <ref id="bib1.bib120"><label>120</label><mixed-citation>
+White, R. S., Drew, J., Martens, H. R., Key, J., Soosalu, H., and
+Jakobsdóttir, S. S.: Dynamics of dyke intrusion in the mid-crust of
+Iceland, Earth Planet. Sc. Lett., 304, 300–312, 2011.</mixed-citation></ref>
+      <ref id="bib1.bib121"><label>121</label><mixed-citation>
+Winberry, P. J., Anandakrishnan, S., Wiens, D. A., and Alley, R. B.:
+Nucleation and seismic tremor associated with the glacial earthquakes of
+Whillans Ice Stream, Antarctica, Geophys. Res. Lett., 40, 312–315, 2013.</mixed-citation></ref>
+      <ref id="bib1.bib122"><label>122</label><mixed-citation>
+Yamada, M., Kumagai, H., Matsushi, Y., and Matsuzawa, T.: Dynamic landslide
+processes revealed by broadband seismic records, Geophys. Res. Lett., 40,
+2998–3002, 2013.</mixed-citation></ref>
+      <ref id="bib1.bib123"><label>123</label><mixed-citation>
+Yamada, M., Mori, J., and Matsushi, Y.: Possible stick-slip behavior before
+the Rausu landslide inferred from repeating seismic events, Geophys. Res.
+Lett., 43, 9038–9044, 2016.</mixed-citation></ref>
+      <ref id="bib1.bib124"><label>124</label><mixed-citation>
+Zeckra, M., Hovius, N., Burtin, A., and Hammer, C.: Automated Detection and
+Classification of Rockfall Induced Seismic Signals with Hidden-Markov-Models,
+AGU Fall Meeting 2015, 14–18 December 2015, San Francisco, California, USA,
+abstract #NH34A-04, 2015.</mixed-citation></ref>
+
+  </ref-list></back>
+    <!--<article-title-html>Dynamics of the Askja caldera July 2014 landslide, Iceland, from seismic signal analysis: precursor, motion and aftermath</article-title-html>
+<abstract-html><p>Landslide hazard motivates the need for a deeper understanding of the events
+that occur before, during, and after catastrophic slope failures. Due to the
+destructive nature of such events, in situ observation is often difficult or
+impossible. Here, we use data from a network of 58 seismic stations to
+characterise a large landslide at the Askja caldera, Iceland, on 21 July
+2014. High data quality and extensive network coverage allow us to analyse
+both long- and short-period signals associated with the landslide, and
+thereby obtain information about its triggering, initiation, timing, and
+propagation. At long periods, a landslide force history inversion shows that
+the Askja landslide was a single, large event starting at the SE corner of
+the caldera lake at 23:24:05&thinsp;UTC and propagating to the NW in the following
+2&thinsp;min. The bulk sliding mass was 7–16&thinsp; × &thinsp;10<sup>10</sup>&thinsp;kg, equivalent
+to a collapsed volume of 35–80&thinsp; × &thinsp;10<sup>6</sup>&thinsp;m<sup>3</sup>. The sliding
+mass was displaced downslope by 1260&thinsp;±&thinsp;250&thinsp;m. At short periods, a
+seismic tremor was observed for 30&thinsp;min before the landslide. The tremor is
+approximately harmonic with a fundamental frequency of 2.3&thinsp;Hz and shows
+time-dependent changes of its frequency content. We attribute the seismic
+tremor to stick-slip motion along the landslide failure plane. Accelerating
+motion leading up to the catastrophic slope failure culminated in an aseismic
+quiescent period for 2&thinsp;min before the landslide. We propose that precursory
+seismic signals may be useful in landslide early-warning systems. The 8&thinsp;h
+after the main landslide failure are characterised by smaller slope failures
+originating from the destabilised caldera wall decaying in frequency and
+magnitude. We introduce the term <q>afterslides</q> for this subsequent,
+declining slope activity after a large landslide.</p></abstract-html>
+<ref-html id="bib1.bib1"><label>1</label><mixed-citation>
+Acocella, V., Di Lorenzo, R., Newhall, C., and Scandone, R.: An overview of
+recent (1988 to 2014) caldera unrest: Knowledge and perspectives, Rev.
+Geophys., 53, 896–955, 2015.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib2"><label>2</label><mixed-citation>
+Aki, K.: Attenuation of shear-waves in the lithosphere for frequencies from
+0.05 to 25&thinsp;Hz, Phys. Earth Planet. In., 21, 50–60, 1980.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib3"><label>3</label><mixed-citation>
+Allen, R. M., Brown, H., Hellweg, M., Khainovski, O., Lombard, P., and
+Neuhauser, D.: Real-time earthquake detection and hazard assessment by ElarmS
+across California, Geophys. Res. Lett., 36, L00B08,
+<a href="https://doi.org/10.1029/2008GL036766" target="_blank">https://doi.org/10.1029/2008GL036766</a>, 2009.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib4"><label>4</label><mixed-citation>
+Allstadt, K.: Extracting source characteristics and dynamics of the August
+2010 Mount Meager landslide from broadband seismograms, J. Geophys.
+Res.-Earth, 118, 1472–1490, 2013.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib5"><label>5</label><mixed-citation>
+Allstadt, K. and Malone, S. D.: Swarms of repeating stick-slip icequakes
+triggered by snow loading at Mount Rainier volcano, J. Geophys. Res.-Earth,
+119, 1180–1203, 2014.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib6"><label>6</label><mixed-citation>
+Amitrano, D., Grasso, J. R., and Senfaute, G.: Seismic precursory patterns
+before a cliff collapse and critical point phenomena, Geophys. Res. Lett.,
+32, L08314, <a href="https://doi.org/10.1029/2004GL022270" target="_blank">https://doi.org/10.1029/2004GL022270</a>, 2005.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib7"><label>7</label><mixed-citation>
+Benoit, J. P. and McNutt, S. R.: New constraints on source processes of
+volcanic tremor at Arenal Volcano, Costa Rica, using broadband seismic data,
+Geophys. Res. Lett., 24, 449–452, 1997.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib8"><label>8</label><mixed-citation>
+Beroza, G. C. and Ide, S.: Slow earthquakes and nonvolcanic tremor, Annu.
+Rev. Earth Pl. Sc., 39, 271–296, 2011.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib9"><label>9</label><mixed-citation>
+Bottelin, P., Jongmans, D., Daudon, D., Mathy, A., Helmstetter, A.,
+Bonilla-Sierra, V., Cadet, H., Amitrano, D., Richefeu, V., Lorier, L.,
+Baillet, L., Villard, P., and Donzé, F.: Seismic and mechanical studies
+of the artificially triggered rockfall at Mount Néron (French Alps,
+December 2011), Nat. Hazards Earth Syst. Sci., 14, 3175–3193,
+<a href="https://doi.org/10.5194/nhess-14-3175-2014" target="_blank">https://doi.org/10.5194/nhess-14-3175-2014</a>, 2014.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib10"><label>10</label><mixed-citation>
+Brodsky, E. E., Gordeev, E., and Kanamori, H.: Landslide basal friction as
+measured by seismic waves, Geophys. Res. Lett., 30, 2236,
+<a href="https://doi.org/10.1029/2003GL018485" target="_blank">https://doi.org/10.1029/2003GL018485</a>, 2003.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib11"><label>11</label><mixed-citation>
+Burtin, A., Hovius, N., Milodowski, D. T., Chen, Y.-G., Wu, Y.-M., Lin,
+C.-W., Chen, H., Emberson, R., and Leu, P.-L.: Continuous catchment-scale
+monitoring of geomorphic processes with a 2-D seismological array, J.
+Geophys. Res.-Earth, 118, 1956–1974, 2013.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib12"><label>12</label><mixed-citation>
+Burtin, A., Hovius, N., McArdell, B. W., Turowski, J. M., and Vergne, J.:
+Seismic constraints on dynamic links between geomorphic processes and routing
+of sediment in a steep mountain catchment, Earth Surf. Dynam., 2, 21–33,
+<a href="https://doi.org/10.5194/esurf-2-21-2014" target="_blank">https://doi.org/10.5194/esurf-2-21-2014</a>, 2014.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib13"><label>13</label><mixed-citation>
+Cannata, A., Di Grazia, G., Montalto, P., Ferrari, F., Nunnari, G.,
+Patanè, D., and Privitera, E.: New insights into banded tremor from the
+2008–2009 Mount Etna eruption, J. Geophys. Res.-Sol. Ea., 115, B12318,
+<a href="https://doi.org/10.1029/2009JB007120" target="_blank">https://doi.org/10.1029/2009JB007120</a>, 2010.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib14"><label>14</label><mixed-citation>
+Caplan-Auerbach, J. and Huggel, C.: Precursory seismicity associated with
+frequent, large ice avalanches on Iliamna volcano, Alaska, USA, J. Glaciol.,
+53, 128–140, 2007.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib15"><label>15</label><mixed-citation>
+Caplan-Auerbach, J., Prejean, S. G., and Power, J. A.: Seismic recordings of
+ice and debris avalanches of Iliamna Volcano (Alaska), Acta Vulcanologica,
+16, 9–20, 2004.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib16"><label>16</label><mixed-citation>
+Chao, W.-A., Zhao, L., Chen, S.-C., Wu, Y.-M., Chen, C.-H., and Huang, H.-H.:
+Seismology-based early identification of dam-formation landquake events, Sci.
+Rep., 6, 19259, <a href="https://doi.org/10.1038/srep19259" target="_blank">https://doi.org/10.1038/srep19259</a>, 2016.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib17"><label>17</label><mixed-citation>
+Chao, W.-A., Wu, Y.-M., Zhao, L., Chen, H., Chen, Y.-G., Chang, J.-M., and
+Lin, C.-M.: A first near real-time seismology-based landquake monitoring
+system, Sci. Rep., 7, 43510, <a href="https://doi.org/10.1038/srep43510" target="_blank">https://doi.org/10.1038/srep43510</a>, 2017.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib18"><label>18</label><mixed-citation>
+Chen, C.-H., Chao, W.-A., Wu, Y.-M., Zhao, L., Chen, Y.-G., Ho, W.-Y., Lin,
+T.-L., Kuo, K.-H., and Chang, J.-M.: A seismological study of landquakes
+using a real-time broad-band seismic network, Geophys. J. Int., 194,
+885–898, 2013.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib19"><label>19</label><mixed-citation>
+Chouet, B.: Excitation of a buried magmatic pipe: a seismic source model for
+volcanic tremor, J. Geophys. Res.-Sol. Ea., 90, 1881–1893, 1985.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib20"><label>20</label><mixed-citation>
+Chouet, B.: Dynamics of a fluid-driven crack in three dimensions by the
+finite difference method, J. Geophys. Res.-Sol. Ea., 91, 13967–13992,
+1986.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib21"><label>21</label><mixed-citation>
+Chouet, B.: Resonance of a fluid-driven crack: Radiation properties and
+implications for the source of long-period events and harmonic tremor, J.
+Geophys. Res.-Sol. Ea., 93, 4375–4400, 1988.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib22"><label>22</label><mixed-citation>
+Corona-Romero, P., Arciniega-Ceballos, A., and Sánchez-Sesma, F.:
+Simulation of LP seismic signals modeling the fluid–rock dynamic
+interaction, J. Volcanol. Geoth. Res., 211, 92–111, 2012.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib23"><label>23</label><mixed-citation>
+Cua, G., Fischer, M., Heaton, T., and Wiemer, S.: Real-time performance of
+the Virtual Seismologist earthquake early warning algorithm in southern
+California, Seismol. Res. Lett., 80, 740–747, 2009.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib24"><label>24</label><mixed-citation>
+Dammeier, F., Moore, J. R., Haslinger, F., and Loew, S.: Characterization of
+alpine rockslides using statistical analysis of seismic signals, J. Geophys.
+Res.-Earth, 116, F04024, <a href="https://doi.org/10.1029/2011JF002037" target="_blank">https://doi.org/10.1029/2011JF002037</a>, 2011.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib25"><label>25</label><mixed-citation>
+Dammeier, F., Guilhem, A., Moore, J. R., Haslinger, F., and Loew, S.: Moment
+tensor analysis of rockslide seismic signals, B. Seismol. Soc. Am., 105,
+3001–3014, 2015.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib26"><label>26</label><mixed-citation>
+Dammeier, F., Moore, J. R., Hammer, C., Haslinger, F., and Loew, S.:
+Automatic detection of alpine rockslides in continuous seismic data using
+hidden Markov models, J. Geophys. Res.-Earth, 121, 351–371, 2016.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib27"><label>27</label><mixed-citation>
+DeMets, C., Gordon, R. G., Argus, D. F., and Stein, S.: Effect of recent
+revisions to the geomagnetic reversal time scale on estimates of current
+plate motions, Geophys. Res. Lett., 21, 2191–2194, 1994.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib28"><label>28</label><mixed-citation>
+Deparis, J., Jongmans, D., Cotton, F., Baillet, L., Thouvenot, F., and Hantz,
+D.: Analysis of rock-fall and rock-fall avalanche seismograms in the French
+Alps, B. Seismol. Soc. Am., 98, 1781–1796, 2008.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib29"><label>29</label><mixed-citation>
+de Zeeuw-van Dalfsen, E., Rymer, H., Sturkell, E., Pedersen, R., Hooper, A.,
+Sigmundsson, F., and Ófeigsson, B.: Geodetic data shed light on ongoing
+caldera subsidence at Askja, Iceland, B. Volcanol., 75, 1–13, 2013.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib30"><label>30</label><mixed-citation>
+Dietze, M., Turowski, J. M., Cook, K. L., and Hovius, N.: Spatiotemporal
+patterns, triggers and anatomies of seismically detected rockfalls, Earth
+Surf. Dynam., 5, 757–779, <a href="https://doi.org/10.5194/esurf-5-757-2017" target="_blank">https://doi.org/10.5194/esurf-5-757-2017</a>, 2017.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib31"><label>31</label><mixed-citation>
+Dixon, N., Spriggs, M., Smith, A., Meldrum, P., and Haslam, E.:
+Quantification of reactivated landslide behaviour using acoustic emission
+monitoring, Landslides, 12, 549–560, 2015.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib32"><label>32</label><mixed-citation>
+Dmitrieva, K., Hotovec-Ellis, A. J., Prejean, S., and Dunham, E. M.:
+Frictional-faulting model for harmonic tremor before Redoubt Volcano
+eruptions, Nat. Geosci., 6, 652–656, 2013.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib33"><label>33</label><mixed-citation>
+Drew, J., White, R. S., Tilmann, F., and Tarasewicz, J.: Coalescence
+microseismic mapping, Geophys. J. Int., 195, 1773–1785, 2013.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib34"><label>34</label><mixed-citation>
+Dunham, E. M. and Ogden, D. E.: Guided waves along fluid-filled cracks in
+elastic solids and instability at high flow rates, J. Appl. Mech., 79,
+031020, <a href="https://doi.org/10.1115/1.4005961" target="_blank">https://doi.org/10.1115/1.4005961</a>, 2012.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib35"><label>35</label><mixed-citation>
+Einarsson, M.: Climate of Iceland, in: World Survey of Climatology: 15:
+Climates of the Oceans, edited by: van Loon, H., Elsevier, Amsterdam, the
+Netherlands, 673–697, 1984.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib36"><label>36</label><mixed-citation>
+Einarsson, P.: Earthquakes and present-day tectonism in Iceland,
+Tectonophysics, 189, 261–279, 1991.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib37"><label>37</label><mixed-citation>
+Einarsson, P. and Sæmundsson, K.: Earthquake epicenters 1982–1985 and
+volcanic systems in Iceland (map), in: Í hlutarsins eðli:
+Festschrift for Þorbjörn Sigurgeirsson, edited by: Sigfússon,
+Þ., Menningarsjöður, Reykjavík, Iceland, 1987.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib38"><label>38</label><mixed-citation>
+Ekström, G. and Stark, C. P.: Simple scaling of catastrophic landslide
+dynamics, Science, 339, 1416–1419, 2013.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib39"><label>39</label><mixed-citation>
+Esposito, A. M., D'Auria, L., Giudicepietro, F., Peluso, R., and Martini, M.:
+Automatic recognition of landslides based on neural network analysis of
+seismic signals: an application to the monitoring of Stromboli volcano
+(Southern Italy), Pure Appl. Geophys., 170, 1821–1832, 2013.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib40"><label>40</label><mixed-citation>
+Faillettaz, J., Funk, M., and Vincent, C.: Avalanching glacier instabilities:
+Review on processes and early warning perspectives, Rev. Geophys., 53,
+203–224, 2015.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib41"><label>41</label><mixed-citation>
+Faillettaz, J., Or, D., and Reiweger, I.: Codetection of acoustic emissions
+during failure of heterogeneous media: New perspectives for natural hazard
+early warning, Geophys. Res. Lett., 43, 1075–1083, 2016.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib42"><label>42</label><mixed-citation>
+Favreau, P., Mangeney, A., Lucas, A., Crosta, G., and Bouchut, F.: Numerical
+modeling of landquakes, Geophys. Res. Lett., 37, L15305,
+<a href="https://doi.org/10.1029/2010GL043512" target="_blank">https://doi.org/10.1029/2010GL043512</a>, 2010.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib43"><label>43</label><mixed-citation>
+Fukao, Y.: Single-force representation of earthquakes due to landslides or
+the collapse of caverns, Geophys. J. Int., 122, 243–248, 1995.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib44"><label>44</label><mixed-citation>
+Gaucher, E., Schoenball, M., Heidbach, O., Zang, A., Fokker, P. A., van Wees,
+J.-D., and Kohl, T.: Induced seismicity in geothermal reservoirs: A review of
+forecasting approaches, Renewable and Sustainable Energy Reviews, 52,
+1473–1490, 2015.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib45"><label>45</label><mixed-citation>
+Gomberg, J., Schulz, W., Bodin, P., and Kean, J.: Seismic and geodetic
+signatures of fault slip at the Slumgullion Landslide Natural Laboratory, J.
+Geophys. Res.-Sol. Ea., 116, B09404, <a href="https://doi.org/10.1029/2011JB008304" target="_blank">https://doi.org/10.1029/2011JB008304</a>, 2011.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib46"><label>46</label><mixed-citation>
+Got, J.-L., Mourot, P., and Grangeon, J.: Pre-failure behaviour of an
+unstable limestone cliff from displacement and seismic data, Nat. Hazards
+Earth Syst. Sci., 10, 819–829, <a href="https://doi.org/10.5194/nhess-10-819-2010" target="_blank">https://doi.org/10.5194/nhess-10-819-2010</a>,
+2010.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib47"><label>47</label><mixed-citation>
+Green, R. G., White, R. S., and Greenfield, T.: Motion in the north Iceland
+volcanic rift zone accommodated by bookshelf faulting, Nat. Geosci., 7,
+29–33, 2014.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib48"><label>48</label><mixed-citation>
+Greenfield, T. and White, R. S.: Building Icelandic igneous crust by repeated
+melt injections, J. Geophys. Res.-Sol. Ea., 120, 7771–7788, 2015.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib49"><label>49</label><mixed-citation>
+Greenfield, T., White, R. S., Ágústsdóttir, T., and Winder, T.:
+Seismicity of the Askja and Bardarbunga volcanic systems of Iceland,
+2009–2015, J. Volcanol. Geoth. Res., in press, 2018.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib50"><label>50</label><mixed-citation>
+Gutenberg, B. and Richter, C. F.: Magnitude and Energy of Earthquakes, Ann.
+Geofis., 9, 1–15, 1956.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib51"><label>51</label><mixed-citation>
+Gylfadóttir, S. S., Kim, J., Helgason, J. K., Brynjólfsson, S.,
+Höskuldsson, Á., Jóhannesson, T., Harbitz, C. B., and Løvholt,
+F.: The 2014 Lake Askja rockslide-induced tsunami: Optimization of numerical
+tsunami model using observed data, J. Geophys. Res.-Oceans, 122, 4110–4122,
+2017.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib52"><label>52</label><mixed-citation>
+Hammer, C., Beyreuther, M., and Ohrnberger, M.: A seismic-event spotting
+system for volcano fast-response systems, B. Seismol. Soc. Am., 102,
+948–960, 2012.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib53"><label>53</label><mixed-citation>
+Hartley, M. and Thordarson, T.: Formation of Öskjuvatn caldera at Askja,
+North Iceland: Mechanism of caldera collapse and implications for the lateral
+flow hypothesis, J. Volcanol. Geoth. Res., 227, 85–101, 2012.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib54"><label>54</label><mixed-citation>
+Helgason, J. K., Brynjólfsson, S., Jóhannesson, T., S., V. K.,
+Grímsdóttir, H., Hjartardóttir, Á. R., Sæmundsson,
+Þ., Hóskuldsson, Á., Sigmundsson, F., and Reynolds, H.: Rockslide
+in Askja, July 21 2014 – Preliminary results of observations, Memo of the
+Icelandic Meteorological Office, 1–12, available at:
+<a href="http://en.vedur.is/avalanches/articles/nr/2929" target="_blank">http://en.vedur.is/avalanches/articles/nr/2929</a> (last access: 11 June
+2018), 2014.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib55"><label>55</label><mixed-citation>
+Hellweg, M.: Physical models for the source of Lascar's harmonic tremor, J.
+Volcanol. Geoth. Res., 101, 183–198, 2000.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib56"><label>56</label><mixed-citation>
+Helmstetter, A. and Garambois, S.: Seismic monitoring of Séchilienne
+rockslide (French Alps): Analysis of seismic signals and their correlation
+with rainfalls, J. Geophys. Res.-Earth, 115, F03016,
+<a href="https://doi.org/10.1029/2009JF001532" target="_blank">https://doi.org/10.1029/2009JF001532</a>, 2010.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib57"><label>57</label><mixed-citation>
+Helmstetter, A., Nicolas, B., Comon, P., and Gay, M.: Basal icequakes
+recorded beneath an Alpine glacier (Glacier d'Argentière, Mont Blanc,
+France): Evidence for stick-slip motion?, J. Geophys. Res.-Earth, 120,
+379–401, 2015.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib58"><label>58</label><mixed-citation>
+Hibert, C., Mangeney, A., Grandjean, G., and Shapiro, N.: Slope instabilities
+in Dolomieu crater, Réunion Island: From seismic signals to rockfall
+characteristics, J. Geophys. Res.-Earth, 116, F04032,
+<a href="https://doi.org/10.1029/2011JF002038" target="_blank">https://doi.org/10.1029/2011JF002038</a>, 2011.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib59"><label>59</label><mixed-citation>
+Hibert, C., Ekström, G., and Stark, C. P.: Dynamics of the Bingham Canyon
+Mine landslides from seismic signal analysis, Geophys. Res. Lett., 41,
+4535–4541, 2014.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib60"><label>60</label><mixed-citation>
+Hibert, C., Stark, C. P., and Ekström, G.: Dynamics of the Oso-Steelhead
+landslide from broadband seismic analysis, Nat. Hazards Earth Syst. Sci., 15,
+1265–1273, <a href="https://doi.org/10.5194/nhess-15-1265-2015" target="_blank">https://doi.org/10.5194/nhess-15-1265-2015</a>, 2015.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib61"><label>61</label><mixed-citation>
+Hoskuldsson, A., Gans, P., Burbank, D., and Wiss, A.: Avalanche induced
+Tsunamie in Askja caldera lake Iceland, 21 June 2014, EGU General Assembly
+Conference Abstracts, 12–17 April 2015, Vienna, Austria, vol. 17, p. 9762,
+2015.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib62"><label>62</label><mixed-citation>
+Hotovec, A. J., Prejean, S. G., Vidale, J. E., and Gomberg, J.: Strongly
+gliding harmonic tremor during the 2009 eruption of Redoubt Volcano, J.
+Volcanol. Geoth. Res., 259, 89–99, 2013.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib63"><label>63</label><mixed-citation>
+Huggel, C., Caplan-Auerbach, J., Gruber, S., Molnia, B., and Wessels, R.: The
+2005 Mt. Steller, Alaska, rock-ice avalanche: A large slope failure in cold
+permafrost, Proceedings of the Ninth International Conference on
+Permafrost, 29 June–3 July 2008, University of Fairbanks, Alaska, USA,
+vol. 29, 747–752, 2008.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib64"><label>64</label><mixed-citation>
+Iverson, R. M., Reid, M. E., and LaHusen, R. G.: Debris-flow mobilization
+from landslides, Annu. Rev. Earth Pl. Sc. 25, 85–138, 1997.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib65"><label>65</label><mixed-citation>
+Iverson, R. M., George, D. L., Allstadt, K., Reid, M. E., Collins, B.,
+Vallance, J. W., Schilling, S. P., Godt, J. W., Cannon, C., Magirl, C. S.,
+Baum, R. L., Coe, J. A., Schulz, W., and Bower, J. B.: Landslide mobility and
+hazards: implications of the 2014 Oso disaster, Earth Planet. Sc. Lett.,
+412, 197–208, 2015.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib66"><label>66</label><mixed-citation>
+Jakobsdóttir, S. S.: Seismicity in Iceland: 1994–2007, Jökull, 58,
+75–100, 2008.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib67"><label>67</label><mixed-citation>
+Jakobsdóttir, S. S., Guðmundsson, G. B., and Stefánsson, R.:
+Seismicity in Iceland 1991–2000 monitored by the SIL seismic system,
+Jökull, 51, 87–94, 2002.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib68"><label>68</label><mixed-citation>
+Jakobsdóttir, S. S., Roberts, M., Guđmundsson, G., Geirsson, H., and
+Slunga, R.: Earthquake swarms at Upptyppingar, north-east Iceland: A sign of
+magma intrusion?, Stud. Geophys. Geod., 52, 513–528, 2008.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib69"><label>69</label><mixed-citation>
+Jellinek, A. M. and Bercovici, D.: Seismic tremors and magma wagging during
+explosive volcanism, Nature, 470, 522–525, 2011.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib70"><label>70</label><mixed-citation>
+Jousset, P., Neuberg, J., and Sturton, S.: Modelling the time-dependent
+frequency content of low-frequency volcanic earthquakes, J. Volcanol. Geoth.
+Res., 128, 201–223, 2003.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib71"><label>71</label><mixed-citation>
+Julian, B. R.: Volcanic tremor: nonlinear excitation by fluid flow, J.
+Geophys. Res.-Sol. Ea., 99, 11859–11877, 1994.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib72"><label>72</label><mixed-citation>
+Kedar, S., Kanamori, H., and Sturtevant, B.: Bubble collapse as the source of
+tremor at Old Faithful Geyser, J. Geophys. Res.-Sol. Ea., 103,
+24283–24299, 1998.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib73"><label>73</label><mixed-citation>
+Key, J., White, R., Soosalu, H., and Jakobsdóttir, S.: Multiple melt
+injection along a spreading segment at Askja, Iceland, Geophys. Res. Lett.,
+38, L05301, <a href="https://doi.org/10.1029/2010GL046264" target="_blank">https://doi.org/10.1029/2010GL046264</a>, 2011.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib74"><label>74</label><mixed-citation>
+Kilburn, C. R. J. and Petley, D. N.: Forecasting giant, catastrophic slope
+collapse: lessons from Vajont, Northern Italy, Geomorphology, 54, 21–32,
+2003.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib75"><label>75</label><mixed-citation>
+Kolesnikov, Yu. I., Nemirovich-Danchenko, M. M., Goldin, S. V., and Seleznev,
+V. S.: Slope stability monitoring from microseismic field using polarization
+methodology, Nat. Hazards Earth Syst. Sci., 3, 515–521,
+<a href="https://doi.org/10.5194/nhess-3-515-2003" target="_blank">https://doi.org/10.5194/nhess-3-515-2003</a>, 2003.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib76"><label>76</label><mixed-citation>
+Konstantinou, K. I. and Schlindwein, V.: Nature, wavefield properties and
+source mechanism of volcanic tremor: a review, J. Volcanol. Geoth. Res.,
+119, 161–187, 2003.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib77"><label>77</label><mixed-citation>
+Leet, R. C.: Saturated and subcooled hydrothermal boiling in groundwater flow
+channels as a source of harmonic tremor, J. Geophys. Res.-Sol. Ea., 93,
+4835–4849, 1988.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib78"><label>78</label><mixed-citation>
+Lipovsky, B. P. and Dunham, E. M.: Vibrational modes of hydraulic fractures:
+Inference of fracture geometry from resonant frequencies and attenuation, J.
+Geophys. Res.-Sol. Ea., 120, 1080–1107, 2015.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib79"><label>79</label><mixed-citation>
+Lipovsky, B. P. and Dunham, E. M.: Tremor during ice-stream stick slip, The
+Cryosphere, 10, 385–399, <a href="https://doi.org/10.5194/tc-10-385-2016" target="_blank">https://doi.org/10.5194/tc-10-385-2016</a>, 2016.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib80"><label>80</label><mixed-citation>
+Lipovsky, B. P. and Dunham, E. M.: Slow-slip events on the Whillans Ice
+Plain, Antarctica, described using rate-and-state friction as an ice stream
+sliding law, J. Geophys. Res.-Earth, 122, 973–1003, 2017.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib81"><label>81</label><mixed-citation>
+Lockner, D., Byerlee, J., Kuksenko, V., Ponomarev, A., and Sidorin, A.:
+Quasi-static fault growth and shear fracture energy in granite, Nature,
+350, 39–42, 1991.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib82"><label>82</label><mixed-citation>
+Manconi, A., Picozzi, M., Coviello, V., De Santis, F., and Elia, L.:
+Real-time detection, location, and characterization of rockslides using
+broadband regional seismic networks, Geophys. Res. Lett., 43, 6960–6967,
+2016.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib83"><label>83</label><mixed-citation>
+Marone, C.: Laboratory-derived friction laws and their application to seismic
+faulting, Annu. Rev. Earth Pl. Sc., 26, 643–696, 1998.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib84"><label>84</label><mixed-citation>
+Matoza, R. S., Fee, D., and Garcés, M. A.: Infrasonic tremor wavefield of
+the PuuŌō crater complex and lava tube system, Hawaii, in April 2007,
+J. Geophys. Res.-Sol. Ea., 115, B12312, <a href="https://doi.org/10.1029/2009JB007192" target="_blank">https://doi.org/10.1029/2009JB007192</a>, 2010.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib85"><label>85</label><mixed-citation>
+McNutt, S. R.: Volcanic tremor, Encyclopedia of earth system science, 4,
+417–425, 1992.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib86"><label>86</label><mixed-citation>
+McNutt, S. R.: Volcanic seismology, Annu. Rev. Earth Pl. Sc., 32, 461–491,
+2005.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib87"><label>87</label><mixed-citation>
+Mitchell, M. A., White, R. S., Roecker, S., and Greenfield, T.: Tomographic
+image of melt storage beneath Askja Volcano, Iceland using local
+microseismicity, Geophys. Res. Lett., 40, 5040–5046, 2013.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib88"><label>88</label><mixed-citation>
+Moore, J. G.: Density of basalt core from Hilo drill hole, Hawaii, J.
+Volcanol. Geoth. Res., 112, 221–230, 2001.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib89"><label>89</label><mixed-citation>
+Moretti, L., Mangeney, A., Capdeville, Y., Stutzmann, E., Huggel, C.,
+Schneider, D., and Bouchut, F.: Numerical modeling of the Mount Steller
+landslide flow history and of the generated long period seismic waves,
+Geophys. Res. Lett., 39, L16402, <a href="https://doi.org/10.1029/2012GL052511" target="_blank">https://doi.org/10.1029/2012GL052511</a>, 2012.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib90"><label>90</label><mixed-citation>
+Moretti, L., Allstadt, K., Mangeney, A., Capdeville, Y., Stutzmann, E., and
+Bouchut, F.: Numerical modeling of the Mount Meager landslide constrained by
+its force history derived from seismic data, J. Geophys. Res.-Sol. Ea.,
+120, 2579–2599, 2015.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib91"><label>91</label><mixed-citation>
+Neuberg, J.: Characteristics and causes of shallow seismicity in andesite
+volcanoes, Philos. T. Roy. Soc. A, 358, 1533–1546, 2000.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib92"><label>92</label><mixed-citation>
+Norris, R. D.: Seismicity of rockfalls and avalanches at three Cascade Range
+volcanoes: Implications for seismic detection of hazardous mass movements, B.
+Seismol. Soc. Am., 84, 1925–1939, 1994.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib93"><label>93</label><mixed-citation>
+Okal, E. A.: Single forces and double-couples: a theoretical review of their
+relative efficiency for the excitation of seismic and tsunami waves, J. Phys.
+Earth, 38, 445–474, 1990.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib94"><label>94</label><mixed-citation>
+Omori, F.: On the Aftershocks of Earthquakes, Journal of the College of
+Science, Imperial University of Tokyo, 7, 111–120, 1894.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib95"><label>95</label><mixed-citation>
+Palmer, J.: Creeping earth could hold secret to deadly landslides, Nature,
+548, 384–386, 2017.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib96"><label>96</label><mixed-citation>
+Poli, P.: Creep and slip: Seismic precursors to the Nuugaatsiaq landslide
+(Greenland), Geophys. Res. Lett., 44, 8832–8836, 2017.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib97"><label>97</label><mixed-citation>
+Powell, T. and Neuberg, J.: Time dependent features in tremor spectra, J.
+Volcanol. Geoth. Res., 128, 177–185, 2003.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib98"><label>98</label><mixed-citation>
+Rice, J. R., Lapusta, N., and Ranjith, K.: Rate and state dependent friction
+and the stability of sliding between elastically deformable solids, J. Mech.
+Phys. Solids, 49, 1865–1898, 2001.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib99"><label>99</label><mixed-citation>
+Röösli, C., Walter, F., Husen, S., Andrews, L. C., Lüthi, M. P.,
+Catania, G. A., and Kissling, E.: Sustained seismic tremors and icequakes
+detected in the ablation zone of the Greenland ice sheet, J. Glaciol., 60,
+563–575, 2014.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib100"><label>100</label><mixed-citation>
+Rust, A., Balmforth, N., and Mandre, S.: The feasibility of generating
+low-frequency volcano seismicity by flow through a deformable channel, Geol.
+Soc., Spec. Publ., 307, 45–56, 2008.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib101"><label>101</label><mixed-citation>
+Saemundsson, T., Kristinn Helgason, J., Brynjolfsson, S., Hoskuldsson, A.,
+Rut Hjartardottir, A., and Sigmundsson, F.: The rockslide in the Askja
+caldera on the 21st of July 2014, EGU General Assembly Conference
+Abstracts, 12–17 April 2015, Vienna, Austria, vol. 17, p. 11734, 2015.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib102"><label>102</label><mixed-citation>
+Sassa, K., Dang, K., Yanagisawa, H., and He, B.: A new landslide-induced
+tsunami simulation model and its application to the 1792 Unzen-Mayuyama
+landslide-and-tsunami disaster, Landslides, 13, 1405–1419, 2016.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib103"><label>103</label><mixed-citation>
+Schneider, D., Bartelt, P., Caplan-Auerbach, J., Christen, M., Huggel, C.,
+and McArdell, B. W.: Insights into rock-ice avalanche dynamics by combined
+analysis of seismic recordings and a numerical avalanche model, J. Geophys.
+Res.-Earth, 115, F04026, <a href="https://doi.org/10.1029/2010JF001734" target="_blank">https://doi.org/10.1029/2010JF001734</a>, 2010.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib104"><label>104</label><mixed-citation>
+Senfaute, G., Duperret, A., and Lawrence, J. A.: Micro-seismic precursory
+cracks prior to rock-fall on coastal chalk cliffs: a case study at
+Mesnil-Val, Normandie, NW France, Nat. Hazards Earth Syst. Sci., 9,
+1625–1641, <a href="https://doi.org/10.5194/nhess-9-1625-2009" target="_blank">https://doi.org/10.5194/nhess-9-1625-2009</a>, 2009.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib105"><label>105</label><mixed-citation>
+Sigvaldason, G. E.: Volcanic and tectonic processes coinciding with
+glaciation and crustal rebound: an early Holocene rhyolitic eruption in the
+Dyngjufjöll volcanic centre and the formation of the Askja caldera, north
+Iceland, B. Volcanol., 64, 192–205, 2002.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib106"><label>106</label><mixed-citation>
+Sima, H.: On Observation of Microearthquakes as Events Preceding the
+Jizukiyama Landslide, Nagano Prefecture, Journal of Japan Landslide Society,
+23, 1–7, 1986.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib107"><label>107</label><mixed-citation>
+Soosalu, H., Key, J., White, R. S., Knox, C., Einarsson, P., and
+Jakobsdóttir, S. S.: Lower-crustal earthquakes caused by magma movement
+beneath Askja volcano on the north Iceland rift, B. Volcanol., 72, 55–62,
+2010.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib108"><label>108</label><mixed-citation>
+Sturton, S. and Neuberg, J.: The effects of conduit length and acoustic
+velocity on conduit resonance: Implications for low-frequency events, J.
+Volcanol. Geoth. Res., 151, 319–339, 2006.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib109"><label>109</label><mixed-citation>
+Suriñach, E., Vilajosana, I., Khazaradze, G., Biescas, B., Furdada, G.,
+and Vilaplana, J. M.: Seismic detection and characterization of landslides
+and other mass movements, Nat. Hazards Earth Syst. Sci., 5, 791–798,
+<a href="https://doi.org/10.5194/nhess-5-791-2005" target="_blank">https://doi.org/10.5194/nhess-5-791-2005</a>, 2005.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib110"><label>110</label><mixed-citation>
+Takei, Y. and Kumazawa, M.: Why have the single force and torque been
+excluded from seismic source models?, Geophys. J. Int., 118, 20–30, 1994.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib111"><label>111</label><mixed-citation>
+Thorarinsson, S. and Sigvaldason, G. E.: The eruption in Askja, 1961; a
+preliminary report, Am. J. Sci., 260, 641–651, 1962.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib112"><label>112</label><mixed-citation>
+Tonnellier, A., Helmstetter, A., Malet, J.-P., Schmittbuhl, J., Corsini, A.,
+and Joswig, M.: Seismic monitoring of soft-rock landslides: the Super-Sauze
+and Valoria case studies, Geophys. J. Int., 193, 1515–1536, 2013,.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib113"><label>113</label><mixed-citation>
+Unglert, K. and Jellinek, A.: Volcanic tremor and frequency gliding during
+dike intrusions at Kīlauea – A tale of three eruptions, J. Geophys.
+Res.-Sol. Ea., 120, 1142–1158, 2015.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib114"><label>114</label><mixed-citation>
+Van Genuchten, P. and De Rijke, H.: On pore water pressure variations causing
+slide velocities and accelerations observed in a seasonally active landslide,
+Earth Surf Proc. Land., 14, 577–586, 1989.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib115"><label>115</label><mixed-citation>
+Vilajosana, I., Suriñach, E., Abellán, A., Khazaradze, G., Garcia,
+D., and Llosa, J.: Rockfall induced seismic signals: case study in
+Montserrat, Catalonia, Nat. Hazards Earth Syst. Sci., 8, 805–812,
+<a href="https://doi.org/10.5194/nhess-8-805-2008" target="_blank">https://doi.org/10.5194/nhess-8-805-2008</a>, 2008.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib116"><label>116</label><mixed-citation>
+Vogfjörd, K., Kristinn Helgason, J., Jonsdottir, K., Brynjolfsson, S.,
+Grimsdottir, H., Johannesson, T., Hensch, M., and Ripepe, M.: The Askja
+rockslide and the associated tsunami in the caldera lake, EGU General
+Assembly Conference Abstracts, 12–17 April 2015, Vienna, Austria, vol. 17,
+p. 12128, 2015.
+
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib117"><label>117</label><mixed-citation>
+Voight, B., Glicken, H., Janda, R., and Douglass, P.: Catastrophic rockslide
+avalanche of May 18, in: The 1980 Eruptions of Mount St. Helens,
+Washington, vol. 1250, edited by: Lipman, P. and Mullineaux, D., US
+Geological Survey Professional Papers, U.S. Government Printing Office,
+Washington, D.C., USA, 347–377, 1981.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib118"><label>118</label><mixed-citation>
+Vouillamoz, N., Rothmund, S., and Joswig, M.: Characterizing the complexity
+of seismic signals at slow-moving clay-rich debris slides: The Super-Sauze
+(Southeastern France) and Pechgraben (Upper Austria) case studies, Earth
+Surf. Dynam. Discuss., <a href="https://doi.org/10.5194/esurf-2017-65" target="_blank">https://doi.org/10.5194/esurf-2017-65</a>, in review,
+2017.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib119"><label>119</label><mixed-citation>
+Wessel, P., Smith, W. H., Scharroo, R., Luis, J., and Wobbe, F.: Generic
+mapping tools: improved version released, Eos, Transactions, American
+Geophysical Union, 94, 409–410, 2013.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib120"><label>120</label><mixed-citation>
+White, R. S., Drew, J., Martens, H. R., Key, J., Soosalu, H., and
+Jakobsdóttir, S. S.: Dynamics of dyke intrusion in the mid-crust of
+Iceland, Earth Planet. Sc. Lett., 304, 300–312, 2011.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib121"><label>121</label><mixed-citation>
+Winberry, P. J., Anandakrishnan, S., Wiens, D. A., and Alley, R. B.:
+Nucleation and seismic tremor associated with the glacial earthquakes of
+Whillans Ice Stream, Antarctica, Geophys. Res. Lett., 40, 312–315, 2013.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib122"><label>122</label><mixed-citation>
+Yamada, M., Kumagai, H., Matsushi, Y., and Matsuzawa, T.: Dynamic landslide
+processes revealed by broadband seismic records, Geophys. Res. Lett., 40,
+2998–3002, 2013.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib123"><label>123</label><mixed-citation>
+Yamada, M., Mori, J., and Matsushi, Y.: Possible stick-slip behavior before
+the Rausu landslide inferred from repeating seismic events, Geophys. Res.
+Lett., 43, 9038–9044, 2016.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib124"><label>124</label><mixed-citation>
+Zeckra, M., Hovius, N., Burtin, A., and Hammer, C.: Automated Detection and
+Classification of Rockfall Induced Seismic Signals with Hidden-Markov-Models,
+AGU Fall Meeting 2015, 14–18 December 2015, San Francisco, California, USA,
+abstract #NH34A-04, 2015.
+</mixed-citation></ref-html>--></article>

@@ -1,0 +1,5 @@
+data/source_objects/*.geojson binary
+data/source_objects/*.html binary
+data/source_objects/*.json binary
+data/source_objects/*.pdf binary
+data/source_objects/*.xml binary
