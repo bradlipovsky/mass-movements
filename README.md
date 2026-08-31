@@ -32,7 +32,12 @@ make check-reanalysis
 
 `make reanalysis` repeats the registered remote extraction only while the
 public store remains at the frozen snapshot. The retrieval manifest records
-that snapshot and hashes every committed derived table.
+that snapshot and hashes every committed derived table. `make
+notebook-reanalysis` re-executes the committed notebook from the derived
+tables and regenerates its figures. `make artifacts-reanalysis` runs the
+remote extraction, notebook execution, and PDF build in that order. Each
+target accepts `PYTHON_REANALYSIS=/path/to/venv/bin/python` when the virtual
+environment is not named `.venv`.
 
 Project decisions and review are tracked in
 [GitHub issues](https://github.com/bradlipovsky/mass-movements/issues).
