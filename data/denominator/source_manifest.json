@@ -17,7 +17,8 @@
       "rights_record_url": "https://datashare.ed.ac.uk/items/f070ec05-02dc-4450-8f16-039c7b2d2062",
       "license_url": "https://creativecommons.org/licenses/by/3.0/",
       "dataset_doi": "10.7488/ds/1877",
-      "terms": "Edinburgh DataShare identifies Gruber as creator and University of Zurich as publisher of the same Global Permafrost PZI dataset and assigns it CC BY 3.0. Derived subsets require attribution; no byte identity between archive representations is claimed."
+      "attribution_party": "World Glacier Monitoring Service (WGMS)",
+      "terms": "Edinburgh DataShare identifies Gruber as creator and University of Zurich as publisher of the same Global Permafrost PZI dataset, requests attribution to WGMS as its source, and assigns it CC BY 3.0. Derived subsets require attribution; no byte identity between archive representations is claimed."
     },
     "ITS_LIVE": {
       "terms_url": "https://nsidc.org/data/documentation/measures-its_live-regional-glacier-and-ice-sheet-surface-velocities-version-2-user-guide",
@@ -208,15 +209,15 @@
       "size_bytes": 4417
     },
     {
-      "derivation": "selected exact rights fields from the official Edinburgh DataShare HAL JSON; full response SHA-256 retained",
+      "derivation": "selected rights fields from the official Edinburgh DataShare item API and archive metadata from its bitstream API; full item-response SHA-256 and endpoint URLs retained",
       "derived_from": [
         "pzi_rights_record"
       ],
       "path": "data/denominator/source/pzi_rights_metadata.json",
       "region": "global",
       "role": "source_metadata",
-      "sha256": "3165ca5c90f7896a58e1dd2a6a2a7f7988a693d645a669e03cffddd5240f6f88",
-      "size_bytes": 1182
+      "sha256": "7a0358075fd3eb4fa32ab35dfba6560558f2de77d7dc1ae04934184409216c27",
+      "size_bytes": 1687
     },
     {
       "derivation": "rejected WCS response: numeric background encoded as nodata",

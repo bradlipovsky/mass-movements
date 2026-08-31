@@ -43,11 +43,15 @@ that service mapped documented background zero to nodata.
 
 Edinburgh DataShare DOI `10.7488/ds/1877` archives the same Global Permafrost
 PZI dataset, identifies Gruber as creator and UZH as publisher, links the UZH
-source page and 2012 derivation paper, and assigns the data CC BY 3.0. Its
-official API rights fields are preserved in `source/pzi_rights_metadata.json`.
-The DataShare copy uses an ESRI File Geodatabase, so no byte identity with the
-UZH raw Float32 representation is claimed. The committed window subsets are
-treated as attributed adaptations of the licensed PZI data.
+source page and 2012 derivation paper, requests attribution to the World
+Glacier Monitoring Service (WGMS) as the data source, and assigns the data CC
+BY 3.0. We therefore credit WGMS as source, Gruber as creator, and UZH as
+publisher. The item, bundle, bitstream, and content endpoints supporting the
+rights fields, archive size, and archive MD5 are preserved in
+`source/pzi_rights_metadata.json`. The DataShare copy uses an ESRI File
+Geodatabase, so no byte identity with the UZH raw Float32 representation is
+claimed. The committed window subsets are attributed adaptations of the
+licensed PZI data.
 
 ## ITS_LIVE observability
 
