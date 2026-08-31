@@ -1,0 +1,99 @@
+{
+  "manifest_version": "1.0",
+  "created_utc": "2026-08-31T14:19:20Z",
+  "artifact_commit": "7df0cc9ddd36eeac6dde46b63ae4515ea4cddac2",
+  "preoutput_commit": "acec6401bfa02b20d375e03d3eb82910148edf90",
+  "protocol_commit": "312e27630776f173630330adcaa591b95ce3852b",
+  "execution": {
+    "command": ".venv/bin/python scripts/scale_explicit_steep_area.py",
+    "created_utc": "2026-08-31T13:55:49Z",
+    "diagnostic_rows": 6,
+    "long_rows": 30,
+    "real_window_executions_before_first_read": 1
+  },
+  "code_budget": {
+    "analysis_lines": 182,
+    "new_test_lines": 175,
+    "notebook_code_lines": 36,
+    "downstream_test_added_lines": 7,
+    "total_lines": 400,
+    "limit_lines": 400
+  },
+  "results": {
+    "phase_cv_min": 0.0001153595963455,
+    "phase_cv_max": 0.0034743728594551,
+    "departure_90m_min": 0.0262262810791738,
+    "departure_90m_max": 0.1343485926106079,
+    "paired_departure_lower": 5,
+    "paired_departure_higher": 1,
+    "structural_zeros": 0,
+    "zero_reference_positive_variants": 0,
+    "confirmatory_pass_labels": 0,
+    "diagnostics": {
+      "03_glacier_proximity": {"departure_90m": 0.0589745017608849, "phase_cv": 0.0012266965756004, "hard_departure_90m": 0.2667810088095423},
+      "03_permafrost": {"departure_90m": 0.0374309026986089, "phase_cv": 0.0004119991842588, "hard_departure_90m": 0.2912042244823707},
+      "07_glacier_proximity": {"departure_90m": 0.1343485926106079, "phase_cv": 0.0034743728594551, "hard_departure_90m": 0.3660463930665307},
+      "07_permafrost": {"departure_90m": 0.0708253493464742, "phase_cv": 0.0001153595963455, "hard_departure_90m": 0.3736517719568567},
+      "08_glacier_proximity": {"departure_90m": 0.0369040019375802, "phase_cv": 0.0010512713018338, "hard_departure_90m": 0.0071633237822349},
+      "08_permafrost": {"departure_90m": 0.0262262810791738, "phase_cv": 0.0002481470389294, "hard_departure_90m": 0.1421817427246266}
+    }
+  },
+  "reproducibility": {
+    "independent_isolated_csv_rerun_byte_identical": true,
+    "scientific_csv_line_endings": "LF with terminal newline",
+    "presentation_artifacts": "reviewed snapshots; notebook and PDF toolchains embed timestamps and are not asserted byte-identical on regeneration"
+  },
+  "tests": {
+    "command": ".venv/bin/python -m unittest tests.test_denominator_pilot tests.test_event_audit tests.test_reanalysis_pilot tests.test_susceptible_area_convergence tests.test_scale_explicit_steep_area -v",
+    "expected_after_manifest": {"passed": 46, "skipped": 0}
+  },
+  "software": {
+    "python": "3.12.11",
+    "numpy": "2.5.2",
+    "scipy": "1.18.1",
+    "pandas": "3.0.5",
+    "shapely": "2.1.2",
+    "geos": "3.13.1",
+    "affine": "3.0.1",
+    "rasterio": "1.5.1",
+    "rasterio_gdal": "3.12.4",
+    "rasterio_proj": "9.8.1",
+    "pyproj": "3.7.2",
+    "pyproj_proj": "9.5.1",
+    "matplotlib": "3.11.1",
+    "nbclient": "0.11.0",
+    "nbformat": "5.11.1",
+    "jupyter_core": "5.9.1",
+    "pdftex": "3.14159265-2.6-1.40.19 (TeX Live 2018)",
+    "latexmk": "4.65"
+  },
+  "reviews": {
+    "preoutput": "approved acec640; exact distance, zero handling, hashes, software, and budget checked before execution",
+    "numeric": "approved b7c76c5; all rows, identities, diagnostics, raw Svalbard recomputation, and isolated byte-identical rerun checked",
+    "mechanics_and_manuscript": "approved b7c76c5 after neutral departure axis and contiguous float layout fixes",
+    "reproducibility": "0f25e1e findings addressed by exact final manifest tests, complete runtime provenance, serialized artifact recipe, and explicit snapshot semantics"
+  },
+  "files": {
+    "protocol/scale-explicit-steep-area.md": {"bytes": 10374, "sha256": "068d0d5f55ec73a165be5def1e8b36a14fafbe24fe367eb990d1a791514e34f5", "snapshot_at_artifact_commit": false},
+    "data/scale_explicit_steep_area/preoutput_freeze.json": {"bytes": 2141, "sha256": "f77380675b16729d92ce25530396f20d13815b8abcf06d952cab019241387a32", "snapshot_at_artifact_commit": false},
+    "data/scale_explicit_steep_area/PROVENANCE.md": {"bytes": 2554, "sha256": "691c5be8759d3779d43a9ba6ad883330856a22a2d7fef56b2a9d39e541be7e98", "snapshot_at_artifact_commit": false},
+    "data/scale_explicit_steep_area/equivalent_area_long.csv": {"bytes": 10044, "sha256": "85c2b9a6e23115d31f83013217cd52eb57f1d24c2dde187595932701a419a34b", "snapshot_at_artifact_commit": false},
+    "data/scale_explicit_steep_area/diagnostics.csv": {"bytes": 1415, "sha256": "2d859607f9a7fe59150d3e94f01cc33d682f2e8337a18e2811df96fd5e231f9b", "snapshot_at_artifact_commit": false},
+    "data/area_convergence/source_manifest.json": {"bytes": 41304, "sha256": "db8b1464ffd8f0d055f9e8c384239763e2a8bf8f778e3fc43e85e23543daa89d", "snapshot_at_artifact_commit": false},
+    "data/area_convergence/freeze_manifest.json": {"bytes": 5974, "sha256": "a8326a8224345a71b14da7c14cf1765859dd8d0a4dc407f3e73b8d43a411cafb", "snapshot_at_artifact_commit": false},
+    "data/area_convergence/windows.csv": {"bytes": 505, "sha256": "fdac21395c4146e3ac029b3ae6e73f114a9550d4841ae527115a3abe834397e2", "snapshot_at_artifact_commit": false},
+    "data/area_convergence/decisions.csv": {"bytes": 853, "sha256": "7caee41d66625f0198b2cc23334cb6c55d538b1acd4ca93e211d354a6e1c9890", "snapshot_at_artifact_commit": false},
+    "scripts/scale_explicit_steep_area.py": {"bytes": 8302, "sha256": "15f7bff92b7ae44e5f64eac0db70598eb0f318f9a6ac5e2e689e5de9bc89e231", "snapshot_at_artifact_commit": false},
+    "tests/test_scale_explicit_steep_area.py": {"bytes": 11152, "sha256": "650e7ddfd5df9438a4cd069246813733efd84aec71b001a0afcfef994cd021bd", "snapshot_at_artifact_commit": false},
+    "scripts/denominator_pilot.py": {"bytes": 14163, "sha256": "5f733147434f859ea3cbfc815da77a1bd8ae83137d80e59a65243d6d3e23508a", "snapshot_at_artifact_commit": true},
+    "scripts/susceptible_area_convergence.py": {"bytes": 9274, "sha256": "9ac2644257ce1ba90bd8f2edbc6e9b47ea152fa02304b0c4b994e495a512b20c", "snapshot_at_artifact_commit": true},
+    "tests/test_susceptible_area_convergence.py": {"bytes": 8293, "sha256": "921fb7d916bf4cea4223e2ff83bd0212346cfaac391cedcff77d4055926f4d7c", "snapshot_at_artifact_commit": true},
+    "notebooks/scale_explicit_steep_area.ipynb": {"bytes": 104658, "sha256": "ec4820e98026b4c5aa915fa50dca6657e215f6bf7a5bb647e11c2854cc2b8d4c", "snapshot_at_artifact_commit": true},
+    "figures/scale_explicit_steep_area.pdf": {"bytes": 22951, "sha256": "5005bc3e5cf8f061254212095464ddfc46c35b07af067d81bdfe0b5620b52474", "snapshot_at_artifact_commit": true},
+    "figures/scale_explicit_steep_area.png": {"bytes": 172210, "sha256": "002ab59df9fb6330f852e0970ca0033fc940effea33b87c924929bdb591f14ec", "snapshot_at_artifact_commit": true},
+    "latex/main.tex": {"bytes": 50795, "sha256": "3065496190555f80c547b870b3a00fba2f7a0549896666428d58fe839c91deed", "snapshot_at_artifact_commit": true},
+    "latex/main.pdf": {"bytes": 590179, "sha256": "a8035f2e241a0f9b1ca8c28492136ed506b35599bb7ce264cc46b65f87f7d6dd", "snapshot_at_artifact_commit": true},
+    "README.md": {"bytes": 3247, "sha256": "345f5a1498c0708d0f5eacb52738a6ce7e389ebec1603f9887fea4cf9ba13e11", "snapshot_at_artifact_commit": true},
+    "Makefile": {"bytes": 3047, "sha256": "60964879a83dde37df700cc6ae21d01f00dc14e5623716fee67660d39f51fe6b", "snapshot_at_artifact_commit": true}
+  }
+}

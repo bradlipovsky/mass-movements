@@ -20,7 +20,7 @@
 
 \title{Climate preconditioning and the mechanics of hazardous alpine mass movements:\\a catalog and attribution protocol}
 \author{Bradley P. Lipovsky}
-\date{Working manuscript, 30 August 2026}
+\date{Working manuscript, 31 August 2026}
 
 \begin{document}
 \maketitle
@@ -54,7 +54,10 @@ aligned with the cases. A separate climate- and case-blind terrain pilot
 enumerates glacier, glacier-contact, and permafrost-intersection objects in
 three deterministically selected windows. Primary connected-component counts
 change by factors of 1.3--3.0 between 30 and 90~m grids, so the pilot supplies
-a reproducible frame but not a unique population count. I then specify detrended seasonal controls,
+a reproducible frame but not a unique population count. A post-outcome
+scale-explicit composite reduces 90~m area departure in five of six paired
+diagnostics from the same exposed windows, but is not an external validation.
+I then specify detrended seasonal controls,
 matched non-failing slopes, mechanism-specific glacier and permafrost
 observations, and multiplicity control. Uneven observation and unresolved
 primary sources prevent these counts from estimating a frequency trend. No
@@ -459,6 +462,69 @@ opportunities to pass the convergence test.
   \label{fig:area-convergence}
 \end{figure}
 
+\clearpage
+\subsection{Exposed-window scale-explicit development}
+
+The failed hard-threshold area test motivates a smoother numerical
+representation, but its values also exposed the windows used to develop that
+representation. I therefore registered the following calculation as
+post-outcome method development rather than a second holdout. It reuses the
+same DEM phases, glacier inventory, PZI samples, reporting windows, and local
+equal-area projections. No event, climate, deformation, or damage field enters
+the calculation.
+
+At each target-cell center, I fit a vertical-residual plane to all finite DEM
+centers within a nominal 300~m radius. For center offsets $(u,v)$ on a grid of
+spacing $r$, symmetry gives
+\begin{equation}
+ a=\frac{\sum uz}{\sum u^2},\qquad
+ b=\frac{\sum vz}{\sum v^2},\qquad
+ q=(a^2+b^2)^{1/2}.
+\end{equation}
+The steepness weight is zero below $q=\tan 25^\circ$, one above
+$q=\tan 35^\circ$, and linear in $q$ between those values. The
+glacier-outline stratum contains target centers outside the inventory union
+whose exact planar distance to it is no greater than 100~m. The permafrost
+stratum contains outside-glacier centers with PZI at least 0.1. Equivalent
+steep area is $E=r^2\sum w$ over reporting centers in each stratum with
+complete plane support. Although $E$ has area units, it is a weighted
+numerical measure rather than literal susceptible area or failure probability.
+
+The four 30~m phases remain similar: population coefficients of variation
+range from 0.00012 to 0.00347 (Figure~\ref{fig:scale-explicit}). Relative to
+the unshifted 30~m value, 90~m departures for glacier-outline proximity and
+PZI intersection are 5.9\% and 3.7\% in Arctic Canada North, 13.4\% and 7.1\%
+in Svalbard, and 3.7\% and 2.6\% in Scandinavia. These are smaller than the
+hard-threshold departures in five of six paired diagnostics. The exception is
+Scandinavian glacier proximity, which increases from 0.7\% to 3.7\%. All six
+new departures lie below the former 20\% bound, but that line is a visual
+reference and does not create a confirmatory pass result in exposed windows.
+
+Fixed support, continuous weighting, and exact outline proximity change
+together. Their paired difference therefore belongs to the composite and
+cannot identify which operation controls scale dependence. Moreover, the 30
+and 90~m disks contain different center quadrature; the calculation is not a
+resolution-independent physical kernel, failure-plane orientation, thickness,
+or stress. A new blind-region protocol must freeze this estimator unchanged
+before reading additional terrain values. Until that test, these diagnostics
+do not support global scaling.
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=\textwidth]{../figures/scale_explicit_steep_area.pdf}
+  \caption{Known-window scale-explicit equivalent-area development. (a, b)
+  Equivalent steep area relative to the unshifted 30~m result for four 30~m
+  phases and the aligned 90~m grid. (c) Paired 90~m departures for the failed
+  hard-threshold screen and the new composite; G denotes glacier-outline
+  proximity and P denotes PZI intersection. The dashed 0.8 ratio and 0.20
+  departure lines repeat former bounds only as references. The calculation was
+  selected after the hard-threshold results were known, has no pass label, and
+  contains no event or predicted-failure marker. Source products and
+  attribution are as in Figure~\ref{fig:area-convergence}.}
+  \label{fig:scale-explicit}
+\end{figure}
+\clearpage
+
 \section{Event-centered climate test}
 
 For each frozen event candidate, reanalysis will provide near-surface air
@@ -716,8 +782,9 @@ failure time.
 
 This version completes the climate-blind frame reconciliation, double
 screening, registered ERA5 temperature pilot, independently reviewed
-source-coordinate and UTC-onset audit, and the first case-blind susceptible-
-terrain pilot and held-out susceptible-area convergence test. The audit leaves
+source-coordinate and UTC-onset audit, the first case-blind susceptible-
+terrain pilot and held-out susceptible-area convergence test, and a
+post-outcome scale-explicit development calculation. The audit leaves
 29 coordinates and 16
 times unresolved and preserves three time conflicts; none is silently removed.
 The pilot inspected only its registered temperature endpoints and is not
@@ -728,12 +795,13 @@ The terrain pilot supplies candidate denominator objects, but its three windows
 do not estimate regional populations and its connected counts remain scale
 sensitive. The deterministic held-out windows likewise do not estimate a
 global population, and both registered area strata fail their resolution
-criterion. A new protocol must first define a physical, scale-explicit
-representation that passes its held-out numerical checks. A later association
-analysis may then acquire glacier-contact histories, deformation records,
-permafrost proxies, additional meteorological variables, and a frozen
-statistical specification before inspecting those new exposures. Only then can
-the study estimate whether hazardous alpine mass movements occupy
+criterion. The composite reduces departure in five of six paired diagnostics,
+but it was selected using those exposed results and cannot validate itself. A
+new protocol must freeze it unchanged before opening any blind-region values.
+Only after such a numerical test may a later association analysis acquire
+glacier-contact histories, deformation records, permafrost proxies, additional
+meteorological variables, and a frozen statistical specification. Only then
+can the study estimate whether hazardous alpine mass movements occupy
 systematically different climatic or cryospheric conditions.
 
 \section{Conclusions}
@@ -758,10 +826,12 @@ The blind terrain pilot reproducibly enumerates source-like area, but 30 versus
 held-out area test, phase coefficients of variation remain below 0.004, but
 90~m departures reach 26.7--36.6\% for glacier-contact area and 29.1--37.4\%
 for PZI-intersection area in Arctic Canada and Svalbard; both strata fail. A
-new physical, scale-explicit representation, detrended seasonal controls, and
-explicit competing predictions remain next tests. The present contribution is
-a sampling frame, protocol, and exposure-sensitivity result, not evidence that
-warming systematically triggered these events.
+post-outcome composite gives 2.6--13.4\% departures in the same windows and is
+lower in five of six paired diagnostics, but needs an unchanged blind-region
+test. Detrended seasonal controls and explicit competing predictions also
+remain future tests. The present contribution is a sampling frame, protocol,
+and exposure-sensitivity result, not evidence that warming systematically
+triggered these events.
 
 \bibliographystyle{plainnat}
 \bibliography{references}

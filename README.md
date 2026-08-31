@@ -56,3 +56,10 @@ window decisions, executed notebook, figure, tests, and manuscript. Both
 terrain screens presently fail the registered all-window resolution criterion;
 the repository therefore does not extrapolate them to global incidence or
 hazard.
+
+The post-outcome scale-explicit development registered in
+`protocol/scale-explicit-steep-area.md` reuses only those exposed windows. Run
+`make artifacts-scale-explicit` to regenerate its equivalent-area tables,
+executed notebook, figure, tests, and manuscript. The composite calculation
+reduces 90 m departure in five of six paired diagnostics, but it is not an
+external validation and is not extrapolated globally.
