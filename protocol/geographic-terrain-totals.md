@@ -1,6 +1,6 @@
 # Design-based totals of the frozen terrain-screen functional
 
-Version 0.4. Version 0.1 was registered in GitHub issue
+Version 0.5. Version 0.1 was registered in GitHub issue
 [#19](https://github.com/bradlipovsky/mass-movements/issues/19) on 31 August
 2026 before retrieving or opening any DEM or PZI value for an issue #17
 selected cell.
@@ -51,6 +51,20 @@ projected and geodesic failure above it, and the unchanged nonpolygonal, empty,
 and invalid-result stops. This correction was registered publicly before
 modification and still requires independent exact-commit approval before
 staging resumes.
+
+After the complete staged-source freeze, independent review found that its
+replay test activated when `source_replay.csv` appeared but unconditionally
+opened the intentionally absent future coverage table. The first coverage
+command was therefore interrupted during sealed-manifest verification after
+88.16 seconds, before the prior 140.05-second verification duration. No
+coverage, coverage-estimate, projection-repair, or equivalent-area output
+existed, and no value was printed or inspected. Version 0.5 separates the
+replay assertions from a conditional future coverage assertion, preserves all
+staged rasters and the version 2.0 manifest, and requires a successor manifest
+that changes only protocol and test identities and adds the immutable staged
+manifest plus a stop record. This test-only correction was registered publicly
+before modification and requires exact-commit approval before coverage
+restarts.
 
 ## Question and boundary
 

@@ -55,8 +55,8 @@ class GeographicTotalTests(unittest.TestCase):
         self.assertEqual((result.structural_zero, result.coverage_limited_zero, result.adequate_coverage_zero, result.phase_cv), ("yes", "yes", "no", 0))
     @unittest.skipUnless((OUTPUT / "source_replay.csv").exists(), "source staging pending")
     def test_source_freeze_replay_and_schema(self):
-        replay=pd.read_csv(OUTPUT / "source_replay.csv"); coverage=pd.read_csv(OUTPUT / "source_coverage.csv")
-        self.assertEqual((len(replay), len(coverage), replay.value_sha256.equals(replay.replay_value_sha256)), (480, 480, True))
+        replay=pd.read_csv(OUTPUT / "source_replay.csv"); coverage=OUTPUT / "source_coverage.csv"
+        self.assertEqual((len(replay), replay.value_sha256.equals(replay.replay_value_sha256)), (480, True)); self.assertTrue(not coverage.exists() or len(pd.read_csv(coverage)) == 480)
         self.assertTrue(replay[["stored_crs_equal", "replay_affine_equal", "finite_mask_equal"]].all().all())
         self.assertTrue((replay.replay_max_abs_difference == 0).all())
         from scripts.geographic_total import layers
