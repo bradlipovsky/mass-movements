@@ -101,16 +101,17 @@ repairing a geometry if either is invalid. Let `G` be the valid union of
 projected inventory glacier polygons. The glacier-outline-proximity band is
 
 ```text
-C = buffer(G, 100 m) minus G.
+C = {p outside G: distance(p, G) <= 100 m}.
 ```
 
 A target center `(x, y)` belongs to the proximity mask exactly when
-`intersects_xy(buffer(G, 100 m), x, y)` is true and `intersects_xy(G, x, y)` is
-false. This topological predicate includes the closed outer 100 m boundary and
-excludes glacier interiors and boundaries without relying on a directional
-rasterization tie rule. It is center-sampled planar distance to an inventory
-outline and remains coarsely sampled on a 90 m lattice. It is defensible as
-outline proximity, not physical contact, buttressing, unloading, damage, or a
+`dwithin(G, point(x, y), 100 m)` is true and `intersects_xy(G, x, y)` is false.
+The exact distance predicate includes the closed outer 100 m boundary and the
+intersection predicate excludes glacier interiors and boundaries, without a
+directional rasterization tie rule or a polygonal approximation of the rounded
+offset. It is center-sampled planar distance to an inventory outline and
+remains coarsely sampled on a 90 m lattice. It is defensible as outline
+proximity, not physical contact, buttressing, unloading, damage, or a
 glacier-history calculation.
 
 The permafrost mask contains target centers outside `G` with a finite PZI at
@@ -138,7 +139,9 @@ departure_v = abs(E_v - E0) / E0.
 Calculate the population coefficient of variation across the four 30 m phase
 values. If `E0=0` and every variant is zero, set departures and phase CV to
 zero and record `structural_zero=yes`. If `E0=0` and any variant is positive,
-leave ratios undefined.
+leave ratios and departures undefined. Calculate phase CV only when the four
+phase values have a positive mean; if their mean is zero while another variant
+is positive, leave phase CV undefined.
 
 The former issue #11 bounds, 0.20 for 90 m departure and 0.10 for phase CV,
 may appear as common reference lines only. They do not create a confirmatory
@@ -199,10 +202,11 @@ replacement.
 
 - 30 August 2026, before any equivalent-area value was calculated: replace the
   inherited center-rasterization boundary rule for the vector contact band with
-  the exact closed `intersects_xy` center predicate above. A synthetic boundary
-  check showed that the rasterization tie rule can differ by edge direction.
-  The 100 m distance, outside-glacier condition, and every other registered
-  choice are unchanged.
+  the then-registered closed buffer-boundary center predicate. A synthetic
+  boundary check showed that the rasterization tie rule can differ by edge
+  direction. The 100 m distance, outside-glacier condition, and every other
+  registered choice were unchanged; the later amendment below supersedes the
+  polygonal-buffer implementation.
 - 30 August 2026, before any equivalent-area value was calculated: clarify
   after mechanics review that the two resolutions use different center
   quadrature within a nominal radius; the regression inclination is not a mean
@@ -210,3 +214,12 @@ replacement.
   with no operative 30 degree threshold; inventory-outline proximity is not
   mechanical contact; and all three changes form one post-outcome composite.
   These clarifications change no calculation.
+- 30 August 2026, before any equivalent-area value was calculated: an
+  independent implementation audit found that GEOS's default rounded buffer is
+  a polygonal approximation and can exclude a center at exactly 100 m from an
+  oblique convex vertex. Replace the buffer predicate with exact `dwithin` and
+  retain `intersects_xy` to exclude the glacier and its boundary. The same audit
+  found that an all-zero four-phase mean paired with a positive 90 m value had
+  been assigned a phase CV of zero; register that CV as undefined instead. No
+  radius, distance, ramp, stratum, input, or favorable result motivated either
+  correction.
