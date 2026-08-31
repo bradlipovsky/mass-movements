@@ -1,31 +1,33 @@
 {
   "artifact_state": "not_executed",
-  "created_utc": "2026-08-31T06:31:46Z",
+  "created_utc": "2026-08-31T13:50:22Z",
   "issue": 13,
-  "protocol_commit": "501ae28822c3c756c13fdd0d2be369d0177089d3",
-  "protocol_version": "0.1 with two pre-output amendments",
+  "protocol_commit": "312e27630776f173630330adcaa591b95ce3852b",
+  "protocol_version": "0.1 with three pre-output amendments",
   "registered_choices": {
     "development_regions": ["03", "07", "08"],
     "glacier_outline_proximity_m": 100,
     "pzi_threshold": 0.1,
+    "proximity_predicate": "dwithin(G, point, 100) and not intersects_xy(G, point)",
     "ramp_degrees": [25, 35],
-    "support_radius_m": 300
+    "support_radius_m": 300,
+    "zero_phase_mean_cv": "undefined unless every variant is zero"
   },
   "files": {
     "analysis_program": {
-      "bytes": 7996,
+      "bytes": 8302,
       "path": "scripts/scale_explicit_steep_area.py",
-      "sha256": "a055081aa3435971a1919d6d52d6a95a6ef06512b89bd8c72290efedf6db07ee"
+      "sha256": "15f7bff92b7ae44e5f64eac0db70598eb0f318f9a6ac5e2e689e5de9bc89e231"
     },
     "protocol": {
-      "bytes": 9408,
+      "bytes": 10374,
       "path": "protocol/scale-explicit-steep-area.md",
-      "sha256": "c0833e7f41bea1ff3588e2234a428d800b6917662a93f05a5377da38b65c2dbb"
+      "sha256": "068d0d5f55ec73a165be5def1e8b36a14fafbe24fe367eb990d1a791514e34f5"
     },
     "tests": {
-      "bytes": 6433,
+      "bytes": 7165,
       "path": "tests/test_scale_explicit_steep_area.py",
-      "sha256": "9812dd10de33c8b5b692e347c73e76c666c542927073c779f8faadaaa53bcac7"
+      "sha256": "f2ca0b6c130ae9d6691c7e6fe90e95f389130ca8a51614af2c718498251479e1"
     }
   },
   "inherited_inputs": {
@@ -35,12 +37,12 @@
     "windows.csv": "fdac21395c4146e3ac029b3ae6e73f114a9550d4841ae527115a3abe834397e2"
   },
   "line_budget": {
-    "analysis_program": 178,
+    "analysis_program": 182,
     "hard_ceiling": 400,
     "notebook_code_pre_execution": 0,
-    "remaining_for_notebook": 90,
-    "tests": 132,
-    "total_pre_execution": 310
+    "remaining_for_notebook": 74,
+    "tests": 144,
+    "total_pre_execution": 326
   },
   "software": {
     "gdal": "3.12.4",

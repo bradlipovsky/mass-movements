@@ -82,6 +82,12 @@ class ScaleExplicitSteepAreaTests(unittest.TestCase):
         self.assertTrue(inside[0, at(0)] and inside[0, at(5)] and inside[0, at(10)])
         self.assertTrue(proximity[0, at(110)])
         self.assertFalse(proximity[0, at(111)])
+        diagonal = 100 / np.sqrt(2)
+        corner_affine = Affine(1, 0, -diagonal - 0.5, 0, -1e-6,
+                               -diagonal + 0.5e-6)
+        _, corner_proximity = vector_masks([box(0, 0, 10, 10)], (2, 1), corner_affine)
+        self.assertTrue(corner_proximity[0, 0])
+        self.assertFalse(corner_proximity[1, 0])
 
     def test_weighted_area_and_phase_grid(self):
         weight = np.array([[0.25, 0.5, 0.75], [1, 0, 0.5]])
@@ -108,6 +114,12 @@ class ScaleExplicitSteepAreaTests(unittest.TestCase):
         zero_records, zero_diagnostics = comparisons(zero, hard)
         self.assertTrue((zero_records.fractional_departure == 0).all())
         self.assertEqual(zero_diagnostics.iloc[0].structural_zero, "yes")
+        zero_30_positive_90 = zero.copy()
+        zero_30_positive_90.loc[zero_30_positive_90.variant == "r90",
+                                "equivalent_steep_area_m2"] = 1
+        edge_records, edge_diagnostics = comparisons(zero_30_positive_90, hard)
+        self.assertTrue(edge_records.fractional_departure.isna().all())
+        self.assertTrue(np.isnan(edge_diagnostics.iloc[0].phase_cv))
 
     def test_program_has_no_forbidden_input_path(self):
         text = Path("scripts/scale_explicit_steep_area.py").read_text()

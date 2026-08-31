@@ -6,7 +6,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from scipy.ndimage import binary_erosion, correlate
-from shapely import intersects_xy, prepare, union_all
+from shapely import dwithin, intersects_xy, points, prepare, union_all
 
 from scripts.denominator_pilot import load_features
 from scripts.susceptible_area_convergence import (
@@ -62,18 +62,19 @@ def center_coordinates(shape, affine):
 
 
 def vector_masks(geometries, shape, affine):
-    """Evaluate closed glacier and 100 m outline-proximity predicates at centers."""
-    if not geometries or any(not geometry.is_valid for geometry in geometries):
+    """Evaluate exact closed-distance glacier proximity in bounded row chunks."""
+    if not geometries or any(geometry.is_empty or not geometry.is_valid for geometry in geometries):
         raise ValueError("projected glacier geometry is empty or invalid")
     glacier = union_all(geometries)
-    buffered = glacier.buffer(CONTACT_M)
-    if not glacier.is_valid or not buffered.is_valid:
-        raise ValueError("projected glacier union or buffer is invalid")
+    if glacier.is_empty or not glacier.is_valid:
+        raise ValueError("projected glacier union is empty or invalid")
     prepare(glacier)
-    prepare(buffered)
     x, y = center_coordinates(shape, affine)
-    inside = intersects_xy(glacier, x, y)
-    proximity = intersects_xy(buffered, x, y) & ~inside
+    inside, proximity = np.empty(shape, bool), np.empty(shape, bool)
+    for start in range(0, shape[0], 256):
+        rows = slice(start, min(start + 256, shape[0]))
+        inside[rows] = intersects_xy(glacier, x, y[rows])
+        proximity[rows] = dwithin(glacier, points(x, y[rows]), CONTACT_M) & ~inside[rows]
     return inside, proximity
 
 
@@ -141,15 +142,18 @@ def comparisons(records, hard):
             records.loc[indices, "fractional_departure"] = 0.0
             records.loc[indices, "structural_zero"] = "yes"
         phases = by_variant.loc[list(PHASES)].to_numpy(dtype=float)
-        phase_cv = 0.0 if np.all(phases == 0) else float(np.std(phases) / np.mean(phases))
+        structural_zero = bool(np.all(by_variant == 0))
+        phase_mean = float(np.mean(phases))
+        phase_cv = (0.0 if structural_zero else
+                    float(np.std(phases) / phase_mean) if phase_mean > 0 else np.nan)
         hard_stratum = "glacier_contact" if stratum == "glacier_proximity" else stratum
         hard_departure = float(hard[(hard.region == region) & (hard.stratum == hard_stratum)].departure_90m.iloc[0])
         diagnostics.append(dict(
             region=region, stratum=stratum, reference_equivalent_area_m2=reference,
             area_90m_m2=float(by_variant.r90), departure_90m=(abs(float(by_variant.r90) - reference) / reference
                                                                if reference > 0 else np.nan),
-            phase_mean_area_m2=float(np.mean(phases)), phase_cv=phase_cv,
-            structural_zero="yes" if np.all(by_variant == 0) else "no",
+            phase_mean_area_m2=phase_mean, phase_cv=phase_cv,
+            structural_zero="yes" if structural_zero else "no",
             zero_reference_positive_variant="yes" if reference == 0 and np.any(by_variant > 0) else "no",
             hard_threshold_departure_90m=hard_departure,
             reference_departure_bound=0.20, reference_phase_cv_bound=0.10,
