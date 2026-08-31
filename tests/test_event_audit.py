@@ -5,7 +5,6 @@ from datetime import datetime, timezone
 
 from scripts import check_event_audit as audit
 
-
 class EventAuditEquationTest(unittest.TestCase):
     def test_positive_and_negative_utc_offsets(self):
         self.assertEqual(
@@ -44,7 +43,6 @@ class EventAuditEquationTest(unittest.TestCase):
         self.assertEqual(audit.uncertainty_class(5000), "le_5_km")
         self.assertEqual(audit.uncertainty_class(5001), "gt_5_km_or_unknown")
 
-
 class EventAuditArtifactTest(unittest.TestCase):
     def test_registered_tables_and_manifest(self):
         errors, summary, coordinates, times, sources = audit.validate_rows()
@@ -82,7 +80,6 @@ class EventAuditArtifactTest(unittest.TestCase):
         code_lines = sum(len(cell.get("source", [])) for cell in notebook["cells"] if cell["cell_type"] == "code")
         self.assertNotIn("data/reanalysis", source.lower())
         self.assertLessEqual(code_lines, 135)
-
 
 if __name__ == "__main__":
     unittest.main()
