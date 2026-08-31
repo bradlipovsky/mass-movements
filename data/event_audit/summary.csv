@@ -7,7 +7,7 @@ aysen-2007-punta-cola,,,2007-04-21,,day,unresolved,,,,,not_reported,unresolved,,
 baige-2018-nov,31.0823,98.711,2018-11-03,,minute,unresolved,,,,,geometry_ambiguous,accepted,2018-11-03T09:21:30Z,2018-11-03T09:21:31Z,time-baige-nov-zhang2024,,The study-site point is not established as the second failure source centroid; event-specific force inversion supplies the onset.
 baige-2018-oct,31.0823,98.711,2018-10-10,,minute,unresolved,,,,,geometry_ambiguous,accepted,2018-10-10T14:05:46Z,2018-10-10T14:05:47Z,time-baige-oct-zhang2024,,Published numeric points lack source-centroid semantics; event-specific force inversion defines hillslope initiation before the generic catalog time.
 blatten-2025,,,2025-05-28,,minute,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
-bukadaban-2022,35.969,90.869,2022-11-01,,minute,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
+bukadaban-2022,35.969,90.869,2022-11-01,,minute,accepted,35.969,90.869,le_5_km,coord-bukadaban-kaab2026,,accepted,2022-11-01T05:57:00Z,2022-11-01T05:58:00Z,time-bukadaban-seismic57-kaab2026,,The detailed seismic supplement's approximate 05:57 UTC onset is preferred over its preliminary 05:55 estimate; the satellite bracket is retained as context.
 cengalo-2011,,,2011-12-27,,minute,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
 cengalo-2017,,,2017-08-23,,minute,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
 chamoli-2021,30.375,79.732,2021-02-07,,second,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
@@ -23,12 +23,12 @@ dickson-2023,72.81,-26.95,2023-09-16,,minute,accepted,72.81,-26.95,le_1_km,coord
 dykhtau-2023,,,2023-08-12,,day,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
 elliot-creek-2020,50.97,-124.61,2020-11-28,,day,unresolved,,,,,geometry_ambiguous,accepted,2020-11-28T14:52:56Z,2020-11-28T14:52:57Z,time-elliot-earthscope,,Mapped scar lacks a published numeric source point; EarthScope separates the initial avalanche from the later outburst-flood phase.
 eqip-sermia-2014,69.8,-50.2167,2014-07-02,,day,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
-flat-creek-2013,61.50,-141.54,2013-08-05,,day,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
+flat-creek-2013,61.50,-141.54,2013-08-05,,day,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,The table coordinate conflicts with its GLIMS identifier and georeferenced figure by roughly 15--20 km; only a calendar date is reported.
 haast-2013,,,2013-01-21,,minute,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
-hillary-2014,-43.6165,170.1427,2014-07-14,,minute,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
+hillary-2014,-43.6165,170.1427,2014-07-14,,minute,accepted,-43.6165,170.1427,le_1_km,coord-hillary-cox2015,,accepted,2014-07-14T09:32:00Z,2014-07-14T09:33:00Z,time-hillary-cox2015,,The primary study ties its coordinate to the source slope and explicitly defines NZST as UTC+12.
 iliamna-2003,,,2003-07-25,,day,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
 karrat-2017,71.6433,-52.3367,2017-06-17,,minute,accepted,71.6433333,-52.3366667,le_1_km,coord-karrat-svennevig2020,,accepted,2017-06-17T23:39:00Z,2017-06-17T23:40:00Z,time-karrat-svennevig2020,,Event-specific mapped scar and Zulu minute outrank the geometry- and scale-ambiguous inventory entries.
-kolka-2002,42.73,44.44,2002-09-20,,day,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
+kolka-2002,42.73,44.44,2002-09-20,,day,accepted,42.73,44.44,le_5_km,coord-kolka-kaab2021,,accepted,2002-09-20T16:04:43Z,2002-09-20T16:04:44Z,time-kolka-evans2009,,Mapped evacuated glacier geometry supports the coordinate; the reconstruction explicitly defines local summer time as GMT+4.
 la-perouse-2014,,,2014-02-16,,minute,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
 laguna513-2010,-9.2125,-77.55,2010-04-11,,day,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,Published 07:40 local clock has no stated civil scale; the later second avalanche also leaves pulse allocation unresolved. Lake and inventory points are not source coordinates.
 lamplugh-2016,,,2016-06-28,,minute,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
@@ -45,10 +45,10 @@ sedongpu-2018,29.80,94.92,2018-10-16,,minute,unresolved,,,,,geometry_ambiguous,u
 sedongpu-2021-mar,29.819987,94.947812,2021-03-22,,day,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
 seti-2012,28.5304,84.0510,2012-05-05,,day,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
 steele-2007,,,2007-07-25,,minute,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
-steller-2005,60.52,-143.09,2005-09-14,,minute,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
+steller-2005,60.52,-143.09,2005-09-14,,minute,accepted,60.52,-143.09,le_5_km,coord-steller-moretti2012,,accepted,2005-09-14T19:59:00Z,2005-09-14T20:00:00Z,time-steller-moretti2012,,The primary study directly associates the published point and approximate UT minute with the southern summit-flank collapse.
 taan-2015,60.17,-141.18,2015-10-17,,day,accepted,60.175,-141.187,le_1_km,coord-taan-gualtieri2018,,accepted,2015-10-18T05:18:00Z,2015-10-18T05:19:00Z,time-taan-gualtieri2018,,UTC date is 18 October although the corresponding Alaska civil date and frozen catalog label are 17 October.
 thurwieser-2004,,,2004-09-18,,minute,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
 tracy-arm-2025,57.85,-133.07,2025-08-10,,minute,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
 tsar-2000,,,2000-09-14,,minute,unresolved,,,,,not_reported,unresolved,,,,time_basis_unknown,
-yigong-2000,30.1775,94.9403,2000-04-09,,day,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
+yigong-2000,30.1775,94.9403,2000-04-09,,day,unresolved,,,,,geometry_ambiguous,accepted,2000-04-09T11:58:56Z,2000-04-09T11:58:57Z,time-yigong-ho2025,,Published event points lack source-scar semantics; repeated explicit UTC definitions outweigh one isolated raw 23:58:56 prose value.
 yulong-2004,27.090639,100.18447,2004-03-12,,day,unresolved,,,,,geometry_ambiguous,unresolved,,,,time_basis_unknown,
