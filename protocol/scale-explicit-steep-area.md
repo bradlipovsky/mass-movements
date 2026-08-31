@@ -13,13 +13,15 @@ smoothing, slope support, mask sampling, contact discretization, reporting
 centers, and cell area. The hard pixel-scale slope threshold therefore failed
 as a numerical denominator.
 
-This protocol asks whether a fixed physical slope support, continuous
-steepness weight, and vector-defined contact band reduce that scale dependence.
-It uses the already exposed regions 03, 07, and 08. The calculation is method
-development, not external validation. It cannot establish a global terrain
-distribution, incidence, failure probability, or hazard. Any blind transfer
-requires a new issue that freezes this method before new region values are
-read.
+This protocol asks how a nominal fixed-radius regression-plane support,
+continuous steepness weight, and vector-distance glacier-outline proximity
+mask change that scale dependence. It uses the already exposed regions 03, 07,
+and 08. The support radius, ramp, and composite representation were selected
+after the issue #11 output was known: this is explicitly post-outcome method
+development, not an uninformed or external validation. It cannot establish a
+global terrain distribution, incidence, failure probability, or hazard. Any
+blind transfer requires a new issue that freezes this method before new region
+values are read.
 
 No failure catalog, source-coordinate audit, event time, reanalysis value,
 climate variable, deformation signal, damage report, or consequence may enter
@@ -62,9 +64,14 @@ beta = atan(sqrt(a^2 + b^2)).
 
 The disk symmetry gives zero sums of `u`, `v`, and `u v`, so these equations
 are the ordinary-least-squares plane coefficients with an unconstrained
-intercept. The radius is 300 m on both the 30 and 90 m grids. This defines a
-600 m-diameter mean topographic gradient; it is not a mapped failure plane,
-rock-mass thickness, or smoothing scale inferred from the known results.
+intercept. The nominal radius is 300 m on both grids, but the 30 and 90 m
+stencils contain different resolution-dependent cell-center samples and
+quadrature; the 90 m axis samples reach only 270 m. The result is the
+inclination of a vertical-residual regression plane over the included centers.
+It is not a mean facet slope, failure-plane orientation, rock-mass thickness,
+stress measure, or resolution-independent physical kernel. The radius was
+selected during this post-outcome development after the issue #11 resolution
+failure was known.
 
 Cells lacking complete support receive nodata. The registered 1 km processing
 halo is retained, so reporting-boundary cells can have complete support.
@@ -81,26 +88,30 @@ w(beta) = (q - q25) / (q35 - q25) if 25 < beta < 35 degrees
 w(beta) = 1                         if beta >= 35 degrees.
 ```
 
-The interpolation is linear in surface gradient. The bounded weight is a
-numerical terrain-exposure weight, not a probability or a stability model.
+The interpolation is linear in surface gradient. This mapping is an arbitrary
+but frozen numerical regularization, not a constitutive or stability relation.
+The former 30 degree threshold has no operative role, and the ramp does not
+preserve the hard-threshold susceptible-area estimand. The bounded weight is
+not a probability.
 
 ## Fixed masks
 
 Validate every projected glacier geometry and their union; stop without
 repairing a geometry if either is invalid. Let `G` be the valid union of
-projected glacier polygons. The glacier-contact band is
+projected inventory glacier polygons. The glacier-outline-proximity band is
 
 ```text
 C = buffer(G, 100 m) minus G.
 ```
 
-A target center `(x, y)` belongs to the contact mask exactly when
+A target center `(x, y)` belongs to the proximity mask exactly when
 `intersects_xy(buffer(G, 100 m), x, y)` is true and `intersects_xy(G, x, y)` is
 false. This topological predicate includes the closed outer 100 m boundary and
 excludes glacier interiors and boundaries without relying on a directional
-rasterization tie rule. It replaces raster cell-count distance with a fixed
-projected distance. The band remains contact geometry, not buttressing,
-unloading, damage, or a glacier-history calculation.
+rasterization tie rule. It is center-sampled planar distance to an inventory
+outline and remains coarsely sampled on a 90 m lattice. It is defensible as
+outline proximity, not physical contact, buttressing, unloading, damage, or a
+glacier-history calculation.
 
 The permafrost mask contains target centers outside `G` with a finite PZI at
 least 0.1. It remains a coarse climatological intersection, not ground
@@ -133,6 +144,11 @@ The former issue #11 bounds, 0.20 for 90 m departure and 0.10 for phase CV,
 may appear as common reference lines only. They do not create a confirmatory
 pass/fail result in these exposed windows.
 
+The support, ramp, and proximity calculation change together. Any departure
+difference relative to issue #11 describes this one composite representation;
+it cannot be attributed to a component or physical mechanism. No component
+ablation is registered.
+
 ## Outputs
 
 Write one long table containing region, window, stratum, variant, spacing,
@@ -155,7 +171,7 @@ Tests must verify:
 2. strict nodata support and disk construction;
 3. weight values below 25 degrees, at both endpoints, within the ramp, and
    above 35 degrees;
-4. vector contact inclusion and exclusion at fixed physical distances;
+4. center-sampled vector-distance proximity at 99, 100, and 101 m;
 5. constant-weight area integration and phase transforms;
 6. zero-reference handling; and
 7. rejection of catalog, candidate, audit, event, climate, and reanalysis input
@@ -166,6 +182,11 @@ code lines. The hard ceiling is 400 handwritten source, test, and notebook code
 lines. Reuse issue #11 geometry and comparison functions and add no dependency.
 Stop and simplify if the implementation becomes longer than the physical
 definition.
+
+Before reading the first equivalent-area output, pass the synthetic tests and
+commit a pre-output manifest containing the protocol, analysis-program, and
+test hashes; inherited input-manifest hash; software versions; and handwritten
+line count. Execute the real-window calculation only from that committed state.
 
 Do not change the 300 m radius, ramp endpoints, vector contact distance, PZI
 threshold, masks, or output calculation after the first equivalent-area value
@@ -182,3 +203,10 @@ replacement.
   check showed that the rasterization tie rule can differ by edge direction.
   The 100 m distance, outside-glacier condition, and every other registered
   choice are unchanged.
+- 30 August 2026, before any equivalent-area value was calculated: clarify
+  after mechanics review that the two resolutions use different center
+  quadrature within a nominal radius; the regression inclination is not a mean
+  facet slope or stress measure; the ramp is an arbitrary numerical mapping
+  with no operative 30 degree threshold; inventory-outline proximity is not
+  mechanical contact; and all three changes form one post-outcome composite.
+  These clarifications change no calculation.
