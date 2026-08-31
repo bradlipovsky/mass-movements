@@ -347,6 +347,11 @@ grid spacings. ITS\_LIVE version 2 contributes only its 2014--2022 image-pair
 count as an observability field; no velocity or trend enters object membership
 \citep{ITSLIVEv2}.
 
+Counts below include boundary-truncated objects; the archived summary also
+reports wholly contained objects separately. The organisations in charge of
+the Copernicus programme by law or by delegation do not incur any liability
+for any use of the Copernicus WorldDEM-30.
+
 For every object of area $A$, the calculation reports $V_d=Ad$ for prescribed
 depths $d=10$, 30, and 100~m. An object is conditionally eligible when
 $V_d\geq10^6$~m$^3$. This does not estimate glacier thickness, rock-failure
@@ -377,8 +382,11 @@ source-mask predicate, area, connectivity, boundary flag, and coverage field.
   \caption{Climate- and case-blind susceptible-terrain pilot. Top: the three
   deterministically selected windows with RGI glacier polygons, primary steep
   glacier-contact terrain, and primary steep PZI-intersection terrain. Bottom
-  left: object counts meeting the conditional $V=A(30~\mathrm{m})$ threshold.
-  Bottom right: primary rock-slope area at 30 and 90~m. Strata overlap, source
+  left: conditional-volume counts across prescribed depths. Bottom centre:
+  primary rock-slope 90/30~m area ratios. Bottom right: conditional counts
+  across glacier-contact distances. Counts include boundary-truncated objects.
+  In the depth panel, colors distinguish regions and line styles distinguish
+  strata. Strata overlap, source
   epochs differ, and none of the mapped objects is a predicted failure.
   Elevation products were produced using Copernicus WorldDEM-30 \copyright{}
   DLR e.V. 2010--2014 and \copyright{} Airbus Defence and Space GmbH

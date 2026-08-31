@@ -119,7 +119,10 @@ DEM grids, raw-value PZI subsets, and ITS_LIVE climatological `count` subsets.
 `source_manifest.json` records 39 remote objects, every local hash, source
 ETag and size where available, derivation, product version, and the rejected
 WCS PZI responses that encoded documented background zero as nodata. It also
-records product-level access and licence terms.
+records product-level access and licence terms. `eligible_windows.csv` retains
+every eligible blind-selector key and digest, not only the three winners.
+`PROVENANCE.md` records source-staging transformations and the known request-
+timestamp limitation.
 
 `objects.csv` retains all glacier polygons and every four-neighbor rock-slope
 component, including objects below the conditional-volume cutoff.
@@ -137,6 +140,12 @@ The frame is a reproducibility and scale-sensitivity test, not a simultaneous
 snapshot, regional population estimate, susceptibility model, or failure
 probability. Run `make artifacts-denominator` with the pinned analysis
 environment to regenerate tables, notebook figures, and the manuscript.
+
+The UZH PZI page makes the data publicly downloadable and requests citation,
+but its archived terms do not state a redistribution licence. The committed
+window subsets therefore require explicit permission or removal/retrieval at
+build time before this draft can merge; public access is not treated here as a
+licence grant.
 
 The adapted elevation grids were produced using Copernicus WorldDEM-30 © DLR
 e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under

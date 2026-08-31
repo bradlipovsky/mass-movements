@@ -41,7 +41,7 @@ check-denominator:
 notebook-denominator:
 	PATH="$(dir $(PYTHON_REANALYSIS)):$$PATH" $(JUPYTER_REANALYSIS) execute --inplace --timeout 600 --kernel_name python3 notebooks/denominator_pilot.ipynb
 
-artifacts-denominator: denominator check-denominator notebook-denominator
+artifacts-denominator: denominator notebook-denominator check-denominator
 	latexmk -pdf -cd latex/main.tex
 
 clean:

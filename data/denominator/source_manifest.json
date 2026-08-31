@@ -1,5 +1,10 @@
 {
   "created_utc": "2026-08-31T04:35:56.731389Z",
+  "retrieval_session_utc": {
+    "first_archived_source_completed": "2026-08-31T04:17:28Z",
+    "manifest_completed": "2026-08-31T04:35:56.731389Z",
+    "limitation": "Per-request timestamps were not captured; source and derived file completion times are preserved in the repository commit but are not represented as exact remote-access times."
+  },
   "access_terms": {
     "Copernicus DEM": {
       "license_url": "https://dataspace.copernicus.eu/sites/default/files/media/files/2025-06/copernicus_contributing_mission_data_access_v2_cop_dem_licenses.pdf",
@@ -9,7 +14,9 @@
     },
     "Gruber PZI": {
       "terms_url": "https://microsite.geo.uzh.ch/cryodata/pf_global/",
-      "terms": "Publicly available with requested citation to Gruber (2012); University of Zurich supplies the data as is and disclaims warranties and liability as reproduced in the archived README."
+      "terms": "Publicly downloadable with requested citation to Gruber (2012); University of Zurich supplies the data as is and disclaims warranties and liability as reproduced in the archived README.",
+      "redistribution_license": null,
+      "merge_condition": "Obtain explicit redistribution permission or remove the derived TIFF subsets and retrieve them at build time before merge."
     },
     "ITS_LIVE": {
       "terms_url": "https://nsidc.org/data/documentation/measures-its_live-regional-glacier-and-ice-sheet-surface-velocities-version-2-user-guide",
@@ -147,7 +154,7 @@
     {
       "derivation": "exact UZH documentation bytes",
       "derived_from": [
-        "pzi_raw_pzi"
+        "pzi_raw_hdr"
       ],
       "path": "data/denominator/source/pzi.hdr",
       "region": "global",
@@ -158,7 +165,7 @@
     {
       "derivation": "raw Float32 row/column byte ranges, written without value resampling",
       "derived_from": [
-        "pzi_raw_pzi"
+        "pzi_raw_flt"
       ],
       "path": "data/denominator/source/pzi_01.tif",
       "region": "01",
@@ -169,7 +176,7 @@
     {
       "derivation": "raw Float32 row/column byte ranges, written without value resampling",
       "derived_from": [
-        "pzi_raw_pzi"
+        "pzi_raw_flt"
       ],
       "path": "data/denominator/source/pzi_11.tif",
       "region": "11",
@@ -180,7 +187,7 @@
     {
       "derivation": "raw Float32 row/column byte ranges, written without value resampling",
       "derived_from": [
-        "pzi_raw_pzi"
+        "pzi_raw_flt"
       ],
       "path": "data/denominator/source/pzi_13.tif",
       "region": "13",
@@ -191,7 +198,7 @@
     {
       "derivation": "exact UZH documentation bytes",
       "derived_from": [
-        "pzi_raw_pzi"
+        "pzi_raw_readme"
       ],
       "path": "data/denominator/source/pzi_README.txt",
       "region": "global",
@@ -201,7 +208,7 @@
     },
     {
       "derivation": "rejected WCS response: numeric background encoded as nodata",
-      "derived_from": [],
+      "derived_from": ["pzi_wcs_service"],
       "path": "data/denominator/source/pzi_wcs_01.tif",
       "region": "01",
       "role": "rejected_input",
@@ -210,7 +217,7 @@
     },
     {
       "derivation": "rejected WCS response: numeric background encoded as nodata",
-      "derived_from": [],
+      "derived_from": ["pzi_wcs_service"],
       "path": "data/denominator/source/pzi_wcs_01.tif.aux.xml",
       "region": "01",
       "role": "rejected_input",
@@ -219,7 +226,7 @@
     },
     {
       "derivation": "rejected WCS response: numeric background encoded as nodata",
-      "derived_from": [],
+      "derived_from": ["pzi_wcs_service"],
       "path": "data/denominator/source/pzi_wcs_11.tif",
       "region": "11",
       "role": "rejected_input",
@@ -228,7 +235,7 @@
     },
     {
       "derivation": "rejected WCS response: numeric background encoded as nodata",
-      "derived_from": [],
+      "derived_from": ["pzi_wcs_service"],
       "path": "data/denominator/source/pzi_wcs_11.tif.aux.xml",
       "region": "11",
       "role": "rejected_input",
@@ -237,7 +244,7 @@
     },
     {
       "derivation": "rejected WCS response: numeric background encoded as nodata",
-      "derived_from": [],
+      "derived_from": ["pzi_wcs_service"],
       "path": "data/denominator/source/pzi_wcs_13.tif",
       "region": "13",
       "role": "rejected_input",
@@ -246,7 +253,7 @@
     },
     {
       "derivation": "rejected WCS response: numeric background encoded as nodata",
-      "derived_from": [],
+      "derived_from": ["pzi_wcs_service"],
       "path": "data/denominator/source/pzi_wcs_13.tif.aux.xml",
       "region": "13",
       "role": "rejected_input",
@@ -660,7 +667,16 @@
       "version": "GLO-30 2021"
     },
     {
-      "id": "pzi_raw_pzi",
+      "id": "pzi_wcs_service",
+      "product": "Gruber PZI",
+      "region": "global",
+      "status": "rejected_background_as_nodata",
+      "url": "https://geoserver.geo.uzh.ch/cryogis/wcs",
+      "coverage": "cryogis__Permafrost-Global-PFI",
+      "version": "2012"
+    },
+    {
+      "id": "pzi_raw_flt",
       "last_modified": "Wed, 15 Feb 2012 09:26:18 GMT",
       "product": "Gruber PZI",
       "region": "global",
@@ -671,7 +687,7 @@
       "version": "2012"
     },
     {
-      "id": "pzi_raw_pzi",
+      "id": "pzi_raw_hdr",
       "last_modified": "Wed, 15 Feb 2012 09:35:02 GMT",
       "product": "Gruber PZI",
       "region": "global",

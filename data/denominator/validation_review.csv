@@ -17,7 +17,7 @@ region,stratum,object_id,sample_hash,area_ok,connected_ok,mask_ok,coverage_ok,ed
 11,glacier,RGI2000-v7.0-G-11-00835,00b37e67a1fe5f0a02beab0d5695c5eae7b415418f2e7ece8a80849f3bcc9baf,True,True,True,True,True,yes,numerical_and_visual_audit,agree,
 11,glacier,RGI2000-v7.0-G-11-00441,00c094bf104055c87b9f6be052dcbc2402aea97924d630ffb93c17b4c7c41196,True,True,True,True,True,yes,numerical_and_visual_audit,agree,
 11,glacier,RGI2000-v7.0-G-11-00616,018118a23f7efbfd333ee318825e1f6cc54ce4474360fc3a43fa6bf9506b67ab,True,True,True,True,True,yes,numerical_and_visual_audit,agree,
-11,glacier,RGI2000-v7.0-G-11-01204,01bc1797504004cd45005dff7a6f2b52d62a9523a67d14e0f20d63d05f004e0c,True,True,True,True,True,yes,numerical_and_visual_audit,agree,
+11,glacier,RGI2000-v7.0-G-11-01204,01bc1797504004cd45005dff7a6f2b52d62a9523a67d14e0f20d63d05f004e0c,True,True,True,True,True,yes,numerical_and_visual_audit_v2,agree,all-touched ITS_LIVE overlap rechecked: spatially covered with zero positive-count pixels
 11,glacier,RGI2000-v7.0-G-11-00571,024f8f5c08d67c373fbe2684e738e2269b6370ca25a1df8688ce1eb511f989c1,True,True,True,True,True,yes,numerical_and_visual_audit,agree,
 11,glacier_contact,C002677,00015f8fdb402fe7d52b402f05e5f2a2d0539c878b0859cd2cdb740e7b275e57,True,True,True,True,True,yes,numerical_and_visual_audit,agree,
 11,glacier_contact,C002114,00156b24fbe7c69d6c9899555def11dcb2853d47d360afa54fd9d41e3018d832,True,True,True,True,True,yes,numerical_and_visual_audit,agree,

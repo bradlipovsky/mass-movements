@@ -3,13 +3,12 @@ import json
 import math
 import unittest
 from pathlib import Path
-
 import numpy as np
 import pandas as pd
+import rasterio
 from affine import Affine
-from pyproj import Transformer
+from pyproj import CRS, Transformer
 from shapely import box
-
 from scripts.denominator_pilot import (
     aggregate_3x3,
     burn,
@@ -23,8 +22,6 @@ from scripts.denominator_pilot import (
     volume_fields,
     WINDOWS,
 )
-
-
 class DenominatorPilotTests(unittest.TestCase):
     def test_selector_uses_registered_eligibility_and_longitude_wrap(self):
         rows = []
@@ -45,15 +42,21 @@ class DenominatorPilotTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             select_window([{"cenlat": 1, "cenlon": 2, "area_km2": 5}], "01")
     def test_planar_slope_and_nodata_support(self):
-        yy, xx = np.indices((7, 8))
-        z = 3 * xx - 4 * yy + 10.0
-        slope = slope_degrees(z, 1)
+        yy, xx = np.indices((12, 12))
+        z = 90 * xx - 120 * yy + 10.0
+        slope = slope_degrees(z, 30)
         self.assertTrue(np.allclose(slope[1:-1, 1:-1], np.degrees(np.arctan(5))))
         self.assertTrue(np.isnan(slope[[0, -1]]).all())
         z[3, 3] = np.nan
-        slope = slope_degrees(z, 1)
+        slope = slope_degrees(z, 30)
         self.assertTrue(np.isnan(slope[3, 2:5]).all())
         self.assertTrue(np.isnan(slope[2:5, 3]).all())
+        self.assertEqual(np.nanmax(slope_degrees(np.ones((4, 4)), 30)), 0)
+        z[3, 3] = 90 * 3 - 120 * 3 + 10.0
+        for values, spacing, pixels in ((slope_degrees(z, 30), 30, 100),
+                                        (slope_degrees(aggregate_3x3(z), 90), 90, 4)):
+            rows = component_rows(values >= 60, np.isfinite(values), spacing, {})
+            self.assertEqual((len(rows), rows[0]["area_m2"]), (1, pixels * spacing**2))
     def test_strict_three_by_three_aggregation(self):
         z = np.arange(36, dtype=float).reshape(6, 6)
         expected = np.array([[7, 10], [25, 28]], dtype=float)
@@ -120,22 +123,42 @@ class DenominatorPilotTests(unittest.TestCase):
         self.assertEqual(set(manifest["access_terms"]),
                          {"Copernicus DEM", "Gruber PZI", "ITS_LIVE", "RGI"})
         self.assertTrue(all(item["terms"] for item in manifest["access_terms"].values()))
+        remote = manifest["remote_objects"]
+        self.assertEqual(len({item["id"] for item in remote}), len(remote))
+        self.assertEqual({(item["product"], str(item["version"])) for item in remote},
+                         {("RGI", "7.0"), ("Copernicus DEM", "GLO-30 2021"),
+                          ("Gruber PZI", "2012"), ("ITS_LIVE", "2")})
         listed = {item["path"] for item in manifest["local_objects"]}
         actual = {str(path) for path in Path("data/denominator/source").iterdir() if path.is_file()}
         self.assertEqual(listed, actual)
         for item in manifest["local_objects"]:
             self.assertEqual(hashlib.sha256(Path(item["path"]).read_bytes()).hexdigest(), item["sha256"])
         objects = pd.read_csv("data/denominator/objects.csv", dtype={"region": str}, low_memory=False)
+        self.assertTrue((objects.loc[objects.stratum == "glacier", "itslive_status"] == "covered").all())
         keys = ["region", "stratum", "resolution_m", "slope_deg", "contact_m", "pzi_min", "object_id"]
         self.assertFalse(objects.duplicated(keys).any())
         windows = pd.read_csv("data/denominator/windows.csv", dtype={"region": str})
         self.assertEqual(dict(zip(windows.region, windows.selector_sha256)),
                          {region: values[3] for region, values in WINDOWS.items()})
         self.assertTrue((windows.filter(regex="valid_fraction").to_numpy() == 1).all())
+        eligible = pd.read_csv("data/denominator/eligible_windows.csv", dtype={"region": str})
+        self.assertEqual(eligible.groupby("region").digest.min().to_dict(),
+                         {region: values[3] for region, values in WINDOWS.items()})
+        for region, row in windows.set_index("region").iterrows():
+            with rasterio.open(f"data/denominator/source/dem_{region}_30m.tif") as dataset:
+                self.assertEqual(CRS.from_wkt(dataset.crs.to_wkt()), CRS.from_wkt(row.laea_wkt))
+                self.assertEqual((dataset.height, dataset.width),
+                                 (row.grid_height_30m, row.grid_width_30m))
+                self.assertEqual((dataset.transform.c % 30, dataset.transform.f % 30), (0, 0))
         review = pd.read_csv("data/denominator/validation_review.csv", dtype={"region": str})
         self.assertEqual(len(review), 45)
-        self.assertTrue((review.status == "agree").all())
-
-
+        self.assertTrue((review.status == "agree").all() and
+                        review.filter(regex="_ok$").to_numpy().all())
+        notebook = Path("notebooks/denominator_pilot.ipynb").read_text()
+        for forbidden in ("candidates.csv", "event_audit", "data/reanalysis"):
+            self.assertNotIn(forbidden, notebook)
+        freeze = json.loads(Path("data/denominator/freeze_manifest.json").read_text())
+        for file_name, item in freeze["files"].items():
+            self.assertEqual(hashlib.sha256(Path(file_name).read_bytes()).hexdigest(), item["sha256"])
 if __name__ == "__main__":
     unittest.main()
