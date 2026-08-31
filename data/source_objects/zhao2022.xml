@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD Journal Publishing with OASIS Tables v3.0 20080202//EN" "journalpub-oasis3.dtd">
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:oasis="http://docs.oasis-open.org/ns/oasis-exchange/table" xml:lang="en" dtd-version="3.0" article-type="brief-report">
+  <front>
+    <journal-meta><journal-id journal-id-type="publisher">TC</journal-id><journal-title-group>
+    <journal-title>The Cryosphere</journal-title>
+    <abbrev-journal-title abbrev-type="publisher">TC</abbrev-journal-title><abbrev-journal-title abbrev-type="nlm-ta">The Cryosphere</abbrev-journal-title>
+  </journal-title-group><issn pub-type="epub">1994-0424</issn><publisher>
+    <publisher-name>Copernicus Publications</publisher-name>
+    <publisher-loc>Göttingen, Germany</publisher-loc>
+  </publisher></journal-meta>
+    <article-meta>
+      <article-id pub-id-type="doi">10.5194/tc-16-1333-2022</article-id><title-group><article-title>Brief communication: An approximately 50 Mm<inline-formula><mml:math id="M1" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula> ice-rock avalanche on 22 March 2021 in the Sedongpu valley, southeastern <?xmltex \hack{\break}?>Tibetan Plateau</article-title><alt-title>Ice-rock avalanche on 22 March 2021 in the Sedongpu valley</alt-title>
+      </title-group><?xmltex \runningtitle{Ice-rock avalanche on 22~March~2021 in the Sedongpu valley}?><?xmltex \runningauthor{C. Zhao et al.}?>
+      <contrib-group>
+        <contrib contrib-type="author" corresp="no" rid="aff1 aff2">
+          <name><surname>Zhao</surname><given-names>Chuanxi</given-names></name>
+          
+        </contrib>
+        <contrib contrib-type="author" corresp="yes" rid="aff1 aff3">
+          <name><surname>Yang</surname><given-names>Wei</given-names></name>
+          <email>yangww@itpcas.ac.cn</email>
+        </contrib>
+        <contrib contrib-type="author" corresp="no" rid="aff4">
+          <name><surname>Westoby</surname><given-names>Matthew</given-names></name>
+          
+        <ext-link>https://orcid.org/0000-0002-2070-5580</ext-link></contrib>
+        <contrib contrib-type="author" corresp="no" rid="aff1 aff5">
+          <name><surname>An</surname><given-names>Baosheng</given-names></name>
+          
+        </contrib>
+        <contrib contrib-type="author" corresp="no" rid="aff1 aff3 aff6">
+          <name><surname>Wu</surname><given-names>Guangjian</given-names></name>
+          
+        </contrib>
+        <contrib contrib-type="author" corresp="no" rid="aff1 aff3">
+          <name><surname>Wang</surname><given-names>Weicai</given-names></name>
+          
+        <ext-link>https://orcid.org/0000-0003-1352-6303</ext-link></contrib>
+        <contrib contrib-type="author" corresp="no" rid="aff1">
+          <name><surname>Wang</surname><given-names>Zhongyan</given-names></name>
+          
+        </contrib>
+        <contrib contrib-type="author" corresp="no" rid="aff1 aff6">
+          <name><surname>Wang</surname><given-names>Yongjie</given-names></name>
+          
+        <ext-link>https://orcid.org/0000-0003-2937-6346</ext-link></contrib>
+        <contrib contrib-type="author" corresp="no" rid="aff7">
+          <name><surname>Dunning</surname><given-names>Stuart</given-names></name>
+          
+        </contrib>
+        <aff id="aff1"><label>1</label><institution>Key Laboratory of Tibetan Environment Changes and Land Surface
+Processes, Institute of Tibetan Plateau Research, Chinese Academy of
+Sciences, Beijing 100101, China</institution>
+        </aff>
+        <aff id="aff2"><label>2</label><institution>College of Earth and Environmental Sciences, Lanzhou University,
+Lanzhou 730000, China</institution>
+        </aff>
+        <aff id="aff3"><label>3</label><institution>CAS Center for Excellence in Tibetan Plateau Earth Sciences,
+Beijing 100101, China</institution>
+        </aff>
+        <aff id="aff4"><label>4</label><institution>Department of Geography and Environmental Sciences, Northumbria
+University, Newcastle upon Tyne, NE1 8ST, UK</institution>
+        </aff>
+        <aff id="aff5"><label>5</label><institution>School of Science, Tibet University, Lhasa 850011, China</institution>
+        </aff>
+        <aff id="aff6"><label>6</label><institution>South-East Tibetan Plateau station for integrated observation and research of alpine environment, Institute of Tibetan Plateau Research, Chinese Academy of Sciences, Lulang 860100, China, Lulang, China</institution>
+        </aff>
+        <aff id="aff7"><label>7</label><institution>School of Geography, Politics and Sociology, Newcastle University,
+Newcastle upon Tyne, NE1 7RU, UK</institution>
+        </aff>
+      </contrib-group>
+      <author-notes><corresp id="corr1">Wei Yang (yangww@itpcas.ac.cn)</corresp></author-notes><pub-date><day>12</day><month>April</month><year>2022</year></pub-date>
+      
+      <volume>16</volume>
+      <issue>4</issue>
+      <fpage>1333</fpage><lpage>1340</lpage>
+      <history>
+        <date date-type="received"><day>27</day><month>September</month><year>2021</year></date>
+           <date date-type="rev-request"><day>8</day><month>November</month><year>2021</year></date>
+           <date date-type="rev-recd"><day>11</day><month>February</month><year>2022</year></date>
+           <date date-type="accepted"><day>11</day><month>February</month><year>2022</year></date>
+      </history>
+      <permissions>
+        <copyright-statement>Copyright: © 2022 </copyright-statement>
+        <copyright-year>2022</copyright-year>
+      <license license-type="open-access"><license-p>This work is licensed under the Creative Commons Attribution 4.0 International License. To view a copy of this licence, visit <ext-link ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</ext-link></license-p></license></permissions><self-uri xlink:href="https://tc.copernicus.org/articles/.html">This article is available from https://tc.copernicus.org/articles/.html</self-uri><self-uri xlink:href="https://tc.copernicus.org/articles/.pdf">The full text article is available as a PDF file from https://tc.copernicus.org/articles/.pdf</self-uri>
+      <abstract><title>Abstract</title>
+
+      <p id="d1e207">On 22 March 2021, an approximately 50 Mm<inline-formula><mml:math id="M2" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula> ice-rock
+avalanche occurred from 6500 m a.s.l. in the Sedongpu basin, southeastern
+Tibet. The avalanche transformed into a highly mobile mass flow which
+temporarily blocked the Yarlung Tsangpo river. The avalanche flow lasted
+<inline-formula><mml:math id="M3" display="inline"><mml:mo>∼</mml:mo></mml:math></inline-formula> 5 min and produced substantial geomorphological
+reworking. This event, and previous ones from the basin, occurred
+concurrently with, or shortly after, positive seasonal air temperature
+anomalies. The occurrence of future large mass flows from the basin cannot
+be ruled out, and their impacts must be carefully considered given
+implications for sustainable hydropower and associated socioeconomic
+development in the region.</p>
+  </abstract>
+    </article-meta>
+  </front>
+<body>
+      
+
+<sec id="Ch1.S1" sec-type="intro">
+  <label>1</label><title>Introduction</title>
+      <p id="d1e235">Catastrophic mass flows originating from the mountain cryosphere can cause
+hazard and risk cascades that result in widespread loss of life, destruction
+of property, and significant geomorphological reworking (Haeberli et al.,
+2004; Jacquemart et al., 2020; Kääb et al., 2021; Shugar et al.,
+2021). Exploring the evolution of such events is important for constraining
+likely triggering and conditioning factors and the nature of the mass flow
+process chain (e.g. for improving numerical models). In turn, this
+information can be useful for assessing the potential hazards to life and
+downstream assets (Evans et al., 2021; Kääb et al., 2021).</p>
+      <p id="d1e238">Cryospheric hazards occur frequently in the monsoon-influenced Himalayas,
+including the southeastern Tibetan Plateau (Kääb et al., 2021; Zheng
+et al., 2021), a region which hosts temperate glaciers that are typically
+more sensitive to changes in air temperature than continental glaciers on
+the Plateau interior (Wang et al., 2019). The region has undergone
+accelerated mass loss and areal reduction of glacier extent in the past two
+decades (Bolch et al., 2019), and the rate of regional atmospheric warming is
+above the global average (Yao et al., 2019). The southeastern Tibetan
+Plateau contains high topographic relief conducive for the development of
+hazard cascades, and the region has experienced a series of high-magnitude
+ice-rock avalanches, glacier detachments, and glacial lake outburst floods
+in recent decades (Tong et al., 2019; Veh et al., 2020; Kääb et al.,
+2021; Zheng et al., 2021). Furthermore, the region is the focus of
+considerable investment by the Chinese government, including the
+construction of the high-speed Sichuan–Tibet railway (anticipated completion
+2030) and the development of adjacent areas along this emerging economic
+corridor, which links the cities of Lhasa and Chengdu (Fig. 1a) and passes
+through mostly mountainous terrain. A key aspect of regional economic
+development includes the construction of new large-scale hydropower projects
+to serve an increasing regional and international demand for electricity.
+Mass flow hazards of cryospheric origin are of significant concern across
+High Mountain Asia, particularly when these flows have the potential to
+affect regions that are experiencing rapid changes in both the exposure and
+vulnerability of populations and infrastructure (Shugar et al., 2021).</p>
+      <p id="d1e241">The Sedongpu basin (29.80<inline-formula><mml:math id="M4" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula> N, 94.92<inline-formula><mml:math id="M5" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula> E) in Nyingchi
+prefecture, China, has a history of large avalanches and low-angle glacier
+detachments which have transformed into powerful debris flows (Tong et al.,
+2019; Chen et al., 2020; Wang et al., 2020; Kääb et al., 2021). The
+basin has a total area of 67 km<inline-formula><mml:math id="M6" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">2</mml:mn></mml:msup></mml:math></inline-formula> and ranges from a maximum elevation of
+7294 m a.s.l. at Gyala Peri peak to a minimum of <inline-formula><mml:math id="M7" display="inline"><mml:mo>∼</mml:mo></mml:math></inline-formula> 2750 m a.s.l. at
+the confluence with the Yarlung Tsangpo, a major tributary of the
+Brahmaputra River (Fig. 1b). The Randolph Glacier Inventory (V6.0)
+identifies 18 glaciers covering a total of <inline-formula><mml:math id="M8" display="inline"><mml:mo>∼</mml:mo></mml:math></inline-formula> 17 km<inline-formula><mml:math id="M9" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">2</mml:mn></mml:msup></mml:math></inline-formula> in
+the basin (RGI Consortium, 2017), which are nourished by snow, ice, and
+debris from very steep mountain flanks. Analysis of historic satellite
+imagery has revealed evidence of mass flow activity in the basin
+(Kääb et al., 2021), and at least 11 mass flows originating in the
+basin have partially or entirely blocked the Yarlung Tsangpo in the past decade
+(Tong et al., 2019; Chen et al., 2020). The basin recently experienced
+several large ice-rock avalanches (Table S1 in the Supplement) with an initial volume of
+<inline-formula><mml:math id="M10" display="inline"><mml:mo>∼</mml:mo></mml:math></inline-formula> 50 Mm<inline-formula><mml:math id="M11" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula> (October 2017 and into 2018) and the detachment
+of the tongue of Sedongpu Glacier in two separate events with a total of
+<inline-formula><mml:math id="M12" display="inline"><mml:mo>∼</mml:mo></mml:math></inline-formula> 130 Mm<inline-formula><mml:math id="M13" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula> on 17/18 October and 29 October 2018
+(Kääb et al., 2021). Both detachments in 2018 transformed into
+debris flows; the earlier detachment blocked the Yarlung Tsangpo for
+<inline-formula><mml:math id="M14" display="inline"><mml:mo>∼</mml:mo></mml:math></inline-formula> 60 h, and the rapid rise in upstream water level damaged
+and threatened roads, power lines, hydropower stations, and other riverside
+infrastructure and prompted relocation of more than 6000 local residents
+(Chen et al., 2020). After the 2018 detachments, the U-shaped glacier bottom
+was exposed with loose debris and limited ice residue (An et al., 2021).</p>
+      <p id="d1e334">In this brief communication we document a large ice-rock avalanche that
+occurred outside the regular summer ablation season in the Sedongpu basin on
+22 March 2021 and which, similar to past events, also temporarily blocked
+the Yarlung Tsangpo. We use in situ field investigations, high-resolution satellite
+imageries, digital elevation models (DEMs), seismic records, and meteorological
+data to analyse the evolution of the event and its impact, discuss potential
+drivers, and briefly discuss implications for the sustainable development of
+the region.</p>
+</sec>
+<sec id="Ch1.S2">
+  <label>2</label><title>Data and methods</title>
+      <p id="d1e345">The basin's recent event history led to the installation of time-lapse
+optical and thermal cameras and an automatic weather station (AWS) at the
+exit of the basin in September–October 2019. Data from this station were
+captured and transmitted via the Inmarsat maritime satellite system at a 3 h interval. These instruments were installed by the Institute of Tibetan
+Plateau Research, Chinese Academy of Sciences, for the purpose of obtaining
+photographic and meteorological evidence of future mass flows and their
+timing. A Campbell CS477 radar-based water level monitoring system has been
+installed at Gyala, which is located on the Yarlung Tsangpo <inline-formula><mml:math id="M15" display="inline"><mml:mo>∼</mml:mo></mml:math></inline-formula> 6 km upstream of the exit of the Sedongpu basin (Fig. 1b), and provides a
+real-time (10 min interval) record of water level. In addition to generating
+data of scientific value, the system was used for local alerting of rising
+water level caused by the temporary damming of the Yarlung Tsangpo. We used
+a DJI Phantom 4 unpiloted aerial vehicle to obtain aerial photographs of the
+basin in October 2019 (i.e. pre-event) and on 25 March 2021 (post-event)
+and document the geomorphological modification of the landscape around the
+basin outlet (Figs. 1c–e and S1).</p>
+      <p id="d1e355">Vertical seismic waveforms (10 Hz) from long-period seismographs recorded at
+Nyingchi station, <inline-formula><mml:math id="M16" display="inline"><mml:mo>∼</mml:mo></mml:math></inline-formula> 60 km from the Sedongpu basin, were used
+to determine the start time of the March 2021 event and analyse its
+evolution. In addition, we used United States Geological Survey (USGS)
+seismic and meteorological records from monitoring stations at Nyingchi,
+Bomi (<inline-formula><mml:math id="M17" display="inline"><mml:mo lspace="0mm">∼</mml:mo></mml:math></inline-formula> 80 km distance), and Milin (<inline-formula><mml:math id="M18" display="inline"><mml:mo lspace="0mm">∼</mml:mo></mml:math></inline-formula> 80 km
+distance) to analyse the regional tectonic and climatic context of the
+event.</p>
+      <p id="d1e379">We used pre- and post-event 0.5 m resolution tri-stereo optical Pléiades
+images (Pléiades-1A, captured 30 December 2018, and Pléiades-1B,
+captured 30 April 2021, respectively) to determine the source location of
+the avalanche and to construct high-resolution (1 m) DEMs to estimate the
+volume and size distribution of the initial detachment and quantify net
+elevation change along the flow path. The DEMs were generated
+photogrammetrically in PCI Geomatica software (Banff Service Pack 4) with the
+OrthoEngine module. A sufficient number of ground control points and tie
+points were also automatically collected to improve the computed math model
+in the OrthoEngine module, which uses the semi-global matching (SGM)
+algorithm for pixel matching. And the implementation of SGM is done by
+image matching along epipolar lines. We used the <italic>demcoreg</italic> Python package to refine horizontal and vertical alignment of the DEM data (Shean et al., 2020); the
+final products had a relative vertical accuracy of <inline-formula><mml:math id="M19" display="inline"><mml:mrow><mml:mn mathvariant="normal">0.51</mml:mn><mml:mo>±</mml:mo><mml:mn mathvariant="normal">4.1</mml:mn></mml:mrow></mml:math></inline-formula> m over
+stable ground (Fig. S2).
+<?xmltex \hack{\newpage}?></p>
+
+      <?xmltex \floatpos{t}?><fig id="Ch1.F1" specific-use="star"><?xmltex \currentcnt{1}?><?xmltex \def\figurename{Figure}?><label>Figure 1</label><caption><p id="d1e401">Overview of the Sedongpu basin, landscape modification,
+river blockage, and seismic waveform caused by the March 2021 ice-rock
+avalanche. <bold>(a)</bold> Location of the Sedongpu basin and the recent
+reported massive glacier detachments and ice-rock avalanches in High
+Mountain Asia. <bold>(b)</bold> © Google Earth image (images on
+14 December 2017, CNES/Airbus and Maxar Technologies) showing topographic
+condition of the Sedongpu basin, the location of hazard cascade area, and the
+ground-based observations (yellow stars). <bold>(c, d)</bold> Photographs
+showing the same view in October 2019 (pre-event) and on 25 March 2021
+(post-event) looking into the Sedongpu valley. The photos show the location
+of an AWS and time-lapse camera <inline-formula><mml:math id="M20" display="inline"><mml:mo>∼</mml:mo></mml:math></inline-formula> 150 m above the valley floor
+close to the valley outlet (see panel <bold>b</bold>), which were destroyed by the March 2021 event. <bold>(e)</bold> Photograph showing a mass flow-overtopped hill
+where the monitoring station was installed. <bold>(f)</bold> The sudden water
+level rise caused by the Yarlung Tsangpo river blockage on 22 March 2021. <bold>(g)</bold> Seismic waveform recorded at the Nyingchi station, 60 km
+away from Sedongpu basin starting at 23:40:15 on 22 March 2021.</p></caption>
+        <?xmltex \igopts{width=497.923228pt}?><graphic xlink:href="https://tc.copernicus.org/articles/16/1333/2022/tc-16-1333-2022-f01.png"/>
+
+      </fig>
+
+</sec>
+<sec id="Ch1.S3">
+  <label>3</label><title>Results and discussion</title>
+<sec id="Ch1.S3.SS1">
+  <label>3.1</label><title>Field observations of the March 2021 avalanche and river blockage</title>
+      <p id="d1e454">The last automatic data transfer from our monitoring system at the outlet of
+Sedongpu valley (Fig. 1b) occurred at 21:30 on 22 March 2021, whereafter
+the data feed became inactive. Shortly thereafter, our water level sensor at
+Gyala village sent an automatic water level warning due to a sudden 2.2 m
+increase in river stage between 23:50 on 22 March and 00:00 on 23 March (Fig. 1f). The water level continued to increase at a rate of 0.6–0.8 m h<inline-formula><mml:math id="M21" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula> and rose by a total of 11 m before stabilizing at around 18:00
+on 23 March (Fig. S3). Both data streams (or sudden lack thereof) implied
+the blockage of the Yarlung Tsangpo, likely by a large mass flow event, and,
+along with seismic data (Fig. 1g), were useful for constraining its timing.</p>
+      <p id="d1e469">We undertook a field visit to the area on 25 March 2021 and found evidence that
+a mass flow from Sedongpu basin had overtopped a 200 m high spur at the
+basin outlet, destroying the combined AWS–time-lapse-camera monitoring
+station and stripping the surrounding slope of vegetation (Fig. 1d–e). This
+included 200-year-old pine forest, thereby indicating that no event of
+comparable magnitude has occurred here in the past two centuries. By
+applying a simple frictionless point mass model of <inline-formula><mml:math id="M22" display="inline"><mml:mrow><mml:mi>u</mml:mi><mml:mo>=</mml:mo><mml:msqrt><mml:mrow><mml:mn mathvariant="normal">2</mml:mn><mml:mi>h</mml:mi><mml:mi>g</mml:mi></mml:mrow></mml:msqrt></mml:mrow></mml:math></inline-formula>
+(Iverson et al., 2016), where <inline-formula><mml:math id="M23" display="inline"><mml:mi>h</mml:mi></mml:math></inline-formula> is run-up height (<inline-formula><mml:math id="M24" display="inline"><mml:mo lspace="0mm">∼</mml:mo></mml:math></inline-formula> 200 m),
+calculated by differencing handheld GPS locations on the valley bottom and
+the highest elevation destroyed trees, and <inline-formula><mml:math id="M25" display="inline"><mml:mi>g</mml:mi></mml:math></inline-formula> is the gravitational constant, we
+estimate that a flow velocity (<inline-formula><mml:math id="M26" display="inline"><mml:mi>u</mml:mi></mml:math></inline-formula>) of around 60 m s<inline-formula><mml:math id="M27" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula> (<inline-formula><mml:math id="M28" display="inline"><mml:mo lspace="0mm">∼</mml:mo></mml:math></inline-formula> 225 km h<inline-formula><mml:math id="M29" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula>) is required for overtopping the 200 m high valley spur. Post-event field observations showed the valley bottom to be covered by fresh,
+water-rich debris which was in the process of dewatering and widespread
+destabilization of valley flanks along the flow path (Figs. 1d and S1).</p>
+      <p id="d1e550">Examination of the seismic record at Nyingchi station reveals the onset of a
+clear ground-shaking event at 23:41 on 22 March (Fig. 1g). The seismic
+waveform has the typical characteristics of a landslide because it lacks the
+clear P- and S-wave arrival times typical for earthquakes (Ekström and
+Stark, 2013). The waveform suggests that the avalanche-mass flow lasted
+<inline-formula><mml:math id="M30" display="inline"><mml:mo>∼</mml:mo></mml:math></inline-formula> 300 s and consisted of an initial phase (lasting 100 s) exhibiting a high-amplitude signal which we infer as representing the
+detachment and downslope passage of the initial ice-rock avalanche, followed
+by an approximately 200 s waveform with a weaker amplitude, which most
+likely reflects the passage of the continuous mobile mass flow through the
+Sedongpu basin and its outlet valley. Based on the duration of the seismic
+waveform and known distances (<inline-formula><mml:math id="M31" display="inline"><mml:mo lspace="0mm">∼</mml:mo></mml:math></inline-formula> 11 km), we estimate that the
+mean velocity of the whole avalanche-mass flow possibly reached
+<inline-formula><mml:math id="M32" display="inline"><mml:mo>∼</mml:mo></mml:math></inline-formula> 37 m s<inline-formula><mml:math id="M33" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula> (<inline-formula><mml:math id="M34" display="inline"><mml:mo lspace="0mm">∼</mml:mo></mml:math></inline-formula> 132 km h<inline-formula><mml:math id="M35" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula>). These observations
+and inferences were corroborated by local people at Gyala village, who
+report hearing a continuous, loud sound originating from the direction of
+the Sedongpu basin at this time (25 March 2021).</p>
+
+      <?xmltex \floatpos{p}?><fig id="Ch1.F2" specific-use="star"><?xmltex \currentcnt{2}?><?xmltex \def\figurename{Figure}?><label>Figure 2</label><caption><p id="d1e609">Elevation change across the wider Sedongpu basin derived
+from Pléaides imagery dated 30 December 2018 and 30 April 2021
+<bold>(a)</bold>. The close-up Pléiades image on 30 April 2021 showing the
+headward migration of the mountain ridgeline due to mass loss associated
+with the March 2021 ice-rock avalanche <bold>(b)</bold>. Oblique
+three-dimensional comparison of source regions and magnitudes of the massive
+ice-rock avalanches in 2021 and 2017 near the north ridge of Gyala Peri peak
+<bold>(c, d)</bold>.</p></caption>
+          <?xmltex \igopts{width=497.923228pt}?><graphic xlink:href="https://tc.copernicus.org/articles/16/1333/2022/tc-16-1333-2022-f02.png"/>
+
+        </fig>
+
+</sec>
+<sec id="Ch1.S3.SS2">
+  <label>3.2</label><title>Avalanche source, magnitude, and landscape change</title>
+      <p id="d1e635">The comparison of 0.5 m resolution Pléaides satellite orthophotos (dated
+30 December 2018 and 30 April 2021) and field investigation revealed that
+the avalanche originated from the western flank of a ridge that extends
+north from Gyala Peri (Fig. 2a). DEM differencing reveals that about
+<inline-formula><mml:math id="M36" display="inline"><mml:mrow><mml:mo>∼</mml:mo><mml:mspace linebreak="nobreak" width="0.125em"/><mml:mn mathvariant="normal">50.0</mml:mn><mml:mo>±</mml:mo><mml:mn mathvariant="normal">1.5</mml:mn></mml:mrow></mml:math></inline-formula> Mm<inline-formula><mml:math id="M37" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula> of ice and rock detached from the
+mountain ridge (Fig. 2c). We assume that the majority of this material was
+released in the March 2021 event as we have not detected any large
+avalanching events capable of transforming into a debris flow since the
+October 2018 glacier detachment. The mean and maximum depth of surface
+lowering in the source detachment area was <inline-formula><mml:math id="M38" display="inline"><mml:mo>∼</mml:mo></mml:math></inline-formula> 140 and
+<inline-formula><mml:math id="M39" display="inline"><mml:mo>∼</mml:mo></mml:math></inline-formula> 300 m, respectively, and the detachment scar spans an
+altitudinal range of <inline-formula><mml:math id="M40" display="inline"><mml:mo>∼</mml:mo></mml:math></inline-formula> 6000–6500 m a.s.l., across a horizontal
+area of <inline-formula><mml:math id="M41" display="inline"><mml:mo>∼</mml:mo></mml:math></inline-formula> 0.36 km<inline-formula><mml:math id="M42" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">2</mml:mn></mml:msup></mml:math></inline-formula>. The avalanche caused headward erosion
+of the ridgeline of up to <inline-formula><mml:math id="M43" display="inline"><mml:mo>∼</mml:mo></mml:math></inline-formula> 160, over <inline-formula><mml:math id="M44" display="inline"><mml:mo>∼</mml:mo></mml:math></inline-formula> 800 m
+laterally (Fig. 2b).</p>
+      <p id="d1e714">We posit that the avalanche contained a mixture of rock and glacier ice; a
+perched ice mass was on the ridgeline pre-event (Fig. S4), whilst the
+fresh appearance of the rock face immediately beneath the ridge implies
+the incorporation of at least some rock debris, but we remain uncertain on
+the exact ice / rock ratio. Existing analysis of past events in the basin
+shows the potential for a high proportion of rock debris in the initial
+detachment (Kääb et al., 2021). Videography by the corresponding
+author captured in October 2019 (see Supplement) shows an
+avalanche originating from approximately the same source region on the
+mountain ridgeline as the March 2021 event. From its appearance, the
+avalanche appears to be comprised mostly of ice and snow to begin with and
+transitions to comprise more rock and debris later in the video, which provides some site-specific insight into how the composition of such events
+can transform following an initial detachment. Post-event field photographs
+and Pléiades orthophotos show that the source area of the March 2021
+ice-rock avalanche is located <inline-formula><mml:math id="M45" display="inline"><mml:mrow><mml:mo>&lt;</mml:mo><mml:mn mathvariant="normal">0.5</mml:mn></mml:mrow></mml:math></inline-formula> km to the north of the large (17
+and 33 Mm<inline-formula><mml:math id="M46" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula>) avalanches which occurred in 2017 (Fig. 2d and Kääb et al., 2021).</p>
+      <p id="d1e736">Whilst the vast majority of material from the March 2021 avalanche descended
+downslope to the west into the Sedongpu basin, a post-event Pléaides
+orthophoto (30 April 2020) shows evidence of small-scale ice and rock
+avalanching into the adjacent catchment to the east of the ridgeline (Fig. 2b). We detect 5.2 Mm<inline-formula><mml:math id="M47" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula> of net deposition at the foot of the avalanche
+region within a slope distance of 3.5 km from the source. A further 12.4 Mm<inline-formula><mml:math id="M48" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula> was deposited along the flow path lower down in the Sedongpu
+valley, and at least 1.3 Mm<inline-formula><mml:math id="M49" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula> was deposited in the form of a temporary
+dam on the Yarlung Tsangpo (Fig. 2a). We speculated that the missing
+ice-rock material from the avalanche source area was either dispersed thinly
+along and adjacent to the flow path on the valley bottom, the neighbouring
+glaciers, and the outlet of valley basin (Fig. S5a) or directly entered the
+Yarlung Tsangpo river (Fig. S5b), which was difficult to detect using DEM
+differences. We therefore infer that the flow was highly mobile, an
+observation in line with previous events in the basin (Kääb et al.,
+2021) and elsewhere (Shugar et al., 2021). Whilst we do not focus in detail
+on the impacts of the avalanche and mass flow further downstream, post-event
+satellite imagery reveals elevated turbidity in the Brahmaputra River at
+Xirang, <inline-formula><mml:math id="M50" display="inline"><mml:mo>∼</mml:mo></mml:math></inline-formula> 200 km from the avalanche source and close to the
+disputed international border with India, less than 36 h after the
+event, demonstrating the far-reaching, international influence of large mass
+flows from the Sedongpu basin in a region that is geopolitically sensitive.</p>
+
+      <?xmltex \floatpos{p}?><fig id="Ch1.F3" specific-use="star"><?xmltex \currentcnt{3}?><?xmltex \def\figurename{Figure}?><label>Figure 3</label><caption><p id="d1e776">Anomalies of mean air temperature during the ablation
+season (June–September) and the total annual precipitation at the Nyingchi
+station, showing the significant air temperature rising (the dashed black
+line) at the rate of 0.28 <inline-formula><mml:math id="M51" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula>C per decade (<inline-formula><mml:math id="M52" display="inline"><mml:mrow><mml:mi>p</mml:mi><mml:mo>&lt;</mml:mo><mml:mn mathvariant="normal">0.001</mml:mn></mml:mrow></mml:math></inline-formula>) <bold>(a, b)</bold>.
+Anomalies of minimum air temperature relative to the mean value for the
+period 1980–2021, recorded by the three nearest meteorological stations
+(Bomi, Milin, Nyingchi). The timings of the avalanche events that occurred
+in October 2017, October 2018, and March 2021 are shown for context
+<bold>(c–e)</bold>.</p></caption>
+          <?xmltex \igopts{width=497.923228pt}?><graphic xlink:href="https://tc.copernicus.org/articles/16/1333/2022/tc-16-1333-2022-f03.png"/>
+
+        </fig>
+
+</sec>
+<sec id="Ch1.S3.SS3">
+  <label>3.3</label><title>Possible drivers for the 2021 ice-rock avalanche</title>
+      <p id="d1e820">The Gyala Peri region, and the southeastern Tibetan Plateau more broadly,
+are tectonically active. Seismic activity, a known mass movement avalanche
+trigger, has been proposed as a possible trigger mechanism for
+avalanche-driven debris flows originating from the Sedongpu valley in 2017
+and into 2018 (Zhao et al., 2019). Indeed, the Gyala Peri region is
+seismically active and has experienced more than 20 earthquakes with
+<?xmltex \hack{\mbox\bgroup}?><inline-formula><mml:math id="M53" display="inline"><mml:mi>M</mml:mi></mml:math></inline-formula> <inline-formula><mml:math id="M54" display="inline"><mml:mrow><mml:mo>&gt;</mml:mo><mml:mn mathvariant="normal">3.5</mml:mn></mml:mrow></mml:math></inline-formula><?xmltex \hack{\egroup}?> during the period 2000–2020, which is higher than other
+nearby glacierized centres (e.g. Fig. S6). Whilst we do not detect
+heightened seismic activity around the time of the March 2021 avalanche, it
+is possible that seismic activity over preceding years and decades may have
+been a conditioning (rather than triggering) factor. Frequent earthquakes,
+particularly the <inline-formula><mml:math id="M55" display="inline"><mml:mi>M</mml:mi></mml:math></inline-formula> 6.9 earthquake on 18 November 2017 and small-magnitude
+aftershocks near the Gyala Peri mountain (Zhao et al., 2019), may have
+enhanced any pre-existing cryospheric instabilities, especially in the high
+mountain ridges where topographic amplification can occur.</p>
+      <p id="d1e849">Meteorological records from nearby monitoring station show a significant
+increase in mean air temperature but insignificant change for annual total
+precipitation change (Fig. 3a–b). Similar to the so-called “Chamoli event”
+(Shugar et al., 2021), the March 2021 Sedongpu event occurred during an
+exceptionally warm period outside of the regular summer ablation season.
+We found that the 2021 ice-rock avalanche, and previous ones from the basin,
+occurred concurrently with or shortly after the record of positive air
+temperature anomalies (Fig. 3c–e for mean minimum air temperature, Fig. S7
+for mean air temperature). The period January to March 2021 saw positive
+temperature anomalies in the range <inline-formula><mml:math id="M56" display="inline"><mml:mrow><mml:mo>+</mml:mo><mml:mn mathvariant="normal">1.6</mml:mn></mml:mrow></mml:math></inline-formula>–1.8 <inline-formula><mml:math id="M57" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula>C, which
+exceeded (Nyingchi: 2991 m a.s.l.; Bomi: 2737 m a.s.l.) or came close to exceeding
+(Milin: 2950 m a.s.l.) historical records (Fig. 3c). Similarly, in 2017 and
+2020 we observe unprecedented positive temperature anomalies in the months
+of September and October at all three stations (<inline-formula><mml:math id="M58" display="inline"><mml:mrow><mml:mo>+</mml:mo><mml:mn mathvariant="normal">2.0</mml:mn></mml:mrow></mml:math></inline-formula>–3.3 <inline-formula><mml:math id="M59" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula>C); the
+former coincides with the occurrence of the October 2017 ice-rock avalanche
+in the Sedongpu basin, whilst the record positive temperature anomalies in
+Autumn 2020 and late Winter–early Spring 2021 occur immediately before and
+during the period when the March 2021 avalanche occurred (Fig. 3e). In
+addition, the summer in 2018 was the warmest season during the past four
+decades; the mean air temperature during June–August was 0.95–1.3 <inline-formula><mml:math id="M60" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula>C
+higher than the historical mean for this period (Fig. 3d). The extrapolated
+half-hourly air temperature by using the AWS records near the Sedongpu basin
+outlet and the constant lapse rate of <inline-formula><mml:math id="M61" display="inline"><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">0.60</mml:mn></mml:mrow></mml:math></inline-formula> <inline-formula><mml:math id="M62" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula>C 100 m<inline-formula><mml:math id="M63" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula> evidenced
+discontinuous positive air temperature at the avalanche source region (6500 m a.s.l.) during the period from May to October. It is well-established that
+climatic warming can initiate complex feedback mechanisms in high-mountain
+regions; permafrost thaw and associated reductions in rock strength, as well as the
+warming of glacier beds, can lead to enhanced instability and the initiation
+of mass movements (Falaschi et al., 2019; Shugar et al., 2021).</p>
+      <p id="d1e931">Whilst it is difficult to directly attribute the March 2021 avalanche to
+atmospheric warming, it is likely that a series of factors including (i)
+topographic disposition, (ii) recent and long-term seismic activity, (iii) the
+destabilizing influence of long-term regional warming on the mountain
+cryosphere, and (iv) recent extreme positive temperature anomalies, leading
+to (v) increased meltwater lubrication at the bed of perched ice masses and
+infiltration into the bedrock fracture network, may have directly or
+indirectly contributed to the initiation of the March 2021 ice-rock
+avalanche and ensuing debris flow.</p>
+</sec>
+</sec>
+<sec id="Ch1.S4" sec-type="conclusions">
+  <label>4</label><title>Conclusions and implications</title>
+      <p id="d1e943">Our data and accompanying analysis provide insight into the source, process,
+magnitude, and impacts of the massive 22 March 2021 ice-rock avalanche which
+originated in the Sedongpu basin and temporarily dammed the Yarlung Tsangpo
+river. The March 2021 event and notable events that have preceded it (e.g.
+the <inline-formula><mml:math id="M64" display="inline"><mml:mo>∼</mml:mo></mml:math></inline-formula> 50 Mm<inline-formula><mml:math id="M65" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula> ice-rock avalanche in 2017–2018 and the
+<inline-formula><mml:math id="M66" display="inline"><mml:mo>∼</mml:mo></mml:math></inline-formula> 130 Mm<inline-formula><mml:math id="M67" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula> glacier detachment in October 2018) reinforce
+the classification of the basin as a hotspot of catastrophic mass flow
+activity. The basin is also located within the wider Yarlung Tsangpo Grand
+Canyon, which is earmarked for the development of large-scale hydropower and
+associated socioeconomic development in coming decades. We suggest that
+ongoing ground- and remote-sensing-based observation of this basin and
+similar basins more widely across the southeastern Tibetan Plateau should
+be a priority for the research community, as should predictive modelling for
+exploring the influence of, for example, sustained deglaciation, permafrost
+thaw, and short-lived and longer-term atmospheric warming on the stability
+of the mountain cryosphere in this region. Finally, we emphasize the
+importance of targeted engagement with relevant stakeholders to ensure that
+hazards of cryospheric origin are considered within the remit of sustainable
+development, including the reduction of risk to life and property along
+potential mass flow pathways.</p>
+</sec>
+
+      
+      </body>
+    <back><notes notes-type="dataavailability"><title>Data availability</title>
+
+      <p id="d1e983">Data are available upon request from the corresponding
+author. We utilized PlanetScope (<uri>https://www.planet.com/explorer/#/interval/1{%}20day/types/PSScene</uri>) (Planet, 2022) image IDs
+20210310_033352_64_245d (March 10), 20210323_033244_29_2451 (23 March), and 20210324_035901_1040 (24 March)
+to analyse river turbidity and identify the sediment plume from the 22 March
+Sedongpu event in the Brahmaputra River at Xirang. Long-period seismographs
+were provided by the Data Management Centre of the China National Seismic
+Network at the Institute of Geophysics, China Earthquake Administration, and
+are available on request. The meteorological data for Nyingchi, Bomi, and
+Milin stations are available from the China Meteorological Data Service Centre
+(<uri>http://data.cma.cn</uri>) (CMDSC, 2021). USGS earthquake data are from <uri>https://www.usgs.gov/natural-hazards/earthquake-hazards/lists-maps-and-statistics</uri> (USGS, 2022).</p>
+  </notes><notes notes-type="videosupplement"><title>Video supplement</title>
+
+      <p id="d1e998">The video showing an ice-rock avalanche in the Sedongpu basin in 29 October 2019 is available at <ext-link xlink:href="https://doi.org/10.5446/56816" ext-link-type="DOI">10.5446/56816</ext-link> (Yang, 2022).</p>
+  </notes><app-group>
+        <supplementary-material position="anchor"><p id="d1e1004">The supplement related to this article is available online at: <inline-supplementary-material xlink:href="https://doi.org/10.5194/tc-16-1333-2022-supplement" xlink:title="pdf">https://doi.org/10.5194/tc-16-1333-2022-supplement</inline-supplementary-material>.</p></supplementary-material>
+        </app-group><notes notes-type="authorcontribution"><title>Author contributions</title>
+
+      <p id="d1e1013">All authors conceived the study and contribute to data collection,
+processing, and analysis. WY, YW, ZW, BA, and GW carried out
+the fieldwork; WY, CZ, and WW performed remote-sensing analyses. MW and SD
+contributed to the analysis of results and discussion. All authors
+contributed to the writing and revision of the paper.</p>
+  </notes><notes notes-type="competinginterests"><title>Competing interests</title>
+
+      <p id="d1e1019">The contact author has declared that neither they nor their co-authors have any competing interests.</p>
+  </notes><notes notes-type="disclaimer"><title>Disclaimer</title>
+
+      <p id="d1e1025">Publisher’s note: Copernicus Publications remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.</p>
+  </notes><ack><title>Acknowledgements</title><p id="d1e1031">We thank the National Climate Center, China Meteorological Administration, for providing meteorological data and the USGS for the seismic data. We also thank the suggestions from editor Tobias Bolch, the two reviewers including Gilbert Adrien, and the anonymous referee for improving the paper quality.</p></ack><notes notes-type="financialsupport"><title>Financial support</title>
+
+      <p id="d1e1036">The study is supported by the Second Tibetan Plateau Scientific Expedition and Research Program (STEP) (grant no. 2019QZKK0201), the National Natural Science Foundation of China (grant nos. 41961134035, 41988101), the Royal Society Newton Advanced Fellowship (grant no. NA170325), and the National Key Research and Development Project (grant no. 2019YFC1509102).</p>
+  </notes><notes notes-type="reviewstatement"><title>Review statement</title>
+
+      <p id="d1e1042">This paper was edited by Tobias Bolch and reviewed by Adrien Gilbert and one anonymous referee.</p>
+  </notes><ref-list>
+    <title>References</title>
+
+      <ref id="bib1.bib1"><label>1</label><?label 1?><mixed-citation>An, B., Wang, W., Yang, W., Wu, G., Guo, Y., Zhu, H., Gao, Y., Bai, L.,
+Zhang, F., and Zeng, C.: Process, mechanisms, and early warning of glacier
+collapse-induced river blocking disasters in the Yarlung Tsangpo Grand
+Canyon, southeastern Tibetan Plateau, Sci. Total Environ., 816, 151652,
+<ext-link xlink:href="https://doi.org/10.1016/j.scitotenv.2021.151652" ext-link-type="DOI">10.1016/j.scitotenv.2021.151652</ext-link>, 2021</mixed-citation></ref>
+      <ref id="bib1.bib2"><label>2</label><?label 1?><mixed-citation>Bolch, T., Shea, J. M., Liu, S., Azam, F. M., Gao, Y., Gruber, S.,
+Immerzeel, W. W., Kulkarni, A., Li, H., and Tahir, A. A.: Status and change
+of the cryosphere in the extended Hindu Kush Himalaya region, in: The Hindu
+Kush Himalaya Assessment, Springer International Publishing, Cham, Germany, 209–255, <ext-link xlink:href="https://doi.org/10.1007/978-3-319-92288-1_7" ext-link-type="DOI">10.1007/978-3-319-92288-1_7</ext-link>, 2019.</mixed-citation></ref>
+      <ref id="bib1.bib3"><label>3</label><?label 1?><mixed-citation>Chen, C., Zhang, L., Xiao, T., and He, J.: Barrier lake bursting and flood
+routing in the Yarlung Tsangpo Grand Canyon in October 2018, J. Hydrol.,
+583, 124603, <ext-link xlink:href="https://doi.org/10.1016/j.jhydrol.2020.124603" ext-link-type="DOI">10.1016/j.jhydrol.2020.124603</ext-link>, 2020.</mixed-citation></ref>
+      <ref id="bib1.bib4"><label>4</label><?label 1?><mixed-citation>China Meteorological Data Service Centre (CMDSC): <uri>https://data.cma.cn/</uri>, last access: 20 May 2021.</mixed-citation></ref>
+      <ref id="bib1.bib5"><label>5</label><?label 1?><mixed-citation>Ekström, G. and Stark, C. P.: Simple scaling of catastrphic landslide
+dynamics, Science, 339, 1416–1419, <ext-link xlink:href="https://doi.org/10.1126/science.1232887" ext-link-type="DOI">10.1126/science.1232887</ext-link>,
+2013.</mixed-citation></ref>
+      <ref id="bib1.bib6"><label>6</label><?label 1?><mixed-citation>Evans, S. G., Delaney, K. B., and Rana, N. M.: The occurrence and mechanism
+of catastrophic mass flows in the mountain cryosphere, in: Snow and
+Ice-Related Hazards, Risks, and Disasters, second edn., Elsevier, 541–596,
+<ext-link xlink:href="https://doi.org/10.1016/B978-0-12-817129-5.00004-4" ext-link-type="DOI">10.1016/B978-0-12-817129-5.00004-4</ext-link>, 2021.</mixed-citation></ref>
+      <ref id="bib1.bib7"><label>7</label><?label 1?><mixed-citation>Falaschi, D., Kääb, A., Paul, F., Tadono, T., Rivera, J. A., and Lenzano, L. E.: Brief communication: Collapse of 4 Mm<inline-formula><mml:math id="M68" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula> of ice from a cirque glacier in the Central Andes of Argentina, The Cryosphere, 13, 997–1004, <ext-link xlink:href="https://doi.org/10.5194/tc-13-997-2019" ext-link-type="DOI">10.5194/tc-13-997-2019</ext-link>, 2019.</mixed-citation></ref>
+      <ref id="bib1.bib8"><label>8</label><?label 1?><mixed-citation>Haeberli, W., Huggel, C., Kääb, A., Zgraggen-Oswald, S., Polkvoj,
+A., Galushkin, I., Zotikov, I., and Osokin, N.: The Kolka-Karmadon rock/ice
+slide of 20 September 2002: an extraordinary event of historical dimensions
+in North Ossetia, Russian Caucasus, J. Glaciol., 50, 533–546,
+<ext-link xlink:href="https://doi.org/10.3189/172756504781829710" ext-link-type="DOI">10.3189/172756504781829710</ext-link>, 2004.</mixed-citation></ref>
+      <ref id="bib1.bib9"><label>9</label><?label 1?><mixed-citation>Iverson, R. M., George, D. L., and Logan, M.: Debris flow runup on vertical
+barriers and adverse slopes, J. Geophys. Res.-Earth, 121, 2333–2357,
+<ext-link xlink:href="https://doi.org/10.1002/2016JF003933" ext-link-type="DOI">10.1002/2016JF003933</ext-link>, 2016.</mixed-citation></ref>
+      <ref id="bib1.bib10"><label>10</label><?label 1?><mixed-citation>Jacquemart, M., Loso, M., Leopold, M., Welty, E., and Tiampo, K.: What
+drives large-scale glacier detachments? Insights from Flat Creek glacier,
+St. Elias Mountains, Alaska, Geology, 48, 703–707,
+<ext-link xlink:href="https://doi.org/10.1130/G47211.1" ext-link-type="DOI">10.1130/G47211.1</ext-link>, 2020.</mixed-citation></ref>
+      <ref id="bib1.bib11"><label>11</label><?label 1?><mixed-citation>Kääb, A., Jacquemart, M., Gilbert, A., Leinss, S., Girod, L., Huggel, C., Falaschi, D., Ugalde, F., Petrakov, D., Chernomorets, S., Dokukin, M., Paul, F., Gascoin, S., Berthier, E., and Kargel, J. S.: Sudden large-volume detachments of low-angle mountain glaciers – more frequent than thought?, The Cryosphere, 15, 1751–1785, <ext-link xlink:href="https://doi.org/10.5194/tc-15-1751-2021" ext-link-type="DOI">10.5194/tc-15-1751-2021</ext-link>, 2021.</mixed-citation></ref>
+      <ref id="bib1.bib12"><label>12</label><?label 1?><mixed-citation>Planet: Daily Earth Data to See Change and Make Better Decisions,
+<uri>https://www.planet.com/explorer/#/interval/1%20day/types/PSScene</uri>, last access: 12 May 2021.</mixed-citation></ref>
+      <ref id="bib1.bib13"><label>13</label><?label 1?><mixed-citation>RGI Consortium: Randolph Glacier Inventory–A Dataset of Global Glacier
+Outlines: Version 6.0, Technical Report, Global Land Ice Measurements from
+Space, Colorado, USA, Digital Media [data set], <ext-link xlink:href="https://doi.org/10.7265/N5-RGI-60" ext-link-type="DOI">10.7265/N5-RGI-60</ext-link>,
+2017.</mixed-citation></ref>
+      <ref id="bib1.bib14"><label>14</label><?label 1?><mixed-citation>Shean, D. and Bhushan, S.: dshean/hma_mb_paper: Release for accepted article: Data, notebooks, scripts and notes for Shean et al. (2020) paper on High-Mountain Asia glacier mass balance, Zenodo [code], <uri>https://zenodo.org/record/3600624</uri>, 2020.</mixed-citation></ref>
+      <ref id="bib1.bib15"><label>15</label><?label 1?><mixed-citation>Shugar, D., Jacquemart, M., Shean, D., Bhushan, S., Upadhyay, K., Sattar,
+A., Schwanghart, W., McBride, S., de Vries, M. V. W., and Mergili, M.: A
+massive rock and ice avalanche caused the 2021 disaster at Chamoli, Indian
+Himalaya, Science, 373, 300–306, <ext-link xlink:href="https://doi.org/10.1126/science.abh4455" ext-link-type="DOI">10.1126/science.abh4455</ext-link>, 2021.</mixed-citation></ref>
+      <ref id="bib1.bib16"><label>16</label><?label 1?><mixed-citation>Tong, L. Q., Tu, J. N., Pei, L. X., Guo, Z. C., Zheng, X. W., Fan, J. H.,
+Zhong, X., Liu, C. L., Wang, S. S., He, P., and Chen, H.: Preliminary
+discussion of the frequent debris flow events in Sedongpu Basin at Gyala
+Peri peak, Yarlung Zangbo River, J. Eng. Geol., 26, 1552–1561,
+<ext-link xlink:href="https://doi.org/10.13544/j.cnki.jeg.2018-401" ext-link-type="DOI">10.13544/j.cnki.jeg.2018-401</ext-link>, 2019.</mixed-citation></ref>
+      <ref id="bib1.bib17"><label>17</label><?label 1?><mixed-citation>USGS: Lists, Maps, and Statistics: Basic earthquake counts for the World and United States,  <uri>https://www.usgs.gov/programs/earthquake-hazards/lists-maps-and-statistics</uri> (last access: 10 May 2021), 2022.</mixed-citation></ref>
+      <ref id="bib1.bib18"><label>18</label><?label 1?><mixed-citation>Veh, G., Korup, O., and Walz, A.: Hazard from Himalayan glacier lake
+outburst floods, P. Natl. Acad. Sci. USA, 117, 907–912,
+<ext-link xlink:href="https://doi.org/10.1073/pnas.1914898117" ext-link-type="DOI">10.1073/pnas.1914898117</ext-link>, 2020.</mixed-citation></ref>
+      <ref id="bib1.bib19"><label>19</label><?label 1?><mixed-citation>Wang, R. J., Liu, S. Y., Shangguan, D. H., Radic, V., and Zhang, Y.: Spatial
+Heterogeneity in Glacier Mass-Balance Sensitivity across High Mountain Asia,
+Water, 11, 776, <ext-link xlink:href="https://doi.org/10.3390/w11040776" ext-link-type="DOI">10.3390/w11040776</ext-link>, 2019.</mixed-citation></ref>
+      <ref id="bib1.bib20"><label>20</label><?label 1?><mixed-citation>Wang, W., Yang, J., and Wang, Y.: Dynamic processes of 2018 Sedongpu
+landslide in Namcha Barwa–Gyala Peri massif revealed by broadband seismic
+records, Landslides, 17, 409–418, <ext-link xlink:href="https://doi.org/10.1007/s10346-019-01315-3" ext-link-type="DOI">10.1007/s10346-019-01315-3</ext-link>,
+2020.</mixed-citation></ref>
+      <ref id="bib1.bib21"><label>21</label><?label 1?><mixed-citation>Yang, W.: An ice-rock avalanche in the Sedongpu basin in 29 October 2019, TIB-AV-Portal [video], <ext-link xlink:href="https://doi.org/10.5446/56816" ext-link-type="DOI">10.5446/56816</ext-link>, 2022.</mixed-citation></ref>
+      <ref id="bib1.bib22"><label>22</label><?label 1?><mixed-citation>Yao, T. D., Xue, Y. K., Chen, D. L., Chen, F. H., Thompson, L., Cui, P.,
+Koike, T., Lau, W. K. M., Lettenmaier, D., Mosbrugger, V., Zhang, R. H., Xu,
+B. Q., Dozier, J., Gillespie, T., Gu, Y., Kang, S. C., Piao, S. L.,
+Sugimoto, S., Ueno, K., Wang, L., Wang, W. C., Zhang, F., Sheng, Y. W., Guo,
+W. D., Ailikun, Yang, X. X., Ma, Y. M., Shen, S. S. P., Su, Z. B., Chen, F.,
+Liang, S. L., Liu, Y. M., Singh, V. P., Yang, K., Yang, D. Q., Zhao, X. Q.,
+Qian, Y., Zhang, Y., and Li, Q.: Recent Third Pole's Rapid Warming
+Accompanies Cryospheric Melt and Water Cycle Intensification and
+Interactions between Monsoon and Environment: Multidisciplinary Approach
+with Observations, Modeling, and Analysis, B. Am. Meteorol. Soc., 100,
+423–444, <ext-link xlink:href="https://doi.org/10.1175/BAMS-D-17-0057.1" ext-link-type="DOI">10.1175/BAMS-D-17-0057.1</ext-link>, 2019.
+</mixed-citation></ref><?xmltex \hack{\newpage}?>
+      <ref id="bib1.bib23"><label>23</label><?label 1?><mixed-citation>Zhao, B., Li, W., Wang, Y., Lu, J., and Li, X.: Landslides triggered by the
+Ms 6.9 Nyingchi earthquake, China (18 November 2017): analysis of the
+spatial distribution and occurrence factors, Landslides, 16, 765–776,
+<ext-link xlink:href="https://doi.org/10.1007/s10346-019-01146-2" ext-link-type="DOI">10.1007/s10346-019-01146-2</ext-link>, 2019.</mixed-citation></ref>
+      <ref id="bib1.bib24"><label>24</label><?label 1?><mixed-citation>Zheng, G., Mergili, M., Emmer, A., Allen, S., Bao, A., Guo, H., and Stoffel, M.: The 2020 glacial lake outburst flood at Jinwuco, Tibet: causes, impacts, and implications for hazard and risk assessment, The Cryosphere, 15, 3159–3180, <ext-link xlink:href="https://doi.org/10.5194/tc-15-3159-2021" ext-link-type="DOI">10.5194/tc-15-3159-2021</ext-link>, 2021.</mixed-citation></ref>
+
+  </ref-list></back>
+    <!--<article-title-html>Brief communication: An approximately 50&thinsp;Mm<sup>3</sup> ice-rock avalanche on 22 March 2021 in the Sedongpu valley, southeastern Tibetan Plateau</article-title-html>
+<abstract-html/>
+<ref-html id="bib1.bib1"><label>1</label><mixed-citation>An, B., Wang, W., Yang, W., Wu, G., Guo, Y., Zhu, H., Gao, Y., Bai, L.,
+Zhang, F., and Zeng, C.: Process, mechanisms, and early warning of glacier
+collapse-induced river blocking disasters in the Yarlung Tsangpo Grand
+Canyon, southeastern Tibetan Plateau, Sci. Total Environ., 816, 151652,
+<a href="https://doi.org/10.1016/j.scitotenv.2021.151652" target="_blank">https://doi.org/10.1016/j.scitotenv.2021.151652</a>, 2021
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib2"><label>2</label><mixed-citation>Bolch, T., Shea, J. M., Liu, S., Azam, F. M., Gao, Y., Gruber, S.,
+Immerzeel, W. W., Kulkarni, A., Li, H., and Tahir, A. A.: Status and change
+of the cryosphere in the extended Hindu Kush Himalaya region, in: The Hindu
+Kush Himalaya Assessment, Springer International Publishing, Cham, Germany, 209–255, <a href="https://doi.org/10.1007/978-3-319-92288-1_7" target="_blank">https://doi.org/10.1007/978-3-319-92288-1_7</a>, 2019.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib3"><label>3</label><mixed-citation>Chen, C., Zhang, L., Xiao, T., and He, J.: Barrier lake bursting and flood
+routing in the Yarlung Tsangpo Grand Canyon in October 2018, J. Hydrol.,
+583, 124603, <a href="https://doi.org/10.1016/j.jhydrol.2020.124603" target="_blank">https://doi.org/10.1016/j.jhydrol.2020.124603</a>, 2020.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib4"><label>4</label><mixed-citation>China Meteorological Data Service Centre (CMDSC): <a href="https://data.cma.cn/" target="_blank"/>, last access: 20 May 2021.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib5"><label>5</label><mixed-citation>Ekström, G. and Stark, C. P.: Simple scaling of catastrphic landslide
+dynamics, Science, 339, 1416–1419, <a href="https://doi.org/10.1126/science.1232887" target="_blank">https://doi.org/10.1126/science.1232887</a>,
+2013.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib6"><label>6</label><mixed-citation>Evans, S. G., Delaney, K. B., and Rana, N. M.: The occurrence and mechanism
+of catastrophic mass flows in the mountain cryosphere, in: Snow and
+Ice-Related Hazards, Risks, and Disasters, second edn., Elsevier, 541–596,
+<a href="https://doi.org/10.1016/B978-0-12-817129-5.00004-4" target="_blank">https://doi.org/10.1016/B978-0-12-817129-5.00004-4</a>, 2021.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib7"><label>7</label><mixed-citation>Falaschi, D., Kääb, A., Paul, F., Tadono, T., Rivera, J. A., and Lenzano, L. E.: Brief communication: Collapse of 4&thinsp;Mm<sup>3</sup> of ice from a cirque glacier in the Central Andes of Argentina, The Cryosphere, 13, 997–1004, <a href="https://doi.org/10.5194/tc-13-997-2019" target="_blank">https://doi.org/10.5194/tc-13-997-2019</a>, 2019.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib8"><label>8</label><mixed-citation>Haeberli, W., Huggel, C., Kääb, A., Zgraggen-Oswald, S., Polkvoj,
+A., Galushkin, I., Zotikov, I., and Osokin, N.: The Kolka-Karmadon rock/ice
+slide of 20 September 2002: an extraordinary event of historical dimensions
+in North Ossetia, Russian Caucasus, J. Glaciol., 50, 533–546,
+<a href="https://doi.org/10.3189/172756504781829710" target="_blank">https://doi.org/10.3189/172756504781829710</a>, 2004.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib9"><label>9</label><mixed-citation>Iverson, R. M., George, D. L., and Logan, M.: Debris flow runup on vertical
+barriers and adverse slopes, J. Geophys. Res.-Earth, 121, 2333–2357,
+<a href="https://doi.org/10.1002/2016JF003933" target="_blank">https://doi.org/10.1002/2016JF003933</a>, 2016.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib10"><label>10</label><mixed-citation>Jacquemart, M., Loso, M., Leopold, M., Welty, E., and Tiampo, K.: What
+drives large-scale glacier detachments? Insights from Flat Creek glacier,
+St. Elias Mountains, Alaska, Geology, 48, 703–707,
+<a href="https://doi.org/10.1130/G47211.1" target="_blank">https://doi.org/10.1130/G47211.1</a>, 2020.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib11"><label>11</label><mixed-citation>Kääb, A., Jacquemart, M., Gilbert, A., Leinss, S., Girod, L., Huggel, C., Falaschi, D., Ugalde, F., Petrakov, D., Chernomorets, S., Dokukin, M., Paul, F., Gascoin, S., Berthier, E., and Kargel, J. S.: Sudden large-volume detachments of low-angle mountain glaciers – more frequent than thought?, The Cryosphere, 15, 1751–1785, <a href="https://doi.org/10.5194/tc-15-1751-2021" target="_blank">https://doi.org/10.5194/tc-15-1751-2021</a>, 2021.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib12"><label>12</label><mixed-citation>Planet: Daily Earth Data to See Change and Make Better Decisions,
+<a href="https://www.planet.com/explorer/#/interval/1%20day/types/PSScene" target="_blank"/>, last access: 12 May 2021.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib13"><label>13</label><mixed-citation>RGI Consortium: Randolph Glacier Inventory–A Dataset of Global Glacier
+Outlines: Version 6.0, Technical Report, Global Land Ice Measurements from
+Space, Colorado, USA, Digital Media [data set], <a href="https://doi.org/10.7265/N5-RGI-60" target="_blank">https://doi.org/10.7265/N5-RGI-60</a>,
+2017.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib14"><label>14</label><mixed-citation>Shean, D. and Bhushan, S.: dshean/hma_mb_paper: Release for accepted article: Data, notebooks, scripts and notes for Shean et al. (2020) paper on High-Mountain Asia glacier mass balance, Zenodo [code], <a href="https://zenodo.org/record/3600624" target="_blank"/>, 2020.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib15"><label>15</label><mixed-citation>Shugar, D., Jacquemart, M., Shean, D., Bhushan, S., Upadhyay, K., Sattar,
+A., Schwanghart, W., McBride, S., de Vries, M. V. W., and Mergili, M.: A
+massive rock and ice avalanche caused the 2021 disaster at Chamoli, Indian
+Himalaya, Science, 373, 300–306, <a href="https://doi.org/10.1126/science.abh4455" target="_blank">https://doi.org/10.1126/science.abh4455</a>, 2021.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib16"><label>16</label><mixed-citation>Tong, L. Q., Tu, J. N., Pei, L. X., Guo, Z. C., Zheng, X. W., Fan, J. H.,
+Zhong, X., Liu, C. L., Wang, S. S., He, P., and Chen, H.: Preliminary
+discussion of the frequent debris flow events in Sedongpu Basin at Gyala
+Peri peak, Yarlung Zangbo River, J. Eng. Geol., 26, 1552–1561,
+<a href="https://doi.org/10.13544/j.cnki.jeg.2018-401" target="_blank">https://doi.org/10.13544/j.cnki.jeg.2018-401</a>, 2019.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib17"><label>17</label><mixed-citation>USGS: Lists, Maps, and Statistics: Basic earthquake counts for the World and United States,  <a href="https://www.usgs.gov/programs/earthquake-hazards/lists-maps-and-statistics" target="_blank"/> (last access: 10 May 2021), 2022.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib18"><label>18</label><mixed-citation>Veh, G., Korup, O., and Walz, A.: Hazard from Himalayan glacier lake
+outburst floods, P. Natl. Acad. Sci. USA, 117, 907–912,
+<a href="https://doi.org/10.1073/pnas.1914898117" target="_blank">https://doi.org/10.1073/pnas.1914898117</a>, 2020.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib19"><label>19</label><mixed-citation>Wang, R. J., Liu, S. Y., Shangguan, D. H., Radic, V., and Zhang, Y.: Spatial
+Heterogeneity in Glacier Mass-Balance Sensitivity across High Mountain Asia,
+Water, 11, 776, <a href="https://doi.org/10.3390/w11040776" target="_blank">https://doi.org/10.3390/w11040776</a>, 2019.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib20"><label>20</label><mixed-citation>Wang, W., Yang, J., and Wang, Y.: Dynamic processes of 2018 Sedongpu
+landslide in Namcha Barwa–Gyala Peri massif revealed by broadband seismic
+records, Landslides, 17, 409–418, <a href="https://doi.org/10.1007/s10346-019-01315-3" target="_blank">https://doi.org/10.1007/s10346-019-01315-3</a>,
+2020.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib21"><label>21</label><mixed-citation>Yang, W.: An ice-rock avalanche in the Sedongpu basin in 29 October 2019, TIB-AV-Portal [video], <a href="https://doi.org/10.5446/56816" target="_blank">https://doi.org/10.5446/56816</a>, 2022.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib22"><label>22</label><mixed-citation>Yao, T. D., Xue, Y. K., Chen, D. L., Chen, F. H., Thompson, L., Cui, P.,
+Koike, T., Lau, W. K. M., Lettenmaier, D., Mosbrugger, V., Zhang, R. H., Xu,
+B. Q., Dozier, J., Gillespie, T., Gu, Y., Kang, S. C., Piao, S. L.,
+Sugimoto, S., Ueno, K., Wang, L., Wang, W. C., Zhang, F., Sheng, Y. W., Guo,
+W. D., Ailikun, Yang, X. X., Ma, Y. M., Shen, S. S. P., Su, Z. B., Chen, F.,
+Liang, S. L., Liu, Y. M., Singh, V. P., Yang, K., Yang, D. Q., Zhao, X. Q.,
+Qian, Y., Zhang, Y., and Li, Q.: Recent Third Pole's Rapid Warming
+Accompanies Cryospheric Melt and Water Cycle Intensification and
+Interactions between Monsoon and Environment: Multidisciplinary Approach
+with Observations, Modeling, and Analysis, B. Am. Meteorol. Soc., 100,
+423–444, <a href="https://doi.org/10.1175/BAMS-D-17-0057.1" target="_blank">https://doi.org/10.1175/BAMS-D-17-0057.1</a>, 2019.
+
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib23"><label>23</label><mixed-citation>Zhao, B., Li, W., Wang, Y., Lu, J., and Li, X.: Landslides triggered by the
+Ms 6.9 Nyingchi earthquake, China (18 November 2017): analysis of the
+spatial distribution and occurrence factors, Landslides, 16, 765–776,
+<a href="https://doi.org/10.1007/s10346-019-01146-2" target="_blank">https://doi.org/10.1007/s10346-019-01146-2</a>, 2019.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib24"><label>24</label><mixed-citation>Zheng, G., Mergili, M., Emmer, A., Allen, S., Bao, A., Guo, H., and Stoffel, M.: The 2020 glacial lake outburst flood at Jinwuco, Tibet: causes, impacts, and implications for hazard and risk assessment, The Cryosphere, 15, 3159–3180, <a href="https://doi.org/10.5194/tc-15-3159-2021" target="_blank">https://doi.org/10.5194/tc-15-3159-2021</a>, 2021.
+</mixed-citation></ref-html>--></article>

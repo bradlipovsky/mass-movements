@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" "https://jats.nlm.nih.gov/nlm-dtd/publishing/3.0/journalpublishing3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="3.0" xml:lang="en">
+<front>
+<journal-meta>
+<journal-id journal-id-type="publisher">NHESS</journal-id>
+<journal-title-group>
+<journal-title>Natural Hazards and Earth System Sciences</journal-title>
+<abbrev-journal-title abbrev-type="publisher">NHESS</abbrev-journal-title>
+<abbrev-journal-title abbrev-type="nlm-ta">Nat. Hazards Earth Syst. Sci.</abbrev-journal-title>
+</journal-title-group>
+<issn pub-type="epub">1684-9981</issn>
+<publisher><publisher-name>Copernicus Publications</publisher-name>
+<publisher-loc>Göttingen, Germany</publisher-loc>
+</publisher>
+</journal-meta>
+<article-meta>
+<article-id pub-id-type="doi">10.5194/nhess-12-1277-2012</article-id>
+<title-group>
+<article-title>The 6 August 2010 Mount Meager rock slide-debris flow, Coast Mountains, British Columbia: characteristics, dynamics, and implications for hazard and risk assessment</article-title>
+</title-group>
+<contrib-group><contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Guthrie</surname>
+<given-names>R. H.</given-names>
+</name>
+<xref ref-type="aff" rid="aff1">
+<sup>1</sup>
+</xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Friele</surname>
+<given-names>P.</given-names>
+</name>
+<xref ref-type="aff" rid="aff2">
+<sup>2</sup>
+</xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Allstadt</surname>
+<given-names>K.</given-names>
+</name>
+<xref ref-type="aff" rid="aff3">
+<sup>3</sup>
+</xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Roberts</surname>
+<given-names>N.</given-names>
+</name>
+<xref ref-type="aff" rid="aff4">
+<sup>4</sup>
+</xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Evans</surname>
+<given-names>S. G.</given-names>
+</name>
+<xref ref-type="aff" rid="aff5">
+<sup>5</sup>
+</xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Delaney</surname>
+<given-names>K. B.</given-names>
+</name>
+<xref ref-type="aff" rid="aff5">
+<sup>5</sup>
+</xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Roche</surname>
+<given-names>D.</given-names>
+</name>
+<xref ref-type="aff" rid="aff6">
+<sup>6</sup>
+</xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Clague</surname>
+<given-names>J. J.</given-names>
+</name>
+<xref ref-type="aff" rid="aff4">
+<sup>4</sup>
+</xref>
+</contrib>
+<contrib contrib-type="author" xlink:type="simple"><name name-style="western"><surname>Jakob</surname>
+<given-names>M.</given-names>
+</name>
+<xref ref-type="aff" rid="aff7">
+<sup>7</sup>
+</xref>
+</contrib>
+</contrib-group><aff id="aff1">
+<label>1</label>
+<addr-line>MDH Engineered Solutions, SNC-Lavalin Group, Calgary, AB, Canada</addr-line>
+</aff>
+<aff id="aff2">
+<label>2</label>
+<addr-line>Cordilleran Geoscience, Squamish, BC, Canada</addr-line>
+</aff>
+<aff id="aff3">
+<label>3</label>
+<addr-line>Earth and Space Sciences, University of Washington, Seattle, WA, USA</addr-line>
+</aff>
+<aff id="aff4">
+<label>4</label>
+<addr-line>Centre for Natural Hazard Research, Simon Fraser University, Burnaby, BC, Canada</addr-line>
+</aff>
+<aff id="aff5">
+<label>5</label>
+<addr-line>Landslide Research Programme, University of Waterloo, Waterloo, ON, Canada</addr-line>
+</aff>
+<aff id="aff6">
+<label>6</label>
+<addr-line>Kerr Wood Leidal Associates Limited, Burnaby, BC, Canada</addr-line>
+</aff>
+<aff id="aff7">
+<label>7</label>
+<addr-line>BGC Engineering Inc., Vancouver, BC, Canada</addr-line>
+</aff>
+<pub-date pub-type="epub">
+<day>04</day>
+<month>05</month>
+<year>2012</year>
+</pub-date>
+<volume>12</volume>
+<issue>5</issue>
+<fpage>1277</fpage>
+<lpage>1294</lpage>
+<permissions>
+<copyright-statement>Copyright: &#x000a9; 2012 R. H. Guthrie et al.</copyright-statement>
+<copyright-year>2012</copyright-year>
+<license license-type="open-access">
+<license-p>This work is licensed under the Creative Commons Attribution 3.0 Unported License. To view a copy of this licence, visit <ext-link ext-link-type="uri"  xlink:href="https://creativecommons.org/licenses/by/3.0/">https://creativecommons.org/licenses/by/3.0/</ext-link></license-p>
+</license>
+</permissions>
+<self-uri xlink:href="https://nhess.copernicus.org/articles/12/1277/2012/nhess-12-1277-2012.html">This article is available from https://nhess.copernicus.org/articles/12/1277/2012/nhess-12-1277-2012.html</self-uri>
+<self-uri xlink:href="https://nhess.copernicus.org/articles/12/1277/2012/nhess-12-1277-2012.pdf">The full text article is available as a PDF file from https://nhess.copernicus.org/articles/12/1277/2012/nhess-12-1277-2012.pdf</self-uri>
+<abstract>
+<p>A large rock avalanche occurred at 03:27:30 PDT, 6 August 2010, in the Mount
+Meager Volcanic Complex southwest British Columbia. The landslide initiated
+as a rock slide in Pleistocene rhyodacitic volcanic rock with the collapse of
+the secondary peak of Mount Meager. The detached rock mass impacted the
+volcano&apos;s weathered and saturated flanks, creating a visible seismic
+signature on nearby seismographs. Undrained loading of the sloping flank
+caused the immediate and extremely rapid evacuation of the entire flank with
+a strong horizontal force, as the rock slide transformed into a debris flow.
+The disintegrating mass travelled down Capricorn Creek at an average velocity
+of 64 m s&lt;sup&gt;−1&lt;/sup&gt;, exhibiting dramatic super-elevation in bends to the
+intersection of Meager Creek, 7.8 km from the source. At Meager Creek the
+debris impacted the south side of Meager valley, causing a runup of 270 m
+above the valley floor and the deflection of the landslide debris both
+upstream (for 3.7 km) and downstream into the Lillooet River valley (for
+4.9 km), where it blocked the Lillooet River river for a couple of hours,
+approximately 10 km from the landslide source. Deposition at the
+Capricorn–Meager confluence also dammed Meager Creek for about 19 h
+creating a lake 1.5 km long. The overtopping of the dam and the predicted
+outburst flood was the basis for a night time evacuation of 1500 residents in
+the town of Pemberton, 65 km downstream. High-resolution GeoEye satellite
+imagery obtained on 16 October 2010 was used to create a post-event digital
+elevation model. Comparing pre- and post-event topography we estimate
+the volume of the initial displaced mass from the flank of Mount Meager to be
+48.5 × 10&lt;sup&gt;6&lt;/sup&gt; m&lt;sup&gt;3&lt;/sup&gt;, the height of the path (&lt;i&gt;H&lt;/i&gt;) to be 2183 m
+and the total length of the path (&lt;i&gt;L&lt;/i&gt;) to be 12.7 km. This yields &lt;i&gt;H/L&lt;/i&gt;  = 0.172 and a fahrböschung (travel angle) of 9.75°. The
+movement was recorded on seismographs in British Columbia and Washington
+State with the initial impact, the debris flow travelling through bends in
+Capricorn Creek, and the impact with Meager Creek are all evident on a number
+of seismograms. The landslide had a seismic trace equivalent to a &lt;i&gt;M&lt;/i&gt; = 2.6
+earthquake. Velocities and dynamics of the movement were simulated using
+DAN-W. The 2010 event is the third major landslide in the Capricorn Creek
+watershed since 1998 and the fifth large-scale mass flow in the Meager Creek
+watershed since 1930. No lives were lost in the event, but despite its
+relatively remote location direct costs of the 2010 landslide are estimated
+to be in the order of $10 M CAD.</p>
+</abstract>
+<counts><page-count count="18"/></counts>
+</article-meta>
+</front>
+<body/>
+<back>
+<ref-list>
+<title>References</title>
+<ref id="ref1">
+<label>1</label><mixed-citation publication-type="other" xlink:type="simple">Ayotte, D. and Hungr, O.: Calibration of a runout prediction model for debris flows and avalanches, in: Proceedings of the 2nd International Conference on Debris Flows, Taipei,  edited by: Wieczorek, G. F. and Naeser, N. D., Balkema, Rotterdam, 505–514, 2000.</mixed-citation>
+</ref>
+<ref id="ref2">
+<label>2</label><mixed-citation publication-type="other" xlink:type="simple">Berrocal, J., Espinosa, A. F., and Galdos, J.: Seismological and geological aspects of the Mantaro landslide in Peru, Nature, 275, 532–536, 1978.</mixed-citation>
+</ref>
+<ref id="ref3">
+<label>3</label><mixed-citation publication-type="other" xlink:type="simple">Bovis, M. J. and Jakob, M.: The July 29, 1998, debris flow and landslide dam at Capricorn Creek, Mount Meager Volcanic Complex, southern Coast Mountains, British Columbia, Can. J. Earth Sci., 37, 1321–1334, 2000.</mixed-citation>
+</ref>
+<ref id="ref4">
+<label>4</label><mixed-citation publication-type="other" xlink:type="simple">Brodsky, E. E, Gordeev, E., and Kanamori, H.: Landslide basal friction as measured by seismic waves, Geophys. Res. Lett., 30, 2236 I-1–2236 I-5, 2003.</mixed-citation>
+</ref>
+<ref id="ref5">
+<label>5</label><mixed-citation publication-type="other" xlink:type="simple">Carter, N. M.: Exploration in the Lillooet River watershed, Can. Alpine J., 21, 8–18, 1932.</mixed-citation>
+</ref>
+<ref id="ref6">
+<label>6</label><mixed-citation publication-type="other" xlink:type="simple">Clague, J. J.: Late Quaternary Geology and Geochronology of British Columbia Part 2: Summary and Discussion of Radiocarbon-dated Quaternary History, Geol. Surv. Can. Pap., 80–35, 41 pp., 1981.</mixed-citation>
+</ref>
+<ref id="ref7">
+<label>7</label><mixed-citation publication-type="other" xlink:type="simple">Clague, J. J., Evans, S. G., Rampton, V. N., and Woodsworth, G. J.: Improved age estimates for the White River and Bridge River tephras, western Canada, Can. J. Earth Sci., 32, 1172–1179, 1995.</mixed-citation>
+</ref>
+<ref id="ref8">
+<label>8</label><mixed-citation publication-type="other" xlink:type="simple">Croft, S. A. S.: Stability Assessment of the Capricorn Creek Valley, British Columbia, B.Sc. thesis, University of British Columbia, Vancouver, BC, 1983.</mixed-citation>
+</ref>
+<ref id="ref9">
+<label>9</label><mixed-citation publication-type="other" xlink:type="simple">Dahlen, F. H.: Single-force representation of shallow landslide sources, Bull. Seismol. Soc. Am., 83, 130–143, 1993.</mixed-citation>
+</ref>
+<ref id="ref10">
+<label>10</label><mixed-citation publication-type="other" xlink:type="simple">Decker, F., Fougberg, M., and Ronayne, M.: Pemberton: The History of a Settlement, Hemlock Printing Ltd., Burnaby, BC, 1977.</mixed-citation>
+</ref>
+<ref id="ref11">
+<label>11</label><mixed-citation publication-type="other" xlink:type="simple">Deparis, J., Jongmans, D., Cotton, F., Baillet, L., Thouvenot, F., and Hantz, D.: Analysis of rock-fall and rock-fall avalanche seismograms in the French Alps, Bull. Seismol. Soc. Am., 98, 1781–1796, 2008.</mixed-citation>
+</ref>
+<ref id="ref12">
+<label>12</label><mixed-citation publication-type="other" xlink:type="simple">Dufresne, A.  and Davies, T. R.: Longitudinal ridges in mass movement deposits, Geomorphology, 105, 171–181, 2009.</mixed-citation>
+</ref>
+<ref id="ref13">
+<label>13</label><mixed-citation publication-type="other" xlink:type="simple">Evans, S. G.: A rock avalanche from the peak of Mount Meager, British Columbia, Geol. Surv. Can. Pap. 87-1A, 929–934, 1987.</mixed-citation>
+</ref>
+<ref id="ref14">
+<label>14</label><mixed-citation publication-type="other" xlink:type="simple">Evans, S. G.: Landslides, in: A synthesis of Geological Hazards in Canada, Geol. Surv. Can. Bull., 548, 43–80, 2001.</mixed-citation>
+</ref>
+<ref id="ref15">
+<label>15</label><mixed-citation publication-type="other" xlink:type="simple">Evans, S. G.: Single event&amp;nbsp;landslides resulting from massive rock slope failure: Characterising their frequency and impact on society, in: Landslides from Massive Rock Slope Failure, edited by: Evans, S. G., Scarascia-Mugnozza, G., Strom, A. L., and  Hermanns, R. L., NATO Sci. Ser. IV, Earth Environ. Sci., Springer, Dordrecht, 49, 53–73, 2006.</mixed-citation>
+</ref>
+<ref id="ref16">
+<label>16</label><mixed-citation publication-type="other" xlink:type="simple">Evans, S. G., Hungr, O., and Clague, J. J.: Dynamics of the 1984 rock avalanche and associated debris flow on Mount Cayley, British Columbia, Canada; Implications for landslide hazard assessment on dissected volcanoes, Eng. Geol., 61, 29–51, 2001.</mixed-citation>
+</ref>
+<ref id="ref17">
+<label>17</label><mixed-citation publication-type="other" xlink:type="simple">Evans, S. G., Guthrie, R. H., Roberts, N. J., and Bishop, N. F.: The disastrous 17 February 2006 rockslide-debris avalanche on Leyte Island, Philippines: a catastrophic landslide in tropical mountain terrain, Nat. Hazards Earth Syst. Sci., 7, 89–101, &lt;a href=&quot;http://dx.doi.org/10.5194/nhess-7-89-2007&quot;&gt;https://doi.org/10.5194/nhess-7-89-2007&lt;/a&gt;, 2007.</mixed-citation>
+</ref>
+<ref id="ref18">
+<label>18</label><mixed-citation publication-type="other" xlink:type="simple">Evans, S. G., Roberts, N. J., Ischuck, A., Delaney, K. B., Morozova, G. S., and Tutubalina, O.: Landslides triggered by the 1949 Khait earthquake, Tajikistan, and associated loss of life, Eng. Geol., 109, 195–212, 2009.</mixed-citation>
+</ref>
+<ref id="ref19">
+<label>19</label><mixed-citation publication-type="other" xlink:type="simple">Friele, P.  and Clague, J. J.: Large Holocene landsldies from Pylon Peak, southwestern British Columbia, Can. J. Earth Sci., 41, 165–182, 2004.</mixed-citation>
+</ref>
+<ref id="ref20">
+<label>20</label><mixed-citation publication-type="other" xlink:type="simple">Friele, P.  and Clague, J.J.: Paraglacial geomorphology of Quaternary volcanic landscapes in the southern Coast Mountains, British Columbia, in: Periglacial and Paraglacial Processes and Environments, edited by: Knight, J. and Harrison, S., Geol. Soc. Spec. Publ. London, 320, 219–233, 2009.</mixed-citation>
+</ref>
+<ref id="ref21">
+<label>21</label><mixed-citation publication-type="other" xlink:type="simple">Friele, P., Clague, J. J., Simpson, K., and Stasiuk, M.: Impact of a Quaternary volcano on Holocene sedimentation in the Lillooet River valley, British Columbia, Sediment. Geol., 176, 305–322, 2005.</mixed-citation>
+</ref>
+<ref id="ref22">
+<label>22</label><mixed-citation publication-type="other" xlink:type="simple">Friele, P., Jakob, M., and Clague, J. J.: Hazard and risk from large landslides from Mount Meager volcano, British Columbia, Canada, Georisk, 2, 48–64, 2008.</mixed-citation>
+</ref>
+<ref id="ref23">
+<label>23</label><mixed-citation publication-type="other" xlink:type="simple">Glicken, H.: Sedimentary architecture of large volcanic-debris avalanches, in: Sedimentation in volcanic settings, edited by:  Smith, G. A. and Fisher, R. V., SEPM, Tulsa, Special Publication, 45, 99–106, 1991.</mixed-citation>
+</ref>
+<ref id="ref24">
+<label>24</label><mixed-citation publication-type="other" xlink:type="simple">Guthrie, R. H. and Evans, S. G.: Work, persistence and formative events: The geomorphic impact of landslides, Geomorphology, 88, 266–275, 2007.</mixed-citation>
+</ref>
+<ref id="ref25">
+<label>25</label><mixed-citation publication-type="other" xlink:type="simple">Hickson, C. J.: Character of volcanism, volcanic hazards, and risk, northern end of the Cascade magmatic arc, British Colubmia and Washington State, in: Geology and Geological Hazards of the Vancouver Region, Southwestern British Columbia, edited by:  Monger, J. W. H., Geol. Surv. Can. Bull., 481, 231–250, 1994.</mixed-citation>
+</ref>
+<ref id="ref26">
+<label>26</label><mixed-citation publication-type="other" xlink:type="simple">Holm, K., Bovis, M., and Jakob, M.: The landslide response of alpine basins to post-Little Ice Age glacial thinning and retreat in southwestern British Columbia, Geomorphology, 57, 201–216, 2004.</mixed-citation>
+</ref>
+<ref id="ref27">
+<label>27</label><mixed-citation publication-type="other" xlink:type="simple">Huang, C.-J., Yin, H.-Y, Chen, C.-Y., Yeh, C.-H., and Wang, C.-L.: Ground vibrations produced by rock motions and debris flows, J. Geophys. Res., 112, F02014,  &lt;a href=&quot;http://dx.doi.org/10.1029/2005JF000437&quot;&gt;https://doi.org/10.1029/2005JF000437&lt;/a&gt;, 2007.</mixed-citation>
+</ref>
+<ref id="ref28">
+<label>28</label><mixed-citation publication-type="other" xlink:type="simple">Hungr, O.: A model for the runout analysis of rapid flow slides, debris flows, and avalanches, Can. Geotech. J., 32, 610–623, 1995.</mixed-citation>
+</ref>
+<ref id="ref29">
+<label>29</label><mixed-citation publication-type="other" xlink:type="simple">Hungr, O.: Simplified models of spreading flow of dry granular material, Can. Geotech. J., 45, 1156–1168, 2008.</mixed-citation>
+</ref>
+<ref id="ref30">
+<label>30</label><mixed-citation publication-type="other" xlink:type="simple">Hungr, O. and Evans, S. G.: Rock avalanche runout prediction using a dynamic model, in: Proceedings of the 7th International Symposium on Landslides, Trondheim, Norway, 1, 233–238, 1996.</mixed-citation>
+</ref>
+<ref id="ref31">
+<label>31</label><mixed-citation publication-type="other" xlink:type="simple">Hungr, O.  and Evans, S. G.: Entrainment of debris in rock avalanches: An analysis of a long run-out mechanism, Geol. Soc. Am. Bull., 116, 1240–1252, 2004.</mixed-citation>
+</ref>
+<ref id="ref32">
+<label>32</label><mixed-citation publication-type="other" xlink:type="simple">Hungr, O. and McDougall, S.: Two numerical models for landslide dynamic analysis, Comp. Geosci., 35, 978–992, 2009.</mixed-citation>
+</ref>
+<ref id="ref33">
+<label>33</label><mixed-citation publication-type="other" xlink:type="simple">Jakob, M.: Morphometric and Geotechnical Controls on Debris Flow Frequency and Magnitude in Southwestern British Columbia. Ph.D. thesis, University of British Columbia, Vancouver, BC, 1996.</mixed-citation>
+</ref>
+<ref id="ref34">
+<label>34</label><mixed-citation publication-type="other" xlink:type="simple">Jordan, P.: Debris Flows in the Southern Coast Mountains, British Columbia: Dynamic behaviour and physical properties, Ph.D. thesis, University of British Columbia, Vancouver, BC, 1994.</mixed-citation>
+</ref>
+<ref id="ref35">
+<label>35</label><mixed-citation publication-type="other" xlink:type="simple">Julian, B. R., Miller, A. D., and Foulger, G. R.: Non-double-couple Eearthquakes, 1. Theory, Rev. Geophys., 36, 525–549, 1998.</mixed-citation>
+</ref>
+<ref id="ref36">
+<label>36</label><mixed-citation publication-type="other" xlink:type="simple">Kanamori, H. and Given, J. W.: Analysis of long-period seismic waves excited by the May 18, 1980 eruption of Mount St. Helens – A terrestrial monopole?, J. Geophys. Res., 87, 5422–5432, 1982.</mixed-citation>
+</ref>
+<ref id="ref37">
+<label>37</label><mixed-citation publication-type="other" xlink:type="simple">Lipovsky, P. S., Evans, S. G., Clague, J. J., Hopkinson, C., Couture, R., Bobrowsky, P., Ekström, G., Demuth, M. N., Delaney, K. B., Roberts, N. J., Clarke, G., and Schaeffer, A.: The July 2007 rock and ice avalanches at Mount Steele, St. Elias Mountains, Yukon, Canada, Landslides, 5, 445–455, &lt;a href=&quot;http://dx.doi.org/10.1007/s10346-008-0133-4&quot;&gt;https://doi.org/10.1007/s10346-008-0133-4&lt;/a&gt;, 2008.</mixed-citation>
+</ref>
+<ref id="ref38">
+<label>38</label><mixed-citation publication-type="other" xlink:type="simple">Mathews, W. H. and McTaggart, K. C.: Hope rockslides, British Columbia Canada, in: Rockslides and Avalanches, Natural Phenomona, edited by: Voight, B., Elsevier, New York, 259–275, 1978.</mixed-citation>
+</ref>
+<ref id="ref39">
+<label>39</label><mixed-citation publication-type="other" xlink:type="simple">McNeely, R. and McCuaig, S.: Geological Survey of Canada Radiocarbon Dates XXIX, Geol. Surv. Can. Pap. 89–9, 1991.</mixed-citation>
+</ref>
+<ref id="ref40">
+<label>40</label><mixed-citation publication-type="other" xlink:type="simple">McSaveney, M. J. and Downes, G.: Application of landslide seismology to some New Zealand rock avalanches, in: Landslides, edited by: Rybar, J., Stemberk, J., and Wagner, P., Balkema, Lisse, 649–654, 2002.</mixed-citation>
+</ref>
+<ref id="ref41">
+<label>41</label><mixed-citation publication-type="other" xlink:type="simple">Mokievsky-Zubok, O.: Glacier caused slide near Pylon Peak, British Columbia, Can. J. Earth Sci., 15, 1039–1052, 1977.</mixed-citation>
+</ref>
+<ref id="ref42">
+<label>42</label><mixed-citation publication-type="other" xlink:type="simple">Nasmith, H., Mathews, W. H., and Rouse, G. E.: Bridge River ash and some other Recent ash beds in British Columbia, Can. J. Earth Sci., 4, 163–170, 1967.</mixed-citation>
+</ref>
+<ref id="ref43">
+<label>43</label><mixed-citation publication-type="other" xlink:type="simple">Norris, R. D.: Seismicity of rockfalls and avalanches at three Cascade Range volcanoes: Implications for seismic detection of hazardous mass movements, Bull. Seismol. Soc. Am., 84, 1925–1939, 1994.</mixed-citation>
+</ref>
+<ref id="ref44">
+<label>44</label><mixed-citation publication-type="other" xlink:type="simple">Province of British Columbia: Coast selling price system, average log prices for the 1 month period ending 2010-08-31, Province of British Columbia, Ministry of Forests, Mines and Lands online resource, available at: &lt;a href=&quot;http://www.for.gov.bc.ca/hva/logreports_coast.htm&quot;&gt;http://www.for.gov.bc.ca/hva/logreports_coast.htm&lt;/a&gt;, last access: 4 March 2011.</mixed-citation>
+</ref>
+<ref id="ref45">
+<label>45</label><mixed-citation publication-type="other" xlink:type="simple">Read, P. B.: Geology, Meager Creek Geothermal Area, British Columbia, Geol. Surv. Can. Open File 603, 1978.</mixed-citation>
+</ref>
+<ref id="ref46">
+<label>46</label><mixed-citation publication-type="other" xlink:type="simple">Read, P. B.: Mount Meager complex, Garibaldi Belt, southwestern British Columbia, Geosci. Can., 17, 167–170, 1990.</mixed-citation>
+</ref>
+<ref id="ref47">
+<label>47</label><mixed-citation publication-type="other" xlink:type="simple">Roche, A. D., Guthrie, R. H., Roberts, N. J., Ellis, E., and Friele, P.: Once more into the breach: A forensic analysis of the August 2010 landslide dam outburst flood at Meager Creek, British Columbia, in: Proceedings of the 5th Canadian Conference on Geotechnique and Natural Hazards, Canadian Geotechnical Society, May 15–17, 2011, Kelowna, BC, 10 pp., 2011.</mixed-citation>
+</ref>
+<ref id="ref48">
+<label>48</label><mixed-citation publication-type="other" xlink:type="simple">Siebert, L.: Large volcanic debris avalanches: Characteristics of source areas, deposits and associated eruptions, J. Volc. Geo. Res., 22, 163–197, 1984.</mixed-citation>
+</ref>
+<ref id="ref49">
+<label>49</label><mixed-citation publication-type="other" xlink:type="simple">Simpson, K. A., Stasiuk, M., Shimamura, K., Clague, J. J., and Friele, P. A.: Evidence for catastrophic volcanic debris flows in Pemberton Valley, British Columbia, Can. J. Earth Sci., 43, 679–689, 2006.</mixed-citation>
+</ref>
+<ref id="ref50">
+<label>50</label><mixed-citation publication-type="other" xlink:type="simple">Sosio, R., Crosta, G. B., and Hungr, O.: Complete dynamic modeling calibration for the Thurwieser rock avalanche (Italian Central Alps), Eng. Geol., 100, 11–26, 2008.</mixed-citation>
+</ref>
+<ref id="ref51">
+<label>51</label><mixed-citation publication-type="other" xlink:type="simple">Stasiuk, M. V., Russell, J. K., and Hickson, C. J.: Distribution, nature, and origins of the 2400 BP eruption products of Mount Meager, British Columbia, Linkages between magma chemistry and eruption behaviour, Geol. Surv. Can. Bull., 486, 1–27 1996.</mixed-citation>
+</ref>
+<ref id="ref52">
+<label>52</label><mixed-citation publication-type="other" xlink:type="simple">Stewart, M.: Dacite Block and Ash Avalanche Hazards in Mountainous Terrain: 2360 yr BP Eruption of Mount Meager, British Columbia, M.Sc. thesis, University of British Columbia, 2002.</mixed-citation>
+</ref>
+<ref id="ref53">
+<label>53</label><mixed-citation publication-type="other" xlink:type="simple">Weichert, D., Horner, R. B., and Evans, S. G.: Seismic signatures of landslides: The 1990 Brenda Mine collapse and the 1965 Hope rockslides, Bull. Seismol. Soc. Am., 84, 1523–1532, 1994.</mixed-citation>
+</ref>
+<ref id="ref54">
+<label>54</label><mixed-citation publication-type="other" xlink:type="simple">Westgate, J. A. and Dreimanis, A.: Volcanic ash layers of Recent age at Banff National Park, Alberta, Canada, Can. J. Earth Sci., 4, 155–161, 1967.</mixed-citation>
+</ref>
+</ref-list>
+</back>
+</article>

@@ -21,6 +21,13 @@ The protocol manuscript is in `latex/`, the frozen discovery inventory is in
 mechanics fields; it is not an inference sample. Run `make check` to validate
 the catalog and `make` to compile `latex/main.pdf`.
 
+The climate-blind source-coordinate and UTC-onset audit is registered in
+`protocol/source-time-audit.md`; its separate analysis-layer tables are in
+`data/event_audit/`. Run `make check-event-audit` for its synthetic and
+artifact tests. Run `make notebook-event-audit` to re-execute its climate-blind
+map and completeness summaries. The frozen discovery table is not amended by
+this audit.
+
 The point-history pilot uses a modern isolated environment because its public
 ERA5 source is an Icechunk/Zarr store:
 

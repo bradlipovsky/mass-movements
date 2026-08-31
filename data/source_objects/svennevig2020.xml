@@ -1,0 +1,1680 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD Journal Publishing with OASIS Tables v3.0 20080202//EN" "journalpub-oasis3.dtd">
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:oasis="http://docs.oasis-open.org/ns/oasis-exchange/table" xml:lang="en" dtd-version="3.0">
+  <front>
+    <journal-meta><journal-id journal-id-type="publisher">ESurf</journal-id><journal-title-group>
+    <journal-title>Earth Surface Dynamics</journal-title>
+    <abbrev-journal-title abbrev-type="publisher">ESurf</abbrev-journal-title><abbrev-journal-title abbrev-type="nlm-ta">Earth Surf. Dynam.</abbrev-journal-title>
+  </journal-title-group><issn pub-type="epub">2196-632X</issn><publisher>
+    <publisher-name>Copernicus Publications</publisher-name>
+    <publisher-loc>Göttingen, Germany</publisher-loc>
+  </publisher></journal-meta>
+    <article-meta>
+      <article-id pub-id-type="doi">10.5194/esurf-8-1021-2020</article-id><title-group><article-title>Evolution of events before and after the 17 June 2017 rock avalanche at Karrat Fjord, West Greenland – <?xmltex \hack{\break}?>a multidisciplinary approach to detecting and
+locating unstable rock slopes in a remote Arctic area</article-title><alt-title>Evolution of events before and after the 17 June 2017 rock avalanche</alt-title>
+      </title-group><?xmltex \runningtitle{Evolution of events before and after the 17~June~2017 rock avalanche}?><?xmltex \runningauthor{K. Svennevig et al.}?>
+      <contrib-group>
+        <contrib contrib-type="author" corresp="yes" rid="aff1">
+          <name><surname>Svennevig</surname><given-names>Kristian</given-names></name>
+          <email>ksv@geus.dk</email>
+        <ext-link>https://orcid.org/0000-0003-3863-8096</ext-link></contrib>
+        <contrib contrib-type="author" corresp="no" rid="aff1">
+          <name><surname>Dahl-Jensen</surname><given-names>Trine</given-names></name>
+          
+        <ext-link>https://orcid.org/0000-0002-0800-3105</ext-link></contrib>
+        <contrib contrib-type="author" corresp="no" rid="aff1">
+          <name><surname>Keiding</surname><given-names>Marie</given-names></name>
+          
+        </contrib>
+        <contrib contrib-type="author" corresp="no" rid="aff2">
+          <name><surname>Merryman Boncori</surname><given-names>John Peter</given-names></name>
+          
+        </contrib>
+        <contrib contrib-type="author" corresp="no" rid="aff1">
+          <name><surname>Larsen</surname><given-names>Tine B.</given-names></name>
+          
+        <ext-link>https://orcid.org/0000-0001-8240-337X</ext-link></contrib>
+        <contrib contrib-type="author" corresp="no" rid="aff1">
+          <name><surname>Salehi</surname><given-names>Sara</given-names></name>
+          
+        <ext-link>https://orcid.org/0000-0002-8999-603X</ext-link></contrib>
+        <contrib contrib-type="author" corresp="no" rid="aff1">
+          <name><surname>Munck Solgaard</surname><given-names>Anne</given-names></name>
+          
+        <ext-link>https://orcid.org/0000-0002-8693-620X</ext-link></contrib>
+        <contrib contrib-type="author" corresp="no" rid="aff1">
+          <name><surname>Voss</surname><given-names>Peter H.</given-names></name>
+          
+        <ext-link>https://orcid.org/0000-0002-6689-564X</ext-link></contrib>
+        <aff id="aff1"><label>1</label><institution>Geological Survey of Denmark and Greenland (GEUS), 1350 Copenhagen,
+Denmark</institution>
+        </aff>
+        <aff id="aff2"><label>2</label><institution>DTU Space, National Space Institute, Technical University of Denmark,
+2800 Lyngby, Denmark</institution>
+        </aff>
+      </contrib-group>
+      <author-notes><corresp id="corr1">Kristian Svennevig (ksv@geus.dk)</corresp></author-notes><pub-date><day>8</day><month>December</month><year>2020</year></pub-date>
+      
+      <volume>8</volume>
+      <issue>4</issue>
+      <fpage>1021</fpage><lpage>1038</lpage>
+      <history>
+        <date date-type="received"><day>17</day><month>April</month><year>2020</year></date>
+           <date date-type="rev-request"><day>11</day><month>May</month><year>2020</year></date>
+           <date date-type="rev-recd"><day>24</day><month>September</month><year>2020</year></date>
+           <date date-type="accepted"><day>29</day><month>October</month><year>2020</year></date>
+      </history>
+      <permissions>
+        <copyright-statement>Copyright: © 2020 Kristian Svennevig et al.</copyright-statement>
+        <copyright-year>2020</copyright-year>
+      <license license-type="open-access"><license-p>This work is licensed under the Creative Commons Attribution 4.0 International License. To view a copy of this licence, visit <ext-link ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</ext-link></license-p></license></permissions><self-uri xlink:href="https://esurf.copernicus.org/articles/8/1021/2020/esurf-8-1021-2020.html">This article is available from https://esurf.copernicus.org/articles/8/1021/2020/esurf-8-1021-2020.html</self-uri><self-uri xlink:href="https://esurf.copernicus.org/articles/8/1021/2020/esurf-8-1021-2020.pdf">The full text article is available as a PDF file from https://esurf.copernicus.org/articles/8/1021/2020/esurf-8-1021-2020.pdf</self-uri>
+      <abstract><title>Abstract</title>
+    <p id="d1e152">The 17 June 2017 rock avalanche in the Karrat Fjord, West Greenland, caused a
+tsunami that flooded the nearby village of Nuugaatsiaq and killed four
+people. The disaster was entirely unexpected since no previous records of
+large rock slope failures were known in the region, and it highlighted the
+need for better knowledge of potentially hazardous rock slopes in remote
+Arctic regions.</p>
+    <p id="d1e155">The aim of the paper is to explore our ability to detect and locate unstable
+rock slopes in remote Arctic regions with difficult access. We test this by
+examining the case of the 17 June 2017 Karrat rock avalanche. The workflow
+we apply is based on a multidisciplinary analysis of freely available data
+comprising seismological records, Sentinel-1 spaceborne synthetic-aperture
+radar (SAR) data, and Landsat and Sentinel-2 optical satellite imagery,
+ground-truthed with limited fieldwork. Using this workflow enables us to
+reconstruct a timeline of rock slope failures on the coastal slope here
+collectively termed the Karrat Landslide Complex.</p>
+    <p id="d1e158">Our analyses show that at least three recent rock avalanches occurred in the
+Karrat Landslide Complex: Karrat 2009, Karrat 2016, and Karrat 2017. The
+latter is the source of the abovementioned tsunami, whereas the first two
+are described here in detail for the first time. All three are interpreted
+as having initiated as dip-slope failures. In addition to the recent rock
+avalanches, older rock avalanche deposits are observed, demonstrating older
+(Holocene) periods of activity. Furthermore, three larger unstable rock
+slopes that may pose a future hazard are described. A number of non-tectonic
+seismic events confined to the area are interpreted as recording rock slope
+failures. The structural setting of the Karrat Landslide Complex, namely
+dip slope, is probably the main conditioning factor for the past and present
+activity, and, based on the temporal distribution of events in the area, we
+speculate that the possible trigger for rock slope failures is permafrost
+degradation caused by climate warming.</p>
+    <p id="d1e161">The results of the present work highlight the benefits of a
+multidisciplinary approach, based on freely available data, to studying unstable
+rock slopes in remote Arctic areas under difficult logistical field
+conditions and demonstrate the importance of identifying minor precursor
+events to identify areas of future hazard.</p>
+  </abstract>
+    </article-meta>
+  </front>
+<body>
+      
+
+<?pagebreak page1022?><sec id="Ch1.S1" sec-type="intro">
+  <label>1</label><title>Introduction</title>
+      <p id="d1e173">On 17 June 2017 the village of Nuugaatsiaq in West Greenland was hit by a
+tsunami generated by a 35–58 million m<inline-formula><mml:math id="M1" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula> rock avalanche on the
+south-facing slope of Ummiammakku Mountain in Karrat Fjord, located 32 km to
+the east of the village (Bessette-Kirton
+et al., 2017; Clinton et al., 2017; Gauthier et al., 2018; Paris et al.,
+2019). A large part of the village was destroyed, and four people lost their
+lives. The tsunami was also observed in other settlements more than 100 km
+away. Following this, the Greenlandic authorities evacuated 170 residents
+from Nuugaatsiaq and the neighbouring settlement of Illorsuit due to the
+threat of further rock slope failures in the area, and the villages are still
+under evacuation orders at the time of this writing due to fear of
+additional induced tsunamis (Fig. 1).</p>
+
+      <?xmltex \floatpos{t}?><fig id="Ch1.F1" specific-use="star"><?xmltex \currentcnt{1}?><label>Figure 1</label><caption><p id="d1e187">Setting of the Karrat Landslide Complex. <bold>(a)</bold> Simplified geological map of the
+region based on  Henriksen et
+al. (2009) showing nearby seismic stations (NUUG and UMMG), prehistoric
+landslides  (Svennevig, 2019), and the area
+of <bold>(b)</bold>. <bold>(b)</bold> The Karrat Landslide Complex shown on a Sentinel-2 RGB image
+from 20 April 2019 where the coastal slope has a light snow cover
+emphasizing the structures. Transparent polygons are the three rock
+avalanches (2009, 2016, and 2017) and the three unstable slopes (1, 2, and
+3). The stippled lines at the rock avalanches are the extent of the
+individual scarps. Notice the recent rockfall from area 2 (dark stria south
+of the area). Positions, name (letter), and direction of field photos in this
+and subsequent figures are indicated with arrows. <bold>(c)</bold> Oblique helicopter photo
+of area 1. From the shore to the top of the back scarp is 1000 m, and the
+back scarp is up top 120 m high for scale. <bold>(d)</bold> Oblique helicopter photo of
+areas 2 and 3 and the three rock avalanches (2009, 2016, and 2017). Notice the
+hummocky morphology of areas 2 and 3 and the dust cloud east of area 3. Area
+2 is 1200 m across for scale.</p></caption>
+        <?xmltex \igopts{width=341.433071pt}?><graphic xlink:href="https://esurf.copernicus.org/articles/8/1021/2020/esurf-8-1021-2020-f01.png"/>
+
+      </fig>
+
+      <p id="d1e211">Rock slope failures were not known from the Karrat Fjord prior to the 2017
+rock avalanche. This highlighted the necessity to screen the inhabited parts
+of Greenland for unstable rock slopes and to document previous large rock
+avalanches to assess the threat from future tsunamigenic events. Two
+tsunami-generating rock avalanches in 1952 and 2000 are described from
+Vaigat, 150 km to the south of Karrat (Pedersen et al.,
+2002; Dahl-Jensen et al., 2004). Svennevig (2019) described morphological
+evidence of several Holocene rock slope failures in the region but noted
+that the majority of these were located in the area of the
+Cretaceous–Paleogene Nuussuaq Basin, where the 1952 and 2000 rock avalanches
+also occurred. The geological province where the 2017 rock avalanche
+occurred was found to have had relatively few rock slope failures (Fig. 1a).</p>
+      <p id="d1e215">Fieldwork and in situ measurements are difficult and time consuming in a
+vast and remote Arctic environment like Greenland where infrastructure is
+minimal and expensive. Thus, investigations of unstable slopes over large
+parts of Greenland must primarily rely on remote sensing techniques.
+Following the launch of Landsat 8 and Sentinel-1 and Sentinel-2 satellites, optical
+and ground motion data over Greenland are both free and frequent and at
+sufficient resolution, providing a means of observing unstable slopes at
+relatively low cost.  Svennevig et al. (2019) preliminarily
+described a multidisciplinary approach combining satellite data and seismic
+observations to remotely study activity on an unstable slope. They found
+that by combining these methods it was possible to reliably detect timing
+(seismic observations), location, extent, and deformational rates (optical
+images and ground motion observations from DInSAR (differential interferometric
+synthetic-aperture radar)) of rock slope failures.</p>
+      <p id="d1e218">Our aims with this study are 2-fold: (1) to understand the processes that
+led to the disastrous Karrat 2017 rock avalanche and the continued threat
+from the area, (2) and to explore our ability to detect and locate rock slope
+failures and ultimately to assess the associated hazard in an inhospitable
+climate with very difficult access. Following the multidisciplinary
+approach preliminarily described by  Svennevig et al. (2019), it is possible to resolve the series of events leading up to and
+following the disaster in Karrat Fjord in June 2017. We show that it would
+not be possible to establish both timing and location of all events based on
+one method alone. We contextualize our results using geological knowledge of
+the area derived from limited fieldwork and previous studies and discuss the
+possible trigger mechanism.</p>
+<sec id="Ch1.S1.SS1">
+  <label>1.1</label><title>Study area and geological setting</title>
+      <p id="d1e228">The study area is located on the south-facing slope of Ummiammakku
+Mountain in Karrat Fjord, central West Greenland (Fig. 1a). The topography
+is influenced by quaternary glaciations with up to 2000 m high oversteepened
+slopes and long fjords up to 1100 m deep. The climate is arctic with a mean
+annual air temperature of <inline-formula><mml:math id="M2" display="inline"><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">3.9</mml:mn></mml:mrow></mml:math></inline-formula> <inline-formula><mml:math id="M3" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula>C at sea level in the town of Uummannaq 110 km
+to the south, and the slopes in the region are permanently frozen
+(Westergaard-Nielsen et al., 2018). At present West
+Greenland represent an area of tectonic stability, and only few minor
+tectonic earthquakes are known (Voss et al., 2007).</p>
+      <p id="d1e250">The bedrock of the Karrat region is dominated by Archean gneiss interfolded
+during multiple events with supracrustal rocks of the Palaeoproterozoic
+Karrat Group  (Henderson and Pulvertaft, 1967; Sørensen
+and Guarnieri, 2018) (Fig. 1b). Locally around the Karrat 2017 rock
+avalanche, the succession consists of the Archean Umanak gneiss overlain by
+Palaeoproterozoic quartzite and semipelitic-to-pelitic schist of the Karrat
+Group  (Mott et al.,
+2013). The <inline-formula><mml:math id="M4" display="inline"><mml:mrow><mml:mn mathvariant="normal">1</mml:mn><mml:mo>:</mml:mo><mml:mn mathvariant="normal">100</mml:mn><mml:mspace width="0.125em" linebreak="nobreak"/><mml:mn mathvariant="normal">000</mml:mn></mml:mrow></mml:math></inline-formula> scale geological map of the area shows that the bedding
+of the slope surrounding the Karrat 2017 rock avalanche has a general
+unspecified dip slope. As the wider region is polyphase deformed, the regional
+dipping trends span a wide variety (Henderson and Pulvertaft, 1967).
+Dip slope is thus a local phenomenon mostly confined to the slope of the 2017
+rock avalanche and is only recorded very locally elsewhere in the wider
+area. The slope is in places covered by thin colluvium and glacial erratics.</p>
+</sec>
+</sec>
+<sec id="Ch1.S2">
+  <label>2</label><title>Methods and data</title>
+      <p id="d1e277">We use a workflow integrating seismological data and SAR and optical imagery –
+all publicly available – for describing the evolution of the Karrat
+Landslide Complex. These data sources have different temporal and spatial
+resolution ranging from years to milliseconds and metres to tens of
+kilometres, respectively (see Table 1). Individually they have unique information for
+studying unstable rock slopes but tell an incomplete story by themselves,
+and the value of the individual datasets increases significantly when
+integrated. The workflow is preliminarily described and applied in
+Svennevig et al. (2019) examining a minor (<inline-formula><mml:math id="M5" display="inline"><mml:mrow><mml:msub><mml:mi>M</mml:mi><mml:mi>L</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula> 1.9) non-tectonic seismic event in the Karrat Landslide Complex on 26 March 2018.</p>
+      <p id="d1e291">We found that alerting each other across disciplines of suspected smaller
+events enabled us to construct a reliable multi-year sequence of both
+confirmed smaller rock slope failures and periods of activity in the area.
+For example, if a seismic event was suspected of being caused by a rock
+slope failure, optical satellite images before and after the time of the
+seismic event were inspected for changes, and DInSAR images constructed for
+evidence of movement. Alternatively, if optical satellite images showed
+change between two satellite passages, we could check if a seismic event had
+occurred in the area in the time interval, and if DInSAR analyses<?pagebreak page1024?> showed
+movement to confirm either minor activity or indeed a rock slope failure.</p>
+<sec id="Ch1.S2.SS1">
+  <label>2.1</label><title>Fieldwork</title>
+      <p id="d1e301">The remoteness of the area and the steepness and elevation of the coastal
+slope make fieldwork logistically challenging. Because of the continued
+threat from rock slope failures (see below) and near-constant minor
+rockfalls, it is not safe to come closer than about 1.5 km to the scarp.
+These conditions highlight the need for remotely sensed data as exemplified
+below. However, data on the structural setting were not possible to get
+without field visits, and for this reason we visited areas just east and west
+of the Karrat 2017 rock avalanche on two short reconnaissance stops during
+the summer of 2019. Further data were collected on a helicopter fly-by and
+using a camera-equipped multi-rotor drone.</p>
+</sec>
+<sec id="Ch1.S2.SS2">
+  <label>2.2</label><title>DInSAR</title>
+      <p id="d1e312">Slope deformation can be detected remotely using techniques based on
+differential synthetic-aperture radar interferometry (DInSAR) (Rosen et al.,
+2000). The main observable is a so-called differential interferogram, namely
+a map of the phase differences between two radar images, which is confined
+(wrapped) within the fundamental [<inline-formula><mml:math id="M6" display="inline"><mml:mrow><mml:mo>-</mml:mo><mml:mi mathvariant="italic">π</mml:mi><mml:mspace linebreak="nobreak" width="0.25em"/><mml:mi mathvariant="italic">π</mml:mi></mml:mrow></mml:math></inline-formula>] interval. Providing the
+interferogram phase can be correctly unwrapped (Ghiglia and Pritt, 1998),
+the one-dimensional ground motion between two radar acquisitions can be
+measured in the line-of-sight direction, i.e. towards and away from the
+platform carrying the radar. The evolution (time series) of the
+line-of-sight deformation component can be measured with so-called
+multi-temporal SAR interferometry techniques (Crosetto et al., 2016;
+Carlà et al., 2019), which are based on the generation of tens or
+hundreds of differential interferograms, and on the joint analysis of pixels
+(or groups of pixels) with a stable radar phase throughout the acquisition
+time span.</p>
+      <p id="d1e328">A prerequisite for the applicability of DInSAR is a sufficient level of
+statistical similarity (interferometric coherence) between the
+electromagnetic properties of the surface at the two acquisition times. This
+can be lost due to changes in the satellite viewing geometry or physical
+changes at the surface between acquisitions. Ground motion gradients of more
+than half of the radar wavelength (e.g. 2.8 cm for Sentinel-1) between
+acquisitions will cause a complete loss of coherence, called decorrelation,
+in the interferogram. In practice, decorrelation occurs already for lower
+ground motion rates due to other nuisance contributions to the radar phase.</p>
+      <p id="d1e331">Monitoring the deformation at the Karrat Landslide Complex is challenging
+due to several factors: rock avalanches in 2009, 2016, and 2017; high
+deformation rates; frequent snowfall in the winter season (October through
+May); and steep slopes. All of the above contribute to decorrelation in several
+areas and/or time intervals and limit the applicability of multi-temporal
+InSAR methods. In this study we discuss the application of DInSAR to imagery
+from the Sentinel-1A and Sentinel-1B SAR satellites operated by the European Space
+Agency (ESA). We analysed about 180 images acquired from ascending track 90
+between October 2014 and  October 2018, and 80 images acquired from descending
+track 25 between July 2017 and October 2018. Images were acquired every 12 d
+until October 2016, and every 6 d after this date. The viewing geometry of
+track 25 is better suited for detecting motion along the slopes in our area
+of interest, since large parts of the slope that failed in 2017 dip steeply
+toward the radar in the viewing geometry of ascending track 90, causing
+decorrelation associated with foreshortening and layover effects (Rosen et
+al., 2000).</p>
+      <p id="d1e334">Differential interferograms between 6 and 12 d Sentinel-1 interferometric
+wide swath (IW) single-look complex (SLC) products were formed using the
+SARPROZ software (Perissin et al., 2007), applying a <inline-formula><mml:math id="M7" display="inline"><mml:mrow><mml:mn mathvariant="normal">5</mml:mn><mml:mo>×</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:math></inline-formula> averaging
+(multi-looking) factor, resulting in an approximately 20 m <inline-formula><mml:math id="M8" display="inline"><mml:mo>×</mml:mo></mml:math></inline-formula> 20 m spatial
+resolution. The topographic contribution to the interferometric phase was
+removed using ArcticDEM version 2.0  (Porter et al., 2018).
+For interferograms following the June 2017 rock avalanche, the ArcticDEM was
+locally corrected with a DEM (digital elevation model) derived from oblique
+photogrammetry collected in the summer of 2017 (courtesy of E.V.
+Sørensen, GEUS).</p>
+</sec>
+<sec id="Ch1.S2.SS3">
+  <label>2.3</label><title>Seismology</title>
+      <p id="d1e365">The Geological Survey of Denmark and Greenland (GEUS) monitors seismic
+activity in Greenland using the Gre, last access:  2 April 2020), which consists of 21 stations
+(Clinton et al., 2014). Data are screened for possible
+events and manually analysed for location and magnitude using the software
+SEISAN (Havskov and Ottemøller, 1999). Detecting and accurately locating
+the activity in the Karrat area depends on having a sufficient number of
+nearby stations (see Fig. 1a).</p>
+      <p id="d1e368">Seismological data enabling us to register and locate smaller non-tectonic
+events became available around 2010. Until the 1990s the Greenlandic
+network consisted of only three or four stations, increasing to five to eight stations around
+2000. The present GLISN was rolled out from 2008 to 2010 and has 21
+operational stations. Before 2010 only very large rock slope failures would
+have been observed at the seismic stations, for example the Paatuut 2000
+rock avalanche  (Dahl-Jensen et al., 2004),
+which by luck also coincided with a temporary research network station
+deployment  (Dahl-Jensen et al., 2003). Not only
+tectonic earthquakes are detected in Greenland. We see many events that we
+classify as non-tectonic events. This class of events was first described
+by  Ekström et al. (2003) and was found to be
+located at Greenland's large outlet glaciers. The monitoring carried out by
+GEUS locates many non-tectonic events smaller than the globally detected
+events described by <?pagebreak page1025?> Ekström et al. (2003), and
+many of these are also located close to large outlet glaciers.</p>
+      <p id="d1e371">Magnitudes are calculated using the local magnitude (<inline-formula><mml:math id="M9" display="inline"><mml:mrow><mml:msub><mml:mi>M</mml:mi><mml:mi>L</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula>) equation for
+Greenland (Gregersen, 1999). This equation was established for tectonic
+earthquakes, but using it for all types of events provides an estimate
+for comparison. Magnitudes of both tectonic and non-tectonic events in
+central West Greenland are typically from <inline-formula><mml:math id="M10" display="inline"><mml:mrow><mml:msub><mml:mi>M</mml:mi><mml:mi>L</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula> 0.5 and up to <inline-formula><mml:math id="M11" display="inline"><mml:mrow><mml:msub><mml:mi>M</mml:mi><mml:mi>L</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula> 3.0 with a few
+larger. The magnitude calculated for non-tectonic events is probably too low
+as the low-frequency content is higher than for tectonic earthquakes. The
+stations in the central West Greenland area are located along the coast with a
+distance of at least 100 km between them. Thus, the horizontal location
+uncertainty of detected earthquakes or other types of seismic events is up
+to 50 km, in particular in the east–west direction.</p>
+</sec>
+<sec id="Ch1.S2.SS4">
+  <label>2.4</label><title>ArcticDEM</title>
+      <p id="d1e415">ArcticDEM is a freely available 2 m spatial-resolution digital elevation
+model covering all of the Arctic area north of 60<inline-formula><mml:math id="M12" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula> N
+(Porter et al., 2018). As such, it has the highest spatial
+resolution of publicly available datasets covering Greenland. The DEM is
+derived from high-resolution (<inline-formula><mml:math id="M13" display="inline"><mml:mrow><mml:mo>∼</mml:mo><mml:mn mathvariant="normal">0.5</mml:mn></mml:mrow></mml:math></inline-formula> m pixel size) stereo
+satellite imagery from the commercial WorldView satellites. The source
+images are not publicly available. Several DEM strips reflecting various
+image acquisition times are available covering the same areas, making it
+possible to follow the temporal evolution of unstable rock slopes. For the
+Karrat Fjord area DEM strips are available from 3 June 2008 to 23 June 2017
+but of variable quality and coverage. The area of the Karrat 2017 rock
+avalanche is for example only partially covered by a single ArcticDEM strip
+from after the rock avalanche acquired on 23 June 2017.</p>
+</sec>
+<sec id="Ch1.S2.SS5">
+  <label>2.5</label><title>Spaceborne optical (Sentinel-2 and Landsat)</title>
+      <p id="d1e445">The Sentinel-2A and Sentinel-2B are Earth-monitoring multispectral optical satellite
+imaging systems operated by ESA. They record in 13 spectral bands at various
+resolution: four bands at 10 m (including visual light), six bands at 20 m,
+and three bands at 60 m spatial resolution; as such they are currently the
+highest-resolution freely available optical datasets covering Greenland.
+Sentinel-2A was launched in June 2015, and Sentinel-2B was launched in March
+2017. Revisiting time is every 5 d at the Equator, but at higher
+latitudes such as Greenland most areas are covered twice or more every week.
+At high latitudes with constant winter darkness there is a data gap in the
+winter months. For this reason, there is a yearly data gap at the Karrat
+Landslide Complex from the end of October to beginning of March.</p>
+      <p id="d1e448">Landsat images were used to extend the image coverage back past the launch
+of the Sentinel-2 satellite (pre-June 2015). The Landsat programme is a series
+of Earth-monitoring multispectral optical satellites, the first of which
+was launched in 1972. Landsat 1–5 (1972–1993) had spatial resolutions of 60 m, and Landsat 6–8 had or have a 30 m resolution. Landsat 7 and 8 revisit the same
+area every 8 d since the launch of Landsat 8 in 2013. Further back in
+time the coverage is sparser. As is the case for Sentinel-2 scenes, Landsat
+images at this high latitude have a winter data gap from the end of October to
+beginning of March. Data are freely available from the US Geological Survey (USGS) within 24 h of
+acquisition. Landsat scenes were processed and inspected in the same way as the
+Sentinel-2 images.</p>
+      <p id="d1e451">Scenes were downloaded freely, and RGB (red–green–blue) images were produced using the freely
+available Sentinel Application Platform (SNAP). For the present study, we
+have only performed visual interpretation of the RGB Sentinel-2 images,
+looking manually for changes on the slopes.</p>
+</sec>
+<sec id="Ch1.S2.SS6">
+  <label>2.6</label><title>Aerial images</title>
+      <p id="d1e462">To constrain the evolution of the Karrat Landslide Complex, a set of <inline-formula><mml:math id="M14" display="inline"><mml:mrow><mml:mn mathvariant="normal">1</mml:mn><mml:mo>:</mml:mo><mml:mn mathvariant="normal">45</mml:mn><mml:mspace width="0.125em" linebreak="nobreak"/><mml:mn mathvariant="normal">000</mml:mn></mml:mrow></mml:math></inline-formula>
+scale black-and-white aerial photos from 1953 (available from the Danish
+Agency for Data Supply and Efficiency) have been analysed. These constitute
+the oldest known aerial images from the area.</p>
+
+<?xmltex \floatpos{t}?><table-wrap id="Ch1.T1" specific-use="star"><?xmltex \currentcnt{1}?><label>Table 1</label><caption><p id="d1e483">Temporal and spatial resolution of the various datasets.</p></caption><oasis:table frame="topbot"><oasis:tgroup cols="5">
+     <oasis:colspec colnum="1" colname="col1" align="left"/>
+     <oasis:colspec colnum="2" colname="col2" align="left"/>
+     <oasis:colspec colnum="3" colname="col3" align="left"/>
+     <oasis:colspec colnum="4" colname="col4" align="left"/>
+     <oasis:colspec colnum="5" colname="col5" align="left"/>
+     <oasis:thead>
+       <oasis:row>
+
+         <oasis:entry namest="col1" nameend="col2" align="center">Method/source </oasis:entry>
+
+         <oasis:entry rowsep="1" namest="col3" nameend="col4" align="center">Resolution </oasis:entry>
+
+         <oasis:entry colname="col5">Period</oasis:entry>
+
+       </oasis:row>
+       <oasis:row rowsep="1">
+
+         <oasis:entry namest="col1" nameend="col2" align="center"/>
+
+         <oasis:entry colname="col3">Spatial</oasis:entry>
+
+         <oasis:entry colname="col4">Temporal</oasis:entry>
+
+         <oasis:entry colname="col5"/>
+
+       </oasis:row>
+     </oasis:thead>
+     <oasis:tbody>
+       <oasis:row>
+
+         <oasis:entry namest="col1" nameend="col2">Spaceborne InSAR (Sentinel-1) </oasis:entry>
+
+         <oasis:entry colname="col3"><inline-formula><mml:math id="M15" display="inline"><mml:mrow><mml:mn mathvariant="normal">5</mml:mn><mml:mo>×</mml:mo><mml:mn mathvariant="normal">20</mml:mn></mml:mrow></mml:math></inline-formula> m</oasis:entry>
+
+         <oasis:entry colname="col4">6 d</oasis:entry>
+
+         <oasis:entry colname="col5">Since 2014</oasis:entry>
+
+       </oasis:row>
+       <oasis:row>
+
+         <oasis:entry namest="col1" nameend="col2">Seismology </oasis:entry>
+
+         <oasis:entry colname="col3">10 to 100 s of km</oasis:entry>
+
+         <oasis:entry colname="col4">Seconds</oasis:entry>
+
+         <oasis:entry colname="col5">Since <inline-formula><mml:math id="M16" display="inline"><mml:mrow><mml:mo>∼</mml:mo><mml:mn mathvariant="normal">2000</mml:mn></mml:mrow></mml:math></inline-formula></oasis:entry>
+
+       </oasis:row>
+       <oasis:row rowsep="1">
+
+         <oasis:entry namest="col1" nameend="col2">ArcticDEM </oasis:entry>
+
+         <oasis:entry colname="col3">2 m</oasis:entry>
+
+         <oasis:entry colname="col4">Years/months</oasis:entry>
+
+         <oasis:entry colname="col5">Variable from 2008 to 2017</oasis:entry>
+
+       </oasis:row>
+       <oasis:row>
+
+         <oasis:entry colname="col1" morerows="2">Optical</oasis:entry>
+
+         <oasis:entry colname="col2">Spaceborne (Sentinel-2)</oasis:entry>
+
+         <oasis:entry colname="col3">10 m</oasis:entry>
+
+         <oasis:entry colname="col4">Few days</oasis:entry>
+
+         <oasis:entry colname="col5">Since 2015</oasis:entry>
+
+       </oasis:row>
+       <oasis:row rowsep="1">
+
+         <oasis:entry colname="col2">Spaceborne (Landsat)</oasis:entry>
+
+         <oasis:entry colname="col3">30–60 m</oasis:entry>
+
+         <oasis:entry colname="col4">Weeks–months</oasis:entry>
+
+         <oasis:entry colname="col5">Since 1973</oasis:entry>
+
+       </oasis:row>
+       <oasis:row>
+
+         <oasis:entry colname="col2">Aerial images (nadir)</oasis:entry>
+
+         <oasis:entry colname="col3">20–30 m</oasis:entry>
+
+         <oasis:entry colname="col4">Years/decades</oasis:entry>
+
+         <oasis:entry colname="col5">Variable since 1953</oasis:entry>
+
+       </oasis:row>
+     </oasis:tbody>
+   </oasis:tgroup></oasis:table></table-wrap>
+
+</sec>
+</sec>
+<sec id="Ch1.S3">
+  <label>3</label><title>Results – evolution of the Karrat Landslide Complex</title>
+      <p id="d1e656">The tsunami on 17 June 2017 spurred immediate investigations of the coastal
+slopes in the region. The scarp of the rock avalanche in the Karrat Fjord
+was localized by the Danish Defence Command within hours after the event. At
+the same time, another area showing clear signs of deformation was noticed
+500 m west of the scarp. Further investigations based on satellite imagery
+revealed that the 2017 rock avalanche had been preceded by smaller rock
+avalanches immediately to the east (e.g. Bessette-Kirton et
+al., 2017). This was the state of knowledge prior to this study.</p>
+      <p id="d1e659">In order to describe the multifaceted evolution of the Karrat area, it is
+necessary to establish a nomenclature framework. Hence, we introduce the
+Karrat Landslide Complex as a 3 km <inline-formula><mml:math id="M17" display="inline"><mml:mo>×</mml:mo></mml:math></inline-formula> 9 km area of past, present, and future
+rock slope activity on the south-facing slope of Karrat Fjord, 30 km east of
+the village of Nuugaatsiaq, West Greenland (Fig. 1a). The three rock
+avalanches in the Karrat Landslide Complex are named according to the year
+they happened. The three unstable rock slopes that have not yet failed
+catastrophically (sensu Hermanns and Longva, 2012) are termed areas 1, 2, and 3 from
+west to east (Fig. 1b, c, d). Inspection of the seismological records documents
+numerous shallow non-tectonic seismic events, some of which we interpreted as
+being activity in the unstable rock slopes. These are named after the date they
+happened and seismic event, for example the 1 June 2017 seismic event. The 2009, 2016, and 2017 rock avalanches; the three unstable rock slopes; and the seismic
+events are described below and are listed chronologically<?pagebreak page1026?> from oldest to
+newest in Table 2, bearing in mind that the list is probably not complete.</p>
+<sec id="Ch1.S3.SS1">
+  <label>3.1</label><title>Sign of previous activity</title>
+      <p id="d1e676">In satellite images and aerial photos from 1953 a 0.10 km<inline-formula><mml:math id="M18" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">2</mml:mn></mml:msup></mml:math></inline-formula> lobe shaped
+feature below the area of the future scarp of the Karrat 2016 and 2017 rock
+avalanche is interpreted as the lobe of a minor rock slope failure modified
+as a rock glacier or debris flow. A conspicuous boulder field just below
+this feature adds to this interpretation (Fig. 2a, b). The recent rock
+avalanches have now erased these features. East of the lobes of the recent
+rock avalanches, hummocky boulder fields were observed and here are also
+interpreted as being older rock avalanche deposits, although the
+individual back scarps and lobes of these are not readily identified (Fig. 2c).</p>
+
+      <?xmltex \floatpos{p}?><fig id="Ch1.F2"><?xmltex \currentcnt{2}?><label>Figure 2</label><caption><p id="d1e690">Previous activity in the Karrat Landslide Complex. <bold>(a)</bold> 1953 <inline-formula><mml:math id="M19" display="inline"><mml:mrow><mml:mn mathvariant="normal">1</mml:mn><mml:mo>:</mml:mo><mml:mn mathvariant="normal">45</mml:mn><mml:mspace linebreak="nobreak" width="0.125em"/><mml:mn mathvariant="normal">000</mml:mn></mml:mrow></mml:math></inline-formula> scale
+aerial photograph of the Karrat Landslide Complex showing the well-developed
+state of the unstable rock slope; area 1 is to the W. The three stippled lines
+to the east show the positions of the scarps of the future rock avalanches
+(colours match Fig. 1b). <bold>(b)</bold> Details of <bold>(a)</bold> with the stippled lines indicating
+the positions of the scarps of the future rock avalanches. Notice the lobate
+morphology (X) and boulder field (Y) indicating older rock slope failures
+along with the hummocky topography to the E (Z). <bold>(c)</bold> Photomosaic of field
+photos from the summer of 2019 taken just E of the 2009 rock avalanche. The
+scarp and lobe of the 2009 rock avalanche are indicated with a stippled
+yellow line. The lobate hummocky topography interpreted as being deposits of
+past rock slope failures is indicated with (Z). Red helicopter for scale.</p></caption>
+          <?xmltex \igopts{width=241.848425pt}?><graphic xlink:href="https://esurf.copernicus.org/articles/8/1021/2020/esurf-8-1021-2020-f02.png"/>
+
+        </fig>
+
+</sec>
+<sec id="Ch1.S3.SS2">
+  <label>3.2</label><title>Structural field observations</title>
+      <p id="d1e734">During two short reconnaissance stops the bedrock of Palaeoproterozoic
+metasediments on slope were observed to part easily along distinct layering
+of the bedding (s0 foliation), which dips 10 to 30<inline-formula><mml:math id="M20" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula> to the south
+towards the fjord. This observation is in accordance with the general
+dip slope described on the geological map (Henderson and Pulvertaft, 1967).
+In addition, E–W-oriented vertical penetrative open fractures with a
+normal offset are observed locally on the slope (Fig. 3).</p>
+
+      <?xmltex \floatpos{t}?><fig id="Ch1.F3"><?xmltex \currentcnt{3}?><label>Figure 3</label><caption><p id="d1e748">Field photo of the bedrock geology of the coastal slope 1.5 km west of area
+1. View is towards the west. Sub-vertical jointing and s0 foliation dipping
+20–30<inline-formula><mml:math id="M21" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula> towards the fjord are prominent. The geologist is standing
+next to a vertical open fracture with a small normal offset (20–30 cm)
+apparent on the surface that could be a model for the development of the
+back scarp of the rock avalanches. Photo by Simon Mose Thaarup, GEUS.</p></caption>
+          <?xmltex \igopts{width=236.157874pt}?><graphic xlink:href="https://esurf.copernicus.org/articles/8/1021/2020/esurf-8-1021-2020-f03.png"/>
+
+        </fig>
+
+</sec>
+<sec id="Ch1.S3.SS3">
+  <label>3.3</label><title>The rock avalanches</title>
+<sec id="Ch1.S3.SS3.SSS1">
+  <label>3.3.1</label><?xmltex \opttitle{The Karrat 2009 rock avalanche (71{${}^{{\circ}}$}38${}^{{\prime}}$20${}^{{\prime\prime}}$\,N, 52{${}^{{\circ}}$}19${}^{{\prime}}$16${}^{{\prime\prime}}$\,W, 1~September~2009 at 14:09\,Z, $M_{L}$~2.7)}?><title>The Karrat 2009 rock avalanche (71<inline-formula><mml:math id="M22" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula>38<inline-formula><mml:math id="M23" display="inline"><mml:msup><mml:mi/><mml:mo>′</mml:mo></mml:msup></mml:math></inline-formula>20<inline-formula><mml:math id="M24" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>′</mml:mo><mml:mo>′</mml:mo></mml:mrow></mml:msup></mml:math></inline-formula> N, 52<inline-formula><mml:math id="M25" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula>19<inline-formula><mml:math id="M26" display="inline"><mml:msup><mml:mi/><mml:mo>′</mml:mo></mml:msup></mml:math></inline-formula>16<inline-formula><mml:math id="M27" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>′</mml:mo><mml:mo>′</mml:mo></mml:mrow></mml:msup></mml:math></inline-formula> W, 1 September 2009 at 14:09 Z, <inline-formula><mml:math id="M28" display="inline"><mml:mrow><mml:msub><mml:mi>M</mml:mi><mml:mi>L</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula> 2.7)</title>
+      <p id="d1e855">The scar of the 2009 rock avalanche shows that it took place along a
+near-vertical back scarp (Fig. 1b, d). The basal sliding plane is covered by
+boulders but is interpreted as following the bedding dipping 10–30<inline-formula><mml:math id="M29" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula>
+towards the fjord (Fig. 2c). Based on this, we suggest that the 2009 rock
+avalanche initiated as a dip-slope failure. The timing of the avalanche was
+initially confined to a 5-year interval by the two oldest ArcticDEM
+strips (3 June 2008–12 October 2013). Google Earth images from 1 May 2009
+show no larger recent activity and thus further constrain the event (Fig. 4a). It was then further confined to an 8 d interval between 26 August
+and 2 September in 2009 by visual inspection of Landsat 7 scenes. The area
+appears as a 0.4 km<inline-formula><mml:math id="M30" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">2</mml:mn></mml:msup></mml:math></inline-formula> dark-coloured patch in the latter scene. The
+interpretation of this patch as a rock slope failure was confirmed by
+inspection of the following ArcticDEM scene form 12 October 2013 and a
+Sentinel-2 scene from 30 July 2016 (Fig. 4b). A screening of the seismicity
+for the period 26 August 2009 to 2 September 2009 revealed an event on 1
+September 2009 at 14:09 Z as a <inline-formula><mml:math id="M31" display="inline"><mml:mrow><mml:msub><mml:mi>M</mml:mi><mml:mi>L</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula> 2.7 seismic event located within
+a 60 km <inline-formula><mml:math id="M32" display="inline"><mml:mo>×</mml:mo></mml:math></inline-formula> 6 km E–W-oriented ellipsoid. The rock avalanche was previously termed
+the “East landslide” by Bessette-Kirton et al. (2017) and
+was suggested to have occurred between 23 May 2009 and 28 April 2011 based
+on interpretation of WorldView images. Based on ArcticDEM strips from before
+(3 June 2008) and after the rock avalanche, we calculate the volume of the
+source area to be <inline-formula><mml:math id="M33" display="inline"><mml:mrow><mml:mn mathvariant="normal">2.7</mml:mn><mml:mo>×</mml:mo><mml:msup><mml:mn mathvariant="normal">10</mml:mn><mml:mn mathvariant="normal">6</mml:mn></mml:msup></mml:mrow></mml:math></inline-formula> m<inline-formula><mml:math id="M34" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula> and the lobe to be <inline-formula><mml:math id="M35" display="inline"><mml:mrow><mml:mn mathvariant="normal">2.8</mml:mn><mml:mo>×</mml:mo><mml:msup><mml:mn mathvariant="normal">10</mml:mn><mml:mn mathvariant="normal">6</mml:mn></mml:msup></mml:mrow></mml:math></inline-formula> m<inline-formula><mml:math id="M36" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula>. That these volumes are roughly the same indicates that none of the
+material reached the sea, and the Karrat 2009 rock avalanche is thus unlikely
+to have produced a tsunami. InSAR data from 2015 show that the depositional
+lobe was not completely stable 6 years after the avalanche.</p>
+
+      <?xmltex \floatpos{t}?><fig id="Ch1.F4" specific-use="star"><?xmltex \currentcnt{4}?><label>Figure 4</label><caption><p id="d1e945">Optical satellite images of the eastern part of the Karrat Landslide
+Complex, the locus of recent rock avalanches. <bold>(a)</bold> Scene from 1 May 2009
+before the rock avalanche; a presumed older rock avalanche deposit (lobe) is
+marked with X, same as Fig. 1b (from © Google Earth; image credit:
+Maxar Technologies). <bold>(b)</bold> Sentinel-2 image from 5 April 2016 showing the
+situation after the Karrat 2009 rock avalanche of 1 September 2009 at
+14:09 Z. <bold>(c)</bold> Sentinel-2 image from 1 March 2017 showing the situation after
+the Karrat 2016 rock avalanche of 11 November 2016 at 14:09 Z. <bold>(d)</bold> Sentinel-2
+image from 10 April 2018 showing the situation after the Karrat 2017 rock
+avalanche of 17 June 2017 at 23:39 Z. Scarp (red) of the 2017, 2016, and 2009
+rock avalanches and depositional lobes (orange) are shown with bold lines.</p></caption>
+            <?xmltex \igopts{width=398.338583pt}?><graphic xlink:href="https://esurf.copernicus.org/articles/8/1021/2020/esurf-8-1021-2020-f04.png"/>
+
+          </fig>
+
+</sec>
+<sec id="Ch1.S3.SS3.SSS2">
+  <label>3.3.2</label><?xmltex \opttitle{The Karrat 2016 rock avalanche (71{${}^{{\circ}}$}38${}^{{\prime}}$24${}^{{\prime\prime}}$\,N, 52{${}^{{\circ}}$}19${}^{{\prime}}$41${}^{{\prime\prime}}$\,W, 15~November~2016 at 14:09\,Z, $M_{L}$~2.1)}?><title>The Karrat 2016 rock avalanche (71<inline-formula><mml:math id="M37" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula>38<inline-formula><mml:math id="M38" display="inline"><mml:msup><mml:mi/><mml:mo>′</mml:mo></mml:msup></mml:math></inline-formula>24<inline-formula><mml:math id="M39" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>′</mml:mo><mml:mo>′</mml:mo></mml:mrow></mml:msup></mml:math></inline-formula> N, 52<inline-formula><mml:math id="M40" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula>19<inline-formula><mml:math id="M41" display="inline"><mml:msup><mml:mi/><mml:mo>′</mml:mo></mml:msup></mml:math></inline-formula>41<inline-formula><mml:math id="M42" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>′</mml:mo><mml:mo>′</mml:mo></mml:mrow></mml:msup></mml:math></inline-formula> W, 15 November 2016 at 14:09 Z, <inline-formula><mml:math id="M43" display="inline"><mml:mrow><mml:msub><mml:mi>M</mml:mi><mml:mi>L</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula> 2.1)</title>
+      <?pagebreak page1027?><p id="d1e1047">The 2016 Karrat rock avalanche occurred immediately west of the 2009 scarp
+(Figs. 1b, d, 4c) and had the same east–west-oriented vertical back scarp
+and dip-slope weakness as the surface of rupture. Due to the constant winter
+darkness the timing of the rock avalanche, based on Sentinel-2 data alone,
+could only be loosely constrained to some time during the winter of
+2016–2017. However, a DInSAR interferogram formed from Sentinel-1 images
+acquired on 11 and 17 November 2016 shows a localized loss of coherence,
+compatible with a rock avalanche in this area (Fig. 5). Analysis of the
+seismic signal reveals that a <inline-formula><mml:math id="M44" display="inline"><mml:mrow><mml:msub><mml:mi>M</mml:mi><mml:mi>L</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula> 2.1 non-tectonic event took place
+on 15 November 2016 at 11:34 Z (Fig. 6). The westernmost part of the scarp is
+visible in an ArcticDEM strip from 5 June 2017. Based on this DEM and the
+geometric constraints of the scarp of the Karrat 2009 rock avalanche, we
+calculate the volume of the source area to be <inline-formula><mml:math id="M45" display="inline"><mml:mrow><mml:mn mathvariant="normal">3.0</mml:mn><mml:mo>×</mml:mo><mml:msup><mml:mn mathvariant="normal">10</mml:mn><mml:mn mathvariant="normal">6</mml:mn></mml:msup></mml:mrow></mml:math></inline-formula> m<inline-formula><mml:math id="M46" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula>. It is
+not possible to constrain the volume of the deposit from the rock avalanche
+as no DEM covers the entire area.  Bessette-Kirton et al. (2017) described an enlargement of their “East landslide” (here named the
+Karrat 2009 rock avalanche) that took place sometime between 16 May 2016 and
+5 June 2017, based on WorldView images. This probably corresponds to the
+Karrat 2016 rock avalanche.</p>
+
+      <?xmltex \floatpos{t}?><fig id="Ch1.F5" specific-use="star"><?xmltex \currentcnt{5}?><label>Figure 5</label><caption><p id="d1e1087">Two-pass interferograms of the eastern part of the Karrat Landslide Complex.
+The colours denote radar phase differences in the fundamental [-<inline-formula><mml:math id="M47" display="inline"><mml:mrow><mml:mi mathvariant="italic">π</mml:mi><mml:mi mathvariant="italic">π</mml:mi></mml:mrow></mml:math></inline-formula>] interval, where one full interval of 2<inline-formula><mml:math id="M48" display="inline"><mml:mi mathvariant="italic">π</mml:mi></mml:math></inline-formula> radians corresponds to 5.6 cm of displacement. <bold>(a)</bold> Ascending track 90 during 26 June–8 July 2015. The
+deformation in the broader part of area 1 is not clearly seen in this
+viewing geometry; however, two subareas with decorrelation due to high
+deformation rates are apparent. Deformation in areas 2 and 3 and below the
+2017 rock avalanche is visible, but the steep slope itself is in layover due
+to the geometry of the satellite acquisition. <bold>(b)</bold> Ascending track 90 during
+12–24 September 2015. Area 2 shows decorrelation indicating acceleration of
+deformation rates. <bold>(c)</bold> Ascending track 90 during 11–17 November 2016,
+spanning the 2016 rock avalanche, which appears completely decorrelated.
+<bold>(d)</bold> Descending track 25 during 20 July–11 August 2018, a year after the
+2017 rock avalanche. The area of the 2017 avalanche shows partly coherent
+and incoherent deformation. Areas 2 and 3 both show complete decorrelation
+due to high deformation rates. The upper right part of the interferograms
+shows varying coherent phase differences and decorrelation due to rapid
+movements of ice glaciers.</p></caption>
+            <?xmltex \igopts{width=398.338583pt}?><graphic xlink:href="https://esurf.copernicus.org/articles/8/1021/2020/esurf-8-1021-2020-f05.png"/>
+
+          </fig>
+
+      <?xmltex \floatpos{p}?><fig id="Ch1.F6" specific-use="star"><?xmltex \currentcnt{6}?><label>Figure 6</label><caption><p id="d1e1129">Seismic signatures of major events. All figures show the unfiltered data of
+the vertical component from the seismic station at Nuugaatsiaq (NUUG). Panel <bold>(a)</bold>
+consists of spectral plots of a tectonic earthquake (top), a cryo-seismic event
+(middle), and a confirmed rock avalanche (bottom). The difference in
+frequencies and duration between the tectonic event and the non-tectonic
+events is clear, while the difference between the two non-tectonic events
+(cryo-seismic and rock avalanche) is more ambiguous. Panel <bold>(b)</bold> is a 5 min extract
+of the Karrat 2017 rock avalanche. Panels <bold>(c)</bold>–<bold>(g)</bold> are 1 min and 10 sec extracts for
+possible and confirmed rock avalanche events from NUUG. Panels <bold>(c)</bold> and <bold>(d)</bold> are known
+rock avalanches (Karrat 2016 and Karrat 2017), and panels <bold>(e)</bold>–<bold>(g)</bold> are interpreted
+as possible rock slope failures in the Karrat area, but this is not
+supported by the other datasets.</p></caption>
+            <?xmltex \igopts{width=398.338583pt}?><graphic xlink:href="https://esurf.copernicus.org/articles/8/1021/2020/esurf-8-1021-2020-f06.png"/>
+
+          </fig>
+
+</sec>
+<sec id="Ch1.S3.SS3.SSS3">
+  <label>3.3.3</label><?xmltex \opttitle{The Karrat 2017 rock avalanche (71{${}^{{\circ}}$}38'36''\,N, 52{${}^{{\circ}}$}20'12''\,W, 17~June~2017 at 23:39\,Z, \textit{M}\textsubscript{s}~(20\,s) 4.2)}?><title>The Karrat 2017 rock avalanche (71<inline-formula><mml:math id="M49" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula>38'36” N, 52<inline-formula><mml:math id="M50" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula>20'12” W, 17 June 2017 at 23:39 Z, <italic>M</italic><sub>s</sub> (20 s) 4.2)</title>
+      <p id="d1e1195">The landside rock avalanche of 17 June 2017 appears to have initiated as a
+dip-slope failure. This is based on the same criteria as the Karrat 2009 and
+2016 rock avalanches: dip slope of the bedrock on the coast and near-vertical
+east–west-oriented back scarp. The Karrat 2017 rock avalanche is documented
+in all of our data sources, but these are secondary to the eye witness
+reports of the landslide rock avalanche and tsunami that combined with the
+seismic signal pinpoint the exact timing of the event to 17 June 2017 at 23:39 Z
+(Fig. 6a). The Karrat 2017 rock avalanche is described in previous
+preliminary publications  (Bessette-Kirton et
+al., 2017; Clinton et al., 2017; Gauthier et al., 2018). It was termed the
+“Nuugaatsiaq landslide” by  Bessette-Kirton et al. (2017) and Poli (2017) after the village of Nuugaatsiaq 30 km to the<?pagebreak page1028?> west
+and the “Greenland landslide” by Chao et al. (2018). Only the easternmost part of the rock avalanche is visible in two
+ArcticDEM strips covering the area from 23 and 28 June 2017. Previous volume
+estimates range from 35 to <inline-formula><mml:math id="M51" display="inline"><mml:mrow><mml:mn mathvariant="normal">76</mml:mn><mml:mo>×</mml:mo><mml:msup><mml:mn mathvariant="normal">10</mml:mn><mml:mn mathvariant="normal">6</mml:mn></mml:msup></mml:mrow></mml:math></inline-formula> m<inline-formula><mml:math id="M52" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula>
+(Bessette-Kirton
+et al., 2017; Chao et al., 2018; Gauthier et al., 2018; Paris et al., 2019),
+but some of these are based on DEM work that does not include the full
+volume of the Karrat 2016 rock avalanche (see Discussion). Recent work based
+on detailed DEMs from high-resolution oblique photogrammetry from 2015 and
+2017 gives a volume of 41–<inline-formula><mml:math id="M53" display="inline"><mml:mrow><mml:mn mathvariant="normal">43.5</mml:mn><mml:mo>×</mml:mo><mml:msup><mml:mn mathvariant="normal">10</mml:mn><mml:mn mathvariant="normal">6</mml:mn></mml:msup></mml:mrow></mml:math></inline-formula> m<inline-formula><mml:math id="M54" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula> mobilized in the 2016
+and 2017 rock avalanches (Erik Vest Sørensen,  personal communication, 2020). Subtracting the volume of the
+Karat 2016 rock avalanche given above gives a volume of 38–<inline-formula><mml:math id="M55" display="inline"><mml:mrow><mml:mn mathvariant="normal">40</mml:mn><mml:mo>×</mml:mo><mml:msup><mml:mn mathvariant="normal">10</mml:mn><mml:mn mathvariant="normal">6</mml:mn></mml:msup></mml:mrow></mml:math></inline-formula> m<inline-formula><mml:math id="M56" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula> for the Karrat 2017 rock avalanche.</p>
+</sec>
+</sec>
+<sec id="Ch1.S3.SS4">
+  <label>3.4</label><title>The unstable rock slopes</title>
+<sec id="Ch1.S3.SS4.SSS1">
+  <label>3.4.1</label><?xmltex \opttitle{Area 1 (71{${}^{{\circ}}$}38${}^{{\prime}}$44${}^{{\prime\prime}}$\,N, 52{${}^{{\circ}}$}28${}^{{\prime}}$19${}^{{\prime\prime}}$\,W)}?><title>Area 1 (71<inline-formula><mml:math id="M57" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula>38<inline-formula><mml:math id="M58" display="inline"><mml:msup><mml:mi/><mml:mo>′</mml:mo></mml:msup></mml:math></inline-formula>44<inline-formula><mml:math id="M59" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>′</mml:mo><mml:mo>′</mml:mo></mml:mrow></mml:msup></mml:math></inline-formula> N, 52<inline-formula><mml:math id="M60" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula>28<inline-formula><mml:math id="M61" display="inline"><mml:msup><mml:mi/><mml:mo>′</mml:mo></mml:msup></mml:math></inline-formula>19<inline-formula><mml:math id="M62" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>′</mml:mo><mml:mo>′</mml:mo></mml:mrow></mml:msup></mml:math></inline-formula> W)</title>
+      <p id="d1e1349">Area 1 is a very large and well-developed unstable rock slope, 4 km west of
+the present Karrat 2017 scar (Fig. 1b, c), which has not previously been described
+in the literature. The 2000 m <inline-formula><mml:math id="M63" display="inline"><mml:mo>×</mml:mo></mml:math></inline-formula> 1600 m area is defined by a well-developed
+up to 120 m high back scarp and lateral release surfaces. The back scarp is
+near the crest of a 1000 m high mountain, and the unstable area extends to
+the coast, suggesting that it continues below sea level. Internally, the
+unstable slope shows signs of significant strain with multiple scarps,
+contour-parallel grabens, and an overall hummocky fabric. The area is well
+defined in the 1953 aerial images with a well-developed back scarp and a
+hummocky morphology, indicating that it had already undergone significant
+internal strain at that time (Fig. 2a). Whether the area was active or
+dormant at this time is unclear. Subareas in the lower 200 to 400 m of the
+slope show downslope movements between various ArcticDEM scenes. The same
+areas are decorrelated in almost<?pagebreak page1029?> all DInSAR interferograms (Fig. 5). Some
+interferograms show episodic movement of 1–5 mm d<inline-formula><mml:math id="M64" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula> over most of the area
+(Fig. 5d). Multiplying the height of the back scarp with the area of the
+unstable slopes (120 m <inline-formula><mml:math id="M65" display="inline"><mml:mo>×</mml:mo></mml:math></inline-formula> 2000 m <inline-formula><mml:math id="M66" display="inline"><mml:mo>×</mml:mo></mml:math></inline-formula> 1600 m) gives a tentative minimum volume of
+380 <inline-formula><mml:math id="M67" display="inline"><mml:mo>×</mml:mo></mml:math></inline-formula> 10<inline-formula><mml:math id="M68" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">6</mml:mn></mml:msup></mml:math></inline-formula> m<inline-formula><mml:math id="M69" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula> for the area above sea level.</p>
+</sec>
+<sec id="Ch1.S3.SS4.SSS2">
+  <label>3.4.2</label><?xmltex \opttitle{Area 2 (71{${}^{{\circ}}$}38${}^{{\prime}}$46${}^{{\prime\prime}}$\,N, 52{${}^{{\circ}}$}21${}^{{\prime}}$57${}^{{\prime\prime}}$\,W)}?><title>Area 2 (71<inline-formula><mml:math id="M70" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula>38<inline-formula><mml:math id="M71" display="inline"><mml:msup><mml:mi/><mml:mo>′</mml:mo></mml:msup></mml:math></inline-formula>46<inline-formula><mml:math id="M72" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>′</mml:mo><mml:mo>′</mml:mo></mml:mrow></mml:msup></mml:math></inline-formula> N, 52<inline-formula><mml:math id="M73" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula>21<inline-formula><mml:math id="M74" display="inline"><mml:msup><mml:mi/><mml:mo>′</mml:mo></mml:msup></mml:math></inline-formula>57<inline-formula><mml:math id="M75" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>′</mml:mo><mml:mo>′</mml:mo></mml:mrow></mml:msup></mml:math></inline-formula> W)</title>
+      <p id="d1e1481">Area 2 is a well-developed 500 m <inline-formula><mml:math id="M76" display="inline"><mml:mo>×</mml:mo></mml:math></inline-formula> 700 m unstable rock slope, located 500 m
+west of the Karrat 2017 rock avalanche at 950–1200 m elevation (Fig. 1b, d).
+The area could not be visited during fieldwork due to the steepness of the
+terrain and the near-constant rock falls. Drone inspection of the area
+showed that it is covered by thick colluvium; however, the Proterozoic
+bedrock is exposed in the 50 m high back scarp, demonstrating that the
+instability most likely involves bedrock (Fig. 7a). The area appears as a
+bulge in the oldest ArcticDEM strip (3 June 2008), indicating that activity
+in the area could be older than this. However, it is not possible to
+identify the onset of activity using either Landsat or older aerial images
+due to their coarse spatial and temporal resolution.
+Bessette-Kirton et al. (2017) call the area the “West
+landslide” and propose movement started between 13 May 2015 and 16 May 2016,
+based on WorldView imagery. This is in accordance with InSAR analysis
+showing the first subtle signs of deformation in the area as a loss of
+coherence during 3  and 15 May 2015. We interpret a <inline-formula><mml:math id="M77" display="inline"><mml:mrow><mml:msub><mml:mi>M</mml:mi><mml:mi>L</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula> 1.8 seismic
+event on 13 May 2015 at 17:14 Z (Table 2) from the area as representing the
+exact time of the first major displacement of the area. Deformation of the
+outer boundary of the area is clearly visible in all InSAR images from the end
+of May 2015 with movement in the order of 1 mm d<inline-formula><mml:math id="M78" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msup></mml:math></inline-formula> (Fig. 5a). After
+September 2015 and up to the present day the entire area shows loss of
+coherence in InSAR, which could be due to fast motion or change in surface
+properties, both of which suggest an acceleration in activity (Fig. 5b–d).
+This is in agreement with the very broken-up fabric observed in the field
+(Fig. 7a), indicating both fast movement and change of surface properties.
+Assuming that the height of the back scarp represents the minimum average
+thickness of the unstable mass, we tentatively model the volume of area 2 to
+be at least <inline-formula><mml:math id="M79" display="inline"><mml:mrow><mml:mn mathvariant="normal">13</mml:mn><mml:mo>×</mml:mo><mml:msup><mml:mn mathvariant="normal">10</mml:mn><mml:mn mathvariant="normal">6</mml:mn></mml:msup></mml:mrow></mml:math></inline-formula> m<inline-formula><mml:math id="M80" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula> (by multiplying the area of 260 000 m<inline-formula><mml:math id="M81" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">2</mml:mn></mml:msup></mml:math></inline-formula> by an average thickness of 50 m).
+Paris et al. (2019) used volumes
+between <inline-formula><mml:math id="M82" display="inline"><mml:mrow><mml:mn mathvariant="normal">2</mml:mn><mml:mo>×</mml:mo><mml:msup><mml:mn mathvariant="normal">10</mml:mn><mml:mn mathvariant="normal">6</mml:mn></mml:msup></mml:mrow></mml:math></inline-formula> and <inline-formula><mml:math id="M83" display="inline"><mml:mrow><mml:mn mathvariant="normal">38</mml:mn><mml:mo>×</mml:mo><mml:msup><mml:mn mathvariant="normal">10</mml:mn><mml:mn mathvariant="normal">6</mml:mn></mml:msup></mml:mrow></mml:math></inline-formula> m<inline-formula><mml:math id="M84" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula> for the area for tsunami
+modelling, mentioning that <inline-formula><mml:math id="M85" display="inline"><mml:mrow><mml:mn mathvariant="normal">38</mml:mn><mml:mo>×</mml:mo><mml:msup><mml:mn mathvariant="normal">10</mml:mn><mml:mn mathvariant="normal">6</mml:mn></mml:msup></mml:mrow></mml:math></inline-formula> m<inline-formula><mml:math id="M86" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula> is the more realistic
+estimate.</p>
+
+      <?xmltex \floatpos{t}?><fig id="Ch1.F7" specific-use="star"><?xmltex \currentcnt{7}?><label>Figure 7</label><caption><p id="d1e1613">Drone field photos from the Karrat Landslide Complex in the summer of 2019.
+<bold>(a)</bold> Drone photo of the back scarp of area 2. The arrow points to where bedrock
+is exposed, indicating that the unstable rock slope is not a superficial
+feature. <bold>(b)</bold> Drone photo of the back scarp of the Karrat 2017 rock avalanche
+looking towards the NW. The mottled interior of area 3 is apparent along
+with the bulging nature of area 2 in the background. See Fig. 1b for
+locations.</p></caption>
+            <?xmltex \igopts{width=398.338583pt}?><graphic xlink:href="https://esurf.copernicus.org/articles/8/1021/2020/esurf-8-1021-2020-f07.png"/>
+
+          </fig>
+
+</sec>
+<?pagebreak page1031?><sec id="Ch1.S3.SS4.SSS3">
+  <label>3.4.3</label><?xmltex \opttitle{Area 3 (71{${}^{{\circ}}$}38${}^{{\prime}}$32${}^{{\prime\prime}}$\,N, 52{${}^{{\circ}}$}21${}^{{\prime}}$23${}^{{\prime\prime}}$\,W)}?><title>Area 3 (71<inline-formula><mml:math id="M87" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula>38<inline-formula><mml:math id="M88" display="inline"><mml:msup><mml:mi/><mml:mo>′</mml:mo></mml:msup></mml:math></inline-formula>32<inline-formula><mml:math id="M89" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>′</mml:mo><mml:mo>′</mml:mo></mml:mrow></mml:msup></mml:math></inline-formula> N, 52<inline-formula><mml:math id="M90" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula>21<inline-formula><mml:math id="M91" display="inline"><mml:msup><mml:mi/><mml:mo>′</mml:mo></mml:msup></mml:math></inline-formula>23<inline-formula><mml:math id="M92" display="inline"><mml:msup><mml:mi/><mml:mrow><mml:mo>′</mml:mo><mml:mo>′</mml:mo></mml:mrow></mml:msup></mml:math></inline-formula> W)</title>
+      <p id="d1e1698">Area 3 is an 800 m <inline-formula><mml:math id="M93" display="inline"><mml:mo>×</mml:mo></mml:math></inline-formula> 500 m unstable rock slope located between the scarp of
+the Karrat 2017 rock avalanche and area 2 (Fig. 1b, d). A clear back scarp is
+not visible, but the area shows signs of deformation since May 2015
+(coinciding with the initiation of area 2) and decorrelation over the entire
+area in all interferograms since 21 June 2017 (the first acquisition after
+the 17 June 2017 rock avalanche) (Fig. 5). Localized rockfalls are seen in
+Sentinel-2 images and during the field visit. It has an overall hummocky
+surface in recent ArcticDEM strips, and a broken-up internal fabric was
+observed in the field (Fig. 7b), indicating significant internal strain.
+Upslope the area seems to be defined by the western continuation of the
+back scarp of the Karrat 2017 rock avalanche, and it is reasonable to assume
+that it is sliding on the same basal sliding plane. This area is described
+here for the first time. We infer activity in area 3 to have started in May
+2015 and increased considerably after 17 June 2017 as the block dislocated
+in the Karrat 2017 rock avalanche would have supported the area and
+prevented it from moving. The volume is constrained by using the western
+continuation of the back scarp and the basal sliding plane of the Karrat
+2017 rock avalanche. The western extent of the area is confined by the
+observed movement in InSAR. This gives a tentative volume of <inline-formula><mml:math id="M94" display="inline"><mml:mrow><mml:mn mathvariant="normal">11</mml:mn><mml:mo>×</mml:mo><mml:msup><mml:mn mathvariant="normal">10</mml:mn><mml:mn mathvariant="normal">6</mml:mn></mml:msup></mml:mrow></mml:math></inline-formula> m<inline-formula><mml:math id="M95" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula>.</p>
+</sec>
+</sec>
+<sec id="Ch1.S3.SS5">
+  <label>3.5</label><title>Non-tectonic seismic events</title>
+      <p id="d1e1741">The causes of non-tectonic events are several. For example, events with an
+epicentre located near an outlet glacier (cryo-seismic events) often contain
+a low-frequency component, are usually much longer in duration than
+tectonic earthquakes (Fig. 6), and are interpreted as being caused by calving
+of glaciers  (Ekström et al., 2003;
+Nettles et al., 2008). Other non-tectonic events in West Greenland are
+mainly caused by sea ice break-up and glacier or sea ice movements on bedrock,
+but other types are also present (see e.g. Podolskiy and Walter, 2016). Rapid rock slope failures also produce a seismic signal. The Karrat
+2017 rock avalanche was seen globally as a <inline-formula><mml:math id="M96" display="inline"><mml:mrow><mml:msub><mml:mi>M</mml:mi><mml:mi mathvariant="normal">s</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula> 4.2 event (U.S. Geological
+Survey, 2020), and the 2000 Paatuut rock avalanche was seen throughout
+Greenland  (Dahl-Jensen et al., 2004).
+Smaller events associated with known rock slope failures (this paper) are
+only seen more locally (Fig. 6).</p>
+      <p id="d1e1755">We have chosen to show the data in Fig. 6 without filtering. Although we
+use different bandpass filters when analysing the data for location, the
+very different frequency content of the different events (tectonic, glacial,
+and rock slope failures) are best seen with no filter, highlighting the
+differences.</p>
+      <p id="d1e1758">Non-tectonic events can easily be identified from tectonic earthquakes based
+on their different frequency content and <inline-formula><mml:math id="M97" display="inline"><mml:mi>P</mml:mi></mml:math></inline-formula>- and <inline-formula><mml:math id="M98" display="inline"><mml:mi>S</mml:mi></mml:math></inline-formula>-wave amplitudes (Fig. 6).</p>
+      <p id="d1e1775">However, distinguishing a rock slope failure signal from other non-tectonic
+events, such as events associated with glaciers, is not straightforward. The
+seismic signatures from two very large rock slope failure events, the 2000
+Paatuut landslide  (Dahl-Jensen et al.,
+2004) and the 2017 Karrat rock avalanche, have long-lasting tremor signals
+and a strong low-frequency component. For smaller rock slope failures the
+tremor component will be smaller in duration and amplitude. Many aspects of
+smaller known rock slope failures are similar to cryo-seismic events (Fig. 6).</p>
+      <p id="d1e1779">From the analysis in this paper we have built an experience database of the
+seismic signature of rock slope failure. We have analysed events from the
+Karrat area, using the location of events, the seismic signature, and
+the evidence from optical and InSAR satellite data to distinguish the types
+of events. The seismic signal from the major Karrat 2017 rock avalanche is
+also clearly not a tectonic event – there is no <inline-formula><mml:math id="M99" display="inline"><mml:mi>P</mml:mi></mml:math></inline-formula>-wave arrival and only a
+very low frequency <inline-formula><mml:math id="M100" display="inline"><mml:mi>S</mml:mi></mml:math></inline-formula> arrival. However, the cryogenic seismic events and
+smaller rock slope failures have many characteristics in common. They have<?pagebreak page1032?> a
+longer duration, lower-frequency content, and often no or very unclear <inline-formula><mml:math id="M101" display="inline"><mml:mi>P</mml:mi></mml:math></inline-formula>
+arrivals. The geographical observation that several large outlet glaciers
+are found in the area around the Karrat Landslide Complex makes it necessary
+to look deeper into the characteristics of these non-tectonic events. We
+have looked at the time difference between <inline-formula><mml:math id="M102" display="inline"><mml:mi>P</mml:mi></mml:math></inline-formula> and <inline-formula><mml:math id="M103" display="inline"><mml:mi>S</mml:mi></mml:math></inline-formula> arrivals at the
+Nuugaatsiaq seismic station (when possible). This time difference can be
+translated into a distance using an earth model with the <inline-formula><mml:math id="M104" display="inline"><mml:mi>P</mml:mi></mml:math></inline-formula>- and <inline-formula><mml:math id="M105" display="inline"><mml:mi>S</mml:mi></mml:math></inline-formula>-wave
+velocities. If the distance from Nuugaatsiaq matched the distance to the
+Karrat area, it is an indication that it might be a seismic event associated
+with the rock slope. However, there are several large outlet glaciers within
+30–60 km of Nuugaatsiaq, and with the uncertainty in location up to 50 km the time difference is not a conclusive parameter. We have also looked
+at the duration of the events. Typically, the cryogenic seismic events have
+a duration of several minutes, while the known and suspected rock slope
+failures are shorter – from 45 to 90 s. But there are also suspected
+cryogenic seismic events that are of the same duration as suspected rock
+slope failures. Currently, we must rely on supporting evidence from the
+satellite data in order to confirm or dismiss a suspected rock slope failure
+seen seismically.</p>
+      <p id="d1e1832">Several seismic events have been tied to activity in the Karrat Landslide
+Complex occurring both before and after the Karrat 2017 rock avalanche.
+Svennevig et al. (2019) described a seismic event from
+26 March 2018 and suggested it was related to rock slope activity based on
+observed rockfall in Sentinel-2 images before and after the event. Several
+seismic events during the period from 2009 to the time of submission are
+suspected to be associated with rock slope failures and are listed
+chronologically in Table 2. Another example is the <inline-formula><mml:math id="M106" display="inline"><mml:mrow><mml:msub><mml:mi>M</mml:mi><mml:mi>L</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula> 1.9 non-tectonic
+seismic event that occurred on 1 June 2017 at 20:55 Z in the area, with an
+<inline-formula><mml:math id="M107" display="inline"><mml:mi>S</mml:mi></mml:math></inline-formula>–<inline-formula><mml:math id="M108" display="inline"><mml:mi>P</mml:mi></mml:math></inline-formula> phase arrival time difference at the seismic station NUUG corresponding
+to the distance between Nuugaatsiaq and the Karrat Landslide Complex area.
+The seismic signal is similar to those of the Karrat 2009, 2016, and 2017
+rock avalanches (Fig. 6), but the event could not be confirmed by InSAR and
+optical interpretation due to poor data coverage in the short period between
+the event and the later Karrat 2017 rock avalanche. It is thus reported here
+as a seismic event that is possibly a small rock slope failure.</p>
+      <p id="d1e1860">A denser local seismograph network in central West Greenland was rolled out
+during the summer of 2019. This will improve the location accuracy of events
+in the area – including the Karrat Landslide Complex – allowing event
+location to help separate non-tectonic events into cryogenic seismic events
+and possible rock slope failures.</p>
+      <p id="d1e1863">The events up until the time of submission are listed in Table 2.</p>
+
+<?xmltex \floatpos{t}?><table-wrap id="Ch1.T2" specific-use="star"><?xmltex \currentcnt{2}?><label>Table 2</label><caption><p id="d1e1869">Summary of chronological listing of events at the Karrat Landslide
+Complex.</p></caption><oasis:table frame="topbot"><?xmltex \begin{scaleboxenv}{.87}[.87]?><oasis:tgroup cols="7">
+     <oasis:colspec colnum="1" colname="col1" align="left"/>
+     <oasis:colspec colnum="2" colname="col2" align="left"/>
+     <oasis:colspec colnum="3" colname="col3" align="justify" colwidth="5cm"/>
+     <oasis:colspec colnum="4" colname="col4" align="right"/>
+     <oasis:colspec colnum="5" colname="col5" align="center"/>
+     <oasis:colspec colnum="6" colname="col6" align="center"/>
+     <oasis:colspec colnum="7" colname="col7" align="center"/>
+     <oasis:thead>
+       <oasis:row>
+         <oasis:entry colname="col1">Event</oasis:entry>
+         <oasis:entry colname="col2">Timing (yyyy/mm/d)</oasis:entry>
+         <oasis:entry colname="col3">Note</oasis:entry>
+         <oasis:entry rowsep="1" namest="col4" nameend="col7" align="center">Evidence/data source </oasis:entry>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1"/>
+         <oasis:entry colname="col2"/>
+         <oasis:entry colname="col3"/>
+         <oasis:entry colname="col4">Seismic (<inline-formula><mml:math id="M109" display="inline"><mml:mrow><mml:msub><mml:mi>M</mml:mi><mml:mi>L</mml:mi></mml:msub></mml:mrow></mml:math></inline-formula>)</oasis:entry>
+         <oasis:entry colname="col5">Optical</oasis:entry>
+         <oasis:entry colname="col6">DEM</oasis:entry>
+         <oasis:entry colname="col7">DInSAR</oasis:entry>
+       </oasis:row>
+     </oasis:thead>
+     <oasis:tbody>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Area 1 initiates</oasis:entry>
+         <oasis:entry colname="col2">Pre-1953</oasis:entry>
+         <oasis:entry colname="col3">Well-developed scarp visible in legacy GEUS aerial images (1953), present-day deformation confirmed by DInSAR</oasis:entry>
+         <oasis:entry colname="col4"/>
+         <oasis:entry colname="col5">X</oasis:entry>
+         <oasis:entry colname="col6"/>
+         <oasis:entry colname="col7">X</oasis:entry>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Karrat 2009 rock avalanche</oasis:entry>
+         <oasis:entry colname="col2">2009-09-01, 14:09 Z</oasis:entry>
+         <oasis:entry colname="col3">First recent rock avalanche</oasis:entry>
+         <oasis:entry colname="col4">2.7</oasis:entry>
+         <oasis:entry colname="col5">X</oasis:entry>
+         <oasis:entry colname="col6">X</oasis:entry>
+         <oasis:entry colname="col7"/>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Seismic event</oasis:entry>
+         <oasis:entry colname="col2">2014-09-19, 04:30 Z</oasis:entry>
+         <oasis:entry colname="col3">Seismic signature of a rock slope failure</oasis:entry>
+         <oasis:entry colname="col4">2.0</oasis:entry>
+         <oasis:entry colname="col5"/>
+         <oasis:entry colname="col6"/>
+         <oasis:entry colname="col7"/>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Areas 2 and 3 initiate</oasis:entry>
+         <oasis:entry colname="col2">2015-05-13, 17:14 Z</oasis:entry>
+         <oasis:entry colname="col3">Deformation only in parts of area 3, localized deformation in area of 2017 rock avalanche</oasis:entry>
+         <oasis:entry colname="col4">1.8</oasis:entry>
+         <oasis:entry colname="col5"/>
+         <oasis:entry colname="col6">X</oasis:entry>
+         <oasis:entry colname="col7">X</oasis:entry>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Karrat 2016 rock avalanche</oasis:entry>
+         <oasis:entry colname="col2">2016-11-15, 11:34 Z</oasis:entry>
+         <oasis:entry colname="col3">Second recent rock avalanche</oasis:entry>
+         <oasis:entry colname="col4">2.1</oasis:entry>
+         <oasis:entry colname="col5">X</oasis:entry>
+         <oasis:entry colname="col6">X</oasis:entry>
+         <oasis:entry colname="col7">X</oasis:entry>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Seismic event</oasis:entry>
+         <oasis:entry colname="col2">2017-06-01, 20:55 Z</oasis:entry>
+         <oasis:entry colname="col3">Seismic signature of a rock slope failure, but not resolved by other datasets</oasis:entry>
+         <oasis:entry colname="col4">1.9</oasis:entry>
+         <oasis:entry colname="col5"/>
+         <oasis:entry colname="col6"/>
+         <oasis:entry colname="col7"/>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Karrat 2017 rock avalanche</oasis:entry>
+         <oasis:entry colname="col2">2017-06-17, 23:39Z</oasis:entry>
+         <oasis:entry colname="col3">Third recent rock avalanche; described by Bessette-Kirton et al. (2017), Gauthier et al. (2018), and eye witnesses</oasis:entry>
+         <oasis:entry colname="col4">4.2</oasis:entry>
+         <oasis:entry colname="col5">X</oasis:entry>
+         <oasis:entry colname="col6">X</oasis:entry>
+         <oasis:entry colname="col7">X</oasis:entry>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Seismic event</oasis:entry>
+         <oasis:entry colname="col2">2018-02-21, 01:10 Z</oasis:entry>
+         <oasis:entry colname="col3">Seismic signature of a rock slope failure, but not resolved by other datasets</oasis:entry>
+         <oasis:entry colname="col4">1.7</oasis:entry>
+         <oasis:entry colname="col5"/>
+         <oasis:entry colname="col6"/>
+         <oasis:entry colname="col7"/>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Seismic event</oasis:entry>
+         <oasis:entry colname="col2">2018-03-26, 21:21Z</oasis:entry>
+         <oasis:entry colname="col3">Described by  Svennevig et al. (2019)</oasis:entry>
+         <oasis:entry colname="col4">1.9</oasis:entry>
+         <oasis:entry colname="col5">X</oasis:entry>
+         <oasis:entry colname="col6"/>
+         <oasis:entry colname="col7"/>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Seismic event</oasis:entry>
+         <oasis:entry colname="col2">2018-04-19, 20:18 Z</oasis:entry>
+         <oasis:entry colname="col3">Several consecutive seismic events over a period of 2 h; interpreted as being rock slope failures</oasis:entry>
+         <oasis:entry colname="col4">1.9</oasis:entry>
+         <oasis:entry colname="col5"/>
+         <oasis:entry colname="col6"/>
+         <oasis:entry colname="col7"/>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Seismic event</oasis:entry>
+         <oasis:entry colname="col2">2018-08-13, 10:04 Z</oasis:entry>
+         <oasis:entry colname="col3">Seismic signature of a rock slope failure; movement in several places in the Karrat Landslide Complex including large parts of area 2 seen in all other datasets</oasis:entry>
+         <oasis:entry colname="col4">1.2</oasis:entry>
+         <oasis:entry colname="col5">X</oasis:entry>
+         <oasis:entry colname="col6">X</oasis:entry>
+         <oasis:entry colname="col7">X</oasis:entry>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Seismic event</oasis:entry>
+         <oasis:entry colname="col2">2018-08-17, 01:15 and 01:18 Z</oasis:entry>
+         <oasis:entry colname="col3">Seismic signature of a rock slope failure, but not resolved by other datasets</oasis:entry>
+         <oasis:entry colname="col4">1.7</oasis:entry>
+         <oasis:entry colname="col5"/>
+         <oasis:entry colname="col6"/>
+         <oasis:entry colname="col7"/>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Seismic event</oasis:entry>
+         <oasis:entry colname="col2">2019-10-08, 01:50 Z</oasis:entry>
+         <oasis:entry colname="col3">Seismic signature of a rock slope failure, but not resolved by other datasets</oasis:entry>
+         <oasis:entry colname="col4">0.9</oasis:entry>
+         <oasis:entry colname="col5"/>
+         <oasis:entry colname="col6"/>
+         <oasis:entry colname="col7"/>
+       </oasis:row>
+     </oasis:tbody>
+   </oasis:tgroup><?xmltex \end{scaleboxenv}?></oasis:table></table-wrap>
+
+</sec>
+</sec>
+<sec id="Ch1.S4">
+  <label>4</label><title>Discussion</title>
+<sec id="Ch1.S4.SS1">
+  <label>4.1</label><title>Evaluation of the workflow</title>
+      <p id="d1e2265">This study shows the effectiveness of combining complementary remote sensing
+techniques to establish precise time and location of a series of successive
+rock slope failures in a remote Arctic setting where fieldwork is
+challenging due to limited infrastructure. It is an inexpensive setup
+relying on freely available and continuously updated datasets. However, some
+unstable slopes may go undetected due to the inherent limitations of the
+remote sensing data, such as the lack of optical data during winter season,
+the resolution problems of DInSAR in steep terrain, and the location errors
+of seismic events. Questions regarding the development of an unstable slope
+prior to failure, the triggering mechanisms, and the type of failure may be
+only partly resolved by remote sensing alone. Furthermore, a reliable
+assessment of possible failure scenarios and their associated hazards
+requires validation by structural mapping and displacement measurements in
+the field (e.g. Oppikofer et al., 2013; Hermanns et al., 2016).</p>
+      <p id="d1e2268">The methodology demonstrated here might also be useful in other, less remote
+settings, by providing a means of monitoring the activity of a known
+unstable rock slope. Once the seismological, InSAR, and optical signatures of
+a rock slope failure are established, the workflow can be used to detect and
+locate rock slope activity and thus focus fieldwork. Semi-automatic methods
+have been developed to detect landslides based on either satellite optical
+or SAR data (e.g. Martha et al., 2010; Friedl and Hölbling, 2015), and
+the detection capability of such methods may be improved by combining the
+different data sources as indicated by the results of our study.</p>
+</sec>
+<sec id="Ch1.S4.SS2">
+  <label>4.2</label><title>Evolution of the Karrat Landslide Complex</title>
+      <p id="d1e2279">As our compilation of results shows, the Karrat 2017 rock avalanche was not
+an isolated event, but part of an ongoing process of successive rock slope
+failures centred in the Karrat Landslide Complex (Figs. 1 and 8). The activity
+can be subdivided into one or more previous phases (prior to 2009, Fig. 3)
+and a recent phase initiating with the 2009 rock avalanche and so far
+culminating with the 2017 rock avalanche (Figs. 4, 5, and 6).</p>
+
+      <?xmltex \floatpos{t}?><fig id="Ch1.F8" specific-use="star"><?xmltex \currentcnt{8}?><label>Figure 8</label><caption><p id="d1e2284"><bold>(a)</bold> Data coverage, <bold>(b)</bold> timeline of recent events in the Karrat Landside
+Complex, and <bold>(c)</bold> yearly distribution of rock slope failures and seismic
+events.</p></caption>
+          <?xmltex \igopts{width=426.791339pt}?><graphic xlink:href="https://esurf.copernicus.org/articles/8/1021/2020/esurf-8-1021-2020-f08.png"/>
+
+        </fig>
+
+      <p id="d1e2301">Area 1, the large unstable rock slope in the western part of the Karrat
+Landslide Complex, probably had a long history of activity as indicated by
+the well-developed back scarp and hummocky morphology in the oldest aerial
+photograph of the area from 1953 (Fig. 2a). The boulder fields and hummocky
+lobes in the eastern part of the complex, here interpreted as being deposits
+from older rock avalanches (Fig. 2b, c), furthermore point to a previous
+stage of activity in the Karrat Landslide Complex, possibly several hundreds or
+thousands of years old but younger than the previous glaciation as this would
+presumably have erased the morphological expression of the rock avalanches.</p>
+      <?pagebreak page1033?><p id="d1e2305"><?xmltex \hack{\newpage}?>The 2009 rock avalanche was the earliest detected seismological event as the
+first GLISN stations came into operation during the summer of 2009. However,
+a less dense seismograph network was present prior to this (back to 2000)
+and records no larger events in the area. After the 2009 rock avalanche, no
+activity was recorded in the Karrat Landslide Complex for another 5 years
+until a seismic event with a signature of a rock slope failure was recorded
+on 19 September 2014 (see Table 2). The period has reasonable optical
+satellite and seismological coverage, indicating that the lack of recorded
+events reflects a real hiatus in activity. Activity picked up after the 2014
+event as the two unstable areas termed area 2 and 3 started to show signs of
+deformation in InSAR and optical imagery from May 2015 (Fig. 5a), followed
+by the Karrat 2016 rock avalanche, then a seismic event with the signature of a rock
+slope failure on 1 June 2017, and culminating with the major rock avalanche
+on 17 June 2017. A number of seismic events interpreted as activity in the
+Karrat Landslide Complex were recorded during 2018 and 2019, of which some
+correlated with rock slope deformation observed in all other considered
+datasets in 2018  (e.g. Svennevig et al., 2019). These
+events show that the unstable slopes in the Karrat Landslide Complex
+continue to be active and may pose a continued threat of catastrophic
+failure.</p>
+      <p id="d1e2309">We cannot conclude whether the three rock avalanches were preceded by
+precursory deformation, due to the rather coarse resolution of the optical
+satellite imagery and the problems in the ascending InSAR data due to steep
+topography. However, the east-to-west migration of the rock avalanches in
+the eastern part of the Karrat Landslide Complex suggests a westward
+migration of a fracture system acting as back scarps for the three recent
+rock avalanches. Multiple rock slope failures from the same site are well
+known in the literature, and it has previously been shown in mountain areas
+of Europe how previous massive rock slope failures can increase the
+likelihood of new rock slope failures  (Hermanns et al.,
+2006). The east–west migration of rock slope failures,<?pagebreak page1034?> along with the
+ongoing deformation detected by InSAR in areas 2 and 3 (Fig. 5d), points to
+the area just west of the Karrat 2017 rock avalanche as the most likely area
+of future catastrophic failure. The relationship of area 1 to the other
+parts of the Karrat Landslide Complex is ambiguous. The trend of the bedding
+(s0 foliation) acting as a dip-slope basal surface of rupture of the Karrat
+2009, 2016, and 2017 rock avalanches seems to be situated just below sea
+level to the west below area 1 and might act as the basal sliding surface of
+this also (Fig. 1b).</p>
+</sec>
+<sec id="Ch1.S4.SS3">
+  <label>4.3</label><title>Preconditioning and preparatory factors for slope instability</title>
+      <p id="d1e2320">Based on the remotely sensed data and our limited fieldwork, it has not been
+possible to determine exactly what factors (sensu Glade and Crozier,
+2005) triggered individual rock slope failures and seismic events in the
+Karrat Landslide Complex and why there seems to be a recent peak in activity
+since 2009. The structural setting is most likely the main preconditioning factor as
+the Karrat Landslide Complex coincides with an area of weak bedding (s0)
+foliation, local dip slope, and coast-parallel vertical jointing (Fig. 3).
+However, this only suggests the where, not the when. We observe that
+events may occur throughout the year, and, from the limited data we have
+available, no seasonal change in activity can be seen (Fig. 8c). This
+indicates that something with a longer period than the seasonal cycle could
+contribute as a preparatory factor.</p>
+      <p id="d1e2323">Regional models propose that slopes in this part of west Greenland are
+permafrozen  (Westergaard-Nielsen et al., 2018);
+however, the specific permafrost state of slope at the Karrat Landslide
+Complex is not known. The regional air temperature has increased by 4–5 <inline-formula><mml:math id="M110" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula>C since 1880, and this increase has been accelerating since ca.
+1990 (Cappelen et al., 2018), making it reasonable to
+speculate that this could have an effect on the permafrost conditions. It is
+well known that permafrost degradation can play an important role in<?pagebreak page1035?> slope
+stability (Draebing
+et al., 2014; Krautblatter et al., 2013). We therefore hypothesize that
+permafrost degradation may be the main preparatory factor for the recent
+slope instability and rock avalanches. With the projected temperature
+increase of up to 8 <inline-formula><mml:math id="M111" display="inline"><mml:msup><mml:mi/><mml:mo>∘</mml:mo></mml:msup></mml:math></inline-formula>C towards 2100 (IPCC, 2013), a
+range of preparatory factors are expected to change, including permafrost
+degradation, and thus the likelihood of more rock slope failures from the
+Karrat Landslide Complex can be expected to increase.</p>
+      <p id="d1e2344">Several works have been done on rock slope failures in deglaciated mountain
+settings  (e.g. Norway; Böhme et al.,
+2015; Hilger et al., 2018) where peaks in previous activity have been dated
+and suggested to reflect glacial debuttressing and climatic change in the
+form of change in regional precipitation patterns (amount and type) and
+increase in temperature leading to permafrost degradation. It is, however,
+unclear whether these conditions translate to the much cooler high-Arctic
+conditions of West Greenland; more work is needed on this.</p>
+      <p id="d1e2347">A variety of methods could be applied to examine this, such as dating the
+older (Holocene) rock slope failures, analysing aerial images from the past
+century to constrain more recent evolution, and installing climate sensors to
+constrain the present permafrost conditions of the slope
+(Magnin et al., 2019). Bathymetrical studies of the seabed to
+map past rock avalanche deposits off the Karrat Landslide Complex could also
+be included.</p>
+</sec>
+<sec id="Ch1.S4.SS4">
+  <label>4.4</label><title>Regional hazard evaluation and context</title>
+      <p id="d1e2358">As a whole, the occurrence of rock slope failures in the Karrat area
+(geological area of Proterozoic metasediments interfolded with Archean
+gneiss: Fig. 1) is not particularly higher than elsewhere in Greenland
+(Svennevig, 2019). In this context, the
+Karrat Landslide Complex is a local entity probably preconditioned by local
+dip slope. As such it is an outlier with respect to unstable rock slopes as
+neighbouring slopes in the fjord system with similar types of bedrock (but
+no dip slope) show no abnormal rock slope activity. The regional landslide
+hazard in the Karrat area, with the exception of the Karrat Landslide
+Complex, is thus not thought to be higher than elsewhere in Greenland. Local
+occurrences of dip slope in the region should, however, be examined in more
+detail.</p>
+      <p id="d1e2361">A consequence of the multistage evolution of the Karrat Landslide Complex is
+that  Gauthier et al. (2018) and Paris et al. (2019) overestimated the
+volume of the Karrat 2017 rock avalanche.   Gauthier et
+al. (2018), using an ArcticDEM strip from May 2015, and
+Paris et al. (2019), using a SPOT-6
+stereoscopic image acquired on 22 July 2013, both estimated that <inline-formula><mml:math id="M112" display="inline"><mml:mrow><mml:mn mathvariant="normal">45</mml:mn><mml:mo>×</mml:mo><mml:msup><mml:mn mathvariant="normal">10</mml:mn><mml:mn mathvariant="normal">6</mml:mn></mml:msup></mml:mrow></mml:math></inline-formula> m<inline-formula><mml:math id="M113" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula> of material effectively reached the sea. Both of these estimates
+include DEMs from before the Karrat 2016 rock avalanche and thus include
+this volume in their estimate of the total volume that failed on 17 June 2017. Thus the tsunami run-up estimates by
+Paris et al. (2019) using the
+overestimated volumes may be taken as minimum estimates as the volumes used
+to train the tsunami model were overestimated.
+Bessette-Kirton et al. (2017) used a DEM from satellite
+images collected on 6 May 2017 and thus do not include the volume of the
+2016 rock avalanche in their volume estimate of at minimum <inline-formula><mml:math id="M114" display="inline"><mml:mrow><mml:mn mathvariant="normal">33.4</mml:mn><mml:mo>×</mml:mo><mml:msup><mml:mn mathvariant="normal">10</mml:mn><mml:mn mathvariant="normal">6</mml:mn></mml:msup></mml:mrow></mml:math></inline-formula> m<inline-formula><mml:math id="M115" display="inline"><mml:msup><mml:mi/><mml:mn mathvariant="normal">3</mml:mn></mml:msup></mml:math></inline-formula>.</p>
+</sec>
+</sec>
+<sec id="Ch1.S5" sec-type="conclusions">
+  <label>5</label><title>Conclusions</title>
+      <p id="d1e2422">This study shows the effectiveness of using the multidisciplinary approach
+described here for studying unstable rock slopes in remote Arctic areas with
+difficult fieldwork conditions. This is demonstrated through the recognition
+of three unstable slopes and the potential of workflow to describe the
+evolution of rock slope failures in the Karrat Landslide Complex. Due to the
+inherent limitations described above, remote sensing data alone cannot
+provide the basis for detailed analysis or forecasting of future rock slope
+failures. However, we have learned that being alert to smaller events in a
+known unstable slope might be crucial for assessing the hazard of large
+tsunamigenic rock slope failures. Additionally, by establishing the seismic,
+InSAR, and optical signatures of precursors for rock avalanches, it is
+possible to be alerted of new possible events, both in the Karrat area and
+elsewhere in isolated Arctic areas.</p>
+      <p id="d1e2425">We show that the disastrous Karrat 2017 rock avalanche was not an isolated
+event. Smaller rock slope failures had taken place in the years preceding
+the major event, and the area continues to be active. Recent rock avalanches
+took place in 2009, 2016, and 2017, and an increasing number of seismological
+events interpreted as small rock slope failures occurred from 2014 onwards.
+There is also evidence of older activity in the Karrat Landslide Complex.
+The Karrat Landslide Complex continues to be very active after the Karrat
+2017 rock avalanche; specifically three unstable rock slopes named areas
+1, 2, and 3 may pose a future hazard to people in the region, and the
+consequence of a tsunami from these should be addressed.</p>
+      <p id="d1e2428">The distribution of the events over the annual cycle indicates that there is
+no seasonality, indicating that preparatory and triggering factors working on
+a longer cycle could be at play. We hypothesize that the slope instability
+is caused by permafrost degradation. However, further research is needed in
+order to confirm this.</p>
+</sec>
+
+      
+      </body>
+    <back><notes notes-type="dataavailability"><title>Data availability</title>
+
+      <p id="d1e2435">All Greenland seismological data are freely available at the GEOFON data centre
+of the GFZ German Research Centre for Geosciences and IRIS Data Services.
+Sentinel-1 and Sentinel-2 data are available through the European Earth Observation
+”Copernicus” programme. Landsat images are available through the USGS
+EarthExplorer.</p>
+  </notes><notes notes-type="authorcontribution"><title>Author contributions</title>
+
+      <p id="d1e2441">The manuscript was written by KS with significant
+contributions from TDJ and MK. KS
+carried out<?pagebreak page1036?> interpretation of optical data and data integration. JPMB, SS, AMS, and MK carried
+out processing and interpretation of Sentinel-1 data and wrote the method
+section on this. TDJ wrote the sections on seismology. TDJ, TBL, and PHV carried out processing and
+interpretation of seismic data. All authors reviewed and approved the
+manuscript.</p>
+  </notes><notes notes-type="competinginterests"><title>Competing interests</title>
+
+      <p id="d1e2447">The authors declare that they have no conflict of interest.</p>
+  </notes><ack><title>Acknowledgements</title><p id="d1e2453">We acknowledge the European Union
+Copernicus programme and ESA for the use of Sentinel-1 and Sentinel-2 data. Landsat
+images are courtesy of the US Geological Survey. The paper is published under
+permission of GEUS. Seismological data collected in Disko Bay under the INTAROS project were used in the
+landslide screening. John R. Hopper is
+thanked for constructive comments on the manuscript. The manuscript
+benefitted vastly from the comments of four anonymous reviewers. INTAROS has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement no. 727890.</p></ack><notes notes-type="financialsupport"><title>Financial support</title>
+
+      <p id="d1e2458">The governments of
+Denmark and Greenland funded the “Screening analyses of
+the risk for serious landslides in Greenland” in 2018, for which the
+original technical work was undertaken. The facilities of IRIS Data
+Services, and specifically the IRIS Data Management Center, are funded
+through the Seismological Facilities for the Advancement of Geoscience and
+EarthScope (SAGE) proposal of the National Science Foundation under
+Cooperative Agreement EAR-1261681. INTAROS has received funding from the European Union's Horizon 2020
+research and innovation programme under grant agreement no. 727890.</p>
+  </notes><notes notes-type="reviewstatement"><title>Review statement</title>
+
+      <p id="d1e2464">This paper was edited by Michael Krautblatter and reviewed by four anonymous referees.</p>
+  </notes><ref-list>
+    <title>References</title>
+
+      <ref id="bib1.bib1"><label>1</label><?label 1?><mixed-citation>Bessette-Kirton, E., Allstadt, K., Pursley, J., and Godt, J.: Preliminary
+Analysis of Satellite Imagery and Seismic Observations of the Nuugaatsiaq
+Landslide and Tsunami, Greenland, available at:
+<uri>https://www.usgs.gov/natural-hazards/landslide-hazards/science/preliminary-analysis-satellite-imagery-and-seismic?qt-science_center_objects=0#qt-science_center_objects</uri>, last access: 6 November 2017.</mixed-citation></ref>
+      <ref id="bib1.bib2"><label>2</label><?label 1?><mixed-citation>Böhme, M., Oppikofer, T., Longva, O., Jaboyedoff, M., Hermanns, R. L.,
+and Derron, M.: Analyses of past and present rock slope instabilities in a
+fjord valley: Implications for hazard estimations, Geomorphology, 248,
+464–474, <ext-link xlink:href="https://doi.org/10.1016/j.geomorph.2015.06.045" ext-link-type="DOI">10.1016/j.geomorph.2015.06.045</ext-link>, 2015.</mixed-citation></ref>
+      <ref id="bib1.bib3"><label>3</label><?label 1?><mixed-citation>Cappelen, J., Vinther, B. M., Kern-Hansen, C., Laursen, E. V., and
+Jørgensen, P. V.: Greenland – DMI Historical Climate Data Collection
+1784–2017, available at: <uri>http://www.dmi.dk/laer-om/generelt/dmi-publikationer/Url:http://www.dmi.dk/laer-om/generelt/dmi-publikationer/Website:www.dmi.dk</uri> (lasat access: 2 May 2020),
+2018.</mixed-citation></ref>
+      <ref id="bib1.bib4"><label>4</label><?label 1?><mixed-citation>
+Carla, T., Intrieri, E., Raspini, F., Bardi, F., Farina, P., Ferretti,
+A., Colombo, D., Novali, F., and Casagli, N.: Perspectives on the prediction
+of catastrophic slope failures from satellite InSAR, Sci. Rep., 9, 1–9,
+2019.</mixed-citation></ref>
+      <ref id="bib1.bib5"><label>5</label><?label 1?><mixed-citation>Chao, W. A., Wu, T. R., Ma, K. F., Kuo, Y. T., Wu, Y. M., Zhao, L., Chung,
+M. J., Wu, H., and Tsai, Y. L.: The large Greenland landslide of 2017: Was a
+Tsunami warning possible?, Seismol. Res. Lett., 89, 1335–1344,
+<ext-link xlink:href="https://doi.org/10.1785/0220170160" ext-link-type="DOI">10.1785/0220170160</ext-link>, 2018.</mixed-citation></ref>
+      <ref id="bib1.bib6"><label>6</label><?label 1?><mixed-citation>Clinton, J. F., Nettles, M., Walter, F., Anderson, K., Dahl-Jensen, T.,
+Giardini, D., Govoni, A., Hanka, W., Lasocki, S., Lee, W. S., McCormack, D.,
+Mykkeltveit, S., Stutzmann, E., and Tsuboi, S.: Seismic Network in Greenland
+Monitors Earth and Ice System, EOS T. Am. Geophys. Union, 95,
+13–14, <ext-link xlink:href="https://doi.org/10.1002/2014EO020001" ext-link-type="DOI">10.1002/2014EO020001</ext-link>, 2014.</mixed-citation></ref>
+      <ref id="bib1.bib7"><label>7</label><?label 1?><mixed-citation>Clinton, J., Larsen, T., Dahl-Jensen, T., Voss, P., and Nettles, M.: Special
+event: Nuugaatsiaq Greenland landslide and tsunami, Inc. Res. Institutions
+Seismol. Washington, DC, availabe at:
+<uri>https://ds.iris.edu/ds/nodes/dmc/specialevents/2017/06/22/nuugaatsiaq-greenland-landslide-and-tsunami/</uri> (last access: 2 May 2020),
+2017.</mixed-citation></ref>
+      <ref id="bib1.bib8"><label>8</label><?label 1?><mixed-citation>Crosetto, M., Monserrat, O., Cuevas-González, M., Devanthéry, N.,
+and Crippa, B.: Persistent Scatterer Interferometry: A review, ISPRS
+J. Photogramm., 115, 78–89.
+<ext-link xlink:href="https://doi.org/10.1016/j.isprsjprs.2015.10.011" ext-link-type="DOI">10.1016/j.isprsjprs.2015.10.011</ext-link>, 2016.</mixed-citation></ref>
+      <ref id="bib1.bib9"><label>9</label><?label 1?><mixed-citation>Dahl-Jensen, T., Larsen, T. B., Woelbern, I., Bach, T., Hanka, W., Kind, R.,
+Gregersen, S., Mosegaard, K., Voss, P., and Gudmundsson, O.: Depth to Moho in
+Greenland: receiver-function analysis suggests two Proterozoic blocks in
+Greenland, Earth Planet. Sc. Lett., 205, 379–393,
+<ext-link xlink:href="https://doi.org/10.1016/S0012-821X(02)01080-4" ext-link-type="DOI">10.1016/S0012-821X(02)01080-4</ext-link>, 2003.</mixed-citation></ref>
+      <ref id="bib1.bib10"><label>10</label><?label 1?><mixed-citation>Dahl-Jensen, T., Larsen, L. M., Pedersen, S. A. S., Pedersen, J., Jepsen, H.
+F., Pedersen, G. K., Nielsen, T., Pedersen, A. K., Von Platen-Hallermund, F.,
+and Weng, W. L.: Landslide and tsunami 21 November 2000 in Paatuut, West
+Greenland, Nat. Hazards, 31, 277–287,
+<ext-link xlink:href="https://doi.org/10.1023/B:NHAZ.0000020264.70048.95" ext-link-type="DOI">10.1023/B:NHAZ.0000020264.70048.95</ext-link>, 2004.</mixed-citation></ref>
+      <ref id="bib1.bib11"><label>11</label><?label 1?><mixed-citation>Draebing, D., Krautblatter, M., and Dikau, R.: Interaction of thermal and
+mechanical processes in steep permafrost rock walls: A conceptual approach,
+Geomorphology, 226, 226–235, <ext-link xlink:href="https://doi.org/10.1016/J.GEOMORPH.2014.08.009" ext-link-type="DOI">10.1016/J.GEOMORPH.2014.08.009</ext-link>, 2014.</mixed-citation></ref>
+      <ref id="bib1.bib12"><label>12</label><?label 1?><mixed-citation>Ekström, G., Nettles, M., and Abers, G. A.: Glacial Earthquakes, Science, 302, 622–624, <ext-link xlink:href="https://doi.org/10.1126/science.1088057" ext-link-type="DOI">10.1126/science.1088057</ext-link>, 2003.</mixed-citation></ref>
+      <ref id="bib1.bib13"><label>13</label><?label 1?><mixed-citation>Friedl, B. and Hölbling, D.: Using SAR Interferograms and Coherence
+Images for Object-Based Delineation of Unstable Slopes, in:  Proceedings of the
+FRINGE 2015 conference,  Proc. “Fringe 2015 Workshop”, Frascati, Italy, 23–27 March 2015,  <ext-link xlink:href="https://doi.org/10.5270/Fringe2015" ext-link-type="DOI">10.5270/Fringe2015</ext-link>,  2015.</mixed-citation></ref>
+      <ref id="bib1.bib14"><label>14</label><?label 1?><mixed-citation>Gauthier, D., Anderson, S. A., Fritz, H. M., and Giachetti, T.: Karrat Fjord
+(Greenland) tsunamigenic landslide of 17 June 2017: initial 3D observations,
+Landslides, 15, 327–332, <ext-link xlink:href="https://doi.org/10.1007/s10346-017-0926-4" ext-link-type="DOI">10.1007/s10346-017-0926-4</ext-link>, 2018.</mixed-citation></ref>
+      <ref id="bib1.bib15"><label>15</label><?label 1?><mixed-citation>
+Ghiglia, D. C. and Pritt, M. D.: Two-dimensional phase unwrapping: Theory,
+algorithms, and software, Wiley, New York, USA, 1998.</mixed-citation></ref>
+      <?pagebreak page1037?><ref id="bib1.bib16"><label>16</label><?label 1?><mixed-citation>
+Glade, T. and Crozier, M. J.: A Review of Scale Dependency, in: Landslide
+Hazard and Risk, edited by:  Glade, T., Anderson, M., and Crozier, M. J.,
+Wiley, New York, USA, 75–138, 2005.</mixed-citation></ref>
+      <ref id="bib1.bib17"><label>17</label><?label 1?><mixed-citation>
+Gregersen, S.: National Survey and Cadastre (KMS), Copenhagen, Denmark, EMSC-CSEM Newsletter, p. 3, 1999.</mixed-citation></ref>
+      <ref id="bib1.bib18"><label>18</label><?label 1?><mixed-citation>
+Havskov, J. and  Ottemøller, L.: SEISAN earthquake analysis software, Seismol. Res. Lett., 70, 532–534, 1999.</mixed-citation></ref>
+      <ref id="bib1.bib19"><label>19</label><?label 1?><mixed-citation>
+Henderson, G. and Pulvertaft, T. C. R.: The stratigraphy and structures of
+the Precambrian rocks of the Umanak area, West Greenland, Meddelelser Dansk
+Geol. Foren., 17, 1–20, 1967.</mixed-citation></ref>
+      <ref id="bib1.bib20"><label>20</label><?label 1?><mixed-citation>Henriksen, N., Higgins, A. K., Kalsbeek, F., and Pulvertaft, T. C. R.:
+Greenland from Archaean to Quaternary Descriptive text to the 1995
+Geological map of Greenland, <inline-formula><mml:math id="M116" display="inline"><mml:mrow><mml:mn mathvariant="normal">1</mml:mn><mml:mo>:</mml:mo><mml:mn mathvariant="normal">2</mml:mn><mml:mspace width="0.125em" linebreak="nobreak"/><mml:mn mathvariant="normal">500</mml:mn><mml:mspace width="0.125em" linebreak="nobreak"/><mml:mn mathvariant="normal">000</mml:mn></mml:mrow></mml:math></inline-formula>, 2nd edition, Geol. Surv. Denmark
+Greenl. Bull., 18, 126 pp., 2009.</mixed-citation></ref>
+      <ref id="bib1.bib21"><label>21</label><?label 1?><mixed-citation>Hermanns, R. L., Blikra, L. H., Naumann, M., Nilsen, B., Panthi, K. K.,
+Stromeyer, D., and Longva, O.: Examples of multiple rock-slope collapses from
+Köfels (Ötz valley, Austria) and western Norway, Eng. Geol.,
+83, 94–108, <ext-link xlink:href="https://doi.org/10.1016/j.enggeo.2005.06.026" ext-link-type="DOI">10.1016/j.enggeo.2005.06.026</ext-link>, 2006.</mixed-citation></ref>
+      <ref id="bib1.bib22"><label>22</label><?label 1?><mixed-citation>
+Hermanns, R. L. and Longva, O.:
+Rapid rock-slope failures, in:
+Landslides: Types, Mechanisms and Modeling, edited by: Clague, J. J. and Stead, D.,   Cambridge University Press, Cambridge, 59–70, 2012.</mixed-citation></ref>
+      <ref id="bib1.bib23"><label>23</label><?label 1?><mixed-citation>
+Hermanns, R. L., Oppikofer, T., Böhme, M., Dehls, J. F., Yugsi Molina, F. X., and Penna, I. M.: Rock slope instabilities in Norway: First systematic hazard and risk classification of 22 unstable rock slopes from northern, western and southern Norway. In Landslides and Engineered Slopes. Experience, Theory and Practice–Proceedings of the 12th International Symposium on Landslides,  12, p. 19, 2016.</mixed-citation></ref>
+      <ref id="bib1.bib24"><label>24</label><?label 1?><mixed-citation>Hilger, P., Hermanns, R. L., Gosse, J. C., Jacobs, B., Etzelmüller, B.,
+and Krautblatter, M.: Multiple rock-slope failures from Mannen in Romsdal
+Valley, western Norway, revealed from Quaternary geological mapping and 10
+Be exposure dating,  Holocene, 28, 1841–1854 <ext-link xlink:href="https://doi.org/10.1177/0959683618798165" ext-link-type="DOI">10.1177/0959683618798165</ext-link>, 2018.</mixed-citation></ref>
+      <ref id="bib1.bib25"><label>25</label><?label 1?><mixed-citation>
+IPCC: Climate Change 2013: The Physical Science Basis. Contribution of
+Working Group I to the Fifth Assessment Report of the Intergovernmental
+Panel on Climate Change, Cambridge University Press, Cambridge, United Kingdom and New York, NY, USA, 1535 pp., 2013.</mixed-citation></ref>
+      <ref id="bib1.bib26"><label>26</label><?label 1?><mixed-citation>Krautblatter, M., Funk, D., and Günzel, F. K.: Why permafrost rocks
+become unstable: a rock-ice-mechanical model in time and space, Earth Surf.
+Proc. Landf., 38, 876–887, <ext-link xlink:href="https://doi.org/10.1002/esp.3374" ext-link-type="DOI">10.1002/esp.3374</ext-link>, 2013.</mixed-citation></ref>
+      <ref id="bib1.bib27"><label>27</label><?label 1?><mixed-citation>Magnin, F., Etzelmüller, B., Westermann, S., Isaksen, K., Hilger, P., and Hermanns, R. L.: Permafrost distribution in steep rock slopes in Norway: measurements, statistical modelling and implications for geomorphological processes, Earth Surf. Dynam., 7, 1019–1040, <ext-link xlink:href="https://doi.org/10.5194/esurf-7-1019-2019" ext-link-type="DOI">10.5194/esurf-7-1019-2019</ext-link>, 2019.</mixed-citation></ref>
+      <ref id="bib1.bib28"><label>28</label><?label 1?><mixed-citation>Martha, T. R., Kerle, N., Jetten, V., van Westen, C. J., and Kumar, K. V.:
+Characterising spectral, spatial and morphometric properties of landslides
+for semi-automatic detection using object-oriented methods, Geomorphology
+116, 24–36, <ext-link xlink:href="https://doi.org/10.1016/j.geomorph.2009.10.004" ext-link-type="DOI">10.1016/j.geomorph.2009.10.004</ext-link>, 2010.</mixed-citation></ref>
+      <ref id="bib1.bib29"><label>29</label><?label 1?><mixed-citation>Mott, A. V., Bird, D. K., Grove, M., Rose, N., Bernstein, S., Mackay, H., and
+Krebs, J.: Karrat Isfjord: A newly discovered Paleoproterozoic
+carbonatite-sourced REE deposit, central West Greenland, Econ. Geol.,
+108, 1471–1488, <ext-link xlink:href="https://doi.org/10.2113/econgeo.108.6.1471" ext-link-type="DOI">10.2113/econgeo.108.6.1471</ext-link>, 2013.</mixed-citation></ref>
+      <ref id="bib1.bib30"><label>30</label><?label 1?><mixed-citation>Nettles, M., Larsen, T. B., Elósegui, P., Hamilton, G. S., Stearns, L.
+A., Ahlstrøm, A. P., Davis, J. L., Andersen, M. L., de Juan, J., Khan, S.
+A., Stenseng, L., Ekström, G., and Forsberg, R.: Step-wise changes in
+glacier flow speed coincide with calving and glacial earthquakes at Helheim
+Glacier, Greenland, Geophys. Res. Lett., 35,  L24503, <ext-link xlink:href="https://doi.org/10.1029/2008GL036127" ext-link-type="DOI">10.1029/2008GL036127</ext-link>,
+2008.</mixed-citation></ref>
+      <ref id="bib1.bib31"><label>31</label><?label 1?><mixed-citation>
+Oppikofer, T., Saintot, A., Ottera, S., Hermanns, R. L., Anda,
+E., Dahle, H., and Eiken, T.: Investigations on unstable rock slopes in
+Møre og Romsdal – status and plans after field surveys in 2012, NGU
+Report 2013.014,  Geological Survey of Norway, Report 2013.014 Trondheim, 324 pp.,  2013.</mixed-citation></ref>
+      <ref id="bib1.bib32"><label>32</label><?label 1?><mixed-citation>Paris, A., Okal, E. A., Guérin, C., Heinrich, P., Schindelé, F., and
+Hébert, H.: Numerical Modeling of the June 17, 2017 Landslide and
+Tsunami Events in Karrat Fjord, West Greenland, Pure Appl. Geophys., 176,
+3035–3057, <ext-link xlink:href="https://doi.org/10.1007/s00024-019-02123-5" ext-link-type="DOI">10.1007/s00024-019-02123-5</ext-link>, 2019.</mixed-citation></ref>
+      <ref id="bib1.bib33"><label>33</label><?label 1?><mixed-citation>
+Pedersen, S. A. S., Larsen, L. M., Dahl-Jensen, T., Jepsen, H. F., Krarup,
+G., Nielsen, T., Pedersen, A. K., Von Platen-Hallermund, F., and Weng, W. L.:
+Tsunami-generating rock fall and landslide on the south coast of Nuussuaq,
+central West Greenland, Geol. Greenl. Surv. Bull., 191, 73–83, 2002.</mixed-citation></ref>
+      <ref id="bib1.bib34"><label>34</label><?label 1?><mixed-citation>
+Perissin, D., Ferretti, A., Piantanida, R., Piccagli, D., Prati, C., Rocca, F., Rucci, A., and   Zan, F.: Repeat-Pass SAR Interferometry with Partially Coherent Targets, in Proceedings of Fringe 26–30 November 2007, Frascati, Italy, 2007.</mixed-citation></ref>
+      <ref id="bib1.bib35"><label>35</label><?label 1?><mixed-citation>
+Podolskiy, E. A. and Walter, F.: Cryoseismology, Rev. Geophys., 54,
+708–758, 2016.</mixed-citation></ref>
+      <ref id="bib1.bib36"><label>36</label><?label 1?><mixed-citation>Poli, P.: Creep and slip: Seismic precursors to the Nuugaatsiaq landslide
+(Greenland), Geophys. Res. Lett., 44, 8832–8836,
+<ext-link xlink:href="https://doi.org/10.1002/2017GL075039" ext-link-type="DOI">10.1002/2017GL075039</ext-link>, 2017.</mixed-citation></ref>
+      <ref id="bib1.bib37"><label>37</label><?label 1?><mixed-citation>Porter, C., Morin, P., Howat, I., Noh, M.-J., Bates, B., Peterman, K.,
+Keesey, S., Schlenk, M., Gardiner, J., Tomko, K., Willis, M., Kelleher, C.,
+Cloutier, M., Husby, E., Foga, S., Nakamura, H., Platson, M., Wethington, M.
+J., Williamson, C., Bauer, G., Enos, J., Arnold, G., Kramer, W., Becker, P.,
+Doshi, A., D'Souza, C., Cummens, P., Laurier, F., and Bojesen, M.: ArcticDEM,
+Harvard Dataverse, <ext-link xlink:href="https://doi.org/10.7910/DVN/OHHUKH" ext-link-type="DOI">10.7910/DVN/OHHUKH</ext-link>, 2018.</mixed-citation></ref>
+      <ref id="bib1.bib38"><label>38</label><?label 1?><mixed-citation>Rosen, P. A., Hensley, S., Joughin, I. R., Li, F. K., Madsen, S. N.,
+Rodriguez, E., and Goldstein, R.: Synthetic aperture radar interferometry,
+P. IEEE, 88, 333–382, <ext-link xlink:href="https://doi.org/10.1109/5.838084" ext-link-type="DOI">10.1109/5.838084</ext-link>, 2000.</mixed-citation></ref>
+      <ref id="bib1.bib39"><label>39</label><?label 1?><mixed-citation>
+Sørensen, E. V. and Guarnieri, P.: Remote geological mapping using 3D
+photogrammetry: an example from Karrat, West Greenland, Geol. Surv. Denmark
+Greenl. Bull., 41, 63–66, 2018.</mixed-citation></ref>
+      <ref id="bib1.bib40"><label>40</label><?label 1?><mixed-citation>Svennevig, K.: Preliminary landslide mapping in Greenland, Geol. Surv.
+Denmark Greenl. Bull., 43, e2019430207,
+<ext-link xlink:href="https://doi.org/10.34194/geusb-201943-02-07" ext-link-type="DOI">10.34194/geusb-201943-02-07</ext-link>, 2019.</mixed-citation></ref>
+      <ref id="bib1.bib41"><label>41</label><?label 1?><mixed-citation>Svennevig, K., Solgaard, A. M., Salehi, S., Dahl-Jensen, T., Merryman
+Boncori, J. P., Larsen, T. B., and Voss, P. H.: A multidisciplinary approach
+to landslide monitoring in the Arctic: Case study of the March 2018 ML 1.9
+seismic event near the Karrat 2017 landslide, Geol. Surv. Denmark Greenl.
+Bull., 43, e2019430208, <ext-link xlink:href="https://doi.org/10.34194/geusb-201943-02-08" ext-link-type="DOI">10.34194/geusb-201943-02-08</ext-link>, 2019.</mixed-citation></ref>
+      <ref id="bib1.bib42"><label>42</label><?label 1?><mixed-citation>Voss, P., Kildegaard Poulsen, S., Bjerregaard Simonsen, S., and Gregersen,
+S.: Seismic hazard assessment of Greenland. Geol. Surv. Denmark Greenl.
+Bull., 13, 57–60, <ext-link xlink:href="https://doi.org/10.34194/geusb.v13.4976" ext-link-type="DOI">10.34194/geusb.v13.4976</ext-link>, 2007.</mixed-citation></ref>
+      <?pagebreak page1038?><ref id="bib1.bib43"><label>43</label><?label 1?><mixed-citation>Westergaard-Nielsen, A., Karami, M., Hansen, B. U., Westermann, S., and
+Elberling, B.: Contrasting temperature trends across the ice-free part of
+Greenland, Sci. Rep.-UK, 8, 1–6, <ext-link xlink:href="https://doi.org/10.1038/s41598-018-19992-w" ext-link-type="DOI">10.1038/s41598-018-19992-w</ext-link>, 2018.</mixed-citation></ref>
+
+  </ref-list></back>
+    <!--<article-title-html>Evolution of events before and after the 17 June 2017 rock avalanche at Karrat Fjord, West Greenland – a multidisciplinary approach to detecting and locating unstable rock slopes in a remote Arctic area</article-title-html>
+<abstract-html><p>The 17 June 2017 rock avalanche in the Karrat Fjord, West Greenland, caused a
+tsunami that flooded the nearby village of Nuugaatsiaq and killed four
+people. The disaster was entirely unexpected since no previous records of
+large rock slope failures were known in the region, and it highlighted the
+need for better knowledge of potentially hazardous rock slopes in remote
+Arctic regions.</p><p>The aim of the paper is to explore our ability to detect and locate unstable
+rock slopes in remote Arctic regions with difficult access. We test this by
+examining the case of the 17 June 2017 Karrat rock avalanche. The workflow
+we apply is based on a multidisciplinary analysis of freely available data
+comprising seismological records, Sentinel-1 spaceborne synthetic-aperture
+radar (SAR) data, and Landsat and Sentinel-2 optical satellite imagery,
+ground-truthed with limited fieldwork. Using this workflow enables us to
+reconstruct a timeline of rock slope failures on the coastal slope here
+collectively termed the Karrat Landslide Complex.</p><p>Our analyses show that at least three recent rock avalanches occurred in the
+Karrat Landslide Complex: Karrat 2009, Karrat 2016, and Karrat 2017. The
+latter is the source of the abovementioned tsunami, whereas the first two
+are described here in detail for the first time. All three are interpreted
+as having initiated as dip-slope failures. In addition to the recent rock
+avalanches, older rock avalanche deposits are observed, demonstrating older
+(Holocene) periods of activity. Furthermore, three larger unstable rock
+slopes that may pose a future hazard are described. A number of non-tectonic
+seismic events confined to the area are interpreted as recording rock slope
+failures. The structural setting of the Karrat Landslide Complex, namely
+dip slope, is probably the main conditioning factor for the past and present
+activity, and, based on the temporal distribution of events in the area, we
+speculate that the possible trigger for rock slope failures is permafrost
+degradation caused by climate warming.</p><p>The results of the present work highlight the benefits of a
+multidisciplinary approach, based on freely available data, to studying unstable
+rock slopes in remote Arctic areas under difficult logistical field
+conditions and demonstrate the importance of identifying minor precursor
+events to identify areas of future hazard.</p></abstract-html>
+<ref-html id="bib1.bib1"><label>1</label><mixed-citation>
+Bessette-Kirton, E., Allstadt, K., Pursley, J., and Godt, J.: Preliminary
+Analysis of Satellite Imagery and Seismic Observations of the Nuugaatsiaq
+Landslide and Tsunami, Greenland, available at:
+<a href="https://www.usgs.gov/natural-hazards/landslide-hazards/science/preliminary-analysis-satellite-imagery-and-seismic?qt-science_center_objects=0#qt-science_center_objects" target="_blank"/>, last access: 6 November 2017.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib2"><label>2</label><mixed-citation>
+Böhme, M., Oppikofer, T., Longva, O., Jaboyedoff, M., Hermanns, R. L.,
+and Derron, M.: Analyses of past and present rock slope instabilities in a
+fjord valley: Implications for hazard estimations, Geomorphology, 248,
+464–474, <a href="https://doi.org/10.1016/j.geomorph.2015.06.045" target="_blank">https://doi.org/10.1016/j.geomorph.2015.06.045</a>, 2015.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib3"><label>3</label><mixed-citation>
+Cappelen, J., Vinther, B. M., Kern-Hansen, C., Laursen, E. V., and
+Jørgensen, P. V.: Greenland – DMI Historical Climate Data Collection
+1784–2017, available at: <a href="http://www.dmi.dk/laer-om/generelt/dmi-publikationer/Url:http://www.dmi.dk/laer-om/generelt/dmi-publikationer/Website:www.dmi.dk" target="_blank"/> (lasat access: 2 May 2020),
+2018.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib4"><label>4</label><mixed-citation>
+Carla, T., Intrieri, E., Raspini, F., Bardi, F., Farina, P., Ferretti,
+A., Colombo, D., Novali, F., and Casagli, N.: Perspectives on the prediction
+of catastrophic slope failures from satellite InSAR, Sci. Rep., 9, 1–9,
+2019.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib5"><label>5</label><mixed-citation>
+Chao, W. A., Wu, T. R., Ma, K. F., Kuo, Y. T., Wu, Y. M., Zhao, L., Chung,
+M. J., Wu, H., and Tsai, Y. L.: The large Greenland landslide of 2017: Was a
+Tsunami warning possible?, Seismol. Res. Lett., 89, 1335–1344,
+<a href="https://doi.org/10.1785/0220170160" target="_blank">https://doi.org/10.1785/0220170160</a>, 2018.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib6"><label>6</label><mixed-citation>
+Clinton, J. F., Nettles, M., Walter, F., Anderson, K., Dahl-Jensen, T.,
+Giardini, D., Govoni, A., Hanka, W., Lasocki, S., Lee, W. S., McCormack, D.,
+Mykkeltveit, S., Stutzmann, E., and Tsuboi, S.: Seismic Network in Greenland
+Monitors Earth and Ice System, EOS T. Am. Geophys. Union, 95,
+13–14, <a href="https://doi.org/10.1002/2014EO020001" target="_blank">https://doi.org/10.1002/2014EO020001</a>, 2014.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib7"><label>7</label><mixed-citation>
+Clinton, J., Larsen, T., Dahl-Jensen, T., Voss, P., and Nettles, M.: Special
+event: Nuugaatsiaq Greenland landslide and tsunami, Inc. Res. Institutions
+Seismol. Washington, DC, availabe at:
+<a href="https://ds.iris.edu/ds/nodes/dmc/specialevents/2017/06/22/nuugaatsiaq-greenland-landslide-and-tsunami/" target="_blank"/> (last access: 2 May 2020),
+2017.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib8"><label>8</label><mixed-citation>
+Crosetto, M., Monserrat, O., Cuevas-González, M., Devanthéry, N.,
+and Crippa, B.: Persistent Scatterer Interferometry: A review, ISPRS
+J. Photogramm., 115, 78–89.
+<a href="https://doi.org/10.1016/j.isprsjprs.2015.10.011" target="_blank">https://doi.org/10.1016/j.isprsjprs.2015.10.011</a>, 2016.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib9"><label>9</label><mixed-citation>
+Dahl-Jensen, T., Larsen, T. B., Woelbern, I., Bach, T., Hanka, W., Kind, R.,
+Gregersen, S., Mosegaard, K., Voss, P., and Gudmundsson, O.: Depth to Moho in
+Greenland: receiver-function analysis suggests two Proterozoic blocks in
+Greenland, Earth Planet. Sc. Lett., 205, 379–393,
+<a href="https://doi.org/10.1016/S0012-821X(02)01080-4" target="_blank">https://doi.org/10.1016/S0012-821X(02)01080-4</a>, 2003.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib10"><label>10</label><mixed-citation>
+Dahl-Jensen, T., Larsen, L. M., Pedersen, S. A. S., Pedersen, J., Jepsen, H.
+F., Pedersen, G. K., Nielsen, T., Pedersen, A. K., Von Platen-Hallermund, F.,
+and Weng, W. L.: Landslide and tsunami 21 November 2000 in Paatuut, West
+Greenland, Nat. Hazards, 31, 277–287,
+<a href="https://doi.org/10.1023/B:NHAZ.0000020264.70048.95" target="_blank">https://doi.org/10.1023/B:NHAZ.0000020264.70048.95</a>, 2004.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib11"><label>11</label><mixed-citation>
+Draebing, D., Krautblatter, M., and Dikau, R.: Interaction of thermal and
+mechanical processes in steep permafrost rock walls: A conceptual approach,
+Geomorphology, 226, 226–235, <a href="https://doi.org/10.1016/J.GEOMORPH.2014.08.009" target="_blank">https://doi.org/10.1016/J.GEOMORPH.2014.08.009</a>, 2014.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib12"><label>12</label><mixed-citation>
+Ekström, G., Nettles, M., and Abers, G. A.: Glacial Earthquakes, Science, 302, 622–624, <a href="https://doi.org/10.1126/science.1088057" target="_blank">https://doi.org/10.1126/science.1088057</a>, 2003.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib13"><label>13</label><mixed-citation>
+Friedl, B. and Hölbling, D.: Using SAR Interferograms and Coherence
+Images for Object-Based Delineation of Unstable Slopes, in:  Proceedings of the
+FRINGE 2015 conference,  Proc. “Fringe 2015 Workshop”, Frascati, Italy, 23–27 March 2015,  <a href="https://doi.org/10.5270/Fringe2015" target="_blank">https://doi.org/10.5270/Fringe2015</a>,  2015.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib14"><label>14</label><mixed-citation>
+Gauthier, D., Anderson, S. A., Fritz, H. M., and Giachetti, T.: Karrat Fjord
+(Greenland) tsunamigenic landslide of 17 June 2017: initial 3D observations,
+Landslides, 15, 327–332, <a href="https://doi.org/10.1007/s10346-017-0926-4" target="_blank">https://doi.org/10.1007/s10346-017-0926-4</a>, 2018.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib15"><label>15</label><mixed-citation>
+Ghiglia, D. C. and Pritt, M. D.: Two-dimensional phase unwrapping: Theory,
+algorithms, and software, Wiley, New York, USA, 1998.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib16"><label>16</label><mixed-citation>
+Glade, T. and Crozier, M. J.: A Review of Scale Dependency, in: Landslide
+Hazard and Risk, edited by:  Glade, T., Anderson, M., and Crozier, M. J.,
+Wiley, New York, USA, 75–138, 2005.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib17"><label>17</label><mixed-citation>
+Gregersen, S.: National Survey and Cadastre (KMS), Copenhagen, Denmark, EMSC-CSEM Newsletter, p. 3, 1999.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib18"><label>18</label><mixed-citation>
+Havskov, J. and  Ottemøller, L.: SEISAN earthquake analysis software, Seismol. Res. Lett., 70, 532–534, 1999.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib19"><label>19</label><mixed-citation>
+Henderson, G. and Pulvertaft, T. C. R.: The stratigraphy and structures of
+the Precambrian rocks of the Umanak area, West Greenland, Meddelelser Dansk
+Geol. Foren., 17, 1–20, 1967.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib20"><label>20</label><mixed-citation>
+Henriksen, N., Higgins, A. K., Kalsbeek, F., and Pulvertaft, T. C. R.:
+Greenland from Archaean to Quaternary Descriptive text to the 1995
+Geological map of Greenland, 1:2 500 000, 2nd edition, Geol. Surv. Denmark
+Greenl. Bull., 18, 126 pp., 2009.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib21"><label>21</label><mixed-citation>
+Hermanns, R. L., Blikra, L. H., Naumann, M., Nilsen, B., Panthi, K. K.,
+Stromeyer, D., and Longva, O.: Examples of multiple rock-slope collapses from
+Köfels (Ötz valley, Austria) and western Norway, Eng. Geol.,
+83, 94–108, <a href="https://doi.org/10.1016/j.enggeo.2005.06.026" target="_blank">https://doi.org/10.1016/j.enggeo.2005.06.026</a>, 2006.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib22"><label>22</label><mixed-citation>
+Hermanns, R. L. and Longva, O.:
+Rapid rock-slope failures, in:
+Landslides: Types, Mechanisms and Modeling, edited by: Clague, J. J. and Stead, D.,   Cambridge University Press, Cambridge, 59–70, 2012.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib23"><label>23</label><mixed-citation>
+Hermanns, R. L., Oppikofer, T., Böhme, M., Dehls, J. F., Yugsi Molina, F. X., and Penna, I. M.: Rock slope instabilities in Norway: First systematic hazard and risk classification of 22 unstable rock slopes from northern, western and southern Norway. In Landslides and Engineered Slopes. Experience, Theory and Practice–Proceedings of the 12th International Symposium on Landslides,  12, p. 19, 2016.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib24"><label>24</label><mixed-citation>
+Hilger, P., Hermanns, R. L., Gosse, J. C., Jacobs, B., Etzelmüller, B.,
+and Krautblatter, M.: Multiple rock-slope failures from Mannen in Romsdal
+Valley, western Norway, revealed from Quaternary geological mapping and 10
+Be exposure dating,  Holocene, 28, 1841–1854 <a href="https://doi.org/10.1177/0959683618798165" target="_blank">https://doi.org/10.1177/0959683618798165</a>, 2018.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib25"><label>25</label><mixed-citation>
+IPCC: Climate Change 2013: The Physical Science Basis. Contribution of
+Working Group I to the Fifth Assessment Report of the Intergovernmental
+Panel on Climate Change, Cambridge University Press, Cambridge, United Kingdom and New York, NY, USA, 1535 pp., 2013.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib26"><label>26</label><mixed-citation>
+Krautblatter, M., Funk, D., and Günzel, F. K.: Why permafrost rocks
+become unstable: a rock-ice-mechanical model in time and space, Earth Surf.
+Proc. Landf., 38, 876–887, <a href="https://doi.org/10.1002/esp.3374" target="_blank">https://doi.org/10.1002/esp.3374</a>, 2013.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib27"><label>27</label><mixed-citation>
+Magnin, F., Etzelmüller, B., Westermann, S., Isaksen, K., Hilger, P., and Hermanns, R. L.: Permafrost distribution in steep rock slopes in Norway: measurements, statistical modelling and implications for geomorphological processes, Earth Surf. Dynam., 7, 1019–1040, <a href="https://doi.org/10.5194/esurf-7-1019-2019" target="_blank">https://doi.org/10.5194/esurf-7-1019-2019</a>, 2019.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib28"><label>28</label><mixed-citation>
+Martha, T. R., Kerle, N., Jetten, V., van Westen, C. J., and Kumar, K. V.:
+Characterising spectral, spatial and morphometric properties of landslides
+for semi-automatic detection using object-oriented methods, Geomorphology
+116, 24–36, <a href="https://doi.org/10.1016/j.geomorph.2009.10.004" target="_blank">https://doi.org/10.1016/j.geomorph.2009.10.004</a>, 2010.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib29"><label>29</label><mixed-citation>
+Mott, A. V., Bird, D. K., Grove, M., Rose, N., Bernstein, S., Mackay, H., and
+Krebs, J.: Karrat Isfjord: A newly discovered Paleoproterozoic
+carbonatite-sourced REE deposit, central West Greenland, Econ. Geol.,
+108, 1471–1488, <a href="https://doi.org/10.2113/econgeo.108.6.1471" target="_blank">https://doi.org/10.2113/econgeo.108.6.1471</a>, 2013.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib30"><label>30</label><mixed-citation>
+Nettles, M., Larsen, T. B., Elósegui, P., Hamilton, G. S., Stearns, L.
+A., Ahlstrøm, A. P., Davis, J. L., Andersen, M. L., de Juan, J., Khan, S.
+A., Stenseng, L., Ekström, G., and Forsberg, R.: Step-wise changes in
+glacier flow speed coincide with calving and glacial earthquakes at Helheim
+Glacier, Greenland, Geophys. Res. Lett., 35,  L24503, <a href="https://doi.org/10.1029/2008GL036127" target="_blank">https://doi.org/10.1029/2008GL036127</a>,
+2008.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib31"><label>31</label><mixed-citation>
+Oppikofer, T., Saintot, A., Ottera, S., Hermanns, R. L., Anda,
+E., Dahle, H., and Eiken, T.: Investigations on unstable rock slopes in
+Møre og Romsdal – status and plans after field surveys in 2012, NGU
+Report 2013.014,  Geological Survey of Norway, Report 2013.014 Trondheim, 324 pp.,  2013.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib32"><label>32</label><mixed-citation>
+Paris, A., Okal, E. A., Guérin, C., Heinrich, P., Schindelé, F., and
+Hébert, H.: Numerical Modeling of the June 17, 2017 Landslide and
+Tsunami Events in Karrat Fjord, West Greenland, Pure Appl. Geophys., 176,
+3035–3057, <a href="https://doi.org/10.1007/s00024-019-02123-5" target="_blank">https://doi.org/10.1007/s00024-019-02123-5</a>, 2019.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib33"><label>33</label><mixed-citation>
+Pedersen, S. A. S., Larsen, L. M., Dahl-Jensen, T., Jepsen, H. F., Krarup,
+G., Nielsen, T., Pedersen, A. K., Von Platen-Hallermund, F., and Weng, W. L.:
+Tsunami-generating rock fall and landslide on the south coast of Nuussuaq,
+central West Greenland, Geol. Greenl. Surv. Bull., 191, 73–83, 2002.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib34"><label>34</label><mixed-citation>
+Perissin, D., Ferretti, A., Piantanida, R., Piccagli, D., Prati, C., Rocca, F., Rucci, A., and   Zan, F.: Repeat-Pass SAR Interferometry with Partially Coherent Targets, in Proceedings of Fringe 26–30 November 2007, Frascati, Italy, 2007.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib35"><label>35</label><mixed-citation>
+Podolskiy, E. A. and Walter, F.: Cryoseismology, Rev. Geophys., 54,
+708–758, 2016.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib36"><label>36</label><mixed-citation>
+Poli, P.: Creep and slip: Seismic precursors to the Nuugaatsiaq landslide
+(Greenland), Geophys. Res. Lett., 44, 8832–8836,
+<a href="https://doi.org/10.1002/2017GL075039" target="_blank">https://doi.org/10.1002/2017GL075039</a>, 2017.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib37"><label>37</label><mixed-citation>
+Porter, C., Morin, P., Howat, I., Noh, M.-J., Bates, B., Peterman, K.,
+Keesey, S., Schlenk, M., Gardiner, J., Tomko, K., Willis, M., Kelleher, C.,
+Cloutier, M., Husby, E., Foga, S., Nakamura, H., Platson, M., Wethington, M.
+J., Williamson, C., Bauer, G., Enos, J., Arnold, G., Kramer, W., Becker, P.,
+Doshi, A., D'Souza, C., Cummens, P., Laurier, F., and Bojesen, M.: ArcticDEM,
+Harvard Dataverse, <a href="https://doi.org/10.7910/DVN/OHHUKH" target="_blank">https://doi.org/10.7910/DVN/OHHUKH</a>, 2018.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib38"><label>38</label><mixed-citation>
+Rosen, P. A., Hensley, S., Joughin, I. R., Li, F. K., Madsen, S. N.,
+Rodriguez, E., and Goldstein, R.: Synthetic aperture radar interferometry,
+P. IEEE, 88, 333–382, <a href="https://doi.org/10.1109/5.838084" target="_blank">https://doi.org/10.1109/5.838084</a>, 2000.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib39"><label>39</label><mixed-citation>
+Sørensen, E. V. and Guarnieri, P.: Remote geological mapping using 3D
+photogrammetry: an example from Karrat, West Greenland, Geol. Surv. Denmark
+Greenl. Bull., 41, 63–66, 2018.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib40"><label>40</label><mixed-citation>
+Svennevig, K.: Preliminary landslide mapping in Greenland, Geol. Surv.
+Denmark Greenl. Bull., 43, e2019430207,
+<a href="https://doi.org/10.34194/geusb-201943-02-07" target="_blank">https://doi.org/10.34194/geusb-201943-02-07</a>, 2019.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib41"><label>41</label><mixed-citation>
+Svennevig, K., Solgaard, A. M., Salehi, S., Dahl-Jensen, T., Merryman
+Boncori, J. P., Larsen, T. B., and Voss, P. H.: A multidisciplinary approach
+to landslide monitoring in the Arctic: Case study of the March 2018 ML 1.9
+seismic event near the Karrat 2017 landslide, Geol. Surv. Denmark Greenl.
+Bull., 43, e2019430208, <a href="https://doi.org/10.34194/geusb-201943-02-08" target="_blank">https://doi.org/10.34194/geusb-201943-02-08</a>, 2019.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib42"><label>42</label><mixed-citation>
+Voss, P., Kildegaard Poulsen, S., Bjerregaard Simonsen, S., and Gregersen,
+S.: Seismic hazard assessment of Greenland. Geol. Surv. Denmark Greenl.
+Bull., 13, 57–60, <a href="https://doi.org/10.34194/geusb.v13.4976" target="_blank">https://doi.org/10.34194/geusb.v13.4976</a>, 2007.
+</mixed-citation></ref-html>
+<ref-html id="bib1.bib43"><label>43</label><mixed-citation>
+Westergaard-Nielsen, A., Karami, M., Hansen, B. U., Westermann, S., and
+Elberling, B.: Contrasting temperature trends across the ice-free part of
+Greenland, Sci. Rep.-UK, 8, 1–6, <a href="https://doi.org/10.1038/s41598-018-19992-w" target="_blank">https://doi.org/10.1038/s41598-018-19992-w</a>, 2018.
+</mixed-citation></ref-html>--></article>
