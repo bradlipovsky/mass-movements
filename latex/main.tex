@@ -426,16 +426,19 @@ glacier-contact area by 26.7\% in Arctic Canada and 36.6\% in Svalbard; the
 change is 0.7\% in Scandinavia. PZI-intersection area decreases by 29.1\%,
 37.4\%, and 14.2\%, respectively. Both strata therefore fail the registered
 all-window criterion. This comparison suggests that half-cell alignment is not
-the controlling numerical uncertainty. Aggregation across a fixed slope
-threshold is. Neither area measure is used below to infer a global incidence
-density or hazard distribution.
+the controlling numerical uncertainty among the tested variants. Resolution
+coarsening changes DEM smoothing, slope support, mask sampling,
+contact-distance discretization, reporting centers, and cell area together,
+so this test does not isolate which operation causes the departure. Neither
+area measure is used below to infer a global incidence density or hazard
+distribution.
 
 The registered geometric choices also remain influential. Across the three
-windows, the 30~m sensitivity calculations span 0.27--114.0~km$^2$ for
-glacier-contact area and 13.6--403.4~km$^2$ for PZI-intersection area as slope,
-contact distance, and PZI threshold vary. These ranges describe the screens;
-they are not uncertainty intervals or alternative opportunities to pass the
-convergence test.
+windows, the unshifted-reference-grid 30~m sensitivity calculations span
+0.27--114.0~km$^2$ for glacier-contact area and 13.6--403.4~km$^2$ for
+PZI-intersection area as slope, contact distance, and PZI threshold vary. These
+ranges describe the screens; they are not uncertainty intervals or alternative
+opportunities to pass the convergence test.
 
 \begin{figure}[p]
   \centering
@@ -714,7 +717,8 @@ failure time.
 This version completes the climate-blind frame reconciliation, double
 screening, registered ERA5 temperature pilot, independently reviewed
 source-coordinate and UTC-onset audit, and the first case-blind susceptible-
-terrain pilot. The audit leaves 29 coordinates and 16
+terrain pilot and held-out susceptible-area convergence test. The audit leaves
+29 coordinates and 16
 times unresolved and preserves three time conflicts; none is silently removed.
 The pilot inspected only its registered temperature endpoints and is not
 retroactively recomputed on the accepted audit subset. A later extraction may
@@ -722,11 +726,15 @@ use the 22 occurrences with both accepted fields only under a new frozen
 specification, while retaining all unresolved rows in the reporting frame.
 The terrain pilot supplies candidate denominator objects, but its three windows
 do not estimate regional populations and its connected counts remain scale
-sensitive. The next association analysis must expand and lock that frame,
-then acquire glacier-contact histories, deformation records, permafrost proxies, additional meteorological
-variables, and the statistical specification before inspecting those new
-exposures. Only then can the study estimate whether hazardous alpine mass
-movements occupy systematically different climatic or cryospheric conditions.
+sensitive. The deterministic held-out windows likewise do not estimate a
+global population, and both registered area strata fail their resolution
+criterion. A new protocol must first define a physical, scale-explicit
+representation that passes its held-out numerical checks. A later association
+analysis may then acquire glacier-contact histories, deformation records,
+permafrost proxies, additional meteorological variables, and a frozen
+statistical specification before inspecting those new exposures. Only then can
+the study estimate whether hazardous alpine mass movements occupy
+systematically different climatic or cryospheric conditions.
 
 \section{Conclusions}
 
@@ -746,10 +754,13 @@ describe registered catalog locations rather than a source-verified sample.
 Coordinate and time acceptance are themselves source-dependent, and their
 representativeness is unknown.
 The blind terrain pilot reproducibly enumerates source-like area, but 30 versus
-90~m grids change primary connected counts by factors of 1.3--3.0. Detrended
-seasonal controls, a scale-explicit non-failing-slope frame, and explicit
-competing predictions remain the next tests. The present contribution is a
-sampling frame, protocol, and exposure-sensitivity result, not evidence that
+90~m grids change primary connected counts by factors of 1.3--3.0. In the
+held-out area test, phase coefficients of variation remain below 0.004, but
+90~m departures reach 26.7--36.6\% for glacier-contact area and 29.1--37.4\%
+for PZI-intersection area in Arctic Canada and Svalbard; both strata fail. A
+new physical, scale-explicit representation, detrended seasonal controls, and
+explicit competing predictions remain next tests. The present contribution is
+a sampling frame, protocol, and exposure-sensitivity result, not evidence that
 warming systematically triggered these events.
 
 \bibliographystyle{plainnat}

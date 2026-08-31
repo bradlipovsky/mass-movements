@@ -1,5 +1,6 @@
 {
   "created_utc": "2026-08-31T05:42:47.709970Z",
+  "amended_utc": "2026-08-31T06:05:43Z",
   "protocol_version": "0.2",
   "access_terms": {
     "Copernicus DEM": {
@@ -23,8 +24,12 @@
   },
   "staging": {
     "rgi_window_universe_sha256": "ba4f67c0a8df14791cddac212a21a75ee5f3aaf7ec60bcf420ce230cf6eb1e83",
+    "rgi_identity_limit": "The selected bytes came from a version-labelled RGI consortium-author mirror. NSIDC CMR identifies the authoritative Version 7 collection and distribution directory, and filenames, schemas, regional counts, and metadata agree, but byte equivalence to the Earthdata-login-protected NSIDC objects was not established.",
     "dem_merge_order": "increasing integer latitude, then increasing numeric longitude; later finite source pixels replace earlier overlap pixels",
-    "dem_phase_replay": "all 12 locally replayed phase GeoTIFFs were byte-identical to direct remote-source warps",
+    "dem_phase_replay": "all 12 raw Float32 arrays replayed from the 25 full native COG downloads were cell-for-cell identical to the committed grids; GeoTIFF container bytes are not the replay criterion",
+    "dem_replay_record": "data/area_convergence/dem_replay.csv",
+    "source_coverage_record": "data/area_convergence/source_coverage.csv",
+    "coverage_fraction_definition": "area_long.csv coverage_fraction is the stratum-valid reporting-cell fraction after slope support, glacier exclusion, and, for the permafrost stratum, PZI validity; it is not DEM coverage",
     "pzi_replay": "all three exact local TIFF value arrays matched their archived full-row byte-range downloads",
     "unavailable_dem_tiles": [
       "dem_07_N76_00_E018_00",
@@ -32,6 +37,21 @@
     ]
   },
   "remote_objects": [
+    {
+      "id": "rgi_nsidc_collection_record",
+      "product": "RGI",
+      "version": "7.0",
+      "region": "global",
+      "status": "available",
+      "url": "https://cmr.earthdata.nasa.gov/search/collections.json?short_name=NSIDC-0770&version=7",
+      "accessed_utc": "2026-08-31T06:05:43Z",
+      "source_size_bytes": 16776,
+      "download_size_bytes": 16776,
+      "download_sha256": "7ead9c78b539de614305b271c9519d308333678c1b8f3096c65764b7261b02d2",
+      "cmr_collection_id": "C2768953486-NSIDCV0",
+      "doi": "10.5067/F6JMOVY5NAVZ",
+      "official_distribution_url": "https://daacdata.apps.nsidc.org/pub/DATASETS/nsidc0770_rgi_v7/"
+    },
     {
       "id": "rgi_archive_03",
       "product": "RGI",
@@ -44,7 +64,9 @@
       "source_etag": "e7a842-6032ec7385280",
       "source_size_bytes": 15181890,
       "download_size_bytes": 15181890,
-      "download_sha256": "70cd68a3becf65ba67208c67c57ef4fd5e3643d5838f66cb8ea043528a249dcb"
+      "download_sha256": "70cd68a3becf65ba67208c67c57ef4fd5e3643d5838f66cb8ea043528a249dcb",
+      "distribution_role": "version-labelled RGI consortium-author mirror; no byte-equivalence claim with the NSIDC distribution",
+      "official_object_url": "https://daacdata.apps.nsidc.org/pub/DATASETS/nsidc0770_rgi_v7/RGI2000-v7.0-G-global/RGI2000-v7.0-G-03_arctic_canada_north.zip"
     },
     {
       "id": "rgi_archive_07",
@@ -58,7 +80,9 @@
       "source_etag": "5d1064-6032ed0662d00",
       "source_size_bytes": 6099044,
       "download_size_bytes": 6099044,
-      "download_sha256": "73fb46265b878802d6a58c1ce18d07b28675afa1d1730a1c48a441ed5bb277cf"
+      "download_sha256": "73fb46265b878802d6a58c1ce18d07b28675afa1d1730a1c48a441ed5bb277cf",
+      "distribution_role": "version-labelled RGI consortium-author mirror; no byte-equivalence claim with the NSIDC distribution",
+      "official_object_url": "https://daacdata.apps.nsidc.org/pub/DATASETS/nsidc0770_rgi_v7/RGI2000-v7.0-G-global/RGI2000-v7.0-G-07_svalbard_jan_mayen.zip"
     },
     {
       "id": "rgi_archive_08",
@@ -72,7 +96,9 @@
       "source_etag": "4e69d5-6032ed13bcc80",
       "source_size_bytes": 5138901,
       "download_size_bytes": 5138901,
-      "download_sha256": "54bdcdfb0771f58f66bbb95bb1585f16efe9ee10bdfcba022af802868d3d6b28"
+      "download_sha256": "54bdcdfb0771f58f66bbb95bb1585f16efe9ee10bdfcba022af802868d3d6b28",
+      "distribution_role": "version-labelled RGI consortium-author mirror; no byte-equivalence claim with the NSIDC distribution",
+      "official_object_url": "https://daacdata.apps.nsidc.org/pub/DATASETS/nsidc0770_rgi_v7/RGI2000-v7.0-G-global/RGI2000-v7.0-G-08_scandinavia.zip"
     },
     {
       "id": "dem_03_N80_00_W084_00",
@@ -471,6 +497,8 @@
     },
     {
       "id": "pzi_raw_flt",
+      "accessed_utc": "2026-08-31T06:04:27Z",
+      "access_method": "HTTP HEAD identity probe; analysis bytes are the three recorded range objects",
       "last_modified": "Wed, 15 Feb 2012 09:26:18 GMT",
       "product": "Gruber PZI",
       "region": "global",
@@ -482,6 +510,8 @@
     },
     {
       "id": "pzi_raw_hdr",
+      "accessed_utc": "2026-08-31T06:04:28Z",
+      "access_method": "HTTP HEAD followed by exact-object GET and local SHA-256 comparison",
       "last_modified": "Wed, 15 Feb 2012 09:35:02 GMT",
       "product": "Gruber PZI",
       "region": "global",
@@ -493,6 +523,8 @@
     },
     {
       "id": "pzi_raw_readme",
+      "accessed_utc": "2026-08-31T06:04:29Z",
+      "access_method": "HTTP HEAD followed by exact-object GET and local SHA-256 comparison",
       "last_modified": "Sat, 18 Feb 2012 12:15:44 GMT",
       "product": "Gruber PZI",
       "region": "global",
@@ -504,6 +536,8 @@
     },
     {
       "id": "pzi_rights_record",
+      "accessed_utc": "2026-08-31T06:04:29Z",
+      "access_method": "exact-object GET and SHA-256 comparison",
       "product": "Gruber PZI",
       "region": "global",
       "status": "available",
@@ -563,15 +597,15 @@
       "role": "analysis_input",
       "derivation": "direct bilinear warp from native COGs in increasing latitude and numeric longitude order to registered p00 30 m LAEA grid",
       "derived_from": [
-        "dem_03_N80_00_W084_00",
-        "dem_03_N80_00_W085_00",
         "dem_03_N80_00_W086_00",
-        "dem_03_N81_00_W084_00",
-        "dem_03_N81_00_W085_00",
+        "dem_03_N80_00_W085_00",
+        "dem_03_N80_00_W084_00",
         "dem_03_N81_00_W086_00",
-        "dem_03_N82_00_W084_00",
+        "dem_03_N81_00_W085_00",
+        "dem_03_N81_00_W084_00",
+        "dem_03_N82_00_W086_00",
         "dem_03_N82_00_W085_00",
-        "dem_03_N82_00_W086_00"
+        "dem_03_N82_00_W084_00"
       ],
       "size_bytes": 5846351,
       "sha256": "c1b499445f90db979fc94898c5c9a2929a0730e2fea9e33899f023fbc9a7880b"
@@ -582,15 +616,15 @@
       "role": "analysis_input",
       "derivation": "direct bilinear warp from native COGs in increasing latitude and numeric longitude order to registered p01 30 m LAEA grid",
       "derived_from": [
-        "dem_03_N80_00_W084_00",
-        "dem_03_N80_00_W085_00",
         "dem_03_N80_00_W086_00",
-        "dem_03_N81_00_W084_00",
-        "dem_03_N81_00_W085_00",
+        "dem_03_N80_00_W085_00",
+        "dem_03_N80_00_W084_00",
         "dem_03_N81_00_W086_00",
-        "dem_03_N82_00_W084_00",
+        "dem_03_N81_00_W085_00",
+        "dem_03_N81_00_W084_00",
+        "dem_03_N82_00_W086_00",
         "dem_03_N82_00_W085_00",
-        "dem_03_N82_00_W086_00"
+        "dem_03_N82_00_W084_00"
       ],
       "size_bytes": 5835673,
       "sha256": "ae3bea45057134e469373bf56cd1510ea40c9a58004d9e712ebb94c6aa2c0c35"
@@ -601,15 +635,15 @@
       "role": "analysis_input",
       "derivation": "direct bilinear warp from native COGs in increasing latitude and numeric longitude order to registered p10 30 m LAEA grid",
       "derived_from": [
-        "dem_03_N80_00_W084_00",
-        "dem_03_N80_00_W085_00",
         "dem_03_N80_00_W086_00",
-        "dem_03_N81_00_W084_00",
-        "dem_03_N81_00_W085_00",
+        "dem_03_N80_00_W085_00",
+        "dem_03_N80_00_W084_00",
         "dem_03_N81_00_W086_00",
-        "dem_03_N82_00_W084_00",
+        "dem_03_N81_00_W085_00",
+        "dem_03_N81_00_W084_00",
+        "dem_03_N82_00_W086_00",
         "dem_03_N82_00_W085_00",
-        "dem_03_N82_00_W086_00"
+        "dem_03_N82_00_W084_00"
       ],
       "size_bytes": 5844622,
       "sha256": "b58b0dc55fce1c9ac2b46ac8c9f9ab217ef1868f353ed109529109fc702bb578"
@@ -620,15 +654,15 @@
       "role": "analysis_input",
       "derivation": "direct bilinear warp from native COGs in increasing latitude and numeric longitude order to registered p11 30 m LAEA grid",
       "derived_from": [
-        "dem_03_N80_00_W084_00",
-        "dem_03_N80_00_W085_00",
         "dem_03_N80_00_W086_00",
-        "dem_03_N81_00_W084_00",
-        "dem_03_N81_00_W085_00",
+        "dem_03_N80_00_W085_00",
+        "dem_03_N80_00_W084_00",
         "dem_03_N81_00_W086_00",
-        "dem_03_N82_00_W084_00",
+        "dem_03_N81_00_W085_00",
+        "dem_03_N81_00_W084_00",
+        "dem_03_N82_00_W086_00",
         "dem_03_N82_00_W085_00",
-        "dem_03_N82_00_W086_00"
+        "dem_03_N82_00_W084_00"
       ],
       "size_bytes": 5843902,
       "sha256": "fe9a3b5f738b8aa4da32d38d26587ccade62ce97594d67ac4a8665075a0d5336"
@@ -908,6 +942,17 @@
       ],
       "size_bytes": 7225,
       "sha256": "fd23a32abb4059afbcd3c6048393a3f7ce6c533608379c29303acc884d799d39"
+    },
+    {
+      "path": "data/area_convergence/source/rgi_nsidc_collection_metadata.json",
+      "region": "global",
+      "role": "source_identity_metadata",
+      "derivation": "exact NASA CMR collection-search response identifying NSIDC-0770 Version 7, DOI, and the authoritative NSIDC distribution directory",
+      "derived_from": [
+        "rgi_nsidc_collection_record"
+      ],
+      "size_bytes": 16776,
+      "sha256": "7ead9c78b539de614305b271c9519d308333678c1b8f3096c65764b7261b02d2"
     }
   ]
 }

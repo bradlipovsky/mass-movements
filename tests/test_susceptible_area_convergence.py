@@ -2,6 +2,7 @@ import hashlib
 import json
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 import numpy as np
 import pandas as pd
@@ -40,6 +41,9 @@ class SusceptibleAreaConvergenceTests(unittest.TestCase):
             expected = hashlib.sha256(
                 f"susceptible-area-heldout-window-v1|{key}".encode()).hexdigest()
             self.assertEqual(digest, expected)
+        with patch("scripts.susceptible_area_convergence.hashlib.sha256", **{"return_value.hexdigest.return_value": "0"}):
+            self.assertEqual([r[1] for r in rank_regions(["08", "07"])], ["07", "08"])
+            self.assertEqual([r[1] for r in eligible_windows(rows, "03")], sorted(keys))
 
     def test_phase_grids_cover_bounds_and_preserve_lattice_residues(self):
         bounds = (-31, -46, 68, 77)
@@ -132,7 +136,8 @@ class SusceptibleAreaConvergenceTests(unittest.TestCase):
         for path in (Path("scripts/susceptible_area_convergence.py"),
                      Path("notebooks/susceptible_area_convergence.ipynb")):
             text = path.read_text()
-            for forbidden in ("candidates.csv", "event_audit", "data/reanalysis"):
+            for forbidden in ("candidates.csv", "data/catalog", "data/event",
+                              "data/audit", "data/reanalysis"):
                 self.assertNotIn(forbidden, text)
 
 
