@@ -53,7 +53,7 @@
     "available_northern_halo_objects": 3
   },
   "absent_outputs": [
-    "data/geographic_total/.source_coverage.csv.tmp",
+    "data/geographic_total/.equivalent_area_long.csv.tmp",
     "data/geographic_total/source_coverage.csv",
     "data/geographic_total/coverage_estimates.csv",
     "data/geographic_total/projection_repairs.csv",
