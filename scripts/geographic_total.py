@@ -2,7 +2,6 @@
 """Execute the frozen terrain functional and stratified inference atomically."""
 import argparse, hashlib, json, math
 from pathlib import Path
-
 import numpy as np, pandas as pd, rasterio, pyproj, shapely
 from affine import Affine
 from pyproj import Transformer
@@ -11,19 +10,19 @@ from shapely import make_valid
 from shapely.geometry import shape
 from shapely.ops import transform
 from shapely.validation import explain_validity
-
 import scripts.scale_explicit_steep_area as estimator
 from scripts.denominator_pilot import aggregate_3x3, burn, warp_band, window_geometry
 from scripts.geographic_sample import polygon_area_m2
 from scripts.geographic_total_source import (OUTPUT, SOURCE, cell_label, cells, dem_paths,
                                              expected_dem_ids, grid)
 from scripts.susceptible_area_convergence import PHASES, local_crs
-
 ROOT = Path(__file__).resolve().parents[1]
 HASHES = {"scripts/scale_explicit_steep_area.py": "15f7bff92b7ae44e5f64eac0db70598eb0f318f9a6ac5e2e689e5de9bc89e231",
           "scripts/denominator_pilot.py": "5f733147434f859ea3cbfc815da77a1bd8ae83137d80e59a65243d6d3e23508a",
           "scripts/susceptible_area_convergence.py": "9ac2644257ce1ba90bd8f2edbc6e9b47ea152fa02304b0c4b994e495a512b20c",
           "scripts/scale_explicit_transfer_source.py": "c495d3b587e40ed6ad036a24857dc6fb6ee4bb0934e0c385d82e8bd7ba259830",
+          "scripts/geographic_sample.py": "21bb6d250f67aa55c42f8efabe3302a2a0a045c950f1455805e2e0ba2cb4faaa",
+          "data/geographic_sample/frame.csv": "482c9d585777317ab69363481db3df1011e2d4e8ce84c3826b151406cace9879",
           "data/geographic_sample/sample.csv": "1e9164813893e285aeeeaa1a7833e16c87172cbe4d3357e245854ab13966613b"}
 def digest(path): return hashlib.sha256(path.read_bytes()).hexdigest()
 def verify(manifest=None):
@@ -34,16 +33,14 @@ def verify(manifest=None):
             path = ROOT / name
             if (path.stat().st_size, digest(path)) != (expected["bytes"], expected["sha256"]):
                 raise ValueError(f"source freeze differs: {name}")
-
-
+def population():
+    return pd.read_csv(ROOT / "data/geographic_sample/frame.csv", dtype={"dominant_region": str}).groupby("dominant_region").size()
 def windows():
     table = cells().copy()
     table["region"] = [cell_label(s, w) for s, w in zip(table.south, table.west)]
     table["region_name"], table["key"], table["digest"] = (
         table.dominant_region, table.cell_key, table.random_digest)
     return table
-
-
 def layers(_, south, west, variant):
     source_variant = "p00" if variant == "r90" else variant
     expected_shape, expected_affine, crs = grid(south, west, source_variant)
@@ -59,8 +56,6 @@ def layers(_, south, west, variant):
     report = burn([projected], z.shape, affine)
     pzi = warp_band(SOURCE / f"pzi_{label}.tif", z.shape, affine, crs)
     return z, affine, report, None, pzi, spacing, window_wgs
-
-
 def projected_geometries(cell):
     collection = json.loads((SOURCE / f"rgi_{cell.region}.geojson").read_text())
     crs = local_crs(cell.south, cell.west)
@@ -75,23 +70,22 @@ def projected_geometries(cell):
             after_g = polygon_area_m2(transform(inverse, repaired))
             relative_p = abs(repaired.area - before_p) / before_p
             relative_g = abs(after_g - before_g) / before_g
-            if repaired.geom_type not in ("Polygon", "MultiPolygon") or repaired.is_empty or max(relative_p, relative_g) > 1e-10:
+            if repaired.geom_type not in ("Polygon", "MultiPolygon") or repaired.is_empty or not repaired.is_valid or max(relative_p, relative_g) > 1e-10:
                 raise ValueError(f"projection repair failed: {feature['properties']['rgi_id']}")
             repairs.append({"cell_key": cell.key, "rgi_id": feature["properties"]["rgi_id"],
                             "reason": reason, "input_type": projected.geom_type,
                             "output_type": repaired.geom_type, "projected_area_before_m2": before_p,
                             "projected_area_after_m2": repaired.area, "projected_relative_change": relative_p,
                             "geodesic_area_before_m2": before_g, "geodesic_area_after_m2": after_g,
-                            "geodesic_relative_change": relative_g, "shapely_version": shapely.__version__,
+                            "geodesic_relative_change": relative_g, "original_valid": False, "output_valid": repaired.is_valid,
+                            "shapely_version": shapely.__version__,
                             "geos_version": shapely.geos_version_string, "proj_version": pyproj.__proj_version__,
                             "projected_crs_wkt": crs.to_wkt()})
             projected = repaired
         geometries.append(projected)
     return geometries, repairs
-
-
 def coverage_estimates(coverage):
-    records = []
+    records, populations = [], population()
     definitions = [("dem", "complete_dem_support_count", "report_center_count"),
                    ("rgi_predicate", "glacier_predicate_coverage_count", "report_center_count"),
                    ("pzi", "outside_RGI_finite_PZI_count", "outside_RGI_center_count")]
@@ -102,8 +96,8 @@ def coverage_estimates(coverage):
                                      base=group[denominator] * group.spacing_m**2)
             mean_total = variance = covered = base = 0.
             for _, h in temporary.groupby("dominant_region"):
-                N, n = h.stratum_population_cells.iloc[0], len(h)
-                if n != int(h.stratum_sample_cells.iloc[0]): raise ValueError("coverage design identity differs")
+                N, n = int(populations.loc[h.dominant_region.iloc[0]]), len(h)
+                if N != int(h.stratum_population_cells.iloc[0]) or n != int(h.stratum_sample_cells.iloc[0]): raise ValueError("coverage design identity differs")
                 mean_total += N * h.q.mean(); variance += N**2 * (1-n/N) * h.q.var(ddof=1) / n
                 covered += N * h.covered.mean(); base += N * h.base.mean()
             records.append({"variant": variant, "dimension": dimension,
@@ -112,8 +106,6 @@ def coverage_estimates(coverage):
                             "expanded_covered_area_m2": covered, "expanded_denominator_area_m2": base,
                             "expanded_area_coverage_ratio": covered / base if base else 1.})
     return pd.DataFrame(records)
-
-
 def write_coverage():
     OUTPUT.mkdir(parents=True, exist_ok=True)
     rows, repairs = [], []
@@ -149,11 +141,9 @@ def write_coverage():
     coverage_estimates(table).to_csv(OUTPUT / "coverage_estimates.csv", index=False, lineterminator="\n")
     repair_columns = ["cell_key", "rgi_id", "reason", "input_type", "output_type",
                       "projected_area_before_m2", "projected_area_after_m2", "projected_relative_change",
-                      "geodesic_area_before_m2", "geodesic_area_after_m2", "geodesic_relative_change",
+                      "geodesic_area_before_m2", "geodesic_area_after_m2", "geodesic_relative_change", "original_valid", "output_valid",
                       "shapely_version", "geos_version", "proj_version", "projected_crs_wkt"]
     pd.DataFrame(repairs, columns=repair_columns).to_csv(OUTPUT / "projection_repairs.csv", index=False, lineterminator="\n")
-
-
 def diagnostics(records, coverage):
     rows = []; source = cells().set_index("cell_key")
     for (key, stratum), group in records.groupby(["window_key", "stratum"], sort=False):
@@ -182,14 +172,12 @@ def diagnostics(records, coverage):
                     "cell_quality_pass": "yes" if reference > 0 and departure <= .2 and cv <= .1 else "no",
                     "usable_transfer": "yes" if reference > 0 and departure <= .2 and cv <= .1 else "no"})
     return pd.DataFrame(rows)
-
-
 def estimates(primary):
-    strata, covariance, totals = [], [], []
+    strata, covariance, totals, populations = [], [], [], population()
     for outcome, group in primary.groupby("stratum", sort=False):
         for region, h in group.groupby("dominant_region"):
-            N, n = int(h.stratum_population_cells.iloc[0]), len(h); y = h.reference_equivalent_area_m2
-            if n != int(h.stratum_sample_cells.iloc[0]) or not np.allclose(n / h.inclusion_probability, N):
+            N, n = int(populations.loc[region]), len(h); y = h.reference_equivalent_area_m2
+            if N != int(h.stratum_population_cells.iloc[0]) or n != int(h.stratum_sample_cells.iloc[0]) or not np.allclose(n / h.inclusion_probability, N):
                 raise ValueError(f"design identity differs: {region}")
             s2 = y.var(ddof=1); variance = N**2 * (1-n/N) * s2/n
             strata.append({"stratum": outcome, "dominant_region": region, "N_h": N, "n_h": n,
@@ -210,7 +198,7 @@ def estimates(primary):
     wide = primary.pivot(index="cell_key", columns="stratum", values="reference_equivalent_area_m2")
     meta = primary.drop_duplicates("cell_key").set_index("cell_key")
     for region, keys in meta.groupby("dominant_region").groups.items():
-        N, n = int(meta.loc[list(keys)].stratum_population_cells.iloc[0]), len(keys)
+        N, n = int(populations.loc[region]), len(keys)
         sample_cov = wide.loc[list(keys)].cov(ddof=1).iloc[0, 1]
         covariance.append({"dominant_region": region, "N_h": N, "n_h": n,
                            "sample_covariance_m4": sample_cov,
@@ -218,8 +206,6 @@ def estimates(primary):
     joint = "yes" if all(item["numerical_quality_pass"] == "yes" for item in totals) else "no"
     for item in totals: item["joint_numerical_quality_pass"] = joint
     return pd.DataFrame(strata), pd.DataFrame(covariance), pd.DataFrame(totals)
-
-
 def execute(manifest):
     if manifest is None: raise ValueError("execute requires a source manifest")
     verify(manifest); estimator.variant_layers = layers; rows = []
@@ -237,9 +223,8 @@ def execute(manifest):
                         ("stratum_estimates.csv", strata), ("stratum_covariance.csv", covariance),
                         ("total_estimates.csv", totals)]:
         table.to_csv(OUTPUT / name, index=False, lineterminator="\n")
-
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(); parser.add_argument("action", choices=["coverage", "execute"])
     parser.add_argument("--manifest", type=Path); args = parser.parse_args()
-    verify(); write_coverage() if args.action == "coverage" else execute(args.manifest)
+    if args.manifest is None: raise ValueError("coverage and execution require a source manifest")
+    verify(args.manifest); write_coverage() if args.action == "coverage" else execute(args.manifest)

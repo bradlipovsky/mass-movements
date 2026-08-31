@@ -1,9 +1,20 @@
 # Design-based totals of the frozen terrain-screen functional
 
-Version 0.1. Registered in GitHub issue
+Version 0.2. Version 0.1 was registered in GitHub issue
 [#19](https://github.com/bradlipovsky/mass-movements/issues/19) on 31 August
 2026 before retrieving or opening any DEM or PZI value for an issue #17
 selected cell.
+
+After independent approval of version 0.1, the 15 exact retained COG byte
+sequences identified below were copied into the new raw cache while the
+source-freeze code audit was still pending. No raster array, subset, coverage
+value, or equivalent-area value was opened or calculated. The first bulk
+external-download command was rejected during local option parsing before any
+request was sent. Version 0.2 responds to that source-freeze audit before the
+first external DEM/PZI retrieval: it pins every imported module, reconstructs
+population counts from the complete frame, requires a raw-byte manifest before
+raster staging, and strengthens RGI duplicate and repair checks. None of these
+changes uses a terrain value.
 
 ## Question and boundary
 
@@ -35,6 +46,7 @@ Pin the inherited numerical stack before access:
 | `scripts/denominator_pilot.py` | `5f733147434f859ea3cbfc815da77a1bd8ae83137d80e59a65243d6d3e23508a` |
 | `scripts/susceptible_area_convergence.py` | `9ac2644257ce1ba90bd8f2edbc6e9b47ea152fa02304b0c4b994e495a512b20c` |
 | `scripts/scale_explicit_transfer_source.py` | `c495d3b587e40ed6ad036a24857dc6fb6ee4bb0934e0c385d82e8bd7ba259830` |
+| `scripts/geographic_sample.py` | `21bb6d250f67aa55c42f8efabe3302a2a0a045c950f1455805e2e0ba2cb4faaa` |
 
 The numerical environment is Python 3.12.11, NumPy 2.5.2, SciPy 1.18.1,
 Rasterio 1.5.1, Shapely 2.1.2, PyProj 3.7.2, Fiona 1.10.1, and Pandas 3.0.5.
