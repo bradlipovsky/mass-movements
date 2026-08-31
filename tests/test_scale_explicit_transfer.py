@@ -10,6 +10,8 @@ from scripts.scale_explicit_transfer import (
     ESTIMATOR,
     ESTIMATOR_SHA256,
     attach_decisions,
+    local_crs,
+    projected_features,
     transfer_layers,
 )
 from scripts.scale_explicit_transfer_source import WINDOWS, dem_sources, tile_name
@@ -122,6 +124,11 @@ class ScaleExplicitTransferSelectionTests(unittest.TestCase):
                        "glacier_predicate_coverage_count",
                        "pzi_outside_glacier_coverage_count"):
             self.assertTrue((coverage[column] <= coverage.report_cell_count).all())
+        features = projected_features(Path("data/scale_explicit_transfer/source/rgi_15.geojson"),
+                                      local_crs(28, 96))
+        self.assertTrue(all(item[2].is_valid for item in features))
+        repaired = {item[0]["rgi_id"] for item in features if item[2].geom_type == "MultiPolygon"}
+        self.assertTrue({"RGI2000-v7.0-G-15-13428", "RGI2000-v7.0-G-15-15260"} <= repaired)
 
     def test_transfer_grid_anchor_and_registered_decisions(self):
         z, affine, report, glacier, pzi, spacing, _ = transfer_layers("10", 65, 145, "r90")

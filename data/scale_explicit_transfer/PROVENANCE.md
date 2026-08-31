@@ -27,6 +27,16 @@ geometries of intersecting features were retained; no outline was clipped or
 simplified. This margin exceeds the registered 1 km processing halo. RGI 7 is
 licensed CC BY 4.0 with due citation.
 
+The first complete execution attempt stopped before any output because two
+WGS84-valid region-15 polygons became self-intersecting after projection to the
+registered local equal-area CRS. The amended loader applies GEOS `make_valid`
+with the linework method only when a projected geometry is invalid. The two
+affected identifiers, validity reasons, geometry types, software versions, and
+area changes (about 8.2e-16 in relative magnitude) are frozen in
+`projection_repairs.csv`. No selection, source byte, grid, estimator function,
+or decision rule changed, and the corrected wrapper requires another
+pre-output audit before execution.
+
 ## Copernicus elevation grids
 
 The deterministic 3 by 3 native-tile set surrounding every selected cell was

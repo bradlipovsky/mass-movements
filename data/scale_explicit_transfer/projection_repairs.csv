@@ -1,0 +1,3 @@
+region,rgi_id,wgs84_valid,projected_valid_before,projected_reason,repair_method,geometry_before,geometry_after,area_m2_before,area_m2_after,relative_area_change,shapely_version,geos_version
+15,RGI2000-v7.0-G-15-13428,yes,no,Self-intersection[41706.5795068641 56155.6674356973],GEOS_make_valid_linework,Polygon,MultiPolygon,1138156.20804491,1138156.208044911,8.182730701045649e-16,2.1.2,3.13.1
+15,RGI2000-v7.0-G-15-15260,yes,no,Self-intersection[-12301.5228473531 67111.1652159302],GEOS_make_valid_linework,Polygon,MultiPolygon,1425782.476299491,1425782.4762994898,-8.165012809603457e-16,2.1.2,3.13.1

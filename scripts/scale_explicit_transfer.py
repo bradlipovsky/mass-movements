@@ -9,6 +9,7 @@ import numpy as np
 import pandas as pd
 import rasterio
 from affine import Affine
+from shapely import make_valid
 
 import scripts.scale_explicit_steep_area as estimator
 from scripts.denominator_pilot import aggregate_3x3, burn, load_features, warp_band, window_geometry
@@ -32,11 +33,18 @@ def verify_hashes(manifest=None):
                 raise ValueError(f"frozen file differs: {name}")
 
 
+def projected_features(path, crs):
+    """Repair only projection-induced invalidity with frozen GEOS linework."""
+    features = load_features(path, crs)
+    return [(p, g, q if q.is_valid else make_valid(q, method="linework"))
+            for p, g, q in features]
+
+
 def transfer_layers(region, south, west, variant):
     """Generalize only the inherited source directory to frozen transfer data."""
     crs = local_crs(south, west)
     window_wgs, window_laea = window_geometry(south, west, crs)
-    features = load_features(SOURCE / f"rgi_{region}.geojson", crs)
+    features = projected_features(SOURCE / f"rgi_{region}.geojson", crs)
     source_variant = "p00" if variant == "r90" else variant
     with rasterio.open(SOURCE / f"dem_{region}_{source_variant}_30m.tif") as dataset:
         z = dataset.read(1, masked=True).filled(np.nan).astype(np.float32)
@@ -102,7 +110,7 @@ def main():
     estimator.variant_layers = transfer_layers
     rows = []
     for window in windows().itertuples(index=False):
-        geometries = [item[2] for item in load_features(
+        geometries = [item[2] for item in projected_features(
             SOURCE / f"rgi_{window.region}.geojson", local_crs(window.south, window.west))]
         for variant in (*PHASES, "r90"):
             rows.extend(estimator.variant_records(window, variant, geometries))
