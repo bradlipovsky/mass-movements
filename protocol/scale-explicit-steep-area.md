@@ -86,17 +86,21 @@ numerical terrain-exposure weight, not a probability or a stability model.
 
 ## Fixed masks
 
-Let `G` be the union of projected glacier polygons. The glacier-contact band is
+Validate every projected glacier geometry and their union; stop without
+repairing a geometry if either is invalid. Let `G` be the valid union of
+projected glacier polygons. The glacier-contact band is
 
 ```text
 C = buffer(G, 100 m) minus G.
 ```
 
-A target center belongs to the contact mask only when it is outside `G` and
-inside the closed 100 m buffer under the existing pixel-center rasterization
-rule. This replaces raster cell-count distance with a fixed projected distance.
-The band remains contact geometry, not buttressing, unloading, damage, or a
-glacier-history calculation.
+A target center `(x, y)` belongs to the contact mask exactly when
+`intersects_xy(buffer(G, 100 m), x, y)` is true and `intersects_xy(G, x, y)` is
+false. This topological predicate includes the closed outer 100 m boundary and
+excludes glacier interiors and boundaries without relying on a directional
+rasterization tie rule. It replaces raster cell-count distance with a fixed
+projected distance. The band remains contact geometry, not buttressing,
+unloading, damage, or a glacier-history calculation.
 
 The permafrost mask contains target centers outside `G` with a finite PZI at
 least 0.1. It remains a coarse climatological intersection, not ground
@@ -169,3 +173,12 @@ is read. If an implementation correction becomes necessary, preserve this
 version, document an amendment, and state whether any output had already been
 inspected. Report an unfavorable or numerically unstable result without
 replacement.
+
+## Amendment log
+
+- 30 August 2026, before any equivalent-area value was calculated: replace the
+  inherited center-rasterization boundary rule for the vector contact band with
+  the exact closed `intersects_xy` center predicate above. A synthetic boundary
+  check showed that the rasterization tie rule can differ by edge direction.
+  The 100 m distance, outside-glacier condition, and every other registered
+  choice are unchanged.
