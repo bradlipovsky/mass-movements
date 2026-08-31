@@ -5,16 +5,17 @@
     "replacement_tuning_or_ablation_permitted": false,
     "result_files_present": false,
     "source_replay_complete": true,
-    "statement": "All four regions and sources are frozen. The first equivalent-area calculation may occur only after this manifest is committed and independently audited.",
+    "statement": "All four regions and sources are frozen. The corrected direct-comparison wrapper may run only after this amended manifest is committed and independently audited.",
     "validation_summary_inspected": false
   },
   "code_budget": {
     "limit": 500,
     "notebook_limit": 60,
-    "remaining": 29,
-    "source_and_test_lines": 471
+    "remaining": 44,
+    "source_and_test_lines": 456
   },
   "created_utc": "2026-08-31T14:55:43Z",
+  "amended_utc": "2026-08-31T15:22:15Z",
   "decision_bounds": {
     "all_four_windows_required_per_stratum": true,
     "both_strata_required_overall": true,
@@ -362,8 +363,8 @@
       "sha256": "15f7bff92b7ae44e5f64eac0db70598eb0f318f9a6ac5e2e689e5de9bc89e231"
     },
     "scripts/scale_explicit_transfer.py": {
-      "bytes": 7536,
-      "sha256": "d06f4f6ab75019ed58e74043719022f21a616b6d8e4f341ad13dc0f5a34bbd3e"
+      "bytes": 6333,
+      "sha256": "1e8d2981aadd9dece61226a70e625b944e30d1a0a4795efcd3f9e9eec8849193"
     },
     "scripts/scale_explicit_transfer_selection.py": {
       "bytes": 2581,
@@ -378,11 +379,18 @@
       "sha256": "9ac2644257ce1ba90bd8f2edbc6e9b47ea152fa02304b0c4b994e495a512b20c"
     },
     "tests/test_scale_explicit_transfer.py": {
-      "bytes": 8436,
-      "sha256": "1450e8571c3fc27bab77e152fc2ab1338f2fd37d1b149294c768c24438d83bbe"
+      "bytes": 8446,
+      "sha256": "a37bafff7ed67c6b89ec296bb2bacf2423419bb52c1b15763733984e55830242"
     }
   },
-  "manifest_version": "1.0",
+  "manifest_version": "1.1",
+  "preoutput_correction": {
+    "prior_freeze_commit": "fb2b88818ca1a5759e5c2452f26d0da91cf65c48",
+    "audit_finding": "The first wrapper reimplemented comparison instead of calling the frozen estimator.comparisons function directly; structural-zero fractional departures and positive-reference floating-point operation order could differ.",
+    "correction": "Call estimator.comparisons directly, then append only the registered transfer decision labels.",
+    "output_inspected_before_correction": false,
+    "selection_or_source_changed": false
+  },
   "registered_estimator": {
     "commit": "acec6401bfa02b20d375e03d3eb82910148edf90",
     "path": "scripts/scale_explicit_steep_area.py",

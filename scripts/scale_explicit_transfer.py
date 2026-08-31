@@ -80,36 +80,21 @@ def write_coverage():
 
 
 def attach_decisions(records):
-    """Apply the registered zero rules and intersection-union gate."""
-    records = records.copy()
-    for name in ("reference_equivalent_area_m2", "area_ratio", "fractional_departure"):
-        records[name] = np.nan
-    records["structural_zero"] = "no"
-    decisions = []
-    for (region, stratum), indices in records.groupby(["region", "stratum"]).groups.items():
-        group, by_variant = records.loc[indices], records.loc[indices].set_index("variant").equivalent_steep_area_m2
-        reference, phases = float(by_variant.p00), by_variant.loc[list(PHASES)].to_numpy(float)
-        structural = bool(np.all(by_variant.to_numpy() == 0))
-        if reference > 0:
-            records.loc[indices, "reference_equivalent_area_m2"] = reference
-            records.loc[indices, "area_ratio"] = group.equivalent_steep_area_m2 / reference
-            records.loc[indices, "fractional_departure"] = abs(group.equivalent_steep_area_m2 / reference - 1)
-        elif structural:
-            records.loc[indices, "structural_zero"] = "yes"
-        departure = abs(float(by_variant.r90) / reference - 1) if reference > 0 else np.nan
-        phase_cv = 0.0 if structural else float(np.std(phases) / np.mean(phases)) if np.mean(phases) > 0 else np.nan
-        usable = reference > 0 and np.isfinite(departure) and np.isfinite(phase_cv)
-        resolution, phase = usable and departure <= 0.20, usable and phase_cv <= 0.10
-        decisions.append(dict(region=region, stratum=stratum, reference_equivalent_area_m2=reference,
-                              area_90m_m2=float(by_variant.r90), departure_90m=departure,
-                              phase_mean_area_m2=float(np.mean(phases)), phase_cv=phase_cv,
-                              structural_zero="yes" if structural else "no",
-                              zero_reference_positive_variant="yes" if reference == 0 and np.any(by_variant > 0) else "no",
-                              usable_transfer="yes" if usable else "no",
-                              resolution_pass="yes" if resolution else "no",
-                              phase_pass="yes" if phase else "no",
-                              window_pass="yes" if resolution and phase else "no"))
-    return records, pd.DataFrame(decisions)
+    """Call the registered comparison, then apply the frozen transfer gate."""
+    groups = records[["region", "stratum"]].drop_duplicates().copy()
+    hard = groups.rename(columns={"stratum": "hard_stratum"})
+    hard["stratum"] = hard.hard_stratum.replace({"glacier_proximity": "glacier_contact"})
+    hard["departure_90m"] = np.nan
+    compared, diagnostics = estimator.comparisons(records, hard)
+    decisions = diagnostics.drop(columns=["hard_threshold_departure_90m", "interpretation"])
+    usable = ((decisions.reference_equivalent_area_m2 > 0) &
+              np.isfinite(decisions.departure_90m) & np.isfinite(decisions.phase_cv))
+    resolution, phase = usable & (decisions.departure_90m <= .20), usable & (decisions.phase_cv <= .10)
+    decisions["usable_transfer"] = np.where(usable, "yes", "no")
+    decisions["resolution_pass"] = np.where(resolution, "yes", "no")
+    decisions["phase_pass"] = np.where(phase, "yes", "no")
+    decisions["window_pass"] = np.where(resolution & phase, "yes", "no")
+    return compared, decisions
 
 
 def main():

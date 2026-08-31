@@ -142,7 +142,7 @@ class ScaleExplicitTransferSelectionTests(unittest.TestCase):
         self.assertAlmostEqual(passing.phase_cv, pd.Series([100, 105, 95, 100]).std(ddof=0) / 100)
         self.assertEqual((passing.window_pass, zero.structural_zero,
                           zero.usable_transfer, zero.window_pass), ("yes", "yes", "no", "no"))
-        self.assertTrue(attached[attached.stratum == "permafrost"].area_ratio.isna().all())
+        self.assertTrue((attached[attached.stratum == "permafrost"].fractional_departure == 0).all())
 
     def test_transfer_code_has_no_forbidden_input(self):
         text = Path("scripts/scale_explicit_transfer.py").read_text().lower()
