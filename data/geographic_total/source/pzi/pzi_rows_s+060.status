@@ -1,0 +1,7 @@
+request_start_utc	2026-08-31T19:39:05Z
+request_complete_utc	2026-08-31T19:39:08Z
+curl_exit	0
+http_code	206
+requested_range	bytes=599270400-624153599
+url_effective	https://microsite.geo.uzh.ch/cryodata/pf_global/PZI.flt
+size_download	24883200

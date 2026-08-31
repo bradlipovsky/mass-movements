@@ -1,0 +1,12 @@
+HTTP/1.1 206 Partial Content
+Server: nginx/1.28.3
+Date: Mon, 31 Aug 2026 19:38:50 GMT
+Content-Type: application/octet-stream
+Content-Length: 24883200
+Connection: keep-alive
+Last-Modified: Wed, 15 Feb 2012 09:26:18 GMT
+ETag: "4f3b7a3a-b964f000"
+Content-Range: bytes 1013990400-1038873599/3110400000
+Strict-Transport-Security: max-age=63072000; includeSubdomains
+X-Content-Type-Options: nosniff
+
