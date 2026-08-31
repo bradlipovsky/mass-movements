@@ -1,4 +1,4 @@
-.PHONY: all artifacts-reanalysis check check-reanalysis clean notebook-reanalysis reanalysis
+.PHONY: all artifacts-reanalysis check check-event-audit check-reanalysis clean notebook-reanalysis reanalysis
 
 PYTHON_REANALYSIS ?= .venv/bin/python
 JUPYTER_REANALYSIS ?= $(dir $(PYTHON_REANALYSIS))jupyter
@@ -9,6 +9,10 @@ all:
 check:
 	python3 scripts/check_catalog.py
 	python3 scripts/check_discovery.py
+	python3 scripts/check_event_audit.py
+
+check-event-audit:
+	python3 -m unittest tests.test_event_audit -v
 
 reanalysis:
 	$(PYTHON_REANALYSIS) scripts/reanalysis_pilot.py

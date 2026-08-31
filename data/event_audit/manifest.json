@@ -1,0 +1,17 @@
+{
+  "audit_protocol_commit": "b45a2390e33e89eb626e6b27282ce6513226d749",
+  "created_utc": "2026-08-31T02:15:02Z",
+  "discovery_freeze_commit": "35d392944fef43aeb4084e023bc1fa9470728fab",
+  "files": {
+    "data/event_audit/coordinate_assertions.csv": "6eac3405e5ca9a2ffaaa4c7e4e1f3fff2a69b601f1afab9e87e6d4d2886a2a12",
+    "data/event_audit/sources.csv": "89c55cd4265a96e0c12350e73bc2ac0fb797c2eaa29694a25247fe4fb44fc592",
+    "data/event_audit/summary.csv": "f7b67da1425687835ea502df597125e23c3611160c339f12513ca37415b1738d",
+    "data/event_audit/time_assertions.csv": "ba657a3f2fdeb1dead7e7bfca7a15e3401e060fbd7dbc5f65c62397efe72173e"
+  },
+  "inputs": {
+    "data/candidates.csv": "8b6b0f972180e26c326aaa0e6a501080843bd4b6e6674b07c5aa009340c8a249",
+    "protocol/source-time-audit.md": "f93c2bd5fb6813b719489b5a3b6defe6e8c4b3e1df4dffb8938911c7835f218e",
+    "scripts/check_event_audit.py": "ec26734bcb38f9037977dbb57dfe8394a988f594db6d7d34b2283a0b67f323c1"
+  },
+  "state": "initialized_unpopulated"
+}

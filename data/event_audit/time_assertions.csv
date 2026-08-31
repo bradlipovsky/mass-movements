@@ -1,0 +1,1 @@
+assertion_id,candidate_id,verbatim_time,pulse,time_basis,reported_time_zone,reported_lower,reported_upper,utc_offset_lower_minutes,utc_offset_upper_minutes,onset_lower_utc,onset_upper_utc,precision,source_id,source_locator,conversion_note,extractor,verifier,review_state,review_note
