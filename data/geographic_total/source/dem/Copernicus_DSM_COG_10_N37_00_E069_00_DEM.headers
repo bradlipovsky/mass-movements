@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+x-amz-id-2: 4tM2yP1lWWU3LIfxN6gHTPEpMZdxNh/F1qPECsWIWOH+dEh559lYfZQHedK0v3pDupB1mJsSwYsoENZmCFDSQRq82+PIQgDF
+x-amz-request-id: ZHBSDXR94JF0ERPY
+Date: Mon, 31 Aug 2026 19:40:37 GMT
+Last-Modified: Mon, 09 May 2022 14:19:17 GMT
+ETag: "18bef8b596923afc80c88c4e1fdd2a59"
+x-amz-version-id: null
+Accept-Ranges: bytes
+Content-Type: image/tiff
+Content-Length: 42472074
+Server: AmazonS3
+

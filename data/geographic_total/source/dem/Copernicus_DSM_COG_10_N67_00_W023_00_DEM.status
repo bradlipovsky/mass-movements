@@ -1,0 +1,6 @@
+request_start_utc	2026-08-31T19:43:00Z
+request_complete_utc	2026-08-31T19:43:00Z
+curl_exit	0
+http_code	404
+url_effective	https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N67_00_W023_00_DEM/Copernicus_DSM_COG_10_N67_00_W023_00_DEM.tif
+size_download	376

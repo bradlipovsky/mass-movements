@@ -1,0 +1,6 @@
+request_start_utc	2026-08-31T19:40:01Z
+request_complete_utc	2026-08-31T19:40:10Z
+curl_exit	0
+http_code	200
+url_effective	https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N34_00_E084_00_DEM/Copernicus_DSM_COG_10_N34_00_E084_00_DEM.tif
+size_download	33917241
