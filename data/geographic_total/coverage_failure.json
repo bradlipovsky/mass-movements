@@ -1,0 +1,54 @@
+{
+  "coverage_command": ".venv/bin/python scripts/geographic_total.py coverage --manifest data/geographic_total/pre_coverage_source_manifest.json",
+  "exact_commit": "5713c793d7d1a309a6bf74c7ff030660b7d175e5",
+  "manifest_sha256": "4dfd94fcd03ed9495635cd2cb283c61a6cc61857f82307a1f8cc9de2efb35487",
+  "elapsed": "1:38:57",
+  "exit_status": 1,
+  "maximum_resident_set_kb": 926560,
+  "filesystem_output_blocks": 0,
+  "failure": {
+    "exception": "ValueError: uncomputable source coverage: rgi7.0|global|south=+041|west=+0048 p00",
+    "cell_key": "rgi7.0|global|south=+041|west=+0048",
+    "variant": "p00",
+    "failed_clause": "complete_dem_support_count == 0"
+  },
+  "diagnosis": {
+    "spacing_m": 30,
+    "report_center_count": 10303590,
+    "source_object_count": 3,
+    "complete_dem_support_count": 0,
+    "glacier_predicate_coverage_count": 10303590,
+    "glacier_proximity_center_count": 957,
+    "glacier_proximity_complete_dem_count": 0,
+    "outside_RGI_center_count": 10302530,
+    "outside_RGI_finite_PZI_count": 10302530,
+    "PZI_mask_center_count": 455941,
+    "PZI_mask_complete_dem_count": 0,
+    "unavailable_dem_objects": [
+      "Copernicus_DSM_COG_10_N40_00_E047_00_DEM",
+      "Copernicus_DSM_COG_10_N40_00_E048_00_DEM",
+      "Copernicus_DSM_COG_10_N40_00_E049_00_DEM",
+      "Copernicus_DSM_COG_10_N41_00_E047_00_DEM",
+      "Copernicus_DSM_COG_10_N41_00_E048_00_DEM",
+      "Copernicus_DSM_COG_10_N41_00_E049_00_DEM"
+    ],
+    "unavailable_dem_http_status": 404,
+    "available_halo_row_objects": [
+      "Copernicus_DSM_COG_10_N42_00_E047_00_DEM",
+      "Copernicus_DSM_COG_10_N42_00_E048_00_DEM",
+      "Copernicus_DSM_COG_10_N42_00_E049_00_DEM"
+    ]
+  },
+  "absent_outputs_observed_utc": "2026-08-31T23:42:04Z",
+  "absent_outputs": [
+    "data/geographic_total/source_coverage.csv",
+    "data/geographic_total/coverage_estimates.csv",
+    "data/geographic_total/projection_repairs.csv",
+    "data/geographic_total/equivalent_area_long.csv",
+    "data/geographic_total/cell_outcomes.csv",
+    "data/geographic_total/total_estimates.csv"
+  ],
+  "equivalent_area_execution_called": false,
+  "diagnostic_registration": "https://github.com/bradlipovsky/mass-movements/issues/19#issuecomment-5486335921",
+  "design_consequence": "The registered complete 1,826-cell finite-population total is not estimable from the frozen source. No redraw, deletion, imputation, source substitution, partial total, or E execution is permitted."
+}

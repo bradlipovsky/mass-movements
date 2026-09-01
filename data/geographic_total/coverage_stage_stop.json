@@ -1,0 +1,21 @@
+{
+  "command": ".venv/bin/python scripts/geographic_total.py coverage --manifest data/geographic_total/staged_source_manifest.json",
+  "staged_source_commit": "b3bdfe3f990daf9c043d575466039c7e650e7275",
+  "staged_source_manifest_sha256": "1c71c75ffe246f0174fc27173367db1ce72edf260e204cddbd8ab92fa8b163a0",
+  "reason": "Independent audit found that the staged-boundary replay test unconditionally opened the intentionally absent future coverage table.",
+  "elapsed_seconds_before_interrupt": 88.16,
+  "termination_signal": 2,
+  "exit_status": 130,
+  "phase": "sealed-manifest verification",
+  "absence_observed_utc": "2026-08-31T21:54:26Z",
+  "absent_outputs": [
+    "data/geographic_total/source_coverage.csv",
+    "data/geographic_total/coverage_estimates.csv",
+    "data/geographic_total/projection_repairs.csv",
+    "data/geographic_total/equivalent_area_long.csv"
+  ],
+  "coverage_or_mask_values_printed_or_inspected": false,
+  "equivalent_area_execution_called": false,
+  "registered_public_comment": "https://github.com/bradlipovsky/mass-movements/issues/19#issuecomment-5485204259",
+  "resumption_gate": "Independent approval of the exact test correction and successor manifest commit is required before coverage restarts."
+}

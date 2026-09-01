@@ -108,3 +108,67 @@ independence, decision-role coherence, trigger-time precision, exact frame
 reconciliation, decision--reason consistency, and dependence-cluster links.
 Their final lines report live counts, so documentation does not need a
 separately maintained count.
+
+## Climate- and case-blind susceptible terrain
+
+`denominator/` is a three-window validation frame constructed without failure
+locations or reanalysis. RGI 7.0 glacier centroids select one deterministic
+one-degree window in Alaska, Central Europe, and Central Asia. The source
+directory contains window-only glacier features, local equal-area Copernicus
+DEM grids, raw-value PZI subsets, and ITS_LIVE climatological `count` subsets.
+`source_manifest.json` records 39 remote objects, every local hash, source
+ETag and size where available, derivation, product version, and the rejected
+WCS PZI responses that encoded documented background zero as nodata. It also
+records product-level access and licence terms. `eligible_windows.csv` retains
+every eligible blind-selector key and digest, not only the three winners.
+`PROVENANCE.md` records source-staging transformations and the known request-
+timestamp limitation.
+
+`objects.csv` retains all glacier polygons and every four-neighbor rock-slope
+component, including objects below the conditional-volume cutoff.
+`summary.csv` reports counts and areas by region, stratum, slope, glacier
+contact or PZI threshold, grid spacing, prescribed depth, and boundary scope.
+The strata overlap and cannot be summed. `windows.csv` records the registered
+selector and local CRS hashes. `validation_sample.csv` is the deterministic
+five-object-per-stratum sample; all 45 rows in `validation_review.csv` passed
+area, connectivity, mask, boundary, and coverage checks.
+
+RGI outlines target dates near 2000, the Copernicus surface model uses
+2011--2015 acquisitions, PZI uses 1961--1990 air temperature, and ITS_LIVE
+`count` covers its 2014--2022 climatology. These epochs remain separate fields.
+The frame is a reproducibility and scale-sensitivity test, not a simultaneous
+snapshot, regional population estimate, susceptibility model, or failure
+probability. Run `make artifacts-denominator` with the pinned analysis
+environment to regenerate tables, notebook figures, and the manuscript.
+
+Edinburgh DataShare DOI `10.7488/ds/1877` identifies Gruber as creator and UZH
+as publisher of the same Global Permafrost PZI dataset and assigns it CC BY
+3.0. `pzi_rights_metadata.json` preserves the official API evidence. Its ESRI
+File Geodatabase is not claimed byte-identical to the UZH raw grid; the
+committed window subsets are attributed adaptations.
+
+The adapted elevation grids were produced using Copernicus WorldDEM-30 © DLR
+e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under
+COPERNICUS by the European Union and ESA; all rights reserved. The
+organisations in charge of the Copernicus programme by law or by delegation
+do not incur any liability for any use of the Copernicus WorldDEM-30.
+
+## Source-coordinate and UTC-onset audit
+
+`event_audit/summary.csv` is a 53-row analysis layer over the frozen
+trigger-time set; it does not amend `candidates.csv`. The two long assertion
+tables preserve competing coordinates, clocks, pulse interpretations, source
+locators, and independent review states. An inventory or catalog event point
+does not become a source coordinate unless primary geometry establishes the
+initiating scar or source-area centroid.
+
+A checked source that reports no usable numeric point is encoded with blank
+latitude and longitude, `geometry_role=not_reported`,
+`evidence_method=not_available`, and uncertainty
+`gt_5_km_or_unknown`. No other blank-coordinate combination is valid. A local
+clock without a documented scale has `time_basis=unknown` and no UTC fields.
+Each time assertion has `onset_role=source_failure`, `trigger_proxy`, or
+`context_only`; station arrivals, report times, and generic catalog times stay
+visible but cannot support accepted or conflicting onset summaries. The
+validator rejects accepted summaries without an independently agreed,
+target-eligible assertion and checks all half-open UTC conversions.

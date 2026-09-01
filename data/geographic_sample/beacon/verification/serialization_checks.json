@@ -1,0 +1,40 @@
+{
+  "current": {
+    "signed_fields_bytes": 807,
+    "signed_fields_sha256": "a2aeae1aa21c7fbe7e68fd528c99f80684239a3ce520a3715cbcc9df182eaf16",
+    "draft8_signed_fields_bytes": 863,
+    "draft8_signed_fields_sha256": "a9a51a0696361d740f3c32d17db284aeca2c40250f37afe19fb55644ad111a86",
+    "signature_bytes": 512,
+    "signature_sha256": "ac21ca238390acca7c75298dfbf65d1c756c6c895c30b16cc2885980e0f399e8",
+    "recomputed_output": "ebc85c439a72062c703bc1ddfa8f7f55e7cd0e975962242ffbe4958252fcdf67b9723522464079c1f8a91c2c5596bf8a96ef0ef3652692a8e3fd493601f59488",
+    "ordered_list_types": [
+      "previous",
+      "hour",
+      "day",
+      "month",
+      "year"
+    ]
+  },
+  "previous": {
+    "signed_fields_bytes": 807,
+    "signed_fields_sha256": "7411e468d9e585d22407be918e187ce3aed855bb7afe247bd625c3198c9b4aa8",
+    "draft8_signed_fields_bytes": 863,
+    "draft8_signed_fields_sha256": "25f3a1444f83bd4aaa87f9c7a760e537daf932a17ed63bd3151cb2bb38dffa06",
+    "signature_bytes": 512,
+    "signature_sha256": "10cda2e24c2c0a3966e672c9670dfff4bd67f99b554bc17cb18fb308c83681a9",
+    "recomputed_output": "ebe3439be1109ffb4bba124f7384184edabdc52acbf18f189213029de5af6464c5a5118faef97e84fc080c23d52e0e52df5ed6f683d2e6317439ab869cf5c362",
+    "ordered_list_types": [
+      "previous",
+      "hour",
+      "day",
+      "month",
+      "year"
+    ]
+  },
+  "linkage": {
+    "target_ms": 1788203006000,
+    "current_ms": 1788203040000,
+    "previous_ms": 1788202980000,
+    "separation_ms": 60000
+  }
+}

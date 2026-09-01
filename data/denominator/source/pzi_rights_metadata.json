@@ -1,0 +1,24 @@
+{
+  "retrieved_utc": "2026-08-31T05:16:29Z",
+  "api_url": "https://datashare.ed.ac.uk/server/api/core/items/f070ec05-02dc-4450-8f16-039c7b2d2062",
+  "api_response_sha256": "3737a2b8a1251896e8a052e26dc6fa821b3c88108bac3a3ee600fb90a070701e",
+  "item_uuid": "f070ec05-02dc-4450-8f16-039c7b2d2062",
+  "doi": "10.7488/ds/1877",
+  "title": "Global Permafrost",
+  "creator": "Gruber, Stephan",
+  "publisher": "University of Zurich",
+  "available_utc": "2017-02-21T17:46:39Z",
+  "rights": "This data is made available under the Creative Commons Attribution 3.0 license whose full text can be found at http://creativecommons.org/licenses/by/3.0/legalcode",
+  "attribution_party": "World Glacier Monitoring Service (WGMS)",
+  "attribution_field": "dc.description.abstract[0].value in the item API",
+  "identity_evidence": "The official item description identifies the Permafrost Zonation Index, links the UZH pf_global source page and Gruber (2012) derivation paper, and states that the record migrated the 2012 EDINA ShareGeo Open deposit.",
+  "representation_limit": "The DataShare distribution is an ESRI File Geodatabase; no byte identity with the UZH raw Float32 representation is claimed.",
+  "archive_file": {
+    "name": "WGMSPermafrost.zip",
+    "size_bytes": 1165048371,
+    "md5": "9c5f14d85daed14b42e5bdcb3c478350",
+    "bundle_api_url": "https://datashare.ed.ac.uk/server/api/core/bundles/58133cbc-ac90-4965-9b92-8f1311558071/bitstreams",
+    "bitstream_api_url": "https://datashare.ed.ac.uk/server/api/core/bitstreams/7afe88f5-ae3a-45a2-8ba2-685876bf056f",
+    "content_url": "https://datashare.ed.ac.uk/server/api/core/bitstreams/7afe88f5-ae3a-45a2-8ba2-685876bf056f/content"
+  }
+}

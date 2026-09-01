@@ -1,0 +1,175 @@
+{
+  "manifest_version": "1.0",
+  "created_utc": "2026-08-31T06:13:27Z",
+  "original_registration_commit": "1f43c0d7c335762980b2e97827aef89b6d6dab9a",
+  "protocol_amendment_and_window_freeze_commit": "8c5f70c5fde0dd0e4b65fb0bff1c8045b814ac43",
+  "region_selection_commit": "cefee745cffaa00a7a6bea80cb694f1ce4a17c15",
+  "implementation_commit": "ff6e4fc41981c4c4c5044125a50926e910debd04",
+  "registered_code_budget": {
+    "analysis_lines": 219,
+    "new_test_lines": 145,
+    "downstream_test_delta_lines": 7,
+    "notebook_code_lines": 48,
+    "total_lines": 419,
+    "limit_lines": 420
+  },
+  "execution": {
+    "area_rows": 225,
+    "window_decisions": 6,
+    "byte_identical_table_rerun": true,
+    "dem_phase_files": 12,
+    "value_identical_dem_source_replay": 12,
+    "dem_replay_rows": 12,
+    "source_coverage_rows": 12,
+    "pzi_subsets": 3,
+    "pzi_value_replays_agree": 3,
+    "remote_records": 35,
+    "range_records": 3,
+    "local_source_objects": 25
+  },
+  "registered_bounds": {
+    "maximum_90m_fractional_departure": 0.2,
+    "maximum_30m_phase_cv": 0.1,
+    "all_windows_required": true
+  },
+  "results": {
+    "03": {
+      "glacier_contact": {
+        "reference_area_m2": 34632900.0,
+        "area_90m_m2": 25393500.0,
+        "departure_90m": 0.2667810088095423,
+        "phase_cv": 0.0016538565128108,
+        "window_pass": "no"
+      },
+      "permafrost": {
+        "reference_area_m2": 269628300.0,
+        "area_90m_m2": 191111400.0,
+        "departure_90m": 0.2912042244823707,
+        "phase_cv": 0.0005574082582616,
+        "window_pass": "no"
+      }
+    },
+    "07": {
+      "glacier_contact": {
+        "reference_area_m2": 10592100.0,
+        "area_90m_m2": 6714900.0,
+        "departure_90m": 0.3660463930665307,
+        "phase_cv": 0.0022845914236104,
+        "window_pass": "no"
+      },
+      "permafrost": {
+        "reference_area_m2": 35046000.0,
+        "area_90m_m2": 21951000.0,
+        "departure_90m": 0.3736517719568567,
+        "phase_cv": 0.0013701153900234,
+        "window_pass": "no"
+      }
+    },
+    "08": {
+      "glacier_contact": {
+        "reference_area_m2": 2512800.0,
+        "area_90m_m2": 2494800.0,
+        "departure_90m": 0.0071633237822349,
+        "phase_cv": 0.0037457458863219,
+        "window_pass": "yes"
+      },
+      "permafrost": {
+        "reference_area_m2": 160476300.0,
+        "area_90m_m2": 137659500.0,
+        "departure_90m": 0.1421817427246266,
+        "phase_cv": 0.0004380158953599,
+        "window_pass": "yes"
+      }
+    }
+  },
+  "stratum_pass": {
+    "glacier_contact": "no",
+    "permafrost": "no"
+  },
+  "files": {
+    "protocol/susceptible-area-convergence.md": {
+      "size_bytes": 9109,
+      "sha256": "0398077b91333f679742f2138c9a09ffce8b2bd29d93fdcdba1fcaea50538e02"
+    },
+    "data/area_convergence/region_selection.csv": {
+      "size_bytes": 1506,
+      "sha256": "be732ca7ec19c90d665092a8afa2921bb4ec6b7782d70817f487d40e8c1213b2"
+    },
+    "data/area_convergence/eligible_windows.csv": {
+      "size_bytes": 26508,
+      "sha256": "ba4f67c0a8df14791cddac212a21a75ee5f3aaf7ec60bcf420ce230cf6eb1e83"
+    },
+    "data/area_convergence/windows.csv": {
+      "size_bytes": 505,
+      "sha256": "fdac21395c4146e3ac029b3ae6e73f114a9550d4841ae527115a3abe834397e2"
+    },
+    "data/area_convergence/PROVENANCE.md": {
+      "size_bytes": 7200,
+      "sha256": "0736921a9817ec0b43a02bdd86555044504c8b1516bf88f0175f24f5de778249"
+    },
+    "data/area_convergence/source_manifest.json": {
+      "size_bytes": 41304,
+      "sha256": "db8b1464ffd8f0d055f9e8c384239763e2a8bf8f778e3fc43e85e23543daa89d"
+    },
+    "data/area_convergence/dem_replay.csv": {
+      "size_bytes": 5587,
+      "sha256": "a845e2116f1dea0cc28ce37d4b539182e17b534a261bedeb39144ba960bd7f1b"
+    },
+    "data/area_convergence/source_coverage.csv": {
+      "size_bytes": 751,
+      "sha256": "5e241d6427f93871f76ffe648a5753b7e63c3404664186c1e5c564ea9e5f0118"
+    },
+    "data/area_convergence/source/rgi_nsidc_collection_metadata.json": {
+      "size_bytes": 16776,
+      "sha256": "7ead9c78b539de614305b271c9519d308333678c1b8f3096c65764b7261b02d2"
+    },
+    "data/area_convergence/area_long.csv": {
+      "size_bytes": 59713,
+      "sha256": "84ce033857f3ed4f879f818016912abd55361f1a75c57c38b6740a20da346990"
+    },
+    "data/area_convergence/decisions.csv": {
+      "size_bytes": 853,
+      "sha256": "7caee41d66625f0198b2cc23334cb6c55d538b1acd4ca93e211d354a6e1c9890"
+    },
+    "scripts/susceptible_area_convergence.py": {
+      "size_bytes": 9274,
+      "sha256": "9ac2644257ce1ba90bd8f2edbc6e9b47ea152fa02304b0c4b994e495a512b20c"
+    },
+    "tests/test_susceptible_area_convergence.py": {
+      "size_bytes": 7949,
+      "sha256": "e3f639d773bc6d063b3c92279936037352eaf7015a4f4383d440e5ba773df0c5"
+    },
+    "tests/test_denominator_pilot.py": {
+      "size_bytes": 9706,
+      "sha256": "fa033b9fedb37f2be0adde1ae2067e540b7d3d1c87bb5f0205dc11b9a39df38e"
+    },
+    "notebooks/susceptible_area_convergence.ipynb": {
+      "size_bytes": 218393,
+      "sha256": "c03368957c06d958d24401abee5292ca915739709a9e3506ed285c32bc61df95"
+    },
+    "figures/area_convergence.png": {
+      "size_bytes": 374709,
+      "sha256": "c6a9f0f82c1cd876d1e6b7c1fa68a8665a06d0a782d172744460ed344c3840de"
+    },
+    "figures/area_convergence.pdf": {
+      "size_bytes": 25303,
+      "sha256": "dd91d902df95e1ca7dac9f605a10c05ee9b305d5eddfd4b65ae0ff43aa6ecb68"
+    },
+    "latex/main.tex": {
+      "size_bytes": 46866,
+      "sha256": "5f1bb5b46b5fffc3c39d7a80adcee12a772ae6d1c493c21b33084d24978492ac"
+    },
+    "latex/main.pdf": {
+      "size_bytes": 553867,
+      "sha256": "d07b200a127daf627ada59e8c0373dd5c16d7fe2ba24becee30b7502edfb91a4"
+    },
+    "README.md": {
+      "size_bytes": 2830,
+      "sha256": "faa5fb6a792eff6a4c8619ee91bb6e513c9ac5f2935a7b264c18a587328f8b3e"
+    },
+    "Makefile": {
+      "size_bytes": 2345,
+      "sha256": "ade0c371618ddecd5bc9912eb17511e783db2d50ab08b464d950608881297fb3"
+    }
+  }
+}

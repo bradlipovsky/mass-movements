@@ -1,0 +1,30 @@
+{
+  "action": "deterministic raster staging from the beginning",
+  "command": ".venv/bin/python scripts/geographic_total_source.py rasters --manifest data/geographic_total/pre_raster_source_manifest.json",
+  "pre_raster_manifest_sha256": "80c91d6d9013e0a5682492b3d64c368fd96d2f2a114a23d5c75c4d11829eee0b",
+  "approved_exact_commit": "0526f155a0700c251a69d242697fd9141e095ea1",
+  "resumption_approval_comment": "https://github.com/bradlipovsky/mass-movements/issues/19#issuecomment-5484025411",
+  "started_utc": "2026-08-31T20:19:53.806911Z",
+  "completed_utc": "2026-08-31T21:10:59.706911Z",
+  "elapsed_seconds": 3065.90,
+  "exit_status": 0,
+  "maximum_resident_set_kb": 1025000,
+  "outputs": {
+    "dem_phase_tif_count": 384,
+    "pzi_subset_tif_count": 96,
+    "rgi_subset_geojson_count": 96,
+    "source_replay_row_count": 480,
+    "source_replay_cell_count": 96,
+    "source_replay_rows_per_layer": 96,
+    "all_stored_crs_equal": true,
+    "all_replay_affine_equal": true,
+    "all_finite_masks_equal": true,
+    "all_value_hashes_equal": true,
+    "maximum_replay_absolute_difference": 0.0
+  },
+  "still_absent": [
+    "data/geographic_total/source_coverage.csv",
+    "data/geographic_total/projection_repairs.csv",
+    "data/geographic_total/equivalent_area_long.csv"
+  ]
+}

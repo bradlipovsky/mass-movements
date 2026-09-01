@@ -1,0 +1,12 @@
+HTTP/2 200 
+strict-transport-security: max-age=31536000; preload
+x-frame-options: SAMEORIGIN
+x-content-type-options: nosniff
+last-modified: Fri, 18 Aug 2023 09:04:46 GMT
+etag: "394806-6032ed1f2e780"
+accept-ranges: bytes
+content-length: 3753990
+content-type: application/zip
+date: Mon, 31 Aug 2026 16:36:51 GMT
+server: Apache
+

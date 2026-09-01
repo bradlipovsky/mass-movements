@@ -1,0 +1,126 @@
+{
+  "manifest_version": "1.0",
+  "created_utc": "2026-08-31T23:54:30Z",
+  "status": "registered_source_coverage_gate_failure",
+  "commits": {
+    "protocol": "ca1a3620dd2063992700505b065c848213f8af7f",
+    "staged_source_freeze": "b3bdfe3f990daf9c043d575466039c7e650e7275",
+    "approved_precoverage": "5713c793d7d1a309a6bf74c7ff030660b7d175e5",
+    "failure_record": "8b5579e533e61d013225ff2c13914eb14304008c",
+    "reviewed_artifacts": "0e3809851157b9c1f03099e82eb994b1d49f72a6"
+  },
+  "source_staging": {
+    "dem_request_objects": 776,
+    "available_dem_objects": 693,
+    "unavailable_dem_objects": 83,
+    "dem_phase_rasters": 384,
+    "pzi_subset_rasters": 96,
+    "rgi_subset_files": 96,
+    "source_replay_rows": 480,
+    "source_replay_cells": 96,
+    "all_replay_transforms_equal": true,
+    "all_replay_finite_masks_equal": true,
+    "all_replay_value_hashes_equal": true,
+    "maximum_replay_absolute_difference": 0.0,
+    "staged_manifest_sha256": "1c71c75ffe246f0174fc27173367db1ce72edf260e204cddbd8ab92fa8b163a0",
+    "precoverage_manifest_sha256": "4dfd94fcd03ed9495635cd2cb283c61a6cc61857f82307a1f8cc9de2efb35487"
+  },
+  "coverage_execution": {
+    "command": ".venv/bin/python scripts/geographic_total.py coverage --manifest data/geographic_total/pre_coverage_source_manifest.json",
+    "elapsed": "1:38:57",
+    "exit_status": 1,
+    "maximum_resident_set_kb": 926560,
+    "filesystem_output_blocks": 0,
+    "equivalent_area_execution_called": false
+  },
+  "failed_gate": {
+    "cell_key": "rgi7.0|global|south=+041|west=+0048",
+    "variant": "p00",
+    "stratum": "12",
+    "stratum_population_cells": 29,
+    "stratum_sample_cells": 4,
+    "inclusion_probability": "4/29",
+    "report_center_count": 10303590,
+    "complete_dem_support_count": 0,
+    "glacier_predicate_coverage_count": 10303590,
+    "glacier_proximity_center_count": 957,
+    "glacier_proximity_complete_dem_count": 0,
+    "outside_RGI_center_count": 10302530,
+    "outside_RGI_finite_PZI_count": 10302530,
+    "PZI_mask_center_count": 455941,
+    "PZI_mask_complete_dem_count": 0,
+    "covering_dem_http_404_objects": 6,
+    "available_northern_halo_objects": 3
+  },
+  "absent_outputs": [
+    "data/geographic_total/.equivalent_area_long.csv.tmp",
+    "data/geographic_total/source_coverage.csv",
+    "data/geographic_total/coverage_estimates.csv",
+    "data/geographic_total/projection_repairs.csv",
+    "data/geographic_total/equivalent_area_long.csv",
+    "data/geographic_total/cell_outcomes.csv",
+    "data/geographic_total/stratum_estimates.csv",
+    "data/geographic_total/stratum_covariance.csv",
+    "data/geographic_total/total_estimates.csv"
+  ],
+  "design_consequence": {
+    "failed_cell_outcome": "undefined, not zero",
+    "complete_1826_cell_totals_estimable": false,
+    "partial_estimate_reported": false,
+    "interpretation": "source-specific non-estimability, not zero equivalent terrain area or low physical susceptibility",
+    "forbidden_adaptations": [
+      "redraw",
+      "unit deletion",
+      "imputation",
+      "source substitution",
+      "partial total",
+      "equivalent-area execution"
+    ]
+  },
+  "code_budget": {
+    "source_stage_lines": 201,
+    "estimator_lines": 232,
+    "test_lines": 66,
+    "source_and_test_total_lines": 499,
+    "limit_lines": 500,
+    "notebook_code_lines": 43,
+    "notebook_limit_lines": 60
+  },
+  "tests": {
+    "geographic_command": ".venv/bin/python -m unittest tests.test_geographic_total -v",
+    "geographic_passed": 7,
+    "full_command": ".venv/bin/python -m unittest discover -s tests -v",
+    "full_passed": 79,
+    "failed": 0,
+    "skipped": 0
+  },
+  "reviews": {
+    "coverage_failure_boundary": "three independent approvals of 8b5579e; exact local reproduction, control-flow stop, source availability, design consequence, and absence of outputs",
+    "numeric_artifacts": "approved 0e3809851157b9c1f03099e82eb994b1d49f72a6; five ratios, source counts, strata, terminology, and rendered PDF checked",
+    "code_and_design_artifacts": "approved 0e3809851157b9c1f03099e82eb994b1d49f72a6; notebook boundary, 43-line budget, exact PNG reproduction, 79 tests, absent outputs, and no equivalent-area execution checked",
+    "mechanics_and_manuscript": "approved 0e3809851157b9c1f03099e82eb994b1d49f72a6 after exact glacier-outline-proximity and PZI-intersection terminology; physical interpretation and Figure 6 rendering checked"
+  },
+  "reproducibility": {
+    "scientific_failure_record_is_hash_frozen": true,
+    "notebook_reads_failure_record_only": true,
+    "presentation_artifacts": "reviewed snapshots; notebook and PDF toolchains embed timestamps, so rendered equality rather than byte identity is expected after regeneration"
+  },
+  "files": {
+    "protocol/geographic-terrain-totals.md": {"bytes": 20923, "sha256": "ad9fc2b1dec96b8fd37dbdfa17acf3d430353291bace5d8ce26d5463c2afe11d"},
+    "data/geographic_total/pre_coverage_source_manifest.json": {"bytes": 606879, "sha256": "4dfd94fcd03ed9495635cd2cb283c61a6cc61857f82307a1f8cc9de2efb35487"},
+    "data/geographic_total/staged_source_manifest.json": {"bytes": 606010, "sha256": "1c71c75ffe246f0174fc27173367db1ce72edf260e204cddbd8ab92fa8b163a0"},
+    "data/geographic_total/source_replay.csv": {"bytes": 475208, "sha256": "c3ac3f7cd2f93d2048033431a480f452b58025e585f4df38b920dbd48335114f"},
+    "data/geographic_total/source_environment.json": {"bytes": 268, "sha256": "56574fa25af84cdd393cd1b82134d29e0ddb9a6f53b36e613b47a0d88c9167a1"},
+    "data/geographic_total/output_schemas.json": {"bytes": 2572, "sha256": "545df64f9a9e072cf1c71de5cadd6368cfffa384e5e188615e78aa1234f85a02"},
+    "data/geographic_total/coverage_failure.json": {"bytes": 2457, "sha256": "85cadb1be0fba13769b8bed8cd62b6bba5ee8f8eb545aade15a61b6b838d2ec8"},
+    "scripts/geographic_total_source.py": {"bytes": 12908, "sha256": "b383196d93eff7d2b84de729ab9ca7bf669718748e51887dc12396dcea9aed26"},
+    "scripts/geographic_total.py": {"bytes": 17430, "sha256": "076b575b68bf7d9acc623a07905d4752cff25444ea987adc4c486205ef502d76"},
+    "tests/test_geographic_total.py": {"bytes": 5630, "sha256": "9a6425df5aa47d75afe3799a0c8def5708949d637366b6d6f2f0608093f3d6c3"},
+    "notebooks/geographic_coverage_gate.ipynb": {"bytes": 70317, "sha256": "0483fe2dab112bb43996fd9bea6be371dcc479e7fee4aa1249237d83ff298cdb"},
+    "figures/geographic_coverage_gate.pdf": {"bytes": 28749, "sha256": "e5870dac7dad6b8375db7c3feedd9891e4460d216278e893d357684566520a14"},
+    "figures/geographic_coverage_gate.png": {"bytes": 168767, "sha256": "fef790accc513878a4bac01f00f3386bb0a113d0cea48c4bdfc443b4b8afe7c8"},
+    "latex/main.tex": {"bytes": 63620, "sha256": "18d4a853869f1d5452e7dd3b6ce36628f4ba5ac9246897dc863b4c00cac39fcb"},
+    "latex/main.pdf": {"bytes": 690503, "sha256": "b154f1a7dfa5c79d810989f226e481b952f44ed66a6bab5c3979c8a6bae460fc"},
+    "Makefile": {"bytes": 3391, "sha256": "eb400f3e7c8ee26f09b8b1f99cb6d43e0f1290e97a3590dcffcef1dfe10382e8"}
+  }
+}

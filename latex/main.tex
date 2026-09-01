@@ -20,7 +20,7 @@
 
 \title{Climate preconditioning and the mechanics of hazardous alpine mass movements:\\a catalog and attribution protocol}
 \author{Bradley P. Lipovsky}
-\date{Working manuscript, 30 August 2026}
+\date{Working manuscript, 31 August 2026}
 
 \begin{document}
 \maketitle
@@ -39,13 +39,37 @@ screen to 148 candidate occurrences. Two independent screens include 73,
 retain 68 as uncertain, and exclude 7; 53 included failures have day-scale or
 better timing for a later trigger analysis. Trigger, cascade, and repeat-site
 dependence remain separate. A registered ERA5 pilot then retains the 29 of 53
-included, trigger-time-eligible occurrences that have coordinates. For the
+included, trigger-time-eligible occurrences that have finite catalog
+coordinates. For the
 registered seven-day pre-date window, the median rank among 1991--2020
 calendar controls is 0.586; after a robust linear trend is removed, the median
 residual rank is 0.483. A conservative-antecedence sensitivity gives 0.586 and
 0.533. The median four-cell rank ranges are 0.133 and 0.103, respectively.
-These are descriptive exposure diagnostics without a susceptible-slope
-denominator. I then specify detrended seasonal controls,
+An independently reviewed source-coordinate and UTC-onset audit subsequently
+accepts source coordinates for 24 occurrences, UTC intervals for 34, and both
+for 22; only 9 of the pilot's 29 occurrences have accepted source coordinates.
+The registered pilot results are preserved rather than recomputed post hoc.
+These remain descriptive exposure diagnostics because no denominator is yet
+aligned with the cases. A separate climate- and case-blind terrain pilot
+enumerates glacier, glacier-contact, and permafrost-intersection objects in
+three deterministically selected windows. Primary connected-component counts
+change by factors of 1.3--3.0 between 30 and 90~m grids, so the pilot supplies
+a reproducible frame but not a unique population count. A post-outcome
+scale-explicit composite reduces 90~m area departure in five of six paired
+diagnostics from the same exposed windows. A subsequently registered blind
+transfer calculation freezes that estimator and tests four hash-selected
+windows. All eight glacier- and permafrost-stratum checks meet the registered
+numerical bounds: 90~m departures are 1.8--5.3\% and four-phase coefficients
+of variation are 0.000061--0.00375. The windows are not a probability sample,
+so this result tests numerical transfer rather than physical susceptibility or
+global representativeness. A subsequent public, signed-beacon draw selects 96
+cells from a frozen 1,826-cell near-global RGI 7-intersecting frame with known
+geographic inclusion probabilities. Exact source replay then stages four
+30~m elevation phases and one PZI subset per cell. A registered coverage-only
+run stops before any equivalent-area calculation because one selected cell has
+zero complete DEM-supported reporting centers. Neither complete terrain-screen
+total is therefore estimable from the frozen source, and no partial estimate is
+reported. I then specify detrended seasonal controls,
 matched non-failing slopes, mechanism-specific glacier and permafrost
 observations, and multiplicity control. Uneven observation and unresolved
 primary sources prevent these counts from estimating a frequency trend. No
@@ -266,8 +290,8 @@ Barry Arm, active & Slow bedrock landslide & 290--689 possible & Potential rapid
 Atmospheric fields do not measure glacier support, permafrost fracture state,
 or basal effective pressure. The analysis will therefore pair reanalysis with
 annual optical and radar mapping of terminus position, glacier-slope contact,
-surface elevation, and source-slope deformation. Define $\Delta h_i$ as index-
-date thickness minus baseline thickness at the slope contact. A signed
+surface elevation, and source-slope deformation. Define $\Delta h_i$ as
+index-date thickness minus baseline thickness at the slope contact. A signed
 stress-scale proxy for support loss is
 \begin{equation}
   S_i = -\rho_i g\Delta h_i,
@@ -309,6 +333,386 @@ competing-process observation. The causal specification will determine which
 variables are adjusted rather than treating every measured field as a
 covariate.
 
+\subsection{Climate- and case-blind susceptible-terrain pilot}
+
+A denominator for an incidence calculation must be constructed without using
+the failures it will later explain. I therefore registered a terrain pilot
+before reading source-product values. It fixes RGI 7.0 regions 01, 11, and 13
+and chooses one $1^\circ$ window per region using only catalog fields
+\citep{RGI7}. The selector uses the archived \texttt{cenlon} and
+\texttt{cenlat} points, which the RGI metadata describes as approximately
+central points within the outlines rather than geometric centroids. Eligible
+cells contain at least 10 such points and 1~km$^2$ of summed glacier area; the
+cell with the smallest SHA-256 digest of its region and integer edges is
+selected. This rule gives
+58--59$^\circ$N, 155--154$^\circ$W in Alaska; 45--46$^\circ$N,
+7--8$^\circ$E in Central Europe; and 43--44$^\circ$N, 94--95$^\circ$E in
+Central Asia. These are validation windows, not regional samples.
+
+RGI polygons define glacier objects and the ice mask. Native Copernicus DEM
+GLO-30 values are warped to a local Lambert azimuthal equal-area grid in each
+window \citep{CopernicusDEM2021}. Centered differences define surface slope
+at 30~m; exact $3\times3$ elevation means give the aligned 90~m sensitivity.
+Outside-glacier terrain is joined by four-neighbor connectivity. The
+glacier-contact stratum requires slope of at least 30$^\circ$ and raster edge
+distance no greater than 100~m. The permafrost stratum applies the same slope
+threshold and intersects PZI $\geq0.1$ from the 30-arc-second global zonation
+map \citep{Gruber2012,Gruber2017}. PZI is a climatological index based on 1961--1990 air
+temperature, not a measured local temperature or failure probability. The
+Global PZI data source is the World Glacier Monitoring Service (WGMS), with
+Gruber as creator and UZH as publisher. The machine-readable tables retain
+slope thresholds of 25, 30, and 35$^\circ$,
+contact distances of 0, 100, and 300~m, PZI thresholds of 0.1 and 0.5, and both
+grid spacings. ITS\_LIVE version 2 contributes only its 2014--2022 image-pair
+count as an observability field; no velocity or trend enters object membership
+\citep{ITSLIVEv2}.
+
+Counts below include boundary-truncated objects; the archived summary also
+reports wholly contained objects separately. The organisations in charge of
+the Copernicus programme by law or by delegation do not incur any liability
+for any use of the Copernicus WorldDEM-30.
+
+For every object of area $A$, the calculation reports $V_d=Ad$ for prescribed
+depths $d=10$, 30, and 100~m. An object is conditionally eligible when
+$V_d\geq10^6$~m$^3$. This does not estimate glacier thickness, rock-failure
+depth, or mobilized volume. The primary 30~m calculation contains 140, 472,
+and 144 glacier polygons in Alaska, Central Europe, and Central Asia,
+respectively. The corresponding glacier-contact counts are 1,766, 2,872, and
+742; permafrost-intersection counts are 3,672, 5,321, and 7,099
+(Figure~\ref{fig:denominator}). At $d=30$~m, conditional counts are 137, 340,
+and 117 for glaciers; 331, 611, and 220 for glacier-contact terrain; and 724,
+753, and 1,086 for permafrost-intersection terrain. The three strata overlap
+and these values must not be summed.
+
+Area is less sensitive than object count. From 30 to 90~m,
+glacier-contact area changes by $-8$\%, $+6$\%, and $+3$\% in the three
+regions, whereas its component count decreases by factors of 1.7, 1.6, and
+1.3. Permafrost-intersection area decreases by 18\%, 11\%, and 35\%, while
+component count decreases by factors of 1.9, 2.0, and 3.0. Conditional counts
+need not vary monotonically: coarsening removes steep pixels but also joins
+patches. Increasing contact distance similarly increases total area while it
+can reduce the number of volume-eligible components by merging them. A
+deterministic audit of five objects per stratum and window reproduced every
+source-mask predicate, area, connectivity, boundary flag, and coverage field.
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=\textwidth]{../figures/denominator_windows.pdf}
+  \includegraphics[width=0.92\textwidth]{../figures/denominator_sensitivity.pdf}
+  \caption{Climate- and case-blind susceptible-terrain pilot. Top: the three
+  deterministically selected windows with RGI glacier polygons, primary steep
+  glacier-contact terrain, and primary steep PZI-intersection terrain. Bottom
+  left: conditional-volume counts across prescribed depths. Bottom centre:
+  primary rock-slope 90/30~m area ratios. Bottom right: conditional counts
+  across glacier-contact distances. Counts include boundary-truncated objects.
+  In the depth panel, colors distinguish regions and line styles distinguish
+  strata. Strata overlap, source
+  epochs differ, and none of the mapped objects is a predicted failure.
+  Elevation products were produced using Copernicus WorldDEM-30 \copyright{}
+  DLR e.V. 2010--2014 and \copyright{} Airbus Defence and Space GmbH
+  2014--2018, provided under COPERNICUS by the European Union and ESA; all
+  rights reserved.}
+  \label{fig:denominator}
+\end{figure}
+
+\subsection{Held-out susceptible-area convergence}
+
+The object-count sensitivity above motivates a separate test of area as a
+possible exposure measure. Before reading new inventory values, I ranked 14
+RGI region codes by SHA-256 and fixed regions 07, 08, and 03. A second blind
+hash selected 77--78$^\circ$N, 18--19$^\circ$E in Svalbard; 69--70$^\circ$N,
+21--22$^\circ$E in Scandinavia; and 81--82$^\circ$N,
+85--84$^\circ$W in Arctic Canada North. The 200 eligible window keys and their
+digests were frozen before a DEM or PZI value was read. These deterministic
+windows are held out from the pilot, but they are not a random sample of
+mountain terrain.
+
+The registered reference is total area under the pilot's 30$^\circ$ slope,
+100~m glacier-contact, and PZI $\geq0.1$ screens. I independently warp the DEM
+and masks to four 30~m grids separated by half-cell phase shifts. The 90~m
+variant averages complete $3\times3$ elevation blocks but samples masks on its
+own grid. A stratum passes only if every window has a 90~m area departure no
+greater than 20\% and a population coefficient of variation no greater than
+0.10 across the four 30~m phases.
+
+Grid phase has little effect (Figure~\ref{fig:area-convergence}). The largest
+phase coefficient of variation is 0.00375. In contrast, coarsening reduces
+glacier-contact area by 26.7\% in Arctic Canada and 36.6\% in Svalbard; the
+change is 0.7\% in Scandinavia. PZI-intersection area decreases by 29.1\%,
+37.4\%, and 14.2\%, respectively. Both strata therefore fail the registered
+all-window criterion. This comparison suggests that half-cell alignment is not
+the controlling numerical uncertainty among the tested variants. Resolution
+coarsening changes DEM smoothing, slope support, mask sampling,
+contact-distance discretization, reporting centers, and cell area together,
+so this test does not isolate which operation causes the departure. Neither
+area measure is used below to infer a global incidence density or hazard
+distribution.
+
+The registered geometric choices also remain influential. Across the three
+windows, the unshifted-reference-grid 30~m sensitivity calculations span
+0.27--114.0~km$^2$ for glacier-contact area and 13.6--403.4~km$^2$ for
+PZI-intersection area as slope, contact distance, and PZI threshold vary. These
+ranges describe the screens; they are not uncertainty intervals or alternative
+opportunities to pass the convergence test.
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=\textwidth]{../figures/area_convergence.pdf}
+  \caption{Held-out susceptible-area convergence. Panels (a) and (b) show
+  area relative to the unshifted 30~m result for three half-cell phase grids
+  and the aligned 90~m grid. The dashed 0.8 line is the lower registered
+  resolution bound and applies to the 90~m point; phase is assessed by its
+  four-grid coefficient of variation. Panels (c) and (d) show separate 30~m
+  sensitivity to slope, contact distance, and PZI threshold. Colors distinguish
+  held-out regions and line styles distinguish geometric thresholds. The
+  plotted objects are not predicted failures. Global PZI data are attributed
+  to WGMS as source, Gruber as creator, and UZH as publisher. Elevation
+  products were produced using Copernicus WorldDEM-30 \copyright{} DLR e.V.
+  2010--2014 and \copyright{} Airbus Defence and Space GmbH 2014--2018,
+  provided under COPERNICUS by the European Union and ESA; all rights
+  reserved.}
+  \label{fig:area-convergence}
+\end{figure}
+
+\clearpage
+\subsection{Exposed-window scale-explicit development}
+
+The failed hard-threshold area test motivates a smoother numerical
+representation, but its values also exposed the windows used to develop that
+representation. I therefore registered the following calculation as
+post-outcome method development rather than a second holdout. It reuses the
+same DEM phases, glacier inventory, PZI samples, reporting windows, and local
+equal-area projections. No event, climate, deformation, or damage field enters
+the calculation.
+
+At each target-cell center, I fit a vertical-residual plane to all finite DEM
+centers within a nominal 300~m radius. For center offsets $(u,v)$ on a grid of
+spacing $r$, symmetry gives
+\begin{equation}
+ a=\frac{\sum uz}{\sum u^2},\qquad
+ b=\frac{\sum vz}{\sum v^2},\qquad
+ q=(a^2+b^2)^{1/2}.
+\end{equation}
+The steepness weight is zero below $q=\tan 25^\circ$, one above
+$q=\tan 35^\circ$, and linear in $q$ between those values. The
+glacier-outline stratum contains target centers outside the inventory union
+whose exact planar distance to it is no greater than 100~m. The permafrost
+stratum contains outside-glacier centers with PZI at least 0.1. Equivalent
+steep area is $E=r^2\sum w$ over reporting centers in each stratum with
+complete plane support. Although $E$ has area units, it is a weighted
+numerical measure rather than literal susceptible area or failure probability.
+
+The four 30~m phases remain similar: population coefficients of variation
+range from 0.00012 to 0.00347 (Figure~\ref{fig:scale-explicit}). Relative to
+the unshifted 30~m value, 90~m departures for glacier-outline proximity and
+PZI intersection are 5.9\% and 3.7\% in Arctic Canada North, 13.4\% and 7.1\%
+in Svalbard, and 3.7\% and 2.6\% in Scandinavia. These are smaller than the
+hard-threshold departures in five of six paired diagnostics. The exception is
+Scandinavian glacier proximity, which increases from 0.7\% to 3.7\%. All six
+new departures lie below the former 20\% bound, but that line is a visual
+reference and does not create a confirmatory pass result in exposed windows.
+
+Fixed support, continuous weighting, and exact outline proximity change
+together. Their paired difference therefore belongs to the composite and
+cannot identify which operation controls scale dependence. Moreover, the 30
+and 90~m disks contain different center quadrature; the calculation is not a
+resolution-independent physical kernel, failure-plane orientation, thickness,
+or stress. The blind-region calculation below therefore freezes this estimator
+unchanged before reading additional terrain values. These exposed-window
+diagnostics do not themselves support global scaling.
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=\textwidth]{../figures/scale_explicit_steep_area.pdf}
+  \caption{Known-window scale-explicit equivalent-area development. (a, b)
+  Equivalent steep area relative to the unshifted 30~m result for four 30~m
+  phases and the aligned 90~m grid. (c) Paired 90~m departures for the failed
+  hard-threshold screen and the new composite; G denotes glacier-outline
+  proximity and P denotes PZI intersection. The dashed 0.8 ratio and 0.20
+  departure lines repeat former bounds only as references. The calculation was
+  selected after the hard-threshold results were known, has no pass label, and
+  contains no event or predicted-failure marker. Source products and
+  attribution are as in Figure~\ref{fig:area-convergence}.}
+  \label{fig:scale-explicit}
+\end{figure}
+\clearpage
+
+\subsection{Blind numerical transfer of equivalent steep area}
+
+The transfer calculation tests whether the frozen equivalent-area estimator
+retains its numerical behavior outside the three development windows. Before
+terrain values were opened, a registered protocol excluded previously used
+regions, enumerated inventory-only eligible windows, and selected four RGI
+regions and one 1$^\circ$ window per region by SHA-256 order. The resulting
+windows are Arctic Canada South (72--73$^\circ$N, 79--78$^\circ$W), North Asia
+(65--66$^\circ$N, 145--146$^\circ$E), South Asia East (28--29$^\circ$N,
+96--97$^\circ$E), and New Zealand (44--43$^\circ$S, 171--172$^\circ$E).
+Inventory attributes fixed the selection; glacier geometry, elevation, and
+PZI values were acquired only after the selection manifest was frozen.
+
+The protocol retained the development calculation without changing the
+300~m support radius, 25--35$^\circ$ ramp, 100~m glacier-outline distance,
+PZI threshold of 0.1, or grid phases. For region $j$ and stratum $s$, let
+$E_{js,0}=E_{js,00}$ and $E_{js,90}$ denote the unshifted 30~m and aligned
+90~m values.
+The four 30~m values $E_{js,00}$, $E_{js,10}$, $E_{js,01}$, and $E_{js,11}$
+have respective phase offsets $(0,0)$, $(15,0)$, $(0,15)$, and $(15,15)$~m.
+The protocol defined the departure and population coefficient of variation as
+\begin{equation}
+ D_{js}=\frac{|E_{js,90}-E_{js,0}|}{E_{js,0}},\qquad
+ C_{js}=\frac{\operatorname{sd}_{\mathrm{pop}}
+ (E_{js,00},E_{js,10},E_{js,01},E_{js,11})}
+ {\operatorname{mean}(E_{js,00},E_{js,10},E_{js,01},E_{js,11})}.
+\end{equation}
+Transfer required a positive finite $E_{js,0}$, $D_{js}\leq0.20$, and
+$C_{js}\leq0.10$ in both strata of all four windows. Thus, one
+failed window-stratum check would fail its stratum and the complete test.
+
+Source replay reproduced all 20 derived DEM and PZI grids with matching value
+hashes, equal affine transforms, and zero maximum absolute difference. The
+first computation stopped when two WGS84-valid
+glacier outlines became invalid after projection in South Asia East. Regions
+10 and 18 had been calculated in memory, but no result was persisted, printed,
+summarized, or observed. Before restarting, the pre-output provenance recorded
+a deterministic linework repair applied only to invalid projected geometry; the
+two repaired areas changed by less than $8.3\times10^{-16}$ in relative
+magnitude. This repair addresses polygon representation after projection and
+does not alter the frozen steepness or comparison equations.
+
+All eight reference areas are positive and span 0.52--297.42~km$^2$.
+Figure~\ref{fig:scale-explicit-transfer} shows that all eight checks pass.
+The 90~m departures range from 1.81\% to 5.28\%, compared with the registered
+20\% bound. The largest is the New Zealand PZI-intersection result. The
+four-phase coefficients of variation range from 0.000061 to 0.00375, compared
+with the registered 0.10 bound; the largest is the Arctic Canada South
+glacier-outline result. The complete result therefore passes the registered
+numerical transfer gate.
+
+This pass has a narrower interpretation than model validation. It confirms
+resolution and phase behavior for the frozen calculation in four additional
+hash-selected windows. It does not show that the two strata identify unstable
+slopes, resemble event sources, predict incidence, or sample the global terrain
+distribution. Neither the four RGI regions nor their first eligible hash
+windows have known geographic inclusion probabilities. A separate sampling
+protocol is therefore required before estimating a regional or global
+equivalent-area denominator.
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=\textwidth]{../figures/scale_explicit_transfer.pdf}
+  \caption{Blind numerical transfer of scale-explicit equivalent steep area.
+  (a, b) Equivalent area relative to the unshifted 30~m result for four 30~m
+  phases and the aligned 90~m grid in glacier-outline proximity and PZI
+  intersection strata. Colors identify four regions selected by the frozen
+  inventory-only hash procedure. (c) Each 90~m departure and phase coefficient
+  of variation divided by its registered bound; G denotes glacier-outline
+  proximity and P denotes PZI intersection. The dashed line is the acceptance
+  threshold. All values lie below it. This is a numerical transfer result, not
+  a physical-validation or global-sampling result. Source products and
+  attribution are as in Figure~\ref{fig:area-convergence}.}
+  \label{fig:scale-explicit-transfer}
+\end{figure}
+\clearpage
+
+\subsection{Geographic probability sample}
+
+The numerical transfer result motivates a finite-population estimate, but its
+four windows cannot supply one. Before opening any new DEM or PZI value, a
+registered design intersected unique RGI 7 glacier outlines with global
+1$^\circ$ reporting cells. It retained cells from 60$^\circ$S through
+89$^\circ$N having positive glacier-intersection area. Where outlines from
+several RGI regions entered one cell, the region having the greatest geodesic
+union area defined its sampling stratum. This produced 1,826 cells in 19
+nonempty regional strata. RGI reports zero glaciers in region 20; accordingly,
+no archive is distributed and its frame population is zero. Independent
+reconstruction from all 19 source archives reproduced 274,531 unique features,
+the complete frame, its regional ownership, and its byte hash.
+
+The fixed total sample size was 96. Each non-census stratum first received four
+cells, and remaining cells were assigned by the registered quotient rule. The
+realized allocations are 4--12 cells per nonempty region. After the exact frame
+commit was posted publicly, the protocol imposed a one-hour delay and requested
+the first NIST Randomness Beacon 2.0 pulse after the resulting target. The
+signed pulse occurred 34~s after that target. Its certificate identifier,
+certificate path and validity, current and preceding RSA signatures, output
+hashes, pulse link, 60-s index step, and precommitment all verify independently.
+The verified 512-bit output keyed the frozen HMAC ordering; it did not change
+the frame or allocations.
+
+Figure~\ref{fig:geographic-sample} shows the complete draw. All 1,826 cell
+digests are unique, and each regional selected set is the registered prefix.
+Thus every cell has first-order probability $n_h/N_h$, and two distinct cells
+in the same stratum have joint probability
+$n_h(n_h-1)/[N_h(N_h-1)]$; probabilities multiply across strata. A retained
+chance-balance diagnostic shows that none of the 56 frame cells intersected by
+more than one RGI region appears in the sample. Under the registered stratified
+design, the probability of zero is 0.0121. This is not a replacement or redraw
+criterion, but it prevents interpreting the realized sample as observed
+cross-region coverage.
+
+This draw supplies known inclusion probabilities for Horvitz--Thompson totals
+of glacier-outline-proximity and PZI-intersection equivalent steep area. The
+two masks can overlap and remain separate outcomes. After independent
+pre-outcome approval, source staging retained 693 available Copernicus DEM
+objects and 83 registered HTTP 404 responses. It produced 384 phase-specific
+DEM rasters and 96 PZI subsets. All 480 staged arrays replay from retained
+source bytes with identical transforms and value hashes and zero maximum
+absolute difference.
+
+The coverage-only calculation stopped before evaluating equivalent area.
+Figure~\ref{fig:geographic-coverage} isolates the failed p00 cell, whose south
+and west edges are 41$^\circ$N and 48$^\circ$E. All six DEM objects covering
+the reporting-cell latitude and southern halo returned HTTP 404; only three
+objects in the northern halo row were available. Thus none of 10,303,590
+reporting centers had complete DEM support. In contrast, the RGI predicate was
+computable at all reporting centers and PZI was finite at all 10,302,530
+outside-RGI centers. The registered rule required positive complete DEM
+support in every selected cell and phase. It therefore stopped before atomic
+coverage writes and before any equivalent-area calculation.
+
+The failed cell belongs to a stratum with $N_h=29$ and $n_h=4$. Its registered
+outcome is undefined rather than zero, so neither stratum mean nor either
+complete 1,826-cell total can be formed. No unit was redrawn, deleted, imputed,
+or assigned a substitute source, and no partial total is reported. This is
+source-specific non-estimability, not evidence of zero equivalent terrain area
+or low physical susceptibility.
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=\textwidth]{../figures/geographic_probability_sample.pdf}
+  \caption{Frozen geographic probability frame and signed-beacon draw. (a)
+  Centers of all 1,826 eligible 1$^\circ$ cells and the 96 selected cells. The
+  probability of selecting none of the 56 multi-region cells is a
+  post-randomization balance diagnostic under the frozen design; no redraw was
+  made. (b) Selected count in each of 19 nonempty dominant-region strata;
+  population counts appear below the region codes. Empty RGI region 20 is
+  shown with $N_{20}=n_{20}=0$. The figure describes sampling support only;
+  no DEM, PZI, climate, event, or terrain-outcome value entered the frame or
+  draw.}
+  \label{fig:geographic-sample}
+\end{figure}
+\clearpage
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=\textwidth]{../figures/geographic_coverage_gate.pdf}
+  \caption{Registered source-coverage stop before geographic terrain
+  inference. (a) Availability of the nine Copernicus DEM objects required by
+  the failed p00 processing grid. The outlined N41--E048 object contains the
+  1$^\circ$ reporting cell. All six objects in the reporting latitude and
+  southern halo returned HTTP 404; only the three northern-halo objects were
+  available. (b) Computable grid-center fractions under the frozen predicates.
+  The RGI predicate and finite PZI outside RGI have complete coverage at their
+  respective denominators, whereas complete DEM support is zero. The two lower
+  rows restrict the same DEM test to glacier-outline-proximity and
+  PZI-intersection centers.
+  These are source-computability fractions, not susceptible-area fractions.
+  The zero DEM-support fraction triggered the registered stop; no equivalent
+  area or design-based total was calculated.}
+  \label{fig:geographic-coverage}
+\end{figure}
+\clearpage
+
 \section{Event-centered climate test}
 
 For each frozen event candidate, reanalysis will provide near-surface air
@@ -339,8 +743,8 @@ lie on the causal pathway. A preregistered causal diagram will distinguish
 baseline confounders from exposures and mediators.
 
 A hierarchical model will estimate associations while including region and
-site-group effects, detection era, and monitoring intensity. Glacier-
-detachment sites will have a signed liquid-water/effective-pressure contrast;
+site-group effects, detection era, and monitoring intensity.
+Glacier-detachment sites will have a signed liquid-water/effective-pressure contrast;
 glacier-contact rock slopes will have a signed contact-loss/support contrast;
 and permafrost rock slopes will have a cumulative thermal contrast. Predictors
 will be standardized against their own risk-set distributions and will not be
@@ -357,31 +761,100 @@ corrected for slope, aspect, and shading. Results will be reported before and
 after each correction. Regional modeling is warranted only when these
 corrections change an event anomaly enough to affect the prespecified test.
 
+\subsection{Source-coordinate and UTC-onset audit}
+
+After the registered temperature pilot exposed location and clock ambiguity, I
+registered a separate, climate-blind audit before retrieving any new event
+exposure. It fixes the same 53 trigger-time-eligible occurrences and preserves
+every original catalog value. The coordinate target is the initiating source
+or source-area centroid, not a named summit, deposit, lake, gauge, dam, or
+downstream impact. Each assertion records geometry role, evidence method
+(published, digitized, gazetteer, or unavailable), a horizontal-uncertainty
+class that may be unbounded, exact source locator, and reviewer state.
+Digitized points are accepted only when map control supports the registered
+uncertainty class.
+
+Time assertions target the earliest documented motion of the qualifying
+source failure and are stored as half-open UTC intervals. Local clocks without
+a documented civil scale are not converted from longitude. Multi-pulse events
+retain the qualifying pulse range when source volume cannot be allocated by
+pulse. An earthquake origin can be retained only after an event-specific
+source establishes that the named failure was coseismic; it remains labeled a
+trigger-origin proxy rather than a measured detachment clock. Two differently
+named reviewers check each assertion. The final tables, validator, protocol,
+and retrieved legally redistributable source objects are checksummed in a
+manifest frozen before any new reanalysis extraction. Seven otherwise reusable
+objects could not be archived because automated retrieval was blocked; their
+access failures remain explicit in the source table.
+
+The audit accepts source coordinates for 24 of 53 occurrences: 21 have
+uncertainty bounded at 1~km and 3 at 5~km. It accepts UTC intervals for 34,
+comprising 13 minute, 11 second, and 10 range assertions; 3 more retain
+conflicting source intervals and 16 remain unresolved. Nine accepted intervals
+are earthquake trigger-origin proxies, not measured detachment times. Twenty-two
+occurrences have both an accepted source coordinate and UTC interval
+(Figure~\ref{fig:source-audit}). Completeness is strongly source-dependent:
+accepted-coordinate counts include 0 of 7 High Mountain Asia frame records,
+13 of 20 independent rock-search records, and 2 of 2 web-search records. The
+small cells and evidence-availability differences do not describe occurrence
+rates.
+
+Among the 29 occurrences in the registered ERA5 pilot, only 9 have accepted
+source coordinates, 17 have accepted UTC intervals, and 9 have both; 2 retain
+time conflicts. For these 9 occurrences,
+the largest catalog-to-audited separation is 0.677~km and the median is zero.
+That small conditional distance does not validate the other 20 catalog points:
+their main limitation is target geometry or unbounded uncertainty rather than
+decimal precision. Five Denali source-scar digitizations were accepted only
+after independent map review. Conversely, EarthScope timestamps for Elliot
+Creek and Pedersen were retained as station arrivals rather than source onset.
+An independently reviewed USGS second supports Pedersen; Elliot remains
+unresolved, and two Paat primary sources remain separated by two seconds. The
+audit thus changes which observations qualify, even where accepted numeric
+coordinates move little.
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=\textwidth]{../figures/source_time_audit.pdf}
+  \caption{Climate-blind source-coordinate and UTC-onset audit. (a) The 29
+  finite original catalog points and 24 accepted source coordinates. (b)
+  Accepted, conflicting, and unresolved outcomes. (c) Accepted coordinate
+  uncertainty, accepted UTC precision, and reasons for non-accepted times. (d)
+  Acceptance fractions by discovery stream. Nine accepted UTC intervals are
+  earthquake trigger-origin proxies, not detachment clocks. The figure contains
+  no climate or reanalysis values.}\label{fig:source-audit}
+\end{figure}
+
 \subsection{Registered ERA5 temperature pilot}
 
 After freezing the discovery inventory, I registered a narrower extraction
 test before reading temperature at an event location. It selects every
-included, trigger-time-eligible occurrence with finite coordinates, giving 29
-occurrences. Hourly 2-m temperature comes from the public temporal-layout
+included, trigger-time-eligible occurrence with finite catalog coordinates,
+giving 29 occurrences. These are the original discovery coordinates, not the
+later accepted source-coordinate set. Hourly 2-m temperature comes from the
+public temporal-layout
 Icechunk copy of ERA5 snapshot \texttt{T9H8SG2PVXWNY0QNJPJG}
 \citep{Hersbach2020,EarthmoverERA52026}. Surface geopotential and land fraction
 come from the NSF NCAR 0.25-degree ERA5 invariants
 \citep{NCARERA5}. Three fixed, non-event probes matched the temporal and
 spatial layouts exactly before event extraction.
 
-The coordinate requirement retains 29 of the 53 trigger-time-eligible
-occurrences, and coordinate completeness is strongly source-dependent:
-coordinates are present for 2 of 20 records from the independent rock-search
-suite, 11 of 12 from the landslide-tsunami frame, and all 7 from the High
-Mountain Asia frame. The summaries below therefore characterize the
-coordinate-complete subset, not all 53 eligible occurrences.
+The finite-catalog-coordinate requirement retains 29 of the 53
+trigger-time-eligible occurrences, and this input availability is strongly
+source-dependent: coordinates are present for 2 of 20 records from the independent
+rock-search suite, 11 of 12 from the landslide-tsunami frame, and all 7 from
+the High Mountain Asia frame. The later audit accepts source geometry for only
+9 of these 29. The summaries below therefore characterize the registered
+catalog-point subset, not all 53 eligible occurrences or a source-verified
+subset.
 
 For each occurrence, the extraction retains the two nearest distinct grid
 coordinates on each axis. The primary cell has the largest land fraction,
 with distance and coordinates resolving ties; results also retain all four
 cells. The registered primary window contains the 168 complete UTC hours
-before 00:00 UTC on the published catalog date. An audit found that these date
-labels are not uniformly verified UTC: in particular, the Aru-2 local date
+before 00:00 UTC on the published catalog date. The source audit shows that
+only 17 of the 29 occurrences have accepted UTC intervals, while 2 conflict
+and 10 remain unresolved. In particular, the Aru-2 local date
 makes the original window include three post-onset hours. I therefore retain
 the registered pre-date result and add a conservative sensitivity covering
 the seven days ending one full UTC day earlier. Each mean receives a midrank
@@ -404,8 +877,8 @@ and residual ranks of 0.586 and 0.533, respectively.
 
 In the conservative-antecedence window, the occurrence-level median warm-state
 and linear-trend-residual ranks are 0.586 (interquartile range 0.483--0.800)
-and 0.533 (0.300--0.759); 21 and 16 values exceed 0.5. The component-
-representative medians are 0.621 and 0.552. Buffering changes event-year mean
+and 0.533 (0.300--0.759); 21 and 16 values exceed 0.5. The
+component-representative medians are 0.621 and 0.552. Buffering changes event-year mean
 temperature by a median of $-0.050$~K, but the range is $-1.101$ to 0.965~K.
 The other registered warm-state/linear-residual median pairs are 0.552/0.448
 for two days, 0.724/0.655 for 30 days, and 0.533/0.448 for the catalog-date day.
@@ -496,14 +969,38 @@ heights describe possible geometries, not observations or forecasts of a
 failure time.
 
 This version completes the climate-blind frame reconciliation, double
-screening, and registered ERA5 temperature pilot. The unresolved records
-require primary-source follow-up, but they are not silently removed. The pilot
-inspected only its registered temperature endpoints. The next association
-analysis must acquire matched non-failing slopes and freeze glacier-contact
-histories, deformation records, permafrost proxies, additional meteorological
-variables, and the statistical specification before inspecting those new
-exposures. Only then can the study estimate whether hazardous alpine mass
-movements occupy systematically different climatic or cryospheric conditions.
+screening, registered ERA5 temperature pilot, independently reviewed
+source-coordinate and UTC-onset audit, the first case-blind susceptible-
+terrain pilot and held-out susceptible-area convergence test, a post-outcome
+scale-explicit development calculation, and its registered blind numerical
+transfer test. The audit leaves
+29 coordinates and 16
+times unresolved and preserves three time conflicts; none is silently removed.
+The pilot inspected only its registered temperature endpoints and is not
+retroactively recomputed on the accepted audit subset. A later extraction may
+use the 22 occurrences with both accepted fields only under a new frozen
+specification, while retaining all unresolved rows in the reporting frame.
+The terrain pilot supplies candidate denominator objects, but its three windows
+do not estimate regional populations and its connected counts remain scale
+sensitive. The deterministic held-out windows likewise do not estimate a
+global population, and both registered area strata fail their resolution
+criterion. The composite reduces departure in five of six paired development
+diagnostics. Its unchanged blind calculation then passes all eight registered
+checks in four hash-selected windows. This closes a numerical transfer test,
+but the windows have no geographic inclusion probabilities and the strata have
+not been tested against failure observations. The subsequent geographic design
+freezes 1,826 RGI 7-intersecting reporting cells and selects 96 with known
+probabilities. None of the selected cells crosses an RGI-region boundary, a
+1.21\% chance outcome retained without redraw. The frozen sources replay
+exactly, but the coverage-only gate stops at a selected p00 cell with no
+complete DEM-supported reporting center. No equivalent area is calculated;
+therefore neither complete terrain-screen total is estimable and no partial
+total is reported. Physical validation and any later association analysis also
+require matched non-failing slopes, glacier-contact histories, deformation
+records, permafrost proxies, additional meteorological variables, and a frozen
+statistical specification. Only then can the study estimate whether hazardous
+alpine mass movements occupy systematically different climatic or cryospheric
+conditions.
 
 \section{Conclusions}
 
@@ -516,12 +1013,34 @@ require glacier geometry, support change, structure, and deformation.
 In the registered 29-occurrence pilot, central ranks change with the window
 and fitted-linear-trend adjustment. Neighboring cells change ranks and
 anomalies, while elevation scenarios change above-freezing air-temperature
-counts. Coordinate availability also selects a source-dependent subset of the
-53 eligible trigger-time records whose representativeness is unknown.
-Detrended seasonal controls, matched non-failing slopes, and explicit
-competing predictions remain the next tests. The present contribution is a
-sampling frame, protocol, and exposure-sensitivity result, not evidence that
-warming systematically triggered these events.
+counts. The subsequent audit accepts source coordinates for 24 of 53 eligible
+records, UTC intervals for 34, and both for 22. Only 9 of the pilot's 29
+occurrences have accepted source coordinates, so its exposure summaries
+describe registered catalog locations rather than a source-verified sample.
+Coordinate and time acceptance are themselves source-dependent, and their
+representativeness is unknown.
+The blind terrain pilot reproducibly enumerates source-like area, but 30 versus
+90~m grids change primary connected counts by factors of 1.3--3.0. In the
+held-out area test, phase coefficients of variation remain below 0.004, but
+90~m departures reach 26.7--36.6\% for glacier-contact area and 29.1--37.4\%
+for PZI-intersection area in Arctic Canada and Svalbard; both strata fail. A
+post-outcome composite gives 2.6--13.4\% departures in the same windows and is
+lower in five of six paired diagnostics. Its unchanged blind calculation gives
+1.8--5.3\% departures and four-phase coefficients of variation no greater than
+0.00375 in four additional hash-selected windows; all eight registered checks
+pass. This establishes numerical transfer only. The windows are not a
+probability sample, and the calculation has not been tested against failing and
+non-failing slopes. A later signed-beacon draw supplies a separate 96-cell
+probability sample from 1,826 RGI 7-intersecting cells. Its frozen-source
+coverage gate stops before equivalent-area execution because one selected cell
+has zero complete DEM support. The complete design-based
+glacier-outline-proximity and PZI-intersection totals are therefore
+non-estimable from that source; a
+zero or partial estimate would violate the design. A newly frozen,
+source-complete design is required before those totals, detrended seasonal
+controls, or explicit competing predictions can be tested. The present
+contribution is a sampling frame, protocol, and exposure-sensitivity result,
+not evidence that warming systematically triggered these events.
 
 \bibliographystyle{plainnat}
 \bibliography{references}

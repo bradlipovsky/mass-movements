@@ -1,0 +1,19 @@
+HTTP/1.1 200 200
+Content-Type: application/hal+json;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Date: Mon, 31 Aug 2026 14:47:14 GMT
+Server: Apache
+Vary: Origin,Access-Control-Request-Method,Access-Control-Request-Headers
+DSPACE-XSRF-TOKEN: 8aacf991-1e90-43a9-a7cc-f1475920b008
+Set-Cookie: DSPACE-XSRF-COOKIE=8aacf991-1e90-43a9-a7cc-f1475920b008; Path=/server; Secure; HttpOnly; SameSite=None
+Content-Language: en
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+X-Frame-Options: DENY
+Set-Cookie: RCKBMHKB=027ff8be59-56fd-48x7GqFO21yAU4Vthjd4m7mQtzesJ56ZaFdpOw9-F88TyNbvimkaxVUZZJzxcJF5vOkN0; path=/; SameSite=None; Secure
+

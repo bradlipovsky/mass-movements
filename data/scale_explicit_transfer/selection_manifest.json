@@ -1,0 +1,253 @@
+{
+  "manifest_version": "1.0",
+  "created_utc": "2026-08-31T14:35:19Z",
+  "purpose": "Seal the inventory-only blind-transfer selection before any selected-window elevation or permafrost value is accessed.",
+  "registration_commit": "882a39ed0c1e7257cf90e0e022cd5dd08a031257",
+  "registered_estimator_sha256": "15f7bff92b7ae44e5f64eac0db70598eb0f318f9a6ac5e2e689e5de9bc89e231",
+  "registered_estimator_preoutput_commit": "acec6401bfa02b20d375e03d3eb82910148edf90",
+  "preterrain_boundary": {
+    "dem_accessed": false,
+    "pzi_accessed": false,
+    "event_catalog_accessed_for_selection": false,
+    "replacement_or_tuning_permitted": false,
+    "statement": "Only RGI 7 attribute tables, archive metadata, HTTP headers, and registered hash keys were read to make this selection. The selected-window DEM, PZI, and glacier geometries had not been opened when this manifest was created."
+  },
+  "selection": {
+    "unopened_region_pool": ["02", "04", "06", "09", "10", "12", "14", "15", "16", "17", "18"],
+    "fixed_region_order": ["10", "18", "15", "04"],
+    "region_ranking": [
+      {
+        "rank": 1,
+        "region": "10",
+        "name": "North Asia",
+        "digest": "5b16eb47c0f2b54bea77eabd0dea16b33b9bdd8a9783f0c5049511d56a08cf9e"
+      },
+      {
+        "rank": 2,
+        "region": "18",
+        "name": "New Zealand",
+        "digest": "639be755f4b9273620eb69e3d29225955514d050c7b77f3564f5086fe65c4f60"
+      },
+      {
+        "rank": 3,
+        "region": "15",
+        "name": "South Asia East",
+        "digest": "69d3cfbe87ae15f42742f7a7fbd17c3b1d7b446bc522bee3793df72d0556719f"
+      },
+      {
+        "rank": 4,
+        "region": "04",
+        "name": "Arctic Canada South",
+        "digest": "73ee9d1d5eecc4ea0cf63fe6fae52e0b8148ed6e5e463cb1e0da65d01e20bb47"
+      }
+    ],
+    "eligibility": {
+      "minimum_glacier_count": 10,
+      "minimum_inventory_area_km2": 1.0,
+      "cell_size_degrees": 1,
+      "longitude_convention": "[-180,180); +180 is normalized to -180",
+      "choice": "smallest registered SHA-256 window digest within each fixed region"
+    },
+    "eligible_window_count": 199,
+    "eligible_window_counts_by_region": {
+      "04": 67,
+      "10": 70,
+      "15": 54,
+      "18": 8
+    },
+    "windows": [
+      {
+        "region": "10",
+        "name": "North Asia",
+        "south": 65,
+        "west": 145,
+        "glacier_count": 37,
+        "inventory_area_km2": 12.85427659165791,
+        "window_key": "rgi7.0|10|south=+65|west=+145",
+        "window_digest": "02c3f6745618b8cd244f3e3490d27e2f31774bf45d13ea1cc74bfc0bd53b5a81"
+      },
+      {
+        "region": "18",
+        "name": "New Zealand",
+        "south": -44,
+        "west": 171,
+        "glacier_count": 140,
+        "inventory_area_km2": 15.87220066543176,
+        "window_key": "rgi7.0|18|south=-44|west=+171",
+        "window_digest": "1705b06330274ae2555e87f554f34448efb0431a9eaec5d1b498401eb969a11b"
+      },
+      {
+        "region": "15",
+        "name": "South Asia East",
+        "south": 28,
+        "west": 96,
+        "glacier_count": 305,
+        "inventory_area_km2": 49.519180813560624,
+        "window_key": "rgi7.0|15|south=+28|west=+096",
+        "window_digest": "01264f80513da793366f524b7d5d40d86bf4d61750dc438e9a25831b07e8ee04"
+      },
+      {
+        "region": "04",
+        "name": "Arctic Canada South",
+        "south": 72,
+        "west": -79,
+        "glacier_count": 77,
+        "inventory_area_km2": 84.88805487594391,
+        "window_key": "rgi7.0|04|south=+72|west=-079",
+        "window_digest": "02090dcbc3a3afe990ab7b3aab0867d085da385a9d63845203d993b808bac96b"
+      }
+    ]
+  },
+  "rgi_identity": {
+    "collection": "Randolph Glacier Inventory - A Dataset of Global Glacier Outlines, Version 7",
+    "short_name": "NSIDC-0770",
+    "version": "7",
+    "doi": "10.5067/F6JMOVY5NAVZ",
+    "cmr_collection_url": "https://cmr.earthdata.nasa.gov/search/collections.json?short_name=NSIDC-0770&version=7",
+    "official_distribution_root": "https://daacdata.apps.nsidc.org/pub/DATASETS/nsidc0770_rgi_v7/",
+    "retrieval_role": "Exact selected bytes were retrieved from a version-labelled RGI consortium-author mirror because the authoritative NSIDC object endpoint requires Earthdata authentication.",
+    "identity_limit": "NASA CMR identifies the authoritative collection, DOI, and NSIDC distribution. Filenames and embedded metadata agree, but byte equivalence between the mirror archives and authentication-protected NSIDC objects was not established."
+  },
+  "archives": [
+    {
+      "region": "10",
+      "filename": "RGI2000-v7.0-G-10_north_asia.zip",
+      "retrieval_url": "https://cluster.klima.uni-bremen.de/~fmaussion/misc/rgi7_data/rgi70_official/RGI2000-v7.0-G-global/RGI2000-v7.0-G-10_north_asia.zip",
+      "official_object_url": "https://daacdata.apps.nsidc.org/pub/DATASETS/nsidc0770_rgi_v7/RGI2000-v7.0-G-global/RGI2000-v7.0-G-10_north_asia.zip",
+      "retrieved_response_date": "Mon, 31 Aug 2026 14:31:30 GMT",
+      "last_modified": "Fri, 18 Aug 2023 09:05:06 GMT",
+      "etag": "\"8854c8-6032ed3241480\"",
+      "size_bytes": 8934600,
+      "sha256": "25f4f8655050dbf973f5ee2eec6050cc08bf7fdb7cf2c0dc27e8a939a2cb9d7a",
+      "attribute_member": "RGI2000-v7.0-G-10_north_asia-attributes.csv",
+      "metadata_member": "RGI2000-v7.0-G-10_north_asia-attributes_metadata.json",
+      "local_archive_policy": "ignored; archive hash and exact extracted members retained"
+    },
+    {
+      "region": "18",
+      "filename": "RGI2000-v7.0-G-18_new_zealand.zip",
+      "retrieval_url": "https://cluster.klima.uni-bremen.de/~fmaussion/misc/rgi7_data/rgi70_official/RGI2000-v7.0-G-global/RGI2000-v7.0-G-18_new_zealand.zip",
+      "official_object_url": "https://daacdata.apps.nsidc.org/pub/DATASETS/nsidc0770_rgi_v7/RGI2000-v7.0-G-global/RGI2000-v7.0-G-18_new_zealand.zip",
+      "retrieved_response_date": "Mon, 31 Aug 2026 14:31:30 GMT",
+      "last_modified": "Fri, 18 Aug 2023 09:13:16 GMT",
+      "etag": "\"4dc800-6032ef058e300\"",
+      "size_bytes": 5097472,
+      "sha256": "7bae18fe1ff65bfa2df89ab9ccb362d6910c7861fe52017d2ed967bdcfd744e6",
+      "attribute_member": "RGI2000-v7.0-G-18_new_zealand-attributes.csv",
+      "metadata_member": "RGI2000-v7.0-G-18_new_zealand-attributes_metadata.json",
+      "local_archive_policy": "ignored; archive hash and exact extracted members retained"
+    },
+    {
+      "region": "15",
+      "filename": "RGI2000-v7.0-G-15_south_asia_east.zip",
+      "retrieval_url": "https://cluster.klima.uni-bremen.de/~fmaussion/misc/rgi7_data/rgi70_official/RGI2000-v7.0-G-global/RGI2000-v7.0-G-15_south_asia_east.zip",
+      "official_object_url": "https://daacdata.apps.nsidc.org/pub/DATASETS/nsidc0770_rgi_v7/RGI2000-v7.0-G-global/RGI2000-v7.0-G-15_south_asia_east.zip",
+      "retrieved_response_date": "Mon, 31 Aug 2026 14:31:30 GMT",
+      "last_modified": "Fri, 18 Aug 2023 09:11:10 GMT",
+      "etag": "\"1890c13-6032ee8d64780\"",
+      "size_bytes": 25758739,
+      "sha256": "089cbe0743669448aa3b7d1f91915853b9d014cb1ba6e3b01c0a926946bf9ebe",
+      "attribute_member": "RGI2000-v7.0-G-15_south_asia_east-attributes.csv",
+      "metadata_member": "RGI2000-v7.0-G-15_south_asia_east-attributes_metadata.json",
+      "local_archive_policy": "ignored; archive hash and exact extracted members retained"
+    },
+    {
+      "region": "04",
+      "filename": "RGI2000-v7.0-G-04_arctic_canada_south.zip",
+      "retrieval_url": "https://cluster.klima.uni-bremen.de/~fmaussion/misc/rgi7_data/rgi70_official/RGI2000-v7.0-G-global/RGI2000-v7.0-G-04_arctic_canada_south.zip",
+      "official_object_url": "https://daacdata.apps.nsidc.org/pub/DATASETS/nsidc0770_rgi_v7/RGI2000-v7.0-G-global/RGI2000-v7.0-G-04_arctic_canada_south.zip",
+      "retrieved_response_date": "Mon, 31 Aug 2026 14:31:30 GMT",
+      "last_modified": "Fri, 18 Aug 2023 09:02:24 GMT",
+      "etag": "\"168d8ff-6032ec97c2800\"",
+      "size_bytes": 23648511,
+      "sha256": "9f5e5acabaf2a0a9fdf6d339d7f432791484a7848b92cdbbe89a04b915c26845",
+      "attribute_member": "RGI2000-v7.0-G-04_arctic_canada_south-attributes.csv",
+      "metadata_member": "RGI2000-v7.0-G-04_arctic_canada_south-attributes_metadata.json",
+      "local_archive_policy": "ignored; archive hash and exact extracted members retained"
+    }
+  ],
+  "runtime": {
+    "python": "3.12.11",
+    "pandas": "3.0.5",
+    "numpy": "2.5.2",
+    "selection_test_result": "6/6 manifest-bound selection tests passed"
+  },
+  "artifacts": {
+    "protocol/scale-explicit-blind-transfer.md": {
+      "size_bytes": 9569,
+      "sha256": "7dc2ceb15a684bc3a3629c5e9272a2ae6d1cb991a081d27bedb62c981ed24a10"
+    },
+    "scripts/scale_explicit_transfer_selection.py": {
+      "size_bytes": 2581,
+      "sha256": "96c7697f9d6aa73e4dcca18639cc1a909083494a3cb83071bf9b193f6ecbd3b4"
+    },
+    "tests/test_scale_explicit_transfer.py": {
+      "size_bytes": 4214,
+      "sha256": "919385431f37a0d0ccc742e47a78c6b5149092cbffd5606c5b5ffea5377f109b"
+    },
+    "scripts/susceptible_area_convergence.py": {
+      "size_bytes": 9274,
+      "sha256": "9ac2644257ce1ba90bd8f2edbc6e9b47ea152fa02304b0c4b994e495a512b20c"
+    },
+    "data/area_convergence/source/rgi_nsidc_collection_metadata.json": {
+      "size_bytes": 16776,
+      "sha256": "7ead9c78b539de614305b271c9519d308333678c1b8f3096c65764b7261b02d2"
+    },
+    "data/scale_explicit_transfer/eligible_windows.csv": {
+      "size_bytes": 41854,
+      "sha256": "fa8842e3fc98a054172e92d2cf3238ea5bb7b14832f97c8fa11667f6c259a799"
+    },
+    "data/scale_explicit_transfer/windows.csv": {
+      "size_bytes": 948,
+      "sha256": "3c5f2565772295a461637272966d0f38a867f65a700a02b7cabb5bff23342454"
+    },
+    "data/scale_explicit_transfer/selection_source/RGI2000-v7.0-G-04_arctic_canada_south-attributes.csv": {
+      "size_bytes": 3007618,
+      "sha256": "d2737e90014461d8a6664abf28a939fd27a417ccd65da99429012cc91152e009"
+    },
+    "data/scale_explicit_transfer/selection_source/RGI2000-v7.0-G-10_north_asia-attributes.csv": {
+      "size_bytes": 1931595,
+      "sha256": "cc7d757fb21a1624baf83371dc1974c21ae08bfa8f8970722e981cd3b841a31c"
+    },
+    "data/scale_explicit_transfer/selection_source/RGI2000-v7.0-G-15_south_asia_east-attributes.csv": {
+      "size_bytes": 4997019,
+      "sha256": "03dd4654b757d38457021ed49d322c09e24b1c9a29f4fb0589be7b36166db369"
+    },
+    "data/scale_explicit_transfer/selection_source/RGI2000-v7.0-G-18_new_zealand-attributes.csv": {
+      "size_bytes": 822742,
+      "sha256": "b3dc8117eff93d97bb42e40acd136cce59cf05451c42ce432f92d157591fa248"
+    },
+    "data/scale_explicit_transfer/selection_source/RGI2000-v7.0-G-04_arctic_canada_south-attributes_metadata.json": {
+      "size_bytes": 7225,
+      "sha256": "fd23a32abb4059afbcd3c6048393a3f7ce6c533608379c29303acc884d799d39"
+    },
+    "data/scale_explicit_transfer/selection_source/RGI2000-v7.0-G-10_north_asia-attributes_metadata.json": {
+      "size_bytes": 7225,
+      "sha256": "fd23a32abb4059afbcd3c6048393a3f7ce6c533608379c29303acc884d799d39"
+    },
+    "data/scale_explicit_transfer/selection_source/RGI2000-v7.0-G-15_south_asia_east-attributes_metadata.json": {
+      "size_bytes": 7225,
+      "sha256": "fd23a32abb4059afbcd3c6048393a3f7ce6c533608379c29303acc884d799d39"
+    },
+    "data/scale_explicit_transfer/selection_source/RGI2000-v7.0-G-18_new_zealand-attributes_metadata.json": {
+      "size_bytes": 7225,
+      "sha256": "fd23a32abb4059afbcd3c6048393a3f7ce6c533608379c29303acc884d799d39"
+    },
+    "data/scale_explicit_transfer/selection_source/rgi_04.headers": {
+      "size_bytes": 340,
+      "sha256": "d758e72c124d8ec72700c2bd6953e75dd342150668e0f8ef84b22324aa2d4a41"
+    },
+    "data/scale_explicit_transfer/selection_source/rgi_10.headers": {
+      "size_bytes": 338,
+      "sha256": "6ccbc1255d20925ef695945a1bb80c240386dcb79de4017ada678e13e547d502"
+    },
+    "data/scale_explicit_transfer/selection_source/rgi_15.headers": {
+      "size_bytes": 340,
+      "sha256": "58b194db269ef22e33fb139e9166c293e0c04cd25d216d280cd963e3599a66ea"
+    },
+    "data/scale_explicit_transfer/selection_source/rgi_18.headers": {
+      "size_bytes": 338,
+      "sha256": "a958abc5740f4d9fed1e295ca48cbe857c6fd316106e22da2204c632ee0e17f2"
+    }
+  }
+}

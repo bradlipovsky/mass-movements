@@ -1,0 +1,4 @@
+region,region_name,south,west,key,digest,glacier_count,catalog_area_km2
+03,Arctic Canada North,81,-85,rgi7.0|03|south=+81|west=-085,012dc6d1865059d80ab3033b76c740c324c6a76714049c4a31d35704d8f3ae3d,116,521.7686354568048
+07,Svalbard and Jan Mayen,77,18,rgi7.0|07|south=+77|west=+018,0434d768cf5e995404eb7f6a1b4446a7aa11ff37495bf0dc05d703f8228427e2,18,189.59056597176277
+08,Scandinavia,69,21,rgi7.0|08|south=+69|west=+021,1350821d7673e6914225fbdad143bf2e01f69ac8cb067a978c6f1b36bb82d7f0,39,4.926179330876607

@@ -1,0 +1,10 @@
+data/source_objects/*.geojson binary
+data/source_objects/*.html binary
+data/source_objects/*.json binary
+data/source_objects/*.pdf binary
+data/source_objects/*.xml binary
+data/scale_explicit_transfer/selection_source/*.headers binary
+data/scale_explicit_transfer/source/*.headers binary
+data/scale_explicit_transfer/source/pzi_README.txt binary
+data/geographic_total/source/**/*.headers binary
+data/geographic_total/source/**/*.body binary

@@ -1,0 +1,56 @@
+{
+  "manifest_version": "1.0",
+  "finalized_utc": "2026-08-31T16:12:54Z",
+  "result_commit": "ec71ab9bef35e763f3b0fd71799ec90283ae66e9",
+  "authorized_retry_commit": "2b2d4930dd0a9c973e53d7439f25fb7827205a2b",
+  "registered_estimator_commit": "acec6401bfa02b20d375e03d3eb82910148edf90",
+  "registered_estimator_sha256": "15f7bff92b7ae44e5f64eac0db70598eb0f318f9a6ac5e2e689e5de9bc89e231",
+  "result": {
+    "window_stratum_decisions": 8,
+    "ordinary_positive_references": 8,
+    "structural_zeros": 0,
+    "maximum_departure_90m": 0.05278932494199955,
+    "maximum_phase_cv": 0.003752016701846543,
+    "glacier_proximity_stratum": "pass",
+    "permafrost_stratum": "pass",
+    "overall_transfer_gate": "pass"
+  },
+  "verification": {
+    "numeric_audit": "approved; no P0/P1/P2 findings",
+    "presentation_and_mechanics_audit": "approved; no remaining findings",
+    "tests": "11/11 passed",
+    "source_and_test_lines": 498,
+    "source_and_test_line_limit": 500,
+    "notebook_code_lines": 43,
+    "notebook_code_line_limit": 60,
+    "manuscript_pdf_pages": 22,
+    "latex_warnings": 0
+  },
+  "files": {
+    "data/scale_explicit_transfer/result_manifest.json": {
+      "bytes": 3894,
+      "sha256": "c2646991360c63317b3569262ef1317ee8e570a5345007ba1a329468ef0d63ac"
+    },
+    "notebooks/scale_explicit_transfer.ipynb": {
+      "bytes": 72520,
+      "sha256": "a1901891c11ca02e4e46765bea07d391d663831d0766ea6c7351eff19741dfad"
+    },
+    "figures/scale_explicit_transfer.png": {
+      "bytes": 192116,
+      "sha256": "2fb187c555e4305a7293a8f658219b430057df8ddd0eda7244a84da1bf8f2e6c"
+    },
+    "figures/scale_explicit_transfer.pdf": {
+      "bytes": 27222,
+      "sha256": "e40fb6022c29396f4caae429c604cdbd0d85c6ac84092ea8c56e4e5dfaa146b6"
+    },
+    "latex/main.tex": {
+      "bytes": 56425,
+      "sha256": "1ddb393a6bbf33ceeca7a42ae2af030dd6a8f092535f194ff26870defb3ccf41"
+    },
+    "latex/main.pdf": {
+      "bytes": 622845,
+      "sha256": "f83088240549a12837e1c40101382a338b7ccb1c4cde97f57796be301c880278"
+    }
+  },
+  "interpretive_boundary": "The registered numerical resolution and phase gate transfers in four hash-selected windows. This does not validate susceptibility, event-source resemblance, climate association, incidence, hazard, or a global terrain distribution."
+}

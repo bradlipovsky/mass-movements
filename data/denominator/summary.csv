@@ -1,0 +1,187 @@
+region,region_name,stratum,resolution_m,slope_deg,contact_m,pzi_min,edge_scope,object_count,area_m2,eligible_d10_count,eligible_d30_count,eligible_d100_count
+01,Alaska,glacier,0,,,,all,140,467217455.34589124,123,137,139
+01,Alaska,glacier,0,,,,contained,134,447385691.43657225,120,132,134
+01,Alaska,glacier_contact,30,25,0,,all,8255,17175600.0,0,0,59
+01,Alaska,glacier_contact,30,25,0,,contained,8247,17163900.0,0,0,59
+01,Alaska,glacier_contact,30,25,100,,all,1635,65222100.0,172,344,599
+01,Alaska,glacier_contact,30,25,100,,contained,1627,64763100.0,171,341,593
+01,Alaska,glacier_contact,30,25,300,,all,1571,125523000.0,172,278,478
+01,Alaska,glacier_contact,30,25,300,,contained,1559,119204100.0,168,271,471
+01,Alaska,glacier_contact,30,30,0,,all,6459,13043700.0,0,0,39
+01,Alaska,glacier_contact,30,30,0,,contained,6455,13037400.0,0,0,39
+01,Alaska,glacier_contact,30,30,100,,all,1766,50603400.0,131,331,617
+01,Alaska,glacier_contact,30,30,100,,contained,1761,50220000.0,130,328,612
+01,Alaska,glacier_contact,30,30,300,,all,1747,96198300.0,185,336,578
+01,Alaska,glacier_contact,30,30,300,,contained,1741,93328200.0,181,330,572
+01,Alaska,glacier_contact,30,35,0,,all,4642,9025200.0,0,0,28
+01,Alaska,glacier_contact,30,35,0,,contained,4638,9020700.0,0,0,28
+01,Alaska,glacier_contact,30,35,100,,all,1707,35341200.0,83,276,566
+01,Alaska,glacier_contact,30,35,100,,contained,1703,35007300.0,82,273,562
+01,Alaska,glacier_contact,30,35,300,,all,1889,64827900.0,141,347,614
+01,Alaska,glacier_contact,30,35,300,,contained,1883,62894700.0,138,343,609
+01,Alaska,glacier_contact,90,25,0,,all,2257,37260000.0,5,161,1072
+01,Alaska,glacier_contact,90,25,0,,contained,2251,37203300.0,5,161,1071
+01,Alaska,glacier_contact,90,25,100,,all,1095,66071700.0,174,369,634
+01,Alaska,glacier_contact,90,25,100,,contained,1088,65626200.0,173,365,627
+01,Alaska,glacier_contact,90,25,300,,all,921,119402100.0,206,344,538
+01,Alaska,glacier_contact,90,25,300,,contained,913,113975100.0,203,336,530
+01,Alaska,glacier_contact,90,30,0,,all,1639,25806600.0,3,96,742
+01,Alaska,glacier_contact,90,30,0,,contained,1634,25766100.0,3,96,742
+01,Alaska,glacier_contact,90,30,100,,all,1022,46534500.0,128,301,554
+01,Alaska,glacier_contact,90,30,100,,contained,1017,46226700.0,127,298,550
+01,Alaska,glacier_contact,90,30,300,,all,950,84264300.0,181,329,560
+01,Alaska,glacier_contact,90,30,300,,contained,944,82069200.0,178,325,556
+01,Alaska,glacier_contact,90,35,0,,all,1057,15657300.0,0,53,435
+01,Alaska,glacier_contact,90,35,0,,contained,1053,15624900.0,0,53,435
+01,Alaska,glacier_contact,90,35,100,,all,809,28228500.0,58,202,426
+01,Alaska,glacier_contact,90,35,100,,contained,805,28090800.0,58,201,422
+01,Alaska,glacier_contact,90,35,300,,all,818,49482900.0,120,266,463
+01,Alaska,glacier_contact,90,35,300,,contained,814,47879100.0,117,263,459
+01,Alaska,permafrost,30,25,,0.1,all,3416,477826200.0,332,567,1034
+01,Alaska,permafrost,30,25,,0.1,contained,3368,334820700.0,316,546,1003
+01,Alaska,permafrost,30,25,,0.5,all,356,24237900.0,44,73,126
+01,Alaska,permafrost,30,25,,0.5,contained,353,19143900.0,42,70,123
+01,Alaska,permafrost,30,30,,0.1,all,3672,343110600.0,402,724,1228
+01,Alaska,permafrost,30,30,,0.1,contained,3622,300181500.0,376,692,1190
+01,Alaska,permafrost,30,30,,0.5,all,419,20739600.0,42,85,141
+01,Alaska,permafrost,30,30,,0.5,contained,416,16515900.0,40,82,138
+01,Alaska,permafrost,30,35,,0.1,all,4406,202933800.0,418,848,1534
+01,Alaska,permafrost,30,35,,0.1,contained,4366,192087900.0,398,822,1505
+01,Alaska,permafrost,30,35,,0.5,all,429,16630200.0,41,94,137
+01,Alaska,permafrost,30,35,,0.5,contained,426,13349700.0,39,91,134
+01,Alaska,permafrost,90,25,,0.1,all,1634,428044500.0,417,697,1029
+01,Alaska,permafrost,90,25,,0.1,contained,1591,368242200.0,396,665,991
+01,Alaska,permafrost,90,25,,0.5,all,246,21951000.0,51,86,142
+01,Alaska,permafrost,90,25,,0.5,contained,242,17188200.0,48,82,138
+01,Alaska,permafrost,90,30,,0.1,all,1892,281888100.0,462,753,1207
+01,Alaska,permafrost,90,30,,0.1,contained,1855,262221300.0,441,729,1178
+01,Alaska,permafrost,90,30,,0.5,all,252,17366400.0,42,84,139
+01,Alaska,permafrost,90,30,,0.5,contained,248,14393700.0,39,80,135
+01,Alaska,permafrost,90,35,,0.1,all,1830,140980500.0,361,690,1112
+01,Alaska,permafrost,90,35,,0.1,contained,1803,134208900.0,346,670,1088
+01,Alaska,permafrost,90,35,,0.5,all,236,12717000.0,33,72,132
+01,Alaska,permafrost,90,35,,0.5,contained,232,10773000.0,30,69,128
+11,Central Europe,glacier,0,,,,all,472,366916147.8745842,237,340,468
+11,Central Europe,glacier,0,,,,contained,435,285084480.45123756,212,311,435
+11,Central Europe,glacier_contact,30,25,0,,all,15731,30008700.0,0,0,44
+11,Central Europe,glacier_contact,30,25,0,,contained,15663,29878200.0,0,0,43
+11,Central Europe,glacier_contact,30,25,100,,all,2394,128539800.0,328,583,908
+11,Central Europe,glacier_contact,30,25,100,,contained,2332,118548000.0,307,547,863
+11,Central Europe,glacier_contact,30,25,300,,all,1979,261601200.0,212,356,562
+11,Central Europe,glacier_contact,30,25,300,,contained,1922,203315400.0,187,323,523
+11,Central Europe,glacier_contact,30,30,0,,all,13092,24416100.0,0,0,29
+11,Central Europe,glacier_contact,30,30,0,,contained,13030,24303600.0,0,0,29
+11,Central Europe,glacier_contact,30,30,100,,all,2872,108156600.0,292,611,1067
+11,Central Europe,glacier_contact,30,30,100,,contained,2812,102393000.0,278,587,1026
+11,Central Europe,glacier_contact,30,30,300,,all,2422,220783500.0,289,472,793
+11,Central Europe,glacier_contact,30,30,300,,contained,2352,195668100.0,265,439,746
+11,Central Europe,glacier_contact,30,35,0,,all,10385,18805500.0,0,0,20
+11,Central Europe,glacier_contact,30,35,0,,contained,10333,18710100.0,0,0,20
+11,Central Europe,glacier_contact,30,35,100,,all,3081,86603400.0,210,598,1087
+11,Central Europe,glacier_contact,30,35,100,,contained,3020,82512000.0,198,574,1052
+11,Central Europe,glacier_contact,30,35,300,,all,2794,175670100.0,299,556,943
+11,Central Europe,glacier_contact,30,35,300,,contained,2727,161910900.0,277,523,903
+11,Central Europe,glacier_contact,90,25,0,,all,4435,78140700.0,30,391,2136
+11,Central Europe,glacier_contact,90,25,0,,contained,4383,77201100.0,30,384,2111
+11,Central Europe,glacier_contact,90,25,100,,all,1732,141150600.0,317,638,988
+11,Central Europe,glacier_contact,90,25,100,,contained,1680,133285500.0,303,606,944
+11,Central Europe,glacier_contact,90,25,300,,all,1124,267016500.0,272,451,660
+11,Central Europe,glacier_contact,90,25,300,,contained,1073,214650000.0,248,415,614
+11,Central Europe,glacier_contact,90,30,0,,all,3731,62856000.0,22,279,1712
+11,Central Europe,glacier_contact,90,30,0,,contained,3688,62102700.0,22,274,1691
+11,Central Europe,glacier_contact,90,30,100,,all,1838,114777000.0,282,598,1030
+11,Central Europe,glacier_contact,90,30,100,,contained,1790,109366200.0,272,573,994
+11,Central Europe,glacier_contact,90,30,300,,all,1385,218084400.0,348,550,854
+11,Central Europe,glacier_contact,90,30,300,,contained,1331,199486800.0,326,515,810
+11,Central Europe,glacier_contact,90,35,0,,all,2952,47320200.0,15,205,1264
+11,Central Europe,glacier_contact,90,35,0,,contained,2914,46720800.0,15,202,1248
+11,Central Europe,glacier_contact,90,35,100,,all,1779,88144200.0,212,536,958
+11,Central Europe,glacier_contact,90,35,100,,contained,1736,84515400.0,202,517,924
+11,Central Europe,glacier_contact,90,35,300,,all,1446,166989600.0,327,567,905
+11,Central Europe,glacier_contact,90,35,300,,contained,1403,154823400.0,308,540,868
+11,Central Europe,permafrost,30,25,,0.1,all,3958,892067400.0,235,430,916
+11,Central Europe,permafrost,30,25,,0.1,contained,3869,547213500.0,201,387,860
+11,Central Europe,permafrost,30,25,,0.5,all,980,161576100.0,169,258,380
+11,Central Europe,permafrost,30,25,,0.5,contained,955,149028300.0,155,241,361
+11,Central Europe,permafrost,30,30,,0.1,all,5321,710943300.0,411,753,1501
+11,Central Europe,permafrost,30,30,,0.1,contained,5198,625037400.0,374,697,1429
+11,Central Europe,permafrost,30,30,,0.5,all,1196,142776900.0,190,311,479
+11,Central Europe,permafrost,30,30,,0.5,contained,1163,135306000.0,176,291,455
+11,Central Europe,permafrost,30,35,,0.1,all,6726,513052200.0,591,1168,2162
+11,Central Europe,permafrost,30,35,,0.1,contained,6616,479337300.0,561,1118,2102
+11,Central Europe,permafrost,30,35,,0.5,all,1496,118735200.0,200,366,581
+11,Central Europe,permafrost,30,35,,0.5,contained,1463,112978800.0,188,348,560
+11,Central Europe,permafrost,90,25,,0.1,all,1780,832728600.0,379,660,1053
+11,Central Europe,permafrost,90,25,,0.1,contained,1708,638992800.0,343,608,989
+11,Central Europe,permafrost,90,25,,0.5,all,713,157690800.0,190,302,451
+11,Central Europe,permafrost,90,25,,0.5,contained,684,148262400.0,179,284,426
+11,Central Europe,permafrost,90,30,,0.1,all,2632,635793300.0,601,1027,1653
+11,Central Europe,permafrost,90,30,,0.1,contained,2549,582276600.0,568,977,1584
+11,Central Europe,permafrost,90,30,,0.5,all,832,135334800.0,214,336,545
+11,Central Europe,permafrost,90,30,,0.5,contained,806,127777500.0,203,319,522
+11,Central Europe,permafrost,90,35,,0.1,all,3057,435658500.0,677,1201,1950
+11,Central Europe,permafrost,90,35,,0.1,contained,2996,414533700.0,652,1167,1901
+11,Central Europe,permafrost,90,35,,0.5,all,937,108839700.0,222,384,610
+11,Central Europe,permafrost,90,35,,0.5,contained,913,102821400.0,211,371,590
+13,Central Asia,glacier,0,,,,all,144,105426194.76478614,93,117,143
+13,Central Asia,glacier,0,,,,contained,135,102494934.8815401,87,109,135
+13,Central Asia,glacier_contact,30,25,0,,all,4347,9174600.0,0,0,37
+13,Central Asia,glacier_contact,30,25,0,,contained,4337,9158400.0,0,0,37
+13,Central Asia,glacier_contact,30,25,100,,all,594,39334500.0,106,191,289
+13,Central Asia,glacier_contact,30,25,100,,contained,583,37697400.0,101,185,280
+13,Central Asia,glacier_contact,30,25,300,,all,453,75997800.0,89,130,197
+13,Central Asia,glacier_contact,30,25,300,,contained,441,69945300.0,80,121,187
+13,Central Asia,glacier_contact,30,30,0,,all,3579,7229700.0,0,0,18
+13,Central Asia,glacier_contact,30,30,0,,contained,3571,7217100.0,0,0,18
+13,Central Asia,glacier_contact,30,30,100,,all,742,33275700.0,105,220,336
+13,Central Asia,glacier_contact,30,30,100,,contained,730,32302800.0,101,212,326
+13,Central Asia,glacier_contact,30,30,300,,all,560,65675700.0,111,178,252
+13,Central Asia,glacier_contact,30,30,300,,contained,545,61643700.0,102,168,240
+13,Central Asia,glacier_contact,30,35,0,,all,2499,4837500.0,0,0,10
+13,Central Asia,glacier_contact,30,35,0,,contained,2494,4830300.0,0,0,10
+13,Central Asia,glacier_contact,30,35,100,,all,990,23576400.0,57,201,404
+13,Central Asia,glacier_contact,30,35,100,,contained,979,23164200.0,56,195,396
+13,Central Asia,glacier_contact,30,35,300,,all,847,46831500.0,123,211,337
+13,Central Asia,glacier_contact,30,35,300,,contained,830,44782200.0,117,198,324
+13,Central Asia,glacier_contact,90,25,0,,all,1305,22615200.0,7,125,620
+13,Central Asia,glacier_contact,90,25,0,,contained,1292,22453200.0,7,124,618
+13,Central Asia,glacier_contact,90,25,100,,all,532,42654600.0,123,216,338
+13,Central Asia,glacier_contact,90,25,100,,contained,518,41164200.0,118,209,326
+13,Central Asia,glacier_contact,90,25,300,,all,304,74374200.0,103,151,208
+13,Central Asia,glacier_contact,90,25,300,,contained,292,69417000.0,94,142,199
+13,Central Asia,glacier_contact,90,30,0,,all,1058,17504100.0,7,89,469
+13,Central Asia,glacier_contact,90,30,0,,contained,1049,17398800.0,7,88,468
+13,Central Asia,glacier_contact,90,30,100,,all,589,34392600.0,105,220,351
+13,Central Asia,glacier_contact,90,30,100,,contained,577,33469200.0,101,214,344
+13,Central Asia,glacier_contact,90,30,300,,all,363,60822900.0,123,189,252
+13,Central Asia,glacier_contact,90,30,300,,contained,349,57501900.0,115,179,242
+13,Central Asia,glacier_contact,90,35,0,,all,673,10497600.0,4,53,266
+13,Central Asia,glacier_contact,90,35,0,,contained,669,10432800.0,4,52,265
+13,Central Asia,glacier_contact,90,35,100,,all,581,21991500.0,52,167,318
+13,Central Asia,glacier_contact,90,35,100,,contained,573,21651300.0,51,164,312
+13,Central Asia,glacier_contact,90,35,300,,all,425,38685600.0,110,209,290
+13,Central Asia,glacier_contact,90,35,300,,contained,412,37130400.0,104,199,278
+13,Central Asia,permafrost,30,25,,0.1,all,6022,598111200.0,475,946,1782
+13,Central Asia,permafrost,30,25,,0.1,contained,5937,531935100.0,437,898,1728
+13,Central Asia,permafrost,30,25,,0.5,all,1631,277139700.0,208,346,572
+13,Central Asia,permafrost,30,25,,0.5,contained,1591,236022300.0,185,321,545
+13,Central Asia,permafrost,30,30,,0.1,all,7099,394899300.0,556,1086,2156
+13,Central Asia,permafrost,30,30,,0.1,contained,7017,369909900.0,520,1040,2096
+13,Central Asia,permafrost,30,30,,0.5,all,1732,198846000.0,240,403,636
+13,Central Asia,permafrost,30,30,,0.5,contained,1695,181187100.0,217,378,607
+13,Central Asia,permafrost,30,35,,0.1,all,7811,179672400.0,355,895,2047
+13,Central Asia,permafrost,30,35,,0.1,contained,7727,172387800.0,333,866,2009
+13,Central Asia,permafrost,30,35,,0.5,all,2408,104477400.0,220,413,740
+13,Central Asia,permafrost,30,35,,0.5,contained,2364,98856000.0,204,393,717
+13,Central Asia,permafrost,90,25,,0.1,all,2300,449485200.0,466,828,1340
+13,Central Asia,permafrost,90,25,,0.1,contained,2237,405866700.0,429,781,1287
+13,Central Asia,permafrost,90,25,,0.5,all,699,240545700.0,217,330,468
+13,Central Asia,permafrost,90,25,,0.5,contained,667,207530100.0,194,304,440
+13,Central Asia,permafrost,90,30,,0.1,all,2345,258471000.0,457,845,1428
+13,Central Asia,permafrost,90,30,,0.1,contained,2292,241695900.0,432,809,1387
+13,Central Asia,permafrost,90,30,,0.5,all,829,159537600.0,256,391,573
+13,Central Asia,permafrost,90,30,,0.5,contained,799,145994400.0,238,369,549
+13,Central Asia,permafrost,90,35,,0.1,all,1634,94859100.0,210,502,932
+13,Central Asia,permafrost,90,35,,0.1,contained,1599,91408500.0,199,482,904
+13,Central Asia,permafrost,90,35,,0.5,all,850,70810200.0,165,344,532
+13,Central Asia,permafrost,90,35,,0.5,contained,829,67886100.0,154,329,514

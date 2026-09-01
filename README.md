@@ -21,6 +21,13 @@ The protocol manuscript is in `latex/`, the frozen discovery inventory is in
 mechanics fields; it is not an inference sample. Run `make check` to validate
 the catalog and `make` to compile `latex/main.pdf`.
 
+The climate-blind source-coordinate and UTC-onset audit is registered in
+`protocol/source-time-audit.md`; its separate analysis-layer tables are in
+`data/event_audit/`. Run `make check-event-audit` for its synthetic and
+artifact tests. Run `make notebook-event-audit` to re-execute its climate-blind
+map and completeness summaries. The frozen discovery table is not amended by
+this audit.
+
 The point-history pilot uses a modern isolated environment because its public
 ERA5 source is an Icechunk/Zarr store:
 
@@ -41,3 +48,18 @@ environment is not named `.venv`.
 
 Project decisions and review are tracked in
 [GitHub issues](https://github.com/bradlipovsky/mass-movements/issues).
+
+The held-out susceptible-area convergence test is registered in
+`protocol/susceptible-area-convergence.md`. Run `make
+artifacts-area-convergence` to regenerate its 225-row area table, six fixed
+window decisions, executed notebook, figure, tests, and manuscript. Both
+terrain screens presently fail the registered all-window resolution criterion;
+the repository therefore does not extrapolate them to global incidence or
+hazard.
+
+The post-outcome scale-explicit development registered in
+`protocol/scale-explicit-steep-area.md` reuses only those exposed windows. Run
+`make artifacts-scale-explicit` to regenerate its equivalent-area tables,
+executed notebook, figure, tests, and manuscript. The composite calculation
+reduces 90 m departure in five of six paired diagnostics, but it is not an
+external validation and is not extrapolated globally.

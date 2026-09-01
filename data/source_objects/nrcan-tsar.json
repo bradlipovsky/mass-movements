@@ -1,0 +1,88 @@
+{   
+    "id": "JBQLJ",
+    "links": {
+       "self": { "href": "https://geogratis.gc.ca/services/geoname/en/geonames/JBQLJ" },
+       
+       "feature": { "href": "https://geogratis.gc.ca/services/geoname/en/features/0ca08e05849c20c30bbd5b6d00b64134" },
+       "language": { "href": "https://geogratis.gc.ca/services/geoname/en/codes/language/und" },
+       "status": { "href": "https://geogratis.gc.ca/services/geoname/en/codes/status/official" },
+       "concise": { "href": "https://geogratis.gc.ca/services/geoname/en/codes/concise/MTN" },
+       "generic": { "href": "https://geogratis.gc.ca/services/geoname/en/codes/generic/2701" },  
+       "province": { "href": "https://geogratis.gc.ca/services/geoname/en/codes/province/59" },
+       "provider": { "href": "https://geogratis.gc.ca/services/geoname/en/providers/1261" },
+       "alternate": [ 
+           { "mediatype": "application/json", "href": "https://geogratis.gc.ca/services/geoname/en/geonames/JBQLJ.json" },
+           { "mediatype": "text/html", "href": "https://geogratis.gc.ca/services/geoname/en/geonames/JBQLJ.html" },
+           { "mediatype": "text/csv", "href": "https://geogratis.gc.ca/services/geoname/en/geonames/JBQLJ.csv" }, 
+           { "mediatype": "application/vnd.google-earth.kml+xml", "href": "https://geogratis.gc.ca/services/geoname/en/geonames/JBQLJ.kml" },
+           { "mediatype": "application/gml+xml", "href": "https://geogratis.gc.ca/services/geoname/en/geonames/JBQLJ.gml" },
+           { "mediatype": "application/vnd.geo+json", "href": "https://geogratis.gc.ca/services/geoname/en/geonames/JBQLJ.geojson" }
+       ]
+    },
+    "name": "Tsar Mountain",
+    
+    "language": {
+        "code": "und",
+        
+        "links": {
+            "self": { "href": "https://geogratis.gc.ca/services/geoname/en/codes/language/und" }
+        } 
+    },
+    "feature": {
+        "id": "0ca08e05849c20c30bbd5b6d00b64134",
+        
+        "links": {
+            "self": { "href": "https://geogratis.gc.ca/services/geoname/en/features/0ca08e05849c20c30bbd5b6d00b64134" }
+        }
+    },
+    "category": "O",
+    "status": {
+        "code": "official",
+        
+        "links": {
+            "self": { "href": "https://geogratis.gc.ca/services/geoname/en/codes/status/official" }
+        } 
+    },
+    "concise": {
+        "code": "MTN",
+        
+        "links": {
+            "self": { "href": "https://geogratis.gc.ca/services/geoname/codes/concise/MTN" }
+        } 
+    },
+    "generic": {
+        "code": "2701",
+        
+        "links": {
+            "self": { "href": "https://geogratis.gc.ca/services/geoname/en/codes/generic/2701" }
+        } 
+    },   
+    "location": "Kootenay Land District",
+    "province": {
+        "code": "59",
+        
+        "links": {
+            "self": { "href": "https://geogratis.gc.ca/services/geoname/en/codes/province/59" }
+        } 
+    },
+    "latitude": 52.096111,
+    "longitude": -117.806389,
+    "map": ["083C04"],
+    "relevance": 250000,
+    "bbox": [
+        -117.826389,
+        52.076111,
+        -117.786389,
+        52.116111
+    ],
+    "accuracy": 100,
+    "provider":  {
+        "id": 1261,
+        
+        "links": {
+            "self": { "href": "https://geogratis.gc.ca/services/geoname/en/providers/1261" }
+        }
+    }, 
+    "position": {"type":"Point","coordinates":[-117.806389,52.096111]},
+    "decision": "1961-05-03"
+}

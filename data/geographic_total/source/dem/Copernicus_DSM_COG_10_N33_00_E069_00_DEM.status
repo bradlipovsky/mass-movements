@@ -1,0 +1,6 @@
+request_start_utc	2026-08-31T19:39:44Z
+request_complete_utc	2026-08-31T19:39:49Z
+curl_exit	0
+http_code	200
+url_effective	https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N33_00_E069_00_DEM/Copernicus_DSM_COG_10_N33_00_E069_00_DEM.tif
+size_download	40634332

@@ -1,0 +1,47 @@
+{
+  "manifest_version": "1.0",
+  "created_utc": "2026-08-31T05:51:29Z",
+  "protocol_commit": "69c9209",
+  "implementation_commit": "bf6fd5a3c614f685e529081653d6ee1ab7d8579c",
+  "registered_code_budget": {
+    "analysis_lines": 269,
+    "test_lines": 164,
+    "notebook_code_lines": 43,
+    "total_lines": 476,
+    "limit_lines": 480
+  },
+  "execution": {
+    "object_rows": 220384,
+    "summary_rows": 186,
+    "validation_sample_rows": 45,
+    "validation_review_agree": 45,
+    "byte_identical_full_rerun": true
+  },
+  "primary_30m_object_counts": {
+    "01": {"glacier": 140, "glacier_contact": 1766, "permafrost": 3672},
+    "11": {"glacier": 472, "glacier_contact": 2872, "permafrost": 5321},
+    "13": {"glacier": 144, "glacier_contact": 742, "permafrost": 7099}
+  },
+  "files": {
+    "protocol/denominator-pilot.md": {"size_bytes": 14838, "sha256": "846b06bd33df0453ce960451b0335d942ccc7bf4dc957b2618fd5e134b916626"},
+    "requirements-denominator.txt": {"size_bytes": 156, "sha256": "9c80611e53eb0626e119998a69f61fb1ab98cdb09f3e29a8661f93f5b506d62e"},
+    "scripts/denominator_pilot.py": {"size_bytes": 14163, "sha256": "5f733147434f859ea3cbfc815da77a1bd8ae83137d80e59a65243d6d3e23508a"},
+    "tests/test_denominator_pilot.py": {"size_bytes": 9329, "sha256": "631b3d8d7966ad8e375fffc289d7c9e27545f507a6c15a153be5bd98ea2bdda9"},
+    "data/denominator/PROVENANCE.md": {"size_bytes": 4085, "sha256": "12231a08677287abead8352ae770c9977736bb4ca6f6c033b160a682499a62f8"},
+    "data/denominator/eligible_windows.csv": {"size_bytes": 46683, "sha256": "58a160ffa0e9ce2c99e4a8550297851829de7d9ac8e3f73100671c97632f9e4d"},
+    "data/denominator/source_manifest.json": {"size_bytes": 31974, "sha256": "94cbf1997b26fc86ee9d91f965810cce71fa277f8b7bfb310b0f42ef94614453"},
+    "data/denominator/objects.csv": {"size_bytes": 33251295, "sha256": "6ddec97b1cd31cdd3a77501455085e1cd2114e2c0995f1a5dfc057a52b3eda6a"},
+    "data/denominator/summary.csv": {"size_bytes": 13844, "sha256": "b71caf02d45e306e9e7203175d56f4b9428c3ef3377dce8f1f76353dbd8c98ff"},
+    "data/denominator/windows.csv": {"size_bytes": 3855, "sha256": "609185f85bf72e06e487b2345900584f942440f861dbd0a71eff059436fd4412"},
+    "data/denominator/validation_sample.csv": {"size_bytes": 10821, "sha256": "c0177e2d1ba61052f15f0b4b18613f0c96d6bbfc9299e00b8a0dda0469b7d539"},
+    "data/denominator/validation_review.csv": {"size_bytes": 7239, "sha256": "a0fd53a4b220048799f19823d7c29608d5c1ae53a19333c4463c85bfe45be71a"},
+    "notebooks/denominator_pilot.ipynb": {"size_bytes": 374623, "sha256": "8ba01dfe5a9ca65700d4844b6b91aede6c0f20fedbeff92754d996ebbc3e2098"},
+    "figures/denominator_windows.png": {"size_bytes": 540827, "sha256": "4b641ba9f6ad9268cba186482c899b2a12b75f9bd795e3f8935cb6e94e6a56c9"},
+    "figures/denominator_windows.pdf": {"size_bytes": 150069, "sha256": "ba5b74000d2b7fc050e39c372a20d15b0ba66cdc81596c67317b2be37623f087"},
+    "figures/denominator_sensitivity.png": {"size_bytes": 126828, "sha256": "c4acb56cf1961df9ac3bab03aa839c8977ec4494a3ce9edb035d6d6a55a7b021"},
+    "figures/denominator_sensitivity.pdf": {"size_bytes": 23636, "sha256": "18c31e66133c756fa44f3ff034de3cede3508b2c299c66b34e257258346d82e3"},
+    "latex/main.tex": {"size_bytes": 42876, "sha256": "5395ecc366260829081252552cd1bcee0f70604b8f0134e78a76587594219f76"},
+    "latex/references.bib": {"size_bytes": 10258, "sha256": "e143f6c007ddbd2b9ac50389f099a5f99feb3dfdad7fe9c1369112a0ac81c2fc"},
+    "latex/main.pdf": {"size_bytes": 527621, "sha256": "f910909479882b3f86b55137cf86765c037dc4a38cf055be00e28099c6eb80a1"}
+  }
+}

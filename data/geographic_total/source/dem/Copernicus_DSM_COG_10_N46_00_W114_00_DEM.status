@@ -1,0 +1,6 @@
+request_start_utc	2026-08-31T19:41:28Z
+request_complete_utc	2026-08-31T19:41:34Z
+curl_exit	0
+http_code	200
+url_effective	https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N46_00_W114_00_DEM/Copernicus_DSM_COG_10_N46_00_W114_00_DEM.tif
+size_download	40595565
