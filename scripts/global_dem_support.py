@@ -134,9 +134,10 @@ def fetch_inventory(instance):
         record.update(parse_status="ok", is_truncated=truncated,
                       next_continuation_token=next_token or "", matched_dem_keys=len(page_rows))
         (raw / "pages.json").write_text(json.dumps(pages, indent=2) + "\n")
-        if any(row["key"] in keys for row in page_rows):
+        page_keys = [row["key"] for row in page_rows]
+        if len(set(page_keys)) != len(page_keys) or any(key in keys for key in page_keys):
             record.update(parse_status="error", parse_error="duplicate exact DEM key"); (raw / "pages.json").write_text(json.dumps(pages, indent=2) + "\n"); raise ValueError(record["parse_error"])
-        keys.update(row["key"] for row in page_rows)
+        keys.update(page_keys)
         rows.extend(page_rows)
         if not truncated: break
         if not next_token or next_token in tokens:

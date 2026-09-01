@@ -1,12 +1,12 @@
 {
-  "manifest_version": "1.1",
-  "created_utc": "2026-09-01T00:30:33Z",
+  "manifest_version": "1.2",
+  "created_utc": "2026-09-01T00:33:46Z",
   "issue": "https://github.com/bradlipovsky/mass-movements/issues/23",
   "status": "pre_inventory_access",
   "parent_commit": "2b5e7e098e99275b4f08a984cd27080c4ca95561",
-  "predecessor_commit": "e33651468b2dde22035eca6066af6ade1f988e83",
-  "predecessor_manifest_sha256": "adb40f9e8bffec2cc6983bc51521467fb8744965f83d00b2e6606dbe35a5938b",
-  "amendment_registration": "https://github.com/bradlipovsky/mass-movements/issues/23#issuecomment-5486709373",
+  "predecessor_commit": "0d50c55521bf569f8734211c117a126b89100851",
+  "predecessor_manifest_sha256": "cc60abed7b5a976b397681be406a3ca95de09bd52a75799eed43560b6f9ad68e",
+  "amendment_registration": "https://github.com/bradlipovsky/mass-movements/issues/23#issuecomment-5486740673",
   "population": {
     "frame_commit": "0ff1c327468b5fb874ef2f87b1d64107838418e5",
     "frame_sha256": "482c9d585777317ab69363481db3df1011e2d4e8ce84c3826b151406cace9879",
@@ -49,8 +49,8 @@
     "https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Data/DEM.html"
   ],
   "code_budget": {
-    "analysis_lines": 194,
-    "test_lines": 106,
+    "analysis_lines": 195,
+    "test_lines": 105,
     "total_lines": 300,
     "limit_lines": 300
   },
@@ -67,12 +67,12 @@
       "sha256": "5ed83622841514fce276bc22879ac70d6d89938f6f295dad01158d78d97ab366"
     },
     "scripts/global_dem_support.py": {
-      "bytes": 10987,
-      "sha256": "34b58c48e06e6a79be120eb1435720470e8724890ca49ab83bf7ee380bd6087d"
+      "bytes": 11053,
+      "sha256": "14ace3166d0888baada1ce985ca0720c6f7fd8799a615fd1af02b85d08a490f4"
     },
     "tests/test_global_dem_support.py": {
-      "bytes": 7305,
-      "sha256": "d476b1b600127c6ab7d03bf7bfc2e9995ed34076f59c491c4b3fb21437deeaac"
+      "bytes": 8196,
+      "sha256": "d6289d70499adde74e1a06e21d53e9bf35d169edbd593e145bcf954967b3dffc"
     },
     "data/global_dem_support/expected_objects.csv": {
       "bytes": 6269699,

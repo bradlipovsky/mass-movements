@@ -1,27 +1,21 @@
-import hashlib, json, tempfile, unittest
+import hashlib, io, json, tempfile, unittest
 from pathlib import Path
+from urllib.error import HTTPError
 from unittest.mock import patch
-
 import pandas as pd
-
 from scripts.global_dem_support import (HASHES, INSTANCES, KEY, expected_rows, fetch_inventory,
                                         inventory_url, normalize_longitude, parse_listing, stem, support_tables,
                                         verify_inputs, verify_manifest)
-
-
 class Response:
     status = 200
     def __init__(self, body): self.body = body
     def __enter__(self): return self
     def __exit__(self, *args): pass
     def read(self): return self.body
-
-
 def listing(keys, truncated=False, token=None):
     contents = "".join(f"<Contents><Key>{key}</Key><LastModified>2021-01-01T00:00:00Z</LastModified><ETag>&quot;abc&quot;</ETag><Size>12</Size></Contents>" for key in keys)
     next_token = f"<NextContinuationToken>{token}</NextContinuationToken>" if token else ""
     return f'<ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><IsTruncated>{str(truncated).lower()}</IsTruncated>{contents}{next_token}</ListBucketResult>'.encode()
-
 class GlobalDemSupportTests(unittest.TestCase):
     def test_frozen_inputs_and_expected_population(self):
         verify_inputs()
@@ -32,14 +26,12 @@ class GlobalDemSupportTests(unittest.TestCase):
         sizes = rows.groupby(["cell_key", "instance"]).agg(n=("object_id", "nunique"),
                                                             core=("role", lambda x: (x == "core").sum()))
         self.assertTrue(((sizes.n == 9) & (sizes.core == 1)).all())
-
     def test_identity_format_and_antimeridian(self):
         self.assertEqual(normalize_longitude(180), -180)
         self.assertEqual(stem("glo30", -6, 7), "Copernicus_DSM_COG_10_S06_00_E007_00_DEM")
         self.assertEqual(stem("glo90", 8, 180), "Copernicus_DSM_COG_30_N08_00_W180_00_DEM")
         key = "Copernicus_DSM_COG_30_N08_00_W180_00_DEM/Copernicus_DSM_COG_30_N08_00_W180_00_DEM.tif"
         self.assertTrue(KEY.fullmatch(key))
-
     def test_listing_parser_is_exact_and_instance_specific(self):
         body = b'''<ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><IsTruncated>false</IsTruncated><Contents><Key>Copernicus_DSM_COG_30_N08_00_W180_00_DEM/Copernicus_DSM_COG_30_N08_00_W180_00_DEM.tif</Key><LastModified>2021-01-01T00:00:00Z</LastModified><ETag>"abc"</ETag><Size>12</Size></Contents><Contents><Key>Copernicus_DSM_COG_30_N08_00_W180_00_DEM/AUX.tif</Key><LastModified>2021-01-01T00:00:00Z</LastModified><ETag>"def"</ETag><Size>3</Size></Contents></ListBucketResult>'''
         rows, truncated, token = parse_listing(body, "glo90")
@@ -47,7 +39,6 @@ class GlobalDemSupportTests(unittest.TestCase):
         self.assertEqual(parse_listing(body, "glo30")[0], [])
         for malformed in (b"<foo/>", b"<ListBucketResult/>"):
             with self.assertRaises(ValueError): parse_listing(malformed, "glo90")
-
     def test_pagination_retains_pages_and_rejects_duplicates(self):
         one = "Copernicus_DSM_COG_30_N08_00_W180_00_DEM/Copernicus_DSM_COG_30_N08_00_W180_00_DEM.tif"
         two = "Copernicus_DSM_COG_30_N09_00_W180_00_DEM/Copernicus_DSM_COG_30_N09_00_W180_00_DEM.tif"
@@ -59,7 +50,8 @@ class GlobalDemSupportTests(unittest.TestCase):
             self.assertEqual(len(json.loads((Path(temporary) / "source_raw/glo90/pages.json").read_text())), 2)
             with patch("scripts.global_dem_support.urlopen", side_effect=[Response(listing([one], True, "again")), Response(listing([one]))]):
                 with self.assertRaisesRegex(ValueError, "duplicate"): fetch_inventory("glo90")
-
+            with patch("scripts.global_dem_support.urlopen", return_value=Response(listing([one, one]))):
+                with self.assertRaisesRegex(ValueError, "duplicate"): fetch_inventory("glo90")
     def test_malformed_page_and_repeated_token_are_durable_stops(self):
         with tempfile.TemporaryDirectory() as temporary, patch("scripts.global_dem_support.OUTPUT", Path(temporary)):
             with patch("scripts.global_dem_support.urlopen", return_value=Response(b"<foo/>")):
@@ -67,8 +59,15 @@ class GlobalDemSupportTests(unittest.TestCase):
             raw = Path(temporary) / "source_raw/glo30"
             self.assertEqual(json.loads((raw / "pages.json").read_text())[0]["parse_status"], "error")
             self.assertEqual((raw / "page_0001.xml").read_bytes(), b"<foo/>")
+            with patch("scripts.global_dem_support.urlopen", return_value=Response(listing([], True))):
+                with self.assertRaisesRegex(ValueError, "continuation"): fetch_inventory("glo30")
             with patch("scripts.global_dem_support.urlopen", side_effect=[Response(listing([], True, "same")), Response(listing([], True, "same"))]):
                 with self.assertRaisesRegex(ValueError, "continuation"): fetch_inventory("glo30")
+            failure = HTTPError("https://example.invalid", 404, "missing", {}, io.BytesIO(b"denied"))
+            with patch("scripts.global_dem_support.urlopen", side_effect=failure):
+                with self.assertRaisesRegex(ValueError, "404"): fetch_inventory("glo30")
+            self.assertEqual((raw / "page_0001.xml").read_bytes(), b"denied")
+            self.assertEqual(json.loads((raw / "pages.json").read_text())[0]["parse_status"], "http_error")
 
     def test_listing_url_cannot_address_an_object(self):
         for instance in INSTANCES:
