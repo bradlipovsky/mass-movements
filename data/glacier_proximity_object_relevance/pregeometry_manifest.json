@@ -8,9 +8,11 @@
   "environment": {
     "fiona": "1.10.1",
     "geos": "3.13.1",
+    "numpy": "2.5.2",
     "pandas": "3.0.5",
     "proj": "9.5.1",
     "pyproj": "3.7.2",
+    "python": "3.12.11",
     "shapely": "2.1.2"
   },
   "files": {
@@ -32,23 +34,19 @@
     },
     "requirements-object-relevance.txt": {
       "bytes": 70,
-      "sha256": "8c9d9d1a1bac6c8ee22ca939fade8c53b59a266527777f7b2532c27b4ef157f1"
-    },
-    "scripts/denominator_pilot.py": {
-      "bytes": 14163,
-      "sha256": "5f733147434f859ea3cbfc815da77a1bd8ae83137d80e59a65243d6d3e23508a"
+      "sha256": "1f4f047533327b8861ef8d01335c28a1ba269475d0d2334bdce8c04630c62b1a"
     },
     "scripts/geographic_sample.py": {
       "bytes": 14291,
       "sha256": "21bb6d250f67aa55c42f8efabe3302a2a0a045c950f1455805e2e0ba2cb4faaa"
     },
     "scripts/glacier_proximity_object_relevance.py": {
-      "bytes": 14574,
-      "sha256": "f48bea01eb4bac7372c0634d40d48516d102804453dc80cd45f4e45f27f9495e"
+      "bytes": 15724,
+      "sha256": "e9febc8a5c90b2bf2530463bc5f84a85cffb051eebfd1cd1608037c4dfc2559f"
     },
     "tests/test_glacier_proximity_object_relevance.py": {
-      "bytes": 4878,
-      "sha256": "f749a152a68b79ba5617601039d10be77eb6c558f7863e86737bcbb9ff3accd8"
+      "bytes": 4952,
+      "sha256": "8654af6d24fe77cabeddeb9be69f8b42f5140f2544c9f16f52cec73cce0df333"
     }
   },
   "issue": 25,
