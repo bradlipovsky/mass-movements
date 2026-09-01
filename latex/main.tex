@@ -64,9 +64,12 @@ of variation are 0.000061--0.00375. The windows are not a probability sample,
 so this result tests numerical transfer rather than physical susceptibility or
 global representativeness. A subsequent public, signed-beacon draw selects 96
 cells from a frozen 1,826-cell near-global RGI 7-intersecting frame with known
-geographic inclusion probabilities. Terrain outcomes remain unopened, so this
-establishes sampling support rather than a susceptibility total or
-physical-validation result. I then specify detrended seasonal controls,
+geographic inclusion probabilities. Exact source replay then stages four
+30~m elevation phases and one PZI subset per cell. A registered coverage-only
+run stops before any equivalent-area calculation because one selected cell has
+zero complete DEM-supported reporting centers. Neither complete terrain-screen
+total is therefore estimable from the frozen source, and no partial estimate is
+reported. I then specify detrended seasonal controls,
 matched non-failing slopes, mechanism-specific glacier and permafrost
 observations, and multiplicity control. Uneven observation and unresolved
 primary sources prevent these counts from estimating a frequency trend. No
@@ -647,12 +650,32 @@ design, the probability of zero is 0.0121. This is not a replacement or redraw
 criterion, but it prevents interpreting the realized sample as observed
 cross-region coverage.
 
-This draw supplies known inclusion probabilities for later Horvitz--Thompson
-totals of glacier-outline-proximity and PZI-intersection equivalent steep area.
-It does not yet estimate either total: no selected-cell elevation, steepness,
-glacier-distance, or PZI value has been opened. The two masks may overlap and
-will remain separate outcomes unless their union is calculated directly under
-a later frozen execution.
+This draw supplies known inclusion probabilities for Horvitz--Thompson totals
+of glacier-outline-proximity and PZI-intersection equivalent steep area. The
+two masks can overlap and remain separate outcomes. After independent
+pre-outcome approval, source staging retained 693 available Copernicus DEM
+objects and 83 registered HTTP 404 responses. It produced 384 phase-specific
+DEM rasters and 96 PZI subsets. All 480 staged arrays replay from retained
+source bytes with identical transforms and value hashes and zero maximum
+absolute difference.
+
+The coverage-only calculation stopped before evaluating equivalent area.
+Figure~\ref{fig:geographic-coverage} isolates the failed p00 cell, whose south
+and west edges are 41$^\circ$N and 48$^\circ$E. All six DEM objects covering
+the reporting-cell latitude and southern halo returned HTTP 404; only three
+objects in the northern halo row were available. Thus none of 10,303,590
+reporting centers had complete DEM support. In contrast, the RGI predicate was
+computable at all reporting centers and PZI was finite at all 10,302,530
+outside-RGI centers. The registered rule required positive complete DEM
+support in every selected cell and phase. It therefore stopped before atomic
+coverage writes and before any equivalent-area calculation.
+
+The failed cell belongs to a stratum with $N_h=29$ and $n_h=4$. Its registered
+outcome is undefined rather than zero, so neither stratum mean nor either
+complete 1,826-cell total can be formed. No unit was redrawn, deleted, imputed,
+or assigned a substitute source, and no partial total is reported. This is
+source-specific non-estimability, not evidence of zero equivalent terrain area
+or low physical susceptibility.
 
 \begin{figure}[p]
   \centering
@@ -667,6 +690,26 @@ a later frozen execution.
   no DEM, PZI, climate, event, or terrain-outcome value entered the frame or
   draw.}
   \label{fig:geographic-sample}
+\end{figure}
+\clearpage
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=\textwidth]{../figures/geographic_coverage_gate.pdf}
+  \caption{Registered source-coverage stop before geographic terrain
+  inference. (a) Availability of the nine Copernicus DEM objects required by
+  the failed p00 processing grid. The outlined N41--E048 object contains the
+  1$^\circ$ reporting cell. All six objects in the reporting latitude and
+  southern halo returned HTTP 404; only the three northern-halo objects were
+  available. (b) Computable grid-center fractions under the frozen predicates.
+  The RGI predicate and finite PZI outside RGI have complete coverage at their
+  respective denominators, whereas complete DEM support is zero. The two lower
+  rows restrict the same DEM test to glacier-outline-proximity and
+  PZI-intersection centers.
+  These are source-computability fractions, not susceptible-area fractions.
+  The zero DEM-support fraction triggered the registered stop; no equivalent
+  area or design-based total was calculated.}
+  \label{fig:geographic-coverage}
 \end{figure}
 \clearpage
 
@@ -948,9 +991,11 @@ but the windows have no geographic inclusion probabilities and the strata have
 not been tested against failure observations. The subsequent geographic design
 freezes 1,826 RGI 7-intersecting reporting cells and selects 96 with known
 probabilities. None of the selected cells crosses an RGI-region boundary, a
-1.21\% chance outcome retained without redraw. Terrain values remain unopened,
-so the design does not yet estimate either susceptible-area total. Physical
-validation and any later association analysis also
+1.21\% chance outcome retained without redraw. The frozen sources replay
+exactly, but the coverage-only gate stops at a selected p00 cell with no
+complete DEM-supported reporting center. No equivalent area is calculated;
+therefore neither complete terrain-screen total is estimable and no partial
+total is reported. Physical validation and any later association analysis also
 require matched non-failing slopes, glacier-contact histories, deformation
 records, permafrost proxies, additional meteorological variables, and a frozen
 statistical specification. Only then can the study estimate whether hazardous
@@ -986,12 +1031,16 @@ lower in five of six paired diagnostics. Its unchanged blind calculation gives
 pass. This establishes numerical transfer only. The windows are not a
 probability sample, and the calculation has not been tested against failing and
 non-failing slopes. A later signed-beacon draw supplies a separate 96-cell
-probability sample from 1,826 RGI 7-intersecting cells, but opens no terrain
-outcome. Calculating design-based glacier- and permafrost-proximity totals,
-detrended seasonal controls, and explicit competing predictions therefore
-remain future tests. The present contribution is a sampling frame, protocol,
-and exposure-sensitivity result, not evidence that warming systematically
-triggered these events.
+probability sample from 1,826 RGI 7-intersecting cells. Its frozen-source
+coverage gate stops before equivalent-area execution because one selected cell
+has zero complete DEM support. The complete design-based
+glacier-outline-proximity and PZI-intersection totals are therefore
+non-estimable from that source; a
+zero or partial estimate would violate the design. A newly frozen,
+source-complete design is required before those totals, detrended seasonal
+controls, or explicit competing predictions can be tested. The present
+contribution is a sampling frame, protocol, and exposure-sensitivity result,
+not evidence that warming systematically triggered these events.
 
 \bibliographystyle{plainnat}
 \bibliography{references}
