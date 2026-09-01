@@ -1,5 +1,5 @@
 {
-  "boundary": "No geometry screen has run; geometry action may not read Issue 23 inventory or selected sample.",
+  "boundary": "The predecessor geometry action stopped atomically with no screen output; the successor geometry action may not read Issue 23 inventory or selected sample.",
   "buffers": {
     "proximity_m": 101,
     "quad_segs": 32,
@@ -15,6 +15,11 @@
     "python": "3.12.11",
     "shapely": "2.1.2"
   },
+  "execution": {
+    "ordered_map": true,
+    "start_method": "fork",
+    "workers": 8
+  },
   "files": {
     "data/geographic_sample/frame.csv": {
       "bytes": 188594,
@@ -29,8 +34,8 @@
       "sha256": "8b828c4075fde3c007ec0fc867a855a3913d348d77321e8996e4687ff3f3193a"
     },
     "protocol/glacier-proximity-object-relevance.md": {
-      "bytes": 4608,
-      "sha256": "2ca47b24dd8e334ac46877c867f6a09cf477f118b944f493f86c0594387ae116"
+      "bytes": 6209,
+      "sha256": "146fd02aaf624c2fb6610993dcc810b5a1a954110ced5e87ead571dfcef49d0c"
     },
     "requirements-object-relevance.txt": {
       "bytes": 70,
@@ -41,16 +46,32 @@
       "sha256": "21bb6d250f67aa55c42f8efabe3302a2a0a045c950f1455805e2e0ba2cb4faaa"
     },
     "scripts/glacier_proximity_object_relevance.py": {
-      "bytes": 15724,
-      "sha256": "e9febc8a5c90b2bf2530463bc5f84a85cffb051eebfd1cd1608037c4dfc2559f"
+      "bytes": 18100,
+      "sha256": "df673bd459b087d93228f80ef8f1843deda4f7245a7ce8c0a35de36bf2b7b037"
     },
     "tests/test_glacier_proximity_object_relevance.py": {
-      "bytes": 4952,
-      "sha256": "8654af6d24fe77cabeddeb9be69f8b42f5140f2544c9f16f52cec73cce0df333"
+      "bytes": 6226,
+      "sha256": "d844682d8d87fc9c0874b10de49d82542e7eb9aa7a18fb656ff51943eeb5c01d"
     }
   },
   "issue": 25,
   "population_cells": 1826,
+  "predecessor_stop": {
+    "commit": "ca722a5a0d901105706fd3f5993970794f06fc4d",
+    "failed_rgi_id": "RGI2000-v7.0-G-03-03101",
+    "no_geometry_outputs": true,
+    "pregeometry_manifest_sha256": "9ace2029781a1a449ba3bd65cbb220da8436ad0f929e36a9575f70df0232b940"
+  },
+  "repair": {
+    "absolute_area_change_m2_max": 0.1,
+    "boundary_hausdorff_distance_m_max": 0.02,
+    "hausdorff_densify": 0.01,
+    "keep_collapsed": true,
+    "method": "linework",
+    "record_component_count": true,
+    "relative_area_change_max": 1e-7,
+    "source_segmentize_degrees": 0.001
+  },
   "schemas": {
     "object_screen.csv": [
       "cell_key",
@@ -71,7 +92,17 @@
       "output_type",
       "projected_area_before_m2",
       "projected_area_after_m2",
+      "absolute_area_change_m2",
       "relative_area_change",
+      "boundary_hausdorff_distance_m",
+      "input_components",
+      "output_components",
+      "input_holes",
+      "output_holes",
+      "input_vertices",
+      "output_vertices",
+      "repair_method",
+      "keep_collapsed",
       "shapely_version",
       "geos_version",
       "proj_version",

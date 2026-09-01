@@ -28,18 +28,38 @@ be read before the geometry screen is sealed.
 For cell \(i\), densify the WGS84 reporting-cell edges at 0.01 degree and
 project them to the registered local Lambert azimuthal equal-area coordinate
 system. Load every complete RGI outline intersecting the inverse-projected
-1,100 m reporting-cell envelope. Repair a geometry made invalid by projection
-only with Shapely linework `make_valid`, require polygonal valid output and
-projected relative area change no greater than \(10^{-8}\), and retain a
-source-outline-identified repair ledger. Invalid source-WGS84 geometry stops.
+1,100 m reporting-cell envelope. Interpret each published RGI ring as straight
+segments in EPSG:4326; after longitude unwrapping, subdivide every segment by
+linear longitude-latitude interpolation to at most 0.001 degrees before LAEA
+projection. This approximates the nonlinear projected image and does not add
+observational detail. Repair a geometry still invalid after projection only
+with Shapely linework `make_valid`, retaining every noded component and
+requiring polygonal valid output,
+projected relative area change no greater than \(10^{-7}\), and absolute area
+change no greater than 0.1 m2. Also require densified discrete boundary
+Hausdorff displacement no greater than 0.02 m and noncollapsed polygonal
+output. Record all polygon-component changes without deleting small parts and
+retain a source-outline-identified repair ledger. Invalid
+source-WGS84 geometry stops. These joint bounds are the public
+successor to the first geometry action, which stopped atomically on
+`RGI2000-v7.0-G-03-03101`: the initial repair stopped on a numerical
+self-intersection; subsequent geometry-only diagnosis found two residual
+shell-hole contact cases with less than 0.011 m representation sensitivity and
+a sparse-edge projection artifact that structure repair would move by 128 m.
+Uniform source segmentization resolves the latter without a topology repair.
+Across the all-region preflight census, five residual invalid incidences pass
+the joint linework gates; relative to structure, their 101 m buffers are
+identical or weakly larger by at most 0.1044 m2. Segmentization and linework can
+change component and hole counts for thin source degeneracies; those changes
+are retained and disclosed, not treated as added observational detail.
 
 Let \(R_i\) be the reporting polygon and \(G_i\) the union of these projected
 outlines. The registered glacier-proximity continuum is outside \(G_i\),
 inside \(R_i\), and at closed distance no greater than 100 m from \(G_i\).
-Approximate it conservatively with an outward 101 m buffer. Buffer that region
-outward by 1,001 m, using exactly 32 segments per quadrant for both buffers.
-The minimum radial reach of the latter polygon is
-\(1001\cos(\pi/128)=1000.699\) m, so it contains the exact 1,000 m continuum.
+Approximate it conservatively with an outward 101 m buffer using exactly 32
+segments per quadrant. Test delivery-unit footprints with the exact closed
+`dwithin` predicate at 1,001 m from that region; this contains the exact 1,000
+m continuum and avoids a second polygon-buffer approximation.
 This deliberately broad screen contains the registered 300 m plane-support
 disk, phase shifts, and aligned aggregation footprint. It does not model the
 bilinear source interpolation kernel and therefore does not establish exact
@@ -56,7 +76,9 @@ candidate set. A cell with an empty continuous proximity region is
 Before geometry execution, commit the protocol, code, tests, frozen input
 hashes, software versions, output schemas, and a pre-geometry manifest. The
 geometry action may read the frame, Issue 23 expected identities, RGI source
-manifest, and 19 local archives only. It writes a 16,434-row spatial
+manifest, and 19 local archives only. After the read stage, the 1,826 cell
+calculations use an ordered eight-process map with the Linux `fork` start
+method; result order remains frozen frame order. It writes a 16,434-row spatial
 `object_screen.csv`, a projection-repair ledger, and a geometry manifest.
 
 After independent review of that sealed screen, the join action verifies the

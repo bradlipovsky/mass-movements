@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """Screen absent DEM delivery units against a conservative RGI geometry."""
 import argparse, hashlib, json, platform
-from pathlib import Path
+from multiprocessing import get_context; from pathlib import Path
 import fiona
 import numpy as np
 import pandas as pd
 import pyproj
 import shapely
 from pyproj import CRS, Transformer
-from shapely import STRtree, box, force_2d, from_geojson, get_coordinates, make_valid, segmentize, union_all
+from shapely import STRtree, box, dwithin, force_2d, from_geojson, get_coordinates, hausdorff_distance, make_valid, segmentize, union_all
 from shapely.affinity import translate
 from shapely.ops import transform
 from shapely.validation import explain_validity
@@ -24,16 +24,17 @@ ISSUE23 = ROOT / "data/global_dem_support/final_manifest.json"
 PRE = OUTPUT / "pregeometry_manifest.json"
 GEOMETRY = OUTPUT / "geometry_manifest.json"
 ISSUE23_SHA = "a660e3eda35d4fa671e35c03e6c42f3dabad4c3393ca86cd07655d6a0b9d58d3"
-PROXIMITY_M, SCREEN_M, QUAD_SEGS, REPAIR_TOL = 101, 1001, 32, 1e-8
+PROXIMITY_M, SCREEN_M, QUAD_SEGS = 101, 1001, 32
+REPAIR_REL_TOL, REPAIR_ABS_TOL, REPAIR_DISTANCE_TOL, SOURCE_STEP, WORKERS = 1e-7, .1, .02, .001, 8
 PRE_FILES = {"protocol/glacier-proximity-object-relevance.md", "requirements-object-relevance.txt", "scripts/glacier_proximity_object_relevance.py",
              "tests/test_glacier_proximity_object_relevance.py", "data/geographic_sample/frame.csv", "data/geographic_sample/source_manifest.json",
              "data/global_dem_support/expected_objects.csv", "scripts/geographic_sample.py"}
 GEOMETRY_FILES = {"data/glacier_proximity_object_relevance/object_screen.csv", "data/glacier_proximity_object_relevance/projection_repairs.csv"}
 SCREEN_COLUMNS = ["cell_key", "south", "west", "dominant_region", "role", "latitude", "longitude", "proximity_applicable", "screen_relevant"]
 REPAIR_COLUMNS = ["cell_key", "rgi_id", "reason", "input_type", "output_type", "projected_area_before_m2", "projected_area_after_m2",
-                  "relative_area_change", "shapely_version", "geos_version", "proj_version", "projected_crs_wkt"]
-def digest(path):
-    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+                  "absolute_area_change_m2", "relative_area_change", "boundary_hausdorff_distance_m", "input_components", "output_components", "input_holes", "output_holes", "input_vertices", "output_vertices",
+                  "repair_method", "keep_collapsed", "shapely_version", "geos_version", "proj_version", "projected_crs_wkt"]
+def digest(path): return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 def runtime_versions(): return {"python": platform.python_version(), "numpy": np.__version__, "fiona": fiona.__version__, "pandas": pd.__version__,
     "pyproj": pyproj.__version__, "proj": pyproj.proj_version_str, "shapely": shapely.__version__, "geos": shapely.geos_version_string}
 def validate_file_set(data, status):
@@ -50,14 +51,20 @@ def verify_manifest(path, status):
     if status == "pre_geometry" and (data.get("population_cells"), data.get("spatial_candidate_rows"), data.get("buffers"), data.get("schemas")) != (
             1826, 16434, {"proximity_m": 101, "quad_segs": 32, "screen_m": 1001}, {"object_screen.csv": SCREEN_COLUMNS, "projection_repairs.csv": REPAIR_COLUMNS}):
         raise ValueError("registered geometry fields differ")
+    if status == "pre_geometry" and (data.get("repair"), data.get("execution")) != (
+            {"absolute_area_change_m2_max": .1, "boundary_hausdorff_distance_m_max": .02, "hausdorff_densify": .01,
+             "keep_collapsed": True, "method": "linework", "record_component_count": True,
+             "relative_area_change_max": 1e-7, "source_segmentize_degrees": .001},
+            {"ordered_map": True, "start_method": "fork", "workers": 8}): raise ValueError("registered amendment fields differ")
+    stop = {"commit": "ca722a5a0d901105706fd3f5993970794f06fc4d", "failed_rgi_id": "RGI2000-v7.0-G-03-03101", "no_geometry_outputs": True, "pregeometry_manifest_sha256": "9ace2029781a1a449ba3bd65cbb220da8436ad0f929e36a9575f70df0232b940"}
+    if status == "pre_geometry" and data.get("predecessor_stop") != stop: raise ValueError("predecessor stop differs")
     if status != "pre_geometry" and data.get("pregeometry_manifest_sha256") != digest(PRE): raise ValueError("geometry manifest predecessor differs")
     if status != "pre_geometry" and data.get("rows") != 16434: raise ValueError("geometry row count differs")
     for name, item in data["files"].items():
         path = ROOT / name
         if (path.stat().st_size, digest(path)) != (item["bytes"], item["sha256"]): raise ValueError(f"frozen file differs: {name}")
     return data
-def local_crs(south, west):
-    return CRS.from_proj4(f"+proj=laea +lat_0={south + .5} +lon_0={west + .5} +datum=WGS84 +units=m +no_defs")
+def local_crs(south, west): return CRS.from_proj4(f"+proj=laea +lat_0={south + .5} +lon_0={west + .5} +datum=WGS84 +units=m +no_defs")
 def window_geometry(south, west, crs):
     geographic = segmentize(box(west, south, west + 1, south + 1), .01)
     return geographic, transform(Transformer.from_crs(4326, crs, always_xy=True).transform, geographic)
@@ -100,21 +107,26 @@ def load_matches(frame):
         raise ValueError("RGI population or cell match differs")
     return matches
 def repair_projected(item, rgi_id, cell_key, crs):
-    before, reason = item.area, explain_validity(item); fixed = make_valid(item, method="linework")
-    relative = abs(fixed.area - before) / before if before else float("inf")
-    if fixed.geom_type not in ("Polygon", "MultiPolygon") or not fixed.is_valid or relative > REPAIR_TOL:
+    before, reason = item.area, explain_validity(item)
+    if not reason.startswith("Self-intersection"): raise ValueError(f"projection repair class differs: {rgi_id}")
+    fixed = make_valid(item, method="linework", keep_collapsed=True); absolute = abs(fixed.area - before); relative = absolute / before if before else float("inf")
+    if fixed.is_empty or fixed.geom_type not in ("Polygon", "MultiPolygon") or not fixed.is_valid: raise ValueError(f"projection repair failed: {rgi_id}")
+    distance = hausdorff_distance(item.boundary, fixed.boundary, densify=.01); parts = lambda x: [x] if x.geom_type == "Polygon" else list(x.geoms)
+    counts = (len(parts(item)), len(parts(fixed))); holes = (sum(len(x.interiors) for x in parts(item)), sum(len(x.interiors) for x in parts(fixed)))
+    if absolute > REPAIR_ABS_TOL or relative > REPAIR_REL_TOL or distance > REPAIR_DISTANCE_TOL:
         raise ValueError(f"projection repair failed: {rgi_id}")
     record = {"cell_key": cell_key, "rgi_id": rgi_id, "reason": reason,
                 "input_type": item.geom_type, "output_type": fixed.geom_type,
                 "projected_area_before_m2": before, "projected_area_after_m2": fixed.area,
-                "relative_area_change": relative, "shapely_version": shapely.__version__,
+                "absolute_area_change_m2": absolute, "relative_area_change": relative, "boundary_hausdorff_distance_m": distance,
+                "input_components": counts[0], "output_components": counts[1], "repair_method": "linework", "keep_collapsed": True, "shapely_version": shapely.__version__, "input_holes": holes[0], "output_holes": holes[1], "input_vertices": len(get_coordinates(item)), "output_vertices": len(get_coordinates(fixed)),
                 "geos_version": shapely.geos_version_string, "proj_version": pyproj.proj_version_str,
                 "projected_crs_wkt": crs.to_wkt()}
     return fixed, record
 def projected_union(items, crs, west, cell_key):
     forward = Transformer.from_crs(4326, crs, always_xy=True).transform; projected, repairs = [], []
     for rgi_id, geometry in items:
-        item = transform(forward, unwrap(geometry, west + .5))
+        item = transform(forward, segmentize(unwrap(geometry, west + .5), SOURCE_STEP))
         if not item.is_valid: item, record = repair_projected(item, rgi_id, cell_key, crs); repairs.append(record)
         projected.append(item)
     glacier = union_all(projected)
@@ -123,12 +135,22 @@ def projected_union(items, crs, west, cell_key):
     return glacier, repairs
 def dependency_region(report, glacier):
     proximity = report.intersection(glacier.buffer(PROXIMITY_M, quad_segs=QUAD_SEGS)).difference(glacier)
-    screen = proximity.buffer(SCREEN_M, quad_segs=QUAD_SEGS) if not proximity.is_empty else proximity
-    return proximity, screen
+    return proximity
 def tile_footprint(latitude, longitude, crs, center):
     geographic = segmentize(box(longitude, latitude, longitude + 1, latitude + 1), .01)
     forward = Transformer.from_crs(4326, crs, always_xy=True).transform
     return transform(forward, unwrap(geographic, center))
+_FRAME = _SPATIAL = _MATCHES = None
+def screen_cell(index):
+    cell = _FRAME.iloc[index]; crs, _, report, _ = report_geometries(cell.south, cell.west)
+    glacier, fixed = projected_union(_MATCHES[index], crs, cell.west, cell.cell_key)
+    proximity = dependency_region(report, glacier); rows = []
+    for item in _SPATIAL[_SPATIAL.cell_key.eq(cell.cell_key)].itertuples(index=False):
+        footprint = tile_footprint(item.latitude, item.longitude, crs, cell.west + .5)
+        rows.append({"cell_key": cell.cell_key, "south": cell.south, "west": cell.west, "dominant_region": cell.dominant_region, "role": item.role,
+            "latitude": item.latitude, "longitude": item.longitude, "proximity_applicable": not proximity.is_empty,
+            "screen_relevant": bool(not proximity.is_empty and dwithin(footprint, proximity, SCREEN_M))})
+    return rows, fixed
 def join_tables(expected, screen, inventory):
     keys = ["cell_key", "south", "west", "dominant_region", "role", "latitude", "longitude"]
     out = expected.merge(screen, on=keys, how="left", validate="many_to_one", indicator=True)
@@ -170,25 +192,17 @@ def group_table(cells):
         raise ValueError("group accounting differs")
     return result
 def geometry(pre_manifest):
+    global _FRAME, _SPATIAL, _MATCHES
     verify_manifest(pre_manifest, "pre_geometry")
     frame = pd.read_csv(FRAME, dtype={"dominant_region": str}).reset_index(drop=True)
     expected = pd.read_csv(EXPECTED, dtype={"dominant_region": str})
     spatial = expected.drop_duplicates(["cell_key", "role", "latitude", "longitude"])
     if (len(frame), len(spatial)) != (1826, 16434):
         raise ValueError("frozen dimensions differ")
-    matches, rows, repairs = load_matches(frame), [], []
-    for index, cell in frame.iterrows():
-        crs, _, report, _ = report_geometries(cell.south, cell.west)
-        glacier, fixed = projected_union(matches[index], crs, cell.west, cell.cell_key)
-        repairs.extend(fixed)
-        proximity, screen = dependency_region(report, glacier)
-        for item in spatial[spatial.cell_key.eq(cell.cell_key)].itertuples(index=False):
-            footprint = tile_footprint(item.latitude, item.longitude, crs, cell.west + .5)
-            rows.append({"cell_key": cell.cell_key, "south": cell.south, "west": cell.west,
-                "dominant_region": cell.dominant_region, "role": item.role,
-                "latitude": item.latitude, "longitude": item.longitude,
-                "proximity_applicable": not proximity.is_empty,
-                "screen_relevant": bool(not proximity.is_empty and footprint.intersects(screen))})
+    _FRAME, _SPATIAL, _MATCHES = frame, spatial, load_matches(frame)
+    with get_context("fork").Pool(WORKERS) as pool: results = pool.map(screen_cell, range(len(frame)))
+    rows = [row for cell_rows, _ in results for row in cell_rows]
+    repairs = [repair for _, fixed in results for repair in fixed]
     object_screen = pd.DataFrame(rows)
     if len(object_screen) != 16434 or object_screen.duplicated(["cell_key", "latitude", "longitude"]).any():
         raise ValueError("screen identity differs")
