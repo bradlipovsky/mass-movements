@@ -34,8 +34,8 @@
       "sha256": "8b828c4075fde3c007ec0fc867a855a3913d348d77321e8996e4687ff3f3193a"
     },
     "protocol/glacier-proximity-object-relevance.md": {
-      "bytes": 6209,
-      "sha256": "146fd02aaf624c2fb6610993dcc810b5a1a954110ced5e87ead571dfcef49d0c"
+      "bytes": 7019,
+      "sha256": "bbd5625bf2b49c0d98e6749d4a4cec4c2042d46d73f5379ed3bee5541f268bed"
     },
     "requirements-object-relevance.txt": {
       "bytes": 70,
@@ -46,12 +46,12 @@
       "sha256": "21bb6d250f67aa55c42f8efabe3302a2a0a045c950f1455805e2e0ba2cb4faaa"
     },
     "scripts/glacier_proximity_object_relevance.py": {
-      "bytes": 18100,
-      "sha256": "df673bd459b087d93228f80ef8f1843deda4f7245a7ce8c0a35de36bf2b7b037"
+      "bytes": 18438,
+      "sha256": "b89bcc6d01f8c7c4614c778a4ce6169b9917b874bd03ee2ca392d7019d9f114d"
     },
     "tests/test_glacier_proximity_object_relevance.py": {
-      "bytes": 6226,
-      "sha256": "d844682d8d87fc9c0874b10de49d82542e7eb9aa7a18fb656ff51943eeb5c01d"
+      "bytes": 6685,
+      "sha256": "f3e9fe0eb90f8b043f3125d3f42bacc64a31a5259169949cdc734d05fa799a0b"
     }
   },
   "issue": 25,
@@ -69,6 +69,9 @@
     "keep_collapsed": true,
     "method": "linework",
     "record_component_count": true,
+    "regression_hausdorff_max_m": 0.1,
+    "regression_refinement_degrees": 0.0005,
+    "regression_scope": "10 predecessor-failure incidences",
     "relative_area_change_max": 1e-7,
     "source_segmentize_degrees": 0.001
   },
@@ -88,19 +91,27 @@
       "cell_key",
       "rgi_id",
       "reason",
-      "input_type",
-      "output_type",
       "projected_area_before_m2",
       "projected_area_after_m2",
       "absolute_area_change_m2",
       "relative_area_change",
       "boundary_hausdorff_distance_m",
-      "input_components",
-      "output_components",
-      "input_holes",
-      "output_holes",
-      "input_vertices",
-      "output_vertices",
+      "source_type",
+      "source_components",
+      "source_holes",
+      "source_vertices",
+      "segmentized_wgs_type",
+      "segmentized_wgs_components",
+      "segmentized_wgs_holes",
+      "segmentized_wgs_vertices",
+      "projected_input_type",
+      "projected_input_components",
+      "projected_input_holes",
+      "projected_input_vertices",
+      "fixed_output_type",
+      "fixed_output_components",
+      "fixed_output_holes",
+      "fixed_output_vertices",
       "repair_method",
       "keep_collapsed",
       "shapely_version",

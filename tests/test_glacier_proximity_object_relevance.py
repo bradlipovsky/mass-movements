@@ -1,7 +1,7 @@
 import json, unittest; from pathlib import Path; import fiona, pandas as pd
-from pyproj import Transformer; from shapely import Point, Polygon, box, dwithin, force_2d, from_geojson, segmentize; from shapely.ops import transform
+from shapely import Point, Polygon, box, dwithin, force_2d, from_geojson, hausdorff_distance
 from scripts.glacier_proximity_object_relevance import (EXPECTED, FRAME, ISSUE23, ISSUE23_SHA, PRE, PRE_FILES, QUAD_SEGS, ROOT, SCREEN_M,
-    cell_table, dependency_region, digest, group_table, join_tables, local_crs, repair_projected, report_geometries, tile_footprint, validate_file_set, verify_manifest)
+    cell_table, dependency_region, digest, group_table, join_tables, local_crs, project_outline, repair_projected, report_geometries, tile_footprint, validate_file_set, verify_manifest)
 class RelevanceTests(unittest.TestCase):
     def test_frozen_dimensions_and_issue23_identity(self):
         frame, expected = pd.read_csv(FRAME), pd.read_csv(EXPECTED)
@@ -21,9 +21,7 @@ class RelevanceTests(unittest.TestCase):
         crs, _, _, envelope = report_geometries(70, 179); east = tile_footprint(70, 179, crs, 179.5); west = tile_footprint(70, -180, crs, 179.5)
         self.assertLess(east.distance(west), 1e-4); self.assertLess(envelope.bounds[2] - envelope.bounds[0], 3)
     def test_projection_repair_is_identified_and_bounded(self):
-        invalid = Polygon([(0,0),(3,0),(3,3),(1.5,3),(1.5,1),(1.500000001,1),(0,3),(0,0)])
-        fixed, record = repair_projected(invalid, "test-id", "test-cell", local_crs(0,0))
-        self.assertTrue(fixed.is_valid); self.assertEqual((record["rgi_id"], record["cell_key"]), ("test-id", "test-cell")); self.assertLessEqual(record["relative_area_change"], 1e-7)
+        invalid = Polygon([(0,0),(3,0),(3,3),(1.5,3),(1.5,1),(1.500000001,1),(0,3),(0,0)]); fixed, record = repair_projected(invalid, "test-id", "test-cell", local_crs(0,0)); self.assertTrue(fixed.is_valid); self.assertEqual((record["rgi_id"], record["cell_key"]), ("test-id", "test-cell")); self.assertLessEqual(record["relative_area_change"], 1e-7)
     def test_all_failed_projection_classes_regression(self):
         cases = [("03_arctic_canada_north", {"03101": [(78,-90)], "03110": [(78,-90)], "03766": [(80,x) for x in range(-74,-70)] + [(81,-72)]}), ("05_greenland_periphery", {"17411": [(80,-16)], "17462": [(80,-22),(80,-21)]})]
         for region, identities in cases:
@@ -32,9 +30,11 @@ class RelevanceTests(unittest.TestCase):
             for identity, cells in identities.items():
                 geographic = force_2d(from_geojson(json.dumps(dict(features[identity]["geometry"]))))
                 for south, west in cells:
-                    projected = transform(Transformer.from_crs(4326, local_crs(south, west), always_xy=True).transform, segmentize(geographic, .001))
-                    if identity == "03766": self.assertTrue(projected.is_valid); continue
-                    fixed, record = repair_projected(projected, identity, "cell", local_crs(south, west)); self.assertTrue(fixed.is_valid); self.assertLess(record["absolute_area_change_m2"], .1); self.assertLess(record["boundary_hausdorff_distance_m"], .02)
+                    dense, projected = project_outline(geographic, local_crs(south, west), west); refined, check = project_outline(geographic, local_crs(south, west), west, .0005)
+                    if identity == "03766": self.assertTrue(projected.is_valid and check.is_valid); self.assertLess(hausdorff_distance(projected.boundary, check.boundary), .1); continue
+                    fixed, record = repair_projected(projected, identity, "cell", local_crs(south, west), geographic, dense); check = check if check.is_valid else repair_projected(check, identity, "cell", local_crs(south, west), geographic, refined)[0]
+                    self.assertTrue(fixed.is_valid); self.assertLess(record["absolute_area_change_m2"], .1); self.assertLess(record["boundary_hausdorff_distance_m"], .02); self.assertLess(hausdorff_distance(fixed.boundary, check.boundary), .1)
+                    if identity == "03101": self.assertEqual((record["source_holes"], record["segmentized_wgs_holes"], record["fixed_output_components"]), (1,0,3))
     def test_join_state_and_group_conservation(self):
         expected = pd.read_csv(EXPECTED, dtype={"dominant_region": str}); spatial = expected.drop_duplicates(["cell_key", "role", "latitude", "longitude"])
         screen = spatial[["cell_key", "south", "west", "dominant_region", "role", "latitude", "longitude"]].copy()
@@ -49,9 +49,7 @@ class RelevanceTests(unittest.TestCase):
         self.assertIn("absent_outside_conservative_screen", set(objects.state))
         screen.loc[screen.index[0], "screen_relevant"] = True
         self.assertIn("absent_relevance_unresolved", set(join_tables(expected, screen, inventory).state))
-    def test_source_has_no_forbidden_access(self):
-        source = (ROOT / "scripts/glacier_proximity_object_relevance.py").read_text()
-        for token in ["rasterio", "PZI.flt", "data/geographic_total/", "sample.csv", "http://", "https://"]: self.assertNotIn(token, source)
+    def test_source_has_no_forbidden_access(self): source = (ROOT / "scripts/glacier_proximity_object_relevance.py").read_text(); [self.assertNotIn(token, source) for token in ["rasterio", "PZI.flt", "data/geographic_total/", "sample.csv", "http://", "https://"]]
     def test_line_budget(self):
         source = (ROOT / "scripts/glacier_proximity_object_relevance.py").read_text().splitlines(); tests = Path(__file__).read_text().splitlines()
         self.assertLessEqual(len(source) + len(tests), 300)

@@ -31,8 +31,9 @@ system. Load every complete RGI outline intersecting the inverse-projected
 1,100 m reporting-cell envelope. Interpret each published RGI ring as straight
 segments in EPSG:4326; after longitude unwrapping, subdivide every segment by
 linear longitude-latitude interpolation to at most 0.001 degrees before LAEA
-projection. This approximates the nonlinear projected image and does not add
-observational detail. Repair a geometry still invalid after projection only
+projection. The resulting polyline is the registered computational outline;
+no claim is made that it exactly contains the continuously transformed edge,
+and the subdivision adds no observational detail. Repair an outline still invalid after projection only
 with Shapely linework `make_valid`, retaining every noded component and
 requiring polygonal valid output,
 projected relative area change no greater than \(10^{-7}\), and absolute area
@@ -47,8 +48,9 @@ self-intersection; subsequent geometry-only diagnosis found two residual
 shell-hole contact cases with less than 0.011 m representation sensitivity and
 a sparse-edge projection artifact that structure repair would move by 128 m.
 Uniform source segmentization resolves the latter without a topology repair.
-Across the all-region preflight census, five residual invalid incidences pass
-the joint linework gates; relative to structure, their 101 m buffers are
+Across the bounded retest of the 10 incidences that failed the predecessor
+rule, five residual invalid incidences pass the joint linework gates; relative
+to structure, their 101 m buffers are
 identical or weakly larger by at most 0.1044 m2. Segmentization and linework can
 change component and hole counts for thin source degeneracies; those changes
 are retained and disclosed, not treated as added observational detail.
@@ -64,6 +66,15 @@ This deliberately broad screen contains the registered 300 m plane-support
 disk, phase shifts, and aligned aggregation footprint. It does not model the
 bilinear source interpolation kernel and therefore does not establish exact
 source dependence or computability.
+The 101 m buffer conservativeness is relative to the registered 0.001-degree
+computational outline, not to physical outline uncertainty or an exact curved
+coordinate transformation. On the 10 predecessor-failure incidences only,
+0.001- and 0.0005-degree representations must differ by no more than 0.1 m in
+discrete boundary Hausdorff distance over their already segmentized vertices;
+this is a bounded regression, not a population-wide convergence proof. The repair
+gate separately uses the finer 0.01 Hausdorff densification and a 0.02 m cap;
+together the two numerical bounds consume at most 0.12 m of the approximately
+0.970 m one-sided proximity-buffer guard.
 
 Densify every nominal one-degree delivery-unit edge at 0.01 degree, project it
 to the same local coordinates, and use closed intersection with the dependency

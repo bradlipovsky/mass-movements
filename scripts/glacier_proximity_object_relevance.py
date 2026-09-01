@@ -31,8 +31,8 @@ PRE_FILES = {"protocol/glacier-proximity-object-relevance.md", "requirements-obj
              "data/global_dem_support/expected_objects.csv", "scripts/geographic_sample.py"}
 GEOMETRY_FILES = {"data/glacier_proximity_object_relevance/object_screen.csv", "data/glacier_proximity_object_relevance/projection_repairs.csv"}
 SCREEN_COLUMNS = ["cell_key", "south", "west", "dominant_region", "role", "latitude", "longitude", "proximity_applicable", "screen_relevant"]
-REPAIR_COLUMNS = ["cell_key", "rgi_id", "reason", "input_type", "output_type", "projected_area_before_m2", "projected_area_after_m2",
-                  "absolute_area_change_m2", "relative_area_change", "boundary_hausdorff_distance_m", "input_components", "output_components", "input_holes", "output_holes", "input_vertices", "output_vertices",
+REPAIR_COLUMNS = ["cell_key", "rgi_id", "reason", "projected_area_before_m2", "projected_area_after_m2", "absolute_area_change_m2", "relative_area_change", "boundary_hausdorff_distance_m",
+                  *[f"{stage}_{field}" for stage in ["source", "segmentized_wgs", "projected_input", "fixed_output"] for field in ["type", "components", "holes", "vertices"]],
                   "repair_method", "keep_collapsed", "shapely_version", "geos_version", "proj_version", "projected_crs_wkt"]
 def digest(path): return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 def runtime_versions(): return {"python": platform.python_version(), "numpy": np.__version__, "fiona": fiona.__version__, "pandas": pd.__version__,
@@ -52,9 +52,9 @@ def verify_manifest(path, status):
             1826, 16434, {"proximity_m": 101, "quad_segs": 32, "screen_m": 1001}, {"object_screen.csv": SCREEN_COLUMNS, "projection_repairs.csv": REPAIR_COLUMNS}):
         raise ValueError("registered geometry fields differ")
     if status == "pre_geometry" and (data.get("repair"), data.get("execution")) != (
-            {"absolute_area_change_m2_max": .1, "boundary_hausdorff_distance_m_max": .02, "hausdorff_densify": .01,
-             "keep_collapsed": True, "method": "linework", "record_component_count": True,
-             "relative_area_change_max": 1e-7, "source_segmentize_degrees": .001},
+            {"absolute_area_change_m2_max": .1, "boundary_hausdorff_distance_m_max": .02, "hausdorff_densify": .01, "keep_collapsed": True, "method": "linework", "record_component_count": True,
+             "relative_area_change_max": 1e-7, "source_segmentize_degrees": .001, "regression_refinement_degrees": .0005,
+             "regression_hausdorff_max_m": .1, "regression_scope": "10 predecessor-failure incidences"},
             {"ordered_map": True, "start_method": "fork", "workers": 8}): raise ValueError("registered amendment fields differ")
     stop = {"commit": "ca722a5a0d901105706fd3f5993970794f06fc4d", "failed_rgi_id": "RGI2000-v7.0-G-03-03101", "no_geometry_outputs": True, "pregeometry_manifest_sha256": "9ace2029781a1a449ba3bd65cbb220da8436ad0f929e36a9575f70df0232b940"}
     if status == "pre_geometry" and data.get("predecessor_stop") != stop: raise ValueError("predecessor stop differs")
@@ -106,28 +106,30 @@ def load_matches(frame):
     if len(seen) != 274531 or any(not group for group in matches):
         raise ValueError("RGI population or cell match differs")
     return matches
-def repair_projected(item, rgi_id, cell_key, crs):
+def topology(prefix, item): parts = [item] if item.geom_type == "Polygon" else list(item.geoms); return {f"{prefix}_type": item.geom_type, f"{prefix}_components": len(parts), f"{prefix}_holes": sum(len(x.interiors) for x in parts), f"{prefix}_vertices": len(get_coordinates(item))}
+def project_outline(geometry, crs, west, step=SOURCE_STEP): dense = segmentize(unwrap(geometry, west + .5), step); return dense, transform(Transformer.from_crs(4326, crs, always_xy=True).transform, dense)
+def repair_projected(item, rgi_id, cell_key, crs, source=None, dense=None):
+    source = item if source is None else source; dense = item if dense is None else dense
     before, reason = item.area, explain_validity(item)
     if not reason.startswith("Self-intersection"): raise ValueError(f"projection repair class differs: {rgi_id}")
     fixed = make_valid(item, method="linework", keep_collapsed=True); absolute = abs(fixed.area - before); relative = absolute / before if before else float("inf")
     if fixed.is_empty or fixed.geom_type not in ("Polygon", "MultiPolygon") or not fixed.is_valid: raise ValueError(f"projection repair failed: {rgi_id}")
-    distance = hausdorff_distance(item.boundary, fixed.boundary, densify=.01); parts = lambda x: [x] if x.geom_type == "Polygon" else list(x.geoms)
-    counts = (len(parts(item)), len(parts(fixed))); holes = (sum(len(x.interiors) for x in parts(item)), sum(len(x.interiors) for x in parts(fixed)))
+    distance = hausdorff_distance(item.boundary, fixed.boundary, densify=.01)
     if absolute > REPAIR_ABS_TOL or relative > REPAIR_REL_TOL or distance > REPAIR_DISTANCE_TOL:
         raise ValueError(f"projection repair failed: {rgi_id}")
     record = {"cell_key": cell_key, "rgi_id": rgi_id, "reason": reason,
-                "input_type": item.geom_type, "output_type": fixed.geom_type,
                 "projected_area_before_m2": before, "projected_area_after_m2": fixed.area,
                 "absolute_area_change_m2": absolute, "relative_area_change": relative, "boundary_hausdorff_distance_m": distance,
-                "input_components": counts[0], "output_components": counts[1], "repair_method": "linework", "keep_collapsed": True, "shapely_version": shapely.__version__, "input_holes": holes[0], "output_holes": holes[1], "input_vertices": len(get_coordinates(item)), "output_vertices": len(get_coordinates(fixed)),
+                "repair_method": "linework", "keep_collapsed": True, "shapely_version": shapely.__version__,
                 "geos_version": shapely.geos_version_string, "proj_version": pyproj.proj_version_str,
                 "projected_crs_wkt": crs.to_wkt()}
+    for prefix, geometry in [("source", source), ("segmentized_wgs", dense), ("projected_input", item), ("fixed_output", fixed)]: record.update(topology(prefix, geometry))
     return fixed, record
 def projected_union(items, crs, west, cell_key):
-    forward = Transformer.from_crs(4326, crs, always_xy=True).transform; projected, repairs = [], []
+    projected, repairs = [], []
     for rgi_id, geometry in items:
-        item = transform(forward, segmentize(unwrap(geometry, west + .5), SOURCE_STEP))
-        if not item.is_valid: item, record = repair_projected(item, rgi_id, cell_key, crs); repairs.append(record)
+        dense, item = project_outline(geometry, crs, west)
+        if not item.is_valid: item, record = repair_projected(item, rgi_id, cell_key, crs, geometry, dense); repairs.append(record)
         projected.append(item)
     glacier = union_all(projected)
     if glacier.is_empty or not glacier.is_valid:
