@@ -4,6 +4,7 @@ import argparse, csv, hashlib, json, re
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlencode
+from urllib.error import HTTPError
 from urllib.request import urlopen
 from xml.etree import ElementTree
 
@@ -11,6 +12,7 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "data/global_dem_support"
+MANIFEST = OUTPUT / "preaccess_manifest.json"
 FRAME = ROOT / "data/geographic_sample/frame.csv"
 SAMPLE = ROOT / "data/geographic_sample/sample.csv"
 HASHES = {
@@ -36,7 +38,11 @@ def verify_inputs():
 
 def verify_manifest(path):
     verify_inputs()
-    for name, expected in json.loads(Path(path).read_text())["files"].items():
+    if Path(path).resolve() != MANIFEST.resolve(): raise ValueError("unapproved manifest path")
+    data = json.loads(Path(path).read_text())
+    names = {"protocol/global-dem-support-audit.md", "scripts/global_dem_support.py", "tests/test_global_dem_support.py", "data/global_dem_support/expected_objects.csv"}
+    if data.get("status") != "pre_inventory_access" or set(data.get("files", {})) != names: raise ValueError("invalid pre-access manifest")
+    for name, expected in data["files"].items():
         item = ROOT / name
         if (item.stat().st_size, digest(item)) != (expected["bytes"], expected["sha256"]):
             raise ValueError(f"pre-access file differs: {name}")
@@ -79,16 +85,20 @@ def write_csv(path, rows):
 
 def parse_listing(body, instance):
     root = ElementTree.fromstring(body); namespace = root.tag.split("}")[0] + "}" if "}" in root.tag else ""
+    if root.tag.rsplit("}", 1)[-1] != "ListBucketResult": raise ValueError("unexpected listing root")
+    flag = root.findtext(f"{namespace}IsTruncated")
+    if flag not in ("true", "false"): raise ValueError("invalid IsTruncated field")
     rows = []
     for item in root.findall(f"{namespace}Contents"):
-        key = item.findtext(f"{namespace}Key"); match = KEY.fullmatch(key or "")
+        fields = {name: item.findtext(f"{namespace}{name}") for name in ("Key", "Size", "ETag", "LastModified")}
+        if any(value is None for value in fields.values()): raise ValueError("incomplete Contents record")
+        key = fields["Key"]; match = KEY.fullmatch(key)
         if not match or match.group(2) != INSTANCES[instance]["code"]:
             continue
         rows.append({"instance": instance, "object_id": match.group(1), "key": key,
-                     "bytes": int(item.findtext(f"{namespace}Size")),
-                     "etag": (item.findtext(f"{namespace}ETag") or "").strip('"'),
-                     "last_modified": item.findtext(f"{namespace}LastModified") or ""})
-    truncated = root.findtext(f"{namespace}IsTruncated") == "true"
+                     "bytes": int(fields["Size"]), "etag": fields["ETag"].strip('"'),
+                     "last_modified": fields["LastModified"]})
+    truncated = flag == "true"
     return rows, truncated, root.findtext(f"{namespace}NextContinuationToken")
 
 
@@ -101,28 +111,42 @@ def inventory_url(instance, token=None):
 
 def fetch_inventory(instance):
     raw = OUTPUT / "source_raw" / instance; raw.mkdir(parents=True, exist_ok=True)
-    rows, pages, token, seen = [], [], None, set()
+    rows, pages, token, tokens, keys = [], [], None, set(), set()
     while True:
-        url = inventory_url(instance, token)
-        with urlopen(url, timeout=120) as response:
-            if response.status != 200: raise ValueError(f"listing status {response.status}")
-            body = response.read()
-        page_rows, truncated, next_token = parse_listing(body, instance)
-        path = raw / f"page_{len(pages)+1:04d}.xml"; path.write_bytes(body)
-        pages.append({"instance": instance, "page": len(pages)+1, "url": url,
-                      "retrieved_utc": datetime.now(timezone.utc).isoformat(), "bytes": len(body),
-                      "sha256": hashlib.sha256(body).hexdigest(), "is_truncated": truncated,
-                      "next_continuation_token": next_token or ""})
+        page, url = len(pages) + 1, inventory_url(instance, token)
+        try:
+            with urlopen(url, timeout=120) as response:
+                status, body = response.status, response.read()
+        except HTTPError as error:
+            status, body = error.code, error.read()
+        path = raw / f"page_{page:04d}.xml"; path.write_bytes(body)
+        record = {"instance": instance, "page": page, "url": url,
+                  "retrieved_utc": datetime.now(timezone.utc).isoformat(), "http_status": status,
+                  "bytes": len(body), "sha256": hashlib.sha256(body).hexdigest(), "parse_status": "pending"}
+        pages.append(record); (raw / "pages.json").write_text(json.dumps(pages, indent=2) + "\n")
+        if status != 200:
+            record.update(parse_status="http_error", parse_error=f"listing status {status}")
+            (raw / "pages.json").write_text(json.dumps(pages, indent=2) + "\n"); raise ValueError(record["parse_error"])
+        try: page_rows, truncated, next_token = parse_listing(body, instance)
+        except Exception as error:
+            record.update(parse_status="error", parse_error=f"{type(error).__name__}: {error}")
+            (raw / "pages.json").write_text(json.dumps(pages, indent=2) + "\n"); raise
+        record.update(parse_status="ok", is_truncated=truncated,
+                      next_continuation_token=next_token or "", matched_dem_keys=len(page_rows))
+        (raw / "pages.json").write_text(json.dumps(pages, indent=2) + "\n")
+        if any(row["key"] in keys for row in page_rows):
+            record.update(parse_status="error", parse_error="duplicate exact DEM key"); (raw / "pages.json").write_text(json.dumps(pages, indent=2) + "\n"); raise ValueError(record["parse_error"])
+        keys.update(row["key"] for row in page_rows)
         rows.extend(page_rows)
         if not truncated: break
-        if not next_token or next_token in seen: raise ValueError("invalid continuation token")
-        seen.add(next_token); token = next_token
-    if len({row["key"] for row in rows}) != len(rows): raise ValueError("duplicate exact DEM key")
+        if not next_token or next_token in tokens:
+            record.update(parse_status="error", parse_error="invalid continuation token"); (raw / "pages.json").write_text(json.dumps(pages, indent=2) + "\n"); raise ValueError(record["parse_error"])
+        tokens.add(next_token); token = next_token
     return rows, pages
 
 
 def support_tables(expected, inventory):
-    present = set(zip(inventory.instance, inventory.object_id)); selected = set(pd.read_csv(SAMPLE).cell_key)
+    present = set() if inventory.empty else set(zip(inventory.instance, inventory.object_id)); selected = set(pd.read_csv(SAMPLE).cell_key)
     table = expected.copy(); table["present"] = [pair in present for pair in zip(table.instance, table.object_id)]
     rows = []
     for (cell_key, instance), group in table.groupby(["cell_key", "instance"], sort=False):
@@ -150,9 +174,10 @@ def acquire(manifest):
     inventory, pages = [], []
     for instance in INSTANCES:
         found, ledger = fetch_inventory(instance); inventory.extend(found); pages.extend(ledger)
-    write_csv(OUTPUT / "object_inventory.csv", inventory)
-    (OUTPUT / "inventory_pages.json").write_text(json.dumps(pages, indent=2) + "\n")
-    cells, groups = support_tables(expected, pd.DataFrame(inventory))
+        (OUTPUT / "inventory_pages.json").write_text(json.dumps(pages, indent=2) + "\n")
+    inventory = pd.DataFrame(inventory, columns=["instance", "object_id", "key", "bytes", "etag", "last_modified"])
+    inventory.to_csv(OUTPUT / "object_inventory.csv", index=False, lineterminator="\n")
+    cells, groups = support_tables(expected, inventory)
     cells.to_csv(OUTPUT / "cell_support.csv", index=False, lineterminator="\n")
     groups.to_csv(OUTPUT / "group_support.csv", index=False, lineterminator="\n")
     summary = {instance: {"population_cells": len(part), "core_object_present_cells": int(part.core_object_present.sum()),
@@ -167,4 +192,3 @@ if __name__ == "__main__":
     if args.action == "expected": write_csv(OUTPUT / "expected_objects.csv", expected_rows())
     elif not args.manifest: raise ValueError("metadata acquisition requires a pre-access manifest")
     else: acquire(args.manifest)
-

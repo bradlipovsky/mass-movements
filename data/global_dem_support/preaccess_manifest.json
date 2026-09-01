@@ -1,9 +1,12 @@
 {
-  "manifest_version": "1.0",
-  "created_utc": "2026-09-01T00:22:07Z",
+  "manifest_version": "1.1",
+  "created_utc": "2026-09-01T00:30:33Z",
   "issue": "https://github.com/bradlipovsky/mass-movements/issues/23",
   "status": "pre_inventory_access",
   "parent_commit": "2b5e7e098e99275b4f08a984cd27080c4ca95561",
+  "predecessor_commit": "e33651468b2dde22035eca6066af6ade1f988e83",
+  "predecessor_manifest_sha256": "adb40f9e8bffec2cc6983bc51521467fb8744965f83d00b2e6606dbe35a5938b",
+  "amendment_registration": "https://github.com/bradlipovsky/mass-movements/issues/23#issuecomment-5486709373",
   "population": {
     "frame_commit": "0ff1c327468b5fb874ef2f87b1d64107838418e5",
     "frame_sha256": "482c9d585777317ab69363481db3df1011e2d4e8ce84c3826b151406cace9879",
@@ -46,14 +49,14 @@
     "https://documentation.dataspace.copernicus.eu/APIs/SentinelHub/Data/DEM.html"
   ],
   "code_budget": {
-    "analysis_lines": 170,
-    "test_lines": 61,
-    "total_lines": 231,
+    "analysis_lines": 194,
+    "test_lines": 106,
+    "total_lines": 300,
     "limit_lines": 300
   },
   "tests": {
     "command": ".venv/bin/python -m unittest tests.test_global_dem_support -v",
-    "passed": 6,
+    "passed": 9,
     "failed": 0,
     "skipped": 0
   },
@@ -64,12 +67,12 @@
       "sha256": "5ed83622841514fce276bc22879ac70d6d89938f6f295dad01158d78d97ab366"
     },
     "scripts/global_dem_support.py": {
-      "bytes": 8846,
-      "sha256": "8a82008febffa7350bd389b0f728dad3392aa41d5bd56f2831685f92500c88f8"
+      "bytes": 10987,
+      "sha256": "34b58c48e06e6a79be120eb1435720470e8724890ca49ab83bf7ee380bd6087d"
     },
     "tests/test_global_dem_support.py": {
-      "bytes": 3820,
-      "sha256": "ec56c9ec9e85e06816de2f6b4e4b16879b1cb68818d899c79c0887b0b9eba113"
+      "bytes": 7305,
+      "sha256": "d476b1b600127c6ab7d03bf7bfc2e9995ed34076f59c491c4b3fb21437deeaac"
     },
     "data/global_dem_support/expected_objects.csv": {
       "bytes": 6269699,
