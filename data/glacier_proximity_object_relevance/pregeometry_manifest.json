@@ -1,0 +1,77 @@
+{
+  "boundary": "No geometry screen has run; geometry action may not read Issue 23 inventory or selected sample.",
+  "buffers_m": {
+    "dependency_outward_guard": 1001,
+    "proximity_outward_guard": 101
+  },
+  "environment": {
+    "fiona": "1.10.1",
+    "geos": "3.13.1",
+    "pandas": "3.0.5",
+    "proj": "9.5.1",
+    "pyproj": "3.7.2",
+    "python": "3.12.11",
+    "shapely": "2.1.2"
+  },
+  "files": {
+    "data/geographic_sample/frame.csv": {
+      "bytes": 188594,
+      "sha256": "482c9d585777317ab69363481db3df1011e2d4e8ce84c3826b151406cace9879"
+    },
+    "data/geographic_sample/source_manifest.json": {
+      "bytes": 89492,
+      "sha256": "6b411fc26af146c9dd0959490775e413aa97f57491cf6de6c91261e7e09e196b"
+    },
+    "data/global_dem_support/expected_objects.csv": {
+      "bytes": 6269699,
+      "sha256": "8b828c4075fde3c007ec0fc867a855a3913d348d77321e8996e4687ff3f3193a"
+    },
+    "protocol/glacier-proximity-object-relevance.md": {
+      "bytes": 4378,
+      "sha256": "e86efa4788e301a3ee831590c149da00bc90f64daee97882d180d9c5b902031e"
+    },
+    "requirements-geographic.txt": {
+      "bytes": 56,
+      "sha256": "80ef84692d28a2f580e7dfbb59eeea62bc3b59507fda9ba9e290e1bead1ecdad"
+    },
+    "scripts/denominator_pilot.py": {
+      "bytes": 14163,
+      "sha256": "5f733147434f859ea3cbfc815da77a1bd8ae83137d80e59a65243d6d3e23508a"
+    },
+    "scripts/geographic_sample.py": {
+      "bytes": 14291,
+      "sha256": "21bb6d250f67aa55c42f8efabe3302a2a0a045c950f1455805e2e0ba2cb4faaa"
+    },
+    "scripts/glacier_proximity_object_relevance.py": {
+      "bytes": 10296,
+      "sha256": "866ecd56e1e87e0af402ad567b0f407e780924660027c1f457b769380456965c"
+    },
+    "tests/test_glacier_proximity_object_relevance.py": {
+      "bytes": 2801,
+      "sha256": "ca94613983f99c630ebc716574b1aeabab5cdf794184f5e748b247eeccb5a66f"
+    }
+  },
+  "issue": 25,
+  "population_cells": 1826,
+  "schemas": {
+    "object_screen.csv": [
+      "cell_key",
+      "south",
+      "west",
+      "dominant_region",
+      "role",
+      "latitude",
+      "longitude",
+      "proximity_applicable",
+      "screen_relevant"
+    ],
+    "projection_repairs.csv": [
+      "cell_key",
+      "input_type",
+      "output_type",
+      "relative_area_change"
+    ]
+  },
+  "spatial_candidate_rows": 16434,
+  "status": "pre_geometry"
+}
