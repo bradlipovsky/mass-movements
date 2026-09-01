@@ -4,10 +4,10 @@
 
 This protocol asks whether a nominal Copernicus DEM delivery unit absent from
 the 1 September 2026 object inventory is disjoint from a conservative
-geometric dependency envelope for the registered glacier-outline-proximity
-functional. Disjointness proves that the absent delivery unit is irrelevant at
-the object-footprint level. Intersection remains unresolved. It does not prove
-that a grid center lacks support.
+geometric screen around the registered glacier-outline-proximity continuum.
+Disjointness places the absent delivery unit outside that conservative screen;
+intersection remains unresolved. Neither state proves whether a grid center
+has finite elevation support.
 
 This is not a DEM-completeness or terrain calculation. It does not open an
 object or raster, inspect elevation or nodata, calculate a slope or equivalent
@@ -31,16 +31,19 @@ system. Load every complete RGI outline intersecting the inverse-projected
 1,100 m reporting-cell envelope. Repair a geometry made invalid by projection
 only with Shapely linework `make_valid`, require polygonal valid output and
 projected relative area change no greater than \(10^{-8}\), and retain a
-repair ledger.
+source-outline-identified repair ledger. Invalid source-WGS84 geometry stops.
 
 Let \(R_i\) be the reporting polygon and \(G_i\) the union of these projected
 outlines. The registered glacier-proximity continuum is outside \(G_i\),
 inside \(R_i\), and at closed distance no greater than 100 m from \(G_i\).
 Approximate it conservatively with an outward 101 m buffer. Buffer that region
-outward by 1,001 m. The one-metre guards exceed polygonal buffer chord error;
-the kilometre dominates the registered 300 m plane-support disk, phase shifts,
-aligned 3 by 3 aggregation, and interpolation footprint. This over-screen is
-intentional: intersection cannot establish exact lattice dependence.
+outward by 1,001 m, using exactly 32 segments per quadrant for both buffers.
+The minimum radial reach of the latter polygon is
+\(1001\cos(\pi/128)=1000.699\) m, so it contains the exact 1,000 m continuum.
+This deliberately broad screen contains the registered 300 m plane-support
+disk, phase shifts, and aligned aggregation footprint. It does not model the
+bilinear source interpolation kernel and therefore does not establish exact
+source dependence or computability.
 
 Densify every nominal one-degree delivery-unit edge at 0.01 degree, project it
 to the same local coordinates, and use closed intersection with the dependency
@@ -61,8 +64,8 @@ Issue 23 final-manifest hash and its bound inventory hash. It expands the
 spatial screen to 32,868 product incidences and labels each row:
 
 - `listed` when the exact product object is in the inventory;
-- `absent_proved_irrelevant` when absent and disjoint from the conservative
-  envelope; or
+- `absent_outside_conservative_screen` when absent and disjoint from the
+  conservative screen; or
 - `absent_relevance_unresolved` when absent and intersecting it.
 
 Aggregate 3,652 cell-instance rows and exact counts by dominant region and
@@ -78,4 +81,3 @@ geometry, inventory-join separation, and forbidden raster/PZI/sample access.
 After staged and final independent approval, retain a final manifest, an
 executed notebook with at most 40 code lines, a non-map figure, and updated
 manuscript source and PDF.
-

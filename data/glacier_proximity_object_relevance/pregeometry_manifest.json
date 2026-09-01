@@ -1,8 +1,9 @@
 {
   "boundary": "No geometry screen has run; geometry action may not read Issue 23 inventory or selected sample.",
-  "buffers_m": {
-    "dependency_outward_guard": 1001,
-    "proximity_outward_guard": 101
+  "buffers": {
+    "proximity_m": 101,
+    "quad_segs": 32,
+    "screen_m": 1001
   },
   "environment": {
     "fiona": "1.10.1",
@@ -10,7 +11,6 @@
     "pandas": "3.0.5",
     "proj": "9.5.1",
     "pyproj": "3.7.2",
-    "python": "3.12.11",
     "shapely": "2.1.2"
   },
   "files": {
@@ -27,12 +27,12 @@
       "sha256": "8b828c4075fde3c007ec0fc867a855a3913d348d77321e8996e4687ff3f3193a"
     },
     "protocol/glacier-proximity-object-relevance.md": {
-      "bytes": 4378,
-      "sha256": "e86efa4788e301a3ee831590c149da00bc90f64daee97882d180d9c5b902031e"
+      "bytes": 4608,
+      "sha256": "2ca47b24dd8e334ac46877c867f6a09cf477f118b944f493f86c0594387ae116"
     },
-    "requirements-geographic.txt": {
-      "bytes": 56,
-      "sha256": "80ef84692d28a2f580e7dfbb59eeea62bc3b59507fda9ba9e290e1bead1ecdad"
+    "requirements-object-relevance.txt": {
+      "bytes": 70,
+      "sha256": "8c9d9d1a1bac6c8ee22ca939fade8c53b59a266527777f7b2532c27b4ef157f1"
     },
     "scripts/denominator_pilot.py": {
       "bytes": 14163,
@@ -43,12 +43,12 @@
       "sha256": "21bb6d250f67aa55c42f8efabe3302a2a0a045c950f1455805e2e0ba2cb4faaa"
     },
     "scripts/glacier_proximity_object_relevance.py": {
-      "bytes": 10296,
-      "sha256": "866ecd56e1e87e0af402ad567b0f407e780924660027c1f457b769380456965c"
+      "bytes": 14574,
+      "sha256": "f48bea01eb4bac7372c0634d40d48516d102804453dc80cd45f4e45f27f9495e"
     },
     "tests/test_glacier_proximity_object_relevance.py": {
-      "bytes": 2801,
-      "sha256": "ca94613983f99c630ebc716574b1aeabab5cdf794184f5e748b247eeccb5a66f"
+      "bytes": 4878,
+      "sha256": "f749a152a68b79ba5617601039d10be77eb6c558f7863e86737bcbb9ff3accd8"
     }
   },
   "issue": 25,
@@ -67,9 +67,17 @@
     ],
     "projection_repairs.csv": [
       "cell_key",
+      "rgi_id",
+      "reason",
       "input_type",
       "output_type",
-      "relative_area_change"
+      "projected_area_before_m2",
+      "projected_area_after_m2",
+      "relative_area_change",
+      "shapely_version",
+      "geos_version",
+      "proj_version",
+      "projected_crs_wkt"
     ]
   },
   "spatial_candidate_rows": 16434,
