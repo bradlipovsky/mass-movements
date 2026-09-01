@@ -69,7 +69,11 @@ geographic inclusion probabilities. Exact source replay then stages four
 run stops before any equivalent-area calculation because one selected cell has
 zero complete DEM-supported reporting centers. Neither complete terrain-screen
 total is therefore estimable from the frozen source, and no partial estimate is
-reported. I then specify detrended seasonal controls,
+reported. A subsequent full-frame object-inventory snapshot lists the core
+GLO-30 object for 1,822 of 1,826 cells and the core GLO-90 object for all 1,826;
+full nine-object halo support is 1,411 and 1,422 cells, respectively. These are
+asset-metadata counts and do not authorize source substitution or establish
+valid terrain coverage. I then specify detrended seasonal controls,
 matched non-failing slopes, mechanism-specific glacier and permafrost
 observations, and multiplicity control. Uneven observation and unresolved
 primary sources prevent these counts from estimating a frequency trend. No
@@ -713,6 +717,56 @@ or low physical susceptibility.
 \end{figure}
 \clearpage
 
+\subsection{Full-frame DEM object-support audit}
+
+The selected-cell failure could reflect a local source gap or a broader frame
+property. A subsequent protocol therefore enumerated the complete public
+Copernicus DEM GLO-30 and GLO-90 object inventories before opening any new
+raster. The fixed population remained all 1,826 reporting cells, and each cell
+required its core $1^\circ$ object plus the eight neighboring objects needed by
+the registered 1~km processing halo. The 96 selected identities were retained
+only as annotations and did not select a request, object, or summary. The
+anonymous bucket listings were acquired on 1 September 2026 and retained as
+848 response pages with 242,695,411 source-metadata bytes
+\citep{CopernicusDEMHandbook2024,AWSDEMRegistry}.
+
+Figure~\ref{fig:global-dem-support} shows the finite-population counts. GLO-30
+lists the core object for 1,822 of 1,826 cells (99.78\%), whereas GLO-90 lists
+all 1,826 core objects. The four GLO-30 absences are N39E044 and N41E046,
+N41E047, and N41E048; all belong to dominant RGI region 12. The last is the
+reporting object in the selected cell that stopped the registered calculation.
+Full nine-object halo support is lower: 1,411 cells (77.27\%) for GLO-30 and
+1,422 (77.88\%) for GLO-90. Of 4,240 distinct required spatial identities, 544
+are absent from both inventories and 22 additional identities are absent only
+from GLO-30. Thus 1,411 cells have full-halo support in both products, 404 lack
+it in both, and 11 lack it only in GLO-30. These are exact enumeration counts
+and therefore have no sampling standard error.
+
+Listed-object metadata is necessary but not sufficient for terrain
+calculation. It does not establish that a raster is readable, that its values
+are valid over snow and ice, or that its acquisition epoch is suitable. In
+particular, an omitted ocean-only neighbor cannot be assumed irrelevant to a
+PZI-intersection center without a separately frozen mask-support calculation.
+The object audit therefore does not revise the Issue 19 stop, substitute
+GLO-90, construct a mixed mosaic, or estimate equivalent area or physical
+susceptibility.
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=\textwidth]{../figures/global_dem_object_support.pdf}
+  \caption{Full-frame Copernicus DEM object-inventory support on 1 September
+  2026. (a) Fraction and exact count of the 1,826 reporting cells having the
+  listed core object or all nine listed processing-neighborhood objects.
+  GLO-90 lists every core object; four GLO-30 core objects are absent.
+  (b) Full-halo object-support fraction grouped by the 10$^\circ$ band of the
+  reporting-cell south edge. The two products differ only in the 30$^\circ$
+  and 40$^\circ$ bands; lower shared fractions reflect absent neighborhood
+  objects, including ocean-only tiles. These are object-metadata fractions,
+  not terrain-validity, equivalent-area, susceptibility, or hazard fractions.}
+  \label{fig:global-dem-support}
+\end{figure}
+\clearpage
+
 \section{Event-centered climate test}
 
 For each frozen event candidate, reanalysis will provide near-surface air
@@ -995,7 +1049,11 @@ probabilities. None of the selected cells crosses an RGI-region boundary, a
 exactly, but the coverage-only gate stops at a selected p00 cell with no
 complete DEM-supported reporting center. No equivalent area is calculated;
 therefore neither complete terrain-screen total is estimable and no partial
-total is reported. Physical validation and any later association analysis also
+total is reported. The subsequent full-frame metadata enumeration finds core
+GLO-90 objects for all 1,826 cells and core GLO-30 objects for 1,822, including
+the same regional gap, but only 1,422 and 1,411 cells have their complete
+nine-object halos. Object listing alone neither repairs the stopped design nor
+establishes valid elevation coverage. Physical validation and any later association analysis also
 require matched non-failing slopes, glacier-contact histories, deformation
 records, permafrost proxies, additional meteorological variables, and a frozen
 statistical specification. Only then can the study estimate whether hazardous
@@ -1036,8 +1094,11 @@ coverage gate stops before equivalent-area execution because one selected cell
 has zero complete DEM support. The complete design-based
 glacier-outline-proximity and PZI-intersection totals are therefore
 non-estimable from that source; a
-zero or partial estimate would violate the design. A newly frozen,
-source-complete design is required before those totals, detrended seasonal
+zero or partial estimate would violate the design. A full-frame object audit
+subsequently lists all core GLO-90 objects and 1,822 of 1,826 core GLO-30
+objects, but only 77.88\% and 77.27\% of cells have their complete nine-object
+halos. Because listing does not establish readable and valid elevation values,
+a newly frozen, source-valid design is required before those totals, detrended seasonal
 controls, or explicit competing predictions can be tested. The present
 contribution is a sampling frame, protocol, and exposure-sensitivity result,
 not evidence that warming systematically triggered these events.

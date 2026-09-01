@@ -1,4 +1,4 @@
-.PHONY: all area-convergence artifacts-area-convergence artifacts-denominator artifacts-event-audit artifacts-geographic-coverage artifacts-reanalysis artifacts-scale-explicit check check-area-convergence check-denominator check-event-audit check-reanalysis check-scale-explicit clean denominator notebook-area-convergence notebook-denominator notebook-event-audit notebook-geographic-coverage notebook-reanalysis notebook-scale-explicit reanalysis scale-explicit
+.PHONY: all area-convergence artifacts-area-convergence artifacts-denominator artifacts-event-audit artifacts-geographic-coverage artifacts-global-dem-support artifacts-reanalysis artifacts-scale-explicit check check-area-convergence check-denominator check-event-audit check-reanalysis check-scale-explicit clean denominator notebook-area-convergence notebook-denominator notebook-event-audit notebook-geographic-coverage notebook-global-dem-support notebook-reanalysis notebook-scale-explicit reanalysis scale-explicit
 
 PYTHON_REANALYSIS ?= .venv/bin/python
 JUPYTER_REANALYSIS ?= $(dir $(PYTHON_REANALYSIS))jupyter
@@ -74,6 +74,12 @@ notebook-geographic-coverage:
 	PATH="$(dir $(PYTHON_REANALYSIS)):$$PATH" $(JUPYTER_REANALYSIS) execute --inplace --timeout 600 --kernel_name python3 notebooks/geographic_coverage_gate.ipynb
 
 artifacts-geographic-coverage: notebook-geographic-coverage
+	latexmk -pdf -cd latex/main.tex
+
+notebook-global-dem-support:
+	PATH="$(dir $(PYTHON_REANALYSIS)):$$PATH" $(JUPYTER_REANALYSIS) execute --inplace --timeout 600 --kernel_name python3 notebooks/global_dem_object_support.ipynb
+
+artifacts-global-dem-support: notebook-global-dem-support
 	latexmk -pdf -cd latex/main.tex
 
 clean:

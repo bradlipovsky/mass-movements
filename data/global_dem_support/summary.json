@@ -1,0 +1,12 @@
+{
+  "glo30": {
+    "population_cells": 1826,
+    "core_object_present_cells": 1822,
+    "full_halo_object_support_cells": 1411
+  },
+  "glo90": {
+    "population_cells": 1826,
+    "core_object_present_cells": 1826,
+    "full_halo_object_support_cells": 1422
+  }
+}
