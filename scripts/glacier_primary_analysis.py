@@ -15,14 +15,26 @@ PINS = {"spatial_freeze_manifest.json": SPATIAL_SHA,
 STAGES={"primary_plan":("value-free participant access plan; outcomes unopened",{"primary_access_requests.csv"}),
  "primary_background":("label-free participant RGI slope and antecedent ERA5 background",{"rgi_surface_features.csv","era5_cell_year.csv","era5_access_ledger.csv","glacier_year_t2m.csv","background_features.csv"}),
  "results":("primary descriptive matched contrasts",{"primary_features.csv","case_completeness.csv","matched_contrasts.csv","dependence_ledger.csv","cluster_contrasts.csv","decision.csv"})}
+PLAN_INPUTS={"scripts/glacier_primary_analysis.py","tests/test_glacier_primary_analysis.py","protocol/glacier_primary_output_schemas.json","requirements-glacier-primary.txt",
+ "data/glacier_warming_steepness/spatial_freeze_manifest.json","data/glacier_warming_steepness/glacier_era5_weights.csv","data/glacier_warming_steepness/case_frame.csv",
+ "data/glacier_warming_steepness/case_glacier_status.csv","data/glacier_warming_steepness/selected_backgrounds.csv","protocol/global-glacier-warming-steepness.md",
+ "protocol/glacier_warming_steepness_output_schemas.json"}
+BACKGROUND_INPUTS={"scripts/glacier_primary_analysis.py","tests/test_glacier_primary_analysis.py","protocol/glacier_primary_output_schemas.json","requirements-glacier-primary.txt",
+ "data/glacier_warming_steepness/primary_plan_manifest.json","data/glacier_warming_steepness/primary_access_requests.csv","data/glacier_warming_steepness/spatial_freeze_manifest.json",
+ "data/glacier_warming_steepness/glacier_era5_weights.csv","data/glacier_warming_steepness/frame_manifest.json","data/geographic_sample/source_manifest.json",
+ "protocol/global-glacier-warming-steepness.md","protocol/glacier_warming_steepness_output_schemas.json"}|{
+ f"data/glacier_warming_steepness/rgi_matching_frame/{r}.csv" for r in ("01","13","17")}|{
+ f"data/geographic_sample/source_raw/rgi/RGI2000-v7.0-G-{r}_{name}.zip" for r,name in (("01","alaska"),("13","central_asia"),("17","southern_andes"))}
 
 def sha(path):
     h=hashlib.sha256()
     with open(path,"rb") as f:
         for b in iter(lambda:f.read(1<<20),b""): h.update(b)
     return h.hexdigest()
-def rows(path):
-    with open(path,newline="") as f: return list(csv.DictReader(f))
+def table(path):
+    with open(path,newline="") as f:
+        reader=csv.DictReader(f); return reader.fieldnames,list(reader)
+def rows(path): return table(path)[1]
 def git(*args): return subprocess.check_output(["git",*args],cwd=ROOT,text=True).strip()
 def write_csv(path, fields, values):
     with open(path,"w",newline="") as f:
@@ -79,18 +91,35 @@ def approved_code(commit):
 def verify_stage(stage,approved_sha):
     path=OUT/f"{stage}_manifest.json"
     if sha(path)!=approved_sha: raise ValueError(f"unapproved {stage} manifest")
-    manifest=json.loads(path.read_text()); status,names=STAGES[stage]
-    if manifest.get("status")!=status or set(manifest.get("outputs",{}))!=names: raise ValueError(f"{stage} manifest contract drift")
+    manifest=json.loads(path.read_text()); status,names=STAGES[stage]; manifest_name=f"{stage}_manifest.json"
+    if (set(manifest)!=set(json.loads(SCHEMA.read_text())["manifests"][manifest_name]) or manifest.get("status")!=status
+            or set(manifest.get("outputs",{}))!=names): raise ValueError(f"{stage} manifest contract drift")
+    expected_inputs=PLAN_INPUTS if stage=="primary_plan" else BACKGROUND_INPUTS if stage=="primary_background" else set()
+    if set(manifest.get("inputs",{}))!=expected_inputs: raise ValueError(f"{stage} input-set drift")
+    for name,rec in manifest.get("inputs",{}).items():
+        target=ROOT/name
+        if target.stat().st_size!=rec["bytes"] or sha(target)!=rec["sha256"]: raise ValueError(f"{stage} input replay failed: {name}")
     tables={}
     for name,rec in manifest["outputs"].items():
         target=OUT/name
-        data=rows(target); tables[name]=data; spec=schema()[name]; validate_table(name,data)
+        header,data=table(target); tables[name]=data; spec=schema()[name]; validate_table(name,data)
         if (target.stat().st_size!=rec["bytes"] or sha(target)!=rec["sha256"] or len(data)!=rec["rows"]
-                or list(data[0])!=fields(name) or len({tuple(r[k] for k in spec["key"]) for r in data})!=len(data)):
+                or header!=fields(name) or len({tuple(r[k] for k in spec["key"]) for r in data})!=len(data)):
             raise ValueError(f"{stage} output replay failed: {name}")
     if stage=="primary_plan" and (len(tables["primary_access_requests.csv"])!=manifest["requests"] or manifest["rgi_ids"]!=207): raise ValueError("plan cardinality drift")
-    if stage=="primary_background" and (len(tables["rgi_surface_features.csv"])!=207 or len(tables["era5_cell_year.csv"])!=manifest["cell_years"]): raise ValueError("background cardinality drift")
+    if stage=="primary_background":
+        request=rows(OUT/"primary_access_requests.csv"); request_cells={(r["latitude"],r["longitude"],r["year"]) for r in request}; pairs={(r["rgi_id"],r["index_year"]) for r in request}
+        era={(r["latitude"],r["longitude"],r["year"]) for r in tables["era5_cell_year.csv"]}; glacier={(r["rgi_id"],r["index_year"],r["year"]) for r in tables["glacier_year_t2m.csv"]}
+        accessed=sum(int(r["points"]) for r in tables["era5_access_ledger.csv"]); unavailable=sum(r["missing_reason"] in ("t2m:coordinate_absent","t2m:calendar_incomplete") for r in tables["era5_cell_year.csv"])
+        if (len(tables["rgi_surface_features.csv"])!=207 or era!=request_cells or len(era)!=manifest["cell_years"] or glacier!={(r["rgi_id"],r["index_year"],r["year"]) for r in request}
+                or len(glacier)!=20*len(pairs) or {(r["rgi_id"],r["index_year"]) for r in tables["background_features.csv"]}!=pairs or accessed+unavailable!=len(era)): raise ValueError("background cardinality drift")
+        expected_source={"era5":{"bucket":"earthmover-icechunk-era5","prefix":"icechunkV2","group":"single/temporal","variable":"t2m","snapshot":SNAPSHOT},"rgi_doi":"10.5067/F6JMOVY5NAVZ"}
+        if manifest["source_identity"]!=expected_source or manifest["environment"]!=environment(): raise ValueError("background provenance drift")
     if stage=="results" and tuple(len(tables[x]) for x in ("primary_features.csv","case_completeness.csv","matched_contrasts.csv","dependence_ledger.csv","decision.csv"))!=(210,420,20,10,1): raise ValueError("result cardinality drift")
+    if stage=="results" and (manifest["program_sha256"]!=sha(PROGRAM) or manifest["schema_sha256"]!=sha(SCHEMA)
+            or manifest["environment"]!=environment() or manifest["output_sha256"]!={n:r["sha256"] for n,r in manifest["outputs"].items()}
+            or manifest["access_audit"]["approved_background_sha256"]!=sha(OUT/"primary_background_manifest.json")):
+        raise ValueError("result provenance drift")
     return manifest
 def participants():
     cases={r["candidate_id"]:r for r in rows(OUT/"case_frame.csv") if r["primary_case"]=="True"}
@@ -135,9 +164,13 @@ def make_plan(approved_commit):
             if year<1981 or year>2022: raise ValueError("year outside registered access")
             for w in by[rgi]: requests.add((rgi,y,year,w["latitude"],w["longitude"]))
     data=[dict(zip(("rgi_id","index_year","year","latitude","longitude"),r)) for r in sorted(requests)]
+    used=[PROGRAM,TESTS,SCHEMA,REQS,OUT/"spatial_freeze_manifest.json",OUT/"glacier_era5_weights.csv",OUT/"case_frame.csv",
+          OUT/"case_glacier_status.csv",OUT/"selected_backgrounds.csv",ROOT/"protocol/global-glacier-warming-steepness.md",
+          ROOT/"protocol/glacier_warming_steepness_output_schemas.json"]
     manifest={"status":"value-free participant access plan; outcomes unopened","git_commit":approved_commit,
       "spatial_manifest_sha256":SPATIAL_SHA,"requests":len(data),"rgi_ids":len({r[0] for r in requests}),
-      "cell_years":len({r[2:] for r in requests}),"created_at":datetime.now(timezone.utc).isoformat()}
+      "cell_years":len({r[2:] for r in requests}),"created_at":datetime.now(timezone.utc).isoformat(),
+      "inputs":{str(p.relative_to(ROOT)):{"bytes":p.stat().st_size,"sha256":sha(p)} for p in used}}
     publish("primary_plan",{"primary_access_requests.csv":(fields("primary_access_requests.csv"),data)},manifest)
 
 def rgi_features(wanted):
@@ -218,12 +251,23 @@ def era_features(request_keys):
     cells_by_year={}
     for lat,lon,year in request_keys:
         flat,flon=float(lat),float(lon)
-        cells_by_year.setdefault(year,[]).append((lat,lon,coordinate_index(lats,flat),coordinate_index(lons,flon)))
+        try: cell=(lat,lon,coordinate_index(lats,flat),coordinate_index(lons,flon))
+        except ValueError: cell=(lat,lon,None,None)
+        cells_by_year.setdefault(year,[]).append(cell)
     out=[]; access=[]
     for year in sorted(cells_by_year):
-        start,hours=calendar_slice(times,year)
+        try: start,hours=calendar_slice(times,year)
+        except ValueError:
+            first=np.datetime64(f"{year}-01-01T00").astype(times.dtype); stop=np.datetime64(f"{year+1}-01-01T00").astype(times.dtype)
+            start=int(np.searchsorted(times,first,"left")); hours=int(np.searchsorted(times,stop,"left"))-start
+            out += [{"latitude":lat,"longitude":lon,"year":year,"hour_count":hours,"t2m_mean_k":"","missing_reason":"t2m:calendar_incomplete"}
+                    for lat,lon,_,_ in sorted(set(cells_by_year[year]))]
+            continue
+        absent=[c for c in set(cells_by_year[year]) if c[2] is None]
+        out += [{"latitude":lat,"longitude":lon,"year":year,"hour_count":hours,"t2m_mean_k":"","missing_reason":"t2m:coordinate_absent"}
+                for lat,lon,_,_ in sorted(absent)]
         tiles={}
-        for c in sorted(set(cells_by_year[year])): tiles.setdefault((c[2]//lat_chunk,c[3]//lon_chunk),[]).append(c)
+        for c in sorted(set(cells_by_year[year])-set(absent)): tiles.setdefault((c[2]//lat_chunk,c[3]//lon_chunk),[]).append(c)
         for tile,cells in sorted(tiles.items()):
             ai=np.array([c[2] for c in cells]); aj=np.array([c[3] for c in cells])
             block=np.asarray(var.isel(valid_time=slice(start,start+hours),latitude=xr.DataArray(ai,dims="point"),longitude=xr.DataArray(aj,dims="point")).values)

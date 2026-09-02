@@ -62,8 +62,12 @@ def test_component_weighting_and_common_exclusion():
     assert [r["contrast"] for r in cc if r["endpoint"]=="t2m_trend_k_decade"]==[3,-1]
     broken=next(r for r in bg if r["rgi_id"]=="c2x0"); broken["slope_deg"]=""; broken["missing_reason"]="slope:missing_or_invalid"
     out=g.build_analysis(rel,bg,spatial); assert {r["final_cluster"] for r in out["cluster_contrasts.csv"]}=={"B"}
+    assert out["decision.csv"][0]["status"]=="INDETERMINATE"
     assert next(r for r in out["dependence_ledger.csv"] if r["candidate_id"]=="c1")["direct_complete"] is True
     assert "c2:slope_deg:c2x0" in next(r for r in out["dependence_ledger.csv"] if r["candidate_id"]=="c1")["missing_reason"]
+def test_header_only_table_is_valid(tmp_path):
+    path=tmp_path/"empty.csv"; path.write_text("final_cluster,endpoint,case_count,contrast,positive\n")
+    header,data=g.table(path); assert header==g.fields("cluster_contrasts.csv") and data==[]
 def test_publish_refuses_collision_and_rolls_back(tmp_path,monkeypatch):
     monkeypatch.setattr(g,"OUT",tmp_path); monkeypatch.setitem(g.STAGES,"x",("x",{"a.csv"})); monkeypatch.setattr(g,"validate_table",lambda *x:None); fields=["x"]
     g.publish("x",{"a.csv":(fields,[{"x":1}])},{"status":"x"})

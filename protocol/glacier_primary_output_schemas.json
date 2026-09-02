@@ -3,6 +3,11 @@
   "amends": "protocol/glacier_warming_steepness_output_schemas.json schema_version 0.3, outcome artifacts only",
   "amendment": "Participant-only exposure replaces full-census outcome access: 207 requested RGI slopes, only cell-years used by frozen 20-year windows, and 20 glacier-years per unique (rgi_id,index_year). Field names and endpoint enums otherwise follow schema 0.3.",
   "null_rule": "Empty CSV field only where nullable=true; NaN, infinity, and numeric sentinels forbidden.",
+  "manifests": {
+    "primary_plan_manifest.json": ["status","git_commit","spatial_manifest_sha256","requests","rgi_ids","cell_years","created_at","inputs","outputs"],
+    "primary_background_manifest.json": ["status","git_commit","approved_program_commit","approved_plan_sha256","snapshot","rgi_ids","cell_years","created_at","source_identity","environment","inputs","outputs"],
+    "results_manifest.json": ["status","protocol_commit","program_sha256","schema_sha256","environment","source_identity","access_audit","created_at","outputs","output_sha256"]
+  },
   "artifacts": {
     "primary_access_requests.csv": {"key": ["rgi_id","index_year","year","latitude","longitude"], "rows": "R", "columns": [["rgi_id","string","1",false],["index_year","integer","year",false],["year","integer","year",false],["latitude","float64","degree_north",false],["longitude","float64","degree_east_0_360",false]]},
     "rgi_surface_features.csv": {"key": ["rgi_id"], "rows": "207", "columns": [["rgi_id","string","1",false],["slope_deg","float64","degree",true],["dem_source","string","1",true],["rgi_grid_spacing_m","float64","m",false],["src_date","datetime","UTC",true],["missing_reason","string","1",true]]},
