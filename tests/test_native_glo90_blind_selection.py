@@ -1,5 +1,6 @@
-import hashlib, hmac, tempfile, unittest
+import hashlib, json, tempfile, unittest
 from pathlib import Path
+from unittest import mock
 import pandas as pd
 from scripts import native_glo90_blind_selection as selection
 
@@ -18,16 +19,50 @@ class BlindSelectionTests(unittest.TestCase):
         expected = selection.candidates()
         retained = pd.read_csv(selection.CANDIDATES, dtype={"dominant_region": str})
         pd.testing.assert_frame_equal(retained, expected)
-        selection.verify_preselection()
+        selection.verify_preselection(selection.digest(selection.PRESELECTION))
+
+    def test_manifest_requires_exact_approval_and_closed_fields(self):
+        with self.assertRaisesRegex(ValueError, "unapproved"):
+            selection.verify_preselection("00" * 32)
+        frozen = json.loads(selection.PRESELECTION.read_text())
+        frozen["files"].pop(next(iter(frozen["files"])))
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "manifest.json"; path.write_text(json.dumps(frozen))
+            with mock.patch.object(selection, "PRESELECTION", path), self.assertRaisesRegex(ValueError, "contract"):
+                selection.verify_preselection(selection.digest(path))
 
     def test_hmac_ranking_is_deterministic_and_region_balanced(self):
         table = selection.candidates(); key = bytes(range(64)); candidate_sha = "ab" * 32
-        table["digest"] = table.cell_key.map(
-            lambda value: hmac.new(key, f"{candidate_sha}|{value}".encode(), hashlib.sha256).hexdigest())
-        ranked = table.sort_values(["dominant_region", "digest", "cell_key"], kind="stable")
-        chosen = ranked.groupby("dominant_region").head(1)
-        self.assertEqual((len(chosen), chosen.dominant_region.tolist()),
-                         (18, [f"{number:02d}" for number in range(1, 19)]))
+        ranked = selection.rank_candidates(table, key, candidate_sha)
+        chosen = ranked[ranked.selected == "yes"]
+        self.assertEqual((len(ranked), len(chosen), ranked.random_digest.is_unique, chosen.dominant_region.tolist()),
+                         (1335, 18, True, [f"{number:02d}" for number in range(1, 19)]))
+        self.assertEqual(ranked.columns.tolist(),
+                         [*table.columns, "random_digest", "region_rank", "selected", "inclusion_probability"])
+        self.assertEqual((ranked.groupby("dominant_region").region_rank.min() == 1).all(), True)
+        self.assertEqual((ranked.inclusion_probability == 1 / ranked.eligible_region_cells).all(), True)
+
+    def test_retained_historical_pulse_verifies_end_to_end(self):
+        root = Path("data/geographic_sample/beacon")
+        current = json.loads((root / "pulse.json").read_text())["pulse"]
+        previous = json.loads((root / "previous_pulse.json").read_text())["pulse"]
+        certificate = (root / "certificate.pem").read_bytes()
+        selection.verify_certificate(certificate)
+        selection.verify_signature(previous, certificate)
+        selection.verify_signature(current, certificate)
+        selection.verify_links(current, previous)
+        self.assertEqual(hashlib.sha512(selection.pulse_message(current) +
+                         bytes.fromhex(current["signatureValue"])).hexdigest().upper(), current["outputValue"])
+        altered = dict(current); altered["outputValue"] = "00" * 64
+        with self.assertRaisesRegex(ValueError, "output"):
+            selection.verify_signature(altered, certificate)
+
+    def test_failure_dominates_joint_indeterminacy(self):
+        self.assertEqual(selection.overall_status(["PASS"] * 36), "PASS")
+        self.assertEqual(selection.overall_status(["PASS"] * 35 + ["INDETERMINATE"]), "INDETERMINATE")
+        self.assertEqual(selection.overall_status(["PASS"] * 34 + ["INDETERMINATE", "FAIL"]), "FAIL")
+        with self.assertRaisesRegex(ValueError, "population"):
+            selection.overall_status(["PASS"] * 35)
 
     def test_deployed_beacon_serialization_and_rejections(self):
         zero = "00" * 64
@@ -41,6 +76,14 @@ class BlindSelectionTests(unittest.TestCase):
         message = selection.pulse_message(pulse)
         self.assertEqual(len(message), 790)
         self.assertEqual(message[:4], (len(pulse["uri"])).to_bytes(4, "big"))
+        pulse["certificateId"] = selection.NIST_CERTIFICATE_ID
+        pulse["uri"] = f"https://beacon.nist.gov/beacon/2.0/chain/2/pulse/{pulse['pulseIndex']}"
+        selection.verify_identity(pulse, selection.TARGET_TIME)
+        with self.assertRaisesRegex(ValueError, "certificate"):
+            selection.verify_certificate(b"not a NIST certificate")
+        pulse["uri"] = "https://example.invalid/forged"
+        with self.assertRaisesRegex(ValueError, "identity"):
+            selection.verify_identity(pulse, selection.TARGET_TIME)
         pulse["listValues"].pop()
         with self.assertRaisesRegex(ValueError, "skip-list"):
             selection.pulse_message(pulse)

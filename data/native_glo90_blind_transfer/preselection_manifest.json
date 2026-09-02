@@ -5,16 +5,16 @@
       "sha256": "a381415146ac3de5c11133c71748030c9b0b72c2eaad31fc83fa4ca2ea86218e"
     },
     "protocol/native-glo90-blind-transfer.md": {
-      "bytes": 7883,
-      "sha256": "a77f3ace26b8b29993d27df4930b2e51f6fa61410fb293b3f591a759f4c50aa1"
+      "bytes": 8935,
+      "sha256": "0b8eb140bed814238419ab751f4f54b7c417170cc1bf1be7738a9aeba353efc7"
     },
     "scripts/native_glo90_blind_selection.py": {
-      "bytes": 9141,
-      "sha256": "e1e8a7f04d22f2e088e201b27ef6aad03b2ae2f28e065a5b92b1b9741c18b7c5"
+      "bytes": 14440,
+      "sha256": "ac7d5bba7639fd8d7c1bbf4e5f54c57a7050d024a9e6b97af7acb14a684490ba"
     },
     "tests/test_native_glo90_blind_selection.py": {
-      "bytes": 3059,
-      "sha256": "a8671fc31fcc1aa8f9e6800e0e7be0d689b850d22981a6ee92bafaa1be3ebd01"
+      "bytes": 5927,
+      "sha256": "c609ed9e274cc7a94bfc252cec9f166a8215b4267df94fa09b279e22652b4273"
     }
   },
   "issue": 31,
@@ -25,6 +25,10 @@
   "target_time_utc": "2026-09-02T06:00:00.000Z",
   "upstream": {
     "data/denominator/windows.csv": "609185f85bf72e06e487b2345900584f942440f861dbd0a71eff059436fd4412",
+    "data/geographic_sample/beacon/certificate.pem": "acd33ba715a14c1d2c1601983c38cb7e671de151c3536fdf25097f28f9533229",
+    "data/geographic_sample/beacon/previous_pulse.json": "d7fdec432b4cc4b6bf48bf0c6fd685a8d0e8729093155805fcaba60e455eb226",
+    "data/geographic_sample/beacon/pulse.json": "1e160ddf2bf6604d675563c484ca87f94c85eee308a6bc4ae3188a1a6774103f",
+    "data/geographic_sample/beacon/verification/issuer_certificate.pem": "6601f41fceefbe7523a6a2e746938de57fc24e99426b7bea58d1867dbee1be5e",
     "data/geographic_sample/frame.csv": "482c9d585777317ab69363481db3df1011e2d4e8ce84c3826b151406cace9879",
     "data/geographic_sample/sample.csv": "1e9164813893e285aeeeaa1a7833e16c87172cbe4d3357e245854ab13966613b",
     "data/global_dem_support/cell_support.csv": "c212449965a543cac03d2b724a8346279b34e2ac87c8d3b0db5e22841c47dd0e",

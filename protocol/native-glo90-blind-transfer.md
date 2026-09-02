@@ -47,10 +47,17 @@ Use the first NIST Randomness Beacon version 2 pulse strictly after
 exactly 2026-09-02T06:00:00.000Z, chain 2, cipher suite 0, 60,000 ms period,
 and zero pulse and external status.
 
-Retain the exact JSON response and certificate. Verify that SHA-512 of the PEM
-certificate bytes equals `certificateId`; verify the RSA PKCS#1 v1.5 SHA-512
-signature over fields 1--19; and verify `outputValue` as SHA-512 of that
-serialized message followed by the raw signature. The deployed chain-2 wire
+Retain the exact JSON response, preceding pulse, and certificate. Require the
+already committed NIST signing-certificate identifier
+`528943a555f5f8ca54423be6dfb95925a35c7b552046420e7d7cd072058a14d6536ad3a8e9754b6582f164a90b0cd86a65d659f5426a2659a947595d1c816c8c`
+as SHA-512 of the leaf DER, verify the retained DigiCert intermediate against
+the system root bundle at the target epoch, confirm certificate validity at
+that epoch, and require the canonical NIST chain-2 URI. Verify the
+preceding-pulse signature and output link;
+require its precommitment to equal SHA-512 of the target local random value;
+verify the target RSA PKCS#1 v1.5 SHA-512 signature over fields 1--19; and
+verify `outputValue` as SHA-512 of that serialized message followed by the
+raw signature. The deployed chain-2 wire
 encoding uses big-endian integers, four-byte length prefixes for string and
 hash fields, a four-byte external status, and no signature-length prefix in
 the output hash. This exact encoding is frozen in the selector.
@@ -58,7 +65,10 @@ the output hash. This exact encoding is frozen in the selector.
 Use the 64-byte `outputValue` as the HMAC-SHA256 key. For each candidate,
 hash UTF-8 `candidate_windows_sha256|cell_key`. Within each dominant region,
 rank by ascending HMAC digest and then ascending cell key, and select rank 1.
-Retain all 1,335 ranks and the 18 selected rows. Conditional on treating the
+The selection command must receive and match the independently approved
+preselection-manifest SHA-256, require the exact closed manifest fields, and
+reject any collision among all 1,335 HMAC digests. Retain all 1,335 ranks and
+the 18 selected rows. Conditional on treating the
 beacon output as random, each cell has first-order inclusion probability
 1/N_h; same-region pair inclusion is zero. With one cell per region there is
 no within-region design-variance estimate, confidence interval, or basis for
@@ -83,15 +93,19 @@ primary origin by (45,0), (0,45), and (45,45) m without adding information.
 For every cell--mask pair define native primary departure as
 `abs(E_native_n00-E_glo30_p00)/E_glo30_p00` and native phase CV as the
 population standard deviation of the four native areas divided by their
-mean. A pair passes only with a positive GLO-30 reference, complete DEM and
-mask support in all compared variants, departure no greater than 0.20, and
-phase CV no greater than 0.10. A structural zero or incomplete support is
-`INDETERMINATE`, never a pass. Missing PZI at any outside-RGI reporting center
-is incomplete because the missing value could enter the mask; it is not
-imputed or treated as mask-false. A resolved positive-reference exceedance is
-a failure. Overall `PASS` requires all 36 pairs to pass; otherwise any
-indeterminate pair makes the overall result `INDETERMINATE`, and otherwise it
-is `FAIL`.
+mean. The primary gate requires complete DEM and mask support for `p00` and
+all four native phases; missing secondary `r90` alone does not change it. A
+pair passes only with a positive GLO-30 reference, departure no greater than
+0.20, and phase CV no greater than 0.10. With complete primary support, a
+zero reference and any positive primary variant is `FAIL`; if all five
+primary areas are zero, record a structural zero and `INDETERMINATE` because
+no relative transfer was tested. Incomplete primary support is likewise
+`INDETERMINATE`, never a pass or evidence of source failure. Missing PZI at
+any outside-RGI reporting center is incomplete because the missing value
+could enter the mask; it is not imputed or treated as mask-false. A resolved
+positive-reference bound exceedance is `FAIL`. Overall `PASS` requires all 36
+pairs to pass. Any pair-level `FAIL` makes the overall result `FAIL`; only
+when none fails does one or more unresolved pair make it `INDETERMINATE`.
 
 Report strict aggregated-GLO-30 departure, signed native and aggregate ratios,
 and `(E_native_n00-E_r90)/E_p00` as secondary paired diagnostics. There is no
