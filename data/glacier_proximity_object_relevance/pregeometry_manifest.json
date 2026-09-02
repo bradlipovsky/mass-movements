@@ -1,0 +1,125 @@
+{
+  "boundary": "The predecessor geometry action stopped atomically with no screen output; the successor geometry action may not read Issue 23 inventory or selected sample.",
+  "buffers": {
+    "proximity_m": 101,
+    "quad_segs": 32,
+    "screen_m": 1001
+  },
+  "environment": {
+    "fiona": "1.10.1",
+    "geos": "3.13.1",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "proj": "9.5.1",
+    "pyproj": "3.7.2",
+    "python": "3.12.11",
+    "shapely": "2.1.2"
+  },
+  "execution": {
+    "ordered_map": true,
+    "start_method": "fork",
+    "workers": 8
+  },
+  "files": {
+    "data/geographic_sample/frame.csv": {
+      "bytes": 188594,
+      "sha256": "482c9d585777317ab69363481db3df1011e2d4e8ce84c3826b151406cace9879"
+    },
+    "data/geographic_sample/source_manifest.json": {
+      "bytes": 89492,
+      "sha256": "6b411fc26af146c9dd0959490775e413aa97f57491cf6de6c91261e7e09e196b"
+    },
+    "data/global_dem_support/expected_objects.csv": {
+      "bytes": 6269699,
+      "sha256": "8b828c4075fde3c007ec0fc867a855a3913d348d77321e8996e4687ff3f3193a"
+    },
+    "protocol/glacier-proximity-object-relevance.md": {
+      "bytes": 7019,
+      "sha256": "bbd5625bf2b49c0d98e6749d4a4cec4c2042d46d73f5379ed3bee5541f268bed"
+    },
+    "requirements-object-relevance.txt": {
+      "bytes": 70,
+      "sha256": "1f4f047533327b8861ef8d01335c28a1ba269475d0d2334bdce8c04630c62b1a"
+    },
+    "scripts/geographic_sample.py": {
+      "bytes": 14291,
+      "sha256": "21bb6d250f67aa55c42f8efabe3302a2a0a045c950f1455805e2e0ba2cb4faaa"
+    },
+    "scripts/glacier_proximity_object_relevance.py": {
+      "bytes": 18438,
+      "sha256": "b89bcc6d01f8c7c4614c778a4ce6169b9917b874bd03ee2ca392d7019d9f114d"
+    },
+    "tests/test_glacier_proximity_object_relevance.py": {
+      "bytes": 6685,
+      "sha256": "f3e9fe0eb90f8b043f3125d3f42bacc64a31a5259169949cdc734d05fa799a0b"
+    }
+  },
+  "issue": 25,
+  "population_cells": 1826,
+  "predecessor_stop": {
+    "commit": "ca722a5a0d901105706fd3f5993970794f06fc4d",
+    "failed_rgi_id": "RGI2000-v7.0-G-03-03101",
+    "no_geometry_outputs": true,
+    "pregeometry_manifest_sha256": "9ace2029781a1a449ba3bd65cbb220da8436ad0f929e36a9575f70df0232b940"
+  },
+  "repair": {
+    "absolute_area_change_m2_max": 0.1,
+    "boundary_hausdorff_distance_m_max": 0.02,
+    "hausdorff_densify": 0.01,
+    "keep_collapsed": true,
+    "method": "linework",
+    "record_component_count": true,
+    "regression_hausdorff_max_m": 0.1,
+    "regression_refinement_degrees": 0.0005,
+    "regression_scope": "10 predecessor-failure incidences",
+    "relative_area_change_max": 1e-7,
+    "source_segmentize_degrees": 0.001
+  },
+  "schemas": {
+    "object_screen.csv": [
+      "cell_key",
+      "south",
+      "west",
+      "dominant_region",
+      "role",
+      "latitude",
+      "longitude",
+      "proximity_applicable",
+      "screen_relevant"
+    ],
+    "projection_repairs.csv": [
+      "cell_key",
+      "rgi_id",
+      "reason",
+      "projected_area_before_m2",
+      "projected_area_after_m2",
+      "absolute_area_change_m2",
+      "relative_area_change",
+      "boundary_hausdorff_distance_m",
+      "source_type",
+      "source_components",
+      "source_holes",
+      "source_vertices",
+      "segmentized_wgs_type",
+      "segmentized_wgs_components",
+      "segmentized_wgs_holes",
+      "segmentized_wgs_vertices",
+      "projected_input_type",
+      "projected_input_components",
+      "projected_input_holes",
+      "projected_input_vertices",
+      "fixed_output_type",
+      "fixed_output_components",
+      "fixed_output_holes",
+      "fixed_output_vertices",
+      "repair_method",
+      "keep_collapsed",
+      "shapely_version",
+      "geos_version",
+      "proj_version",
+      "projected_crs_wkt"
+    ]
+  },
+  "spatial_candidate_rows": 16434,
+  "status": "pre_geometry"
+}
