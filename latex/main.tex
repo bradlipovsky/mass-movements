@@ -1181,6 +1181,52 @@ also contain no non-failing risk set. Thus neither the ranks nor their
 sensitivities estimate failure probability, systematic climate triggering,
 or attribution.
 
+\subsection{Matched glacier steepness and antecedent warming screen}
+
+I separately tested whether documented glacier detachments and collapses had
+larger matched contrasts in strictly antecedent ERA5 trends and mixed-epoch RGI
+mean-slope attributes. Ten initial-volume cases had reviewed unique RGI 7 links and exactly
+20 outcome-blind matched comparison objects. Matching retained second-order
+region, connectivity, area within a factor of four, median elevation within
+500~m, and the same or adjacent aspect sector. Shared positive-weight ERA5
+support merged seven initial trigger/site clusters into five final dependence
+components. All ten cases and 200 case--control relations were paired-complete.
+
+For each case index year, ERA5 2-m air temperature used the 20 complete calendar
+years ending before the event year. Annual means were area-weighted over each
+RGI outline's intersected 0.25-degree cells, and OLS trend used a fixed lag-2
+Newey--West uncertainty calculation. The geometry endpoint was the published
+RGI 7 glacier-wide mean surface slope \citep{RGI7,Hersbach2020,EarthmoverERA52026}.
+It combines approximately year-2000 outlines with mixed source and DEM epochs;
+it is not an antecedent source-patch, failure-plane, or bed slope.
+
+The case-minus-20-control median slope contrast was positive in all five final
+components. Their median contrast was $+3.480^\circ$ and their
+Hodges--Lehmann location was $+4.312^\circ$ (one-sided sign diagnostic
+$p=0.03125$). Antecedent ERA5 trend contrasts were heterogeneous: three of five
+components were positive, the median was $+0.0266$~K decade$^{-1}$, the
+Hodges--Lehmann location was $-0.0076$~K decade$^{-1}$, and the sign diagnostic
+was $p=0.50$. The median across components of their mean raw case trend was
+$+0.402$~K decade$^{-1}$. The registered intersection--union diagnostic is the
+larger endpoint value, $p=0.50$; finite 95\% sign intervals are unavailable at
+$n=5$. The frozen rule therefore returns \texttt{DESCRIPTIVE\_ONLY,
+consistent}, not a supported risk or causal model.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\textwidth]{../figures/glacier_warming_steepness.pdf}
+  \caption{Matched contrasts for (a) strictly antecedent 20-year ERA5 2-m air
+  temperature trends and (b) mixed-epoch RGI 7 glacier-wide mean surface-slope
+  attributes. Open points are documented cases minus the median of their 20
+  frozen matched RGI comparison objects; filled diamonds are equal-case means
+  within final dependence components. Components receive equal weight. Solid
+  lines mark median component contrasts and dashed lines mark zero. ERA5 is a
+  regional atmospheric exposure at model orography; RGI slope does not measure
+  pre-event source geometry. Neither panel establishes a warming-trigger
+  mechanism, failure probability, risk, or causation.}
+  \label{fig:glacier-warming-steepness}
+\end{figure}
+
 \section{Competing hypotheses and discriminating observations}
 
 The analysis will evaluate signs and timing that distinguish mechanisms.
