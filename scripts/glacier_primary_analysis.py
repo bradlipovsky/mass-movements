@@ -106,16 +106,16 @@ def verify_stage(stage,approved_sha):
         if (target.stat().st_size!=rec["bytes"] or sha(target)!=rec["sha256"] or len(data)!=rec["rows"]
                 or header!=fields(name) or len({tuple(r[k] for k in spec["key"]) for r in data})!=len(data)):
             raise ValueError(f"{stage} output replay failed: {name}")
-    if stage=="primary_plan" and (len(tables["primary_access_requests.csv"])!=manifest["requests"] or manifest["rgi_ids"]!=207): raise ValueError("plan cardinality drift")
+    if stage=="primary_plan" and (len(tables["primary_access_requests.csv"])!=manifest["requests"] or manifest["rgi_ids"]!=207 or manifest["spatial_manifest_sha256"]!=SPATIAL_SHA or manifest["cell_years"]!=len({(r["year"],r["latitude"],r["longitude"]) for r in tables["primary_access_requests.csv"]})): raise ValueError("plan cardinality drift")
     if stage=="primary_background":
         request=rows(OUT/"primary_access_requests.csv"); request_cells={(r["latitude"],r["longitude"],r["year"]) for r in request}; pairs={(r["rgi_id"],r["index_year"]) for r in request}
         era={(r["latitude"],r["longitude"],r["year"]) for r in tables["era5_cell_year.csv"]}; glacier={(r["rgi_id"],r["index_year"],r["year"]) for r in tables["glacier_year_t2m.csv"]}
-        accessed=sum(int(r["points"]) for r in tables["era5_access_ledger.csv"]); unavailable=sum(r["missing_reason"] in ("t2m:coordinate_absent","t2m:calendar_incomplete") for r in tables["era5_cell_year.csv"])
+        failures=[f"{r['latitude']},{r['longitude']},{r['year']}:{r['missing_reason']}" for r in tables["era5_cell_year.csv"] if r["missing_reason"] in ("t2m:coordinate_absent","t2m:calendar_incomplete")]; accessed=sum(int(r["points"]) for r in tables["era5_access_ledger.csv"]); unavailable=len(failures)
         if (len(tables["rgi_surface_features.csv"])!=207 or era!=request_cells or len(era)!=manifest["cell_years"] or glacier!={(r["rgi_id"],r["index_year"],r["year"]) for r in request}
-                or len(glacier)!=20*len(pairs) or {(r["rgi_id"],r["index_year"]) for r in tables["background_features.csv"]}!=pairs or accessed+unavailable!=len(era)): raise ValueError("background cardinality drift")
+                or len(glacier)!=20*len(pairs) or {(r["rgi_id"],r["index_year"]) for r in tables["background_features.csv"]}!=pairs or accessed+unavailable!=len(era)
+                or manifest["approved_plan_sha256"]!=sha(OUT/"primary_plan_manifest.json") or type(manifest["support_protocol_gate"]) is not bool or manifest["support_protocol_failures"]!=failures or manifest["support_protocol_gate"]!= (not failures)): raise ValueError("background cardinality drift")
         expected_source={"era5":{"bucket":"earthmover-icechunk-era5","prefix":"icechunkV2","group":"single/temporal","variable":"t2m","snapshot":SNAPSHOT},"rgi_doi":"10.5067/F6JMOVY5NAVZ"}
-        if (manifest["source_identity"]!=expected_source or manifest["environment"]!=environment()
-                or bool(manifest["support_protocol_gate"])==bool(manifest["support_protocol_failures"])): raise ValueError("background provenance drift")
+        if manifest["source_identity"]!=expected_source or manifest["environment"]!=environment(): raise ValueError("background provenance drift")
     if stage=="results" and tuple(len(tables[x]) for x in ("primary_features.csv","case_completeness.csv","matched_contrasts.csv","dependence_ledger.csv","decision.csv"))!=(210,420,20,10,1): raise ValueError("result cardinality drift")
     if stage=="results" and (manifest["program_sha256"]!=sha(PROGRAM) or manifest["schema_sha256"]!=sha(SCHEMA)
             or manifest["environment"]!=environment() or manifest["output_sha256"]!={n:r["sha256"] for n,r in manifest["outputs"].items()}
