@@ -398,8 +398,8 @@
       "sha256": "3fbd6f6b213c2190f78aeac7a72ebe12b48f27f811c73b21d533121f0b3f7b03"
     },
     "protocol/native-glo90-transfer.md": {
-      "bytes": 9843,
-      "sha256": "3f738aff3bc41ef938bbe1e611799a7ee355b4684678bef76306d4241424d5e5"
+      "bytes": 10018,
+      "sha256": "8f5c78fdc75d9f91aeae6d1505e3223dd8fcd210fb3849c4096fbdfa0f869b1c"
     },
     "requirements-denominator.txt": {
       "bytes": 156,
@@ -414,8 +414,8 @@
       "sha256": "5f733147434f859ea3cbfc815da77a1bd8ae83137d80e59a65243d6d3e23508a"
     },
     "scripts/native_glo90_transfer.py": {
-      "bytes": 13384,
-      "sha256": "5146954d9199297440d75cb3d429b9f8d60767091d1dfbbaf7494d2d842ee1a2"
+      "bytes": 13595,
+      "sha256": "c854032f3a8aa6d769beb25ebd3b227ad9c77994b5e2be40887ad09d60e67d55"
     },
     "scripts/native_glo90_transfer_source.py": {
       "bytes": 9569,
@@ -434,8 +434,8 @@
       "sha256": "9ac2644257ce1ba90bd8f2edbc6e9b47ea152fa02304b0c4b994e495a512b20c"
     },
     "tests/test_native_glo90_transfer.py": {
-      "bytes": 8321,
-      "sha256": "dd702da5dd39f69b39664a36cc1f395d3e27fcf7a9abf335625b835ebf6e7070"
+      "bytes": 8428,
+      "sha256": "7c829642748b4c539b192e174de3fedc524cab48657ee56103e1378642d23a53"
     }
   }
 }

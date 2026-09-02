@@ -106,8 +106,10 @@ posts at 3 arc seconds, and 1,200 divided by the DGED longitude reduction
 factor posts. The AWS COG transformation removes the shared east and south
 edge posts. The first post center must equal the ledger geocell's northwest
 integer-degree corner and the last must lie one native interval inside its
-southeast corner. A payload with another resolution, footprint, or ledger
-identity stops the calculation.
+southeast corner. Require the exact north-up affine: positive longitude scale,
+negative latitude scale, zero skew and rotation, and the RasterPixelIsPoint
+half-pixel corner origin. A payload with another resolution, footprint, axis
+order, or ledger identity stops the calculation.
 
 Evaluate four native target-grid origins: the inherited origin `n00`, then
 half-pixel translations `nx45`, `ny45`, and `nxy45` at (45, 0), (0, 45), and

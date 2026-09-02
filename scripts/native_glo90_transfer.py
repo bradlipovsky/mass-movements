@@ -63,7 +63,7 @@ def validate_native_grid(source, item):
     height, width, xres, yres = expected_native_grid(item); west, south = int(item["longitude"]), int(item["latitude"])
     first, last = source.xy(0, 0), source.xy(height - 1, width - 1)
     metadata = (source.driver, source.count, source.dtypes[0], source.crs.to_epsg(), source.tags().get("AREA_OR_POINT"), source.is_tiled, source.height, source.width)
-    if metadata != ("GTiff", 1, "float32", 4326, "Point", True, height, width) or not np.allclose(source.res, (xres, yres), rtol=0, atol=1e-12) or not np.allclose((*first, *last), (west, south + 1, west + 1 - xres, south + yres), rtol=0, atol=1e-9): raise ValueError(f"native GLO-90 grid differs: {item['object_id']}")
+    if metadata != ("GTiff", 1, "float32", 4326, "Point", True, height, width) or not np.allclose(source.res, (xres, yres), rtol=0, atol=1e-12) or not np.allclose((source.transform.a, source.transform.b, source.transform.c, source.transform.d, source.transform.e, source.transform.f), (xres, 0, west-xres/2, 0, -yres, south+1+yres/2), rtol=0, atol=1e-12) or not np.allclose((*first, *last), (west, south + 1, west + 1 - xres, south + yres), rtol=0, atol=1e-9): raise ValueError(f"native GLO-90 grid differs: {item['object_id']}")
 def native_sources(region, ledger): return [x for x in ledger if x["region"] == region and int(x["http_status"]) == 200]
 def warp_native(items, shape, affine, crs):
     combined = np.full(shape, np.nan, dtype=np.float32)

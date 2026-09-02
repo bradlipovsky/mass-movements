@@ -34,10 +34,10 @@ class NativeGLO90TransferTests(unittest.TestCase):
         report = np.array([[True, True]]); inside = np.array([[False, False]]); target = support = np.array([[True, False]])
         self.assertFalse(analysis.support_is_complete("permafrost", report, inside, np.array([[0.2, np.nan]]), target, support)); self.assertTrue(analysis.support_is_complete("glacier_proximity", report, inside, np.array([[np.nan, np.nan]]), target, support))
     def test_native_grid_is_ledger_and_glo90_specific(self):
-        item = {"latitude":"80", "longitude":"-86", "object_id":"registered"}; height, width, xres, yres = analysis.expected_native_grid(item)
-        self.assertEqual((height, width, xres, yres), (1200, 240, 1/240, 1/1200))
-        fake = SimpleNamespace(driver="GTiff", count=1, dtypes=["float32"], crs=SimpleNamespace(to_epsg=lambda:4326), is_tiled=True, height=height, width=width, res=(xres,yres), tags=lambda:{"AREA_OR_POINT":"Point"}, xy=lambda row,column:(-86+column*xres,81-row*yres))
-        analysis.validate_native_grid(fake, item); fake.width = 720; self.assertRaises(ValueError, analysis.validate_native_grid, fake, item)
+        item = {"latitude":"28", "longitude":"96", "object_id":"registered"}; height, width, xres, yres = analysis.expected_native_grid(item)
+        self.assertEqual((height, width, xres, yres), (1200, 1200, 1/1200, 1/1200))
+        fake = SimpleNamespace(driver="GTiff", count=1, dtypes=["float32"], crs=SimpleNamespace(to_epsg=lambda:4326), is_tiled=True, height=height, width=width, res=(xres,yres), tags=lambda:{"AREA_OR_POINT":"Point"}, transform=Affine(xres,0,96-xres/2,0,-yres,29+yres/2)); fake.xy=lambda row,column:fake.transform@(column+.5,row+.5)
+        analysis.validate_native_grid(fake, item); fake.transform = Affine(0,xres,96-xres/2,-yres,0,29+yres/2); self.assertRaises(ValueError, analysis.validate_native_grid, fake, item)
     def test_raw_manifest_verification_closes_every_response(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory); out = root / "data/native_glo90_transfer"; rawdir = out / "source_raw"; rawdir.mkdir(parents=True)
