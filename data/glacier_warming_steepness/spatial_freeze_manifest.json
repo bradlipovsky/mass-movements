@@ -1,0 +1,143 @@
+{
+  "case_rgi_ids": 10,
+  "control_rgi_ids": 197,
+  "final_clusters": 5,
+  "geodesic_representation_tolerance": 0.0001,
+  "git_commit": "20e8008a0af3305df5f84602aa944fb7144fdaff",
+  "grid": "0.25 degree center-defined; longitude [0,360); latitude bounds clipped at poles",
+  "iceboost_members": 133759,
+  "iceboost_regions": [
+    "01",
+    "13",
+    "17"
+  ],
+  "initial_clusters": 7,
+  "inputs": {
+    "data/geographic_sample/source_manifest.json": {
+      "bytes": 89492,
+      "sha256": "6b411fc26af146c9dd0959490775e413aa97f57491cf6de6c91261e7e09e196b"
+    },
+    "data/geographic_sample/source_raw/rgi/RGI2000-v7.0-G-01_alaska.zip": {
+      "bytes": 82915936,
+      "sha256": "f2a1c54edea1168a89957a4297b8fad5a80cad05797fadd8426ce45128727b9a"
+    },
+    "data/geographic_sample/source_raw/rgi/RGI2000-v7.0-G-13_central_asia.zip": {
+      "bytes": 92030676,
+      "sha256": "d21529f1b13b9e206806d30abef3cb31ebdd633f57484670f2a2592bffb9fdd6"
+    },
+    "data/geographic_sample/source_raw/rgi/RGI2000-v7.0-G-17_southern_andes.zip": {
+      "bytes": 44945013,
+      "sha256": "b00574a2c887d13cfa1d0d64e7c3040d3ea68c052f84e0610f4895cc2ea1e201"
+    },
+    "data/glacier_warming_steepness/case_frame.csv": {
+      "bytes": 1053,
+      "sha256": "0b03ef57c20e1178efac6ffc598b86f3e9c62bbcd600f2a42e6ca3c9fe58dee0"
+    },
+    "data/glacier_warming_steepness/case_glacier_status.csv": {
+      "bytes": 1610,
+      "sha256": "c07cb1c590ee0f7f99824d9461355c9e35fdbd803a0ecd8b4d45fff79a873a26"
+    },
+    "data/glacier_warming_steepness/iceboost_source_manifest.json": {
+      "bytes": 2732,
+      "sha256": "6fcde5e0cf9a2d75f41746af15994b7592bb953488666f1e58e06c30913215ec"
+    },
+    "data/glacier_warming_steepness/matching_pools.csv": {
+      "bytes": 572104,
+      "sha256": "45a7040e12e64e77c5ea3ecc71e8b9e3ff05b92357b7e3a49ca2480f24aa6c7b"
+    },
+    "data/glacier_warming_steepness/matching_summary.csv": {
+      "bytes": 791,
+      "sha256": "73d854deefd516bc43cb6a5e915a7250392ebc0afa5b8da11bd6982f14235dc9"
+    },
+    "data/glacier_warming_steepness/preaccess_manifest.json": {
+      "bytes": 10141,
+      "sha256": "d4640d9079ed81ff9654a22590f5effa84b07355bdf58fa26712575056e73676"
+    },
+    "data/glacier_warming_steepness/selected_backgrounds.csv": {
+      "bytes": 23516,
+      "sha256": "78674106e76e11d74b54d9506afed08def4fb109e3c09002f6c47a847b8dd781"
+    },
+    "data/glacier_warming_steepness/source_raw/iceboost/RGI70G_rgi1.zip": {
+      "bytes": 396393941,
+      "sha256": "a551835c03129d6abc11cf645ef622c2b3c799bf91fafb995b41c20792ec9f5d"
+    },
+    "data/glacier_warming_steepness/source_raw/iceboost/RGI70G_rgi13.zip": {
+      "bytes": 778453077,
+      "sha256": "b9ca6a64e9c4d1fb6d16349f0a2b2e454eea628208d61081128ef0b12ab5a8a1"
+    },
+    "data/glacier_warming_steepness/source_raw/iceboost/RGI70G_rgi17.zip": {
+      "bytes": 320304385,
+      "sha256": "93445bca2067c58f4f5ac006f7f99595c5e07f46d447f60e77881573f46b035e"
+    },
+    "protocol/glacier_spatial_freeze_output_schemas.json": {
+      "bytes": 2952,
+      "sha256": "8fcd41ba342334db0fd5a16c6a085398923f0a1537378ffc558151f59e201260"
+    },
+    "protocol/glacier_warming_steepness_output_schemas.json": {
+      "bytes": 13446,
+      "sha256": "464c35fefbff6030c3dee7d4b72bf0d2fedb3f107d1333332a5ff2dc2f3cb453"
+    },
+    "protocol/global-glacier-warming-steepness.md": {
+      "bytes": 21446,
+      "sha256": "e1104cdc0ed0aaa9275e62ad6aa7f33271dc5fdc8dc1130fcde7657fdc5dfb60"
+    },
+    "requirements-glacier-spatial-freeze.txt": {
+      "bytes": 43,
+      "sha256": "9093c36557108011b10a0eaf51e5627539f0b40e9e1e9259b748c67a0fdaad5c"
+    },
+    "scripts/glacier_matching_freeze.py": {
+      "bytes": 23042,
+      "sha256": "8043227fa2190d6f0b0a1fe26de5a16b1bbaf5d279c4d6a3b15bbef2d020df99"
+    },
+    "scripts/glacier_spatial_freeze.py": {
+      "bytes": 16956,
+      "sha256": "bf58d5d1d873879e2fe81edda53a687b065029a104d5f9c4352429a350c69d81"
+    },
+    "scripts/glacier_warming_steepness.py": {
+      "bytes": 21473,
+      "sha256": "89cb24c338bc66ebb3eea77ea4ab20d31b5ce8fe4e3162070c5203cee775dfeb"
+    },
+    "tests/test_glacier_spatial_freeze.py": {
+      "bytes": 6565,
+      "sha256": "d2862c7a4c102b154d564c5da6810f8f213c13b718c6c6d00eb187fa21342d10"
+    }
+  },
+  "inventory_verified_at": "2026-09-02T09:23:59.466962+00:00",
+  "outputs": {
+    "dependence_merge_edges.csv": {
+      "bytes": 902,
+      "rows": 20,
+      "sha256": "b3365020e32e04a26628f6025169b7fd905afe34ff66463463bc3b0cae9ccc36"
+    },
+    "glacier_era5_weight_checks.csv": {
+      "bytes": 17953,
+      "rows": 207,
+      "sha256": "33903cbd2ba6f8f5bb9e919cd56d5d898edbf845415f7dab54961b4fbfbed15d"
+    },
+    "glacier_era5_weights.csv": {
+      "bytes": 14215,
+      "rows": 235,
+      "sha256": "baeee795dfcd79b1e67eee9337f192c897f8d4ea10ed37fd0174410544e6ec9a"
+    },
+    "iceboost_archive_members.csv": {
+      "bytes": 23171223,
+      "rows": 133759,
+      "sha256": "b3b1ff4ab005385d121e623ebfbd146eb3230091f0f54463699aa424219fbb15"
+    },
+    "spatial_dependence_ledger.csv": {
+      "bytes": 476,
+      "rows": 10,
+      "sha256": "99c315cb6530bc1d8e1e6155a94b0013fccb170f2424d82d1243ecd60d2aa400"
+    }
+  },
+  "planar_closure_tolerance": 1e-12,
+  "platform": "Linux-4.18.0-553.22.1.el8_10.x86_64-x86_64-with-glibc2.28",
+  "python": "3.12.11 (main, Aug 26 2025, 15:44:11) [GCC 8.5.0 20210514 (Red Hat 8.5.0-26)]",
+  "registration_url": "https://github.com/bradlipovsky/mass-movements/issues/33",
+  "request_rows": 210,
+  "rgi_ids": 207,
+  "status": "ERA5 support and opaque IceBoost central-directory declarations frozen; registered values unopened",
+  "unique_era5_cells": 133,
+  "weight_rows": 235,
+  "weight_sum_tolerance": 1e-12
+}

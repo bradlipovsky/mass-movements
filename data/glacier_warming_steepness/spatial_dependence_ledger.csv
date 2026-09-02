@@ -1,0 +1,11 @@
+candidate_id,initial_cluster,final_cluster
+aru-1-2016,site-aru,site-aru
+aru-2-2016,site-aru,site-aru
+bukadaban-2022,bukadaban-2022,bukadaban-2022
+flat-creek-2013,flat-creek-2013,flat-creek-2013
+kunlun-b2-2001,trigger-kunlun-2001,bukadaban-2022
+kunlun-b4-2001,trigger-kunlun-2001,bukadaban-2022
+kunlun-k2-2001,trigger-kunlun-2001,bukadaban-2022
+petra-dp19,petra-dp19,petra-dp19
+shuraki-kapali-2017,site-petra-sk,petra-dp19
+tinguiririca-2007,tinguiririca-2007,tinguiririca-2007
