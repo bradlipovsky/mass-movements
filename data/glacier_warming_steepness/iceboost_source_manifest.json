@@ -1,0 +1,33 @@
+{
+  "record": 17724512,
+  "doi": "10.5281/zenodo.17724512",
+  "version": "iceboost-v2.0",
+  "record_updated": "2026-05-31T08:32:54.118825+00:00",
+  "metadata_retrieved": "2026-09-02T08:30:00Z",
+  "license": "cc-by-4.0",
+  "status": "metadata only; no archive bytes retrieved or raster values decoded",
+  "rgi7_total_bytes": 3694204303,
+  "archives": [
+    {"region": 1, "filename": "RGI70G_rgi1.zip", "bytes": 396393941, "md5": "ef27cfc9d244aef8fcaf4c165bc115a4"},
+    {"region": 2, "filename": "RGI70G_rgi2.zip", "bytes": 179630029, "md5": "d94202abb843a53fe5871a3d92e346af"},
+    {"region": 3, "filename": "RGI70G_rgi3.zip", "bytes": 231591122, "md5": "b5c57a57bcc65fa08e944b5fa742fc68"},
+    {"region": 4, "filename": "RGI70G_rgi4.zip", "bytes": 159493892, "md5": "be04e64474aeffbf6b11aedf6a0124b0"},
+    {"region": 5, "filename": "RGI70G_rgi5.zip", "bytes": 304763636, "md5": "8ddb21158e128c8cd9124dedd2216f5d"},
+    {"region": 6, "filename": "RGI70G_rgi6.zip", "bytes": 23782034, "md5": "d44d4e1f52754e907b401ab49a0554db"},
+    {"region": 7, "filename": "RGI70G_rgi7.zip", "bytes": 74227094, "md5": "25bc87e5f4b32900e3e36f9909668a8f"},
+    {"region": 8, "filename": "RGI70G_rgi8.zip", "bytes": 35339377, "md5": "a2e1c77065d10febbd558f6df70b56a4"},
+    {"region": 9, "filename": "RGI70G_rgi9.zip", "bytes": 101394790, "md5": "94430b88bf1789d1dd774141c6f0f944"},
+    {"region": 10, "filename": "RGI70G_rgi10.zip", "bytes": 77685074, "md5": "1fa5928d064dce0be06a20eaea3ebc64"},
+    {"region": 11, "filename": "RGI70G_rgi11.zip", "bytes": 44923206, "md5": "e9e5893b96355313aed96cdc741f5eba"},
+    {"region": 12, "filename": "RGI70G_rgi12.zip", "bytes": 26721864, "md5": "f0b916607c248893b3ab5196253a0c21"},
+    {"region": 13, "filename": "RGI70G_rgi13.zip", "bytes": 778453077, "md5": "59836a39681f68f97f1ce3ae8b197904"},
+    {"region": 14, "filename": "RGI70G_rgi14.zip", "bytes": 420419242, "md5": "065a208eab51bfa068d61c1dc7fd5f5d"},
+    {"region": 15, "filename": "RGI70G_rgi15.zip", "bytes": 185616947, "md5": "e35b475baac8849679fc163357e0ba61"},
+    {"region": 16, "filename": "RGI70G_rgi16.zip", "bytes": 35613200, "md5": "82fb81665a90763baa79b1da338aa8f0"},
+    {"region": 17, "filename": "RGI70G_rgi17.zip", "bytes": 320304385, "md5": "18538aa84c77145cf964c1e93dec69ec"},
+    {"region": 18, "filename": "RGI70G_rgi18.zip", "bytes": 29696606, "md5": "f377bb2588762c9a8e46b9301e94d58b"},
+    {"region": 19, "filename": "RGI70G_rgi19.zip", "bytes": 268154787, "md5": "a6108fa6269ba4e7eae27f648bed6114"}
+  ],
+  "content_url_template": "https://zenodo.org/api/records/17724512/files/{filename}/content",
+  "post_download_requirements": "Verify bytes and MD5, compute SHA-256, inventory central directory before TIFF decode."
+}

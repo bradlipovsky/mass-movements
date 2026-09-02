@@ -1,0 +1,244 @@
+{
+  "schema_version": "0.2",
+  "column_tuple": ["name", "type", "unit", "nullable"],
+  "null_rule": "Empty CSV field only where nullable=true; NaN and sentinel numbers forbidden.",
+  "symbols": {
+    "M": "admitted primary cases with exactly 20 selected controls",
+    "P": "sum of terminal eligible-pool sizes across admitted primary cases",
+    "G": "unique (rgi_id,index_year) pairs among admitted cases and controls",
+    "U": "unique positive-weight ERA5 cells",
+    "W": "positive-area glacier-cell intersections",
+    "I": "ZIP central-directory members in retrieved relevant IceBoost archives",
+    "C": "paired-complete final dependence components"
+  },
+  "enums": {
+    "crosswalk_status": ["unique", "lineage_union", "ambiguous", "no_rgi_object", "unresolved", "review_excluded"],
+    "review_state": ["agree", "excluded"],
+    "match_status": ["matched", "unmatched", "crosswalk_excluded", "not_primary"],
+    "endpoint": ["t2m_trend_k_decade", "slope_deg"],
+    "role": ["case", "control"],
+    "status": ["DESCRIPTIVE_ONLY", "INDETERMINATE"],
+    "direction": ["consistent", "mixed", "inconsistent"]
+  },
+  "csv_boolean_tokens": ["True", "False"],
+  "artifacts": [
+    {
+      "path": "case_glacier_assertions.csv", "key": ["candidate_id"], "rows": "14",
+      "columns": [
+        ["candidate_id", "string", "1", false], ["proposed_status", "enum", "1", false],
+        ["rgi_id", "string", "1", true], ["glims_id", "string", "1", true],
+        ["evidence_source", "semicolon_string", "1", false], ["evidence_locator", "string", "1", false],
+        ["mapping_method", "string", "1", false], ["dependence_cluster", "string", "1", false],
+        ["reviewer_1", "string", "1", true], ["reviewer_2", "string", "1", true],
+        ["reviewer_1_decision", "enum_agree_disagree", "1", true], ["reviewer_2_decision", "enum_agree_disagree", "1", true],
+        ["review_state", "enum_pending_agree_excluded", "1", false], ["note", "string", "1", false]
+      ]
+    },
+    {
+      "path": "crosswalk_review_packet.csv", "key": ["candidate_id"], "rows": "14",
+      "columns": [
+        ["candidate_id", "string", "1", false], ["proposed_status", "enum", "1", false],
+        ["rgi_id", "string", "1", true], ["glims_id", "string", "1", true],
+        ["same_glims_rgi_ids", "pipe_string", "1", true], ["rgi_src_date", "datetime", "UTC", true],
+        ["distance_km", "float64", "km", true], ["overlap_fraction", "float64", "1", true],
+        ["lineage_members", "pipe_string", "1", true], ["evidence_source", "semicolon_string", "1", false],
+        ["evidence_locator", "string", "1", false], ["mapping_method", "string", "1", false]
+      ]
+    },
+    {
+      "path": "case_frame.csv", "key": ["candidate_id"], "rows": "14",
+      "columns": [
+        ["candidate_id", "string", "1", false], ["date_start", "date", "UTC calendar", false],
+        ["initial_failure", "string", "1", false], ["threshold_quantity", "string", "1", false],
+        ["index_year", "integer", "year", false], ["primary_case", "boolean", "1", false]
+      ]
+    },
+    {
+      "path": "case_glacier_status.csv", "key": ["candidate_id"], "rows": "14",
+      "columns": [
+        ["candidate_id", "string", "1", false], ["crosswalk_status", "enum", "1", false],
+        ["rgi_id", "string", "1", true], ["glims_id", "string", "1", true],
+        ["same_glims_rgi_ids", "pipe_string", "1", true], ["dependence_cluster", "string", "1", false],
+        ["review_state", "enum", "1", false], ["match_status", "enum", "1", false]
+      ]
+    },
+    {
+      "path": "rgi_matching_frame/{01..19}.csv", "key": ["rgi_id"], "rows": "274531 total",
+      "columns": [
+        ["rgi_id", "string", "1", false], ["o1region", "string", "1", false],
+        ["o2region", "string", "1", false], ["glims_id", "string", "1", true],
+        ["src_date", "datetime", "UTC", true], ["cenlon", "float64", "degree_east", false],
+        ["cenlat", "float64", "degree_north", false], ["area_km2", "float64", "km2", false],
+        ["conn_lvl", "string", "1", false], ["zmed_m", "float64", "m", true],
+        ["aspect_sec", "integer", "45_degree_sector", true], ["dem_source", "string", "1", true],
+        ["rgi_grid_spacing_m", "float64", "m", false]
+      ]
+    },
+    {
+      "path": "matching_summary.csv", "key": ["candidate_id"], "rows": "14",
+      "columns": [
+        ["candidate_id", "string", "1", false], ["primary_case", "boolean", "1", false],
+        ["crosswalk_status", "enum", "1", false], ["match_status", "enum", "1", false],
+        ["matching_level", "integer", "1", true], ["pool_size", "integer", "glaciers", false],
+        ["selected_count", "integer", "glaciers", false]
+      ]
+    },
+    {
+      "path": "matching_pools.csv", "key": ["candidate_id", "rgi_id"], "rows": "P",
+      "columns": [
+        ["candidate_id", "string", "1", false], ["matching_level", "integer", "1", false],
+        ["pool_size", "integer", "glaciers", false], ["rgi_id", "string", "1", false],
+        ["digest", "hex_sha256", "1", false], ["rank", "integer", "1", false],
+        ["selected", "boolean", "1", false]
+      ]
+    },
+    {
+      "path": "selected_backgrounds.csv", "key": ["candidate_id", "rgi_id"], "rows": "20M",
+      "columns": [
+        ["candidate_id", "string", "1", false], ["matching_level", "integer", "1", false],
+        ["pool_size", "integer", "glaciers", false], ["rgi_id", "string", "1", false],
+        ["digest", "hex_sha256", "1", false], ["rank", "integer", "1", false],
+        ["selected", "boolean", "1", false]
+      ]
+    },
+    {
+      "path": "glacier_era5_weights.csv", "key": ["rgi_id", "latitude", "longitude"], "rows": "W",
+      "columns": [
+        ["rgi_id", "string", "1", false], ["latitude", "float64", "degree_north", false],
+        ["longitude", "float64", "degree_east_0_360", false], ["intersection_area_m2", "float64", "m2", false],
+        ["weight", "float64", "1", false]
+      ]
+    },
+    {
+      "path": "dependence_ledger.csv", "key": ["candidate_id"], "rows": "M",
+      "columns": [
+        ["candidate_id", "string", "1", false], ["initial_cluster", "string", "1", false],
+        ["final_cluster", "string", "1", false], ["complete", "boolean", "1", false]
+      ]
+    },
+    {
+      "path": "dependence_merge_edges.csv", "key": ["left_initial_cluster", "right_initial_cluster", "latitude", "longitude"], "rows": "E",
+      "columns": [
+        ["left_initial_cluster", "string", "1", false], ["right_initial_cluster", "string", "1", false],
+        ["latitude", "float64", "degree_north", false], ["longitude", "float64", "degree_east_0_360", false]
+      ]
+    },
+    {
+      "path": "iceboost_archive_members.csv", "key": ["archive", "member"], "rows": "I",
+      "columns": [
+        ["archive", "string", "1", false], ["member", "string", "1", false],
+        ["archive_bytes", "integer", "bytes", false], ["archive_md5", "hex_md5", "1", false],
+        ["archive_sha256", "hex_sha256", "1", false], ["member_crc32", "hex_crc32", "1", false],
+        ["member_bytes", "integer", "bytes", false]
+      ]
+    },
+    {
+      "path": "iceboost_raster_metadata.csv", "key": ["archive", "member"], "rows": "used TIFF members",
+      "columns": [
+        ["archive", "string", "1", false], ["member", "string", "1", false],
+        ["crs", "string", "1", false],
+        ["dx", "float64", "m", true], ["dy", "float64", "m", true],
+        ["nodata", "string", "1", true], ["band_count", "integer", "bands", false],
+        ["band_order_valid", "boolean", "1", false], ["vertical_datum", "string", "1", true]
+      ]
+    },
+    {
+      "path": "rgi_surface_features/{01..19}.csv", "key": ["rgi_id"], "rows": "274531 total",
+      "columns": [
+        ["rgi_id", "string", "1", false], ["slope_deg", "float64", "degree", true],
+        ["dem_source", "string", "1", true], ["rgi_grid_spacing_m", "float64", "m", false],
+        ["src_date", "datetime", "UTC", true], ["missing_reason", "string", "1", true]
+      ]
+    },
+    {
+      "path": "era5_cell_year.csv", "key": ["latitude", "longitude", "year"], "rows": "42U",
+      "columns": [
+        ["latitude", "float64", "degree_north", false], ["longitude", "float64", "degree_east_0_360", false],
+        ["year", "integer", "year", false], ["hour_count", "integer", "hours", false],
+        ["t2m_mean_k", "float64", "K", false]
+      ]
+    },
+    {
+      "path": "glacier_year_t2m.csv", "key": ["rgi_id", "index_year", "year"], "rows": "42G",
+      "columns": [
+        ["rgi_id", "string", "1", false], ["index_year", "integer", "year", false],
+        ["year", "integer", "year", false], ["t2m_mean_k", "float64", "K", false],
+        ["weight_sum", "float64", "1", false]
+      ]
+    },
+    {
+      "path": "primary_features.csv", "key": ["candidate_id", "role", "rgi_id"], "rows": "21M",
+      "columns": [
+        ["candidate_id", "string", "1", false], ["role", "enum_case_control", "1", false],
+        ["rgi_id", "string", "1", false], ["index_year", "integer", "year", false],
+        ["t2m_trend_k_decade", "float64", "K decade-1", true], ["t2m_change_k", "float64", "K", true],
+        ["t2m_hac_se_k_decade", "float64", "K decade-1", true], ["slope_deg", "float64", "degree", true],
+        ["missing_reason", "string", "1", true]
+      ]
+    },
+    {
+      "path": "matched_contrasts.csv", "key": ["candidate_id", "endpoint"], "rows": "2M",
+      "columns": [
+        ["candidate_id", "string", "1", false], ["final_cluster", "string", "1", false],
+        ["endpoint", "enum", "1", false], ["case_value", "float64", "endpoint_unit", true],
+        ["control_median", "float64", "endpoint_unit", true], ["contrast", "float64", "endpoint_unit", true],
+        ["midrank_percentile", "float64", "percent", true], ["missing_reason", "string", "1", true]
+      ]
+    },
+    {
+      "path": "case_completeness.csv", "key": ["candidate_id", "rgi_id", "endpoint"], "rows": "42M",
+      "columns": [
+        ["candidate_id", "string", "1", false], ["rgi_id", "string", "1", false],
+        ["role", "enum", "1", false], ["endpoint", "enum", "1", false],
+        ["complete", "boolean", "1", false], ["missing_reason", "string", "1", true]
+      ]
+    },
+    {
+      "path": "cluster_contrasts.csv", "key": ["final_cluster", "endpoint"], "rows": "2C",
+      "columns": [
+        ["final_cluster", "string", "1", false], ["endpoint", "enum", "1", false],
+        ["case_count", "integer", "cases", false], ["contrast", "float64", "endpoint_unit", false],
+        ["positive", "boolean", "1", false]
+      ]
+    },
+    {
+      "path": "mechanics_features.csv", "key": ["rgi_id", "scale_m"], "rows": "3 times unique participating glaciers",
+      "columns": [
+        ["rgi_id", "string", "1", false], ["scale_m", "integer", "m", false],
+        ["bed_slope_median_deg", "float64", "degree", true],
+        ["bed_slope_iqr_deg", "float64", "degree", true], ["surface_slope_median_deg", "float64", "degree", true],
+        ["thickness_mean_m", "float64", "m", true], ["driving_stress_median_pa", "float64", "Pa", true],
+        ["driving_stress_iqr_pa", "float64", "Pa", true], ["along_flow_grade", "float64", "1", true],
+        ["bed_roughness_m", "float64", "m", true], ["thickness_error_median_m", "float64", "m", true],
+        ["thickness_error_iqr_m", "float64", "m", true], ["missing_reason", "string", "1", true]
+      ]
+    },
+    {
+      "path": "decision.csv", "key": ["analysis"], "rows": "1",
+      "columns": [
+        ["analysis", "string", "1", false], ["status", "enum_descriptive_indeterminate", "1", false],
+        ["direction", "enum_consistent_mixed_inconsistent", "1", true], ["complete_cases", "integer", "cases", false],
+        ["clusters", "integer", "clusters", false], ["warming_k_positive", "integer", "clusters", true],
+        ["slope_k_positive", "integer", "clusters", true], ["warming_median", "float64", "K decade-1", true],
+        ["warming_ci_low", "float64", "K decade-1", true], ["warming_ci_high", "float64", "K decade-1", true],
+        ["warming_hodges_lehmann", "float64", "K decade-1", true], ["slope_median", "float64", "degree", true],
+        ["slope_ci_low", "float64", "degree", true], ["slope_ci_high", "float64", "degree", true],
+        ["slope_hodges_lehmann", "float64", "degree", true], ["absolute_case_warming_median", "float64", "K decade-1", true],
+        ["warming_sign_p", "float64", "1", true], ["slope_sign_p", "float64", "1", true], ["joint_p", "float64", "1", true],
+        ["reason", "string", "1", false]
+      ]
+    },
+    {
+      "path": "frame_manifest.json", "format": "json", "rows": "1",
+      "required_fields": ["status", "rows", "regional_counts", "files", "frozen_inputs"]
+    },
+    {
+      "path": "preaccess_manifest.json", "format": "json", "rows": "1",
+      "required_fields": ["status", "cases", "primary_cases", "decision_cap", "admitted_primary_cases", "selected_background_rows", "files"]
+    },
+    {
+      "path": "results_manifest.json", "format": "json", "rows": "1",
+      "required_fields": ["protocol_commit", "program_sha256", "schema_sha256", "environment", "source_identity", "output_sha256", "access_audit"]
+    }
+  ]
+}
