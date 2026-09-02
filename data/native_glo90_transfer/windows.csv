@@ -1,0 +1,8 @@
+region,region_name,south,west,window_key,window_sha256,source_family,prior_stage
+03,Arctic Canada North,81,-85,rgi7.0|03|south=+81|west=-085,012dc6d1865059d80ab3033b76c740c324c6a76714049c4a31d35704d8f3ae3d,area_convergence,postoutcome_development
+07,Svalbard and Jan Mayen,77,18,rgi7.0|07|south=+77|west=+018,0434d768cf5e995404eb7f6a1b4446a7aa11ff37495bf0dc05d703f8228427e2,area_convergence,postoutcome_development
+08,Scandinavia,69,21,rgi7.0|08|south=+69|west=+021,1350821d7673e6914225fbdad143bf2e01f69ac8cb067a978c6f1b36bb82d7f0,area_convergence,postoutcome_development
+04,Arctic Canada South,72,-79,rgi7.0|04|south=+72|west=-079,02090dcbc3a3afe990ab7b3aab0867d085da385a9d63845203d993b808bac96b,scale_explicit_transfer,registered_transfer
+10,North Asia,65,145,rgi7.0|10|south=+65|west=+145,02c3f6745618b8cd244f3e3490d27e2f31774bf45d13ea1cc74bfc0bd53b5a81,scale_explicit_transfer,registered_transfer
+15,South Asia East,28,96,rgi7.0|15|south=+28|west=+096,01264f80513da793366f524b7d5d40d86bf4d61750dc438e9a25831b07e8ee04,scale_explicit_transfer,registered_transfer
+18,New Zealand,-44,171,rgi7.0|18|south=-44|west=+171,1705b06330274ae2555e87f554f34448efb0431a9eaec5d1b498401eb969a11b,scale_explicit_transfer,registered_transfer

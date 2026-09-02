@@ -1,0 +1,135 @@
+# Native GLO-90 development transfer of the terrain-screen functional
+
+## Question and claim boundary
+
+This development calculation asks how replacing Copernicus DEM GLO-30 with
+the separately processed native GLO-90 product changes the frozen equivalent
+steep-area functional in seven already exposed, climate- and case-blind
+terrain windows. It compares source products; it is not a new blind transfer
+test and has no pass label.
+
+Native GLO-90 is not the Issue 13 `r90` variant. That variant is the strict
+arithmetic mean of complete 3 by 3 blocks on the GLO-30 `p00` grid. This
+calculation does not substitute GLO-90 into Issue 19, revise its stopped
+probability-sample result, open any selected-cell raster, estimate a global
+terrain total, identify unstable slopes, map hazard, or infer climate
+attribution.
+
+## Frozen exposed windows and inherited functional
+
+Use the three post-outcome development windows from regions 03, 07, and 08
+and the four previously blind, now exposed transfer windows from regions 04,
+10, 15, and 18. Retain their exact coordinates, keys, digests, GLO-30 `p00`
+rasters, PZI rasters, RGI subsets, equivalent-area tables, and prior
+aggregated-GLO-30 `r90` results. They span seven regions but do not constitute
+a geographic probability sample.
+
+For every grid, retain without change:
+
+1. the local WGS84 Lambert azimuthal equal-area CRS centered on the reporting
+   cell;
+2. the densified one-degree reporting polygon and 1 km processing envelope;
+3. the complete center disk within nominal radius 300 m and its plane
+   gradient;
+4. the tangent-gradient weight zero through 25 degrees, linear from 25
+   through 35 degrees, and one from 35 degrees upward;
+5. exact closed distance no greater than 100 m outside the union of relevant
+   RGI 7 outlines;
+6. the outside-RGI, finite PZI at least 0.1 mask; and
+7. equivalent area equal to 90 m squared times the sum of the weight at
+   reporting centers satisfying the mask and complete-support rule.
+
+The source epochs and physical limits remain unchanged: RGI 7 approximates
+year 2000, Copernicus DEM source acquisitions span 2011--2015, and PZI uses
+1961--1990 air-temperature inputs. RGI proximity does not establish present
+glacier contact or lost support, and PZI does not measure local ground
+temperature.
+
+## Pre-access source freeze
+
+Before requesting a GLO-90 object, commit and independently approve the exact
+protocol, expected-source table, program, tests, environment, frozen-window
+table, inherited input hashes, output schemas, and pre-access manifest. The
+expected source population is the fixed 3 by 3 neighborhood around each of
+seven reporting cells: 63 cell--object request incidences. Candidate order is
+frozen window order, then increasing latitude, then increasing normalized
+longitude. Repeated object identities would remain repeated incidences in the
+expected table but would be requested only once; the frozen windows produce
+63 distinct identities.
+
+Use only the anonymous Registry of Open Data on AWS object endpoint
+
+`https://copernicus-dem-90m.s3.amazonaws.com/<key>`
+
+with exact key `<stem>/<stem>.tif`, where `<stem>` is
+`Copernicus_DSM_COG_30_NSLL_00_EWLLL_00_DEM`.
+
+Send one GET per distinct key after approval. Retain every response body,
+status, selected response headers, retrieval time, byte count, and SHA-256.
+HTTP 404 is a retained missing-source result. Any other non-200 status stops
+after its response is recorded. Interrupted acquisition may reuse only a
+ledger-bound response whose path, byte count, and SHA-256 still agree.
+
+The acquisition action may not import Rasterio or open any payload. It writes
+a raw-source manifest after all requests finish. Commit and independently
+approve that exact manifest and its response files before the analysis action
+opens a raster.
+
+## Native grids and comparisons
+
+For each window, derive the primary native target grid from the exact inherited
+GLO-30 `p00` grid after strict 3 by 3 aggregation: retain its shape, 90 m
+spacing, and affine origin. Warp each available native GLO-90 COG independently
+to that grid with bilinear interpolation, Float32 destination values, source
+nodata, and destination NaN. Combine sources in frozen candidate order. Missing
+coverage remains NaN.
+
+Evaluate four native target-grid origins: the inherited origin `n00`, then
+half-pixel translations `nx45`, `ny45`, and `nxy45` at (45, 0), (0, 45), and
+(45, 45) m. Retain the same array shape; the 1 km envelope exceeds the 300 m
+complete-support disk plus the 45 m translation. These phases quantify target
+grid-origin sensitivity only and add no source resolution.
+
+For each window, phase, and mask, retain source counts, reporting-center
+counts, finite DEM centers, complete-support centers, mask centers,
+integration centers, weight sum, and equivalent area. The long table contains
+7 by 4 by 2 = 56 rows. For each of 14 window--mask pairs, report:
+
+- the inherited GLO-30 `p00` reference area;
+- the previously calculated aggregated-GLO-30 `r90` area and fractional
+  departure;
+- the primary native-GLO-90 `n00` area and fractional departure;
+- native phase mean and coefficient of variation; and
+- primary finite-center and complete-support fractions.
+
+If the GLO-30 reference is positive, fractional departure is absolute area
+difference divided by that reference. If all reference and compared areas are
+zero, label a structural zero and retain zero departure. A zero reference with
+any positive compared area is unresolved and retains a missing departure.
+No threshold is applied and no development result is called a pass or fail.
+
+## Outputs and review
+
+The source action writes `expected_sources.csv`, `source_ledger.csv`, and
+`raw_source_manifest.json`. The analysis writes `equivalent_area_long.csv`
+and `comparisons.csv`. After independent result review, retain an executed
+notebook with at most 50 code lines, a non-map figure comparing native and
+aggregated departures with native support and phase sensitivity visible,
+updated manuscript source and PDF, and a final manifest.
+
+Handwritten source plus tests may not exceed 320 lines. Add no class or new
+scientific dependency. Tests cover frozen identities, key formatting,
+longitude normalization, action separation, pre-access and raw-manifest
+verification, target-grid origin shifts, row conservation, positive and zero
+reference rules, and forbidden sample, event, climate, and hazard inputs.
+
+The result may specify a source-transfer estimator and decision rule for a
+later hash-selected blind test. It cannot itself validate native GLO-90 beyond
+these seven exposed windows or authorize a new probability-sample total.
+
+## Sources fixed before access
+
+- Copernicus DEM Product Handbook, version 5.0:
+  https://dataspace.copernicus.eu/sites/default/files/media/files/2024-06/geo1988-copernicusdem-spe-002_producthandbook_i5.0.pdf
+- Registry of Open Data on AWS, Copernicus DEM:
+  https://registry.opendata.aws/copernicus-dem/
