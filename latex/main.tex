@@ -1212,6 +1212,18 @@ larger endpoint value, $p=0.50$; finite 95\% sign intervals are unavailable at
 $n=5$. The frozen rule therefore returns \texttt{DESCRIPTIVE\_ONLY,
 consistent}, not a supported risk or causal model.
 
+The registered IceBoost modeled-bed sensitivity was not executed. A
+metadata-only pilot found a different five-band order than the anticipated
+decoder and requires an explicit WGS84--geoid datum mapping. Independently,
+40 of 207 participating RGI objects have area smaller than a 300~m-radius disk
+and therefore cannot retain support after the registered 300~m erosion. They
+affect three of five final components; whole-component completeness would leave
+only three cases in two components. Choosing a smaller primary radius after
+this support check is not permitted. Moreover, IceBoost thickness uses surface
+slope and climate predictors, so a future bed product would be modeled and
+predictor-coupled rather than an independent measure of pre-event source
+geometry.
+
 \begin{figure}[t]
   \centering
   \includegraphics[width=\textwidth]{../figures/glacier_warming_steepness.pdf}
