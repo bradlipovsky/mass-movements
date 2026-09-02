@@ -48,9 +48,14 @@ residual rank is 0.483. A conservative-antecedence sensitivity gives 0.586 and
 An independently reviewed source-coordinate and UTC-onset audit subsequently
 accepts source coordinates for 24 occurrences, UTC intervals for 34, and both
 for 22; only 9 of the pilot's 29 occurrences have accepted source coordinates.
-The registered pilot results are preserved rather than recomputed post hoc.
-These remain descriptive exposure diagnostics because no denominator is yet
-aligned with the cases. A separate climate- and case-blind terrain pilot
+The registered pilot results are preserved rather than recomputed post hoc. A
+separately frozen successor uses the 22 occurrences with both accepted fields.
+At seven days, its median onset-aligned rank is 0.741 across all occurrences
+and 0.650 across 18 dependence-component representatives. Moving from
+catalog-date midnight to audited onset changes the median rank by 0.000 and
+the median mean temperature by 0.152~K; the median four-cell rank range is
+0.100. These remain descriptive exposure diagnostics because no denominator
+is yet aligned with the cases. A separate climate- and case-blind terrain pilot
 enumerates glacier, glacier-contact, and permafrost-intersection objects in
 three deterministically selected windows. Primary connected-component counts
 change by factors of 1.3--3.0 between 30 and 90~m grids, so the pilot supplies
@@ -1105,6 +1110,68 @@ reconstructed source elevations.
   the scenarios are not estimates of source elevation.}\label{fig:era5-sensitivity}
 \end{figure}
 
+\subsection{Audited source-coordinate and onset transfer}
+
+I registered a source-verified successor before opening any new event
+temperature. The mechanical selection requires both an accepted source
+coordinate and an accepted UTC interval, retaining 22 of 53 eligible
+occurrences: 16 measured source-failure intervals and 6 event-specific
+earthquake trigger proxies in 18 dependence components. Each window ends at
+the last complete hour before the lower onset bound. The same calculation at
+catalog-date midnight isolates time assignment. Four bracketing ERA5 cells
+give 88 event-cell assignments at 73 unique grid points; land fraction and
+then distance select the primary cell without using temperature. All tables
+were sealed before the summaries below, and independent reviews reconstructed
+their hashes, matched windows, diagnostics, and contrasts.
+
+For the seven-day window, the onset-aligned warm-state rank has a median of
+0.741 (interquartile range 0.448--0.922) across 22 occurrences and 0.650
+(0.412--0.815) across the 18 component representatives. The corresponding
+linear-trend-residual rank has a median of 0.661 (0.403--0.966). Moving the
+endpoint from catalog-date midnight to audited onset changes the seven-day
+warm-state rank by a median of 0.000 (0.000--0.025), with a range of
+$-0.034$ to 0.103; the median change in the underlying mean 2-m temperature is
+0.152~K (0.014--0.231~K). The residual-rank contrast is likewise 0.000
+(0.000--0.026). At two days, the warm-rank contrast is more dispersed: its
+median is 0.017, its interquartile range is $-0.060$--0.034, and its range is
+$-0.345$--0.241. At 30 days the median and interquartile range are zero
+(Figure~\ref{fig:audited-reanalysis}). Endpoint choice therefore matters most
+for the shortest registered window, without supplying a failure threshold.
+
+All nine occurrences shared with the original pilot map to the same primary
+ERA5 cell at the catalog and audited coordinates. Their primary-cell
+coordinate rank contrasts are consequently zero at all three windows. This
+conditional result reflects the coarse grid and sub-kilometre separations in
+the accepted overlap; it does not validate unresolved catalog coordinates.
+Among the four cells bracketing each nominal audited point, the median
+warm-rank range is 0.067, 0.100, and 0.068 at two, seven, and 30 days,
+respectively, and reaches 0.552 at seven days. This is grid-node assignment
+sensitivity at the nominal point, not propagation of the retained 1--5~km
+coordinate-uncertainty classes.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\textwidth]{../figures/audited_reanalysis_sensitivity.pdf}
+  \caption{Source-verified ERA5 assignment sensitivity. (a) Primary-cell
+  warm-state-rank change from catalog-date midnight to the audited onset
+  endpoint for all 22 occurrences. (b) Primary-cell rank change from catalog
+  to audited coordinates for the nine old-pilot overlaps. Each retained the
+  same primary grid cell. (c) Rank range among the four cells bracketing each
+  nominal audited coordinate. Circles are measured source-failure intervals;
+  triangles are event-specific earthquake trigger proxies. Black bars are
+  medians, not decision thresholds. The four-cell range does not propagate
+  positional uncertainty.}\label{fig:audited-reanalysis}
+\end{figure}
+
+At model elevation, the median seven-day count is 93.5 of 168 ERA5 2-m
+air-temperature hours above 273.15~K. For a site 1~km above the model cell,
+the median is zero under each registered lapse rate; for a site 1~km below,
+the medians span 161.5--168 hours. These scenarios do not reconstruct source
+elevation or diagnose thaw of rock, soil, or ice. The selected occurrences
+also contain no non-failing risk set. Thus neither the ranks nor their
+sensitivities estimate failure probability, systematic climate triggering,
+or attribution.
+
 \section{Competing hypotheses and discriminating observations}
 
 The analysis will evaluate signs and timing that distinguish mechanisms.
@@ -1151,16 +1218,18 @@ failure time.
 
 This version completes the climate-blind frame reconciliation, double
 screening, registered ERA5 temperature pilot, independently reviewed
-source-coordinate and UTC-onset audit, the first case-blind susceptible-
-terrain pilot and held-out susceptible-area convergence test, a post-outcome
-scale-explicit development calculation, and its registered blind numerical
-transfer test. The audit leaves
+source-coordinate and UTC-onset audit, registered source-verified ERA5
+transfer, the first case-blind susceptible-terrain pilot and held-out
+susceptible-area convergence test, a post-outcome scale-explicit development
+calculation, and its registered blind numerical transfer test. The audit leaves
 29 coordinates and 16
 times unresolved and preserves three time conflicts; none is silently removed.
 The pilot inspected only its registered temperature endpoints and is not
-retroactively recomputed on the accepted audit subset. A later extraction may
-use the 22 occurrences with both accepted fields only under a new frozen
-specification, while retaining all unresolved rows in the reporting frame.
+retroactively recomputed on the accepted audit subset. The separately frozen
+successor uses the 22 occurrences with both accepted fields while retaining
+all unresolved rows in the reporting frame. It compares audited onset with
+catalog-date midnight and preserves measured source failures and trigger
+proxies as separate roles.
 The terrain pilot supplies candidate denominator objects, but its three windows
 do not estimate regional populations and its connected counts remain scale
 sensitive. The deterministic held-out windows likewise do not estimate a
