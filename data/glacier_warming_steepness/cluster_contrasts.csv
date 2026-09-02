@@ -1,0 +1,11 @@
+final_cluster,endpoint,case_count,contrast,positive
+bukadaban-2022,t2m_trend_k_decade,4,-0.11808767821524649,False
+bukadaban-2022,slope_deg,4,2.8061536250000003,True
+flat-creek-2013,t2m_trend_k_decade,1,-0.11489309414584842,False
+flat-creek-2013,slope_deg,1,3.3867595,True
+petra-dp19,t2m_trend_k_decade,2,0.09393981141026964,True
+petra-dp19,slope_deg,2,5.23639575,True
+site-aru,t2m_trend_k_decade,2,0.10297392505204875,True
+site-aru,slope_deg,2,3.4796569999999996,True
+tinguiririca-2007,t2m_trend_k_decade,1,0.026585280615441742,True
+tinguiririca-2007,slope_deg,1,5.9261504999999985,True

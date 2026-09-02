@@ -1,0 +1,71 @@
+{
+  "access_audit": {
+    "approved_background_sha256": "484ce921543fea8041802f394f4c4253af577ba43e4866ab066be788512c90cb",
+    "approved_program_commit": "924cf1e445fd977471d951f9115d450b1bdad4b5"
+  },
+  "created_at": "2026-09-02T10:08:10.102180+00:00",
+  "environment": {
+    "packages": {
+      "icechunk": "2.1.2",
+      "numpy": "2.5.2",
+      "pcodec": "1.0.3",
+      "xarray": "2026.7.0"
+    },
+    "platform": "Linux-4.18.0-553.22.1.el8_10.x86_64-x86_64-with-glibc2.28",
+    "python": "3.12.11"
+  },
+  "output_sha256": {
+    "case_completeness.csv": "a6ed15c8f3fdaa83ed2e7cda53c671cdc3c381aac546f3c420da2f2dc224ac8f",
+    "cluster_contrasts.csv": "91ea99ad44dc960021592e805f7ba02229632c07526326a6b7ca5cd5e6114827",
+    "decision.csv": "a33bf0328d905e2bc2eee6593d36d18cf066de4ab16dcaa757a17260e078ba85",
+    "dependence_ledger.csv": "2d86bd170c5ac920e74c858b37b18fc3449ac0b535a24d1610fd2bbd83d784b8",
+    "matched_contrasts.csv": "ced0dbb1583b8a783c46fb6e248dd627d134b55f8e9cff8b7587d413a4c73ba2",
+    "primary_features.csv": "887618403d8175850520bca43d3591ffa220129a767878e7aa560586f8f9b2c8"
+  },
+  "outputs": {
+    "case_completeness.csv": {
+      "bytes": 28222,
+      "rows": 420,
+      "sha256": "a6ed15c8f3fdaa83ed2e7cda53c671cdc3c381aac546f3c420da2f2dc224ac8f"
+    },
+    "cluster_contrasts.csv": {
+      "bytes": 588,
+      "rows": 10,
+      "sha256": "91ea99ad44dc960021592e805f7ba02229632c07526326a6b7ca5cd5e6114827"
+    },
+    "decision.csv": {
+      "bytes": 785,
+      "rows": 1,
+      "sha256": "a33bf0328d905e2bc2eee6593d36d18cf066de4ab16dcaa757a17260e078ba85"
+    },
+    "dependence_ledger.csv": {
+      "bytes": 626,
+      "rows": 10,
+      "sha256": "2d86bd170c5ac920e74c858b37b18fc3449ac0b535a24d1610fd2bbd83d784b8"
+    },
+    "matched_contrasts.csv": {
+      "bytes": 2404,
+      "rows": 20,
+      "sha256": "ced0dbb1583b8a783c46fb6e248dd627d134b55f8e9cff8b7587d413a4c73ba2"
+    },
+    "primary_features.csv": {
+      "bytes": 27074,
+      "rows": 210,
+      "sha256": "887618403d8175850520bca43d3591ffa220129a767878e7aa560586f8f9b2c8"
+    }
+  },
+  "program_sha256": "fc0009eebff38b968d97e9f8af2f34a591df3880c5edb1c2f3764050a36ea1b6",
+  "protocol_commit": "27e8262863dd7487a3a81935022e49329810825e",
+  "schema_sha256": "f781b79374085dcef795a2c417fde0991e7b78d14a134a0b692b8e1a29c2f919",
+  "source_identity": {
+    "era5": {
+      "bucket": "earthmover-icechunk-era5",
+      "group": "single/temporal",
+      "prefix": "icechunkV2",
+      "snapshot": "T9H8SG2PVXWNY0QNJPJG",
+      "variable": "t2m"
+    },
+    "rgi_doi": "10.5067/F6JMOVY5NAVZ"
+  },
+  "status": "primary descriptive matched contrasts"
+}
