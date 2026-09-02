@@ -1,0 +1,15 @@
+{
+  "files": {
+    "data/glacier_proximity_object_relevance/object_screen.csv": {
+      "bytes": 1124110,
+      "sha256": "c0e801e0c63bce0c6b1264276a81724b13ca6ff302cf33313addf8e63af60486"
+    },
+    "data/glacier_proximity_object_relevance/projection_repairs.csv": {
+      "bytes": 756062,
+      "sha256": "e8098d9bffbadbb50fc22ecd60d20f2ec63c34a13b1d5553fdd76bdb0509fca0"
+    }
+  },
+  "pregeometry_manifest_sha256": "b34264e85b3389a77a58289ecf64832bb0c3e69251666aa5036489c34a3bfa74",
+  "rows": 16434,
+  "status": "geometry_sealed_before_inventory"
+}
