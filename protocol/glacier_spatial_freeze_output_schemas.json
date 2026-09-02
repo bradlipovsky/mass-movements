@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "column_tuple": ["name", "type", "unit", "nullable"],
+  "null_rule": "Empty values, NaN, infinity, and numerical sentinels are forbidden.",
+  "symbols": {"W": "positive-area glacier-cell intersections", "E": "shared-cell initial-cluster pair records", "I": "central-directory members in the three relevant opaque IceBoost archives"},
+  "central_directory_semantics": "Member name, CRC32, and uncompressed byte count are unverified central-directory declarations read without payload decode; archive byte counts and MD5 digests are verified against pinned metadata, and SHA-256 digests are computed over the retrieved bytes.",
+  "artifacts": [
+    {
+      "path": "glacier_era5_weights.csv", "key": ["rgi_id", "latitude", "longitude"], "rows": "W",
+      "columns": [["rgi_id", "string", "1", false], ["latitude", "float64", "degree_north", false], ["longitude", "float64", "degree_east_0_360", false], ["intersection_area_m2", "float64_positive", "m2", false], ["weight", "float64_(0,1]", "1", false]]
+    },
+    {
+      "path": "glacier_era5_weight_checks.csv", "key": ["rgi_id"], "rows": "207",
+      "columns": [["rgi_id", "string", "1", false], ["polygon_area_m2", "float64_positive", "m2", false], ["intersected_area_m2", "float64_positive", "m2", false], ["planar_relative_closure_error", "float64_[0,1e-12]", "1", false], ["geodesic_representation_difference", "float64_[0,1e-4]", "1", false], ["weight_sum", "float64_[1-1e-12,1+1e-12]", "1", false]]
+    },
+    {
+      "path": "spatial_dependence_ledger.csv", "key": ["candidate_id"], "rows": "10",
+      "columns": [["candidate_id", "string", "1", false], ["initial_cluster", "string", "1", false], ["final_cluster", "string", "1", false]]
+    },
+    {
+      "path": "dependence_merge_edges.csv", "key": ["left_initial_cluster", "right_initial_cluster", "latitude", "longitude"], "rows": "E",
+      "columns": [["left_initial_cluster", "string", "1", false], ["right_initial_cluster", "string", "1", false], ["latitude", "float64", "degree_north", false], ["longitude", "float64", "degree_east_0_360", false]]
+    },
+    {
+      "path": "iceboost_archive_members.csv", "key": ["archive", "member"], "rows": "I",
+      "columns": [["archive", "string", "1", false], ["member", "string", "1", false], ["archive_bytes", "integer_positive", "bytes", false], ["archive_md5", "hex_md5", "1", false], ["archive_sha256", "hex_sha256", "1", false], ["member_crc32", "hex_crc32", "1", false], ["member_bytes", "integer_nonnegative", "bytes", false]]
+    }
+  ],
+  "manifest_required": ["status", "registration_url", "inventory_verified_at", "git_commit", "python", "platform", "request_rows", "rgi_ids", "case_rgi_ids", "control_rgi_ids", "weight_rows", "unique_era5_cells", "initial_clusters", "final_clusters", "grid", "planar_closure_tolerance", "geodesic_representation_tolerance", "weight_sum_tolerance", "iceboost_regions", "iceboost_members", "inputs", "outputs"]
+}
