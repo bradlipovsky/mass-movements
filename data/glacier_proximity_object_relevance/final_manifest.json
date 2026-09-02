@@ -1,0 +1,192 @@
+{
+  "status": "complete_geometry_inventory_join",
+  "issue": 25,
+  "created_utc": "2026-09-02T01:40:57Z",
+  "commits": {
+    "pregeometry": "b51402d58d84a375b8a2a3f57d404c4a05b36ce4",
+    "geometry": "fa771094a83285a64f4fc851d399ca0555c188aa",
+    "inventory_join": "8801ab4c6b2ba0cacd6ce96db4c1eefca199cbd4",
+    "reviewed_reporting_artifacts": "9e56a05797972b4f190b3af1b1fc14a2fd4dd55e"
+  },
+  "upstream": {
+    "pregeometry_manifest_sha256": "b34264e85b3389a77a58289ecf64832bb0c3e69251666aa5036489c34a3bfa74",
+    "geometry_manifest_sha256": "a03d0bd334f77b6d1fec53e00ce4dcfba37f79a87ead7bd9b1f07a349299b9d4",
+    "issue23_final_manifest_sha256": "a660e3eda35d4fa671e35c03e6c42f3dabad4c3393ca86cd07655d6a0b9d58d3",
+    "issue23_object_inventory_sha256": "278b1283653dbd9a5efb1bd2185b75a5d9253775797940a96ac73658ad7392a9"
+  },
+  "public_records": {
+    "geometry_freeze": "https://github.com/bradlipovsky/mass-movements/issues/25#issuecomment-5502629324",
+    "postgeometry_approval": "https://github.com/bradlipovsky/mass-movements/issues/25#issuecomment-5502926328",
+    "inventory_join": "https://github.com/bradlipovsky/mass-movements/issues/25#issuecomment-5502936501",
+    "final_reporting_approval": "https://github.com/bradlipovsky/mass-movements/issues/25#issuecomment-5503056676"
+  },
+  "population": {
+    "cells": 1826,
+    "spatial_cell_object_incidences": 16434,
+    "screen_relevant_spatial_incidences": 5847,
+    "product_cell_object_incidences": 32868,
+    "cell_instance_rows": 3652,
+    "group_rows": 68
+  },
+  "results": {
+    "glo30": {
+      "listed_cell_object_incidences": 15361,
+      "absent_outside_conservative_screen_incidences": 1065,
+      "absent_relevance_unresolved_incidences": 8,
+      "no_absent_object_intersects_conservative_screen_cells": 1820,
+      "unresolved_cells": 6,
+      "not_applicable_cells": 0,
+      "listed_core_incidences": 1822,
+      "unresolved_core_incidences": 4
+    },
+    "glo90": {
+      "listed_cell_object_incidences": 15403,
+      "absent_outside_conservative_screen_incidences": 1030,
+      "absent_relevance_unresolved_incidences": 1,
+      "no_absent_object_intersects_conservative_screen_cells": 1825,
+      "unresolved_cells": 1,
+      "not_applicable_cells": 0,
+      "listed_core_incidences": 1826,
+      "unresolved_core_incidences": 0
+    },
+    "nonzero_unresolved_latitude_bands": [
+      {
+        "instance": "glo30",
+        "south_degrees": 30,
+        "unresolved_cells": 1,
+        "population_cells": 242
+      },
+      {
+        "instance": "glo30",
+        "south_degrees": 40,
+        "unresolved_cells": 4,
+        "population_cells": 161
+      },
+      {
+        "instance": "glo30",
+        "south_degrees": 70,
+        "unresolved_cells": 1,
+        "population_cells": 390
+      },
+      {
+        "instance": "glo90",
+        "south_degrees": 70,
+        "unresolved_cells": 1,
+        "population_cells": 390
+      }
+    ]
+  },
+  "projection_repair_ledger": {
+    "incidences": 643,
+    "maximum_absolute_area_change_m2": 0.011357903480529785,
+    "maximum_relative_area_change": 5.659207980399047e-09,
+    "maximum_boundary_hausdorff_distance_m": 1.626953582672133e-11
+  },
+  "verification": {
+    "source_and_test_lines": 300,
+    "source_and_test_line_limit": 300,
+    "notebook_code_lines": 39,
+    "notebook_code_line_limit": 40,
+    "notebook_python": "3.12.11",
+    "figure_matplotlib": "3.11.1",
+    "artifact_command": "make artifacts-object-relevance",
+    "dedicated_tests": "12/12 passed",
+    "full_suite_tests": "100/100 passed",
+    "postgeometry_independent_approvals": 3,
+    "final_reporting_independent_approvals": 3,
+    "manuscript_pdf_pages": 31,
+    "latex_warnings": 0
+  },
+  "boundaries": [
+    "Disjointness places an absent cell-object incidence outside the conservative geometric screen; intersection remains unresolved.",
+    "Conservativeness is relative to the registered 0.001-degree computational outline, not physical outline uncertainty or an exact curved-coordinate transformation.",
+    "Neither state establishes object readability, finite elevation support, terrain validity, or exact source dependence.",
+    "No GLO-90 substitution, mixed mosaic, equivalent-area calculation, susceptibility, hazard, climate attribution, or revision of the Issue 19 stop is authorized."
+  ],
+  "files": {
+    "Makefile": {
+      "bytes": 4224,
+      "sha256": "726ed8739a527e0e8d3d234c5eac1f09a55f3c7838250c483444424cedd17e74"
+    },
+    "protocol/glacier-proximity-object-relevance.md": {
+      "bytes": 7019,
+      "sha256": "bbd5625bf2b49c0d98e6749d4a4cec4c2042d46d73f5379ed3bee5541f268bed"
+    },
+    "requirements-object-relevance.txt": {
+      "bytes": 70,
+      "sha256": "1f4f047533327b8861ef8d01335c28a1ba269475d0d2334bdce8c04630c62b1a"
+    },
+    "requirements-object-relevance-report.txt": {
+      "bytes": 168,
+      "sha256": "b1d29b60c6b0276c4ae75b76f27b57d4442b6c0fd0c637e93e57b3a281f46a88"
+    },
+    "scripts/glacier_proximity_object_relevance.py": {
+      "bytes": 18438,
+      "sha256": "b89bcc6d01f8c7c4614c778a4ce6169b9917b874bd03ee2ca392d7019d9f114d"
+    },
+    "tests/test_glacier_proximity_object_relevance.py": {
+      "bytes": 6685,
+      "sha256": "f3e9fe0eb90f8b043f3125d3f42bacc64a31a5259169949cdc734d05fa799a0b"
+    },
+    "data/glacier_proximity_object_relevance/pregeometry_manifest.json": {
+      "bytes": 3801,
+      "sha256": "b34264e85b3389a77a58289ecf64832bb0c3e69251666aa5036489c34a3bfa74"
+    },
+    "data/glacier_proximity_object_relevance/geometry_manifest.json": {
+      "bytes": 552,
+      "sha256": "a03d0bd334f77b6d1fec53e00ce4dcfba37f79a87ead7bd9b1f07a349299b9d4"
+    },
+    "data/glacier_proximity_object_relevance/object_screen.csv": {
+      "bytes": 1124110,
+      "sha256": "c0e801e0c63bce0c6b1264276a81724b13ca6ff302cf33313addf8e63af60486"
+    },
+    "data/glacier_proximity_object_relevance/projection_repairs.csv": {
+      "bytes": 756062,
+      "sha256": "e8098d9bffbadbb50fc22ecd60d20f2ec63c34a13b1d5553fdd76bdb0509fca0"
+    },
+    "data/glacier_proximity_object_relevance/object_support.csv": {
+      "bytes": 7074972,
+      "sha256": "ae10174423d4ef25abb0f2793f3d5e286104acd6ba39c2eaa2d144a5d86cd294"
+    },
+    "data/glacier_proximity_object_relevance/cell_support.csv": {
+      "bytes": 423431,
+      "sha256": "9045aaf315362b54794eb99d13760184188ee3998a0a7c5ad926c1ad58637a51"
+    },
+    "data/glacier_proximity_object_relevance/group_support.csv": {
+      "bytes": 2012,
+      "sha256": "7ad5a7f448b8f115cfab11c1af0d5ad6c9d6e27a508b100e27ef8c79ddcd0628"
+    },
+    "data/glacier_proximity_object_relevance/summary.json": {
+      "bytes": 251,
+      "sha256": "a47ade877c77091c2167c4b35bd6c8037f503aad2bab35848144cdd2f0daa478"
+    },
+    "data/global_dem_support/final_manifest.json": {
+      "bytes": 155748,
+      "sha256": "a660e3eda35d4fa671e35c03e6c42f3dabad4c3393ca86cd07655d6a0b9d58d3"
+    },
+    "data/global_dem_support/object_inventory.csv": {
+      "bytes": 10540203,
+      "sha256": "278b1283653dbd9a5efb1bd2185b75a5d9253775797940a96ac73658ad7392a9"
+    },
+    "notebooks/glacier_proximity_object_relevance.ipynb": {
+      "bytes": 78745,
+      "sha256": "2eceffc8d01af84813d2c35ba98cb7c7c14d48f3b8f2e30af6886ef6541bad88"
+    },
+    "figures/glacier_proximity_object_relevance.png": {
+      "bytes": 191822,
+      "sha256": "ab11654443e11b139fd54c453e7db39a4cb7b4d3076f1ac7aa9305b5a3a8c9c7"
+    },
+    "figures/glacier_proximity_object_relevance.pdf": {
+      "bytes": 20903,
+      "sha256": "a3df67285c5f14d81a5be6820efdf6a7361c7c2d7e459a1f8494bf68a31a0fba"
+    },
+    "latex/main.tex": {
+      "bytes": 71997,
+      "sha256": "08fb1146e05c0f3beca879cf668e0077c10563ab8e9b87a6355829d008fd42e4"
+    },
+    "latex/main.pdf": {
+      "bytes": 737470,
+      "sha256": "d535e48ac45b54e820c65f0c0dbfc39e22bfe2a3e2359ac5a6c88e3fed7c1118"
+    }
+  }
+}
