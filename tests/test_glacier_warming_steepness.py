@@ -15,7 +15,6 @@ class GlacierWarmingSteepnessTests(unittest.TestCase):
                    area_km2="1", conn_lvl="0", surge_type="0", term_type="0",
                    zmed_m="4000", aspect_sec="1", dem_source="COPDEM30")
         row.update(changes); return row
-
     def test_case_rule_is_frozen(self):
         screened = gws.screened_cases()
         primary = gws.primary_cases()
@@ -24,20 +23,17 @@ class GlacierWarmingSteepnessTests(unittest.TestCase):
         self.assertEqual(gws.frozen_dependence_clusters()["aru-1-2016"], "site-aru")
         self.assertEqual({row["initial_failure"] for row in screened}, {"glacier_detachment", "glacier_collapse"})
         self.assertEqual({row["threshold_quantity"] for row in primary}, {"initial_volume"})
-
     def test_grid_spacing_and_outcome_omission(self):
         row = self.row(area_km2="4", slope_deg="89")
         result = gws.frame_row(row)
         self.assertAlmostEqual(float(result["rgi_grid_spacing_m"]), 38)
         self.assertNotIn("slope_deg", result)
         self.assertEqual(set(result), set(gws.FRAME_COLUMNS))
-
     def test_aspect_wrap_and_missing(self):
         self.assertTrue(gws.aspect_matches("1", "8"))
         self.assertTrue(gws.aspect_matches("4", "5"))
         self.assertFalse(gws.aspect_matches("1", "3"))
         self.assertFalse(gws.aspect_matches("9", "1"))
-
     def test_matching_relaxation(self):
         case = self.row()
         adjacent = self.row(rgi_id="x", aspect_sec="8")
@@ -48,7 +44,6 @@ class GlacierWarmingSteepnessTests(unittest.TestCase):
         self.assertTrue(gws.eligible_background(case, wrong_aspect, 2))
         self.assertFalse(gws.eligible_background(case, wrong_subregion, 2))
         self.assertTrue(gws.eligible_background(case, wrong_subregion, 3))
-
     def test_matching_calipers(self):
         case = self.row()
         self.assertTrue(gws.eligible_background(case, self.row(area_km2="0.25"), 1))
@@ -58,7 +53,6 @@ class GlacierWarmingSteepnessTests(unittest.TestCase):
         self.assertFalse(gws.eligible_background(case, self.row(conn_lvl="1"), 1))
         self.assertFalse(gws.eligible_background(case, self.row(zmed_m=""), 1))
         self.assertFalse(gws.eligible_background(case, self.row(area_km2=""), 1))
-
     def test_review_closure_requires_two_independent_decisions(self):
         base = dict(candidate_id="case", reviewer_1="one", reviewer_2="two",
                     reviewer_1_decision="agree", reviewer_2_decision="agree",
@@ -68,7 +62,6 @@ class GlacierWarmingSteepnessTests(unittest.TestCase):
             gws.require_review_closure([{**base, "reviewer_2": "one"}])
         with self.assertRaises(ValueError):
             gws.require_review_closure([{**base, "reviewer_2_decision": "disagree"}])
-
     def test_independent_clusters_cannot_share_controls(self):
         cases = ["flat-creek-2013", "tinguiririca-2007"]
         frame = {f"case-{i}": self.row(rgi_id=f"case-{i}") for i in range(2)}
@@ -94,13 +87,14 @@ class GlacierWarmingSteepnessTests(unittest.TestCase):
             gws.digest = lambda *_: "collision"; pools, _, _ = gws.build_matches(tiny, assertions[:1])
             self.assertEqual([row["rgi_id"] for row in pools], sorted(row["rgi_id"] for row in pools))
         finally: gws.digest = original
-
     def test_digest_is_stable_and_case_specific(self):
         self.assertEqual(gws.digest("case", "glacier"),
                          "4d62e4b2938f68d5cfcb96eb55edd34ae96c7f9dbd8595202fc02aee3387f07f")
         self.assertNotEqual(gws.digest("case", "glacier"),
                             gws.digest("other", "glacier"))
-
+    def test_glims_index_omits_blank_identifiers(self):
+        frame = {"a": self.row(rgi_id="a", glims_id=""), "b": self.row(rgi_id="b", glims_id="G")}
+        self.assertEqual(gws.index_glims(frame), {"G": ["b"]})
     def test_attribute_member_rejects_ambiguity(self):
         record = {"region": "01", "members": [
             {"name": "one-attributes.csv"}, {"name": "two-attributes.csv"}]}

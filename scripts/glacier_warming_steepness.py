@@ -231,12 +231,15 @@ def eligible_background(case, other, level):
 def digest(case_id, rgi_id):
     message = f"glacier-warming-steepness-v1|{case_id}|{rgi_id}".encode()
     return hashlib.sha256(message).hexdigest()
+def index_glims(frame):
+    result = {}
+    for row in frame.values():
+        if row["glims_id"]: result.setdefault(row["glims_id"], []).append(row["rgi_id"])
+    return result
 def review_packet(frame_dir, output_dir=OUT):
     frame = load_frame(frame_dir)
     _, assertions = validate_assertions(frame)
-    by_glims = {}
-    for row in frame.values():
-        by_glims.setdefault(row["glims_id"], []).append(row["rgi_id"])
+    by_glims = index_glims(frame)
     fields = ["candidate_id", "proposed_status", "rgi_id", "glims_id", "same_glims_rgi_ids", "rgi_src_date",
               "distance_km", "overlap_fraction", "lineage_members", "evidence_source", "evidence_locator", "mapping_method"]
     rows = [{**{name: row[name] for name in fields if name not in {"same_glims_rgi_ids", "rgi_src_date", "distance_km", "overlap_fraction", "lineage_members"}},
