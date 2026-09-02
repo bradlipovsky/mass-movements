@@ -73,12 +73,12 @@ reported. A subsequent full-frame object-inventory snapshot lists the core
 GLO-30 object for 1,822 of 1,826 cells and the core GLO-90 object for all 1,826;
 full nine-object halo support is 1,411 and 1,422 cells, respectively. These are
 asset-metadata counts and do not authorize source substitution or establish
-valid terrain coverage. A separately frozen RGI-geometry screen then finds
-that absent objects are outside the conservative glacier-proximity screen for
-1,065 of 1,073 GLO-30 absences and 1,030 of 1,031 GLO-90 absences; the remaining
-8 and 1 object incidences, in 6 and 1 cells, remain unresolved. This geometric
-disjointness does not establish DEM computability or terrain validity. I then
-specify detrended seasonal controls,
+valid terrain coverage. A separately frozen RGI-geometry screen then classifies
+1,065 of 1,073 absent GLO-30 cell--object incidences and 1,030 of 1,031 absent
+GLO-90 cell--object incidences as outside the conservative glacier-proximity
+screen; the remaining 8 and 1 incidences, in 6 and 1 cells, remain unresolved.
+This geometric disjointness does not establish DEM computability or terrain
+validity. I then specify detrended seasonal controls,
 matched non-failing slopes, mechanism-specific glacier and permafrost
 observations, and multiplicity control. Uneven observation and unresolved
 primary sources prevent these counts from estimating a frequency trend. No
@@ -772,7 +772,7 @@ susceptibility.
 \end{figure}
 \clearpage
 
-\subsection{Glacier-proximity screen for absent DEM objects}
+\subsection{Glacier-proximity screen for absent DEM cell--object incidences}
 
 The full-halo audit treats every absent object as potentially consequential,
 including ocean-only neighbors. A separately frozen calculation therefore
@@ -784,25 +784,28 @@ complete RGI 7 outlines. It used a 101~m outward glacier buffer and a closed
 1,001~m footprint-distance predicate, deliberately broader than the registered
 100 and 1,000~m distances. The 16,434 spatial comparisons were sealed before
 joining either product inventory, then expanded to 32,868 product incidences.
+This numerical conservativeness is relative to the registered 0.001$^\circ$
+computational outline, not physical outline uncertainty or an exact curved
+coordinate transformation.
 Projection validity repairs were retained in a source-outline-identified
-ledger and passed absolute area-change, relative area-change, and boundary-
+ledger and passed absolute area-change, relative area-change, and boundary
 displacement bounds.
 
 Figure~\ref{fig:glacier-proximity-object-relevance} reports the exact
-finite-population result. Among the 16,434 GLO-30 incidences, 15,361 objects
-are listed, 1,065 are absent but outside the conservative screen, and 8 absent
-incidences intersect the screen and remain unresolved. The corresponding
+finite-population result. Among the 16,434 GLO-30 cell--object incidences,
+15,361 are listed, 1,065 are absent but outside the conservative screen, and 8
+absent incidences intersect the screen and remain unresolved. The corresponding
 GLO-90 counts are 15,403, 1,030, and 1. At the cell level, 1,820 GLO-30 cells
 and 1,825 GLO-90 cells have no absent object intersecting the screen; 6 and 1
 cells remain unresolved, and none is not applicable. All four absent GLO-30
-core objects intersect the conservative screen, so this screen does not alter
-the regional gap that stopped the registered calculation. The unresolved-cell
+core cell--object incidences intersect the conservative screen, so this screen
+does not alter the regional gap that stopped the registered calculation. The unresolved-cell
 fractions are concentrated in three northern 10$^\circ$ bands for GLO-30 and
 one for GLO-90, but these are enumeration summaries rather than sampled
 estimates and have no sampling standard error.
 
-The screen supports only a geometric exclusion: a disjoint absent delivery
-unit lies outside the registered conservative glacier-proximity screen.
+The screen supports only a geometric exclusion: a disjoint absent cell--object
+incidence lies outside the registered conservative glacier-proximity screen.
 Intersection remains unresolved. Neither label establishes object readability,
 finite elevation values, terrain validity, or exact source dependence. The
 result therefore does not revise the Issue 19 stop, substitute GLO-90,
@@ -813,14 +816,15 @@ or climate attribution.
   \centering
   \includegraphics[width=\textwidth]{../figures/glacier_proximity_object_relevance.pdf}
   \caption{Conservative glacier-proximity screen for absent Copernicus DEM
-  delivery units. (a) Exact inventory-state counts among the 16,434 fixed
-  object incidences for each product. The thin red segments contain eight
+  cell--object incidences. (a) Exact inventory-state counts among the 16,434
+  fixed incidences for each product. The thin red segments contain eight
   unresolved GLO-30 incidences and one unresolved GLO-90 incidence.
   (b) Exact unresolved-cell percentage by the 10$^\circ$ band of the
   reporting-cell south edge. Zero bands are retained. Disjointness places an
-  absent footprint outside the conservative geometric screen; intersection
-  remains unresolved. Neither state establishes raster readability, finite
-  elevation support, terrain validity, or exact source dependence.}
+  absent cell--object incidence outside the conservative geometric screen;
+  intersection remains unresolved. Neither state establishes raster
+  readability, finite elevation support, terrain validity, or exact source
+  dependence.}
   \label{fig:glacier-proximity-object-relevance}
 \end{figure}
 \clearpage
@@ -1112,9 +1116,10 @@ GLO-90 objects for all 1,826 cells and core GLO-30 objects for 1,822, including
 the same regional gap, but only 1,422 and 1,411 cells have their complete
 nine-object halos. Object listing alone neither repairs the stopped design nor
 establishes valid elevation coverage. A subsequent RGI-geometry screen places
-1,065 of 1,073 absent GLO-30 incidences and 1,030 of 1,031 absent GLO-90
-incidences outside a conservative glacier-proximity screen. The remaining 8
-and 1 incidences, including all four absent GLO-30 core objects, remain
+1,065 of 1,073 absent GLO-30 cell--object incidences and 1,030 of 1,031 absent
+GLO-90 cell--object incidences outside a conservative glacier-proximity
+screen. The remaining 8 and 1 incidences, including all four absent GLO-30
+core cell--object incidences, remain
 unresolved; geometric exclusion does not establish DEM computability.
 Physical validation and any later association analysis also
 require matched non-failing slopes, glacier-contact histories, deformation
@@ -1162,10 +1167,10 @@ subsequently lists all core GLO-90 objects and 1,822 of 1,826 core GLO-30
 objects, but only 77.88\% and 77.27\% of cells have their complete nine-object
 halos. Because listing does not establish readable and valid elevation values,
 the subsequent conservative geometry screen is deliberately narrower: it
-places 1,065 GLO-30 and 1,030 GLO-90 absences outside the glacier-proximity
-screen, while 8 and 1 incidences remain unresolved. It neither repairs the
-registered stop nor proves terrain coverage. A newly frozen, source-valid
-design is required before those totals, detrended seasonal
+places 1,065 GLO-30 and 1,030 GLO-90 absent cell--object incidences outside the
+glacier-proximity screen, while 8 and 1 incidences remain unresolved. It
+neither repairs the registered stop nor proves terrain coverage. A newly
+frozen, source-valid design is required before those totals, detrended seasonal
 controls, or explicit competing predictions can be tested. The present
 contribution is a sampling frame, protocol, and exposure-sensitivity result,
 not evidence that warming systematically triggered these events.
