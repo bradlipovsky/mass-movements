@@ -1,0 +1,12 @@
+{
+  "primary_access_requests.csv": ["rgi_id", "index_year", "year", "latitude", "longitude"],
+  "rgi_surface_features.csv": ["rgi_id", "slope_deg", "src_date", "dem_source", "rgi_grid_spacing_m", "missing_reason"],
+  "era5_cell_year.csv": ["latitude", "longitude", "year", "hours", "mean_t2m_k"],
+  "era5_access_ledger.csv": ["year", "latitude_tile", "longitude_tile", "points", "hours"],
+  "primary_features.csv": ["candidate_id", "role", "rgi_id", "index_year", "slope_deg", "warming_k_decade", "fitted_change_k", "warming_hac_se_k_decade", "theil_sen_k_decade", "missing_reason"],
+  "case_completeness.csv": ["candidate_id", "role", "rgi_id", "endpoint", "complete", "missing_reason"],
+  "matched_contrasts.csv": ["candidate_id", "final_cluster", "endpoint", "case_value", "control_median", "contrast", "case_midrank_percentile", "complete", "missing_reason"],
+  "primary_dependence_ledger.csv": ["candidate_id", "final_cluster", "direct_complete", "complete", "missing_reason"],
+  "cluster_contrasts.csv": ["final_cluster", "endpoint", "case_count", "contrast", "mean_case_value"],
+  "primary_summary.csv": ["endpoint", "clusters", "cases", "positive_clusters", "sign_p", "median_contrast", "sign_ci_low", "sign_ci_high", "hodges_lehmann"]
+}
