@@ -1,4 +1,4 @@
-.PHONY: all area-convergence artifacts-area-convergence artifacts-denominator artifacts-event-audit artifacts-geographic-coverage artifacts-global-dem-support artifacts-object-relevance artifacts-reanalysis artifacts-scale-explicit check check-area-convergence check-denominator check-event-audit check-object-relevance check-reanalysis check-scale-explicit clean denominator notebook-area-convergence notebook-denominator notebook-event-audit notebook-geographic-coverage notebook-global-dem-support notebook-object-relevance notebook-reanalysis notebook-scale-explicit reanalysis scale-explicit
+.PHONY: all area-convergence artifacts-area-convergence artifacts-denominator artifacts-event-audit artifacts-geographic-coverage artifacts-global-dem-support artifacts-native-glo90-transfer artifacts-object-relevance artifacts-reanalysis artifacts-scale-explicit check check-area-convergence check-denominator check-event-audit check-native-glo90-transfer check-object-relevance check-reanalysis check-scale-explicit clean denominator native-glo90-transfer notebook-area-convergence notebook-denominator notebook-event-audit notebook-geographic-coverage notebook-global-dem-support notebook-native-glo90-transfer notebook-object-relevance notebook-reanalysis notebook-scale-explicit reanalysis scale-explicit
 
 PYTHON_REANALYSIS ?= .venv/bin/python
 JUPYTER_REANALYSIS ?= $(dir $(PYTHON_REANALYSIS))jupyter
@@ -89,6 +89,18 @@ notebook-object-relevance:
 	PATH="$(dir $(PYTHON_REANALYSIS)):$$PATH" $(JUPYTER_REANALYSIS) execute --inplace --timeout 600 --kernel_name python3 notebooks/glacier_proximity_object_relevance.ipynb
 
 artifacts-object-relevance: check-object-relevance notebook-object-relevance
+	latexmk -pdf -cd latex/main.tex
+
+native-glo90-transfer:
+	$(PYTHON_REANALYSIS) scripts/native_glo90_transfer.py --raw-manifest data/native_glo90_transfer/raw_source_manifest.json --raw-manifest-sha256 dba58bae4a36600d55adc6393f891cc0fd95a9baa577e3cb3bfc4ff64233d8a5
+
+check-native-glo90-transfer:
+	$(PYTHON_REANALYSIS) -m unittest tests.test_native_glo90_transfer -v
+
+notebook-native-glo90-transfer:
+	PATH="$(dir $(PYTHON_REANALYSIS)):$$PATH" $(JUPYTER_REANALYSIS) execute --inplace --timeout 600 --kernel_name python3 notebooks/native_glo90_transfer.ipynb
+
+artifacts-native-glo90-transfer: native-glo90-transfer check-native-glo90-transfer notebook-native-glo90-transfer
 	latexmk -pdf -cd latex/main.tex
 
 clean:

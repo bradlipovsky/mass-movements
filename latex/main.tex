@@ -78,7 +78,12 @@ valid terrain coverage. A separately frozen RGI-geometry screen then classifies
 GLO-90 cell--object incidences as outside the conservative glacier-proximity
 screen; the remaining 8 and 1 incidences, in 6 and 1 cells, remain unresolved.
 This geometric disjointness does not establish DEM computability or terrain
-validity. I then specify detrended seasonal controls,
+validity. A subsequent development calculation opens separately processed
+native GLO-90 COGs only in seven already exposed windows. Native primary-grid
+departures from GLO-30 are 3.45--24.81\%, compared with 1.81--13.43\% for
+strict 3-by-3 GLO-30 aggregation, and are larger in all 14 window--stratum
+comparisons. These exposed windows carry neither a pass label nor geographic
+inclusion probabilities. I then specify detrended seasonal controls,
 matched non-failing slopes, mechanism-specific glacier and permafrost
 observations, and multiplicity control. Uneven observation and unresolved
 primary sources prevent these counts from estimating a frequency trend. No
@@ -829,6 +834,66 @@ or climate attribution.
 \end{figure}
 \clearpage
 
+\subsection{Native GLO-90 source-product transfer in exposed windows}
+
+The preceding inventory and geometry audits do not establish that GLO-90 can
+replace GLO-30 in the stopped probability-sample calculation. I therefore
+treated native GLO-90 as a distinct source-product development question in
+seven already exposed windows: the three post-outcome estimator-development
+windows and the four formerly blind transfer windows. Before access, the
+protocol fixed 63 object requests, the complete estimator import graph and
+runtime, ordered typed schemas, four target-grid origins, and a two-stage
+approval gate. The anonymous AWS acquisition returned 60 GeoTIFF COGs and
+three retained 404 responses. The missing objects were halo cells for Svalbard
+and New Zealand, not reporting-cell cores. Every opened COG was required to
+match its ledger geocell and the latitude-dependent, north-up GLO-90 point
+grid before reprojection \citep{CopernicusDEMHandbook2024,AWSDEMRegistry}.
+
+The native calculation retained the frozen local equal-area grid, 300~m
+regression-plane stencil, 25--35$^\circ$ deterministic weight ramp,
+glacier-outline proximity and PZI masks, and equivalent-area identity
+$E=r^2\sum w$. Its primary native grid used the affine of the strict 3-by-3
+GLO-30 aggregate; three 45~m translations measured target-grid-origin
+sensitivity. Missing source coverage remained NaN. A mask result was resolved
+only if every contributing center had complete DEM support; the permafrost
+mask additionally required finite PZI throughout the outside-glacier reporting
+domain. All 56 window--phase--stratum rows retained complete mask-specific
+support. Whole-report primary complete-support fractions were 99.681--100\%,
+so the halo 404s were visible but did not intersect the registered integration
+support.
+
+Figure~\ref{fig:native-glo90-transfer} shows the development result. Departure
+of the strict aggregated-GLO-30 `r90' result from GLO-30 `p00' spans
+1.81--13.43\%, with a median of 3.44\%. Primary native-GLO-90 departure spans
+3.45--24.81\%, with a median of 6.65\%, and exceeds aggregated-GLO-30
+departure in all 14 window--stratum comparisons. Across the four native target
+origins, departures span 2.57--27.26\%; phase coefficients of variation reach
+4.17\% for glacier proximity in Scandinavia and are generally smaller for the
+PZI stratum. Thus strict aggregation of GLO-30 does not reproduce the separate
+GLO-90 source product in these windows. The comparison has no registered
+threshold or pass label, the seven windows are not a probability sample, and
+equivalent steep area is neither literal susceptible area nor a failure
+probability. It neither repairs the stopped global design nor supports hazard
+or climate attribution.
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=\textwidth]{../figures/native_glo90_transfer.pdf}
+  \caption{Native GLO-90 source-product development in seven exposed terrain
+  windows. Rows pair glacier proximity (G) and permafrost-mask (P) results.
+  (a) Absolute departure from the GLO-30 `p00' reference for strict 3-by-3
+  aggregated GLO-30 `r90' (open circles) and native GLO-90 on the primary
+  grid (diamonds); translucent intervals span four native 45~m target-grid
+  phases. (b) Native four-phase coefficient of variation. (c) Fraction of all
+  primary-grid reporting centers with complete native DEM support. All
+  mask-specific integrations are complete even where halo-object 404s reduce
+  the whole-report fraction. These are exposed-window numerical comparisons
+  with no pass label, probability-sample inference, physical susceptibility,
+  hazard, or climate-attribution claim.}
+  \label{fig:native-glo90-transfer}
+\end{figure}
+\clearpage
+
 \section{Event-centered climate test}
 
 For each frozen event candidate, reanalysis will provide near-surface air
@@ -1169,7 +1234,12 @@ halos. Because listing does not establish readable and valid elevation values,
 the subsequent conservative geometry screen is deliberately narrower: it
 places 1,065 GLO-30 and 1,030 GLO-90 absent cell--object incidences outside the
 glacier-proximity screen, while 8 and 1 incidences remain unresolved. It
-neither repairs the registered stop nor proves terrain coverage. A newly
+neither repairs the registered stop nor proves terrain coverage. In seven
+exposed windows, a separately gated source-product calculation then gives
+native GLO-90 primary departures of 3.45--24.81\%, larger than strict
+aggregated-GLO-30 departures in all 14 comparisons; native phase coefficients
+of variation reach 4.17\%. This development result has no pass threshold or
+geographic inclusion probabilities and does not revise the stop. A newly
 frozen, source-valid design is required before those totals, detrended seasonal
 controls, or explicit competing predictions can be tested. The present
 contribution is a sampling frame, protocol, and exposure-sensitivity result,

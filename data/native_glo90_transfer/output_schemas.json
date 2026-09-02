@@ -1,0 +1,86 @@
+{
+  "source_ledger": {
+    "rows": 63,
+    "columns": [
+      {"name": "region", "dtype": "string"},
+      {"name": "window_key", "dtype": "string"},
+      {"name": "latitude", "dtype": "int64"},
+      {"name": "longitude", "dtype": "int64"},
+      {"name": "object_id", "dtype": "string"},
+      {"name": "key", "dtype": "string"},
+      {"name": "url", "dtype": "string"},
+      {"name": "retrieved_utc", "dtype": "string"},
+      {"name": "http_status", "dtype": "int64"},
+      {"name": "path", "dtype": "string"},
+      {"name": "bytes", "dtype": "int64"},
+      {"name": "sha256", "dtype": "string"},
+      {"name": "etag", "dtype": "string"},
+      {"name": "last_modified", "dtype": "string"},
+      {"name": "content_type", "dtype": "string"},
+      {"name": "content_length", "dtype": "string"}
+    ]
+  },
+  "raw_source_manifest": {
+    "fields": [
+      {"name": "status", "dtype": "string"},
+      {"name": "preaccess_manifest_sha256", "dtype": "string"},
+      {"name": "expected_sources_sha256", "dtype": "string"},
+      {"name": "responses", "dtype": "int64"},
+      {"name": "http_status_counts", "dtype": "object"},
+      {"name": "files", "dtype": "object"}
+    ],
+    "http_status_keys": ["200", "404"],
+    "file_entries": 64,
+    "file_record_fields": [
+      {"name": "bytes", "dtype": "int64"},
+      {"name": "sha256", "dtype": "string"}
+    ]
+  },
+  "equivalent_area_long": {
+    "rows": 56,
+    "columns": [
+      {"name": "region", "dtype": "string"},
+      {"name": "region_name", "dtype": "string"},
+      {"name": "south", "dtype": "int64"},
+      {"name": "west", "dtype": "int64"},
+      {"name": "window_key", "dtype": "string"},
+      {"name": "window_sha256", "dtype": "string"},
+      {"name": "phase", "dtype": "string"},
+      {"name": "phase_x_m", "dtype": "int64"},
+      {"name": "phase_y_m", "dtype": "int64"},
+      {"name": "spacing_m", "dtype": "int64"},
+      {"name": "source_object_count", "dtype": "int64"},
+      {"name": "missing_source_count", "dtype": "int64"},
+      {"name": "report_cell_count", "dtype": "int64"},
+      {"name": "finite_dem_center_count", "dtype": "int64"},
+      {"name": "complete_support_center_count", "dtype": "int64"},
+      {"name": "stratum", "dtype": "string"},
+      {"name": "stratum_center_count", "dtype": "int64"},
+      {"name": "integration_center_count", "dtype": "int64"},
+      {"name": "support_status", "dtype": "string"},
+      {"name": "weighted_cell_sum", "dtype": "float64"},
+      {"name": "equivalent_steep_area_m2", "dtype": "float64"}
+    ]
+  },
+  "comparisons": {
+    "rows": 14,
+    "columns": [
+      {"name": "region", "dtype": "string"},
+      {"name": "region_name", "dtype": "string"},
+      {"name": "stratum", "dtype": "string"},
+      {"name": "reference_glo30_p00_m2", "dtype": "float64"},
+      {"name": "aggregated_glo30_r90_m2", "dtype": "float64"},
+      {"name": "aggregated_glo30_departure", "dtype": "float64"},
+      {"name": "native_glo90_n00_m2", "dtype": "float64"},
+      {"name": "native_glo90_departure", "dtype": "float64"},
+      {"name": "native_phase_mean_m2", "dtype": "float64"},
+      {"name": "native_phase_cv", "dtype": "float64"},
+      {"name": "primary_finite_center_fraction", "dtype": "float64"},
+      {"name": "primary_complete_support_fraction", "dtype": "float64"},
+      {"name": "native_support_status", "dtype": "string"},
+      {"name": "structural_zero", "dtype": "string"},
+      {"name": "zero_reference_positive_comparison", "dtype": "string"},
+      {"name": "interpretation", "dtype": "string"}
+    ]
+  }
+}

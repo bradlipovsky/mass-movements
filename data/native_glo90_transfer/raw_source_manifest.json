@@ -1,0 +1,268 @@
+{
+  "status": "raw_native_glo90_sources_sealed_unopened_v2",
+  "preaccess_manifest_sha256": "85b6db22b8e81abbe8049f745a445e33ccd0f448ab168341611411cdac7be430",
+  "expected_sources_sha256": "87f13e628156720bdab83d962f84a22456b1fad859320310097d27640fdeb39c",
+  "responses": 63,
+  "http_status_counts": {
+    "200": 60,
+    "404": 3
+  },
+  "files": {
+    "data/native_glo90_transfer/source_ledger.csv": {
+      "bytes": 34366,
+      "sha256": "e523d5203214a7291953dfa4cab39348d8876c3a4a46305075ba8774336e5737"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N27_00_E095_00_DEM.tif": {
+      "bytes": 5146623,
+      "sha256": "aa766886e1e3228c9bbed1af11707341eebc7e994becde6f36f8f81116c941bf"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N27_00_E096_00_DEM.tif": {
+      "bytes": 5437179,
+      "sha256": "2814696a853d560e7a2df708d78ea60adf226061e28085baf8bec90a02ade4d6"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N27_00_E097_00_DEM.tif": {
+      "bytes": 5462280,
+      "sha256": "2f6be6d9289fd26af878bd0c66ed3825a6c082fb6efa7a50af8054769ee2b20b"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N28_00_E095_00_DEM.tif": {
+      "bytes": 5410557,
+      "sha256": "7d281b19de78c6fdf196d77fd679b86b251aa219e9ce73e82798b2389461c053"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N28_00_E096_00_DEM.tif": {
+      "bytes": 5229090,
+      "sha256": "f68d87b174292325863acc18c718ee7e248e53c3da5e884650560f789473251a"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N28_00_E097_00_DEM.tif": {
+      "bytes": 5064578,
+      "sha256": "bb9ff5697cfe5b78cb000f90ce73dc7ec201093a5225c354f58372c92a4ea434"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N29_00_E095_00_DEM.tif": {
+      "bytes": 5191971,
+      "sha256": "11122486b316a9f6f6b8ff3dde64a7364a38a651fd2622018deb0501b2781bb6"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N29_00_E096_00_DEM.tif": {
+      "bytes": 4918512,
+      "sha256": "591ae3015ce7edcf8217920fcfd9bd0677f4c8564fa611729b3e26c15feca8c9"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N29_00_E097_00_DEM.tif": {
+      "bytes": 4930848,
+      "sha256": "4757f3facc6aabdcf82c89c76496b341664d121cd808c3f1e74fd7047ab326ea"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N64_00_E144_00_DEM.tif": {
+      "bytes": 2677875,
+      "sha256": "3c0f8a7377ad25b055cb4d0da545787e4868506f21fb8d1bc1298d48f1ea6e1f"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N64_00_E145_00_DEM.tif": {
+      "bytes": 2648346,
+      "sha256": "3f5e1e8a897590c8d9481cc0403d182f03c6d02e904d4c3fa7d1140a1494c6d3"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N64_00_E146_00_DEM.tif": {
+      "bytes": 2605574,
+      "sha256": "228c3c17c8d4c5918b5b70b6e5464472057934bcf2f0e1ecf3de57297a201eea"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N65_00_E144_00_DEM.tif": {
+      "bytes": 2686364,
+      "sha256": "65aebfbbceda50670a0103d89f74898c43d9c131a2ca97455cb349ffeef57839"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N65_00_E145_00_DEM.tif": {
+      "bytes": 2646453,
+      "sha256": "2750cd80c2caf27e4a21a23e721c9d1462433e32ba20fcce2c0e011410141aa3"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N65_00_E146_00_DEM.tif": {
+      "bytes": 2530151,
+      "sha256": "347e2f134d74e052f2e5689d5c9484dcbeadfa70c3e216d444af3bc53e025078"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N66_00_E144_00_DEM.tif": {
+      "bytes": 2723918,
+      "sha256": "8b6f61bec5d6d2d7ac94892f994479682e073ec3f19cda14b9a55e3cce7a9344"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N66_00_E145_00_DEM.tif": {
+      "bytes": 2741622,
+      "sha256": "2d5d4684414aecc99880b198a6b319869488ba78ac712bfe361b174511974439"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N66_00_E146_00_DEM.tif": {
+      "bytes": 2672396,
+      "sha256": "7db1897008ef8a9c200ed67acaaf13608b79727d1fd838ff95d39aca98932eb8"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N68_00_E020_00_DEM.tif": {
+      "bytes": 2536217,
+      "sha256": "c3127930b59baff8ce29f1762cd19a97375cd19d4e4bcf160eebf5d9238b057e"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N68_00_E021_00_DEM.tif": {
+      "bytes": 2544710,
+      "sha256": "350eea7b1ddff1333296707c2091ca6a33b42301992ae2c53a31d0167f4a00da"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N68_00_E022_00_DEM.tif": {
+      "bytes": 2585275,
+      "sha256": "68f3c43aa79e3203b2bdca9979c1590211fb336b460b756539fc69e98dec73a2"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N69_00_E020_00_DEM.tif": {
+      "bytes": 2360264,
+      "sha256": "a5ff545b0516d197dbc0e7f96278c79697665e22f7fbc5310bb07b379f312e92"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N69_00_E021_00_DEM.tif": {
+      "bytes": 2524802,
+      "sha256": "02692655871d35704064f12c4eda8556bcb5114a7ac6bb3124567016ed998922"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N69_00_E022_00_DEM.tif": {
+      "bytes": 2634251,
+      "sha256": "d0f32ff0060d3d86ca29a847fb7e0af8d68587aa57cc27373ac5ddc80747155d"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N70_00_E020_00_DEM.tif": {
+      "bytes": 271069,
+      "sha256": "0b260cfb71c1abbbe5a023ceea095d5d8184e8721220c89a2b0b6fe14b586b44"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N70_00_E021_00_DEM.tif": {
+      "bytes": 429122,
+      "sha256": "2579679c54953a0a1d3de7a7fe92a9fbd56bf34c5dfc57e04bbe5a1e05ad2cf6"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N70_00_E022_00_DEM.tif": {
+      "bytes": 1021255,
+      "sha256": "0055b80b69ed4351e2992574d141c63f6f25a048567353049582c3784aa537eb"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N71_00_W078_00_DEM.tif": {
+      "bytes": 1848575,
+      "sha256": "9b4ce1c1847fa43fa6eed3f32a8b9343f5d289a75f0066d046d711ec2fcedcb0"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N71_00_W079_00_DEM.tif": {
+      "bytes": 1785176,
+      "sha256": "2926f43bb36a16ab605b3d251e0a308b8688cbe67ca4fa413ea97b4879416f20"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N71_00_W080_00_DEM.tif": {
+      "bytes": 1870440,
+      "sha256": "b247c94103ca2a9a30fdce9fbff3fab756c4d9e23ce4a571db4aae443bd5a27a"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N72_00_W078_00_DEM.tif": {
+      "bytes": 1618857,
+      "sha256": "3967198c7a47ac2650153d015d2510f9db6c9cdc8b524d4ac7066e8eba2a772d"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N72_00_W079_00_DEM.tif": {
+      "bytes": 1160655,
+      "sha256": "d5c106914cf35c389b555b431349798c4c306b450c72f00719afcc0275f26d69"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N72_00_W080_00_DEM.tif": {
+      "bytes": 1244084,
+      "sha256": "7102fbaf98d84365bedeb0f3435188ee87d795469efd06c336b4483b498f33d3"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N73_00_W078_00_DEM.tif": {
+      "bytes": 1077229,
+      "sha256": "6d7476e027fecaaaffd32e7513d496974c87c30b22048abb635190959d25754a"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N73_00_W079_00_DEM.tif": {
+      "bytes": 1247734,
+      "sha256": "f047874c71bbf966b6813b9415d56e3e5233d58458ba140fd502a5deb8863393"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N73_00_W080_00_DEM.tif": {
+      "bytes": 1263643,
+      "sha256": "40aa1662a918767565f977d3fbf8a462fd14db4ce0ec9558e0b00f4425e662e2"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N76_00_E017_00_DEM.tif": {
+      "bytes": 142760,
+      "sha256": "c21d8cbb30dfef2e56e0917db349ecdd3ad3b353368881286fa84846288de708"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N76_00_E018_00_DEM.http404": {
+      "bytes": 356,
+      "sha256": "5109263ae5ae1c49e48efe0f0b33d52e964fd1f0c69ab87b9840247ba22e85c7"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N76_00_E019_00_DEM.http404": {
+      "bytes": 376,
+      "sha256": "da2b83d7d9ac5db223055f9575ffa41b910f405f087e15c74b4181cff5107ec9"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N77_00_E017_00_DEM.tif": {
+      "bytes": 1354616,
+      "sha256": "b9e4205727f223f4c7555872d511dc2ba07edb889f95dd44bbaa6711e9be27e8"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N77_00_E018_00_DEM.tif": {
+      "bytes": 399480,
+      "sha256": "6a76fbf950a3f75e6c3617d4f885e71a397ed81985db03c78ca4369b3819fd2e"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N77_00_E019_00_DEM.tif": {
+      "bytes": 49894,
+      "sha256": "5de1f78277bd2b6d391e5deae51112064ed2b55b7f3d34814d837c7c853b5cf4"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N78_00_E017_00_DEM.tif": {
+      "bytes": 1807238,
+      "sha256": "e3fbf5bc7354db995a74b9e666657db6f6265fa03b271ae3938d298e73815ac1"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N78_00_E018_00_DEM.tif": {
+      "bytes": 1727667,
+      "sha256": "85be859aab0be119e0321d79645654892e45728c1d24a14ff8d6bfc47e69f164"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N78_00_E019_00_DEM.tif": {
+      "bytes": 786248,
+      "sha256": "058f5a21e8be6694858f41fb8e9d16deead0a37ed07b7b15b5ad0cd685a0f592"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N80_00_W084_00_DEM.tif": {
+      "bytes": 695132,
+      "sha256": "eb2ae54f56707f98d86901727a13c3259273e64b479fe65c8d4c871913cf1209"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N80_00_W085_00_DEM.tif": {
+      "bytes": 921423,
+      "sha256": "9ede1afa404e7d3a0fe423b9202f20b325e205359ecc96bd585aaa27fec2f6b8"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N80_00_W086_00_DEM.tif": {
+      "bytes": 921661,
+      "sha256": "9cf03f5692ac3ab3fa00f5955beb75e38777167bceb4f141377c2fd3ff70526a"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N81_00_W084_00_DEM.tif": {
+      "bytes": 1105326,
+      "sha256": "9e2400616fe5eb36b5c0d925033b3917aa4aeb3b7df6e2832a04c619dc115349"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N81_00_W085_00_DEM.tif": {
+      "bytes": 1128372,
+      "sha256": "27e910a8475b78eef9f6850f7a34ce30e6717ae02a543107a75cc2bee9ee765d"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N81_00_W086_00_DEM.tif": {
+      "bytes": 1066577,
+      "sha256": "71c94cbea433930989ed6d25e9b50cebc34579effc7ce96c73fd6c782bce8dd4"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N82_00_W084_00_DEM.tif": {
+      "bytes": 395459,
+      "sha256": "ec0e2bd86e552605ed107398c53b4c27981dd53a8ac3a36ec2ea00bd678e540c"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N82_00_W085_00_DEM.tif": {
+      "bytes": 505375,
+      "sha256": "2e2a7aa058288e4b6cef2fb04163b1436380fb2b034ba28808d90b7d193f94a3"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_N82_00_W086_00_DEM.tif": {
+      "bytes": 436287,
+      "sha256": "0d12d1587e11f25c79ae06183d82e4f4a1013ed48b630d749bd7dc58136ff81a"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_S43_00_E170_00_DEM.tif": {
+      "bytes": 399281,
+      "sha256": "fa825552d41bc6dec2ba9443be04f8636892ab7bd529ad21750fe7f4e9a58bd6"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_S43_00_E171_00_DEM.tif": {
+      "bytes": 4721507,
+      "sha256": "ada1d65e3f74090698149f3d6bf2b27388ac2625a7726b9c14b2658763a88288"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_S43_00_E172_00_DEM.tif": {
+      "bytes": 5425633,
+      "sha256": "bb10e585186acea20202b21bd62c119f335844ae5f3a797f54d92b1794d6cd86"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_S44_00_E170_00_DEM.tif": {
+      "bytes": 4898463,
+      "sha256": "fec3a488366b312aa03b5e530f6072bb46b8cf65f506cf1663529201bffe486c"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_S44_00_E171_00_DEM.tif": {
+      "bytes": 5143500,
+      "sha256": "2f9772e03dbc4a4547f27ed38b81c5f778353f4d5af7461890819ba8d316dd5d"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_S44_00_E172_00_DEM.tif": {
+      "bytes": 3975577,
+      "sha256": "734c41cd4b256414e53af1ef72cb43212d3c3e91c9b83b4f90b563aa353addb6"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_S45_00_E170_00_DEM.tif": {
+      "bytes": 5228578,
+      "sha256": "c4bba2f49d85fd3b33b0cd832529fdd0118261f5f4c2792365bb98f9408b349d"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_S45_00_E171_00_DEM.tif": {
+      "bytes": 1823933,
+      "sha256": "98341b549bc6112b7a59f9054e0ab2090c811e411d03c0b0d413678b6a6cd58f"
+    },
+    "data/native_glo90_transfer/source_raw/Copernicus_DSM_COG_30_S45_00_E172_00_DEM.http404": {
+      "bytes": 376,
+      "sha256": "a37393ac323554fcefe9b1184bd8c043841f75b55b7e00e3eb7866d791d1d12a"
+    }
+  }
+}
