@@ -1,4 +1,4 @@
-.PHONY: all area-convergence artifacts-area-convergence artifacts-denominator artifacts-event-audit artifacts-geographic-coverage artifacts-global-dem-support artifacts-native-glo90-transfer artifacts-object-relevance artifacts-reanalysis artifacts-scale-explicit check check-area-convergence check-denominator check-event-audit check-native-glo90-transfer check-object-relevance check-reanalysis check-scale-explicit clean denominator native-glo90-transfer notebook-area-convergence notebook-denominator notebook-event-audit notebook-geographic-coverage notebook-global-dem-support notebook-native-glo90-transfer notebook-object-relevance notebook-reanalysis notebook-scale-explicit reanalysis scale-explicit
+.PHONY: all area-convergence artifacts-area-convergence artifacts-audited-reanalysis artifacts-denominator artifacts-event-audit artifacts-geographic-coverage artifacts-global-dem-support artifacts-native-glo90-transfer artifacts-object-relevance artifacts-reanalysis artifacts-scale-explicit check check-area-convergence check-audited-reanalysis check-denominator check-event-audit check-native-glo90-transfer check-object-relevance check-reanalysis check-scale-explicit clean denominator native-glo90-transfer notebook-area-convergence notebook-audited-reanalysis notebook-denominator notebook-event-audit notebook-geographic-coverage notebook-global-dem-support notebook-native-glo90-transfer notebook-object-relevance notebook-reanalysis notebook-scale-explicit reanalysis scale-explicit
 
 PYTHON_REANALYSIS ?= .venv/bin/python
 JUPYTER_REANALYSIS ?= $(dir $(PYTHON_REANALYSIS))jupyter
@@ -31,6 +31,15 @@ artifacts-reanalysis: reanalysis
 
 check-reanalysis:
 	$(PYTHON_REANALYSIS) -m unittest tests.test_reanalysis_pilot -v
+
+check-audited-reanalysis:
+	$(PYTHON_REANALYSIS) -W error -m unittest tests.test_audited_reanalysis -v
+
+notebook-audited-reanalysis:
+	PATH="$(dir $(PYTHON_REANALYSIS)):$$PATH" $(JUPYTER_REANALYSIS) execute --inplace --timeout 600 --kernel_name python3 notebooks/audited_reanalysis.ipynb
+
+artifacts-audited-reanalysis: check-audited-reanalysis notebook-audited-reanalysis
+	latexmk -pdf -cd latex/main.tex
 
 denominator:
 	$(PYTHON_REANALYSIS) scripts/denominator_pilot.py

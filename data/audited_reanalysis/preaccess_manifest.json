@@ -1,0 +1,159 @@
+{
+  "created_utc": "2026-09-02T03:34:32.304431+00:00",
+  "environment": {
+    "icechunk": "2.1.2",
+    "netCDF4": "1.7.4",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "pcodec": "1.0.3",
+    "scipy": "1.18.1",
+    "xarray": "2026.7.0",
+    "zarr": "3.3.0"
+  },
+  "files": {
+    "data/audited_reanalysis/audited_cells.csv": {
+      "bytes": 22773,
+      "sha256": "9b895cd9935e17c46a2f33a5659da9b044fda60493bb39b761f1b7f302029616"
+    },
+    "data/audited_reanalysis/eligibility.csv": {
+      "bytes": 5030,
+      "sha256": "7662bb15643861ea619f9d38281d97265886b3fe8f5da2c79a1785b6f752df4d"
+    },
+    "data/audited_reanalysis/output_schemas.json": {
+      "bytes": 5160,
+      "sha256": "da32f64338ba58061cbb50ce922d2a5d30e01b29a3f4d546fd8ffb2bcdea2e0d"
+    },
+    "data/audited_reanalysis/selected_events.csv": {
+      "bytes": 7503,
+      "sha256": "893ecdb31fd6a4e9da94ac7da8c7a5f3c1eeda005909fd1ef685131dc900290d"
+    },
+    "data/candidate_clusters.csv": {
+      "bytes": 3160,
+      "sha256": "fd1545d60fe527e9881ec9169cf9ee93dc94eab1470595641695d1bcf089f309"
+    },
+    "data/candidates.csv": {
+      "bytes": 82114,
+      "sha256": "8b6b0f972180e26c326aaa0e6a501080843bd4b6e6674b07c5aa009340c8a249"
+    },
+    "data/event_audit/coordinate_assertions.csv": {
+      "bytes": 31295,
+      "sha256": "33fb1ac22ccec77d8f5ffc9e928b75042cc91fbe08645a4be4ffd879fdc57874"
+    },
+    "data/event_audit/manifest.json": {
+      "bytes": 1026,
+      "sha256": "3263706361aeeb828ad33b318b1b19076e4448e2ff098a40af6110d6d34f317e"
+    },
+    "data/event_audit/sources.csv": {
+      "bytes": 21356,
+      "sha256": "8a8e3acc21c471afb2fed6111dd13537e360ba9350fe4349ecc23445e809cd47"
+    },
+    "data/event_audit/summary.csv": {
+      "bytes": 15013,
+      "sha256": "8e9f1e43851263591c3c72f908ea4e073f6a19faa6a01738a1e6b82db9bdd532"
+    },
+    "data/event_audit/time_assertions.csv": {
+      "bytes": 38961,
+      "sha256": "adde3bdb573f17c1c4e31ccf404d467bcb466f4075be2db79f812264c8a4ae54"
+    },
+    "data/reanalysis/above_freezing_sensitivity.csv": {
+      "bytes": 20398,
+      "sha256": "e5c43afe7d74db66fdaeab61e968ccc6fd68346d45dca06e4284ea134f6c467b"
+    },
+    "data/reanalysis/cross_layout_probes.csv": {
+      "bytes": 308,
+      "sha256": "4e0a540fd93a2b42829d9d9170948e4ee46831b87566b2c48d024889be7d044d"
+    },
+    "data/reanalysis/diagnostics.csv": {
+      "bytes": 110187,
+      "sha256": "0169e20d47c1c24284696a8be1553d5af47e7ce8e1d26f7cdf31ba1ef60cda73"
+    },
+    "data/reanalysis/event_cells.csv": {
+      "bytes": 25038,
+      "sha256": "d07cd42f4a953322d8c3c97070ba2ad436986b3ab7399e2ecb1f0ba0a5cf640e"
+    },
+    "data/reanalysis/matched_windows.csv": {
+      "bytes": 1726667,
+      "sha256": "8c8e2f2484f8b5cae6a51f92abb17d2ff7bb90f06e54ef941c1eda8ca4b3e664"
+    },
+    "data/reanalysis/retrieval_manifest.json": {
+      "bytes": 2107,
+      "sha256": "a72e652b8f088a14cc939502a560981d87b9155cb98ee718dc45ed4e94fee6a1"
+    },
+    "data/reanalysis/source/e5.oper.invariant.128_129_z.ll025sc.1979010100_1979010100.nc": {
+      "bytes": 2618598,
+      "sha256": "ebc93b1aeb0060fd5289b9b995f584c9b41abd40642afe34575dc619a310d66d"
+    },
+    "data/reanalysis/source/e5.oper.invariant.128_172_lsm.ll025sc.1979010100_1979010100.nc": {
+      "bytes": 766274,
+      "sha256": "ac5d93fbc2a7afc100cd8599fb6b324cfc2f2d20706f6e8df0b92f5bf61c6e61"
+    },
+    "protocol/audited-reanalysis-transfer.md": {
+      "bytes": 7455,
+      "sha256": "e81c67f8b4f8fe9269ccbac068873f12665cb7b0e9358e90d01d887a3e009221"
+    },
+    "protocol/reanalysis-pilot.md": {
+      "bytes": 9638,
+      "sha256": "4bfc97462392472c6a4ef164f4e1d1dd0757a0b8beef241d34c8568e7cf4c9c5"
+    },
+    "protocol/source-time-audit.md": {
+      "bytes": 11203,
+      "sha256": "55c0790ffc84a9da74d92277f7b14e8ea5e2a3241377c6049a1c04be4d75a16a"
+    },
+    "requirements-audited-reanalysis.txt": {
+      "bytes": 31,
+      "sha256": "a5eab95f3bc7de5cd28aae6a1423b0e183a828a51f1acb8a365f83d583f535ed"
+    },
+    "requirements-reanalysis.txt": {
+      "bytes": 185,
+      "sha256": "3b6625e4d6db124da740ee50fe1409309c9f67a6db5f06ea89ee7496de83bed2"
+    },
+    "scripts/audited_reanalysis.py": {
+      "bytes": 24614,
+      "sha256": "6881906b830eeb238129eb2732ea44e5d51283a11b6ceb33292de85a3982b9de"
+    },
+    "scripts/reanalysis_pilot.py": {
+      "bytes": 17312,
+      "sha256": "18b0aff924fd8a5b3bcdad88a92c63b8b056c10d3aacdc39657939d61342ce5c"
+    },
+    "tests/test_audited_reanalysis.py": {
+      "bytes": 10785,
+      "sha256": "f132dcb65a50f79d1819d581113dd508a856e18e2c3f4e64421b3484aef4f788"
+    },
+    "tests/test_reanalysis_pilot.py": {
+      "bytes": 6208,
+      "sha256": "2682448631a0dc61efce320fb5b663cb7bc01186af08894905e648c63e0bd07b"
+    }
+  },
+  "issue": 29,
+  "population": {
+    "cells": 88,
+    "components": 18,
+    "frame": 53,
+    "old_pilot_overlap": 9,
+    "selected": 22,
+    "source_failure": 16,
+    "trigger_proxy": 6,
+    "unique_grid_points": 73
+  },
+  "python": "3.12.11",
+  "selected_id_sha256": "93ba0bbc451c5babb9de4081b87f493005b4920dbc1a871efa479f89aae03a08",
+  "source": {
+    "group": "single/temporal",
+    "reference_years": [
+      1991,
+      2020
+    ],
+    "snapshot": "T9H8SG2PVXWNY0QNJPJG",
+    "variable": "t2m",
+    "windows_hours": {
+      "2d": 48,
+      "30d": 720,
+      "7d": 168
+    },
+    "years": [
+      1979,
+      2025
+    ]
+  },
+  "status": "pre_event_temperature_access_v1"
+}

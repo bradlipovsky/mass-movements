@@ -1,0 +1,32 @@
+{
+  "approved_preaccess_sha256": "189da3a62e0428bff10f39aa881a90a46b6e23e9c6203621ac83488a65a64ad5",
+  "output_sha256": {
+    "above_freezing_sensitivity.csv": "3b4c2234b07a864362853b7c43b2647ba36ecca191d0f36d8345aa5265138acf",
+    "cross_layout_probes.csv": "4e0a540fd93a2b42829d9d9170948e4ee46831b87566b2c48d024889be7d044d",
+    "diagnostics.csv": "e66e9c501e771dc85139fa8f59f9ba9ef1e805120811c316cfe82662ed93e56a",
+    "matched_windows.csv": "15e45bac8d33c041220e9cc8a0168d529b4fc3b81237a88c27dec830665cc422",
+    "overlap_comparison.csv": "500319303090da07d29596f057b45b8c312f4bab6bb8dd9807df5ca6e10b78de",
+    "primary_diagnostics.csv": "9072ce5ddf817bc7e0bb8e12b80d7ccebef8209e48f73ea60fad4e7ed87617f5"
+  },
+  "packages": {
+    "icechunk": "2.1.2",
+    "netCDF4": "1.7.4",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "pcodec": "1.0.3",
+    "scipy": "1.18.1",
+    "xarray": "2026.7.0",
+    "zarr": "3.3.0"
+  },
+  "retrieved_utc": "2026-09-02T03:43:03.000139+00:00",
+  "rows": {
+    "above_freezing_sensitivity.csv": 264,
+    "cross_layout_probes.csv": 3,
+    "diagnostics.csv": 528,
+    "matched_windows.csv": 24816,
+    "overlap_comparison.csv": 27,
+    "primary_diagnostics.csv": 66
+  },
+  "snapshot": "T9H8SG2PVXWNY0QNJPJG",
+  "status": "audited_event_temperature_transfer_v1"
+}
