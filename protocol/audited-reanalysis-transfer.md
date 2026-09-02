@@ -66,11 +66,12 @@ already retained NSF NCAR surface-geopotential and land-fraction fields. Use
 1979--2025 hourly values and 1991--2020 controls. Three registered neutral
 probes must again match the spatial and temporal layouts exactly.
 
-Extraction uses paired vector indices and decodes and materializes only the 73
-unique grid-point histories represented by the 88 registered event-cell
-assignments. The object store may necessarily transfer compressed chunks whose
-bytes also encode neighboring cells, but no neighboring value may enter an
-in-memory numerical array, dataframe, or output table.
+Extraction uses paired vector indices. The object store and codec may
+necessarily transfer and transiently decode full compressed chunks that also
+contain neighboring values. After codec-level selection, arrays passed to this
+analysis contain only the 73 unique grid-point histories represented by the 88
+registered event-cell assignments; dataframes and output tables retain the
+same boundary.
 
 For anchor `B` in `{A_i,C_i}`, matched year `y`, cell `c`, and window length
 `H` in `{48,168,720}` hours, calculate
