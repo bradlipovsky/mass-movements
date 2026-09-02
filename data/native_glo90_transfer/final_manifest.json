@@ -1,0 +1,186 @@
+{
+  "status": "complete_exposed_window_native_glo90_source_product_transfer",
+  "issue": 27,
+  "created_utc": "2026-09-02T02:51:15Z",
+  "commits": {
+    "preaccess": "2c2c95b26edbebab2d97662fdf4b614447e9e1f5",
+    "raw_sources": "e9b33fce0ab8448f0a68d684bf6cddb97b5163dc",
+    "reviewed_reporting_artifacts": "aa5fbe8ad2b521cf88035fa9a05e2fc64c6624d6"
+  },
+  "upstream": {
+    "preaccess_manifest_sha256": "85b6db22b8e81abbe8049f745a445e33ccd0f448ab168341611411cdac7be430",
+    "expected_sources_sha256": "87f13e628156720bdab83d962f84a22456b1fad859320310097d27640fdeb39c",
+    "raw_source_manifest_sha256": "dba58bae4a36600d55adc6393f891cc0fd95a9baa577e3cb3bfc4ff64233d8a5",
+    "source_ledger_sha256": "e523d5203214a7291953dfa4cab39348d8876c3a4a46305075ba8774336e5737"
+  },
+  "public_records": {
+    "preaccess_freeze": "https://github.com/bradlipovsky/mass-movements/issues/27#issuecomment-5503391980",
+    "preaccess_authorization": "https://github.com/bradlipovsky/mass-movements/issues/27#issuecomment-5503403947",
+    "raw_source_closure": "https://github.com/bradlipovsky/mass-movements/issues/27#issuecomment-5503428974",
+    "raster_opening_authorization": "https://github.com/bradlipovsky/mass-movements/issues/27#issuecomment-5503442020",
+    "reporting_review_request": "https://github.com/bradlipovsky/mass-movements/issues/27#issuecomment-5503527275",
+    "final_reporting_approval": "https://github.com/bradlipovsky/mass-movements/issues/27#issuecomment-5503598411"
+  },
+  "acquisition": {
+    "registered_requests": 63,
+    "http_200_geotiffs": 60,
+    "retained_http_404_bodies": 3,
+    "closed_file_records_including_ledger": 64,
+    "closed_bytes_including_ledger": 145843156,
+    "missing_objects": [
+      {
+        "region": "07",
+        "object_id": "Copernicus_DSM_COG_30_N76_00_E018_00_DEM",
+        "position": "halo"
+      },
+      {
+        "region": "07",
+        "object_id": "Copernicus_DSM_COG_30_N76_00_E019_00_DEM",
+        "position": "halo"
+      },
+      {
+        "region": "18",
+        "object_id": "Copernicus_DSM_COG_30_S45_00_E172_00_DEM",
+        "position": "halo"
+      }
+    ]
+  },
+  "population": {
+    "exposed_windows": 7,
+    "native_target_grid_phases": 4,
+    "strata": 2,
+    "equivalent_area_rows": 56,
+    "window_stratum_comparisons": 14
+  },
+  "results": {
+    "aggregated_glo30_departure_pct": {
+      "minimum": 1.81348177219087,
+      "maximum": 13.434859261060788,
+      "median": 3.43997796860958
+    },
+    "native_glo90_primary_departure_pct": {
+      "minimum": 3.44862149090905,
+      "maximum": 24.8064828631724,
+      "median": 6.64672797564124
+    },
+    "native_glo90_all_phase_departure_pct": {
+      "minimum": 2.569796287386017,
+      "maximum": 27.258413254396373
+    },
+    "native_departure_exceeds_aggregate_comparisons": 14,
+    "maximum_native_phase_cv_pct": 4.16528292268909,
+    "maximum_native_phase_cv_region": "08",
+    "maximum_native_phase_cv_stratum": "glacier_proximity",
+    "minimum_primary_complete_support_pct": 99.68068951857344,
+    "minimum_primary_finite_center_pct": 99.9327767407523,
+    "complete_mask_specific_integrations": 56,
+    "structural_zero_rows": 0,
+    "zero_reference_positive_comparisons": 0
+  },
+  "verification": {
+    "artifact_command": "make artifacts-native-glo90-transfer PYTHON_REANALYSIS=.venv/bin/python",
+    "source_and_test_lines": 320,
+    "source_and_test_line_limit": 320,
+    "notebook_code_lines": 39,
+    "notebook_code_line_limit": 50,
+    "notebook_error_outputs": 0,
+    "focused_tests": "10/10 passed",
+    "full_suite_tests": "110/110 passed",
+    "preaccess_independent_approvals": 3,
+    "raster_opening_independent_approvals": 3,
+    "final_reporting_independent_approvals": 3,
+    "manuscript_pdf_pages": 33,
+    "latex_warnings": 0,
+    "python": "3.12.11"
+  },
+  "boundaries": [
+    "The seven windows were already exposed and do not have geographic inclusion probabilities.",
+    "This is a source-product development comparison with no registered threshold or pass label.",
+    "Strict 3-by-3 aggregation of GLO-30 does not reproduce the separately processed native GLO-90 product in these windows.",
+    "Complete mask-specific integration does not imply complete whole-report raster support; retained missing coverage remains NaN.",
+    "Equivalent steep area is neither literal susceptible area nor failure probability.",
+    "The result does not revise the stopped global design and supports no global estimate, hazard claim, or climate attribution."
+  ],
+  "files": {
+    "Makefile": {
+      "bytes": 5008,
+      "sha256": "6260d3a9b81c54a67d0393eedb00481265c3cb2a6024c8269fdac9ecce3f4871"
+    },
+    "protocol/native-glo90-transfer.md": {
+      "bytes": 10018,
+      "sha256": "8f5c78fdc75d9f91aeae6d1505e3223dd8fcd210fb3849c4096fbdfa0f869b1c"
+    },
+    "requirements-native-glo90-transfer.txt": {
+      "bytes": 46,
+      "sha256": "86f878c8d6db655f966c6c4cdbc1c1286fb123ad4b511cd33b8e9b7049a4db15"
+    },
+    "data/native_glo90_transfer/expected_sources.csv": {
+      "bytes": 18748,
+      "sha256": "87f13e628156720bdab83d962f84a22456b1fad859320310097d27640fdeb39c"
+    },
+    "data/native_glo90_transfer/output_schemas.json": {
+      "bytes": 3563,
+      "sha256": "c24919c8e6a5857f646d7c67e7d7bebbc04001a6dd70f0293cee5be56bf6f705"
+    },
+    "data/native_glo90_transfer/preaccess_manifest.json": {
+      "bytes": 12217,
+      "sha256": "85b6db22b8e81abbe8049f745a445e33ccd0f448ab168341611411cdac7be430"
+    },
+    "data/native_glo90_transfer/raw_source_manifest.json": {
+      "bytes": 13483,
+      "sha256": "dba58bae4a36600d55adc6393f891cc0fd95a9baa577e3cb3bfc4ff64233d8a5"
+    },
+    "data/native_glo90_transfer/source_ledger.csv": {
+      "bytes": 34366,
+      "sha256": "e523d5203214a7291953dfa4cab39348d8876c3a4a46305075ba8774336e5737"
+    },
+    "data/native_glo90_transfer/windows.csv": {
+      "bytes": 1227,
+      "sha256": "9b1fcf63096282afdefd08efe47ef859d304c642a830f514ad94e4c51c63f8c1"
+    },
+    "data/native_glo90_transfer/equivalent_area_long.csv": {
+      "bytes": 13274,
+      "sha256": "663eff9da6e5972c4625be6505e9c71ca58b6e16ce2783b21455c3a64d64f232"
+    },
+    "data/native_glo90_transfer/comparisons.csv": {
+      "bytes": 3871,
+      "sha256": "387798fe4b219fb1c6af399fef663c960c6ef3351eb2309c6bfef19a38ed974b"
+    },
+    "scripts/native_glo90_transfer_source.py": {
+      "bytes": 9569,
+      "sha256": "1260197d61d51e6b773928681dae6ee7bb8f0e6b30bd0181eade7a328c4d2731"
+    },
+    "scripts/native_glo90_transfer.py": {
+      "bytes": 13595,
+      "sha256": "c854032f3a8aa6d769beb25ebd3b227ad9c77994b5e2be40887ad09d60e67d55"
+    },
+    "tests/test_native_glo90_transfer.py": {
+      "bytes": 8428,
+      "sha256": "7c829642748b4c539b192e174de3fedc524cab48657ee56103e1378642d23a53"
+    },
+    "notebooks/native_glo90_transfer.ipynb": {
+      "bytes": 119142,
+      "sha256": "3cfdaf2c53b9c72e10ef408b641387f3f2ec21642c23fbd8d832de129ff42767"
+    },
+    "figures/native_glo90_transfer.png": {
+      "bytes": 293286,
+      "sha256": "c27e979863eb261a07c42f344b37b030f0dcc629053ad2f016fa35c736c853b9"
+    },
+    "figures/native_glo90_transfer.pdf": {
+      "bytes": 26901,
+      "sha256": "25681d655352dfbba4a744de4d18cdc13ce3933c8bc622f84a70189c0d22f33c"
+    },
+    "latex/main.tex": {
+      "bytes": 76465,
+      "sha256": "63719e412dd82ebd791c66928741789875841598063f1d76fd0c7a989032c3a3"
+    },
+    "latex/references.bib": {
+      "bytes": 10812,
+      "sha256": "c043381214f9ca8800681f939ae44bfc274e281508bd48813a772e4a143e8074"
+    },
+    "latex/main.pdf": {
+      "bytes": 766970,
+      "sha256": "5b6c9db947427d904acaac0b5b52d8b0bb3e761ee015ca518645814bd2a72872"
+    }
+  }
+}
