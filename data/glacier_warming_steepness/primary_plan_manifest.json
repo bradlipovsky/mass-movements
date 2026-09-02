@@ -1,0 +1,62 @@
+{
+  "cell_years": 2880,
+  "created_at": "2026-09-02T09:49:54.439006+00:00",
+  "git_commit": "924cf1e445fd977471d951f9115d450b1bdad4b5",
+  "inputs": {
+    "data/glacier_warming_steepness/case_frame.csv": {
+      "bytes": 1053,
+      "sha256": "0b03ef57c20e1178efac6ffc598b86f3e9c62bbcd600f2a42e6ca3c9fe58dee0"
+    },
+    "data/glacier_warming_steepness/case_glacier_status.csv": {
+      "bytes": 1610,
+      "sha256": "c07cb1c590ee0f7f99824d9461355c9e35fdbd803a0ecd8b4d45fff79a873a26"
+    },
+    "data/glacier_warming_steepness/glacier_era5_weights.csv": {
+      "bytes": 14215,
+      "sha256": "baeee795dfcd79b1e67eee9337f192c897f8d4ea10ed37fd0174410544e6ec9a"
+    },
+    "data/glacier_warming_steepness/selected_backgrounds.csv": {
+      "bytes": 23516,
+      "sha256": "78674106e76e11d74b54d9506afed08def4fb109e3c09002f6c47a847b8dd781"
+    },
+    "data/glacier_warming_steepness/spatial_freeze_manifest.json": {
+      "bytes": 5700,
+      "sha256": "8bacc9792e40926fd579e4e26ccb9c0f688683ca2796300d4e0253759ccc19ae"
+    },
+    "protocol/glacier_primary_output_schemas.json": {
+      "bytes": 5888,
+      "sha256": "f781b79374085dcef795a2c417fde0991e7b78d14a134a0b692b8e1a29c2f919"
+    },
+    "protocol/glacier_warming_steepness_output_schemas.json": {
+      "bytes": 13446,
+      "sha256": "464c35fefbff6030c3dee7d4b72bf0d2fedb3f107d1333332a5ff2dc2f3cb453"
+    },
+    "protocol/global-glacier-warming-steepness.md": {
+      "bytes": 21446,
+      "sha256": "e1104cdc0ed0aaa9275e62ad6aa7f33271dc5fdc8dc1130fcde7657fdc5dfb60"
+    },
+    "requirements-glacier-primary.txt": {
+      "bytes": 60,
+      "sha256": "85c23e66da384664af9d229ef8d484742f5f94379101c90606f526588074e336"
+    },
+    "scripts/glacier_primary_analysis.py": {
+      "bytes": 34750,
+      "sha256": "fc0009eebff38b968d97e9f8af2f34a591df3880c5edb1c2f3764050a36ea1b6"
+    },
+    "tests/test_glacier_primary_analysis.py": {
+      "bytes": 5840,
+      "sha256": "c92297326a59037c2741e869ded9ea84a23755a0da568a91bb7d45b84560d914"
+    }
+  },
+  "outputs": {
+    "primary_access_requests.csv": {
+      "bytes": 217602,
+      "rows": 4700,
+      "sha256": "733c6f61bf09f58e666b3627c90845e5b2519524d46d46be7662d0f5caea3a9d"
+    }
+  },
+  "requests": 4700,
+  "rgi_ids": 207,
+  "spatial_manifest_sha256": "8bacc9792e40926fd579e4e26ccb9c0f688683ca2796300d4e0253759ccc19ae",
+  "status": "value-free participant access plan; outcomes unopened"
+}

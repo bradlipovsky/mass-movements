@@ -1,0 +1,11 @@
+candidate_id,initial_cluster,final_cluster,direct_complete,complete,missing_reason
+aru-1-2016,site-aru,site-aru,True,True,
+aru-2-2016,site-aru,site-aru,True,True,
+bukadaban-2022,bukadaban-2022,bukadaban-2022,True,True,
+flat-creek-2013,flat-creek-2013,flat-creek-2013,True,True,
+kunlun-b2-2001,trigger-kunlun-2001,bukadaban-2022,True,True,
+kunlun-b4-2001,trigger-kunlun-2001,bukadaban-2022,True,True,
+kunlun-k2-2001,trigger-kunlun-2001,bukadaban-2022,True,True,
+petra-dp19,petra-dp19,petra-dp19,True,True,
+shuraki-kapali-2017,site-petra-sk,petra-dp19,True,True,
+tinguiririca-2007,tinguiririca-2007,tinguiririca-2007,True,True,
