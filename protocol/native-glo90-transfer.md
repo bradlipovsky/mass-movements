@@ -36,8 +36,9 @@ For every grid, retain without change:
 5. exact closed distance no greater than 100 m outside the union of relevant
    RGI 7 outlines;
 6. the outside-RGI, finite PZI at least 0.1 mask; and
-7. equivalent area equal to 90 m squared times the sum of the weight at
-   reporting centers satisfying the mask and complete-support rule.
+7. equivalent area equal to \(r^2\) times the sum of the weight at reporting
+   centers satisfying the mask and complete-support rule, where \(r=30\) m
+   for `p00` and \(r=90\) m for aggregated `r90` and native grids.
 
 The local least-squares regression plane estimates a neighborhood tangent
 gradient; it is neither a resolved terrain facet nor a stress calculation.
@@ -76,7 +77,8 @@ with exact key `<stem>/<stem>.tif`, where `<stem>` is
 `Copernicus_DSM_COG_30_NSLL_00_EWLLL_00_DEM`.
 
 Send one GET per distinct key after approval. Retain every response body,
-status, selected response headers, retrieval time, byte count, and SHA-256.
+status, selected response headers, timezone-aware ISO-8601 retrieval time,
+byte count, and SHA-256.
 HTTP 404 is a retained missing-source result. Any other non-200 status stops
 after its response is recorded. Interrupted acquisition may reuse only an
 ordered-prefix ledger-bound response whose identity fields, canonical path,
@@ -97,6 +99,15 @@ spacing, and affine origin. Warp each available native GLO-90 COG independently
 to that grid with bilinear interpolation, Float32 destination values, source
 nodata, and destination NaN. Combine sources in frozen candidate order. Missing
 coverage remains NaN.
+
+Before reprojection, require each HTTP-200 payload to be a tiled, one-band
+Float32 GeoTIFF in EPSG:4326 with `AREA_OR_POINT=Point`, 1,200 north--south
+posts at 3 arc seconds, and 1,200 divided by the DGED longitude reduction
+factor posts. The AWS COG transformation removes the shared east and south
+edge posts. The first post center must equal the ledger geocell's northwest
+integer-degree corner and the last must lie one native interval inside its
+southeast corner. A payload with another resolution, footprint, or ledger
+identity stops the calculation.
 
 Evaluate four native target-grid origins: the inherited origin `n00`, then
 half-pixel translations `nx45`, `ny45`, and `nxy45` at (45, 0), (0, 45), and
@@ -125,10 +136,13 @@ If all four native phases have complete support and the GLO-30 reference is
 positive, fractional departure is absolute area difference divided by that
 reference. If all reference and compared areas are zero, label a structural
 zero and retain zero departure. A zero reference with any positive compared
-area is unresolved and retains a missing departure. Incomplete native support
-also retains missing native summaries and departure and cannot be structural
-zero. No threshold is applied and no development result is called a pass or
-fail.
+area is unresolved and retains missing aggregated and native departures.
+When the reference is zero, a group with incomplete native support likewise
+cannot establish the all-zero condition, so both departures remain missing.
+With a positive reference, incomplete native support retains missing native
+summaries and native departure while the aggregated-GLO-30 departure remains
+defined. It cannot be structural zero. No threshold is applied and no
+development result is called a pass or fail.
 
 ## Outputs and review
 
@@ -139,7 +153,8 @@ notebook with at most 50 code lines, a non-map figure comparing native and
 aggregated departures with native support and phase sensitivity visible,
 updated manuscript source and PDF, and a final manifest.
 
-`output_schemas.json` fixes column names, order, types, and row counts. The
+`output_schemas.json` fixes the source-ledger, raw-manifest, and output-table
+field names, order, types, and row or entry counts. The
 pre-access and raw-manifest command lines require the independently approved
 manifest SHA-256, and runtime versions are rechecked at both gates. The raw
 manifest must contain exactly the ordered 63-row ledger and every canonical
@@ -162,3 +177,5 @@ these seven exposed windows or authorize a new probability-sample total.
   https://dataspace.copernicus.eu/sites/default/files/media/files/2024-06/geo1988-copernicusdem-spe-002_producthandbook_i5.0.pdf
 - Registry of Open Data on AWS, Copernicus DEM:
   https://registry.opendata.aws/copernicus-dem/
+- AWS Copernicus DEM COG dimensions and edge-post conversion:
+  https://copernicus-dem-90m.s3.amazonaws.com/readme.html

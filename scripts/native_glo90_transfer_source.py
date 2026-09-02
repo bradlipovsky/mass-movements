@@ -9,16 +9,10 @@ ROOT = Path(__file__).resolve().parents[1]; OUT = ROOT / "data/native_glo90_tran
 WINDOWS, EXPECTED, SCHEMAS = OUT / "windows.csv", OUT / "expected_sources.csv", OUT / "output_schemas.json"
 PRE, LEDGER, RAW_MANIFEST = OUT / "preaccess_manifest.json", OUT / "source_ledger.csv", OUT / "raw_source_manifest.json"
 RAW = OUT / "source_raw"
-REGISTERED = ["protocol/native-glo90-transfer.md", "requirements-denominator.txt",
- "requirements-native-glo90-transfer.txt", "scripts/native_glo90_transfer_source.py",
- "scripts/native_glo90_transfer.py", "tests/test_native_glo90_transfer.py",
- "scripts/denominator_pilot.py", "scripts/scale_explicit_steep_area.py",
- "scripts/scale_explicit_transfer.py", "scripts/susceptible_area_convergence.py",
- "data/native_glo90_transfer/windows.csv", "data/native_glo90_transfer/expected_sources.csv",
- "data/native_glo90_transfer/output_schemas.json"]
-BASELINES = ["data/scale_explicit_steep_area/equivalent_area_long.csv",
- "data/scale_explicit_steep_area/diagnostics.csv", "data/scale_explicit_transfer/equivalent_area_long.csv",
- "data/scale_explicit_transfer/decisions.csv"]
+REGISTERED = ["protocol/native-glo90-transfer.md", "requirements-denominator.txt", "requirements-native-glo90-transfer.txt", "scripts/native_glo90_transfer_source.py", "scripts/native_glo90_transfer.py", "tests/test_native_glo90_transfer.py",
+ "scripts/denominator_pilot.py", "scripts/scale_explicit_steep_area.py", "scripts/scale_explicit_transfer.py", "scripts/susceptible_area_convergence.py",
+ "data/native_glo90_transfer/windows.csv", "data/native_glo90_transfer/expected_sources.csv", "data/native_glo90_transfer/output_schemas.json"]
+BASELINES = ["data/scale_explicit_steep_area/equivalent_area_long.csv", "data/scale_explicit_steep_area/diagnostics.csv", "data/scale_explicit_transfer/equivalent_area_long.csv", "data/scale_explicit_transfer/decisions.csv"]
 IDENTITY = ["region", "window_key", "latitude", "longitude", "object_id", "key", "url"]
 PACKAGES = ["affine", "numpy", "pandas", "rasterio", "scipy", "shapely", "pyproj"]
 def digest(path): return hashlib.sha256(Path(path).read_bytes()).hexdigest()
@@ -32,6 +26,7 @@ def write_rows(path, records):
 def write_json(path, value):
     temporary = path.with_suffix(path.suffix + ".tmp"); temporary.write_text(json.dumps(value, indent=2) + "\n"); temporary.replace(path)
 def environment(): return {"python": platform.python_version(), **{name: importlib.metadata.version(name) for name in PACKAGES}}
+def schema_columns(name): return json.loads(SCHEMAS.read_text())[name]["columns"]
 def normalize_longitude(value): return (int(value) + 180) % 360 - 180
 def object_id(latitude, longitude):
     latitude, longitude = int(latitude), normalize_longitude(longitude)
@@ -55,12 +50,10 @@ def baseline_files():
         names += [f"data/{family}/source/dem_{region}_p00_30m.tif", f"data/{family}/source/pzi_{region}.tif", f"data/{family}/source/rgi_{region}.geojson"]
     return names
 def registered_files(): return REGISTERED + baseline_files()
-def file_record(name):
-    path = ROOT / name; return {"bytes": path.stat().st_size, "sha256": digest(path)}
+def file_record(name): path = ROOT / name; return {"bytes": path.stat().st_size, "sha256": digest(path)}
 def write_preaccess():
     expected = expected_records(); write_rows(EXPECTED, expected); names = registered_files()
-    manifest = {"status": "pre_native_glo90_access_v2", "issue": 27, "request_rows": 63,
-        "environment": environment(), "schemas": json.loads(SCHEMAS.read_text()),
+    manifest = {"status": "pre_native_glo90_access_v2", "issue": 27, "request_rows": 63, "environment": environment(), "schemas": json.loads(SCHEMAS.read_text()),
         "files": {name: file_record(name) for name in sorted(names)}}
     write_json(PRE, manifest)
 def verify_preaccess(path, approved_sha256):
@@ -70,13 +63,17 @@ def verify_preaccess(path, approved_sha256):
     wanted = ("pre_native_glo90_access_v2", 27, 63, environment(), json.loads(SCHEMAS.read_text()))
     normalized = [{key: str(value) for key, value in item.items()} for item in expected]
     if fixed != wanted or set(manifest.get("files", {})) != set(registered_files()) or rows(EXPECTED) != normalized: raise ValueError("invalid pre-access closure")
-    for name, record in manifest["files"].items():
-        if file_record(name) != record: raise ValueError(f"frozen file differs: {name}")
+    if any(file_record(name) != record for name, record in manifest["files"].items()): raise ValueError("frozen file differs")
 def validate_ledger(records, expected, complete=False):
+    schema = schema_columns("source_ledger"); names = [x["name"] for x in schema]
+    if any(list(record) != names for record in records): raise ValueError("ledger schema differs")
     if len(records) > 63 or len({x.get("object_id") for x in records}) != len(records): raise ValueError("duplicate or excess ledger rows")
     left = [[str(x.get(key, "")) for key in IDENTITY] for x in records]; right = [[str(x[key]) for key in IDENTITY] for x in expected[:len(records)]]
     if left != right or (complete and len(records) != 63): raise ValueError("ledger is not the exact ordered expected population")
     for record in records:
+        for column in (x["name"] for x in schema if x["dtype"] == "int64"): int(record[column])
+        stamp = datetime.fromisoformat(record["retrieved_utc"])
+        if stamp.tzinfo is None or len(record["sha256"]) != 64 or any(character not in "0123456789abcdef" for character in record["sha256"]) or int(record["bytes"]) < 0 or (record["content_length"] and int(record["content_length"]) != int(record["bytes"])): raise ValueError("invalid response metadata")
         status = int(record["http_status"])
         if status not in (200, 404): raise ValueError(f"retained unexpected HTTP status: {record['object_id']}")
         suffix = ".tif" if status == 200 else ".http404"

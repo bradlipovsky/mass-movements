@@ -1,4 +1,41 @@
 {
+  "source_ledger": {
+    "rows": 63,
+    "columns": [
+      {"name": "region", "dtype": "string"},
+      {"name": "window_key", "dtype": "string"},
+      {"name": "latitude", "dtype": "int64"},
+      {"name": "longitude", "dtype": "int64"},
+      {"name": "object_id", "dtype": "string"},
+      {"name": "key", "dtype": "string"},
+      {"name": "url", "dtype": "string"},
+      {"name": "retrieved_utc", "dtype": "string"},
+      {"name": "http_status", "dtype": "int64"},
+      {"name": "path", "dtype": "string"},
+      {"name": "bytes", "dtype": "int64"},
+      {"name": "sha256", "dtype": "string"},
+      {"name": "etag", "dtype": "string"},
+      {"name": "last_modified", "dtype": "string"},
+      {"name": "content_type", "dtype": "string"},
+      {"name": "content_length", "dtype": "string"}
+    ]
+  },
+  "raw_source_manifest": {
+    "fields": [
+      {"name": "status", "dtype": "string"},
+      {"name": "preaccess_manifest_sha256", "dtype": "string"},
+      {"name": "expected_sources_sha256", "dtype": "string"},
+      {"name": "responses", "dtype": "int64"},
+      {"name": "http_status_counts", "dtype": "object"},
+      {"name": "files", "dtype": "object"}
+    ],
+    "http_status_keys": ["200", "404"],
+    "file_entries": 64,
+    "file_record_fields": [
+      {"name": "bytes", "dtype": "int64"},
+      {"name": "sha256", "dtype": "string"}
+    ]
+  },
   "equivalent_area_long": {
     "rows": 56,
     "columns": [
