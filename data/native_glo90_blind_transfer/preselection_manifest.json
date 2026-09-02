@@ -1,0 +1,37 @@
+{
+  "files": {
+    "data/native_glo90_blind_transfer/candidate_windows.csv": {
+      "bytes": 66257,
+      "sha256": "a381415146ac3de5c11133c71748030c9b0b72c2eaad31fc83fa4ca2ea86218e"
+    },
+    "protocol/native-glo90-blind-transfer.md": {
+      "bytes": 8935,
+      "sha256": "0b8eb140bed814238419ab751f4f54b7c417170cc1bf1be7738a9aeba353efc7"
+    },
+    "scripts/native_glo90_blind_selection.py": {
+      "bytes": 14440,
+      "sha256": "ac7d5bba7639fd8d7c1bbf4e5f54c57a7050d024a9e6b97af7acb14a684490ba"
+    },
+    "tests/test_native_glo90_blind_selection.py": {
+      "bytes": 5927,
+      "sha256": "c609ed9e274cc7a94bfc252cec9f166a8215b4267df94fa09b279e22652b4273"
+    }
+  },
+  "issue": 31,
+  "population_arithmetic": "1411-68-8=1335",
+  "regions": 18,
+  "status": "blind_population_frozen_before_future_pulse",
+  "target_query": "https://beacon.nist.gov/beacon/2.0/pulse/time/next/1788328799999",
+  "target_time_utc": "2026-09-02T06:00:00.000Z",
+  "upstream": {
+    "data/denominator/windows.csv": "609185f85bf72e06e487b2345900584f942440f861dbd0a71eff059436fd4412",
+    "data/geographic_sample/beacon/certificate.pem": "acd33ba715a14c1d2c1601983c38cb7e671de151c3536fdf25097f28f9533229",
+    "data/geographic_sample/beacon/previous_pulse.json": "d7fdec432b4cc4b6bf48bf0c6fd685a8d0e8729093155805fcaba60e455eb226",
+    "data/geographic_sample/beacon/pulse.json": "1e160ddf2bf6604d675563c484ca87f94c85eee308a6bc4ae3188a1a6774103f",
+    "data/geographic_sample/beacon/verification/issuer_certificate.pem": "6601f41fceefbe7523a6a2e746938de57fc24e99426b7bea58d1867dbee1be5e",
+    "data/geographic_sample/frame.csv": "482c9d585777317ab69363481db3df1011e2d4e8ce84c3826b151406cace9879",
+    "data/geographic_sample/sample.csv": "1e9164813893e285aeeeaa1a7833e16c87172cbe4d3357e245854ab13966613b",
+    "data/global_dem_support/cell_support.csv": "c212449965a543cac03d2b724a8346279b34e2ac87c8d3b0db5e22841c47dd0e",
+    "data/native_glo90_transfer/windows.csv": "9b1fcf63096282afdefd08efe47ef859d304c642a830f514ad94e4c51c63f8c1"
+  }
+}
