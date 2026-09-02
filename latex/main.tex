@@ -52,9 +52,10 @@ The registered pilot results are preserved rather than recomputed post hoc. A
 separately frozen successor uses the 22 occurrences with both accepted fields.
 At seven days, its median onset-aligned rank is 0.741 across all occurrences
 and 0.650 across 18 dependence-component representatives. Moving from
-catalog-date midnight to audited onset changes the median rank by 0.000 and
-the median mean temperature by 0.152~K; the median four-cell rank range is
-0.100. These remain descriptive exposure diagnostics because no denominator
+catalog-date midnight to audited onset gives a signed median rank change of
+0.000, a median absolute rank change of 0.017, and a signed median mean-
+temperature change of 0.152~K; the median four-cell rank range is 0.100. These
+remain descriptive exposure diagnostics because no denominator
 is yet aligned with the cases. A separate climate- and case-blind terrain pilot
 enumerates glacier, glacier-contact, and permafrost-intersection objects in
 three deterministically selected windows. Primary connected-component counts
@@ -1129,12 +1130,15 @@ For the seven-day window, the onset-aligned warm-state rank has a median of
 (0.412--0.815) across the 18 component representatives. The corresponding
 linear-trend-residual rank has a median of 0.661 (0.403--0.966). Moving the
 endpoint from catalog-date midnight to audited onset changes the seven-day
-warm-state rank by a median of 0.000 (0.000--0.025), with a range of
-$-0.034$ to 0.103; the median change in the underlying mean 2-m temperature is
-0.152~K (0.014--0.231~K). The residual-rank contrast is likewise 0.000
-(0.000--0.026). At two days, the warm-rank contrast is more dispersed: its
-median is 0.017, its interquartile range is $-0.060$--0.034, and its range is
-$-0.345$--0.241. At 30 days the median and interquartile range are zero
+warm-state rank by a signed median of 0.000 (0.000--0.025), with a range of
+$-0.034$ to 0.103; the median absolute change is 0.017 (0.000--0.034). The
+signed median change in the underlying mean 2-m temperature is 0.152~K
+(0.014--0.231~K). The signed residual-rank contrast is likewise 0.000
+(0.000--0.026), and its median absolute value is 0.000 (0.000--0.034). At two
+days, the signed warm-rank contrast is more dispersed: its median is 0.017,
+its interquartile range is $-0.060$--0.034, and its range is
+$-0.345$--0.241; the median absolute change is 0.052 (0.034--0.103). At 30
+days both the signed median and median absolute change are zero
 (Figure~\ref{fig:audited-reanalysis}). Endpoint choice therefore matters most
 for the shortest registered window, without supplying a failure threshold.
 
@@ -1143,24 +1147,28 @@ ERA5 cell at the catalog and audited coordinates. Their primary-cell
 coordinate rank contrasts are consequently zero at all three windows. This
 conditional result reflects the coarse grid and sub-kilometre separations in
 the accepted overlap; it does not validate unresolved catalog coordinates.
+Because the coordinate term is zero, the median absolute combined old-to-new
+warm-rank contrasts reflect timing alone: 0.069, 0.034, and 0.000 at two,
+seven, and 30 days.
 Among the four cells bracketing each nominal audited point, the median
 warm-rank range is 0.067, 0.100, and 0.068 at two, seven, and 30 days,
 respectively, and reaches 0.552 at seven days. This is grid-node assignment
 sensitivity at the nominal point, not propagation of the retained 1--5~km
-coordinate-uncertainty classes.
+coordinate-uncertainty classes. Its seven-day median exceeds the median
+absolute timing contrast of 0.017.
 
 \begin{figure}[t]
   \centering
   \includegraphics[width=\textwidth]{../figures/audited_reanalysis_sensitivity.pdf}
-  \caption{Source-verified ERA5 assignment sensitivity. (a) Primary-cell
-  warm-state-rank change from catalog-date midnight to the audited onset
-  endpoint for all 22 occurrences. (b) Primary-cell rank change from catalog
-  to audited coordinates for the nine old-pilot overlaps. Each retained the
-  same primary grid cell. (c) Rank range among the four cells bracketing each
-  nominal audited coordinate. Circles are measured source-failure intervals;
-  triangles are event-specific earthquake trigger proxies. Black bars are
-  medians, not decision thresholds. The four-cell range does not propagate
-  positional uncertainty.}\label{fig:audited-reanalysis}
+  \caption{Source-verified ERA5 assignment sensitivity. (a) Absolute primary-
+  cell warm-state-rank change from catalog-date midnight to the audited onset
+  endpoint for all 22 occurrences. (b) Absolute primary-cell rank change from
+  catalog to audited coordinates for the nine old-pilot overlaps. Each
+  retained the same primary grid cell. (c) Rank range among the four cells
+  bracketing each nominal audited coordinate. Circles are measured source-
+  failure intervals; triangles are event-specific earthquake trigger proxies.
+  Black bars are medians, not decision thresholds. The four-cell range does
+  not propagate positional uncertainty.}\label{fig:audited-reanalysis}
 \end{figure}
 
 At model elevation, the median seven-day count is 93.5 of 168 ERA5 2-m
