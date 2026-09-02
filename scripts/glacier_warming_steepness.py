@@ -44,7 +44,7 @@ def write_csv_atomic(path, fields, rows):
     path = Path(path)
     with tempfile.NamedTemporaryFile("w", newline="", dir=path.parent, delete=False) as stream:
         temporary = Path(stream.name)
-        writer = csv.DictWriter(stream, fieldnames=fields); writer.writeheader(); writer.writerows(rows)
+        writer = csv.DictWriter(stream, fieldnames=fields, lineterminator="\n"); writer.writeheader(); writer.writerows(rows)
     os.replace(temporary, path)
 def require_frozen():
     for name, expected in FROZEN.items():
@@ -119,7 +119,7 @@ def build_frame(source_dir=RGI_SOURCE, output_dir=OUT):
                     open(path, "w", newline="") as output:
                 import io
                 reader = csv.DictReader(io.TextIOWrapper(raw, encoding="utf-8-sig", newline=""))
-                writer = csv.DictWriter(output, fieldnames=FRAME_COLUMNS)
+                writer = csv.DictWriter(output, fieldnames=FRAME_COLUMNS, lineterminator="\n")
                 writer.writeheader()
                 for source in reader:
                     row = frame_row(source)
