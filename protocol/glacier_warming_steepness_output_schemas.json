@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.2",
+  "schema_version": "0.3",
   "column_tuple": ["name", "type", "unit", "nullable"],
   "null_rule": "Empty CSV field only where nullable=true; NaN and sentinel numbers forbidden.",
   "symbols": {
@@ -80,6 +80,7 @@
         ["candidate_id", "string", "1", false], ["primary_case", "boolean", "1", false],
         ["crosswalk_status", "enum", "1", false], ["match_status", "enum", "1", false],
         ["matching_level", "integer", "1", true], ["pool_size", "integer", "glaciers", false],
+        ["available_pool_size", "integer", "glaciers", false],
         ["selected_count", "integer", "glaciers", false]
       ]
     },
@@ -234,7 +235,7 @@
     },
     {
       "path": "preaccess_manifest.json", "format": "json", "rows": "1",
-      "required_fields": ["status", "cases", "primary_cases", "decision_cap", "admitted_primary_cases", "selected_background_rows", "files"]
+      "required_fields": ["status", "registration_url", "git_commit", "python", "platform", "cases", "primary_cases", "reviewed_unique_primary_cases", "matched_primary_cases", "initial_clusters", "matched_initial_clusters", "decision_cap", "final_cluster_merge", "pool_rows", "selected_background_rows", "cross_cluster_control_reuse", "primary_id_sha256", "selected_pair_sha256", "per_case", "inputs", "outputs"]
     },
     {
       "path": "results_manifest.json", "format": "json", "rows": "1",

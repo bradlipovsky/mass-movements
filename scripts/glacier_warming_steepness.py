@@ -293,6 +293,7 @@ def build_matches(frame, assertions):
             "matched" if complete else "unmatched", level, len(pool), len(chosen))
     return pools, selected, summary
 def preaccess(frame_dir, output_dir=OUT):
+    raise RuntimeError("legacy writer disabled; use scripts/glacier_matching_freeze.py")
     frame = load_frame(frame_dir)
     cases, assertions = validate_assertions(frame)
     require_review_closure(assertions)

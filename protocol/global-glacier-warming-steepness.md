@@ -47,7 +47,11 @@ It contains ten rows: `tinguiririca-2007`, `flat-creek-2013`,
 `kunlun-k2-2001`, `kunlun-b4-2001`, `aru-1-2016`, `aru-2-2016`, and
 `petra-dp19`. This common qualification prevents travel distance or tsunami
 runup, which can depend on slope and cascade geometry, from defining the
-primary cases. The complete 14-row screened frame is retained as a sensitivity.
+primary cases. The complete 14-row screened frame remains visible as a screening
+audit, but it receives no matched exposure comparison. Its four non-primary rows
+entered through travel/runup rather than initial-volume criteria; two additionally
+lack a unique RGI object.
+No sensitivity controls may be improvised after outcome access.
 
 The case is the source glacier, not a receiving glacier, a glacier that only
 gave the place name, or ice entrained after bedrock failure. Each row must be
@@ -311,7 +315,7 @@ give `p=0.0107`, with power 0.149. Joint power is lower. The actual maximum of
 seven primary clusters is weaker still, so exact p-values are diagnostic rather
 than confirmatory evidence.
 
-Bed slope, driving stress, the complete 14-row screen, Theil--Sen trends,
+Bed slope, driving stress, Theil--Sen trends,
 spatial ERA5 alternatives, area weighting, and any rock/mixed cohort are secondary.
 They cannot rescue a failed primary result. No warming-by-slope interaction is
 fit because the frozen sample is too small to identify it.
@@ -347,7 +351,11 @@ background slope comparison and no new antecedent temperature or thickness
 outcome had been opened. A later schema search also printed previously committed
 generic RGI slope records from denominator GeoJSON; none identified a study case
 or selected background and no temperature or thickness value was opened. Both
-exposures remain in the audit record.
+exposures remain in the audit record. Crosswalk review also surfaced published
+event-specific slope/thickness descriptions, and a schema search surfaced
+already committed short-window ERA5 diagnostics from the earlier study. Those
+incidents were logged, were not registered systematic endpoints, and did not
+enter crosswalk or matching decisions.
 
 The strongest permissible result sentence is: "Among crosswalked documented
 cases and matched RGI objects, cases had [larger/smaller] strictly antecedent
