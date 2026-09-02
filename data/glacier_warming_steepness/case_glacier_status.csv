@@ -1,0 +1,15 @@
+candidate_id,crosswalk_status,rgi_id,glims_id,same_glims_rgi_ids,dependence_cluster,review_state,match_status
+aru-1-2016,unique,RGI2000-v7.0-G-13-59664,G082249E34023N,RGI2000-v7.0-G-13-59664,site-aru,agree,matched
+aru-2-2016,unique,RGI2000-v7.0-G-13-59658,G082268E34005N,RGI2000-v7.0-G-13-59658,site-aru,agree,matched
+bukadaban-2022,unique,RGI2000-v7.0-G-13-52167,G090873E35992N,RGI2000-v7.0-G-13-52167,bukadaban-2022,agree,matched
+dykhtau-2023,unresolved,,,,site-dykhtau,agree,not_primary
+eqip-sermia-2014,no_rgi_object,,,,eqip-sermia-2014,agree,not_primary
+flat-creek-2013,unique,RGI2000-v7.0-G-01-14140,G218441E61638N,RGI2000-v7.0-G-01-14140,flat-creek-2013,agree,matched
+kunlun-b2-2001,unique,RGI2000-v7.0-G-13-52988,G094250E35673N,RGI2000-v7.0-G-13-52988,trigger-kunlun-2001,agree,matched
+kunlun-b4-2001,unique,RGI2000-v7.0-G-13-52971,G094204E35661N,RGI2000-v7.0-G-13-52971,trigger-kunlun-2001,agree,matched
+kunlun-k2-2001,unique,RGI2000-v7.0-G-13-52928,G093533E35755N,RGI2000-v7.0-G-13-52928,trigger-kunlun-2001,agree,matched
+marmolada-2022,unique,RGI2000-v7.0-G-11-03473,G011871E46438N,RGI2000-v7.0-G-11-03473,marmolada-2022,agree,not_primary
+petra-dp19,unique,RGI2000-v7.0-G-13-19418,G070689E38981N,RGI2000-v7.0-G-13-19418,petra-dp19,agree,matched
+sedongpu-2018,unique,RGI2000-v7.0-G-13-71687,G094940E29811N,RGI2000-v7.0-G-13-71687,site-sedongpu,agree,not_primary
+shuraki-kapali-2017,unique,RGI2000-v7.0-G-13-19343,G070852E38974N,RGI2000-v7.0-G-13-19343,site-petra-sk,agree,matched
+tinguiririca-2007,unique,RGI2000-v7.0-G-17-24917,G289661E34832S,RGI2000-v7.0-G-17-24917,tinguiririca-2007,agree,matched

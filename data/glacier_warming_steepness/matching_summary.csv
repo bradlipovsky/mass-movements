@@ -1,0 +1,15 @@
+candidate_id,primary_case,crosswalk_status,match_status,matching_level,pool_size,available_pool_size,selected_count
+aru-1-2016,True,unique,matched,1,1170,1170,20
+aru-2-2016,True,unique,matched,1,928,928,20
+bukadaban-2022,True,unique,matched,1,40,40,20
+dykhtau-2023,False,unresolved,not_primary,,0,0,0
+eqip-sermia-2014,False,no_rgi_object,not_primary,,0,0,0
+flat-creek-2013,True,unique,matched,1,465,465,20
+kunlun-b2-2001,True,unique,matched,1,364,364,20
+kunlun-b4-2001,True,unique,matched,1,389,389,20
+kunlun-k2-2001,True,unique,matched,1,345,345,20
+marmolada-2022,False,unique,not_primary,,0,0,0
+petra-dp19,True,unique,matched,1,639,639,20
+sedongpu-2018,False,unique,not_primary,,0,0,0
+shuraki-kapali-2017,True,unique,matched,1,255,252,20
+tinguiririca-2007,True,unique,matched,1,242,242,20

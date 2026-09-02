@@ -1,0 +1,273 @@
+{
+  "cases": 14,
+  "cross_cluster_control_reuse": 0,
+  "decision_cap": "DESCRIPTIVE_ONLY; at most seven initial clusters before ERA5-cell merging",
+  "final_cluster_merge": "pending ERA5 weights",
+  "git_commit": "27e8262863dd7487a3a81935022e49329810825e",
+  "initial_clusters": 7,
+  "inputs": {
+    "data/candidate_clusters.csv": {
+      "bytes": 3160,
+      "sha256": "fd1545d60fe527e9881ec9169cf9ee93dc94eab1470595641695d1bcf089f309"
+    },
+    "data/candidates.csv": {
+      "bytes": 82114,
+      "sha256": "8b6b0f972180e26c326aaa0e6a501080843bd4b6e6674b07c5aa009340c8a249"
+    },
+    "data/event_audit/manifest.json": {
+      "bytes": 1026,
+      "sha256": "3263706361aeeb828ad33b318b1b19076e4448e2ff098a40af6110d6d34f317e"
+    },
+    "data/event_audit/sources.csv": {
+      "bytes": 21356,
+      "sha256": "8a8e3acc21c471afb2fed6111dd13537e360ba9350fe4349ecc23445e809cd47"
+    },
+    "data/geographic_sample/source_manifest.json": {
+      "bytes": 89492,
+      "sha256": "6b411fc26af146c9dd0959490775e413aa97f57491cf6de6c91261e7e09e196b"
+    },
+    "data/glacier_warming_steepness/case_glacier_assertions.csv": {
+      "bytes": 5064,
+      "sha256": "d4c0637851b9ed9cf4f21168566c21134f1dfa0857428c43a5fabaafd0b1ab27"
+    },
+    "data/glacier_warming_steepness/crosswalk_review_packet.csv": {
+      "bytes": 3429,
+      "sha256": "66a2a502a7120908966d11fdf2b2cab19eca9f28103f085f0f84a64eae55769b"
+    },
+    "data/glacier_warming_steepness/frame_manifest.json": {
+      "bytes": 3748,
+      "sha256": "f642c90727995b64328d333a17942ce051eb18040cba3851d48dfb0905fc2254"
+    },
+    "data/glacier_warming_steepness/rgi_matching_frame/01.csv": {
+      "bytes": 4205947,
+      "sha256": "9e7cb30f8a0573979326e527d2acc141218bad7a443feae63f2a45de80a58874"
+    },
+    "data/glacier_warming_steepness/rgi_matching_frame/02.csv": {
+      "bytes": 2866134,
+      "sha256": "24a533c2865f844abd9c2c8df4bc4f905cc5377aaf6613f2ebcd8fce42a8a8de"
+    },
+    "data/glacier_warming_steepness/rgi_matching_frame/03.csv": {
+      "bytes": 791460,
+      "sha256": "de15dc9b0a6a66e330f515dfc1a491e9d416b2db50dace37e546429fee1651d6"
+    },
+    "data/glacier_warming_steepness/rgi_matching_frame/04.csv": {
+      "bytes": 1690496,
+      "sha256": "83744befb2a3496a055c682ee309db2eca07569b54b16e92e4baa0d4b622bc68"
+    },
+    "data/glacier_warming_steepness/rgi_matching_frame/05.csv": {
+      "bytes": 3038230,
+      "sha256": "d59e6a972f7508bff1fd73bf2ce486b897de806a3ceee77e512e5b11d3a292f7"
+    },
+    "data/glacier_warming_steepness/rgi_matching_frame/06.csv": {
+      "bytes": 86526,
+      "sha256": "2ff0d61c8730aafa50c5c56c59d5d427dcef0482584d95ea55c8c205751b3860"
+    },
+    "data/glacier_warming_steepness/rgi_matching_frame/07.csv": {
+      "bytes": 253111,
+      "sha256": "bc8a8b79f4035d59d277882808fbe63a81c26b48e4e8a51cb3230c177670990e"
+    },
+    "data/glacier_warming_steepness/rgi_matching_frame/08.csv": {
+      "bytes": 514447,
+      "sha256": "0884d9e1a60f95b218d48023b48ee59fb3e73a72ce456efdcddeaeb231b93da1"
+    },
+    "data/glacier_warming_steepness/rgi_matching_frame/09.csv": {
+      "bytes": 162118,
+      "sha256": "74cdb26c93c5bd506f8f292d9106dcf287996c5bdf2b8773fa78380243998a59"
+    },
+    "data/glacier_warming_steepness/rgi_matching_frame/10.csv": {
+      "bytes": 1081391,
+      "sha256": "aa9f38935719fd772d14c7ecb4fe0e3064c8dc5c1235d8090f97e87e77b2be7c"
+    },
+    "data/glacier_warming_steepness/rgi_matching_frame/11.csv": {
+      "bytes": 612221,
+      "sha256": "9e8ca315ab64e680efca55c3a4a35c4e94bf0c297026561b61a2e7365a3ee969"
+    },
+    "data/glacier_warming_steepness/rgi_matching_frame/12.csv": {
+      "bytes": 348743,
+      "sha256": "a7708e877ea9fbd573e8733c4f8f0f7a26e4494c11c89725778c4f36eab7f569"
+    },
+    "data/glacier_warming_steepness/rgi_matching_frame/13.csv": {
+      "bytes": 11397368,
+      "sha256": "f06a62e150108cfb075aead9892828db9d0e399c392946e82cf3c5190d307e82"
+    },
+    "data/glacier_warming_steepness/rgi_matching_frame/14.csv": {
+      "bytes": 5659844,
+      "sha256": "81998037fd5b3c77e11e8705b3a613e666f485233333cc6cbe90c107750ceb0f"
+    },
+    "data/glacier_warming_steepness/rgi_matching_frame/15.csv": {
+      "bytes": 2801009,
+      "sha256": "f0fcf60ca18035f555c2ef55b45c083b732bbe919b95c4691181acce0ab5724a"
+    },
+    "data/glacier_warming_steepness/rgi_matching_frame/16.csv": {
+      "bytes": 562211,
+      "sha256": "e0cb3ffbcaf1a938594c6fb463ee31dd802494b149152cc464898aafd8d787e7"
+    },
+    "data/glacier_warming_steepness/rgi_matching_frame/17.csv": {
+      "bytes": 4682774,
+      "sha256": "8fa9f2372624365cadd294dcad8b6bb10ffe1f0d0885dcf7a6ff0b4dbdcafa57"
+    },
+    "data/glacier_warming_steepness/rgi_matching_frame/18.csv": {
+      "bytes": 461334,
+      "sha256": "2c3392199b63ade7675c9ae4aab82fbbc3c198cc1531501895473ae7d5397d60"
+    },
+    "data/glacier_warming_steepness/rgi_matching_frame/19.csv": {
+      "bytes": 424043,
+      "sha256": "ae912e02431d4ed4055a9ebe9fcb1f6631542b74e87064734a5d5b75861a1be9"
+    },
+    "protocol/glacier-warming-steepness-amendment-1.md": {
+      "bytes": 1822,
+      "sha256": "67562874683d189706c6a786512cae225e10cc59b6a1b199ca57b055460bae58"
+    },
+    "protocol/glacier-warming-steepness-amendment-2.md": {
+      "bytes": 1330,
+      "sha256": "68c8bc395b850f53392aa79feb5a1491ecd9a5c48380b7a0052a2917494fcbd1"
+    },
+    "protocol/glacier-warming-steepness-amendment-3.md": {
+      "bytes": 1124,
+      "sha256": "9749f9240b419b7b10033226e2cafe3523f02a12fce0e403643ac3bedede0cab"
+    },
+    "protocol/glacier_warming_steepness_output_schemas.json": {
+      "bytes": 13446,
+      "sha256": "464c35fefbff6030c3dee7d4b72bf0d2fedb3f107d1333332a5ff2dc2f3cb453"
+    },
+    "protocol/global-glacier-warming-steepness.md": {
+      "bytes": 21446,
+      "sha256": "e1104cdc0ed0aaa9275e62ad6aa7f33271dc5fdc8dc1130fcde7657fdc5dfb60"
+    },
+    "requirements-glacier-matching-freeze.txt": {
+      "bytes": 72,
+      "sha256": "61a83b808bbe65bbcaa72fa53a611ca358c618523c851f29cf2ee1fd3c2a10d3"
+    },
+    "requirements-glacier-warming-steepness-gate.txt": {
+      "bytes": 64,
+      "sha256": "07bed812991fa2e3cb82f436bda465940cf90e32f713938dad66694d7c392d4b"
+    },
+    "scripts/glacier_matching_freeze.py": {
+      "bytes": 23042,
+      "sha256": "8043227fa2190d6f0b0a1fe26de5a16b1bbaf5d279c4d6a3b15bbef2d020df99"
+    },
+    "scripts/glacier_warming_steepness.py": {
+      "bytes": 21473,
+      "sha256": "89cb24c338bc66ebb3eea77ea4ab20d31b5ce8fe4e3162070c5203cee775dfeb"
+    },
+    "tests/test_glacier_matching_freeze.py": {
+      "bytes": 9375,
+      "sha256": "89f177e5fc434c63ef32b8a86f0e29b37716b980fa9d19fd22223447c1ca38fb"
+    },
+    "tests/test_glacier_warming_steepness.py": {
+      "bytes": 6322,
+      "sha256": "42c1e89c1228b3ef94ebd1a6f2baf8816208ee3c76307dd507c388996e9c29cc"
+    }
+  },
+  "matched_initial_clusters": 7,
+  "matched_primary_cases": 10,
+  "outputs": {
+    "case_frame.csv": {
+      "bytes": 1053,
+      "rows": 14,
+      "sha256": "0b03ef57c20e1178efac6ffc598b86f3e9c62bbcd600f2a42e6ca3c9fe58dee0"
+    },
+    "case_glacier_status.csv": {
+      "bytes": 1610,
+      "rows": 14,
+      "sha256": "c07cb1c590ee0f7f99824d9461355c9e35fdbd803a0ecd8b4d45fff79a873a26"
+    },
+    "matching_pools.csv": {
+      "bytes": 572104,
+      "rows": 4837,
+      "sha256": "45a7040e12e64e77c5ea3ecc71e8b9e3ff05b92357b7e3a49ca2480f24aa6c7b"
+    },
+    "matching_summary.csv": {
+      "bytes": 791,
+      "rows": 14,
+      "sha256": "73d854deefd516bc43cb6a5e915a7250392ebc0afa5b8da11bd6982f14235dc9"
+    },
+    "selected_backgrounds.csv": {
+      "bytes": 23516,
+      "rows": 200,
+      "sha256": "78674106e76e11d74b54d9506afed08def4fb109e3c09002f6c47a847b8dd781"
+    }
+  },
+  "per_case": {
+    "aru-1-2016": {
+      "available_pool_size": 1170,
+      "match_status": "matched",
+      "matching_level": 1,
+      "pool_size": 1170,
+      "selected_count": 20
+    },
+    "aru-2-2016": {
+      "available_pool_size": 928,
+      "match_status": "matched",
+      "matching_level": 1,
+      "pool_size": 928,
+      "selected_count": 20
+    },
+    "bukadaban-2022": {
+      "available_pool_size": 40,
+      "match_status": "matched",
+      "matching_level": 1,
+      "pool_size": 40,
+      "selected_count": 20
+    },
+    "flat-creek-2013": {
+      "available_pool_size": 465,
+      "match_status": "matched",
+      "matching_level": 1,
+      "pool_size": 465,
+      "selected_count": 20
+    },
+    "kunlun-b2-2001": {
+      "available_pool_size": 364,
+      "match_status": "matched",
+      "matching_level": 1,
+      "pool_size": 364,
+      "selected_count": 20
+    },
+    "kunlun-b4-2001": {
+      "available_pool_size": 389,
+      "match_status": "matched",
+      "matching_level": 1,
+      "pool_size": 389,
+      "selected_count": 20
+    },
+    "kunlun-k2-2001": {
+      "available_pool_size": 345,
+      "match_status": "matched",
+      "matching_level": 1,
+      "pool_size": 345,
+      "selected_count": 20
+    },
+    "petra-dp19": {
+      "available_pool_size": 639,
+      "match_status": "matched",
+      "matching_level": 1,
+      "pool_size": 639,
+      "selected_count": 20
+    },
+    "shuraki-kapali-2017": {
+      "available_pool_size": 252,
+      "match_status": "matched",
+      "matching_level": 1,
+      "pool_size": 255,
+      "selected_count": 20
+    },
+    "tinguiririca-2007": {
+      "available_pool_size": 242,
+      "match_status": "matched",
+      "matching_level": 1,
+      "pool_size": 242,
+      "selected_count": 20
+    }
+  },
+  "platform": "Linux-4.18.0-553.22.1.el8_10.x86_64-x86_64-with-centos-8.10-Green_Obsidian",
+  "pool_rows": 4837,
+  "primary_cases": 10,
+  "primary_id_sha256": "3bb99a1b1d3538ccf2a72b84370e8f0b05d4fafc2675449d553e6baf3de89d0f",
+  "python": "3.6.8 (default, Sep 24 2024, 09:44:46) \n[GCC 8.5.0 20210514 (Red Hat 8.5.0-22)]",
+  "registration_url": "https://github.com/bradlipovsky/mass-movements/issues/33",
+  "reviewed_unique_primary_cases": 10,
+  "selected_background_rows": 200,
+  "selected_pair_sha256": "af9fa3a2b98d822c97139ef7efe2dd235aded2c0556c6b410e8d78a337440693",
+  "status": "reviewed crosswalk and deterministic backgrounds; registered systematic outcomes unopened"
+}
