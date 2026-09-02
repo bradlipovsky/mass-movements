@@ -114,7 +114,8 @@ def verify_stage(stage,approved_sha):
         if (len(tables["rgi_surface_features.csv"])!=207 or era!=request_cells or len(era)!=manifest["cell_years"] or glacier!={(r["rgi_id"],r["index_year"],r["year"]) for r in request}
                 or len(glacier)!=20*len(pairs) or {(r["rgi_id"],r["index_year"]) for r in tables["background_features.csv"]}!=pairs or accessed+unavailable!=len(era)): raise ValueError("background cardinality drift")
         expected_source={"era5":{"bucket":"earthmover-icechunk-era5","prefix":"icechunkV2","group":"single/temporal","variable":"t2m","snapshot":SNAPSHOT},"rgi_doi":"10.5067/F6JMOVY5NAVZ"}
-        if manifest["source_identity"]!=expected_source or manifest["environment"]!=environment(): raise ValueError("background provenance drift")
+        if (manifest["source_identity"]!=expected_source or manifest["environment"]!=environment()
+                or bool(manifest["support_protocol_gate"])==bool(manifest["support_protocol_failures"])): raise ValueError("background provenance drift")
     if stage=="results" and tuple(len(tables[x]) for x in ("primary_features.csv","case_completeness.csv","matched_contrasts.csv","dependence_ledger.csv","decision.csv"))!=(210,420,20,10,1): raise ValueError("result cardinality drift")
     if stage=="results" and (manifest["program_sha256"]!=sha(PROGRAM) or manifest["schema_sha256"]!=sha(SCHEMA)
             or manifest["environment"]!=environment() or manifest["output_sha256"]!={n:r["sha256"] for n,r in manifest["outputs"].items()}
@@ -289,6 +290,7 @@ def extract_background(approved_commit,approved_plan_sha):
     req=rows(OUT/"primary_access_requests.csv"); wanted={r["rgi_id"] for r in req}
     keys={(r["latitude"],r["longitude"],int(r["year"])) for r in req}
     slopes=rgi_features(wanted); era,access=era_features(keys); glacier=glacier_years(req,rows(OUT/"glacier_era5_weights.csv"),era); features=background_features(req,slopes,glacier)
+    support_failures=[f"{r['latitude']},{r['longitude']},{r['year']}:{r['missing_reason']}" for r in era if r["missing_reason"] in ("t2m:coordinate_absent","t2m:calendar_incomplete")]
     used=[PROGRAM,TESTS,SCHEMA,REQS,plan,OUT/"primary_access_requests.csv",OUT/"spatial_freeze_manifest.json",OUT/"glacier_era5_weights.csv",
           OUT/"frame_manifest.json",ROOT/"data/geographic_sample/source_manifest.json",ROOT/"protocol/global-glacier-warming-steepness.md",
           ROOT/"protocol/glacier_warming_steepness_output_schemas.json"]
@@ -298,7 +300,8 @@ def extract_background(approved_commit,approved_plan_sha):
         used.append(ROOT/"data/geographic_sample/source_raw/rgi"/next(r["filename"] for r in source["archives"] if r["region"]==region))
     manifest={"status":STAGES["primary_background"][0],"git_commit":git("rev-parse","HEAD"),
       "approved_program_commit":approved_commit,"approved_plan_sha256":approved_plan_sha,"snapshot":SNAPSHOT,
-      "rgi_ids":len(wanted),"cell_years":len(keys),"created_at":datetime.now(timezone.utc).isoformat(),
+      "rgi_ids":len(wanted),"cell_years":len(keys),"support_protocol_gate":not support_failures,"support_protocol_failures":support_failures,
+      "created_at":datetime.now(timezone.utc).isoformat(),
       "source_identity":{"era5":{"bucket":"earthmover-icechunk-era5","prefix":"icechunkV2","group":"single/temporal","variable":"t2m","snapshot":SNAPSHOT},"rgi_doi":"10.5067/F6JMOVY5NAVZ"},
       "environment":env,
       "inputs":{str(p.relative_to(ROOT)):{"bytes":p.stat().st_size,"sha256":sha(p)} for p in used}}
@@ -341,7 +344,7 @@ def matched_value(case_value,controls):
     case_value=float(case_value); values=[float(v) for v in controls]; med=median(values); all_values=values+[case_value]
     return med,case_value-med,100*(sum(v<case_value for v in all_values)+.5*sum(v==case_value for v in all_values))/21
 
-def build_analysis(rel,background,spatial):
+def build_analysis(rel,background,spatial,support_gate=True,support_failures=()):
     by={(r["rgi_id"],int(r["index_year"])):r for r in background}; features=[]
     for case,role,rgi,index_year in rel:
         b=by[(rgi,index_year)]; features.append(dict(zip(fields("primary_features.csv"),[case,role,rgi,index_year,b["t2m_trend_k_decade"],
@@ -388,8 +391,9 @@ def build_analysis(rel,background,spatial):
         raw.append(math.fsum(values)/len(values))
     absolute=median(raw) if raw else ""; cases=sum(len(clusters[c]) for c in retained); warming=stats["t2m_trend_k_decade"]; slope=stats["slope_deg"]
     common={r["final_cluster"] for r in cc if r["endpoint"]=="t2m_trend_k_decade"}=={r["final_cluster"] for r in cc if r["endpoint"]=="slope_deg"}
-    status,direction=decision(cases>=8 and common,warming[2],slope[2],absolute)
+    status,direction=decision(support_gate and cases>=8 and common,warming[2],slope[2],absolute)
     reason="Documented cases versus matched RGI comparison objects, which are not verified nonfailures. Strictly antecedent ERA5 2-m air temperature is at model orography; RGI slope is a mixed-epoch glacier-wide mean attribute. Neither is pre-event source geometry, a causal warming-trigger mechanism, failure probability, or risk."
+    if support_failures: reason += " Support/protocol failures: " + "|".join(support_failures)
     decision_row=dict(zip(fields("decision.csv"),["glacier_warming_steepness",status,direction or "",cases,len(retained),warming[0],slope[0],warming[2],warming[3],warming[4],warming[5],
       slope[2],slope[3],slope[4],slope[5],absolute,warming[1],slope[1],max(warming[1],slope[1]),reason]))
     return {"primary_features.csv":features,"case_completeness.csv":completeness,"matched_contrasts.csv":contrasts,
@@ -398,7 +402,7 @@ def build_analysis(rel,background,spatial):
 def analyze(approved_background_sha):
     bg_meta=verify_stage("primary_background",approved_background_sha); checked_inputs()
     approved_code(bg_meta["approved_program_commit"])
-    preflight("results"); data=build_analysis(participants(),rows(OUT/"background_features.csv"),rows(OUT/"spatial_dependence_ledger.csv"))
+    preflight("results"); data=build_analysis(participants(),rows(OUT/"background_features.csv"),rows(OUT/"spatial_dependence_ledger.csv"),bg_meta["support_protocol_gate"],bg_meta["support_protocol_failures"])
     outputs={name:(fields(name),values) for name,values in data.items()}; protocol_commit=git("log","-1","--format=%H","--","protocol/global-glacier-warming-steepness.md")
     manifest={"status":STAGES["results"][0],"protocol_commit":protocol_commit,"program_sha256":sha(PROGRAM),"schema_sha256":sha(SCHEMA),
       "environment":environment(),"source_identity":bg_meta["source_identity"],

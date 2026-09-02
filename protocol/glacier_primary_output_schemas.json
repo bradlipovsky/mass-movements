@@ -5,7 +5,7 @@
   "null_rule": "Empty CSV field only where nullable=true; NaN, infinity, and numeric sentinels forbidden.",
   "manifests": {
     "primary_plan_manifest.json": ["status","git_commit","spatial_manifest_sha256","requests","rgi_ids","cell_years","created_at","inputs","outputs"],
-    "primary_background_manifest.json": ["status","git_commit","approved_program_commit","approved_plan_sha256","snapshot","rgi_ids","cell_years","created_at","source_identity","environment","inputs","outputs"],
+    "primary_background_manifest.json": ["status","git_commit","approved_program_commit","approved_plan_sha256","snapshot","rgi_ids","cell_years","support_protocol_gate","support_protocol_failures","created_at","source_identity","environment","inputs","outputs"],
     "results_manifest.json": ["status","protocol_commit","program_sha256","schema_sha256","environment","source_identity","access_audit","created_at","outputs","output_sha256"]
   },
   "artifacts": {

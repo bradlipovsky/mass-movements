@@ -4,7 +4,6 @@ from pathlib import Path
 import pytest
 ROOT=Path(__file__).resolve().parents[1]; sys.path.insert(0,str(ROOT/"scripts"))
 import glacier_primary_analysis as g
-
 def test_registered_pins_and_schema():
     g.checked_inputs(); s=json.loads(g.SCHEMA.read_text())
     assert s["amends"].endswith("outcome artifacts only") and set(s["artifacts"])==set().union(*(x[1] for x in g.STAGES.values()))|{"glacier_year_t2m.csv","background_features.csv","era5_access_ledger.csv","era5_cell_year.csv","rgi_surface_features.csv"}
@@ -51,7 +50,7 @@ def test_coordinate_lookup_is_exact_and_unique():
     with pytest.raises(ValueError): g.coordinate_index(np.array([.25,.25]),.25)
 def test_component_weighting_and_common_exclusion():
     rel=[]; bg=[]; spatial=[]
-    for case,cluster,case_w in (("c1","A",12),("c2","A",14),("c3","B",9)):
+    for case,cluster,case_w in (("c1","A",12),("c2","A",14),("c3","B",9),("c4","C",12),("c5","D",12),("c6","E",12),("c7","F",12),("c8","G",12)):
         spatial.append({"candidate_id":case,"initial_cluster":cluster,"final_cluster":cluster})
         rel.append((case,"case",case,2001)); ids=[case]+[f"{case}x{i}" for i in range(20)]
         for i,rgi in enumerate(ids):
@@ -59,9 +58,11 @@ def test_component_weighting_and_common_exclusion():
             bg.append({"rgi_id":rgi,"index_year":"2001","t2m_trend_k_decade":str(case_w if i==0 else 10),"t2m_change_k":"1",
               "t2m_hac_se_k_decade":".1","theil_sen_k_decade":"1","slope_deg":str(case_w if i==0 else 10),"missing_reason":""})
     out=g.build_analysis(rel,bg,spatial); cc=out["cluster_contrasts.csv"]
-    assert [r["contrast"] for r in cc if r["endpoint"]=="t2m_trend_k_decade"]==[3,-1]
+    assert [r["contrast"] for r in cc if r["endpoint"]=="t2m_trend_k_decade"][:2]==[3,-1]
+    assert out["decision.csv"][0]["status"]=="DESCRIPTIVE_ONLY"
+    failed=g.build_analysis(rel,bg,spatial,False,["0,0,2000:t2m:coordinate_absent"]); assert failed["decision.csv"][0]["status"]=="INDETERMINATE" and "coordinate_absent" in failed["decision.csv"][0]["reason"]
     broken=next(r for r in bg if r["rgi_id"]=="c2x0"); broken["slope_deg"]=""; broken["missing_reason"]="slope:missing_or_invalid"
-    out=g.build_analysis(rel,bg,spatial); assert {r["final_cluster"] for r in out["cluster_contrasts.csv"]}=={"B"}
+    out=g.build_analysis(rel,bg,spatial); assert "A" not in {r["final_cluster"] for r in out["cluster_contrasts.csv"]}
     assert out["decision.csv"][0]["status"]=="INDETERMINATE"
     assert next(r for r in out["dependence_ledger.csv"] if r["candidate_id"]=="c1")["direct_complete"] is True
     assert "c2:slope_deg:c2x0" in next(r for r in out["dependence_ledger.csv"] if r["candidate_id"]=="c1")["missing_reason"]
