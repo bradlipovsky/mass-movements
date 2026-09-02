@@ -28,6 +28,19 @@ class AuditedPopulationTests(unittest.TestCase):
         self.assertEqual(set(self.eligibility.exclusion_reason[self.eligibility.selected]), {"selected"})
         self.assertTrue((self.eligibility.exclusion_reason[~self.eligibility.selected].str.len() > 20).all())
 
+    def test_coordinate_assertion_corruption_stops(self):
+        candidates = pd.read_csv(ROOT/"data/candidates.csv", dtype=str).fillna("")
+        audit = pd.read_csv(ROOT/"data/event_audit/summary.csv", dtype=str).fillna("")
+        base = candidates.query("consensus_decision == 'include' and trigger_time_eligible == 'yes'").merge(audit)
+        base = base[(base.coordinate_status == "accepted") & (base.time_status == "accepted")]
+        coordinates = pd.read_csv(ROOT/"data/event_audit/coordinate_assertions.csv", dtype=str).fillna("")
+        ar.join_coordinates(base, coordinates)
+        target = coordinates.assertion_id == base.iloc[0].coordinate_assertion_id
+        for column, value in (("geometry_role", "deposit"), ("latitude_deg", "0")):
+            corrupt = coordinates.copy(); corrupt.loc[target, column] = value
+            with self.assertRaisesRegex(ValueError, "coordinate assertion mismatch"):
+                ar.join_coordinates(base, corrupt)
+
     def test_conservative_anchors(self):
         lower = pd.to_datetime(self.selected.onset_lower_utc, utc=True, format="mixed")
         anchor = pd.to_datetime(self.selected.onset_anchor_utc, utc=True)
@@ -56,12 +69,15 @@ class AuditedPopulationTests(unittest.TestCase):
         self.assertEqual(manifest["status"], "pre_event_temperature_access_v1")
         self.assertEqual(manifest["population"], {"frame": 53, "selected": 22,
             "source_failure": 16, "trigger_proxy": 6, "components": 18,
-            "old_pilot_overlap": 9, "cells": 88})
+            "old_pilot_overlap": 9, "cells": 88, "unique_grid_points": 73})
         for name, record in manifest["files"].items():
             path = ROOT/name
             self.assertEqual((path.stat().st_size, ar.sha256(path)), (record["bytes"], record["sha256"]))
         digest = ar.sha256(manifest_path)
         self.assertEqual(ar.verify_gate(manifest_path, digest)["selected_id_sha256"], ar.SELECTED_DIGEST)
+        self.assertEqual(manifest["python"], ar.platform.python_version())
+        with mock.patch.object(ar.platform, "python_version", return_value="0"):
+            with self.assertRaisesRegex(ValueError, "runtime drift: python"): ar.verify_gate(manifest_path, digest)
         with self.assertRaisesRegex(ValueError, "approved digest"):
             ar.verify_gate(manifest_path, "0"*64)
         self.assertFalse(ar.RESULTS.exists())
@@ -110,6 +126,40 @@ class AuditedEquationTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "stop"):
                 ar.analyze(Path("missing"), "bad", Path(tempfile.mkdtemp())/"results")
         self.assertEqual(opened, [])
+        result = Path(tempfile.mkdtemp())/"results"; result.mkdir()
+        with mock.patch.object(ar, "verify_gate", return_value={}), \
+             mock.patch.object(ar.pilot, "open_store", side_effect=lambda: opened.append(True)):
+            with self.assertRaisesRegex(ValueError, "already exists"):
+                ar.analyze(Path("bound"), "good", result)
+        self.assertEqual(opened, [])
+
+    def test_registered_point_extraction_and_stops(self):
+        candidate = self.selected.iloc[[0]]; cells = self.cells[self.cells.candidate_id == candidate.iloc[0].candidate_id]
+        hours = np.arange(np.datetime64("1978-01-01"), np.datetime64("2027-01-01"), np.timedelta64(1, "h"))
+        def store(fill=250.):
+            item = mock.Mock(); item.latitude.values = np.arange(90., -90.25, -.25)
+            item.longitude.values = np.arange(0., 360., .25); item.valid_time.values = hours.copy()
+            item.t2m.isel.side_effect = lambda **kw: mock.Mock(values=np.full(
+                (len(kw["valid_time"]), kw["latitude"].size), fill))
+            return item
+        temporal = store(); matched, air = ar.extract(candidate, cells, temporal)
+        self.assertEqual((len(matched), len(air)), (1128, 12))
+        accessed = set()
+        for call in temporal.t2m.isel.call_args_list:
+            self.assertEqual(call.kwargs["latitude"].dims, ("point",))
+            accessed.update(zip(call.kwargs["latitude"].values, call.kwargs["longitude"].values))
+        self.assertEqual(accessed, set(zip(cells.latitude_index, cells.longitude_index)))
+        for fill in (np.nan, 179.):
+            with self.assertRaisesRegex(ValueError, "invalid requested temperature"):
+                ar.extract(candidate, cells, store(fill))
+        bad = store(); bad.valid_time.values[10] = bad.valid_time.values[9]
+        with self.assertRaisesRegex(ValueError, "unexpected ERA5 grid"): ar.extract(candidate, cells, bad)
+        bad = store(); bad.valid_time.values = np.delete(bad.valid_time.values, 10)
+        with self.assertRaisesRegex(ValueError, "unexpected ERA5 grid"): ar.extract(candidate, cells, bad)
+        bad = store(); bad.valid_time.values = bad.valid_time.values[bad.valid_time.values < np.datetime64("2025-01-01")]
+        with self.assertRaisesRegex(ValueError, "exceeds store coverage"): ar.extract(candidate, cells, bad)
+        bad_cells = cells.copy(); bad_cells.loc[bad_cells.index[0], "grid_latitude_deg"] = 0
+        with self.assertRaisesRegex(ValueError, "grids disagree"): ar.extract(candidate, bad_cells, store())
 
     def test_registered_line_budget_and_no_new_dependency(self):
         source = ROOT/"scripts/audited_reanalysis.py"; test = Path(__file__)

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Freeze and run source-verified, onset-aligned ERA5 temperature transfer."""
-import argparse, hashlib, importlib.metadata, json, os, shutil, sys, tempfile
+import argparse, hashlib, importlib.metadata, json, os, platform, shutil, sys, tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -54,6 +54,23 @@ def require_upstream():
     for name, expected in UPSTREAM.items():
         if sha256(ROOT / name) != expected: raise ValueError(f"frozen input drift: {name}")
 
+def join_coordinates(selected, coordinates):
+    coordinates = coordinates.rename(columns={"assertion_id": "coordinate_match_id",
+        "candidate_id": "coordinate_candidate_id", "latitude_deg": "coordinate_latitude_deg",
+        "longitude_deg": "coordinate_longitude_deg", "review_state": "coordinate_review_state"})
+    columns = ["coordinate_match_id", "coordinate_candidate_id", "coordinate_latitude_deg",
+        "coordinate_longitude_deg", "geometry_role", "horizontal_uncertainty_class", "coordinate_review_state"]
+    joined = selected.merge(coordinates[columns], left_on="coordinate_assertion_id",
+                            right_on="coordinate_match_id", validate="one_to_one")
+    valid = ((joined.candidate_id == joined.coordinate_candidate_id)
+        & (joined.audited_latitude_deg == joined.coordinate_latitude_deg)
+        & (joined.audited_longitude_deg == joined.coordinate_longitude_deg)
+        & (joined.coordinate_uncertainty_class == joined.horizontal_uncertainty_class)
+        & joined.geometry_role.isin(("source_area_centroid", "initiating_source"))
+        & (joined.coordinate_review_state == "agree"))
+    if len(joined) != len(selected) or not valid.all(): raise ValueError("accepted coordinate assertion mismatch")
+    return joined
+
 def analysis_frame():
     require_upstream()
     candidates = pd.read_csv(ROOT / "data/candidates.csv", dtype=str).fillna("")
@@ -69,10 +86,12 @@ def analysis_frame():
         "coordinate=" + coordinate_reason + ";time=" + time_reason)
     eligibility = frame[["candidate_id", "coordinate_status", "coordinate_unresolved_reason", "time_status",
         "time_unresolved_reason", "selected", "exclusion_reason"]].sort_values("candidate_id")
+    selected = join_coordinates(frame[frame.selected], pd.read_csv(
+        ROOT / "data/event_audit/coordinate_assertions.csv", dtype=str).fillna(""))
     times = pd.read_csv(ROOT / "data/event_audit/time_assertions.csv", dtype=str).fillna("").rename(columns={
         "candidate_id": "assertion_candidate_id", "onset_lower_utc": "assertion_lower_utc",
         "onset_upper_utc": "assertion_upper_utc"})
-    selected = frame[frame.selected].merge(times[["assertion_id", "assertion_candidate_id", "onset_role",
+    selected = selected.merge(times[["assertion_id", "assertion_candidate_id", "onset_role",
         "review_state", "assertion_lower_utc", "assertion_upper_utc"]],
         left_on="time_assertion_id", right_on="assertion_id", validate="one_to_one")
     if not ((selected.candidate_id == selected.assertion_candidate_id).all()
@@ -130,7 +149,8 @@ def build_cells(selected):
         group.sort(key=lambda row: (-row["land_fraction"], row["distance_km"], row["grid_latitude_deg"], row["grid_longitude_deg_east"]))
         for rank, row in enumerate(group, 1): row.update(cell_rank=rank, primary_cell=rank == 1); rows.append(row)
     cells = pd.DataFrame(rows)
-    if len(cells) != 88 or not (cells.groupby("candidate_id").size() == 4).all():
+    if len(cells) != 88 or len(cells[["latitude_index", "longitude_index"]].drop_duplicates()) != 73 \
+            or not (cells.groupby("candidate_id").size() == 4).all():
         raise ValueError("audited cell population drift")
     columns = [item[0] for item in json.loads(SCHEMAS.read_text())["audited_cells.csv"]["columns"]]
     return cells[columns]
@@ -152,9 +172,10 @@ def preaccess():
     manifest = {"status": "pre_event_temperature_access_v1", "issue": 29,
         "created_utc": datetime.now(timezone.utc).isoformat(), "selected_id_sha256": SELECTED_DIGEST,
         "population": {"frame": 53, "selected": 22, "source_failure": 16, "trigger_proxy": 6,
-                       "components": 18, "old_pilot_overlap": 9, "cells": 88},
+                       "components": 18, "old_pilot_overlap": 9, "cells": 88, "unique_grid_points": 73},
         "source": {"snapshot": pilot.SNAPSHOT, "group": "single/temporal", "variable": "t2m",
                    "years": [1979, 2025], "reference_years": [1991, 2020], "windows_hours": WINDOWS},
+        "python": platform.python_version(),
         "environment": {name: importlib.metadata.version(name) for name in PACKAGES},
         "files": {name: {"bytes": (ROOT/name).stat().st_size, "sha256": sha256(ROOT/name)} for name in bound}}
     (OUT/"preaccess_manifest.json").write_text(json.dumps(manifest, indent=2, sort_keys=True)+"\n")
@@ -169,6 +190,7 @@ def verify_gate(path, approved):
         if target.stat().st_size != record["bytes"] or sha256(target) != record["sha256"]: raise ValueError(f"gate drift: {name}")
     for name, version in manifest["environment"].items():
         if importlib.metadata.version(name) != version: raise ValueError(f"runtime drift: {name}")
+    if platform.python_version() != manifest["python"]: raise ValueError("runtime drift: python")
     return manifest
 
 def indices(time0, timestamp, year, hours):
@@ -178,11 +200,22 @@ def indices(time0, timestamp, year, hours):
     stop = int((anchor.to_datetime64()-time0)/np.timedelta64(1, "h"))
     return np.arange(stop-hours, stop, dtype=np.int64)
 
+def registered_block(temporal, requested, rows):
+    points = sorted({(int(row["latitude_index"]), int(row["longitude_index"])) for row in rows})
+    block = temporal.t2m.isel(valid_time=requested,
+        latitude=pilot.xr.DataArray([point[0] for point in points], dims="point"),
+        longitude=pilot.xr.DataArray([point[1] for point in points], dims="point")).values
+    if block.shape != (len(requested), len(points)): raise ValueError("unexpected registered point block")
+    return block, {point: index for index, point in enumerate(points)}
+
 def extract(selected, cells, temporal):
     lat, lon, times = temporal.latitude.values, temporal.longitude.values, temporal.valid_time.values
-    if not (np.array_equal(lat, np.sort(lat)[::-1]) and np.allclose(np.diff(lon), .25)
+    if not (len(lat) == 721 and len(lon) == 1440 and np.allclose(np.diff(lat), -.25)
+            and np.allclose(np.diff(lon), .25)
             and np.all(np.diff(times) == np.timedelta64(1, "h"))): raise ValueError("unexpected ERA5 grid")
     for cell in cells.itertuples():
+        if not (0 <= cell.latitude_index < len(lat) and 0 <= cell.longitude_index < len(lon)):
+            raise ValueError("registered cell index out of range")
         if lat[cell.latitude_index] != cell.grid_latitude_deg or lon[cell.longitude_index] != cell.grid_longitude_deg_east:
             raise ValueError("invariant and temperature grids disagree")
     event = selected.set_index("candidate_id"); time0 = times[0]; matched, air = [], []
@@ -196,9 +229,7 @@ def extract(selected, cells, temporal):
                 for year in YEARS: requests.append(indices(time0, stamp, year, 720))
         requested = np.unique(np.concatenate([item for item in requests if item is not None]))
         if requested[0] < 0 or requested[-1] >= len(times): raise ValueError("registered request exceeds store coverage")
-        i0, j0 = tile[0]*12, tile[1]*12
-        block = temporal.t2m.isel(valid_time=requested, latitude=slice(i0, min(i0+12, 721)),
-                                  longitude=slice(j0, min(j0+12, 1440))).values
+        block, point_index = registered_block(temporal, requested, rows)
         for cell in rows:
             candidate_id = cell["candidate_id"]
             for anchor in ("onset", "calendar"):
@@ -208,7 +239,7 @@ def extract(selected, cells, temporal):
                         idx = indices(time0, stamp, year, hours)
                         positions = np.searchsorted(requested, idx)
                         if not np.array_equal(requested[positions], idx): raise ValueError("requested hour lookup mismatch")
-                        values = block[positions, cell["latitude_index"]-i0, cell["longitude_index"]-j0]
+                        values = block[positions, point_index[(cell["latitude_index"], cell["longitude_index"])]]
                         if len(values) != hours or not np.isfinite(values).all() or values.min() < 180 or values.max() > 340:
                             raise ValueError("invalid requested temperature hours")
                         matched.append({"candidate_id": candidate_id, "grid_latitude_deg": cell["grid_latitude_deg"],
@@ -260,6 +291,7 @@ def derive(matched, cells, selected):
 
 def analyze(manifest_path, approved, result_dir):
     gate = verify_gate(manifest_path, approved)
+    if result_dir.exists(): raise ValueError("registered result directory already exists")
     eligibility = pd.read_csv(OUT/"eligibility.csv"); selected = pd.read_csv(OUT/"selected_events.csv")
     cells = pd.read_csv(OUT/"audited_cells.csv"); session, temporal, spatial = pilot.open_store()
     if session.snapshot_id != gate["source"]["snapshot"]: raise ValueError("snapshot drift")
@@ -269,7 +301,6 @@ def analyze(manifest_path, approved, result_dir):
               "primary_diagnostics.csv": primary, "overlap_comparison.csv": overlap,
               "above_freezing_sensitivity.csv": air}
     for name, table in tables.items(): cast_and_check(name, table)
-    if result_dir.exists(): raise ValueError("registered result directory already exists")
     temp = Path(tempfile.mkdtemp(prefix="audited-reanalysis-", dir=result_dir.parent))
     try:
         for name, table in tables.items(): table.to_csv(temp/name, index=False, float_format="%.17g")

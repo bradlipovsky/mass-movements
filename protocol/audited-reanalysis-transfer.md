@@ -32,7 +32,10 @@ newline, including a final newline, is
 All 31 nonselected rows and controlled reasons remain in `eligibility.csv`.
 Conflicting, unresolved, context-only, catalog-place, deposit, lake, gauge,
 or downstream-impact assertions are never promoted. No selected row may be
-deleted or replaced after temperature access.
+deleted or replaced after temperature access. Before extraction, each selected
+summary row is rejoined to its named coordinate assertion and must match its
+candidate, coordinates, uncertainty class, accepted source-role vocabulary,
+and `review_state=agree`.
 
 ## Spatial and temporal assignment
 
@@ -63,6 +66,12 @@ already retained NSF NCAR surface-geopotential and land-fraction fields. Use
 1979--2025 hourly values and 1991--2020 controls. Three registered neutral
 probes must again match the spatial and temporal layouts exactly.
 
+Extraction uses paired vector indices and decodes and materializes only the 73
+unique grid-point histories represented by the 88 registered event-cell
+assignments. The object store may necessarily transfer compressed chunks whose
+bytes also encode neighboring cells, but no neighboring value may enter an
+in-memory numerical array, dataframe, or output table.
+
 For anchor `B` in `{A_i,C_i}`, matched year `y`, cell `c`, and window length
 `H` in `{48,168,720}` hours, calculate
 
@@ -91,7 +100,9 @@ for all 22 occurrences and
 
 for the nine old-pilot overlaps. Also retain their combined old-to-new
 contrast, absolute contrasts in the reporting notebook, and four-cell ranges.
-No contrast has a pass threshold.
+The four-cell range measures ERA5 grid-node assignment at the nominal audited
+coordinate; it does not propagate the retained `le_1_km` or `le_5_km`
+positional-uncertainty class. No contrast has a pass threshold.
 
 For the onset-aligned primary-cell seven-day values, repeat all 12 Issue 5
 lapse-rate/elevation-offset scenarios for hours above 273.15 K. These are
@@ -104,7 +115,9 @@ old-pilot identities, and sealed invariant fields. It writes 53 eligibility
 rows, 22 selected-event rows, 88 cell rows, and a manifest binding all input,
 program, test, environment, and schema hashes. It cannot open the remote ERA5
 store. The analysis action requires the independently approved manifest
-SHA-256 and rechecks every bound byte and runtime version before opening ERA5.
+SHA-256 and rechecks every bound byte, Python 3.12.11, and package version
+before opening ERA5. A pre-existing registered result directory is a local
+preflight failure that also stops before the remote store is opened.
 
 Unanimous source/onset, numerical/time-grid, and implementation/provenance
 approval must precede analysis. Analysis writes all results to a temporary

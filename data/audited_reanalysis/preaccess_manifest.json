@@ -1,5 +1,5 @@
 {
-  "created_utc": "2026-09-02T03:12:55.287808+00:00",
+  "created_utc": "2026-09-02T03:27:35.477236+00:00",
   "environment": {
     "icechunk": "2.1.2",
     "netCDF4": "1.7.4",
@@ -88,8 +88,8 @@
       "sha256": "ac5d93fbc2a7afc100cd8599fb6b324cfc2f2d20706f6e8df0b92f5bf61c6e61"
     },
     "protocol/audited-reanalysis-transfer.md": {
-      "bytes": 6529,
-      "sha256": "43d0f40c0e0e59ef8493b956eb0fc2a393548ea1fcbfd3278def8c10a1be297d"
+      "bytes": 7420,
+      "sha256": "2d695d7bd44668b475b5ff35719f844d2db963ee4b9bfdef07a870c376b7fe9d"
     },
     "protocol/reanalysis-pilot.md": {
       "bytes": 9638,
@@ -108,16 +108,16 @@
       "sha256": "3b6625e4d6db124da740ee50fe1409309c9f67a6db5f06ea89ee7496de83bed2"
     },
     "scripts/audited_reanalysis.py": {
-      "bytes": 22307,
-      "sha256": "6ad433590a2ba988825b1315178d9f2f004af9ca68be76581c9f9d3d4c77e506"
+      "bytes": 24614,
+      "sha256": "6881906b830eeb238129eb2732ea44e5d51283a11b6ceb33292de85a3982b9de"
     },
     "scripts/reanalysis_pilot.py": {
       "bytes": 17312,
       "sha256": "18b0aff924fd8a5b3bcdad88a92c63b8b056c10d3aacdc39657939d61342ce5c"
     },
     "tests/test_audited_reanalysis.py": {
-      "bytes": 6966,
-      "sha256": "f23d38f762af099190e073575827829c52a0150db73a741ffb47c898db0b84f5"
+      "bytes": 10785,
+      "sha256": "f132dcb65a50f79d1819d581113dd508a856e18e2c3f4e64421b3484aef4f788"
     },
     "tests/test_reanalysis_pilot.py": {
       "bytes": 6208,
@@ -132,8 +132,10 @@
     "old_pilot_overlap": 9,
     "selected": 22,
     "source_failure": 16,
-    "trigger_proxy": 6
+    "trigger_proxy": 6,
+    "unique_grid_points": 73
   },
+  "python": "3.12.11",
   "selected_id_sha256": "93ba0bbc451c5babb9de4081b87f493005b4920dbc1a871efa479f89aae03a08",
   "source": {
     "group": "single/temporal",
